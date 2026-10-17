@@ -1,0 +1,63 @@
+site_name: Carol Shaw- Qualidade de Software (2026.2)
+site_url:
+theme:
+  name: material
+  font:
+    text: Roboto
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: pt
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Modo Claro
+      primary: pink
+      accent: pink
+      background: "#f5f7fa"
+      text: "#22272e"
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Modo Escuro
+      primary: pink
+      accent: pink
+      background: "#22272e"
+      text: "#f5f7fa"
+
+markdown_extensions:
+  - attr_list
+  - tables
+  - toc:
+      toc_depth: 3
+
+nav:
+  - Início: index.md
+  - Fase 1:
+      - Introdução: fase1/fase1.md
+      - Propósito da Avaliação: fase1/1-proposito.md
+      - Requisitantes e Partes Interessadas: fase1/2-requisitantes.md
+      - Descrição do Produto: fase1/3-descricao.md
+      - Justificativas: fase1/4-justificativa.md
+      - Modelo de Qualidade e Escopo: fase1/5-modelo.md
+      - Tabela de Contribuição: fase1/6-tabela_de_contribuicao.md
+      - Uso de Ferramentas de IA: fase1/7-uso_de_IA.md
+
+  - Fase 2:
+      - Introdução: fase2/fase2.md
+      - Adequação Funcional: fase2/1-adequacao_funcional.md
+      - Confiabilidade: fase2/2-confiabilidade.md
+      - Tabela de Contribuição: fase2/3-tabela_de_contribuicao.md
+      - Uso de Ferramentas de IA: fase2/4-uso_de_IA.md

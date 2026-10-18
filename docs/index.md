@@ -15,7 +15,7 @@ Repositório do projeto acadêmico da disciplina **Qualidade de Software**, da U
         <sub>Matrícula: 222033952</sub>
       </td>
       <td align="center">
-        <img src="coloque o seu link aqui" width="100px;" alt="JOÃO C."/><br />
+        <img src="https://avatars.githubusercontent.com/u/186613952?s=400&u=cd72fbb297c1eed4c5594b777ac75f8651c5ad50&v=4" width="100px;" alt="JOÃO C." width="100px;" alt="JOÃO C."/><br />
         <sub><b>JOAO GUILHERME CAPOZZI GONCALVES</b></sub><br />
         <sub>Matrícula: 232027476</sub>
       </td>

@@ -29,10 +29,9 @@ Repositório do projeto acadêmico da disciplina **Qualidade de Software**, da U
         <sub><b>PEDRO RAMOS SOUSA REIS</b></sub><br />
         <sub>Matrícula: 222031680</sub>
       </td> 
-      </td>
       <td align="center">
-        <img src="coloque o seu link aqui" width="100px;" alt="RODRIGO"/><br />
-        <sub><b>RODRIGO BRAZ FERREIRA CONTIJO</b></sub><br />
+        <img src="https://avatars.githubusercontent.com/u/97805440?v=4" width="100" alt="RODRIGO"/>
+        <sub><b>RODRIGO BRAZ FERREIRA GONTIJO</b></sub><br />
         <sub>Matrícula: 190116498</sub>
       </td>
       <td align="center">

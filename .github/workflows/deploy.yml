@@ -1,0 +1,28 @@
+name: Deploy MkDocs
+
+on:
+  push:
+    branches:
+      - main # Executa a ação sempre que houver um push na main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Instalar dependências
+        # Instala o MkDocs e o tema Material (se você usar outros plugins, adicione na linha abaixo)
+        run: pip install mkdocs mkdocs-material
+
+      - name: Fazer o Deploy para o GitHub Pages
+        run: mkdocs gh-deploy --force

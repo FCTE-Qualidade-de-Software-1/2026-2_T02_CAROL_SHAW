@@ -46,7 +46,7 @@ markdown_extensions:
 nav:
   - Início: index.md
   - Fase 1:
-      - Introdução: fase1/fase1.md
+      - Introdução: fase1/introducao.md
       - Propósito da Avaliação: fase1/1-proposito.md
       - Requisitantes e Partes Interessadas: fase1/2-requisitantes.md
       - Descrição do Produto: fase1/3-descricao.md
@@ -56,8 +56,6 @@ nav:
       - Uso de Ferramentas de IA: fase1/7-uso_de_IA.md
 
   - Fase 2:
-      - Introdução: fase2/fase2.md
-      - Adequação Funcional: fase2/1-adequacao_funcional.md
-      - Confiabilidade: fase2/2-confiabilidade.md
-      - Tabela de Contribuição: fase2/3-tabela_de_contribuicao.md
-      - Uso de Ferramentas de IA: fase2/4-uso_de_IA.md
+      - Introdução: fase2/introducao.md
+      - Desdobramento GQM e Critérios de Julgamento: fase2/1-desdobramento.md
+      - Representação Gráfica da Hierarquia GQM: fase2/2-representacao.md

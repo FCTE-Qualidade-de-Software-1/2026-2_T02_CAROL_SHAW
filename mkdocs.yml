@@ -1,5 +1,20 @@
-site_name: Carol Shaw- Qualidade de Software (2026.2)
-site_url:
+site_name: Carol Shaw - Qualidade de Software (2026.2)
+site_url: https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW
+repo_name: GitHub - Carol Shaw
+edit_uri: edit/main/docs/
+
+# Versão e data de atualização do site (aparece no rodapé de todas as páginas)
+
+extra:
+  version_actual: v1.0 - E1
+  data_atualizacao: 26/10/2026
+  release_e1: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW
+      name: Repositório da equipe Carol Shaw
+
 theme:
   name: material
   font:
@@ -40,8 +55,18 @@ theme:
 markdown_extensions:
   - attr_list
   - tables
+  - md_in_html
+  - admonition
+  - footnotes
   - toc:
       toc_depth: 3
+
+# Rodapé exibido em todas as páginas (versão + data + links)
+copyright: >
+  Carol Shaw - Qualidade de Software (2026.2) |
+  <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank">Repositório</a> |
+  <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1" target="_blank">Release E1</a> |
+  v1.0 - E1 | Atualizado em 26/10/2026
 
 nav:
   - Início: index.md

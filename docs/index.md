@@ -1,8 +1,29 @@
 # Avaliação de Qualidade de Software — Equipe Carol Shaw (2026.2)
 
-Repositório do projeto acadêmico da disciplina **Qualidade de Software**, da Universidade de Brasília (UnB — FCTE). O trabalho documenta a avaliação de qualidade do aplicativo **DF no Ponto**, ferramenta de consulta do transporte público coletivo do Distrito Federal.
+<p align="center">
+  <strong>Universidade de Brasília (UnB) — Faculdade de Ciências e Tecnologias em Engenharia (FCTE)</strong><br/>
+  Disciplina: Qualidade de Software 1 — Profª. Cristiane Soares Ramos<br/>
+  Turma T02 — 2º semestre de 2026
+</p>
 
-> Este repositório contém a documentação e o site do projeto acadêmico. Ele não contém o código-fonte do aplicativo DF no Ponto.
+<p align="center">
+  <img alt="Versão" src="https://img.shields.io/badge/versão-v1.0--E1-pink"/>
+  <img alt="Atualização" src="https://img.shields.io/badge/atualizado-26%2F10%2F2026-pink"/>
+  <img alt="Fase" src="https://img.shields.io/badge/fase-Fase%201%20e%202-pink"/>
+  <img alt="Status" src="https://img.shields.io/badge/status-Entrega%201%20concluída-pink"/>
+</p>
+
+---
+
+## Sobre este site
+
+Este site é o **portal oficial de documentação** do projeto de avaliação de qualidade do aplicativo **DF no Ponto**, conduzido pela equipe **Carol Shaw** como Trabalho Final da disciplina Qualidade de Software 1. Aqui você encontra todos os artefatos produzidos nas Fases 1 e 2 do processo de avaliação de produto de software recomendado pela norma **ISO/IEC 25040**, com rastreabilidade completa entre as decisões tomadas.
+
+Avaliamos o aplicativo **DF no Ponto** — ferramenta oficial de consulta ao Sistema de Transporte Público Coletivo do Distrito Federal (STPC-DF) — sob a perspectiva do usuário final, com foco em três características de qualidade da norma **ISO/IEC 25010**: **Adequação Funcional**, **Confiabilidade** e **Portabilidade**. A escolha dessas três características foi derivada diretamente das necessidades dos stakeholders mapeados na Fase 1, conforme detalhado nas seções seguintes.
+
+> ℹ️ Este repositório contém apenas a documentação e o site do projeto acadêmico. Ele **não** contém o código-fonte do aplicativo DF no Ponto.
+
+---
 
 ## Integrantes
 
@@ -15,12 +36,12 @@ Repositório do projeto acadêmico da disciplina **Qualidade de Software**, da U
         <sub>Matrícula: 222033952</sub>
       </td>
       <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/186613952?s=400&u=cd72fbb297c1eed4c5594b777ac75f8651c5ad50&v=4" width="100px;" alt="JOÃO C." width="100px;" alt="JOÃO C."/><br />
+        <img src="https://avatars.githubusercontent.com/u/186613952?s=400&u=cd72fbb297c1eed4c5594b777ac75f8651c5ad50&v=4" width="100px;" alt="JOÃO C."/><br />
         <sub><b>JOAO GUILHERME CAPOZZI GONCALVES</b></sub><br />
         <sub>Matrícula: 232027476</sub>
       </td>
       <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/168047871?v=4"    width="100px;" alt="JOÃO L"/><br />
+        <img src="https://avatars.githubusercontent.com/u/168047871?v=4" width="100px;" alt="JOÃO L"/><br />
         <sub><b>JOAO GUILHERME LIMA VERAS FONSECA</b></sub><br />
         <sub>Matrícula: 232014039</sub>
       </td>
@@ -28,7 +49,7 @@ Repositório do projeto acadêmico da disciplina **Qualidade de Software**, da U
         <img src="https://avatars.githubusercontent.com/u/127259012?v=4" width="100px;" alt="PEDRO"/><br />
         <sub><b>PEDRO RAMOS SOUSA REIS</b></sub><br />
         <sub>Matrícula: 222031680</sub>
-      </td> 
+      </td>
       <td align="center">
         <img src="https://avatars.githubusercontent.com/u/97805440?v=4" width="100" alt="RODRIGO"/>
         <sub><b>RODRIGO BRAZ FERREIRA GONTIJO</b></sub><br />
@@ -43,76 +64,76 @@ Repositório do projeto acadêmico da disciplina **Qualidade de Software**, da U
   </table>
 </div>
 
-## Sobre o DF no Ponto
+---
 
-O DF no Ponto permite que passageiros planejem deslocamentos no Distrito Federal consultando informações de linhas, horários e itinerários. Entre as funcionalidades consideradas na documentação estão:
+## A história do projeto
 
-- busca de linhas por número ou destino;
-- consulta de horários;
-- visualização de itinerários e paradas em mapa;
-- acompanhamento da localização dos ônibus por GPS;
-- favoritos para linhas e pontos; e
-- avisos e alertas do transporte público.
+O **DF no Ponto** tornou-se a ferramenta oficial e amplamente utilizada por milhares de cidadãos diariamente para planejar rotas, verificar horários e acompanhar as linhas de ônibus em tempo real no Distrito Federal. No entanto, inconsistências no fornecimento de dados, instabilidades de uso e problemas de compatibilidade em diferentes dispositivos afetam diretamente a experiência do usuário final.
 
-## Objetivo do trabalho
+Diante desse cenário, a equipe **Carol Shaw** estruturou uma avaliação rigorosa de qualidade de software com o objetivo de **identificar fragilidades técnicas e propor melhorias concretas** que possam ser incorporadas ao produto. O trabalho segue o processo formal de avaliação de produto da família SQuaRE (ISO/IEC 25040), com quatro fases:
 
-O projeto analisa aspectos de qualidade do aplicativo com base no modelo **ISO/IEC 25010**, considerando as necessidades de passageiros, equipe de avaliação, docentes e órgãos mantenedores. O escopo documentado prioriza:
+| Fase | Descrição | Status |
+| :-: | :-- | :-: |
+| **Fase 1** | Estabelecimento dos requisitos da avaliação (propósito, stakeholders, escopo, modelo de qualidade) | ✅ Concluída |
+| **Fase 2** | Especificação da avaliação (objetivos GQM, questões, hipóteses, métricas e critérios de julgamento) | ✅ Concluída |
+| **Fase 3** | Planejamento da avaliação (método, recursos, ambiente e cronograma) | ⏳ Prevista para a Entrega 2 |
+| **Fase 4** | Execução e julgamento (coleta de dados, análise, conclusões e ações de melhoria) | ⏳ Prevista para a Entrega 2 |
 
-- **Portabilidade:** adaptação da interface a diferentes dispositivos e ambientes móveis;
-- **Confiabilidade:** maturidade do aplicativo e tolerância a falhas, como instabilidade de conexão; e
-- **Adequação funcional:** completude, correção e pertinência das funcionalidades de transporte.
+---
 
-A avaliação é acadêmica e se limita à versão do sistema observada durante a análise. Os resultados não representam uma certificação do aplicativo nem necessariamente se aplicam a versões futuras.
+## Como navegar neste site
 
-## Documentação
+A documentação está organizada em duas grandes seções, que espelham as fases do processo de avaliação:
 
-A documentação está escrita em Markdown na pasta [`docs/`](docs/) e organizada para publicação com MkDocs:
+### 📌 [Fase 1 — Requisitos da Avaliação](fase1/introducao.md)
 
-- [`docs/index.html`](docs/index.html): página inicial;
-- [`docs/fase1/index.html`](docs/fase1/index.html): introdução à primeira fase;
-- [`docs/fase1/1-proposito.html`](docs/fase1/1-proposito.html): propósito da avaliação;
-- [`docs/fase1/2-requisitantes.html`](docs/fase1/2-requisitantes.html): requisitantes e partes interessadas;
-- [`docs/fase1/3-descricao.html`](docs/fase1/3-descricao.html): descrição do produto;
-- [`docs/fase1/4-justificativa.html`](docs/fase1/4-justificativa.html): justificativa e riscos;
-- [`docs/fase1/5-modelo.html`](docs/fase1/5-modelo.html): modelo de qualidade e escopo;
-- [`docs/fase1/6-tabela_de_contribuicao.html`](docs/fase1/6-tabela_de_contribuicao.html): contribuições da equipe; e
-- [`docs/fase1/7-uso_de_IA.html`](docs/fase1/7-uso_de_IA.html): declaração de uso de ferramentas de IA.
+Apresenta o propósito da avaliação, os requisitantes e partes interessadas, a descrição do produto avaliado, a justificativa para o recorte do escopo, o modelo de qualidade adotado (ISO/IEC 25010) e a tabela de contribuição da equipe. É a base que justifica todas as decisões metodológicas subsequentes.
 
-## Estrutura do repositório
+### 📌 [Fase 2 — Especificação da Avaliação](fase2/introducao.md)
 
-```text
-2026-2_T02_CAROL_SHAW
-├── assets/                   # CSS, JavaScript, mapas de código e favicon
-├── fase1/                    # Documentos da primeira fase
-│   ├── 1-proposito/
-│   │   └── index.html
-│   ├── 2-requisitantes/
-│   │   └── index.html
-│   ├── 3-descricao/
-│   │   └── index.html
-│   ├── 4-justificativa/
-│   │   └── index.html
-│   ├── 5-modelo/
-│   │   └── index.html
-│   ├── 6-tabela_de_contribuicao/
-│   │   └── index.html
-│   ├── 7-uso_de_IA/
-│   │   └── index.html
-│   └── fase1/                # Páginas HTML da documentação
-│       └── index.html
-├── search/                   # Índice usado pela busca do site
-│   └── search_index.json
-├── .gitignore                # Arquivos locais, caches e temporários ignorados pelo Git
-├── .nojekyll
-├── 404.html                  # Página exibida para rotas não encontradas
-├── index.html                # Página inicial do site
-├── README.md                 # Apresentação do projeto
-└── sitemap.xml               # Mapa do site
-```
+Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três características priorizadas na Fase 1, formalizando três objetivos de medição, seis questões operacionais, hipóteses e seis métricas quantitativas com seus respectivos critérios de julgamento. Inclui também a representação gráfica da hierarquia GQM completa.
+
+> 💡 **Dica de leitura:** comece pela [Introdução da Fase 1](fase1/introducao.md) e siga pela ordem do menu. As seções foram escritas para serem lidas em sequência, com referências cruzadas entre si.
+
+---
+
+## Características de qualidade avaliadas
+
+O escopo documentado prioriza três características da norma ISO/IEC 25010, listadas abaixo por ordem de prioridade:
+
+- **Adequação Funcional (P1):** completude, correção e pertinência das funcionalidades de transporte — se os horários e rotas exibidos estão corretos, o aplicativo cumpre sua função social básica.
+- **Confiabilidade (P2):** maturidade do aplicativo e tolerância a falhas, como instabilidade de conexão móvel — essencial para quem usa o app em trânsito, frequentemente sob rede instável.
+- **Portabilidade (P3):** adaptação da interface a diferentes dispositivos móveis e versões de sistema operacional — necessário dado o perfil demográfico diverso dos usuários do transporte público do DF.
+
+A ordem de prioridade reflete o impacto direto de cada característica na tarefa central do passageiro: primeiro os dados precisam estar corretos, depois o sistema precisa estar disponível e, por fim, precisa funcionar no aparelho que o usuário tem em mãos.
+
+A avaliação é acadêmica e se limita à versão do sistema observada durante o período de análise. Os resultados não representam uma certificação do aplicativo nem necessariamente se aplicam a versões futuras.
+
+---
+
+## Links oficiais do projeto
+
+| Recurso | Link |
+| :-- | :-- |
+| 📦 Repositório GitHub | [FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW) |
+| 🚀 Release da Entrega 1 (E1) | [v1.0-E1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1) |
+| 🌐 GitPage (este site) | [fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/) |
+| 🚌 DF no Ponto (produto avaliado) | [dfnoponto.com.br](https://dfnoponto.com.br/) |
+
+---
 
 ## Referências
 
-- [DF no Ponto](https://dfnoponto.com.br/)
 - [ISO/IEC 25010 — ISO 25000](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
+- [ISO/IEC 25040 — Evaluation process](https://www.iso.org/standard/35641.html)
 - [MkDocs](https://www.mkdocs.org/)
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+
+---
+
+## Histórico de Versão
+
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :-- | :-- | :-- | :-- | :--: |
+| 01 | Criação da página inicial | Equipe Carol Shaw | 17/10/2026 | — | — |
+| 02 | Revisão geral: narrativa para leitor externo, badges de versão, links de repositório e release, tabela de fases | Equipe Carol Shaw | 26/10/2026 | — | — |

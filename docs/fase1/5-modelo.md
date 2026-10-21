@@ -4,8 +4,6 @@
 
 O objetivo desta etapa é apresentar o modelo de qualidade **ISO/IEC 25010**, destacando as três características escolhidas: **Portabilidade, Confiabilidade e Adequação Funcional**.
 
-_(Nota para a equipe: Lembrem-se de atualizar a "Imagem 1" do diagrama no repositório para refletir a inclusão da Portabilidade)._
-
 ## Adaptação ao Modelo
 
 O modelo foi adaptado para priorizar os aspectos mais críticos ao uso móvel do DF no Ponto, garantindo a sua compatibilidade em diferentes aparelhos, a sua resiliência a travamentos e a precisão da informação de transporte.
@@ -42,7 +40,9 @@ Refere-se ao grau em que o app entrega as informações de mobilidade prometidas
 | **Correção Funcional**    | Alto    | Médio | Avalia se os resultados da busca e o pin do GPS no mapa são exibidos com precisão.  |
 | **Pertinência Funcional** | Médio   | Médio | Avalia se as funções facilitam de fato a mobilidade do usuário.                     |
 
-Selecionamos todas as três subcaracterísticas para garantir uma validação completa da jornada do usuário de transporte público.# Referências Bibliográficas
+Selecionamos todas as três subcaracterísticas para garantir uma validação completa da jornada do usuário de transporte público.
+
+# Referências Bibliográficas
 
 > ISO. ISO/IEC 25010 — ISO 25000 Software and Data Quality. Disponível em: [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010). Acesso em: 17 out. 2026.
 

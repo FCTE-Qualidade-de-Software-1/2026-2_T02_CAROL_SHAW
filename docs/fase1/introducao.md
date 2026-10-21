@@ -18,7 +18,7 @@ Nos arquivos desta fase, são abordados:
 
 ## **Histórico de Versão**
 
-| ID  | Descrição            | Autor                               | Data       | Revisor | Data |
-| :-: | :------------------- | :---------------------------------- | :--------- | :------ | :--: |
-| 01  | Criação do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 |         |      |
-| 02  | Adição do badge de versão e atualização do cabeçalho | Equipe Carol Shaw | 26/10/2026 |         |      |
+| ID  | Descrição                                            | Autor                               | Data       | Revisor | Data |
+| :-: | :--------------------------------------------------- | :---------------------------------- | :--------- | :------ | :--: |
+| 01  | Criação do documento                                 | [Bessa](https://github.com/bessazs) | 17/10/2026 |         |      |
+| 02  | Adição do badge de versão e atualização do cabeçalho | Equipe Carol Shaw                   | 20/10/2026 |         |      |

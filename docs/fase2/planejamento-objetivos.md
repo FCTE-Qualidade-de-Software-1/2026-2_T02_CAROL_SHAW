@@ -160,4 +160,4 @@ O desdobramento das metas conceituais gerou questionamentos específicos focados
 
 | ID  | Descrição                    | Autor                               | Data       | Revisor                              | Data     |
 | :-: | :--------------------------- | :---------------------------------- | :--------- | :----------------------------------- | :------- |
-| 01  | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [--------](https://github.com/-----) | -------- |
+| 01  | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |

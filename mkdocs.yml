@@ -84,3 +84,6 @@ nav:
       - Planejamento e Objetivos: fase2/planejamento-objetivos.md
       - Desdobramento GQM e Critérios de Julgamento: fase2/metricas-julgamento.md
       - Representação Gráfica da Hierarquia GQM: fase2/rastreabilidade-diagrama GQM.md
+
+  - Gestão do Projeto:
+      - Métricas PSM/CID: psm/metricas-psm.md

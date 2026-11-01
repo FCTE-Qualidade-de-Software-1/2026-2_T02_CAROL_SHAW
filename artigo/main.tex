@@ -56,46 +56,15 @@ O restante deste artigo está organizado da seguinte forma: a Seção~\ref{sec:r
 \section{Referencial Teórico}
 \label{sec:referencial}
 
-Nesta seção, contextualizam-se os conceitos fundamentais que fundamentam a
-avaliação de qualidade conduzida neste projeto.
+Nesta seção, contextualizam-se os conceitos fundamentais que sustentam a avaliação de qualidade conduzida neste projeto, abordando os padrões internacionais de qualidade de produto de software, os processos padronizados de avaliação, a abordagem metodológica de medição e as evidências empíricas sobre a qualidade em aplicações móveis.
 
-\begin{itemize}
-    \item \textbf{A família de normas ISO/IEC 25000 (SQuaRE)}
-    \cite{iso25000}: a norma \textit{Systems and software Quality Requirements
-    and Evaluation} estabelece diretrizes e modelos de referência para avaliar
-    a qualidade de produtos de software. Em especial, a ISO/IEC
-    25010~\cite{iso25010} define o modelo de qualidade de produto, dividindo-o
-    em características e subcaracterísticas (como adequação funcional,
-    confiabilidade e portabilidade), fornecendo um vocabulário comum e
-    critérios padronizados para guiar o processo de avaliação de software.
-    Deissenboeck et al.~\cite{deissenboeck2009} destacam que modelos de
-    qualidade devem ser selecionados em função do propósito e contexto de uso,
-    o que justifica a escolha criteriosa das características avaliadas neste
-    trabalho.
+A base normativa deste trabalho apoia-se na família de normas ISO/IEC 25000 (SQuaRE --- \textit{Systems and software Quality Requirements and Evaluation})~\cite{iso25000}, que estabelece diretrizes e modelos de referência para orientar a especificação e a avaliação da qualidade de produtos de software. Em especial, a norma ISO/IEC 25010~\cite{iso25010} define o modelo de qualidade de produto organizado hierarquicamente em características e subcaracterísticas, tais como Adequação Funcional, Confiabilidade e Portabilidade, provendo vocabulário comum e critérios unificados de análise. Conforme discutido por Deissenboeck et al.~\cite{deissenboeck2009}, modelos de qualidade genéricos devem ser selecionados e adaptados aos propósitos e ao contexto específico de uso de cada sistema, o que fundamenta a escolha criteriosa das características priorizadas nesta pesquisa.
 
-    \item \textbf{O processo de avaliação de produto (ISO/IEC
-    25040)}~\cite{iso25040}: recomenda-se seguir as etapas definidas pela
-    norma, que envolvem o estabelecimento dos requisitos da avaliação
-    (Fase~1), a especificação da avaliação (Fase~2), o planejamento (Fase~3) e
-    a execução para obtenção dos resultados e julgamento (Fase~4). Esta
-    primeira entrega cobre as Fases~1 e~2.
+Para operacionalizar a condução da análise, adota-se o processo estabelecido pela norma ISO/IEC 25040~\cite{iso25040}, a qual prescreve quatro fases sequenciais: o estabelecimento dos requisitos da avaliação (Fase~1), a especificação da avaliação (Fase~2), o planejamento (Fase~3) e a execução para obtenção dos resultados e julgamento (Fase~4). O escopo do presente relatório compreende integralmente as Fases~1 e~2, delimitando o escopo a partir da perspectiva do usuário e traduzindo os requisitos em especificações formais de medição.
 
-    \item \textbf{A metodologia Goal-Question-Metric (GQM)}~\cite{basili1994,basili1988}:
-    é uma abordagem estruturada que define medições de software a partir de
-    objetivos (\textit{Goals}) claros, no nível conceitual. Esses objetivos
-    são desdobrados em questões (\textit{Questions}) operacionais, que por sua
-    vez determinam as métricas (\textit{Metrics}) exatas necessárias, no nível
-    quantitativo, garantindo que nenhum dado seja coletado sem um propósito
-    definido~\cite{basili1988}.
+A definição e o alinhamento das métricas foram estruturados sob a abordagem \textit{Goal-Question-Metric} (GQM), concebida por Basili e Rombach~\cite{basili1988} e formalizada em Basili et al.~\cite{basili1994}. O método estabelece um fluxo hierárquico descendente em que objetivos conceituais de medição (\textit{Goals}) são formulados para caracterizar o propósito do projeto; tais metas são subsequentemente desdobradas em questões avaliativas operacionais (\textit{Questions}), as quais determinam objetivamente as métricas quantitativas (\textit{Metrics}) a serem coletadas. Essa metodologia assegura que cada dado gerado na avaliação possua justificativa técnica e rastreabilidade direta com os anseios das partes interessadas.
 
-    \item \textbf{Qualidade de aplicativos móveis}: Khalid et al.~\cite{khalid2015}
-    analisaram mais de 20 mil avaliações de usuários nas lojas de aplicativos
-    e identificaram que \textit{crashes}, dados imprecisos e falhas de
-    conectividade são as categorias de defeito mais frequentemente relatadas
-    e que geram maior impacto negativo na percepção de qualidade --- categorias
-    diretamente mapeadas nas características Confiabilidade e Adequação
-    Funcional avaliadas neste trabalho.
-\end{itemize}
+Por fim, a fundamentação empírica específica sobre sistemas móveis apoia-se em estudos da literatura especializada. Khalid et al.~\cite{khalid2015}, ao analisarem mais de 20 mil avaliações de usuários em lojas de aplicativos, identificaram que interrupções forçadas (\textit{crashes}), divergências em dados funcionais e falhas no tratamento de conexões instáveis constituem as causas preponderantes de insatisfação e abandono de software móvel. De modo análogo, Minelli et al.~\cite{minelli2015} ressaltam a centralidade da maturidade e da estabilidade no uso diário de aplicações. Tais constatações empíricas convergem diretamente com os problemas relatados pelos passageiros do Distrito Federal e justificam tecnicamente o direcionamento da avaliação para Adequação Funcional, Confiabilidade e Portabilidade.
 
 % ---------------------------------------------------------------------
 \section{Metodologia de Desenvolvimento do Projeto}

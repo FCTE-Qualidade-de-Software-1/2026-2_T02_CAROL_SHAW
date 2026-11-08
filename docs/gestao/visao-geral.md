@@ -23,4 +23,4 @@ Para a organização do fluxo de trabalho, utilizamos o GitHub Projects em forma
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Pedro Ramos](https://github.com/PedroRSR) | Criação da página de Visão Geral da Gestão do Projeto | 08/11/2026 | []() |
+| [Pedro Ramos](https://github.com/PedroRSR) | Criação da página de Visão Geral da Gestão do Projeto | 08/11/2026 | [8dccfce](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/8dccfced583a70105ffb8a9a89e44cb7c1ff720b) |

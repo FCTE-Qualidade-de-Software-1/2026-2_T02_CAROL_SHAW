@@ -86,4 +86,8 @@ nav:
       - Representação Gráfica da Hierarquia GQM: fase2/rastreabilidade-diagrama GQM.md
 
   - Gestão do Projeto:
-      - Métricas PSM/CID: psm/metricas-psm.md
+      - Visão Geral: gestao/visao_geral.md
+      - Calendário e Progresso: gestao/calendario.md
+      - Recursos e Custos: gestao/recursos.md
+      - Desempenho do Processo: gestao/desempenho.md
+      - Acompanhamento do Projeto: gestao/acompanhamento.md

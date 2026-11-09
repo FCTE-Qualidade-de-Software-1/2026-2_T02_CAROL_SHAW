@@ -37,3 +37,18 @@ Fica eliminada a divisão teórica e igualitária de esforço (16,6%). A partici
 
 ### 4.3. Uso de Estimativas de Esforço nas Issues
 Cada issue aberta deve registrar obrigatoriamente em seu descritivo uma estimativa inicial de esforço em horas (ex: `Tempo estimado: 2 horas`). Esse dado permitirá confrontar o tempo previsto com o tempo real consumido, calibrando a capacidade produtiva da equipe e servindo de insumo para os cálculos de custo e investimento da metodologia PSM-CID.
+
+## 5. Integração da Gestão do Projeto (PSM-CID)
+
+O acompanhamento detalhado dos dados e evidências que suportam este dashboard gerencial está distribuído nas demais subabas de gestão:
+
+- [Visão Geral](visao-geral.md): Apresenta o framework PSM-CID e as diretrizes do fluxo de trabalho Git Flow/Kanban.
+- [Calendário e Progresso](calendario.md): Reúne as métricas de cumprimento de prazos, escopo e burndown das milestones.
+- [Recursos e Custos](recursos.md): Detalha a medição de esforço individual e coletivo a partir de horas estimadas e métricas reais de contribuição (commits, adições e deleções).
+- [Desempenho do Processo](desempenho.md): Analisa a fluidez operacional, identificando gargalos, *Lead Time* e *Cycle Time*.
+
+## Tabela de Contribuição
+
+| Nome do Membro | Contribuição | Data | Commit |
+| :--- | :--- | :--- | :--- |
+| [João Capozzi](https://github.com/jonas3688) | Criação da página de Acompanhamento do Projeto | 09/11/2026 | [c8bfc1b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/c8bfc1b) |

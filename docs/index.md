@@ -89,7 +89,7 @@ A documentação está organizada em duas grandes seções, que espelham as fase
 
 Apresenta o propósito da avaliação, os requisitantes e partes interessadas, a descrição do produto avaliado, a justificativa para o recorte do escopo, o modelo de qualidade adotado (ISO/IEC 25010) e a tabela de contribuição da equipe. É a base que justifica todas as decisões metodológicas subsequentes.
 
-### 📌 [Fase 2 — Especificação da Avaliação](fase2/introducao.md)
+### 📌 [Fase 2 — Especificação da Avaliação](fase2/planejamento-objetivos.md)
 
 Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três características priorizadas na Fase 1, formalizando três objetivos de medição, seis questões operacionais, hipóteses e seis métricas quantitativas com seus respectivos critérios de julgamento. Inclui também a representação gráfica da hierarquia GQM completa.
 

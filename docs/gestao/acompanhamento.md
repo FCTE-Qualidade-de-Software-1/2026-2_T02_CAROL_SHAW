@@ -22,3 +22,18 @@ A partir dos feedbacks recebidos e da análise crítica do processo de trabalho,
 | **Ambiente e ferramentas:** Estruturação inicial do repositório Git e da plataforma de documentação (MkDocs). | **Comunicação falha e excesso de assincronismo:** Dependência exclusiva de mensagens em texto sem reuniões síncronas de alinhamento, gerando desencontros e tarefas desassistidas. |
 | **Disposição para correção:** Aceitação transparente dos erros apontados pela professora para reestruturação com dados reais. | **Distribuição injusta de trabalho mascarando ociosidade:** A métrica teórica de 16,6% foi fictícia e camuflou integrantes que pouco ou nada produziram, sobrecarregando poucos membros. Prevalecerão os dados reais do Git. |
 | — | **Falha de rastreabilidade e issues retroativas:** Issues abertas após o trabalho pronto apenas para constar, gerando Lead/Cycle Time zerados e anulando a gestão visual no Kanban. |
+
+## 4. Planos de Ação
+
+Com base nos apontamentos da retrospectiva e na necessidade de comprovação factual exigida pela disciplina, a equipe estabeleceu três planos de ação imediatos:
+
+### 4.1. Uso Estrito do Quadro Kanban
+Nenhuma atividade de desenvolvimento ou documentação pode ser iniciada sem uma issue correspondente previamente cadastrada e associada à sua respectiva milestone. Mais do que controle de prazos, o Kanban passa a ser a ferramenta central de **organização e alinhamento da equipe**: ao visualizar o quadro, qualquer integrante sabe exatamente em qual frente cada colega está trabalhando no momento, evitando sobreposição de tarefas, retrabalho ou demandas esquecidas.
+
+O responsável deve obrigatoriamente movimentar o cartão para a coluna `In progress` ao iniciar o trabalho, `In review` ao abrir o Pull Request e `Done` apenas após a revisão e mesclagem na branch `main`, garantindo rastreabilidade contínua.
+
+### 4.2. Distribuição Justa Baseada no Histórico de Contribuição
+Fica eliminada a divisão teórica e igualitária de esforço (16,6%). A participação da equipe passará a ser apurada pelos dados reais do repositório, extraídos da aba *Insights > Contributors* do GitHub (volume de commits, adições e deleções). Essa transparência servirá para identificar sobrecargas, evitar ociosidade e equilibrar a distribuição de demandas entre todos os integrantes nas próximas entregas.
+
+### 4.3. Uso de Estimativas de Esforço nas Issues
+Cada issue aberta deve registrar obrigatoriamente em seu descritivo uma estimativa inicial de esforço em horas (ex: `Tempo estimado: 2 horas`). Esse dado permitirá confrontar o tempo previsto com o tempo real consumido, calibrando a capacidade produtiva da equipe e servindo de insumo para os cálculos de custo e investimento da metodologia PSM-CID.

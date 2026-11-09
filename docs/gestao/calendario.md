@@ -40,21 +40,21 @@ Os dados reais obtidos no repositório GitHub evidenciam a totalidade das issues
 | :--- | :--- |
 | **Nome da Milestone** | Entrega 1 |
 | **Data de Abertura das Issues** | 31/10/2026 |
-| **Data de Conclusão / Fechamento** | 31/10/2026 |
+| **Data de Conclusão / Fechamento** | 04/11/2026 |
 | **Total de Issues Cadastradas** | 5 |
 | **Issues Concluídas** | 5 |
 | **Taxa de Conclusão de Escopo** | **100%** |
-| **Padrão de Fechamento** | Abertas e fechadas no mesmo dia (31/10/2026) |
+| **Padrão de Fechamento** | Abertas e fechadas no mesmo dia, execeto a issue #7 que foi fechada apenas no dia 04/11, mas foi concluida no dia 31/10 |
 
 #### Detalhamento das Issues da Entrega 1
 
 | Nº Issue | Título da Tarefa | Abertura | Fechamento | Status |
 | :---: | :--- | :---: | :---: | :---: |
-| [#3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/3) | Definir requisitos da avaliação e modelo de qualidade (Fase 1) | 31/10/2026 19:36 | 31/10/2026 19:56 | Concluída |
-| [#4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/4) | Especificação da Avaliação e Desdobramento GQM (Fase 2) | 31/10/2026 19:37 | 31/10/2026 20:00 | Concluída |
-| [#5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/5) | Organização do relatório em LaTeX e criação da GitPage | 31/10/2026 19:38 | 31/10/2026 20:02 | Concluída |
-| [#6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/6) | Análise de requisitos, metodologia e revisão técnica global | 31/10/2026 19:41 | 31/10/2026 20:08 | Concluída |
-| [#7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/7) | Refinamentos e correções do artigo | 31/10/2026 19:45 | 04/11/2026 20:10  | Concluída |
+| [#3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/3) | Definir requisitos da avaliação e modelo de qualidade (Fase 1) | 31/10/2026 | 31/10/2026 | Concluída |
+| [#4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/4) | Especificação da Avaliação e Desdobramento GQM (Fase 2) | 31/10/2026 | 31/10/2026 | Concluída |
+| [#5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/5) | Organização do relatório em LaTeX e criação da GitPage | 31/10/2026  | 31/10/2026  | Concluída |
+| [#6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/6) | Análise de requisitos, metodologia e revisão técnica global | 31/10/2026  | 31/10/2026  | Concluída |
+| [#7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/7) | Refinamentos e correções do artigo | 31/10/2026  | 04/11/2026  | Concluída |
 
 **Cálculo da Taxa de Conclusão da Entrega 1:**
 
@@ -146,4 +146,4 @@ Diferentemente da Entrega 1, o gráfico de *burndown* da fase de correção refl
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
-| [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | Criação e estruturação da página de Calendário e Progresso | 09/11/2026 | [Commit]() |
+| [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | Criação e estruturação da página de Calendário e Progresso | 09/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/85e6b2578b0a683bb75f82016d24ec5fd2136496) |

@@ -2,7 +2,7 @@
 
 ## 1. Introdução
 
-Esta página monitora o esforço estimado investido no projeto por cada membro da equipe em horas trabalhadas adotado pela equipe Carol Shaw. Seu papel central é monitorar se o escopo definido para cada ciclo de desenvolvimento está sendo entregue dentro do prazo estipulado e avaliar a cadência do avanço das atividades ao longo do tempo.
+Esta página foi desenvolvida para acompanhar o desenvolvimento das entregas ao longo do semestre adotada pela equipe Carol Shaw. Seu papel central é monitorar se o escopo definido para cada ciclo de desenvolvimento está sendo entregue dentro do prazo estipulado e avaliar a cadência do avanço das atividades ao longo do tempo.
 
 
 

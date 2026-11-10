@@ -78,9 +78,13 @@ A equipe estabeleceu faixas de controle para classificar os desvios de esforço 
 
 ---
 
-## 6. Painel de Acompanhamento
+## Entrega 1
 
-Para visualizar os dados reais de esforço consumido, métricas de contribuição individual e gráficos atualizados do Milestone atual, acesse a página de **[Acompanhamento do Projeto](acompanhamento.md)**.
+Durante a **Entrega 1**, a equipe enfrentou limitações de governança e organização que impediram a aplicação estrita do rigor metodológico necessário para a coleta precisa de métricas de esforço. Como os registros operacionais no repositório ocorreram de forma retroativa (com as *Issues* sendo cadastradas e encerradas no mesmo dia apenas para cumprir os rituais formais da entrega), não houve o acompanhamento em tempo real nem o planejamento prévio do tempo exigido para cada atividade.
+
+Essa ausência de estimativas iniciais registradas e o preenchimento tardio das tarefas inviabilizaram a aferição individual e coletiva das horas efetivamente dedicadas por cada membro ao longo do desenvolvimento. Como consequência, o cálculo da variação de esforço e a apuração do custo financeiro equivalente para esse ciclo inicial restaram prejudicados, mascarando a real distribuição de trabalho e a capacidade produtiva da equipe. 
+
+Para corrigir essa deficiência, os dados da Entrega 1 serviram como diagnóstico para a reestruturação do fluxo de trabalho, estabelecendo que, a partir da fase de correção e para as entregas subsequentes, nenhuma tarefa seja iniciada sem a prévia atribuição de estimativa de horas e acompanhamento contínuo no quadro Kanban.
 
 ---
 

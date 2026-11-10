@@ -78,7 +78,7 @@ A equipe estabeleceu faixas de controle para classificar os desvios de esforço 
 
 ---
 
-## Entrega 1
+## 6. Entrega 1
 
 Durante a **Entrega 1**, a equipe enfrentou limitações de governança e organização que impediram a aplicação estrita do rigor metodológico necessário para a coleta precisa de métricas de esforço. Como os registros operacionais no repositório ocorreram de forma retroativa (com as *Issues* sendo cadastradas e encerradas no mesmo dia apenas para cumprir os rituais formais da entrega), não houve o acompanhamento em tempo real nem o planejamento prévio do tempo exigido para cada atividade.
 
@@ -87,6 +87,45 @@ Essa ausência de estimativas iniciais registradas e o preenchimento tardio das 
 Para corrigir essa deficiência, os dados da Entrega 1 serviram como diagnóstico para a reestruturação do fluxo de trabalho, estabelecendo que, a partir da fase de correção e para as entregas subsequentes, nenhuma tarefa seja iniciada sem a prévia atribuição de estimativa de horas e acompanhamento contínuo no quadro Kanban.
 
 ---
+
+## 7. Correção da Entrega 1
+
+Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Correção utiliza os dados extraídos diretamente das *Issues* e do quadro no GitHub Projects.
+
+### 7.1. Apuração de Esforço por Issue
+
+| Nº Issue | Descrição da Tarefa | Responsável | Status | `He` (Estimado) | `Hr` (Realizado) | Variação (%) | Custo Equivalente |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| [#8](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/8) | Criar página de Visão Geral | [Pedro Reis](https://github.com/PedroRSR) | Concluída | 2h | - | - | - |
+| [#9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/9) | Criar página de Calendário e Progresso | [João Guilherme](https://github.com/JoaoGuilherme14) | Concluída | 2h | - | - | - |
+| [#10](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/10) | Criar página de Recursos e Custos | [Cristiano Morais](https://github.com/CristianoMoraiss) | Em Andamento | 2h | - | - | - |
+| [#11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/11) | Criar página de Desempenho do Processo | [Vitor Bessa](https://github.com/Bessazs) | Em Andamento | 2h | - | - | - |
+| [#12](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/12) | Criar página de Acompanhamento do Projeto | [João Guilherme Capozzi](https://github.com/jonas3688) | Concluída | 2h | - | - | - |
+| [#16](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/16) | Embasamento Teórico e Justificativa das Métricas GQM | [Pedro Reis](https://github.com/PedroRSR) | Em Andamento | 2h | - | - | - |
+| [#17](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/17) | Reestruturação e Alinhamento das Questões aos Objetivos | [Cristiano Morais](https://github.com/CristianoMoraiss) | Em Andamento | 2h | - | - | - |
+| [#18](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/18) | Padronização das Escalas de Medição e Formalização dos Métodos de Cálculo | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | Em Andamento | 2h | - | - | - |
+| [#19](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/19) | Definição de Limiares ("Thresholds") e Ajuste de Rastreabilidade no Diagrama GQM | [João Guilherme Capozzi](https://github.com/jonas3688) | Em Andamento | 2h | - | - | - |
+| [#20](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/20) | Alinhamento Estrutural e Coesão entre Fases 1 e 2 com Questões Norteadoras | [João Guilherme](https://github.com/JoaoGuilherme14) | Em Andamento | 2h | - | - | - |
+| [#21](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/21) | Revisão da Seleção e Utilização dos Objetivos de Desenvolvimento Sustentável (ODS) | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | Em Andamento | 2h | - | - | - |
+| [#22](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/22) | Revisão Conceitual e Metodológica do Artigo | Por definir | Parada | 2h | - | - | - |
+| [#23](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/23) | Revisão Textual, Normatização em LaTeX e Rastreabilidade de Artefatos | Por definir | Parada | 2h | - | - | - |
+
+### 7.2. Consolidação dos Dados da Milestone
+
+A consolidação considera a soma das tarefas que já atingiram o estado **Done** (concluídas e mescladas na `main`):
+
+- **Esforço Estimado do Escopo Concluído ($E_e$):** {Soma dos He das issues concluídas}h
+- **Esforço Realizado Acumulado ($E_t$):** {Soma dos Hr das issues concluídas}h
+- **Variação Global do Esforço ($V_e$):** {Resultado da fórmula}%
+- **Custo Financeiro Equivalente Acumulado:** R$ {Et * 50,00}
+
+### 7.3. Avaliação dos Critérios de Decisão
+
+Com base na variação apurada de **{Resultado do Ve}%**:
+
+- **Abaixo ou igual a 10%:** Acurácia adequada nas estimativas da equipe. O planejamento inicial reflete a capacidade real de execução.
+- **Entre 10,1% e 20%:** Faixa de atenção. A equipe acompanha o desvio para entender os motivos da divergência e avaliar ajustes nas próximas milestones.
+- **Acima de 20%:** Alerta para revisão imediata das estimativas e readequação do planejamento do projeto.
 
 ## Tabela de Contribuição
 

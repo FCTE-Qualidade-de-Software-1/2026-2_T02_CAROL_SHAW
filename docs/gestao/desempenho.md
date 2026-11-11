@@ -2,7 +2,7 @@
 
 ## 1. Introdução
 
-No âmbito do framework **PSM-CID** (*Practical Software and Systems Measurement - Continuous Iterative Development*), a dimensão de **Desempenho do Processo** avalia a eficiência, a fluidez e o ritmo de execução das atividades da equipe. Enquanto a categoria de *Recursos e Custos* converte o esforço humano em métricas econômicas e *Calendário e Progresso* monitora prazos e escopo, esta dimensão analisa o tempo de resposta das *Issues* no repositório e o esforço técnico dedicado para a conclusão de cada demanda.
+No âmbito do framework **PSM-CID** (*Practical Software and Systems Measurement - Continuous Iterative Development*), a dimensão de **Desempenho do Processo** avalia a eficiência, a fluidez e o ritmo de execução das atividades da equipe. Esta dimensão analisa o tempo de resposta das *Issues* no repositório e o esforço técnico dedicado para a conclusão de cada demanda.
 
 O monitoramento contínuo destas métricas permite verificar se as atividades estão sendo entregues dentro do tempo previsto, comparar o tempo estimado com o tempo real de execução e detectar precocemente tarefas estagnadas no repositório que exijam suporte ou redistribuição.
 
@@ -12,16 +12,20 @@ O monitoramento contínuo destas métricas permite verificar se as atividades es
 
 A apuração do desempenho combina os registros temporais nativos do GitHub (datas de abertura e fechamento das tarefas) com a declaração direta de esforço nas *Issues*:
 
-- **Lead Time (Tempo Total de Entrega - `TL`):** Mede o intervalo temporal total decorrido desde a data e hora de criação da *Issue* no repositório até a sua data e hora de fechamento definitivo após o *merge* na branch principal (`main`).
+- **Lead Time (Tempo Total de Entrega - `TL`):** Mede o intervalo temporal total decorrido desde a data e hora de criação da *Issue* no repositório até a sua data e hora de fechamento definitivo após o *merge* na branch `main`.
+
   `TL = Data/Hora de Conclusão - Data/Hora de Criação`
 
 - **Cycle Time (Tempo de Ciclo de Execução - `TC` / `Hr`):** Representa o tempo de trabalho efetivamente gasto para concluir a tarefa. A estimativa prévia (`He`) é atribuída no momento em que a *Issue* é criada e o tempo realizado (`Hr`) é declarado pelo responsável diretamente na própria *Issue* no momento da sua conclusão.
+
   `TC = Hr (Horas Realizadas Declaradas na Issue)`
 
 - **Tempo sem Atividade (Tempo de Estagnação - `TSA`):** Mede o período contínuo em que uma *Issue* mantida aberta permanece sem nenhuma movimentação técnica registrada.
   `TSA = Data/Hora Atual - Data/Hora da Última Atividade Registrada`
 
+
 - **Tempo Médio de Ciclo (`TMC`):** Indica a média aritmética das horas realizadas (`Hr`) de todas as *Issues* concluídas em uma determinada Milestone.
+
   `TMC = (Soma dos Hr das Issues Concluídas) / (Total de Issues Concluídas)`
 
 ---
@@ -78,6 +82,7 @@ Na milestone **Entrega 1**, os tempos refletem registros retroativos e não repr
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
-| [Cristiano Morais](https://github.com/CristianoMoraiss) | Criação da estrutura inicial da página | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
-| [Pedro Ramos Sousa Reis](https://github.com/Pedro) | Criação das tabelas de registro das Issues | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
-| [Vitor Bessa](https://github.com/bessazs) | Atualização da tabela de desempenho por issue pela tabela do grafana  | 11/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/example) |
+| [Cristiano Morais](https://github.com/CristianoMoraiss) | Criação da estrutura inicial da página | 10/11/2026 | [89ba979](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
+| [Pedro Ramos Sousa Reis](https://github.com/Pedro) | Criação das tabelas de registro das Issues | 10/11/2026 | [89ba979](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
+| [Vitor Bessa](https://github.com/bessazs) | Atualização da tabela de desempenho por issue pela tabela do grafana | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
+| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |

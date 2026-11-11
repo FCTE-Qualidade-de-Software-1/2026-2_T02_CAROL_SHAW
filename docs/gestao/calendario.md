@@ -10,7 +10,7 @@ Esta página foi desenvolvida para acompanhar o desenvolvimento das entregas ao 
 
 Para quantificar a evolução das atividades em cada milestone, adota-se a fórmula de porcentagem de conclusão de issues:
 
-$$\text{Taxa de Conclusão (\%)} = \left( \frac{\text{Issues Concluídas}}{\text{Total de Issues}} \right) \times 100$$
+$$\text{Taxa de Conclusão } (\%) = \left( \frac{\text{Issues Concluídas}}{\text{Total de Issues}} \right) \times 100$$
 
 **Definição dos Parâmetros:**
 
@@ -44,7 +44,7 @@ Os dados reais obtidos no repositório GitHub evidenciam a totalidade das issues
 | **Total de Issues Cadastradas** | 5 |
 | **Issues Concluídas** | 5 |
 | **Taxa de Conclusão de Escopo** | **100%** |
-| **Padrão de Fechamento** | Abertas e fechadas no mesmo dia, execeto a issue #7 que foi fechada apenas no dia 04/11, mas foi concluida no dia 31/10 |
+| **Padrão de Fechamento** | Abertas e fechadas no mesmo dia, exceto a issue #7 que foi fechada apenas no dia 04/11, mas foi concluida no dia 31/10 |
 
 #### Detalhamento das Issues da Entrega 1
 
@@ -84,7 +84,7 @@ Para sanar em definitivo as falhas de rastreabilidade identificadas na Entrega 1
 As regras operacionais obrigatórias para a fase de correção e para a Entrega 2 são:
 
 1. **Criação Prévia no Backlog:** Nenhuma atividade de documentação, correção ou codificação pode ser iniciada sem que uma Issue formal tenha sido previamente cadastrada no repositório, vinculada à Milestone correspondente e com *Assignees* definidos.
-2. **Estimativa de Esforço Declarada:** Toda issue deve conter em seu corpo uma estimativa inicial em horas de trabalho (ex: `Tempo estimado: 2 horas`), possibilitando comparar tempo previsto versus tempo real.
+2. **Estimativa de Esforço Declarada:** Toda issue deve conter em seu corpo uma estimativa inicial em horas de trabalho (ex: `Horas Estimadas: 2`), possibilitando comparar tempo previsto com tempo real.
 3. **Movimentação Obrigatória no Kanban:** O responsável pela tarefa deve obrigatoriamente movimentar o cartão no quadro [GitHub Projects ](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/44):
    - De `To Do` para `In Progress` imediatamente antes de iniciar a execução;
    - De `In Progress` para `In Review` no momento da abertura do Pull Request;
@@ -123,7 +123,7 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
 
-*Cálculo feito apenas sobre as issues abertas até o momento*
+*Cálculo feito apenas sobre as issues abertas e fechadas até o momento*
 
 ### 5.3. Gráfico de Burndown da Correção da Entrega 1
 
@@ -137,5 +137,6 @@ Diferentemente da Entrega 1, o gráfico de *burndown* da fase de correção refl
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
-| [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | Criação e estruturação da página de Calendário e Progresso | 09/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/85e6b2578b0a683bb75f82016d24ec5fd2136496) |
-| [Vitor Bessa](https://github.com/Bessazs) | Adição da tabela de desempenho da milestone e do grafico de burndow| 11/11/2026 | [Commit](xxx) |
+| [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | Criação e estruturação da página de Calendário e Progresso | 09/11/2026 | [85e6b25](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/85e6b25) |
+| [Vitor Bessa](https://github.com/Bessazs) | Adição da tabela de desempenho da milestone e do grafico de burndow | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
+| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |

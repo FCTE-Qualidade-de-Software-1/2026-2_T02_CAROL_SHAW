@@ -121,7 +121,7 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 
 **Cálculo da Taxa de Conclusão da Correção:**
 
-$$\text{Taxa de Conclusão (Correção)} = \left( \frac{7}{15} \right) \times 100 = 47\%$$
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
 
 *Cálculo feito apenas sobre as issues abertas até o momento*
 

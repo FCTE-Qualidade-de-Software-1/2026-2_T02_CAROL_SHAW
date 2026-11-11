@@ -106,30 +106,30 @@ A milestone **Correção Entrega 1** foi instituída para executar o plano de me
 
 ### 5.2. Dados da Milestone "Correção Entrega 1"
 
-A milestone de correção foi aberta no dia 31 de outubro de 2026, com o escopo de 5 frentes de trabalho estruturantes:
+A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo de 5 frentes de trabalho estruturantes:
 
 | Propriedade / Indicador | Dado da Milestone |
 | :--- | :--- |
 | **Nome da Milestone** | Correção Entrega 1 |
 | **Data de Início** | 07 de novembro de 2026 |
 | **Data de Fim (Ciclo de Fechamento)** | 16 de novembro de 2026 (data de entrega planejada) |
-| **Total de Issues Cadastradas** | 5 |
-| **Issues Concluídas** | 3 |
-| **Taxa de Conclusão** | **60%** |
-| **Tempo Médio de Conclusão por Tarefa** | ~2 a 4 horas de esforço técnico distribuído |
+| **Total de Issues Cadastradas** | 14 |
+| **Issues Concluídas** | 6 |
+| **Taxa de Conclusão** | **43%** |
+| **Tempo Médio de Conclusão por Tarefa** | ~2 horas|
 
 #### Detalhamento das Tarefas da Correção da Entrega 1
 
 | Tarefa / Frente de Correção | Escopo Principal | Tempo Aprox. | Status |
 | :--- | :--- | :---: | :---: |
-| **Reestruturação da Gestão e Visão Geral (PSM-CID)** | Redefinição do framework PSM-CID, fluxo de trabalho e regras Kanban | ~10 horas | Em Andamento |
+| **Reestruturação da Gestão e Visão Geral (PSM-CID)** | Redefinição do framework PSM-CID, fluxo de trabalho e regras Kanban | ~12 horas | Concluído |
 | **Revisão e reestruturação do GQM** | Revisar a metodologia utilizada, incluindo a explicação e o embasamento teórico das métricas, escalas, métodos de cálculo e questões adotadas, garantindo sua coerência e fundamentação. | ~10 horas | Em Andamento |
-| **Alinhamento entre as Fases 1 e 2** |  Verificar e aprimorar a coesão entre as duas fases, incluindo questões norteadoras que servirão de guia para a aplicação do GQM, bem como revisar a seleção e a utilização dos Objetivos de Desenvolvimento Sustentável (ODS). | ~10 horas | Em Andamento |
-| **Verificação e validação do artigo** |  Realizar uma revisão geral do artigo, identificando e corrigindo possíveis inconsistências conceituais, metodológicas e textuais, assegurando o alinhamento com os demais artefatos do projeto. | ~10 horas | Em Andamento |
+| **Alinhamento entre as Fases 1 e 2** |  Verificar e aprimorar a coesão entre as duas fases, incluindo questões norteadoras que servirão de guia para a aplicação do GQM, bem como revisar a seleção e a utilização dos Objetivos de Desenvolvimento Sustentável (ODS). | ~2 horas | Em Andamento |
+| **Verificação e validação do artigo** |  Realizar uma revisão geral do artigo, identificando e corrigindo possíveis inconsistências conceituais, metodológicas e textuais, assegurando o alinhamento com os demais artefatos do projeto. | ~4 horas | Em Andamento |
 
 **Cálculo da Taxa de Conclusão da Correção:**
 
-$$\text{Taxa de Conclusão (Correção)} = \left( \frac{3}{5} \right) \times 100 = 60\%$$
+$$\text{Taxa de Conclusão (Correção)} = \left( \frac{6}{14} \right) \times 100 = 43\%$$
 
 *Cálculo feito apenas sobre as issues abertas até o momento*
 

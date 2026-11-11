@@ -54,6 +54,27 @@ Para assegurar a objetividade da avaliação, os patamares de pontuação (de 1 
 | **M5.2** (Correção Espacial do Mapa) | ≥ 0,95 | ≥ 0,85 | ≥ 0,70 | < 0,70 |
 | **M6.1 / M6.2** (Completude e Cobertura) | 1,00 | ≥ 0,95 | ≥ 0,80 | < 0,80 |
 
+### Justificativa Técnica dos Limiares de Decisão
+
+A definição das metas numéricas e das faixas de decisão (*Thresholds*) fundamenta-se nas normas **ISO/IEC 25010** e **ISO/IEC 25023**, combinadas às restrições operacionais do aplicativo móvel **DF no Ponto** e ao perfil dos usuários do transporte público coletivo:
+
+#### 1. Portabilidade (M1.1, M1.2, M2.1 e M2.2)
+* **Faixas de Decisão:** Satisfatório ($\ge 0,90$ a $1,00$) | Tolerável ($0,75$ a $0,89$) | Crítico ($< 0,75$).
+* **Justificativa:** O público do transporte coletivo no Distrito Federal e Entorno apresenta ampla heterogeneidade de dispositivos, incluindo aparelhos de entrada com telas compactas e sistemas operacionais em versões anteriores à versão 14 (sem suporte oficial). Uma taxa de adaptabilidade inferior a 75% excluiria mais de um quarto dos usuários por distorções de interface ou incompatibilidade. Além disso, falhas de instalação ou resíduos excessivos de dados pós-desinstalação penalizam severamente aparelhos com armazenamento interno restrito.
+
+#### 2. Confiabilidade (M3.1, M3.2, M4.1 e M4.2)
+* **Faixas de Decisão:** Satisfatório ($\ge 0,95$ a $0,99$) | Tolerável ($0,85$ a $0,94$) | Crítico ($< 0,85$).
+* **Justificativa:** Baseado nas diretrizes do *Google Play Android Vitals*, onde taxas de encerramento forçado (*crashes*) devem ser mantidas abaixo de 1% e congelamentos de tela (*ANRs*) abaixo de 0,47% em produção. Em paradas de ônibus, um encerramento abrupto do aplicativo durante a aproximação de um coletivo acarreta perda imediata da viagem. Da mesma forma, devido às frequentes oscilações de conectividade 3G/4G e instabilidade de satélites GPS no ambiente urbano, o aplicativo precisa demonstrar tolerância a falhas em mais de 85% das ocorrências, exibindo mensagens amigáveis de recuperação em vez de quebrar a sessão.
+
+#### 3. Adequação Funcional: Precisão Temporal e Espacial (M5.1 e M5.2)
+* **Faixas de Decisão (M5.1 - Horários):** Excelente ($\le 2$ min) | Bom ($\le 5$ min) | Tolerável ($\le 10$ min) | Crítico ($> 10$ min).
+* **Faixas de Decisão (M5.2 - Mapa/GPS):** Satisfatório ($\ge 0,85$ a $0,95$) | Crítico ($< 0,70$).
+* **Justificativa:** No transporte público, a tolerância de atraso do passageiro é extremamente sensível. Um desvio de até 2 minutos representa alta precisão de aproximação física; até 5 minutos é considerado plenamente aceitável diante das oscilações naturais de tráfego urbano no Distrito Federal. Desvios acima de 10 minutos quebram a confiabilidade do serviço, levando o cidadão a perder compromissos ou a esperas prolongadas. No aspecto espacial (M5.2), erros cartográficos acima de 15% na localização das paradas induzem o usuário a aguardar em locais incorretos.
+
+#### 4. Adequação Funcional: Completude e Cobertura (M6.1 e M6.2)
+* **Faixas de Decisão:** Satisfatório ($\ge 0,95$ a $1,00$) | Crítico ($< 0,80$).
+* **Justificativa:** O DF no Ponto é a ferramenta digital oficial de transporte do Distrito Federal. Dessa forma, as tarefas essenciais (busca de linhas, itinerários e paradas) devem possuir taxa de sucesso plena ($\ge 95\%$). Uma omissão de mais de 20% das linhas ativas em relação ao catálogo oficial da SEMOB-DF ($< 0,80$) inviabiliza o propósito central do aplicativo.
+
 ### Julgamento dos Objetivos
 
 O veredito de cada objetivo de medição (G1 a G6) adota o **critério conservador (pior nota obtida entre suas métricas filhas)**, evitando que falhas críticas fiquem ocultas por médias aritméticas.
@@ -76,3 +97,4 @@ O veredito de cada objetivo de medição (G1 a G6) adota o **critério conservad
 | ID  | Descrição                    | Autor                               | Data       | Revisor                              | Data     |
 | :-: | :--------------------------- | :---------------------------------- | :--------- | :----------------------------------- | :------- |
 | 01  | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |
+| 02  | Adição das justificativas técnicas dos limiares de decisão | [João Capozzi](https://github.com/jonas3688) | 10/11/2026 | - | - |

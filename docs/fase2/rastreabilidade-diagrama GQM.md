@@ -33,7 +33,19 @@ Abaixo apresentamos a hierarquia estabelecida para a nossa análise, dividida po
 
 ### 1. Característica: Portabilidade
 
-![Diagrama GQM - Portabilidade](imagens/mermaid-diagram-2026-10-31-162443.png)
+```mermaid
+flowchart TD
+    G1["G1: Avaliar Adaptabilidade"] --> Q11["Q1.1: Redimensiona em tela pequena?"]
+    G1 --> Q12["Q1.2: Roda em Android antigo?"]
+
+    G2["G2: Avaliar Instalabilidade"] --> Q21["Q2.1: Instala sem erro na loja?"]
+    G2 --> Q22["Q2.2: Limpa arquivos ao desinstalar?"]
+
+    Q11 --> M11["M1.1: Adaptabilidade de Telas"]
+    Q12 --> M12["M1.2: Adaptabilidade de SO"]
+    Q21 --> M21["M2.1: Sucesso de Instalação"]
+    Q22 --> M22["M2.2: Resíduo pós-desinstalação"]
+```
 
 <p class="legenda">Figura 1. Diagrama GQM focado na característica de Portabilidade (Adaptabilidade e Instalabilidade) com seus níveis conceitual, operacional e quantitativo para o app DF no Ponto.</p>
 
@@ -41,7 +53,19 @@ Abaixo apresentamos a hierarquia estabelecida para a nossa análise, dividida po
 
 ### 2. Característica: Confiabilidade
 
-![Diagrama GQM - Confiabilidade](imagens/mermaid-diagram-2026-10-31-162527.png)
+```mermaid
+flowchart TD
+    G3["G3: Avaliar Maturidade"] --> Q31["Q3.1: Evita encerramento forçado (crash)?"]
+    G3 --> Q32["Q3.2: Previne congelamento de tela (ANR)?"]
+
+    G4["G4: Avaliar Tolerância a Falhas"] --> Q41["Q4.1: Trata queda de conexão 4G/Wi-Fi?"]
+    G4 --> Q42["Q4.2: Reage à desativação de GPS?"]
+
+    Q31 --> M31["M3.1: Densidade de Falhas (Crashes)"]
+    Q32 --> M32["M3.2: Densidade de ANRs (Travamentos)"]
+    Q41 --> M41["M4.1: Evitação de Quebra (Conexão)"]
+    Q42 --> M42["M4.2: Tratamento de Perda de GPS"]
+```
 
 <p class="legenda">Figura 2. Diagrama GQM focado na característica de Confiabilidade (Maturidade e Tolerância a Falhas) com seus níveis conceitual, operacional e quantitativo para o app DF no Ponto.</p>
 
@@ -49,7 +73,19 @@ Abaixo apresentamos a hierarquia estabelecida para a nossa análise, dividida po
 
 ### 3. Característica: Adequação Funcional
 
-![Diagrama GQM - Adequação Funcional](imagens/mermaid-diagram-2026-10-31-162600.png)
+```mermaid
+flowchart TD
+    G5["G5: Avaliar Correção de Dados"] --> Q51["Q5.1: Horários de chegada refletem a realidade?"]
+    G5 --> Q52["Q5.2: Posição do ônibus no mapa está correta?"]
+
+    G6["G6: Avaliar Completude de Linhas"] --> Q61["Q6.1: Funções essenciais executam sem erro?"]
+    G6 --> Q62["Q6.2: Base de linhas bate com a Semob?"]
+
+    Q51 --> M51["M5.1: Precisão de Tempo (Desvio em min)"]
+    Q52 --> M52["M5.2: Correção Espacial do Mapa"]
+    Q61 --> M61["M6.1: Cobertura de Tarefas Essenciais"]
+    Q62 --> M62["M6.2: Completude do Banco de Linhas"]
+```
 
 <p class="legenda">Figura 3. Diagrama GQM focado na característica de Adequação Funcional (Correção e Completude) com seus níveis conceitual, operacional e quantitativo para o app DF no Ponto.</p>
 
@@ -63,3 +99,4 @@ Abaixo apresentamos a hierarquia estabelecida para a nossa análise, dividida po
 | ID  | Descrição                    | Autor                               | Data       | Revisor                              | Data     |
 | :-: | :--------------------------- | :---------------------------------- | :--------- | :----------------------------------- | :------- |
 | 01  | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |
+| 02  | Refatoração dos diagramas para Mermaid nativo | [João Capozzi](https://github.com/jonas3688) | 11/11/2026 | - | - |

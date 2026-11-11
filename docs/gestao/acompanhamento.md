@@ -33,10 +33,10 @@ Nenhuma atividade de desenvolvimento ou documentação pode ser iniciada sem uma
 O responsável deve obrigatoriamente movimentar o cartão para a coluna `In progress` ao iniciar o trabalho, `In review` ao abrir o Pull Request e `Done` apenas após a revisão e mesclagem na branch `main`, garantindo rastreabilidade contínua.
 
 ### 4.2. Distribuição Justa Baseada no Histórico de Contribuição
-Fica eliminada a divisão teórica e igualitária de esforço (16,6%). A participação da equipe passará a ser apurada pelos dados reais do repositório, extraídos da aba *Insights > Contributors* do GitHub (volume de commits, adições e deleções). Essa transparência servirá para identificar sobrecargas, evitar ociosidade e equilibrar a distribuição de demandas entre todos os integrantes nas próximas entregas.
+A participação da equipe passará a ser apurada pelos dados reais do repositório, extraídos da aba *Insights > Contributors* do GitHub (volume de commits, adições e deleções). Essa transparência servirá para identificar sobrecargas, evitar ociosidade e equilibrar a distribuição de demandas entre todos os integrantes nas próximas entregas.
 
 ### 4.3. Uso de Estimativas de Esforço nas Issues
-Cada issue aberta deve registrar obrigatoriamente em seu descritivo uma estimativa inicial de esforço em horas (ex: `Tempo estimado: 2 horas`). Esse dado permitirá confrontar o tempo previsto com o tempo real consumido, calibrando a capacidade produtiva da equipe e servindo de insumo para os cálculos de custo e investimento da metodologia PSM-CID.
+Cada issue aberta deve registrar obrigatoriamente em seu descritivo uma estimativa inicial de esforço em horas. Esse dado permitirá confrontar o tempo previsto com o tempo real consumido, calibrando a capacidade produtiva da equipe e servindo de insumo para os cálculos de custo e investimento da metodologia PSM-CID.
 
 ## 5. Integração da Gestão do Projeto (PSM-CID)
 
@@ -52,3 +52,4 @@ O acompanhamento detalhado dos dados e evidências que suportam este dashboard g
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [João Capozzi](https://github.com/jonas3688) | Criação da página de Acompanhamento do Projeto | 09/11/2026 | [c8bfc1b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/c8bfc1b) |
+| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |

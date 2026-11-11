@@ -52,4 +52,4 @@ O acompanhamento detalhado dos dados e evidências que suportam este dashboard g
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [João Capozzi](https://github.com/jonas3688) | Criação da página de Acompanhamento do Projeto | 09/11/2026 | [c8bfc1b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/c8bfc1b) |
-| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/) |
+| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |

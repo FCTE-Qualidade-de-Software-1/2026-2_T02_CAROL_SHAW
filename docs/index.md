@@ -91,7 +91,7 @@ Apresenta o propósito da avaliação, os requisitantes e partes interessadas, a
 
 ### 📌 [Fase 2 — Especificação da Avaliação](fase2/planejamento-objetivos.md)
 
-Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três características priorizadas na Fase 1, formalizando três objetivos de medição, seis questões operacionais, hipóteses e seis métricas quantitativas com seus respectivos critérios de julgamento. Inclui também a representação gráfica da hierarquia GQM completa.
+Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três características priorizadas na Fase 1, formalizando seis objetivos de medição, doze questões operacionais com hipóteses preditivas e doze métricas quantitativas com seus respectivos critérios de julgamento. Inclui também a representação gráfica da hierarquia GQM completa.
 
 > 💡 **Dica de leitura:** comece pela [Introdução da Fase 1](fase1/introducao.md) e siga pela ordem do menu. As seções foram escritas para serem lidas em sequência, com referências cruzadas entre si.
 

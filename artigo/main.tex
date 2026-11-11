@@ -70,7 +70,7 @@ Por fim, a fundamentação empírica específica sobre sistemas móveis apoia-se
 \section{Metodologia de Desenvolvimento do Projeto}
 \label{sec:metodologia}
 
-A metodologia de avaliação adotada neste trabalho fundamenta-se no processo estabelecido pela norma ISO/IEC 25010, adaptado para a análise externa do aplicativo móvel \textit{DF no Ponto}. O processo executado nesta primeira entrega divide-se em duas fases fundamentais. Na Fase 1 (Requisitos da Avaliação), o escopo foi delimitado com base na perspectiva do usuário final (passageiro), priorizando as características de Adequação Funcional, Confiabilidade e Portabilidade a partir do modelo de qualidade da ISO/IEC 25010~\cite{iso25010}.
+A metodologia de avaliação adotada neste trabalho fundamenta-se no processo de avaliação prescrito pela norma ISO/IEC 25040~\cite{iso25040}, utilizando o modelo de qualidade da ISO/IEC 25010~\cite{iso25010} e adaptado para a análise externa do aplicativo móvel \textit{DF no Ponto}. O processo executado nesta primeira entrega divide-se em duas fases fundamentais. Na Fase 1 (Requisitos da Avaliação), o escopo foi delimitado com base na perspectiva do usuário final (passageiro), priorizando as características de Adequação Funcional, Confiabilidade e Portabilidade a partir do modelo de qualidade da ISO/IEC 25010~\cite{iso25010}.
 
 Na Fase 2 (Especificação da Avaliação), a modelagem foi operacionalizada através da abordagem \textit{Goal-Question-Metric} (GQM)~\cite{basili1994,basili1988}. Essa estrutura garantiu que os objetivos conceituais de qualidade fossem desdobrados em questões avaliativas precisas e, consequentemente, em métricas quantitativas com critérios de julgamento rigorosos, assegurando a rastreabilidade técnica dos testes que serão executados. A adoção de testes de caixa preta está em consonância com abordagens consolidadas na literatura para avaliação externa de produtos de software~\cite{deissenboeck2009}.
 
@@ -89,6 +89,8 @@ Toda a documentação dinâmica (\textit{GitPage}), artefatos de avaliação e e
 
 \subsection{Propósito, Destinatários e Uso dos Resultados}
 O propósito desta avaliação é analisar o aplicativo DF no Ponto sob a perspectiva do usuário final, a fim de identificar oportunidades de melhoria técnica. Os destinatários são: (i)~Semob-DF e operadoras parceiras (interessados em melhorias); (ii)~passageiros (beneficiários); e (iii)~avaliadores da disciplina (requisitantes acadêmicos). Os resultados subsidiarão o julgamento da qualidade na Fase 4 e fundamentarão as ações de melhoria exigidas na Entrega 2.
+
+Adicionalmente, o propósito desta avaliação alinha-se aos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da Organização das Nações Unidas~\cite{onu2015}. O projeto vincula-se diretamente ao ODS~11 (Cidades e Comunidades Sustentáveis), com foco na Meta~11.2, ao promover o acesso a sistemas de transporte público seguros, sustentáveis e previsíveis por meio de informações precisas de itinerários e paradas. De forma complementar, relaciona-se ao ODS~9 (Indústria, Inovação e Infraestrutura), em sua Meta~9.1, ao incentivar o aprimoramento da infraestrutura digital e a modernização tecnológica dos serviços essenciais de mobilidade urbana no Distrito Federal.
 
 \subsection{Requisitante, Partes Interessadas, Papéis e Necessidades}
 \label{sec:stakeholders}
@@ -158,7 +160,7 @@ Com base na norma e nas dores reportadas pelos usuários, foram priorizadas trê
 \section{Fase 2: Especificação da Avaliação}
 \label{sec:fase2}
 
-A etapa de especificação traduz as subcaracterísticas de Portabilidade, Confiabilidade e Adequação Funcional em métricas concretas e mensuráveis, fundamentando-se nas medidas padronizadas pela norma ISO/IEC 25010. Para estruturar o desdobramento analítico, emprega-se o framework \textit{Goal--Question--Metric} (GQM)~\cite{basili1994,basili1988}, garantindo que o procedimento seja padronizado e passível de replicação por terceiros.
+A etapa de especificação traduz as subcaracterísticas de Portabilidade, Confiabilidade e Adequação Funcional em métricas concretas e mensuráveis, fundamentando-se nas medidas padronizadas pela norma ISO/IEC 25023~\cite{iso25023} e no modelo da ISO/IEC 25010~\cite{iso25010}. Para estruturar o desdobramento analítico, emprega-se o framework \textit{Goal--Question--Metric} (GQM)~\cite{basili1994,basili1988}, garantindo que o procedimento seja padronizado e passível de replicação por terceiros.
 
 \subsection{Desdobramento GQM: Objetivos de Medição}
 \label{sec:gqm_objetivos}
@@ -348,6 +350,14 @@ Os patamares de pontuação (Tabelas \ref{tab:escala_notas} e \ref{tab:limites_p
 \end{tabularx}
 \end{table}
 
+A determinação das metas numéricas e das faixas de decisão fundamenta-se nos preceitos das normas ISO/IEC 25010 e ISO/IEC 25023, contextualizadas às restrições operacionais do aplicativo móvel DF no Ponto e à dinâmica do transporte coletivo. A calibração dos limiares de aceitação considera a sensibilidade do usuário final perante atrasos e falhas, bem como as limitações tecnológicas observadas no ecossistema de mobilidade urbana.
+
+No âmbito da Portabilidade, os limiares diferenciam a flexibilidade de execução do rigor de instalação. Para Adaptabilidade ($M_{1.1}$ e $M_{1.2}$), a faixa satisfatória ($\geq 0,90$) e o limiar crítico ($< 0,75$) refletem a ampla diversidade de aparelhos e versões legadas de sistemas operacionais no Distrito Federal, evitando a exclusão digital de cidadãos com dispositivos de entrada. Já para Instalabilidade ($M_{2.1}$ e $M_{2.2}$), exige-se rigor superior: a faixa satisfatória é $\geq 0,95$ e taxas inferiores a 85\% configuram nível crítico ($< 0,85$), pois falhas de instalação nas lojas oficiais ou acúmulo excessivo de resíduos pós-desinstalação penalizam severamente aparelhos populares com armazenamento interno restrito.
+
+Em relação à Confiabilidade ($M_{3.1}, M_{3.2}, M_{4.1}, M_{4.2}$), os critérios alinham-se aos patamares consolidados da indústria móvel, como as diretrizes de estabilidade do \textit{Google Play Android Vitals}, exigindo estabilidade superior a 99\% para excelência e taxas de congelamento (\textit{ANRs}) inferiores a 1\% ($M_{3.2} \geq 0,99$). A tolerância a falhas diante de perda transitória de conexão de rede ou sinal de GPS impõe patamares mínimos satisfatórios de 85\%, dado que oscilações de conectividade são rotineiras no tráfego urbano e o encerramento inesperado do aplicativo no momento do embarque impõe prejuízo direto ao passageiro na parada de ônibus.
+
+Por fim, na dimensão de Adequação Funcional ($M_{5.1}$ a $M_{6.2}$), os limiares temporais de previsão de chegada foram calibrados conforme a dinâmica rodoviária do Distrito Federal: divergências de até 2 minutos caracterizam precisão em nível de aproximação física, e discrepâncias de até 5 minutos refletem flutuações normais de trânsito. Desvios medianos superiores a 10 minutos quebram a previsibilidade do serviço e ensejam penalização crítica. No aspecto espacial e funcional, imprecisões cartográficas superiores a 15\% no mapa reduzem a avaliação para nível insuficiente ($M_{5.2} < 0,85$), enquanto imprecisões severas superiores a 30\% ($M_{5.2} < 0,70$) ou a omissão de mais de 20\% das linhas ativas ($M_{6.2} < 0,80$) configuram patamar crítico, inviabilizando o propósito central do aplicativo.
+
 \begin{table}[H]
 \centering
 \caption{Julgamento dos Objetivos (Critério Conservador).}
@@ -443,8 +453,8 @@ Os diagramas a seguir ilustram o desdobramento natural dos propósitos de qualid
 
 A terminologia empregada é restrita ao escopo do trabalho e adaptada ao
 contexto do produto: os nomes das características e subcaracterísticas
-seguem a ISO/IEC 25010~\cite{iso25010} (maturidade, tolerância a falhas,
-adaptabilidade, completude, correção e pertinência funcionais), e os termos
+seguem a ISO/IEC 25010~\cite{iso25010} (adaptabilidade, instalabilidade,
+maturidade, tolerância a falhas, correção e completude funcionais), e os termos
 de medição seguem o GQM~\cite{basili1988,basili1994}. Conceitos externos ao escopo da
 avaliação foram deliberadamente omitidos para evitar jargão irrelevante, e o
 texto foi unificado no português do Brasil.
@@ -503,6 +513,11 @@ Requirements and Evaluation (SQuaRE): Guide to SQuaRE. Genebra: ISO/IEC,
 ISO/IEC. \emph{ISO/IEC 25010:2011} --- Systems and software Quality
 Requirements and Evaluation (SQuaRE): System and software quality models.
 Genebra: ISO/IEC, 2011.
+
+\bibitem{iso25023}
+ISO/IEC. \emph{ISO/IEC 25023:2016} --- Systems and software Quality
+Requirements and Evaluation (SQuaRE): Measurement of system and software
+product quality. Genebra: ISO/IEC, 2016.
 
 \bibitem{iso25040}
 ISO/IEC. \emph{ISO/IEC 25040:2011} --- Systems and software Quality

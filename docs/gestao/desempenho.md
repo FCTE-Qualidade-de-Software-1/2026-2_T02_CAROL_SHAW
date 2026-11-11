@@ -2,7 +2,7 @@
 
 ## 1. Introdução
 
-No âmbito do framework **PSM-CID** (*Practical Software and Systems Measurement - Continuous Iterative Development*), a dimensão de **Desempenho do Processo** avalia a eficiência, a fluidez e o ritmo de execução das atividades da equipe. Enquanto a categoria de *Recursos e Custos* converte o esforço humano em métricas econômicas e *Calendário e Progresso* monitora prazos e escopo, esta dimensão analisa o tempo de resposta das *Issues* no repositório e o esforço técnico dedicado para a conclusão de cada demanda.
+No âmbito do framework **PSM-CID** (*Practical Software and Systems Measurement - Continuous Iterative Development*), a dimensão de **Desempenho do Processo** avalia a eficiência, a fluidez e o ritmo de execução das atividades da equipe. Esta dimensão analisa o tempo de resposta das *Issues* no repositório e o esforço técnico dedicado para a conclusão de cada demanda.
 
 O monitoramento contínuo destas métricas permite verificar se as atividades estão sendo entregues dentro do tempo previsto, comparar o tempo estimado com o tempo real de execução e detectar precocemente tarefas estagnadas no repositório que exijam suporte ou redistribuição.
 
@@ -12,16 +12,20 @@ O monitoramento contínuo destas métricas permite verificar se as atividades es
 
 A apuração do desempenho combina os registros temporais nativos do GitHub (datas de abertura e fechamento das tarefas) com a declaração direta de esforço nas *Issues*:
 
-- **Lead Time (Tempo Total de Entrega - `TL`):** Mede o intervalo temporal total decorrido desde a data e hora de criação da *Issue* no repositório até a sua data e hora de fechamento definitivo após o *merge* na branch principal (`main`).
+- **Lead Time (Tempo Total de Entrega - `TL`):** Mede o intervalo temporal total decorrido desde a data e hora de criação da *Issue* no repositório até a sua data e hora de fechamento definitivo após o *merge* na branch `main`.
+
   `TL = Data/Hora de Conclusão - Data/Hora de Criação`
 
 - **Cycle Time (Tempo de Ciclo de Execução - `TC` / `Hr`):** Representa o tempo de trabalho efetivamente gasto para concluir a tarefa. A estimativa prévia (`He`) é atribuída no momento em que a *Issue* é criada e o tempo realizado (`Hr`) é declarado pelo responsável diretamente na própria *Issue* no momento da sua conclusão.
+
   `TC = Hr (Horas Realizadas Declaradas na Issue)`
 
 - **Tempo sem Atividade (Tempo de Estagnação - `TSA`):** Mede o período contínuo em que uma *Issue* mantida aberta permanece sem nenhuma movimentação técnica registrada.
   `TSA = Data/Hora Atual - Data/Hora da Última Atividade Registrada`
 
+
 - **Tempo Médio de Ciclo (`TMC`):** Indica a média aritmética das horas realizadas (`Hr`) de todas as *Issues* concluídas em uma determinada Milestone.
+
   `TMC = (Soma dos Hr das Issues Concluídas) / (Total de Issues Concluídas)`
 
 ---
@@ -70,22 +74,7 @@ Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia ge
 
 ### 5.2. Correção Entrega 1
 
-| Issue | Nome | Status | Lead Time | Cycle Time |
-| :---: | :--- | :--- | :--- | :--- |
-| #8 | [Criar página de Visão Geral](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/8) | Concluída | Não apurado | Não informado na issue |
-| #9 | [Criar página de Calendário e Progresso](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/9) | Concluída | Não apurado | Não informado na issue |
-| #10 | [Criar página de Recursos e Custos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/10) | Concluída | Não apurado | Não informado na issue |
-| #11 | [Criar página de Desempenho do Processo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/11) | Aberta | Em andamento | Não apurado |
-| #12 | [Criar página de Acompanhamento do Projeto](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/12) | Concluída | Não apurado | Não informado na issue |
-| #16 | [Embasamento Teórico e Justificativa das Métricas GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/16) | Aberta | Em andamento | Não apurado |
-| #17 | [Reestruturação e Alinhamento das Questões aos Objetivos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/17) | Aberta | Em andamento | Não apurado |
-| #18 | [Padronização das Escalas de Medição e Formalização dos Métodos de Cálculo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/18) | Aberta | Em andamento | Não apurado |
-| #19 | [Definição de Limiares (Thresholds) e Ajuste de Rastreabilidade no Diagrama GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/19) | Aberta | Em andamento | Não apurado |
-| #20 | [Alinhamento Estrutural e Coesão entre Fases 1 e 2 com Questões Norteadoras](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/20) | Aberta | Em andamento | Não apurado |
-| #21 | [Revisão da Seleção e Utilização dos Objetivos de Desenvolvimento Sustentável (ODS)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/21) | Aberta | Em andamento | Não apurado |
-| #22 | [Revisão Conceitual e Metodológica do Artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/22) | Aberta | Em andamento | Não apurado |
-| #23 | [Revisão Textual, Normatização em LaTeX e Rastreabilidade de Artefatos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/23) | Aberta | Em andamento | Não apurado |
-| #25 | [Revisão das páginas do PSM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/25) | Aberta | Em andamento | Não apurado |
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-8" width="1000" height="650" frameborder="0"></iframe>
 
 Na milestone **Entrega 1**, os tempos refletem registros retroativos e não representam a duração real do desenvolvimento. Na **Correção Entrega 1**, os tempos ainda não estão registrados de forma suficiente nas issues; por isso, o *Lead Time* das issues abertas aparece como em andamento e o *Cycle Time* está indicado como não apurado ou não informado.
 
@@ -93,5 +82,7 @@ Na milestone **Entrega 1**, os tempos refletem registros retroativos e não repr
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
-| [Cristiano Morais](https://github.com/CristianoMoraiss) | Criação da estrutura inicial da página | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
-| [Pedro Ramos Sousa Reis](https://github.com/Pedro) | Criação das tabelas de registro das Issues | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
+| [Cristiano Morais](https://github.com/CristianoMoraiss) | Criação da estrutura inicial da página | 10/11/2026 | [89ba979](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
+| [Pedro Ramos Sousa Reis](https://github.com/Pedro) | Criação das tabelas de registro das Issues | 10/11/2026 | [89ba979](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
+| [Vitor Bessa](https://github.com/bessazs) | Atualização da tabela de desempenho por issue pela tabela do grafana | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
+| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |

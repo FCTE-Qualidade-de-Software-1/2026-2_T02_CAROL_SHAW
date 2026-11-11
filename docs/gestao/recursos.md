@@ -71,7 +71,7 @@ A equipe estabeleceu faixas de controle para classificar os desvios de esforço 
 
 ## 5. Diretrizes Metodológicas da Equipe
 
-1. **Adesão ao Plano de Ação:** A partir da Entrega 2, nenhuma tarefa é executada sem a definição prévia da estimativa de esforço (`Tempo estimado: Xh`) na abertura da Issue no GitHub.
+1. **Adesão ao Plano de Ação:** A partir da Entrega 2, nenhuma tarefa é executada sem a definição prévia da estimativa de esforço (`Horas Estimadas: x`) na abertura da Issue no GitHub.
 2. **Auditoria por Dados Reais:** A apuração individual não se baseia em estimativas teóricas fixas (ex: 16,6%), mas sim nos dados de commits, deleções, adições e registros de horas reais vinculados às Issues.
 3. **Escopo de Cálculo:** A variação de esforço é computada apenas sobre Issues com status `Done` (concluídas e mescladas na branch `main`), evitando distorções provocadas por tarefas ainda em andamento.
 4. **Caráter Didático:** O valor de R$ 50,00/h é um parâmetro simulado para fins de aprendizagem acadêmica sobre governança e custos de projetos de software, não configurando transação financeira real.
@@ -94,31 +94,13 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Cor
 
 ### 7.1. Apuração de Esforço por Issue
 
-| Nº Issue | Descrição da Tarefa | Responsável | Status | `He` (Estimado) | `Hr` (Realizado) | Variação (%) | Custo Equivalente |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| [#8](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/8) | Criar página de Visão Geral | [Pedro Reis](https://github.com/PedroRSR) | Concluída | 2h | 1h | -50% | R$ 50 |
-| [#9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/9) | Criar página de Calendário e Progresso | [João Guilherme](https://github.com/JoaoGuilherme14) | Concluída | 2h | 1.5h | -25% | R$ 75 |
-| [#10](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/10) | Criar página de Recursos e Custos | [Cristiano Morais](https://github.com/CristianoMoraiss) | Concluída | 2h | 2h | 0% | R$ 100 |
-| [#11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/11) | Criar página de Desempenho do Processo | [Cristiano Morais](https://github.com/CristianoMoraiss) <br> [Pedro Reis](https://github.com/PedroRSR)| Concluída  | 2h | 2h | 0% | R$ 100|
-| [#12](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/12) | Criar página de Acompanhamento do Projeto | [João Guilherme Capozzi](https://github.com/jonas3688) | Concluída | 2h | 1h | -50% | R$ 50 |
-| [#16](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/16) | Embasamento Teórico e Justificativa das Métricas GQM | [Pedro Reis](https://github.com/PedroRSR) | Em Andamento | 2h | - | - | - |
-| [#17](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/17) | Reestruturação e Alinhamento das Questões aos Objetivos | [Cristiano Morais](https://github.com/CristianoMoraiss) | Em Andamento | 2h | - | - | - |
-| [#18](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/18) | Padronização das Escalas de Medição e Formalização dos Métodos de Cálculo | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | Em Andamento | 2h | - | - | - |
-| [#19](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/19) | Definição de Limiares ("Thresholds") e Ajuste de Rastreabilidade no Diagrama GQM | [João Guilherme Capozzi](https://github.com/jonas3688) | Em Andamento | 2h | - | - | - |
-| [#20](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/20) | Alinhamento Estrutural e Coesão entre Fases 1 e 2 com Questões Norteadoras | [João Guilherme](https://github.com/JoaoGuilherme14) | Em Andamento | 2h | - | - | - |
-| [#21](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/21) | Revisão da Seleção e Utilização dos Objetivos de Desenvolvimento Sustentável (ODS) | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | Em Andamento | 2h | - | - | - |
-| [#22](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/22) | Revisão Conceitual e Metodológica do Artigo | Por definir | Parada | 2h | - | - | - |
-| [#23](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/23) | Revisão Textual, Normatização em LaTeX e Rastreabilidade de Artefatos | Por definir | Parada | 2h | - | - | - |
-| [#25](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/25) | Revisão das páginas do PSM|[Cristiano Morais](https://github.com/CristianoMoraiss) <br> [Pedro Reis](https://github.com/PedroRSR)| Concluída | 2h | 3h | 50% | R$ 150 |
-| [#26](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/26) | ​[Documentação/Infra] Modelagem do Banco de Dados e Configuração do Grafana|[Vitor Bessa](https://github.com/Bessazs) | Concluída | 3h | 5h | 67% | R$ 250 |
-
-Total até o momento: R$ 775
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-11" width="1000" height="630" frameborder="0"></iframe>
 
 ### 7.2. Consolidação dos Dados da Milestone
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794096000000&to=1794268800000&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=dark&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794139252872&to=1794149598462&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
 - **Esforço Estimado do Escopo Concluído :** {Soma dos He das issues concluídas}h
 - **Esforço Realizado Acumulado :** {Soma dos Hr das issues concluídas}h
@@ -138,4 +120,6 @@ Com base na variação apurada de **{Resultado do Ve}%**:
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
-| [Cristiano Morais](https://github.com/CristianoMoraiss) | Adição da página de recursos e custos | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/exemplo) |
+| [Cristiano Morais](https://github.com/CristianoMoraiss) | Adição da página de recursos e custos | 10/11/2026 | [fb837e6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/fb837e6) |
+| [Vitor Bessa](https://github.com/bessazs) | Adição dos graficos de horas por mebros, horas de milestone e tabela de esforço por issue | 11/11/2026|[6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
+| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |

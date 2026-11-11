@@ -348,6 +348,14 @@ Os patamares de pontuação (Tabelas \ref{tab:escala_notas} e \ref{tab:limites_p
 \end{tabularx}
 \end{table}
 
+A determinação das metas numéricas e das faixas de decisão fundamenta-se nos preceitos das normas ISO/IEC 25010 e ISO/IEC 25023, contextualizadas às restrições operacionais do aplicativo móvel DF no Ponto e à dinâmica do transporte coletivo. A calibração dos limiares de aceitação considera a sensibilidade do usuário final perante atrasos e falhas, bem como as limitações tecnológicas observadas no ecossistema de mobilidade urbana.
+
+No âmbito da Portabilidade ($M_{1.1}, M_{1.2}, M_{2.1}, M_{2.2}$), a faixa satisfatória ($\geq 0,90$) reflete a necessidade de atender a um público com ampla heterogeneidade de dispositivos no Distrito Federal e Entorno, abrangendo desde aparelhos de entrada até sistemas operacionais legados em versões anteriores à versão 14 (sem suporte oficial). O estabelecimento do limiar crítico para taxas inferiores a 75\% apoia-se no impacto de exclusão digital: uma taxa menor que essa inviabilizaria o acesso de mais de um quarto dos cidadãos por incompatibilidade ou quebra visual de interface. De forma análoga, resíduos pós-desinstalação penalizam severamente aparelhos de baixo custo com memória interna restrita.
+
+Em relação à Confiabilidade ($M_{3.1}, M_{3.2}, M_{4.1}, M_{4.2}$), os critérios alinham-se às diretrizes da indústria, em especial ao padrão \textit{Google Play Android Vitals}, exigindo estabilidade superior a 99\% para excelência e taxas de congelamento (\textit{ANRs}) estritamente inferiores a 0,5\%. Em paradas de ônibus, o encerramento forçado do software durante a aproximação de um coletivo acarreta a perda do embarque pelo passageiro. Além disso, devido às constantes oscilações de conectividade móvel e instabilidade de sinal GPS nas vias urbanas, o aplicativo deve demonstrar tolerância satisfatória em pelo menos 85\% dos eventos adversos, exibindo avisos amigáveis em vez de encerrar a sessão.
+
+Por fim, na dimensão de Adequação Funcional ($M_{5.1}$ a $M_{6.2}$), a tolerância temporal do passageiro é estrita. Desvios absolutos de até 2 minutos representam alta precisão de aproximação física, enquanto divergências de até 5 minutos são plenamente aceitáveis perante as oscilações naturais de tráfego urbano no Distrito Federal. Desvios superiores a 10 minutos são classificados como críticos por quebrarem a previsibilidade, gerando perda de viagens e longas esperas em paradas desprovidas de segurança. No aspecto espacial e funcional, imprecisões cartográficas superiores a 15\% no mapa ou a omissão de mais de 20\% das linhas ativas em relação ao catálogo oficial da SEMOB-DF inviabilizam o propósito central do aplicativo como instrumento público de utilidade.
+
 \begin{table}[H]
 \centering
 \caption{Julgamento dos Objetivos (Critério Conservador).}

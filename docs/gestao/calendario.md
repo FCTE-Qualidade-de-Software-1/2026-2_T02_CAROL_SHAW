@@ -108,15 +108,7 @@ A milestone **Correção Entrega 1** foi instituída para executar o plano de me
 
 A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo de 5 frentes de trabalho estruturantes:
 
-| Propriedade / Indicador | Dado da Milestone |
-| :--- | :--- |
-| **Nome da Milestone** | Correção Entrega 1 |
-| **Data de Início** | 07 de novembro de 2026 |
-| **Data de Fim (Ciclo de Fechamento)** | 16 de novembro de 2026 (data de entrega planejada) |
-| **Total de Issues Cadastradas** | 15 |
-| **Issues Concluídas** | 7 |
-| **Taxa de Conclusão** | **47%** |
-| **Tempo Médio de Conclusão por Tarefa** | ~2 horas|
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-10" width="600git" height="350" frameborder="0"></iframe>
 
 #### Detalhamento das Tarefas da Correção da Entrega 1
 
@@ -129,7 +121,7 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 
 **Cálculo da Taxa de Conclusão da Correção:**
 
-$$\text{Taxa de Conclusão (Correção)} = \left( \frac{7}{15} \right) \times 100 = 47\%$$
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
 
 *Cálculo feito apenas sobre as issues abertas até o momento*
 
@@ -138,8 +130,7 @@ $$\text{Taxa de Conclusão (Correção)} = \left( \frac{7}{15} \right) \times 10
 Diferentemente da Entrega 1, o gráfico de *burndown* da fase de correção reflete uma taxa de consumo de escopo progressiva, à medida que os artefatos foram revisados, documentados e submetidos via Pull Request:
 
 
-![Grafico Burndown Correcao](imagens/Grafico2.jpg)
-*Grafico de Burndown da Correcao - 05/11/2026 a 09/11/2026 - Fonte: Github Projects*
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-1" width="450" height="200" frameborder="0"></iframe>
 
 
 ## Tabela de Contribuição
@@ -147,3 +138,4 @@ Diferentemente da Entrega 1, o gráfico de *burndown* da fase de correção refl
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | Criação e estruturação da página de Calendário e Progresso | 09/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/85e6b2578b0a683bb75f82016d24ec5fd2136496) |
+| [Vitor Bessa](https://github.com/Bessazs) | Adição da tabela de desempenho da milestone e do grafico de burndow| 11/11/2026 | [Commit](xxx) |

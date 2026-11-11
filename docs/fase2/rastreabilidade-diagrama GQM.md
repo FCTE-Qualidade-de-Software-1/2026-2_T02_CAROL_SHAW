@@ -33,7 +33,19 @@ Abaixo apresentamos a hierarquia estabelecida para a nossa análise, dividida po
 
 ### 1. Característica: Portabilidade
 
-![Diagrama GQM - Portabilidade](imagens/mermaid-diagram-2026-10-31-162443.png)
+```mermaid
+flowchart TD
+    G1["G1: Avaliar Adaptabilidade"] --> Q11["Q1.1: Redimensiona em tela pequena?"]
+    G1 --> Q12["Q1.2: Roda em Android antigo?"]
+
+    G2["G2: Avaliar Instalabilidade"] --> Q21["Q2.1: Instala sem erro na loja?"]
+    G2 --> Q22["Q2.2: Limpa arquivos ao desinstalar?"]
+
+    Q11 --> M11["M1.1: Adaptabilidade de Telas"]
+    Q12 --> M12["M1.2: Adaptabilidade de SO"]
+    Q21 --> M21["M2.1: Sucesso de Instalação"]
+    Q22 --> M22["M2.2: Resíduo pós-desinstalação"]
+```
 
 <p class="legenda">Figura 1. Diagrama GQM focado na característica de Portabilidade (Adaptabilidade e Instalabilidade) com seus níveis conceitual, operacional e quantitativo para o app DF no Ponto.</p>
 
@@ -63,3 +75,4 @@ Abaixo apresentamos a hierarquia estabelecida para a nossa análise, dividida po
 | ID  | Descrição                    | Autor                               | Data       | Revisor                              | Data     |
 | :-: | :--------------------------- | :---------------------------------- | :--------- | :----------------------------------- | :------- |
 | 01  | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |
+| 02  | Refatoração dos diagramas para Mermaid nativo | [João Capozzi](https://github.com/jonas3688) | 11/11/2026 | - | - |

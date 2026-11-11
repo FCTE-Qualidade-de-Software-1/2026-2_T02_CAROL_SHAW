@@ -53,7 +53,19 @@ flowchart TD
 
 ### 2. Característica: Confiabilidade
 
-![Diagrama GQM - Confiabilidade](imagens/mermaid-diagram-2026-10-31-162527.png)
+```mermaid
+flowchart TD
+    G3["G3: Avaliar Maturidade"] --> Q31["Q3.1: Evita encerramento forçado (crash)?"]
+    G3 --> Q32["Q3.2: Previne congelamento de tela (ANR)?"]
+
+    G4["G4: Avaliar Tolerância a Falhas"] --> Q41["Q4.1: Trata queda de conexão 4G/Wi-Fi?"]
+    G4 --> Q42["Q4.2: Reage à desativação de GPS?"]
+
+    Q31 --> M31["M3.1: Densidade de Falhas (Crashes)"]
+    Q32 --> M32["M3.2: Densidade de ANRs (Travamentos)"]
+    Q41 --> M41["M4.1: Evitação de Quebra (Conexão)"]
+    Q42 --> M42["M4.2: Tratamento de Perda de GPS"]
+```
 
 <p class="legenda">Figura 2. Diagrama GQM focado na característica de Confiabilidade (Maturidade e Tolerância a Falhas) com seus níveis conceitual, operacional e quantitativo para o app DF no Ponto.</p>
 

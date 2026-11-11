@@ -113,9 +113,9 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 | **Nome da Milestone** | Correção Entrega 1 |
 | **Data de Início** | 07 de novembro de 2026 |
 | **Data de Fim (Ciclo de Fechamento)** | 16 de novembro de 2026 (data de entrega planejada) |
-| **Total de Issues Cadastradas** | 14 |
-| **Issues Concluídas** | 6 |
-| **Taxa de Conclusão** | **43%** |
+| **Total de Issues Cadastradas** | 15 |
+| **Issues Concluídas** | 7 |
+| **Taxa de Conclusão** | **47%** |
 | **Tempo Médio de Conclusão por Tarefa** | ~2 horas|
 
 #### Detalhamento das Tarefas da Correção da Entrega 1
@@ -129,7 +129,7 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 
 **Cálculo da Taxa de Conclusão da Correção:**
 
-$$\text{Taxa de Conclusão (Correção)} = \left( \frac{6}{14} \right) \times 100 = 43\%$$
+$$\text{Taxa de Conclusão (Correção)} = \left( \frac{7}{15} \right) \times 100 = 47\%$$
 
 *Cálculo feito apenas sobre as issues abertas até o momento*
 

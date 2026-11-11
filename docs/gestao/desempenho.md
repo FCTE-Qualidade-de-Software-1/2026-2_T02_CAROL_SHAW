@@ -58,27 +58,34 @@ Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia ge
 
 ## 5. Registro das Issues
 
-| Issue | Nome | Milestone | Tags | Status | Lead Time | Cycle Time |
-| :---: | :--- | :--- | :--- | :--- | :--- | :--- |
-| #3 | [Definir requisitos da avaliação e modelo de qualidade (Fase 1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/3) | Entrega 1 | Sem tags | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min; não representa o tempo real |
-| #4 | [Especificação da Avaliação e Desdobramento GQM (Fase 2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/4) | Entrega 1 | Sem tags | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
-| #5 | [Organização do relatório em LaTeX e criação da GitPage](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/5) | Entrega 1 | Sem tags | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
-| #6 | [Análise de requisitos, metodologia e revisão técnica global](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/6) | Entrega 1 | Sem tags | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
-| #7 | [Refinamentos e correções do artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/7) | Entrega 1 | Sem tags | Concluída | 4 dias até o fechamento (31/10 a 04/11/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
-| #8 | [Criar página de Visão Geral](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/8) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, PSM | Concluída | Não apurado | Não informado na issue |
-| #9 | [Criar página de Calendário e Progresso](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/9) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, PSM | Concluída | Não apurado | Não informado na issue |
-| #10 | [Criar página de Recursos e Custos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/10) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, PSM | Concluída | Não apurado | Não informado na issue |
-| #11 | [Criar página de Desempenho do Processo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/11) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, PSM | Aberta | Em andamento | Não apurado |
-| #12 | [Criar página de Acompanhamento do Projeto](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/12) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, PSM | Concluída | Não apurado | Não informado na issue |
-| #16 | [Embasamento Teórico e Justificativa das Métricas GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/16) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, GQM, retrabalho | Aberta | Em andamento | Não apurado |
-| #17 | [Reestruturação e Alinhamento das Questões aos Objetivos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/17) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, GQM, retrabalho | Aberta | Em andamento | Não apurado |
-| #18 | [Padronização das Escalas de Medição e Formalização dos Métodos de Cálculo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/18) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, GQM, retrabalho | Aberta | Em andamento | Não apurado |
-| #19 | [Definição de Limiares (Thresholds) e Ajuste de Rastreabilidade no Diagrama GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/19) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, GQM, retrabalho | Aberta | Em andamento | Não apurado |
-| #20 | [Alinhamento Estrutural e Coesão entre Fases 1 e 2 com Questões Norteadoras](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/20) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, GQM, retrabalho | Aberta | Em andamento | Não apurado |
-| #21 | [Revisão da Seleção e Utilização dos Objetivos de Desenvolvimento Sustentável (ODS)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/21) | Correção Entrega 1 | GIT PAGES, GQM | Aberta | Em andamento | Não apurado |
-| #22 | [Revisão Conceitual e Metodológica do Artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/22) | Correção Entrega 1 | ARTIGO, retrabalho | Aberta | Em andamento | Não apurado |
-| #23 | [Revisão Textual, Normatização em LaTeX e Rastreabilidade de Artefatos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/23) | Correção Entrega 1 | ARTIGO, retrabalho | Aberta | Em andamento | Não apurado |
-| #25 | [Revisão das páginas do PSM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/25) | Correção Entrega 1 | ALTA PRIORIDADE, GIT PAGES, PSM | Aberta | Em andamento | Não apurado |
+### 5.1. Entrega 1
+
+| Issue | Nome | Status | Lead Time | Cycle Time |
+| :---: | :--- | :--- | :--- | :--- |
+| #3 | [Definir requisitos da avaliação e modelo de qualidade (Fase 1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/3) | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min; não representa o tempo real |
+| #4 | [Especificação da Avaliação e Desdobramento GQM (Fase 2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/4) | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
+| #5 | [Organização do relatório em LaTeX e criação da GitPage](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/5) | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
+| #6 | [Análise de requisitos, metodologia e revisão técnica global](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/6) | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
+| #7 | [Refinamentos e correções do artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/7) | Concluída | 4 dias até o fechamento (31/10 a 04/11/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
+
+### 5.2. Correção Entrega 1
+
+| Issue | Nome | Status | Lead Time | Cycle Time |
+| :---: | :--- | :--- | :--- | :--- |
+| #8 | [Criar página de Visão Geral](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/8) | Concluída | Não apurado | Não informado na issue |
+| #9 | [Criar página de Calendário e Progresso](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/9) | Concluída | Não apurado | Não informado na issue |
+| #10 | [Criar página de Recursos e Custos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/10) | Concluída | Não apurado | Não informado na issue |
+| #11 | [Criar página de Desempenho do Processo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/11) | Aberta | Em andamento | Não apurado |
+| #12 | [Criar página de Acompanhamento do Projeto](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/12) | Concluída | Não apurado | Não informado na issue |
+| #16 | [Embasamento Teórico e Justificativa das Métricas GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/16) | Aberta | Em andamento | Não apurado |
+| #17 | [Reestruturação e Alinhamento das Questões aos Objetivos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/17) | Aberta | Em andamento | Não apurado |
+| #18 | [Padronização das Escalas de Medição e Formalização dos Métodos de Cálculo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/18) | Aberta | Em andamento | Não apurado |
+| #19 | [Definição de Limiares (Thresholds) e Ajuste de Rastreabilidade no Diagrama GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/19) | Aberta | Em andamento | Não apurado |
+| #20 | [Alinhamento Estrutural e Coesão entre Fases 1 e 2 com Questões Norteadoras](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/20) | Aberta | Em andamento | Não apurado |
+| #21 | [Revisão da Seleção e Utilização dos Objetivos de Desenvolvimento Sustentável (ODS)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/21) | Aberta | Em andamento | Não apurado |
+| #22 | [Revisão Conceitual e Metodológica do Artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/22) | Aberta | Em andamento | Não apurado |
+| #23 | [Revisão Textual, Normatização em LaTeX e Rastreabilidade de Artefatos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/23) | Aberta | Em andamento | Não apurado |
+| #25 | [Revisão das páginas do PSM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/25) | Aberta | Em andamento | Não apurado |
 
 Na milestone **Entrega 1**, os tempos refletem registros retroativos e não representam a duração real do desenvolvimento. Na **Correção Entrega 1**, os tempos ainda não estão registrados de forma suficiente nas issues; por isso, o *Lead Time* das issues abertas aparece como em andamento e o *Cycle Time* está indicado como não apurado ou não informado.
 
@@ -86,4 +93,5 @@ Na milestone **Entrega 1**, os tempos refletem registros retroativos e não repr
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
-| [Vitor Pereira Bessa](https://github.com/Bessazs) | Criação e estruturação da página de Desempenho do Processo | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/c8bfc1b) |
+| [Cristiano Morais](https://github.com/CristianoMoraiss) | Criação da estrutura inicial da página | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
+| [Pedro Ramos Sousa Reis](https://github.com/Pedro) | Criação das tabelas de registro das Issues | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |

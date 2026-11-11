@@ -96,11 +96,11 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Cor
 
 | Nº Issue | Descrição da Tarefa | Responsável | Status | `He` (Estimado) | `Hr` (Realizado) | Variação (%) | Custo Equivalente |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| [#8](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/8) | Criar página de Visão Geral | [Pedro Reis](https://github.com/PedroRSR) | Concluída | 2h | 1h | - | - |
-| [#9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/9) | Criar página de Calendário e Progresso | [João Guilherme](https://github.com/JoaoGuilherme14) | Concluída | 2h | 1.5h | - | - |
-| [#10](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/10) | Criar página de Recursos e Custos | [Cristiano Morais](https://github.com/CristianoMoraiss) | Concluída | 2h | 2h | - | - |
-| [#11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/11) | Criar página de Desempenho do Processo | [Cristiano Morais](https://github.com/CristianoMoraiss) <br> [Pedro Reis](https://github.com/PedroRSR)| Concluída  | 2h | 2h | - | - |
-| [#12](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/12) | Criar página de Acompanhamento do Projeto | [João Guilherme Capozzi](https://github.com/jonas3688) | Concluída | 2h | 1h | - | - |
+| [#8](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/8) | Criar página de Visão Geral | [Pedro Reis](https://github.com/PedroRSR) | Concluída | 2h | 1h | -50% | R$ 50 |
+| [#9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/9) | Criar página de Calendário e Progresso | [João Guilherme](https://github.com/JoaoGuilherme14) | Concluída | 2h | 1.5h | -25% | R$ 75 |
+| [#10](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/10) | Criar página de Recursos e Custos | [Cristiano Morais](https://github.com/CristianoMoraiss) | Concluída | 2h | 2h | 0% | R$ 100 |
+| [#11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/11) | Criar página de Desempenho do Processo | [Cristiano Morais](https://github.com/CristianoMoraiss) <br> [Pedro Reis](https://github.com/PedroRSR)| Concluída  | 2h | 2h | 0% | R$ 100|
+| [#12](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/12) | Criar página de Acompanhamento do Projeto | [João Guilherme Capozzi](https://github.com/jonas3688) | Concluída | 2h | 1h | -50% | R$ 50 |
 | [#16](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/16) | Embasamento Teórico e Justificativa das Métricas GQM | [Pedro Reis](https://github.com/PedroRSR) | Em Andamento | 2h | - | - | - |
 | [#17](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/17) | Reestruturação e Alinhamento das Questões aos Objetivos | [Cristiano Morais](https://github.com/CristianoMoraiss) | Em Andamento | 2h | - | - | - |
 | [#18](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/18) | Padronização das Escalas de Medição e Formalização dos Métodos de Cálculo | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | Em Andamento | 2h | - | - | - |
@@ -109,19 +109,22 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Cor
 | [#21](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/21) | Revisão da Seleção e Utilização dos Objetivos de Desenvolvimento Sustentável (ODS) | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | Em Andamento | 2h | - | - | - |
 | [#22](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/22) | Revisão Conceitual e Metodológica do Artigo | Por definir | Parada | 2h | - | - | - |
 | [#23](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/23) | Revisão Textual, Normatização em LaTeX e Rastreabilidade de Artefatos | Por definir | Parada | 2h | - | - | - |
-| [#25](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/25) | Revisão das páginas do PSM|[Cristiano Morais](https://github.com/CristianoMoraiss) <br> [Pedro Reis](https://github.com/PedroRSR)| Concluída | 2h | 2h | - | - |
+| [#25](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/25) | Revisão das páginas do PSM|[Cristiano Morais](https://github.com/CristianoMoraiss) <br> [Pedro Reis](https://github.com/PedroRSR)| Concluída | 2h | 3h | 50% | R$ 150 |
+| [#26](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/26) | ​[Documentação/Infra] Modelagem do Banco de Dados e Configuração do Grafana|[Vitor Bessa](https://github.com/Bessazs) | Concluída | 3h | 5h | 67% | R$ 250 |
+
+Total até o momento: R$ 775
 
 ### 7.2. Consolidação dos Dados da Milestone
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794096000000&to=1794268800000&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=dark&panelId=panel-6" width="450" height="200" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794096000000&to=1794268800000&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=dark&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
 
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794139252872&to=1794149598462&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
-A consolidação considera a soma das tarefas que já atingiram o estado **Done** (concluídas e mescladas na `main`):
+- **Esforço Estimado do Escopo Concluído :** {Soma dos He das issues concluídas}h
+- **Esforço Realizado Acumulado :** {Soma dos Hr das issues concluídas}h
+- **Variação Global do Esforço :** {Resultado da fórmula}%
+- **Custo Financeiro Equivalente Acumulado:** R$ Et * 50,00
 
-- **Esforço Estimado do Escopo Concluído ($E_e$):** {Soma dos He das issues concluídas}h
-- **Esforço Realizado Acumulado ($E_t$):** {Soma dos Hr das issues concluídas}h
-- **Variação Global do Esforço ($V_e$):** {Resultado da fórmula}%
-- **Custo Financeiro Equivalente Acumulado:** R$ {Et * 50,00}
 
 ### 7.3. Avaliação dos Critérios de Decisão
 

@@ -36,7 +36,7 @@
 \maketitle
 
 \begin{resumo}
-Este relatório apresenta a primeira entrega do projeto final da disciplina Qualidade de Software 1, que avalia a qualidade do aplicativo móvel DF no Ponto, ferramenta oficial do transporte público do Distrito Federal. O relatório cobre as duas primeiras fases do processo recomendado pela ISO/IEC 25040: requisitos da avaliação (Fase 1) e especificação da avaliação (Fase 2). Utilizou-se a abordagem Goal-Question-Metric (GQM) para desdobrar os objetivos de Adequação Funcional, Confiabilidade e Portabilidade em métricas quantitativas e critérios de julgamento. São fornecidos os links do repositório, portal de documentação e tabela de contribuição.
+Este relatório apresenta a primeira entrega do projeto final da disciplina Qualidade de Software 1, que avalia a qualidade do aplicativo móvel \textit{DF no Ponto}, ferramenta oficial do transporte público do Distrito Federal. O relatório cobre as duas primeiras fases do processo recomendado pela norma ISO/IEC 25040: requisitos da avaliação (Fase~1) e especificação da avaliação (Fase~2). Utilizou-se a abordagem \textit{Goal-Question-Metric} (GQM) para desdobrar os objetivos de Adequação Funcional, Confiabilidade e Portabilidade em métricas quantitativas e critérios de julgamento. São fornecidos os links do repositório institucional, do portal de documentação e da tabela de contribuição da equipe.
 \end{resumo}
 
 \vspace{0.5em}
@@ -46,9 +46,9 @@ Este relatório apresenta a primeira entrega do projeto final da disciplina Qual
 \section{Introdução}
 \label{sec:intro}
 
-O transporte público desempenha um papel fundamental na mobilidade urbana do Distrito Federal. Nesse contexto, o aplicativo DF no Ponto tornou-se a ferramenta oficial e amplamente utilizada por milhares de cidadãos diariamente para planejar rotas, verificar horários e acompanhar as linhas de ônibus em tempo real. No entanto, passageiros frequentemente relatam problemas graves na experiência de uso: ônibus que ``somem'' do mapa interativo, previsões de horários que não coincidem com a realidade e fechamentos abruptos (\textit{crashes}) do sistema exatamente no momento de decisão de embarque. Estudos sobre avaliações de usuários de aplicativos móveis confirmam que falhas de estabilidade e precisão funcional figuram entre as principais causas de rejeição e desinstalação~\cite{khalid2015,minelli2015}. Tais falhas geram atrasos sistemáticos, perda de tempo e insatisfação generalizada, minando a confiança da população no serviço digital.
+O transporte público desempenha um papel fundamental na mobilidade urbana do Distrito Federal. Nesse contexto, o aplicativo \textit{DF no Ponto} tornou-se a ferramenta oficial e amplamente utilizada por milhares de cidadãos diariamente para planejar rotas, verificar horários e acompanhar as linhas de ônibus em tempo real. No entanto, passageiros frequentemente relatam problemas graves na experiência de uso: ônibus que ``somem'' do mapa interativo, previsões de horários que não coincidem com a realidade e fechamentos abruptos (\textit{crashes}) do sistema exatamente no momento de decisão de embarque. Estudos sobre avaliações de usuários de aplicativos móveis confirmam que falhas de estabilidade e precisão funcional figuram entre as principais causas de rejeição e desinstalação~\cite{khalid2015,minelli2015}. Tais falhas geram atrasos sistemáticos, perda de tempo e insatisfação generalizada, minando a confiança da população no serviço digital.
 
-O objetivo geral deste trabalho é realizar uma avaliação rigorosa da qualidade de software do produto DF no Ponto, sob a perspectiva do usuário final, com foco em identificar fragilidades e propor melhorias técnicas concretas. Para conduzir essa análise de forma estruturada e metodologicamente fundamentada, este trabalho utiliza o modelo de qualidade da norma ISO/IEC 25010, que fornece características padronizadas para a avaliação de sistemas~\cite{deissenboeck2009}, aliado à abordagem Goal-Question-Metric (GQM)~\cite{basili1988}. O GQM permite derivar de forma sistemática métricas operacionais e quantitativas a partir dos objetivos conceituais de medição, garantindo que os dados coletados estejam diretamente atrelados à percepção de valor do passageiro.
+O objetivo geral deste trabalho é realizar uma avaliação rigorosa da qualidade de software do produto \textit{DF no Ponto}, sob a perspectiva do usuário final, com foco em identificar fragilidades e propor melhorias técnicas concretas. Para conduzir essa análise de forma estruturada e metodologicamente fundamentada, este trabalho utiliza o modelo de qualidade da norma ISO/IEC 25010, que fornece características padronizadas para a avaliação de sistemas~\cite{deissenboeck2009}, aliado à abordagem \textit{Goal-Question-Metric} (GQM)~\cite{basili1988}. O GQM permite derivar de forma sistemática métricas operacionais e quantitativas a partir dos objetivos conceituais de medição, garantindo que os dados coletados estejam diretamente atrelados à percepção de valor do passageiro.
 
 O restante deste artigo está organizado da seguinte forma: a Seção~\ref{sec:referencial} apresenta o referencial teórico; a Seção~\ref{sec:metodologia} descreve a metodologia de avaliação; a Seção~\ref{sec:fase1} detalha a Fase~1 (requisitos da avaliação); a Seção~\ref{sec:fase2} especifica a Fase~2 (desdobramento GQM); e o Apêndice~\ref{ap:contribuicao} contém a tabela de contribuição.
 
@@ -72,9 +72,9 @@ Por fim, a fundamentação empírica específica sobre sistemas móveis apoia-se
 
 A metodologia de avaliação adotada neste trabalho fundamenta-se no processo de avaliação prescrito pela norma ISO/IEC 25040~\cite{iso25040}, utilizando o modelo de qualidade da ISO/IEC 25010~\cite{iso25010} e adaptado para a análise externa do aplicativo móvel \textit{DF no Ponto}. O processo executado nesta primeira entrega divide-se em duas fases fundamentais. Na Fase 1 (Requisitos da Avaliação), o escopo foi delimitado com base na perspectiva do usuário final (passageiro), priorizando as características de Adequação Funcional, Confiabilidade e Portabilidade a partir do modelo de qualidade da ISO/IEC 25010~\cite{iso25010}.
 
-Na Fase 2 (Especificação da Avaliação), a modelagem foi operacionalizada através da abordagem \textit{Goal-Question-Metric} (GQM)~\cite{basili1994,basili1988}. Essa estrutura garantiu que os objetivos conceituais de qualidade fossem desdobrados em questões avaliativas precisas e, consequentemente, em métricas quantitativas com critérios de julgamento rigorosos, assegurando a rastreabilidade técnica dos testes que serão executados. A adoção de testes de caixa preta está em consonância com abordagens consolidadas na literatura para avaliação externa de produtos de software~\cite{deissenboeck2009}.
+Na Fase 2 (Especificação da Avaliação), a modelagem foi operacionalizada por meio da abordagem \textit{Goal-Question-Metric} (GQM)~\cite{basili1994,basili1988}. Essa estrutura garantiu que os objetivos conceituais de qualidade fossem desdobrados em questões avaliativas precisas e, consequentemente, em métricas quantitativas com critérios de julgamento rigorosos, assegurando a rastreabilidade técnica dos testes que serão executados. A adoção de testes de caixa preta está em consonância com abordagens consolidadas na literatura para avaliação externa de produtos de software~\cite{deissenboeck2009}.
 
-Toda a documentação dinâmica (\textit{GitPage}), artefatos de avaliação e este relatório gerado em \LaTeX\ (modelo SBC) estão mantidos sob controle de versão e acessíveis em:
+Toda a documentação dinâmica (\textit{GitPage}), artefatos de avaliação e este relatório gerado em \LaTeX\ (modelo SBC) estão mantidos sob controle de versão no repositório institucional da equipe~\cite{fcte2026} e acessíveis em:
 
 \begin{itemize}
     \item \textbf{Repositório GitHub:} \\
@@ -88,16 +88,16 @@ Toda a documentação dinâmica (\textit{GitPage}), artefatos de avaliação e e
 \label{sec:fase1}
 
 \subsection{Propósito, Destinatários e Uso dos Resultados}
-O propósito desta avaliação é analisar o aplicativo DF no Ponto sob a perspectiva do usuário final, a fim de identificar oportunidades de melhoria técnica. Os destinatários são: (i)~Semob-DF e operadoras parceiras (interessados em melhorias); (ii)~passageiros (beneficiários); e (iii)~avaliadores da disciplina (requisitantes acadêmicos). Os resultados subsidiarão o julgamento da qualidade na Fase 4 e fundamentarão as ações de melhoria exigidas na Entrega 2.
+O propósito desta avaliação é analisar o aplicativo \textit{DF no Ponto} sob a perspectiva do usuário final, a fim de identificar oportunidades de melhoria técnica. Os destinatários são: (i)~Secretaria de Transporte e Mobilidade do Distrito Federal (Semob-DF)~\cite{semob2026} e operadoras parceiras (interessados em melhorias); (ii)~passageiros (beneficiários); e (iii)~avaliadores da disciplina (requisitantes acadêmicos). Os resultados subsidiarão o julgamento da qualidade na Fase 4 e fundamentarão as ações de melhoria exigidas na Entrega 2.
 
 Adicionalmente, o propósito desta avaliação alinha-se aos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da Organização das Nações Unidas~\cite{onu2015}. O projeto vincula-se diretamente ao ODS~11 (Cidades e Comunidades Sustentáveis), com foco na Meta~11.2, ao promover o acesso a sistemas de transporte público seguros, sustentáveis e previsíveis por meio de informações precisas de itinerários e paradas. De forma complementar, relaciona-se ao ODS~9 (Indústria, Inovação e Infraestrutura), em sua Meta~9.1, ao incentivar o aprimoramento da infraestrutura digital e a modernização tecnológica dos serviços essenciais de mobilidade urbana no Distrito Federal.
 
 \subsection{Requisitante, Partes Interessadas, Papéis e Necessidades}
 \label{sec:stakeholders}
 
-O Quadro~\ref{tab:stakeholders} sintetiza as partes interessadas, reforçando a convergência de necessidades para os focos de qualidade adotados nesta avaliação.
+A Tabela~\ref{tab:stakeholders} sintetiza as partes interessadas, reforçando a convergência de necessidades para os focos de qualidade adotados nesta avaliação.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Partes interessadas, papéis e influência na avaliação.}
 \label{tab:stakeholders}
@@ -115,7 +115,7 @@ Semob-DF & Gestores & Atender a população com eficiência & Destinatários das
 \end{table}
 
 \subsection{Produto, Escopo e Exclusões}
-O produto avaliado é o app móvel (Android/iOS) DF no Ponto em produção. O escopo abrange as funcionalidades centrais de pesquisa de rotas e consulta de horários. A avaliação é externa (\textit{caixa preta}), focada na interface e interação de rede. Estão \textbf{fora do escopo}: eficiência técnica de backend, manutenibilidade do código-fonte, usabilidade estética, segurança da base de dados e funcionamento em plataformas web/tablets.
+O produto avaliado é o aplicativo móvel (Android e iOS) \textit{DF no Ponto} em ambiente de produção. O escopo abrange as funcionalidades centrais de pesquisa de rotas e consulta de horários. A avaliação é externa (\textit{caixa preta}), focada na interface e na interação de rede. Estão \textbf{fora do escopo}: eficiência técnica de backend, manutenibilidade do código-fonte, usabilidade estética, segurança da base de dados e funcionamento em plataformas web/tablets.
 
 \subsection{Seleção das Características e Justificativa (ISO/IEC 25010)}
 Com base na norma e nas dores reportadas pelos usuários, foram priorizadas três características:
@@ -125,7 +125,9 @@ Com base na norma e nas dores reportadas pelos usuários, foram priorizadas trê
     \item \textbf{Portabilidade (P3):} A diversidade demográfica do DF exige adaptabilidade a variados tamanhos de tela e versões de sistemas operacionais~\cite{deissenboeck2009}.
 \end{enumerate}
 
-\begin{figure}[h]
+A Figura~\ref{fig:modelo} ilustra a estrutura conceitual do modelo adaptado, demarcando as características priorizadas e as exclusões de escopo.
+
+\begin{figure}[H]
 \centering
 \resizebox{0.85\textwidth}{!}{%
 \begin{tikzpicture}
@@ -196,23 +198,23 @@ O desdobramento das metas conceituais gerou interrogações analíticas focadas 
 \toprule
 \textbf{Objetivo} & \textbf{ID} & \textbf{Questão Operacional} & \textbf{Hipótese Preditiva} \\
 \midrule
-\textbf{G1} & Q1.1 & A interface gráfica se redimensiona sem sobreposições em telas compactas? & Espera-se que telas abaixo de 5" apresentem sobreposições pontuais no mapa. \\
-(Adaptab.) & Q1.2 & O aplicativo executa sem erros críticos de compatibilidade em sistemas legados? & Espera-se pleno funcionamento nas versões testadas do Android. \\
+\textbf{G1} & Q1.1 & A interface gráfica se redimensiona sem sobreposições em telas compactas? & \textbf{H1.1:} Espera-se que telas abaixo de 5'' apresentem sobreposições pontuais no mapa. \\
+(Adaptab.) & Q1.2 & O aplicativo executa sem erros críticos de compatibilidade em sistemas legados? & \textbf{H1.2:} Espera-se pleno funcionamento nas versões testadas do Android. \\
 \midrule
-\textbf{G2} & Q2.1 & O processo de instalação nas lojas oficiais ocorre sem fricção ou corrompimento? & Espera-se sucesso de 100\% nas instalações limpas oficiais. \\
-(Instalab.) & Q2.2 & O aplicativo remove totalmente seus dados temporários após a desinstalação? & Espera-se que o sistema deixe vestígios menores em cache no armazenamento. \\
+\textbf{G2} & Q2.1 & O processo de instalação nas lojas oficiais ocorre sem fricção ou corrompimento? & \textbf{H2.1:} Espera-se sucesso de 100\% nas instalações limpas oficiais. \\
+(Instalab.) & Q2.2 & O aplicativo remove totalmente seus dados temporários após a desinstalação? & \textbf{H2.2:} Espera-se que o sistema deixe vestígios menores em cache no armazenamento. \\
 \midrule
-\textbf{G3} & Q3.1 & O aplicativo evita encerramentos forçados (\textit{crashes}) durante sessões ativas? & Espera-se alta estabilidade geral, com falhas em picos de dados. \\
-(Maturid.) & Q3.2 & O sistema previne congelamentos prolongados de tela (\textit{ANRs})? & Espera-se ocorrência pontual de travamentos leves ao sincronizar bases. \\
+\textbf{G3} & Q3.1 & O aplicativo evita encerramentos forçados (\textit{crashes}) durante sessões ativas? & \textbf{H3.1:} Espera-se alta estabilidade geral, com falhas em picos de dados. \\
+(Maturid.) & Q3.2 & O sistema previne congelamentos prolongados de tela (\textit{ANRs})? & \textbf{H3.2:} Espera-se ocorrência pontual de travamentos leves ao sincronizar bases. \\
 \midrule
-\textbf{G4} & Q4.1 & O aplicativo trata de forma adequada quedas momentâneas de conexão? & Espera-se telas de carregamento infinito por carência de modo \textit{offline}. \\
-(Tol. Falhas) & Q4.2 & O sistema reage apropriadamente à ausência ou desativação de sinal de GPS? & Espera-se emissão de alertas visuais claros para reativar serviços. \\
+\textbf{G4} & Q4.1 & O aplicativo trata de forma adequada quedas momentâneas de conexão? & \textbf{H4.1:} Espera-se telas de carregamento infinito por carência de modo \textit{offline}. \\
+(Tol. Falhas) & Q4.2 & O sistema reage apropriadamente à ausência ou desativação de sinal de GPS? & \textbf{H4.2:} Espera-se emissão de alertas visuais claros para reativar serviços. \\
 \midrule
-\textbf{G5} & Q5.1 & As previsões de horários de chegada refletem com precisão a realidade? & Espera-se margem de divergência tolerável de poucos minutos. \\
-(Correção) & Q5.2 & A geolocalização dos veículos no mapa coincide com a posição espacial real? & Espera-se exatidão satisfatória, sujeita a limitações de hardware externo. \\
+\textbf{G5} & Q5.1 & As previsões de horários de chegada refletem com precisão a realidade? & \textbf{H5.1:} Espera-se margem de divergência tolerável de poucos minutos. \\
+(Correção) & Q5.2 & A geolocalização dos veículos no mapa coincide com a posição espacial real? & \textbf{H5.2:} Espera-se exatidão satisfatória, sujeita a limitações de hardware externo. \\
 \midrule
-\textbf{G6} & Q6.1 & O catálogo de fluxos e tarefas essenciais executa de ponta a ponta sem barreiras? & Espera-se que módulos principais operem sem falhas estruturais. \\
-(Completude) & Q6.2 & A base de dados de linhas está plenamente sincronizada com a Semob? & Espera-se cobertura integral e correta das linhas troncais cadastradas. \\
+\textbf{G6} & Q6.1 & O catálogo de fluxos e tarefas essenciais executa de ponta a ponta sem barreiras? & \textbf{H6.1:} Espera-se que módulos principais operem sem falhas estruturais. \\
+(Completude) & Q6.2 & A base de dados de linhas está plenamente sincronizada com a Semob? & \textbf{H6.2:} Espera-se cobertura integral e correta das linhas troncais cadastradas. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -281,7 +283,7 @@ As métricas quantitativas respondem diretamente às questões operacionais, fun
 
     \item \textbf{M5.1 --- Precisão de Tempo} (Q5.1):
     \begin{itemize}
-        \item \textit{Fórmula:} Mediana do erro absoluto em minutos ( $\text{mediana}(\lvert \text{Horário Observado} - \text{Horário Previsto} \rvert)$ ).
+        \item \textit{Fórmula:} $\text{mediana}(\lvert \text{Horário Observado} - \text{Horário Previsto} \rvert)$ (em minutos).
         \item \textit{Fonte / Coleta:} Registros comparativos de tempo real vs. app; cronometragem \textit{in loco} da chegada física dos ônibus.
         \item \textit{Interpretação:} Menor é melhor (minutos).
     \end{itemize}
@@ -311,7 +313,7 @@ As métricas quantitativas respondem diretamente às questões operacionais, fun
 \subsection{Níveis de Pontuação e Critérios de Julgamento}
 \label{sec:julgamento}
 
-Os patamares de pontuação (Tabelas \ref{tab:escala_notas} e \ref{tab:limites_pontuacao}) foram definidos previamente à coleta para garantir objetividade. O veredito por objetivo (Tabela \ref{tab:criterio_conservador}) adota um critério conservador (pior nota obtida entre suas métricas filhas), evitando que médias ocultem falhas críticas~\cite{deissenboeck2009}.
+Os patamares de pontuação (Tabelas~\ref{tab:escala_notas} e~\ref{tab:limites_pontuacao}) foram definidos previamente à coleta para garantir objetividade. O veredito por objetivo (Tabela~\ref{tab:criterio_conservador}) adota um critério conservador (pior nota obtida entre suas métricas filhas), evitando que médias ocultem falhas críticas~\cite{deissenboeck2009}.
 
 \begin{table}[H]
 \centering
@@ -425,7 +427,7 @@ Poder favoritar rotas e encontrar a linha & G6 (D3) & Completude & Q6.1, Q6.2 & 
 \subsection{Diagramas GQM}
 \label{sec:diagramas}
 
-Os diagramas a seguir ilustram o desdobramento natural dos propósitos de qualidade nas camadas Conceitual, Operacional e Quantitativa.
+Os diagramas a seguir ilustram o desdobramento natural dos propósitos de qualidade nas camadas Conceitual, Operacional e Quantitativa. A Figura~\ref{fig:gqm_portabilidade} apresenta o desdobramento para a característica de Portabilidade; a Figura~\ref{fig:gqm_confiabilidade} mapeia a cadeia de Confiabilidade; e a Figura~\ref{fig:gqm_adequacao} detalha a hierarquia de Adequação Funcional.
 
 \begin{figure}[H]
 \centering

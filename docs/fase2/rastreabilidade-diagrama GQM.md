@@ -73,7 +73,19 @@ flowchart TD
 
 ### 3. Característica: Adequação Funcional
 
-![Diagrama GQM - Adequação Funcional](imagens/mermaid-diagram-2026-10-31-162600.png)
+```mermaid
+flowchart TD
+    G5["G5: Avaliar Correção de Dados"] --> Q51["Q5.1: Horários de chegada refletem a realidade?"]
+    G5 --> Q52["Q5.2: Posição do ônibus no mapa está correta?"]
+
+    G6["G6: Avaliar Completude de Linhas"] --> Q61["Q6.1: Funções essenciais executam sem erro?"]
+    G6 --> Q62["Q6.2: Base de linhas bate com a Semob?"]
+
+    Q51 --> M51["M5.1: Precisão de Tempo (Desvio em min)"]
+    Q52 --> M52["M5.2: Correção Espacial do Mapa"]
+    Q61 --> M61["M6.1: Cobertura de Tarefas Essenciais"]
+    Q62 --> M62["M6.2: Completude do Banco de Linhas"]
+```
 
 <p class="legenda">Figura 3. Diagrama GQM focado na característica de Adequação Funcional (Correção e Completude) com seus níveis conceitual, operacional e quantitativo para o app DF no Ponto.</p>
 

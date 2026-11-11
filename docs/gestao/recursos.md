@@ -71,7 +71,7 @@ A equipe estabeleceu faixas de controle para classificar os desvios de esforço 
 
 ## 5. Diretrizes Metodológicas da Equipe
 
-1. **Adesão ao Plano de Ação:** A partir da Entrega 2, nenhuma tarefa é executada sem a definição prévia da estimativa de esforço (`Tempo estimado: Xh`) na abertura da Issue no GitHub.
+1. **Adesão ao Plano de Ação:** A partir da Entrega 2, nenhuma tarefa é executada sem a definição prévia da estimativa de esforço (`Horas Estimadas: x`) na abertura da Issue no GitHub.
 2. **Auditoria por Dados Reais:** A apuração individual não se baseia em estimativas teóricas fixas (ex: 16,6%), mas sim nos dados de commits, deleções, adições e registros de horas reais vinculados às Issues.
 3. **Escopo de Cálculo:** A variação de esforço é computada apenas sobre Issues com status `Done` (concluídas e mescladas na branch `main`), evitando distorções provocadas por tarefas ainda em andamento.
 4. **Caráter Didático:** O valor de R$ 50,00/h é um parâmetro simulado para fins de aprendizagem acadêmica sobre governança e custos de projetos de software, não configurando transação financeira real.
@@ -139,3 +139,4 @@ Com base na variação apurada de **{Resultado do Ve}%**:
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
 | [Cristiano Morais](https://github.com/CristianoMoraiss) | Adição da página de recursos e custos | 10/11/2026 | [Commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/exemplo) |
+| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/) |

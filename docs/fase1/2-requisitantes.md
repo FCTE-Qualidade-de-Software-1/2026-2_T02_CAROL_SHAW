@@ -60,4 +60,4 @@ Essa conexão explícita assegura a rastreabilidade bidirecional do processo de 
 | ID  | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
-| 02 | Correção da tabela de stakeholders e estruturação da transição lógica para o GQM | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 11/11/2026 |
+| 02 | Correção da tabela de stakeholders e estruturação da transição lógica para o GQM | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |

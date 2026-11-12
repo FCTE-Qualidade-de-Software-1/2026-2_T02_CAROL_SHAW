@@ -22,4 +22,4 @@ Nos arquivos desta fase, são abordados:
 | :-: | :--------------------------------------------------- | :---------------------------------- | :--------- | :------ | :--: |
 | 01  | Criação do documento                                 | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02  | Adição do badge de versão e atualização do cabeçalho | Equipe Carol Shaw                   | 20/10/2026 | — | — |
-| 03  | Atualização do resumo com decisões apoiadas e questões norteadoras | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 11/11/2026 |
+| 03  | Atualização do resumo com decisões apoiadas e questões norteadoras | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |

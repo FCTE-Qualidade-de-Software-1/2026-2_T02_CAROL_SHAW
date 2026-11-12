@@ -8,17 +8,18 @@ Esta seção reúne os documentos que servem de base para a **Fase 1 da avaliaç
 
 Nos arquivos desta fase, são abordados:
 
-- O **propósito da avaliação** e como os resultados serão utilizados — [Propósito da Avaliação](1-proposito.md);
-- Quem são os **requisitantes** e demais partes interessadas — [Requisitantes e Partes Interessadas](2-requisitantes.md);
+- O **propósito da avaliação**, as decisões estratégicas apoiadas (D1, D2, D3), as **Questões Norteadoras Transversais** e os ODS vinculados — [Propósito da Avaliação](1-proposito.md);
+- Quem são os **requisitantes**, suas necessidades e a transição lógica para as metas de medição — [Requisitantes e Partes Interessadas](2-requisitantes.md);
 - Uma **apresentação do DF no Ponto**, incluindo suas principais funções no contexto da mobilidade urbana — [Descrição do Produto](3-descricao.md);
-- A **justificativa da avaliação**, destacando a relevância do sistema para os passageiros e os principais riscos — [Justificativas](4-justificativa.md);
-- O modelo de qualidade ISO/IEC 25010, destacando as características escolhidas (**Portabilidade, Confiabilidade e Adequação Funcional**) — [Modelo de Qualidade e Escopo](5-modelo.md);
-- A **tabela de contribuição dos membros da equipe** — [Tabela de contribuição](6-tabela_de_contribuicao.md).
+- A **justificativa da avaliação**, detalhando a análise de riscos técnicos e operacionais — [Justificativas](4-justificativa.md);
+- O modelo de qualidade ISO/IEC 25010, detalhando a seleção de características e subcaracterísticas (**Portabilidade, Confiabilidade e Adequação Funcional**) — [Modelo de Qualidade e Escopo](5-modelo.md);
+- A **tabela de contribuição dos membros da equipe** — [Tabela de contribuição](6-tabela_de_contribuicao.md);
 - A declaração do uso de **ferramentas de Inteligência Artificial** — [Uso de Ferramentas de IA](7-uso_de_IA.md).
 
 ## **Histórico de Versão**
 
 | ID  | Descrição                                            | Autor                               | Data       | Revisor | Data |
 | :-: | :--------------------------------------------------- | :---------------------------------- | :--------- | :------ | :--: |
-| 01  | Criação do documento                                 | [Bessa](https://github.com/bessazs) | 17/10/2026 |         |      |
-| 02  | Adição do badge de versão e atualização do cabeçalho | Equipe Carol Shaw                   | 20/10/2026 |         |      |
+| 01  | Criação do documento                                 | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
+| 02  | Adição do badge de versão e atualização do cabeçalho | Equipe Carol Shaw                   | 20/10/2026 | — | — |
+| 03  | Atualização do resumo com decisões apoiadas e questões norteadoras | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 11/11/2026 |

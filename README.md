@@ -64,52 +64,6 @@ O projeto analisa aspectos de qualidade do aplicativo com base no modelo **ISO/I
 
 A avaliação é acadêmica e se limita à versão do sistema observada durante a análise. Os resultados não representam uma certificação do aplicativo nem necessariamente se aplicam a versões futuras.
 
-## Documentação
-
-A documentação está escrita em Markdown na pasta [`docs/`](docs/) e organizada para publicação com MkDocs:
-
-- [`docs/index.html`](docs/index.html): página inicial;
-- [`docs/fase1/index.html`](docs/fase1/index.html): introdução à primeira fase;
-- [`docs/fase1/1-proposito.html`](docs/fase1/1-proposito.html): propósito da avaliação;
-- [`docs/fase1/2-requisitantes.html`](docs/fase1/2-requisitantes.html): requisitantes e partes interessadas;
-- [`docs/fase1/3-descricao.html`](docs/fase1/3-descricao.html): descrição do produto;
-- [`docs/fase1/4-justificativa.html`](docs/fase1/4-justificativa.html): justificativa e riscos;
-- [`docs/fase1/5-modelo.html`](docs/fase1/5-modelo.html): modelo de qualidade e escopo;
-- [`docs/fase1/6-tabela_de_contribuicao.html`](docs/fase1/6-tabela_de_contribuicao.html): contribuições da equipe; e
-- [`docs/fase1/7-uso_de_IA.html`](docs/fase1/7-uso_de_IA.html): declaração de uso de ferramentas de IA.
-
-## Estrutura do repositório
-
-```text
-2026-2_T02_CAROL_SHAW
-├── assets/                   # CSS, JavaScript, mapas de código e favicon
-├── fase1/                    # Documentos da primeira fase
-│   ├── 1-proposito/
-│   │   └── index.html
-│   ├── 2-requisitantes/
-│   │   └── index.html
-│   ├── 3-descricao/
-│   │   └── index.html
-│   ├── 4-justificativa/
-│   │   └── index.html
-│   ├── 5-modelo/
-│   │   └── index.html
-│   ├── 6-tabela_de_contribuicao/
-│   │   └── index.html
-│   ├── 7-uso_de_IA/
-│   │   └── index.html
-│   └── fase1/                # Páginas HTML da documentação
-│       └── index.html
-├── search/                   # Índice usado pela busca do site
-│   └── search_index.json
-├── .gitignore                # Arquivos locais, caches e temporários ignorados pelo Git
-├── .nojekyll
-├── 404.html                  # Página exibida para rotas não encontradas
-├── index.html                # Página inicial do site
-├── README.md                 # Apresentação do projeto
-└── sitemap.xml               # Mapa do site
-```
-
 ## Referências
 
 - [DF no Ponto](https://dfnoponto.com.br/)

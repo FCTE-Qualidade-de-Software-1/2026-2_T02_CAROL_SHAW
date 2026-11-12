@@ -91,4 +91,4 @@ O aplicativo representa o componente de tecnologia da informação na infraestru
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02 | Atualização e alinhamento com ODS | Equipe Carol Shaw | 26/10/2026 | — | — |
-| 03 | Formalização das Decisões Apoiadas (D1, D2, D3), Questões Norteadoras Transversais (QN1, QN2, QN3) e harmonização de escopo com a Fase 2 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 11/11/2026 |
+| 03 | Formalização das Decisões Apoiadas (D1, D2, D3), Questões Norteadoras Transversais (QN1, QN2, QN3) e harmonização de escopo com a Fase 2 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |

@@ -40,19 +40,7 @@ Abaixo apresenta-se a estrutura hierárquica completa nas três camadas do GQM (
 
 ### 4.1. Característica: Portabilidade (Orientada por QN1 e Decisão D1)
 
-```mermaid
-flowchart TD
-    G1["G1: Avaliar Adaptabilidade (QN1/D1)"] --> Q11["Q1.1: Redimensiona em tela pequena?"]
-    G1 --> Q12["Q1.2: Roda em Android antigo?"]
-
-    G2["G2: Avaliar Instalabilidade (QN1/D1)"] --> Q21["Q2.1: Instala sem erro na loja?"]
-    G2 --> Q22["Q2.2: Limpa arquivos ao desinstalar?"]
-
-    Q11 --> M11["M1.1: Adaptabilidade de Telas"]
-    Q12 --> M12["M1.2: Adaptabilidade de SO"]
-    Q21 --> M21["M2.1: Sucesso de Instalação"]
-    Q22 --> M22["M2.2: Resíduo Pós-Desinstalação"]
-```
+![Diagrama](imagens/Diagrama1.jpeg)
 
 <p class="legenda">Figura 1. Diagrama GQM da característica de Portabilidade (Adaptabilidade e Instalabilidade).</p>
 
@@ -60,19 +48,7 @@ flowchart TD
 
 ### 4.2. Característica: Confiabilidade (Orientada por QN2 e Decisão D2)
 
-```mermaid
-flowchart TD
-    G3["G3: Avaliar Maturidade (QN2/D2)"] --> Q31["Q3.1: Evita encerramento forçado (crash)?"]
-    G3 --> Q32["Q3.2: Previne congelamento de tela (ANR)?"]
-
-    G4["G4: Avaliar Tolerância a Falhas (QN2/D2)"] --> Q41["Q4.1: Trata queda de conexão 4G/Wi-Fi?"]
-    G4 --> Q42["Q4.2: Reage à desativação de GPS?"]
-
-    Q31 --> M31["M3.1: Sessões sem Crashes"]
-    Q32 --> M32["M3.2: Sessões sem Congelamentos"]
-    Q41 --> M41["M4.1: Evitação de Quebra (Conexão)"]
-    Q42 --> M42["M4.2: Tratamento de Perda de GPS"]
-```
+![Diagrama](imagens/Diagrama2.jpeg)
 
 <p class="legenda">Figura 2. Diagrama GQM da característica de Confiabilidade (Maturidade e Tolerância a Falhas).</p>
 
@@ -80,19 +56,7 @@ flowchart TD
 
 ### 4.3. Característica: Adequação Funcional (Orientada por QN3 e Decisão D3)
 
-```mermaid
-flowchart TD
-    G5["G5: Avaliar Correção de Dados (QN3/D3)"] --> Q51["Q5.1: Horários de chegada refletem a realidade?"]
-    G5 --> Q52["Q5.2: Posição do ônibus no mapa está correta?"]
-
-    G6["G6: Avaliar Completude de Linhas (QN3/D3)"] --> Q61["Q6.1: Funções essenciais executam sem erro?"]
-    G6 --> Q62["Q6.2: Base de linhas bate com a Semob?"]
-
-    Q51 --> M51["M5.1: Precisão de Tempo"]
-    Q52 --> M52["M5.2: Correção de Dados (Mapa)"]
-    Q61 --> M61["M6.1: Cobertura de Tarefas Essenciais"]
-    Q62 --> M62["M6.2: Completude do Banco"]
-```
+![Diagrama](imagens/Diagrama3.jpeg)
 
 <p class="legenda">Figura 3. Diagrama GQM da característica de Adequação Funcional (Correção e Completude/Pertinência).</p>
 
@@ -113,4 +77,4 @@ flowchart TD
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |
 | 02 | Refatoração dos diagramas para Mermaid nativo | [João Capozzi](https://github.com/jonas3688) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
-| 03 | Inclusão das Questões Norteadoras (QN1-QN3), Decisões (D1-D3) na matriz de rastreabilidade e harmonização das nomenclaturas com a ISO/IEC 25023 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 11/11/2026 |
+| 03 | Inclusão das Questões Norteadoras (QN1-QN3), Decisões (D1-D3) na matriz de rastreabilidade e harmonização das nomenclaturas com a ISO/IEC 25023 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |

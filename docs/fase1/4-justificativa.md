@@ -46,4 +46,4 @@ A comprovação factual desses aspectos motivou o desdobramento na Fase 2 em sei
 | ID  | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
-| 02 | Harmonização com Questões Norteadoras, Decisões Apoiadas e inclusão de Instalabilidade | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 11/11/2026 |
+| 02 | Harmonização com Questões Norteadoras, Decisões Apoiadas e inclusão de Instalabilidade | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |

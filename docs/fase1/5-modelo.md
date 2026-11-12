@@ -77,4 +77,4 @@ A tabela a seguir resume a correspondência formal entre o modelo de qualidade a
 | ID  | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
-| 02 | Correção da seleção de Instalabilidade, detalhamento da Pertinência e alinhamento com GQM e Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 11/11/2026 |
+| 02 | Correção da seleção de Instalabilidade, detalhamento da Pertinência e alinhamento com GQM e Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |

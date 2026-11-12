@@ -16,19 +16,7 @@ Esta seção consolida a **Fase 2 (Especificação da Avaliação)**. O intuito 
 
 A especificação da Fase 2 não é um artefato isolado; ela estabelece a continuidade lógica e a operacionalização dos requisitos levantados na Fase 1. A transição dá-se pela conexão entre as necessidades dos *stakeholders*, as **Questões Norteadoras Transversais** e as **Decisões Estratégicas Apoiadas**:
 
-```mermaid
-flowchart TD
-    subgraph F1["Fase 1: Requisitos e Conceito"]
-        ST["Stakeholders (Passageiros, Semob-DF, Avaliadores)"] --> QN["Questões Norteadoras Transversais (QN1, QN2, QN3)"]
-        QN --> DEC["Decisões Apoiadas (D1, D2, D3)"]
-        DEC --> SCOPE["Escopo ISO/IEC 25010 (Portabilidade, Confiabilidade, Adequação)"]
-    end
-    subgraph F2["Fase 2: Especificação GQM"]
-        SCOPE --> GOALS["Camada Conceitual: 6 Objetivos GQM (G1 a G6)"]
-        GOALS --> QUESTIONS["Camada Operacional: 12 Questões e Hipóteses (Q1.1 a Q6.2)"]
-        QUESTIONS --> METRICS["Camada Quantitativa: 12 Métricas ISO/IEC 25023 (M1.1 a M6.2)"]
-    end
-```
+![Diagrama Transição Metodológica: Da Fase 1 ao Ciclo GQM](imagens/GraficoTransicao.jpeg)
 
 ### 1.1. Questões Norteadoras Transversais
 

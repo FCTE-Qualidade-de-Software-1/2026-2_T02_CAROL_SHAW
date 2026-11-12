@@ -31,3 +31,15 @@ Thumbs.db
 *.sw?
 # Pacotes e zips locais
 *.zip
+
+# Arquivos temporários de compilação LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+artigo/*.pdf

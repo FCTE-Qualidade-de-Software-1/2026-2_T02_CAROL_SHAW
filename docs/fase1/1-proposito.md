@@ -4,6 +4,8 @@
 
 Este documento apresenta o propósito da avaliação de qualidade do aplicativo **DF no Ponto**, tomando como base o modelo de qualidade da norma **ISO/IEC 25010** e o processo de avaliação estabelecido pela **ISO/IEC 25040**. A investigação concentra-se nas características mais críticas para um aplicativo móvel de utilidade pública: **Portabilidade**, **Confiabilidade** e **Adequação Funcional**, desdobradas em suas subcaracterísticas prioritárias.
 
+Na terminologia da ISO/IEC 25040, a Fase 1 corresponde à atividade de **estabelecer os requisitos da avaliação** (propósito, partes interessadas, produto avaliado e modelo de qualidade) e a Fase 2, à atividade de **especificar a avaliação** (medidas e critérios de decisão). A Fase 3 (planejamento) corresponde a **projetar a avaliação**, e a Fase 4 (execução e julgamento), a **executar e concluir a avaliação**.
+
 O objetivo fundamental não é cobrir exaustivamente todos os atributos do padrão SQuaRE de maneira superficial, mas estabelecer um diagnóstico técnico rigoroso e acionável sobre o comportamento do sistema diante das condições reais vivenciadas diariamente pelos passageiros do Distrito Federal.
 
 ---
@@ -48,7 +50,7 @@ O escopo da avaliação foi delimitado às características e subcaracterística
 - **Adequação Funcional:**
   - *Correção Funcional:* Avaliação do erro de tempo das previsões de chegada e da precisão posicional dos veículos e paradas no mapa.
   - *Completude Funcional:* Avaliação da cobertura de execução das tarefas essenciais e da integralidade do catálogo de linhas e itinerários frente aos dados oficiais da Semob-DF.
-  - *Pertinência Funcional:* Atua de forma transversal delimitando os fluxos e tarefas que compõem o catálogo essencial avaliado.
+  - *Pertinência Funcional:* Selecionada como **critério transversal, sem métrica própria**: delimita os fluxos e tarefas que compõem o catálogo essencial avaliado (G6 / M6.1). Não é medida diretamente, pois julgar a adequação de uma função ao uso do passageiro exige avaliação subjetiva em uso contínuo, o que foge da avaliação técnica de caixa preta adotada na Fase 2.
 
 ---
 
@@ -57,6 +59,8 @@ O escopo da avaliação foi delimitado às características e subcaracterística
 Os resultados obtidos refletem exclusivamente o comportamento observado na versão de produção do aplicativo **DF no Ponto** disponível durante o período de coleta de dados definido no projeto.
 
 Alterações posteriores na base de dados da Semob-DF, manutenções em servidores de API externos, atualizações de versão do aplicativo ou modificações na frota operante poderão alterar ou invalidar parcialmente as conclusões empíricas desta avaliação.
+
+A identificação da versão avaliada e as fronteiras do escopo (o que está dentro e fora da avaliação) estão em [Descrição do Produto](3-descricao.md#alvo-da-avaliacao).
 
 ---
 
@@ -92,3 +96,4 @@ O aplicativo representa o componente de tecnologia da informação na infraestru
 | 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02 | Atualização e alinhamento com ODS | Equipe Carol Shaw | 26/10/2026 | — | — |
 | 03 | Formalização das Decisões Apoiadas (D1, D2, D3), Questões Norteadoras Transversais (QN1, QN2, QN3) e harmonização de escopo com a Fase 2 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 04 | Esclarecimento do papel da Pertinência Funcional, correspondência Fase 1/Fase 2 com as atividades da ISO/IEC 25040 e vínculo com as fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

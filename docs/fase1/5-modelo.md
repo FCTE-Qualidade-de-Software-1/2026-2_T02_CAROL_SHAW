@@ -50,6 +50,26 @@ Refere-se ao grau em que as funcionalidades providas pelo DF no Ponto atendem à
 
 ---
 
+### 2.4. Definições Normativas que Sustentam o Escopo
+
+Cada subcaracterística selecionada possui definição própria na ISO/IEC 25010, que serve de base conceitual para as métricas da Fase 2. As definições abaixo são traduções livres do texto da norma.
+
+| Subcaracterística | Definição (ISO/IEC 25010) | Por que sustenta uma métrica do projeto |
+| :--- | :--- | :--- |
+| **Adaptabilidade** | Grau em que um produto ou sistema pode ser adaptado, com eficácia e eficiência, a hardwares, softwares ou outros ambientes operacionais ou de uso diferentes ou em evolução. | Fundamenta M1.1 (telas) e M1.2 (versões de SO). |
+| **Instalabilidade** | Grau de eficácia e eficiência com que um produto pode ser instalado e/ou desinstalado com sucesso em um ambiente especificado. | Fundamenta M2.1 (instalação) e M2.2 (resíduos pós-desinstalação). |
+| **Maturidade** | Grau em que um sistema atende às necessidades de confiabilidade em operação normal. | Fundamenta M3.1 (crashes) e M3.2 (congelamentos). |
+| **Tolerância a Falhas** | Grau em que um sistema opera conforme o previsto apesar da presença de falhas de hardware ou software. | Fundamenta M4.1 (queda de rede) e M4.2 (perda de GPS). |
+| **Correção Funcional** | Grau em que as funções fornecem resultados corretos com o grau de precisão necessário. | Fundamenta M5.1 (tempo) e M5.2 (posição). |
+| **Completude Funcional** | Grau em que o conjunto de funções cobre todas as tarefas e objetivos especificados do usuário. | Fundamenta M6.1 (tarefas) e M6.2 (base de linhas). |
+| **Pertinência Funcional** | Grau em que as funções facilitam a realização de tarefas e objetivos especificados. | Critério de seleção do catálogo de tarefas de M6.1. |
+
+> **Nota sobre a edição da norma:** as definições acima seguem o modelo da edição de 2011 da ISO/IEC 25010, que também baseia a ISO/IEC 25023:2016 usada para as métricas. A edição de 2023 reorganizou o modelo e renomeou algumas características (por exemplo, Portabilidade passou a Flexibilidade); a equipe deve manter, em todo o projeto, a terminologia coerente com a edição adotada.
+
+A fundamentação de cada métrica, com fontes, adaptação e impacto técnico, está na seção 3.1 de [Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md#31-fundamentacao-adaptacao-e-relevancia-das-metricas).
+
+---
+
 ## 3. Síntese do Escopo e Conexão com o GQM
 
 A tabela a seguir resume a correspondência formal entre o modelo de qualidade adotado nesta Fase 1 e a estrutura metodológica do GQM na Fase 2:
@@ -78,3 +98,4 @@ A tabela a seguir resume a correspondência formal entre o modelo de qualidade a
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02 | Correção da seleção de Instalabilidade, detalhamento da Pertinência e alinhamento com GQM e Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 03 | Inclusão das definições normativas das subcaracterísticas e vínculo com a fundamentação das métricas | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |

@@ -24,7 +24,7 @@ A seleção do escopo da avaliação concentrou-se nas três características ma
 
 1. **Portabilidade (D1 / QN1):** Essencial em um contexto de serviço público universal. O aplicativo deve ser acessível e operar perfeitamente em aparelhos de baixo custo e telas pequenas (*Adaptabilidade*), além de garantir downloads rápidos, instalações sem erro e remoções limpas sem acúmulo de lixo no sistema (*Instalabilidade*).
 2. **Confiabilidade (D2 / QN2):** Avalia a resiliência contra panes repentinas. O aplicativo deve manter alta taxa de sessões limpas (*Maturidade* contra crashes e congelamentos) e saber reagir graciosamente a quedas de internet e ausência de localização (*Tolerância a Falhas*), fornecendo mensagens claras ao passageiro em vez de quebrar a sessão.
-3. **Adequação Funcional (D3 / QN3):** Verifica se o aplicativo cumpre fielmente sua promessa de serviço. As estimativas de chegada e pins de ônibus no mapa devem ser exatos (*Correção Funcional*), e o catálogo de linhas deve cobrir integralmente a malha de transportes da Semob-DF e os fluxos prioritários do passageiro (*Completude e Pertinência Funcional*).
+3. **Adequação Funcional (D3 / QN3):** Verifica se o aplicativo cumpre fielmente sua promessa de serviço. As estimativas de chegada e pins de ônibus no mapa devem ser exatos (*Correção Funcional*), e o catálogo de linhas deve cobrir integralmente a malha de transportes da Semob-DF e os fluxos prioritários do passageiro (*Completude Funcional*, com a *Pertinência Funcional* atuando como critério transversal de escolha dos fluxos prioritários, sem métrica própria).
 
 ---
 
@@ -47,3 +47,4 @@ A comprovação factual desses aspectos motivou o desdobramento na Fase 2 em sei
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02 | Harmonização com Questões Norteadoras, Decisões Apoiadas e inclusão de Instalabilidade | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 03 | Esclarecimento do papel da Pertinência Funcional como critério transversal sem métrica própria | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

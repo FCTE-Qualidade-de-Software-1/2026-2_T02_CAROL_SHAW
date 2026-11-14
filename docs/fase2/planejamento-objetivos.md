@@ -6,7 +6,7 @@ description: Aplicação do paradigma Goal-Question-Metric na especificação da
 
 # Abordagem GQM e Metas de Avaliação
 
-A validação de qualidade do aplicativo móvel **DF no Ponto** fundamenta-se nas diretrizes da norma **ISO/IEC 25040**, que divide o ciclo de avaliação de software em quatro etapas centrais: estabelecimento de requisitos, especificação, projeto e execução. Na Fase 1, determinou-se a relevância do sistema para a mobilidade urbana do Distrito Federal, identificando os principais *stakeholders*, delimitando o escopo nas características de **Portabilidade**, **Confiabilidade** e **Adequação Funcional** (ISO/IEC 25010) e formalizando as decisões estratégicas apoiadas (**D1**, **D2** e **D3**).
+A validação de qualidade do aplicativo móvel **DF no Ponto** fundamenta-se nas diretrizes da norma **ISO/IEC 25040**, cujo processo de avaliação se organiza em cinco atividades: estabelecer os requisitos da avaliação, especificar a avaliação, projetar a avaliação, executar a avaliação e concluir a avaliação, agrupadas nas quatro fases do projeto (a execução e a conclusão compõem a Fase 4). Na Fase 1, determinou-se a relevância do sistema para a mobilidade urbana do Distrito Federal, identificando os principais *stakeholders*, delimitando o escopo nas características de **Portabilidade**, **Confiabilidade** e **Adequação Funcional** (ISO/IEC 25010) e formalizando as decisões estratégicas apoiadas (**D1**, **D2** e **D3**).
 
 Esta seção consolida a **Fase 2 (Especificação da Avaliação)**. O intuito é traduzir as necessidades conceituais dos cidadãos e requisitantes em objetivos de medição e métricas operacionais concretas, estruturadas sob o paradigma *Goal–Question–Metric* (GQM) e alinhadas aos indicadores da **ISO/IEC 25023**.
 
@@ -61,7 +61,7 @@ Para abranger as necessidades mapeadas na Fase 1, o escopo foi desdobrado em **6
 | **G1** | **QN1** | **D1** | Portabilidade / Adaptabilidade | Q1.1, Q1.2 | **M1.1** – Adaptabilidade de Hardware (Telas)<br>**M1.2** – Adaptabilidade de Sistema Operacional |
 | **G2** | **QN1** | **D1** | Portabilidade / Instalabilidade | Q2.1, Q2.2 | **M2.1** – Sucesso de Instalação<br>**M2.2** – Resíduo Pós-Desinstalação |
 | **G3** | **QN2** | **D2** | Confiabilidade / Maturidade | Q3.1, Q3.2 | **M3.1** – Sessões sem Crashes<br>**M3.2** – Sessões sem Congelamentos |
-| **G4** | **QN2** | **D2** | Confiabilidade / Tolerância a Falhas | Q4.1, Q4.2 | **M4.1** – Evitação de Quebra (Conexão)<br>**M4.2** – Tratamento de Perda de GPS |
+| **G4** | **QN2** | **D2** | Confiabilidade / Tolerância a Falhas | Q4.1, Q4.2 | **M4.1** – Mitigação de Perda de Conexão<br>**M4.2** – Tratamento de Perda de GPS |
 | **G5** | **QN3** | **D3** | Adequação Funcional / Correção | Q5.1, Q5.2 | **M5.1** – Precisão de Tempo<br>**M5.2** – Correção de Dados (Mapa) |
 | **G6** | **QN3** | **D3** | Adequação Funcional / Completude (e Pertinência) | Q6.1, Q6.2 | **M6.1** – Cobertura de Tarefas Essenciais<br>**M6.2** – Completude do Banco |
 | **Total** | **3 QNs** | **3 Decisões** | **3 Características / 6 Subcaracterísticas** | **12 Questões** | **12 Métricas** |
@@ -255,4 +255,5 @@ O desdobramento das metas conceituais resultou em 12 questões operacionais acom
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |
 | 02 | Formalização da Transição Metodológica (Fase 1 $\rightarrow$ Fase 2), inclusão das Questões Norteadoras (QN1-QN3) e alinhamento com Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
-| 03 | Inclusão da seção 3.1 (fundamentação, adaptação e relevância das métricas), dos nomes e descrições das métricas nas seções 3, 4 e 5 e das referências correspondentes | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
+| 03 | Inclusão da seção 3.1, dos nomes e descrições das métricas nas seções 3, 4 e 5 e das referências correspondentes | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
+| 04 | Correção do número de atividades do processo de avaliação da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

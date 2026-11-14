@@ -8,6 +8,8 @@ description: Detalhamento das métricas baseadas na ISO/IEC 25023 e critérios d
 
 As métricas respondem às questões da [hierarquia GQM](planejamento-objetivos.md) e adaptam a medição de qualidade da **ISO/IEC 25023:2016** ao **DF no Ponto**. Onze expressam proporções entre 0 e 1, nas quais maior é melhor; a M5.1 expressa o erro temporal absoluto mediano, em minutos, no qual menor é melhor.
 
+O embasamento teórico, a adaptação e o impacto técnico de cada métrica estão resumidos na [seção 3.1 de Abordagem GQM e Metas de Avaliação](planejamento-objetivos.md#31-fundamentacao-adaptacao-e-relevancia-das-metricas).
+
 ## Escalas de Medição e Tipos de Dados
 
 A escala define o significado dos valores e as operações permitidas; o intervalo numérico, como 0 a 1, não determina sua classificação. Adota-se a classificação de Stevens apresentada pelo NIST:
@@ -140,7 +142,7 @@ A definição das metas numéricas e das faixas de decisão (*Thresholds*) funda
 
 #### 2. Confiabilidade (M3.1, M3.2, M4.1 e M4.2)
 * **Faixas de Decisão:** Satisfatório ($\ge 0,95$ a $0,99$) | Tolerável ($0,85$ a $0,94$) | Crítico ($< 0,85$).
-* **Justificativa:** Baseado nas diretrizes do *Google Play Android Vitals*, onde taxas de encerramento forçado (*crashes*) devem ser mantidas abaixo de 1% e congelamentos de tela (*ANRs*) abaixo de 0,47% em produção. Em paradas de ônibus, um encerramento abrupto do aplicativo durante a aproximação de um coletivo acarreta perda imediata da viagem. Da mesma forma, devido às frequentes oscilações de conectividade 3G/4G e instabilidade de satélites GPS no ambiente urbano, o aplicativo precisa demonstrar tolerância a falhas em mais de 85% das ocorrências, exibindo mensagens amigáveis de recuperação em vez de quebrar a sessão.
+* **Justificativa:** Baseado nas diretrizes do *Google Play Android Vitals*, onde as taxas de encerramento forçado (*crashes*) percebidas pelo usuário devem ser mantidas abaixo de 1,09% e as de congelamento de tela (*ANRs*) abaixo de 0,47% no agregado dos aparelhos. Em paradas de ônibus, um encerramento abrupto do aplicativo durante a aproximação de um coletivo acarreta perda imediata da viagem. Da mesma forma, devido às frequentes oscilações de conectividade 3G/4G e instabilidade de satélites GPS no ambiente urbano, o aplicativo precisa demonstrar tolerância a falhas em mais de 85% das ocorrências, exibindo mensagens amigáveis de recuperação em vez de quebrar a sessão.
 
 #### 3. Adequação Funcional: Precisão Temporal e Espacial (M5.1 e M5.2)
 * **Faixas de Decisão (M5.1 - Horários):** Excelente ($\le 2$ min) | Bom ($\le 5$ min) | Tolerável ($\le 10$ min) | Crítico ($> 10$ min).
@@ -169,6 +171,7 @@ A pior nota respeita a ordem da escala ordinal. Para julgar o objetivo, todas as
 
 - ISO/IEC 25023:2016. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality*. Disponível em: <https://www.iso.org/standard/35747.html>. Acesso em: 11 nov. 2026.
 - NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY (NIST). *Metrics and Measures*. Seção “Measurement Scales”. Disponível em: <https://www.nist.gov/itl/ai/ai-standards-and-guidelines-group/metrics-and-measures>. Acesso em: 11 nov. 2026.
+- GOOGLE. *Android vitals — bad behavior thresholds*. Disponível em: <https://developer.android.com/google/play/vitals>. Acesso em: 13 nov. 2026.
 - FENTON, Norman; BIEMAN, James. *Software Metrics: A Rigorous and Practical Approach* (3rd Edition). CRC Press, 2014.
 
 ---
@@ -178,3 +181,4 @@ A pior nota respeita a ordem da escala ordinal. Para julgar o objetivo, todas as
 | 01  | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |
 | 02  | Adição das justificativas técnicas dos limiares de decisão | [João Capozzi](https://github.com/jonas3688) | 10/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
 | 03  | Especificação das escalas, variáveis, unidades e métodos de cálculo das métricas | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 04  | Vínculo com a fundamentação das métricas e correção do patamar de crashes do Android vitals (1,09%) | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |

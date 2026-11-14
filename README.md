@@ -58,11 +58,11 @@ O DF no Ponto permite que passageiros planejem deslocamentos no Distrito Federal
 
 O projeto analisa aspectos de qualidade do aplicativo com base no modelo **ISO/IEC 25010**, considerando as necessidades de passageiros, equipe de avaliação, docentes e órgãos mantenedores. O escopo documentado prioriza:
 
-- **Portabilidade:** adaptação da interface a diferentes dispositivos e ambientes móveis;
+- **Portabilidade:** adaptação da interface a diferentes dispositivos e ambientes móveis, além da instalação e da desinstalação do aplicativo;
 - **Confiabilidade:** maturidade do aplicativo e tolerância a falhas, como instabilidade de conexão; e
-- **Adequação funcional:** completude, correção e pertinência das funcionalidades de transporte.
+- **Adequação funcional:** completude e correção das funcionalidades de transporte, com a pertinência delimitando as tarefas essenciais avaliadas.
 
-A avaliação é acadêmica e se limita à versão do sistema observada durante a análise. Os resultados não representam uma certificação do aplicativo nem necessariamente se aplicam a versões futuras.
+A avaliação é acadêmica e se limita à versão do sistema observada durante a análise. O escopo cobre o aplicativo móvel (Android); versão web, tablets, *backend* e APIs da Semob-DF ficam de fora. Os resultados não representam uma certificação do aplicativo nem necessariamente se aplicam a versões futuras.
 
 ## Referências
 

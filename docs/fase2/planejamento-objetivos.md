@@ -255,5 +255,5 @@ O desdobramento das metas conceituais resultou em 12 questões operacionais acom
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do documento | [Cristiano](https://github.com/CristianoMoraiss) | 31/10/2026 | [Bessa](https://github.com/bessazs) | 31/10/2026 |
 | 02 | Formalização da Transição Metodológica (Fase 1 $\rightarrow$ Fase 2), inclusão das Questões Norteadoras (QN1-QN3) e alinhamento com Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
-| 03 | Inclusão da seção 3.1 (fundamentação, adaptação e relevância das métricas), dos nomes e descrições das métricas nas seções 3, 4 e 5 e das referências correspondentes | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
-| 04 | Correção do número de atividades do processo de avaliação da ISO/IEC 25040 (cinco, e não quatro) | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
+| 03 | Inclusão da seção 3.1, dos nomes e descrições das métricas nas seções 3, 4 e 5 e das referências correspondentes | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
+| 04 | Correção do número de atividades do processo de avaliação da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

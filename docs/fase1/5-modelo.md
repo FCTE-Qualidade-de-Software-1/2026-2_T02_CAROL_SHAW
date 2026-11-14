@@ -8,7 +8,7 @@ O modelo de qualidade do projeto fundamenta-se na norma internacional **ISO/IEC 
 
 ## 2. Adaptação do Modelo e Justificativa de Escopo
 
-Em consonância com as diretrizes da **ISO/IEC 25040**, o modelo foi adaptado para concentrar esforços nos atributos técnicos diretamente relacionados aos riscos urbanos e às **Decisões Apoiadas (D1, D2 e D3)**.
+Em consonância com as diretrizes da **ISO/IEC 25040**, o modelo foi adaptado para concentrar esforços nos atributos técnicos diretamente relacionados aos riscos urbanos e às **Decisões Apoiadas (D1, D2 e D3)**. Na ISO/IEC 25040, o modelo de qualidade selecionado aqui é o insumo da atividade seguinte, **especificar a avaliação** (escolha das medidas e dos critérios de decisão), tratada na Fase 2.
 
 ### 2.1. Portabilidade (Decisão D1 / Questão Norteadora QN1)
 
@@ -16,7 +16,7 @@ Refere-se à capacidade do software de ser transferido e executado com eficácia
 
 | Subcaracterística | Impacto | Risco | Justificativa Técnica de Inclusão no Escopo |
 | :--- | :---: | :---: | :--- |
-| **Adaptabilidade** | Alto | Alto | **Incluída no escopo.** O aplicativo deve se adaptar eficientemente a telas compactas (abaixo de 5 polegadas) e a diferentes versões do sistema operacional Android/iOS, evitando sobreposição de elementos na camada do mapa e falhas de compatibilidade. |
+| **Adaptabilidade** | Alto | Alto | **Incluída no escopo.** O aplicativo deve se adaptar eficientemente a telas compactas (abaixo de 5 polegadas) e a diferentes versões do sistema operacional Android, evitando sobreposição de elementos na camada do mapa e falhas de compatibilidade. |
 | **Instalabilidade** | Alto | Médio | **Incluída no escopo.** Aparelhos de entrada comumente possuem armazenamento interno reduzido. É imperativo garantir que o aplicativo seja instalado sem corrompimento a partir das lojas oficiais e que a desinstalação não deixe arquivos órfãos em cache ocupando espaço indevido. |
 
 > **Decisão de Escopo:** Ambas as subcaracterísticas (**Adaptabilidade e Instalabilidade**) integram o escopo da avaliação, subsidiando a Decisão **D1** e desdobrando-se diretamente nos objetivos **G1** e **G2** do ciclo GQM da Fase 2.
@@ -44,9 +44,29 @@ Refere-se ao grau em que as funcionalidades providas pelo DF no Ponto atendem à
 | :--- | :---: | :---: | :--- |
 | **Correção Funcional** | Alto | Alto | **Incluída no escopo.** Avalia a exatidão quantitativa dos resultados: precisão do erro temporal nas previsões de chegada dos coletivos e precisão métrica da localização dos ônibus e paradas no mapa. |
 | **Completude Funcional** | Alto | Alto | **Incluída no escopo.** Avalia o grau em que o aplicativo disponibiliza todas as linhas e itinerários oficiais da malha da Semob-DF e permite a execução bem-sucedida das tarefas essenciais. |
-| **Pertinência Funcional** | Alto | Médio | **Articulação Transversal.** Garante que as funções avaliadas auxiliam concretamente o usuário na mobilidade diária. Na modelagem GQM, a pertinência atua como critério de seleção do *Catálogo de Tarefas Essenciais* (avaliado em G6). |
+| **Pertinência Funcional** | Alto | Médio | **Critério transversal, sem métrica própria.** Delimita quais funções e tarefas compõem o *Catálogo de Tarefas Essenciais* avaliado em G6 (M6.1). Não é medida diretamente: julgar se uma função é adequada ao uso do passageiro exige avaliação subjetiva em uso contínuo, o que foge da avaliação técnica de caixa preta adotada na Fase 2. |
 
-> **Decisão de Escopo:** A **Correção Funcional** origina o objetivo **G5**, enquanto a **Completude Funcional** (guiada pela **Pertinência**) desdobra-se no objetivo **G6** da Fase 2.
+> **Decisão de Escopo:** A **Correção Funcional** origina o objetivo **G5**, enquanto a **Completude Funcional** (guiada pela **Pertinência**) desdobra-se no objetivo **G6** da Fase 2. A Pertinência não origina objetivo nem métrica próprios.
+
+---
+
+### 2.4. Definições Normativas que Sustentam o Escopo
+
+Cada subcaracterística selecionada possui definição própria na ISO/IEC 25010, que serve de base conceitual para as métricas da Fase 2. As definições abaixo são traduções livres do texto da norma.
+
+| Subcaracterística | Definição (ISO/IEC 25010) | Por que sustenta uma métrica do projeto |
+| :--- | :--- | :--- |
+| **Adaptabilidade** | Grau em que um produto ou sistema pode ser adaptado, com eficácia e eficiência, a hardwares, softwares ou outros ambientes operacionais ou de uso diferentes ou em evolução. | Fundamenta M1.1 (telas) e M1.2 (versões de SO). |
+| **Instalabilidade** | Grau de eficácia e eficiência com que um produto pode ser instalado e/ou desinstalado com sucesso em um ambiente especificado. | Fundamenta M2.1 (instalação) e M2.2 (resíduos pós-desinstalação). |
+| **Maturidade** | Grau em que um sistema atende às necessidades de confiabilidade em operação normal. | Fundamenta M3.1 (crashes) e M3.2 (congelamentos). |
+| **Tolerância a Falhas** | Grau em que um sistema opera conforme o previsto apesar da presença de falhas de hardware ou software. | Fundamenta M4.1 (queda de rede) e M4.2 (perda de GPS). |
+| **Correção Funcional** | Grau em que as funções fornecem resultados corretos com o grau de precisão necessário. | Fundamenta M5.1 (tempo) e M5.2 (posição). |
+| **Completude Funcional** | Grau em que o conjunto de funções cobre todas as tarefas e objetivos especificados do usuário. | Fundamenta M6.1 (tarefas) e M6.2 (base de linhas). |
+| **Pertinência Funcional** | Grau em que as funções facilitam a realização de tarefas e objetivos especificados. | Critério transversal de seleção do catálogo de tarefas de M6.1, sem métrica própria. |
+
+> **Nota sobre a edição da norma:** as definições acima seguem o modelo da edição de 2011 da ISO/IEC 25010, que também baseia a ISO/IEC 25023:2016 usada para as métricas. A edição de 2023 reorganizou o modelo e renomeou algumas características (por exemplo, Portabilidade passou a se chamar Flexibilidade); a equipe deve manter, em todo o projeto, a terminologia coerente com a edição adotada.
+
+A fundamentação de cada métrica, com fontes, adaptação e impacto técnico, está na seção 3.1 de [Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md#31-fundamentacao-adaptacao-e-relevancia-das-metricas).
 
 ---
 
@@ -78,3 +98,5 @@ A tabela a seguir resume a correspondência formal entre o modelo de qualidade a
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02 | Correção da seleção de Instalabilidade, detalhamento da Pertinência e alinhamento com GQM e Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 03 | Inclusão das definições normativas das subcaracterísticas (seção 2.4) e vínculo com a fundamentação das métricas (Fase 2, seção 3.1) | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
+| 04 | Esclarecimento do papel da Pertinência Funcional, plataforma Android como escopo do sistema operacional e vínculo da modelagem com a atividade "especificar a avaliação" da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

@@ -70,7 +70,7 @@ Avaliamos o aplicativo **DF no Ponto** — ferramenta oficial de consulta ao Sis
 
 O **DF no Ponto** tornou-se a ferramenta oficial e amplamente utilizada por milhares de cidadãos diariamente para planejar rotas, verificar horários e acompanhar as linhas de ônibus em tempo real no Distrito Federal. No entanto, inconsistências no fornecimento de dados, instabilidades de uso e problemas de compatibilidade em diferentes dispositivos afetam diretamente a experiência do usuário final.
 
-Diante desse cenário, a equipe **Carol Shaw** estruturou uma avaliação rigorosa de qualidade de software com o objetivo de **identificar fragilidades técnicas e propor melhorias concretas** que possam ser incorporadas ao produto. O trabalho segue o processo formal de avaliação de produto da família SQuaRE (ISO/IEC 25040), com quatro fases:
+Diante desse cenário, a equipe **Carol Shaw** estruturou uma avaliação rigorosa de qualidade de software com o objetivo de **identificar fragilidades técnicas e propor melhorias concretas** que possam ser incorporadas ao produto. O trabalho segue o processo formal de avaliação de produto da família SQuaRE (ISO/IEC 25040), organizado em quatro fases que agrupam as cinco atividades da norma (executar e concluir a avaliação compõem a Fase 4):
 
 | Fase | Descrição | Status |
 | :-: | :-- | :-: |
@@ -101,13 +101,15 @@ Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três caract
 
 O escopo documentado prioriza três características da norma ISO/IEC 25010, listadas abaixo por ordem de prioridade:
 
-- **Adequação Funcional (P1):** completude, correção e pertinência das funcionalidades de transporte — se os horários e rotas exibidos estão corretos, o aplicativo cumpre sua função social básica.
+- **Adequação Funcional (P1):** completude e correção das funcionalidades de transporte, com a pertinência delimitando as tarefas essenciais avaliadas — se os horários e rotas exibidos estão corretos, o aplicativo cumpre sua função social básica.
 - **Confiabilidade (P2):** maturidade do aplicativo e tolerância a falhas, como instabilidade de conexão móvel — essencial para quem usa o app em trânsito, frequentemente sob rede instável.
-- **Portabilidade (P3):** adaptação da interface a diferentes dispositivos móveis e versões de sistema operacional — necessário dado o perfil demográfico diverso dos usuários do transporte público do DF.
+- **Portabilidade (P3):** adaptação da interface a diferentes dispositivos móveis e versões de sistema operacional, além da instalação e da desinstalação do aplicativo — necessário dado o perfil demográfico diverso dos usuários do transporte público do DF.
 
 A ordem de prioridade reflete o impacto direto de cada característica na tarefa central do passageiro: primeiro os dados precisam estar corretos, depois o sistema precisa estar disponível e, por fim, precisa funcionar no aparelho que o usuário tem em mãos.
 
 A avaliação é acadêmica e se limita à versão do sistema observada durante o período de análise. Os resultados não representam uma certificação do aplicativo nem necessariamente se aplicam a versões futuras.
+
+O escopo cobre o **aplicativo móvel (Android)**. A versão web, os tablets, o *backend* e as APIs da Semob-DF ficam de fora, conforme a [Descrição do Produto](fase1/3-descricao.md#alvo-da-avaliacao).
 
 ---
 
@@ -118,7 +120,7 @@ A avaliação é acadêmica e se limita à versão do sistema observada durante 
 | 📦 Repositório GitHub | [FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW) |
 | 🚀 Release da Entrega 1 (E1) | [v1.0-E1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1) |
 | 🌐 GitPage (este site) | [fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/) |
-| 🚌 DF no Ponto (produto avaliado) | [dfnoponto.com.br](https://dfnoponto.com.br/) |
+| 🚌 DF no Ponto (site oficial; a avaliação cobre o aplicativo móvel) | [dfnoponto.com.br](https://dfnoponto.com.br/) |
 
 ---
 
@@ -137,3 +139,4 @@ A avaliação é acadêmica e se limita à versão do sistema observada durante 
 | :-: | :-- | :-- | :-- | :-- | :--: |
 | 01 | Criação da página inicial | Equipe Carol Shaw | 17/10/2026 | — | — |
 | 02 | Revisão geral: narrativa para leitor externo, badges de versão, links de repositório e release, tabela de fases | Equipe Carol Shaw | 26/10/2026 | — | — |
+| 03 | Alinhamento com a Fase 1: Instalabilidade na Portabilidade, papel da Pertinência e fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

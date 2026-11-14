@@ -6,11 +6,13 @@
 
 Esta seção reúne os documentos que servem de base para a **Fase 1 da avaliação de qualidade do aplicativo DF no Ponto**, o sistema oficial de mobilidade urbana e transporte público do Distrito Federal. O objetivo desta etapa é organizar, de forma clara, as informações essenciais sobre o projeto para a disciplina de **Qualidade de Software da Universidade de Brasília**, abordando o propósito da avaliação, os requisitos e partes interessadas, a descrição detalhada do produto, a justificativa para a definição do escopo, o **modelo de qualidade adotado (ISO/IEC 25010)** e a tabela de contribuição da equipe.
 
+No processo de avaliação da **ISO/IEC 25040:2011**, esta fase corresponde à atividade de **estabelecer os requisitos da avaliação**; a Fase 2 corresponde à atividade de **especificar a avaliação**. A Fase 3 (planejamento) corresponde a **projetar a avaliação**, e a Fase 4 (execução e julgamento), a **executar e concluir a avaliação**, o que agrupa as cinco atividades da norma em quatro fases.
+
 Nos arquivos desta fase, são abordados:
 
 - O **propósito da avaliação**, as decisões estratégicas apoiadas (D1, D2, D3), as **Questões Norteadoras Transversais** e os ODS vinculados — [Propósito da Avaliação](1-proposito.md);
 - Quem são os **requisitantes**, suas necessidades e a transição lógica para as metas de medição — [Requisitantes e Partes Interessadas](2-requisitantes.md);
-- Uma **apresentação do DF no Ponto**, incluindo suas principais funções no contexto da mobilidade urbana — [Descrição do Produto](3-descricao.md);
+- Uma **apresentação do DF no Ponto**, incluindo suas principais funções no contexto da mobilidade urbana — [Descrição do Produto](3-descricao.md), com a identificação do alvo da avaliação e as fronteiras de escopo;
 - A **justificativa da avaliação**, detalhando a análise de riscos técnicos e operacionais — [Justificativas](4-justificativa.md);
 - O modelo de qualidade ISO/IEC 25010, detalhando a seleção de características e subcaracterísticas (**Portabilidade, Confiabilidade e Adequação Funcional**) — [Modelo de Qualidade e Escopo](5-modelo.md);
 - A **tabela de contribuição dos membros da equipe** — [Tabela de contribuição](6-tabela_de_contribuicao.md);
@@ -23,3 +25,4 @@ Nos arquivos desta fase, são abordados:
 | 01  | Criação do documento                                 | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02  | Adição do badge de versão e atualização do cabeçalho | Equipe Carol Shaw                   | 20/10/2026 | — | — |
 | 03  | Atualização do resumo com decisões apoiadas e questões norteadoras | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 04 | Inclusão da referência à ISO/IEC 25040:2011 e da correspondência entre as fases e as atividades do processo de avaliação | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

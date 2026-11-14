@@ -1,0 +1,1957 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Detalhamento das métricas baseadas na ISO/IEC 25023 e critérios de julgamento para a avaliação do aplicativo DF no Ponto">
+      
+      
+      
+        <link rel="canonical" href="https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/fase2/metricas-julgamento/">
+      
+      
+        <link rel="prev" href="../planejamento-objetivos/">
+      
+      
+        <link rel="next" href="../rastreabilidade-diagrama%20GQM/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Métricas e Julgamento - Carol Shaw - Qualidade de Software (2026.2)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#metricas-e-criterios-de-julgamento" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-header__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carol Shaw - Qualidade de Software (2026.2)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Métricas e Julgamento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../planejamento-objetivos/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gestao/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Gestão do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-nav__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carol Shaw - Qualidade de Software (2026.2)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/1-proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/2-requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/3-descricao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/4-justificativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/5-modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/6-tabela_de_contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/7-uso_de_IA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Ferramentas de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planejamento-objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento e Objetivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desdobramento GQM e Critérios de Julgamento
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desdobramento GQM e Critérios de Julgamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escalas-de-medicao-e-tipos-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalas de Medição e Tipos de Dados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-gerais-de-calculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Gerais de Cálculo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalhamento-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento das Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalhamento das Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fontes-dos-dados-e-procedimentos-de-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fontes dos Dados e Procedimentos de Coleta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-da-mediana-do-erro-temporal-m51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculo da Mediana do Erro Temporal (M5.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacao-espacial-m52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificação Espacial (M5.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niveis-de-pontuacao-e-criterios-de-julgamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Níveis de pontuação e critérios de julgamento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Níveis de pontuação e critérios de julgamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escala-de-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escala de Notas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-pontuacao-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites de Pontuação por Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justificativa-tecnica-dos-limiares-de-decisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificativa Técnica dos Limiares de Decisão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#julgamento-dos-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Julgamento dos Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rastreabilidade-diagrama%20GQM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Gráfica da Hierarquia GQM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/calendario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendário e Progresso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos e Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desempenho do Processo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/acompanhamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acompanhamento do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escalas-de-medicao-e-tipos-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalas de Medição e Tipos de Dados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-gerais-de-calculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Gerais de Cálculo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalhamento-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento das Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalhamento das Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fontes-dos-dados-e-procedimentos-de-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fontes dos Dados e Procedimentos de Coleta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-da-mediana-do-erro-temporal-m51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculo da Mediana do Erro Temporal (M5.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacao-espacial-m52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificação Espacial (M5.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niveis-de-pontuacao-e-criterios-de-julgamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Níveis de pontuação e critérios de julgamento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Níveis de pontuação e critérios de julgamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escala-de-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escala de Notas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-pontuacao-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites de Pontuação por Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justificativa-tecnica-dos-limiares-de-decisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificativa Técnica dos Limiares de Decisão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#julgamento-dos-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Julgamento dos Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="metricas-e-criterios-de-julgamento">Métricas e Critérios de Julgamento</h1>
+<p>As métricas respondem às questões da <a href="../planejamento-objetivos/">hierarquia GQM</a> e adaptam a medição de qualidade da <strong>ISO/IEC 25023:2016</strong> ao <strong>DF no Ponto</strong>. Onze expressam proporções entre 0 e 1, nas quais maior é melhor; a M5.1 expressa o erro temporal absoluto mediano, em minutos, no qual menor é melhor.</p>
+<p>O embasamento teórico, a adaptação e o impacto técnico de cada métrica estão resumidos na <a href="../planejamento-objetivos/#31-fundamentacao-adaptacao-e-relevancia-das-metricas">seção 3.1 de Abordagem GQM e Metas de Avaliação</a>.</p>
+<h2 id="escalas-de-medicao-e-tipos-de-dados">Escalas de Medição e Tipos de Dados</h2>
+<p>A escala define o significado dos valores e as operações permitidas; o intervalo numérico, como 0 a 1, não determina sua classificação. Adota-se a classificação de Stevens apresentada pelo NIST:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Escala</th>
+<th style="text-align: left;">Propriedade</th>
+<th style="text-align: left;">Aplicação nesta avaliação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Nominal</strong></td>
+<td style="text-align: left;">Categorias sem distâncias numéricas entre elas.</td>
+<td style="text-align: left;">Aprovado/reprovado; ocorrência/ausência de crash; identificadores de dispositivo, SO ou linha. A codificação 0/1 identifica categorias antes da contagem.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ordinal</strong></td>
+<td style="text-align: left;">Categorias ordenadas, sem intervalos necessariamente iguais.</td>
+<td style="text-align: left;">Notas de 1 a 4: Crítico, Insuficiente, Bom e Excelente.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Intervalo</strong></td>
+<td style="text-align: left;">Diferenças comparáveis e origem convencional.</td>
+<td style="text-align: left;">Instantes de previsão e chegada da M5.1 na mesma referência temporal; zero não representa ausência de tempo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Razão</strong></td>
+<td style="text-align: left;">Diferenças e razões comparáveis; zero representa ausência da quantidade medida.</td>
+<td style="text-align: left;">Contagens, proporções favoráveis e durações de erro absoluto. É a escala dos resultados das 12 métricas.</td>
+</tr>
+</tbody>
+</table>
+<p>Nas proporções, a escala de razão descreve a <strong>frequência de resultados favoráveis</strong>, não a qualidade global do aplicativo. Na M5.1, o erro absoluto é uma duração cujo zero representa ausência de desvio.</p>
+<h2 id="regras-gerais-de-calculo">Regras Gerais de Cálculo</h2>
+<ol>
+<li><strong>Preparação:</strong> definir versão do app, dispositivos, SOs, casos, repetições e critérios de aprovação antes da coleta. Registrar por observação identificador, data/hora, ambiente, resultado e motivo de falha ou exclusão.</li>
+<li><strong>Contagem:</strong> usar inteiros não negativos e a mesma unidade no numerador e denominador; o numerador representa um subconjunto do total. Contar cada unidade uma vez, conforme sua métrica.</li>
+<li><strong>Ausência de dados:</strong> denominador zero ou amostra temporal vazia resulta em <strong>Não avaliado (sem dados)</strong>, sem nota. Identificar registros não observáveis ou inválidos, informando motivo e quantidade de exclusões. Falhas observadas do app integram a avaliação e não podem ser excluídas para melhorar o resultado.</li>
+<li><strong>Coleta parcial:</strong> informar as quantidades previstas, executadas e válidas. Identificar resultados parciais; casos obrigatórios pendentes impedem declarar o objetivo satisfeito.</li>
+<li><strong>Apresentação:</strong> expressar proporções adimensionais em <span class="arithmatex">\([0,1]\)</span> ou em percentual por <span class="arithmatex">\(100 \times M\)</span>. Aplicar os limiares ao valor entre 0 e 1; para M5.1, usar minutos. Informar as contagens de entrada ou o tamanho da amostra temporal.</li>
+<li><strong>Precisão:</strong> aplicar os limiares antes de arredondar e apresentar duas casas decimais. Resultados fora do domínio exigem revisão dos registros e do cálculo, sem ajuste artificial para 0 ou 1.</li>
+</ol>
+<h2 id="detalhamento-das-metricas">Detalhamento das Métricas</h2>
+<p>A tabela consolida equações, entradas, escalas e unidades. As contagens usam a unidade indicada em cada linha; as entradas temporais de M5.1 são detalhadas na subseção da mediana.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica / Questão</th>
+<th style="text-align: left;">Equação</th>
+<th style="text-align: left;">Variáveis de entrada e unidade de contagem</th>
+<th style="text-align: left;">Escala, unidade e domínio do resultado</th>
+<th style="text-align: left;">Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1 - Adaptabilidade de Hardware (Telas)</strong> <em>(Q1.1)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{1.1} = \frac{T_s}{T_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(T_s\)</span>: casos de tela × configuração aprovados, sem sobreposição ou distorção que impeça a tarefa.<br><span class="arithmatex">\(T_t\)</span>: total de casos de tela × configuração avaliados.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de casos com interface adaptada; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M1.2 - Adaptabilidade de SO</strong> <em>(Q1.2)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{1.2} = \frac{O_s}{O_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(O_s\)</span>: versões de SO aprovadas em todos os fluxos críticos definidos.<br><span class="arithmatex">\(O_t\)</span>: total de versões de SO avaliadas, identificadas pelo sistema e sua versão.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de versões compatíveis na amostra; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.1 - Sucesso de Instalação</strong> <em>(Q2.1)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{2.1} = \frac{I_s}{I_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(I_s\)</span>: ciclos de instalação limpa concluídos na primeira tentativa sem erro.<br><span class="arithmatex">\(I_t\)</span>: total de ciclos de instalação limpa avaliados.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de ciclos com instalação bem-sucedida; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.2 - Resíduo Pós-Desinstalação</strong> <em>(Q2.2)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{2.2} = 1 - \frac{D_r}{D_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(D_r\)</span>: desinstalações com pelo menos um arquivo residual atribuível ao app nos locais inspecionados.<br><span class="arithmatex">\(D_t\)</span>: total de desinstalações com inspeção válida dos locais definidos.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de desinstalações sem resíduos observados; maior é melhor. Não mede bytes residuais.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.1 - Sessões sem Crashes</strong> <em>(Q3.1)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{3.1} = 1 - \frac{S_c}{S_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(S_c\)</span>: sessões com pelo menos um encerramento inesperado.<br><span class="arithmatex">\(S_t\)</span>: total de sessões avaliadas quanto a crashes, incluindo as interrompidas por crash.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de sessões sem crash; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.2 - Sessões sem Congelamentos</strong> <em>(Q3.2)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{3.2} = 1 - \frac{S_a}{S_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(S_a\)</span>: sessões com pelo menos um congelamento da interface por mais de 5 segundos.<br><span class="arithmatex">\(S_t\)</span>: total de sessões avaliadas quanto a congelamentos, incluindo as afetadas.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de sessões sem congelamento observado; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.1 - Evitação de Quebra (Conexão)</strong> <em>(Q4.1)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{4.1} = \frac{R_s}{R_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(R_s\)</span>: interrupções de rede induzidas com tratamento aprovado.<br><span class="arithmatex">\(R_t\)</span>: total de interrupções de rede induzidas e avaliadas.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de interrupções de rede tratadas; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.2 - Tratamento de Perda de GPS</strong> <em>(Q4.2)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{4.2} = \frac{G_s}{G_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(G_s\)</span>: desativações de localização induzidas com tratamento aprovado.<br><span class="arithmatex">\(G_t\)</span>: total de desativações de localização induzidas e avaliadas.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de perdas de localização tratadas; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.1 - Precisão de Tempo</strong> <em>(Q5.1)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}\)</span><br><span class="arithmatex">\(M_{5.1} = \operatorname{mediana}(e_1,\ldots,e_n)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(t_i^{obs}\)</span>: instante de chegada observado, em segundos.<br><span class="arithmatex">\(t_i^{prev}\)</span>: instante de chegada previsto pelo app para o mesmo evento, em segundos.<br><span class="arithmatex">\(n\)</span>: número de pares válidos de previsão/chegada.<br><span class="arithmatex">\(e_i\)</span>: erro absoluto do par <span class="arithmatex">\(i\)</span>, em minutos.</td>
+<td style="text-align: left;"><strong>Razão</strong>; minutos; <span class="arithmatex">\([0,+\infty)\)</span>.</td>
+<td style="text-align: left;">Erro absoluto mediano da previsão; menor é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2 - Correção de Dados (Mapa)</strong> <em>(Q5.2)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{5.2} = \frac{P_s}{P_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(P_s\)</span>: observações posicionais com distância <span class="arithmatex">\(d_i \le \varepsilon\)</span> da referência.<br><span class="arithmatex">\(P_t\)</span>: total de observações posicionais válidas.<br><span class="arithmatex">\(d_i\)</span>: distância à posição de referência, em metros.<br><span class="arithmatex">\(\varepsilon\)</span>: tolerância espacial previamente fixada, em metros.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de posições dentro da tolerância; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.1 - Cobertura de Tarefas Essenciais</strong> <em>(Q6.1)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{6.1} = 1 - \frac{F_f}{F_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(F_f\)</span>: tarefas do catálogo essencial que falharam na execução.<br><span class="arithmatex">\(F_t\)</span>: total de tarefas do catálogo essencial, com avaliação completa de cada tarefa.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de tarefas essenciais concluídas com sucesso; maior é melhor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.2 - Completude do Banco</strong> <em>(Q6.2)</em></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{6.2} = \frac{L_c}{L_t}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(L_c\)</span>: linhas/itinerários da amostra oficial encontrados no app com código, sentido e itinerário correspondentes.<br><span class="arithmatex">\(L_t\)</span>: total de linhas/itinerários oficiais auditados na amostra.</td>
+<td style="text-align: left;"><strong>Razão</strong>; adimensional; <span class="arithmatex">\([0,1]\)</span>.</td>
+<td style="text-align: left;">Proporção de itens oficiais cobertos pelo catálogo consultável do app; maior é melhor.</td>
+</tr>
+</tbody>
+</table>
+<p>Em M3.1/M3.2, anteriormente denominadas “Densidade de Falhas” e “Densidade de ANRs”, cada sessão afetada é contada uma vez. As contagens devem atender a <span class="arithmatex">\(0 \le S_c \le S_t\)</span> e <span class="arithmatex">\(0 \le S_a \le S_t\)</span>; informar separadamente a amostra válida <span class="arithmatex">\(S_t\)</span> de cada métrica.</p>
+<h3 id="fontes-dos-dados-e-procedimentos-de-coleta">Fontes dos Dados e Procedimentos de Coleta</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Fonte dos dados</th>
+<th style="text-align: left;">Procedimento e critério de classificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1</strong></td>
+<td style="text-align: left;">Capturas de tela e registros em dispositivos físicos ou emuladores do escopo.</td>
+<td style="text-align: left;">Registrar resolução, orientação e tamanho de fonte de cada par tela × configuração. Executar a tarefa e aprovar se os controles e informações necessários estiverem visíveis e utilizáveis, sem corte ou sobreposição impeditivos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M1.2</strong></td>
+<td style="text-align: left;">Relatório de compatibilidade por SO e versão.</td>
+<td style="text-align: left;">Executar o mesmo catálogo de fluxos críticos em cada versão, registrando dispositivo e configuração. Aprovar somente se todos os fluxos terminarem sem erro de compatibilidade impeditivo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.1</strong></td>
+<td style="text-align: left;">Registro de download e instalação, com logs quando disponíveis.</td>
+<td style="text-align: left;">Começar com o app ausente e usar a distribuição oficial definida. Registrar o resultado da primeira tentativa de cada ciclo; tentativas posteriores não alteram uma falha inicial.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.2</strong></td>
+<td style="text-align: left;">Inspeção de arquivos e armazenamento antes e depois da remoção.</td>
+<td style="text-align: left;">Definir locais acessíveis e arquivos atribuíveis ao app antes da coleta. Inspecionar após cada desinstalação concluída e contar uma vez em <span class="arithmatex">\(D_r\)</span> se houver resíduos. Inspeção inviável deve ser registrada como não observável, com o motivo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.1</strong></td>
+<td style="text-align: left;">Relatório de sessões, gravação da execução e logs disponíveis.</td>
+<td style="text-align: left;">Fixar roteiro e duração planejada. Registrar os encerramentos inesperados e manter sessões interrompidas por crash na amostra, classificadas como afetadas. A retomada inicia nova sessão identificada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.2</strong></td>
+<td style="text-align: left;">Gravação das interações com marcação temporal e logs disponíveis.</td>
+<td style="text-align: left;">Em sessões padronizadas, medir a ausência de resposta à ação do usuário e contar cada sessão com congelamento superior a 5 segundos. Carregamento com interface responsiva não conta; diagnóstico de ANR do SO exige evidência específica em log.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.1</strong></td>
+<td style="text-align: left;">Gravação da interface e registro das interrupções de rede.</td>
+<td style="text-align: left;">Induzir uma interrupção por ensaio, com rede disponível inicialmente. Aprovar se o app permanece aberto, informa a indisponibilidade, mantém a interface responsiva e permite retomar a consulta após a reconexão. Definir previamente, no roteiro, os tempos máximos de aviso e retomada, em segundos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.2</strong></td>
+<td style="text-align: left;">Alertas, mapa e registro das alterações do serviço de localização.</td>
+<td style="text-align: left;">Induzir uma desativação por ensaio, com localização disponível inicialmente. Aprovar se o app permanece aberto, informa a indisponibilidade, permite consultas independentes da localização e retoma a função após a reativação. Definir previamente, no roteiro, os tempos máximos de aviso e retomada, em segundos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.1</strong></td>
+<td style="text-align: left;">Previsão exibida e registro da chegada física do ônibus.</td>
+<td style="text-align: left;">Parear por linha, sentido, parada e veículo/viagem identificável. Fixar a regra de captura antes da coleta; registrar data completa, fuso e instante da captura. Aplicar a mesma regra a toda a amostra, sem selecionar retrospectivamente previsões de menor erro.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2</strong></td>
+<td style="text-align: left;">Coordenadas do app e referência independente, obtida em campo ou fonte oficial.</td>
+<td style="text-align: left;">Registrar coordenadas, horários e referência, separando paradas e veículos. Fixar previamente a tolerância espacial e, para veículos, a diferença temporal admissível. Aplicar a verificação espacial abaixo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.1</strong></td>
+<td style="text-align: left;">Catálogo de tarefas essenciais e relatório de execução funcional.</td>
+<td style="text-align: left;">Fixar antes da coleta o catálogo com entradas e resultados esperados. Executar cada tarefa de ponta a ponta e contar uma vez cada tarefa que falhar. Calcular após avaliar todo o catálogo; casos pendentes mantêm o resultado incompleto.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.2</strong></td>
+<td style="text-align: left;">Catálogo oficial da Semob-DF, com data de referência, e consultas ao app.</td>
+<td style="text-align: left;">Selecionar a amostra da fonte oficial antes da coleta, identificando código, sentido e variante de itinerário, quando houver. Auditar todos os itens; ausência ou divergência não incrementa <span class="arithmatex">\(L_c\)</span>, e consultas repetidas não ampliam a amostra.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculo-da-mediana-do-erro-temporal-m51">Cálculo da Mediana do Erro Temporal (M5.1)</h3>
+<p>Usar os dois instantes em segundos, na mesma referência temporal e com data completa. Se o app fornecer tempo restante, somá-lo ao instante de captura para obter a previsão. A equação de <span class="arithmatex">\(e_i\)</span> converte o erro para minutos.</p>
+<p>Ordenar os erros como <span class="arithmatex">\(e_{(1)} \le \cdots \le e_{(n)}\)</span>. Para <span class="arithmatex">\(n &gt; 0\)</span>:</p>
+<div class="arithmatex">\[
+M_{5.1} =
+\begin{cases}
+e_{((n+1)/2)}, &amp; \text{se } n \text{ for ímpar}, \\
+\dfrac{e_{(n/2)} + e_{(n/2+1)}}{2}, &amp; \text{se } n \text{ for par}.
+\end{cases}
+\]</div>
+<p>Registrar separadamente previsões ausentes e chegadas sem identificação suficiente; esses casos não recebem erro zero.</p>
+<h3 id="verificacao-espacial-m52">Verificação Espacial (M5.2)</h3>
+<p>Antes da coleta, registrar a tolerância espacial <span class="arithmatex">\(\varepsilon &gt; 0\)</span> (metros) e, para veículos, a diferença temporal máxima <span class="arithmatex">\(\Delta t_{max} \ge 0\)</span> (segundos) entre app e referência. Esses parâmetros classificam as posições; os limiares de pontuação se aplicam à proporção aprovada.</p>
+<p>Usar coordenadas geográficas WGS84 e calcular a distância de grande círculo pela fórmula de haversine, com raio terrestre convencional <span class="arithmatex">\(R = 6\,371\,000\)</span> metros:</p>
+<div class="arithmatex">\[
+a_i = \sin^2\!\left(\frac{\varphi_i^{app} - \varphi_i^{ref}}{2}\right)
++ \cos(\varphi_i^{app})\cos(\varphi_i^{ref})
+\sin^2\!\left(\frac{\lambda_i^{app} - \lambda_i^{ref}}{2}\right),
+\qquad d_i = 2R\arcsin\!\left(\sqrt{a_i}\right).
+\]</div>
+<p>As variáveis <span class="arithmatex">\(\varphi\)</span> e <span class="arithmatex">\(\lambda\)</span> são latitude e longitude em radianos; <span class="arithmatex">\(app\)</span> e <span class="arithmatex">\(ref\)</span> identificam aplicativo e referência. Para cada observação válida, incrementar <span class="arithmatex">\(P_t\)</span> e, se <span class="arithmatex">\(d_i \le \varepsilon\)</span>, também <span class="arithmatex">\(P_s\)</span>. Em veículos, registros separados por mais de <span class="arithmatex">\(\Delta t_{max}\)</span> são inválidos. Sem tolerância e referência documentadas, a métrica permanece não avaliada.</p>
+<p>Apurar paradas e veículos separadamente. Havendo consolidação de amostras com os mesmos critérios, somar seus acertos e totais antes de dividir, preservando os resultados por tipo de entidade.</p>
+<hr />
+<h2 id="niveis-de-pontuacao-e-criterios-de-julgamento">Níveis de pontuação e critérios de julgamento</h2>
+<p>Para assegurar a objetividade da avaliação, os patamares de pontuação (de 1 a 4) são definidos estritamente antes da coleta de dados em campo.</p>
+<h3 id="escala-de-notas">Escala de Notas</h3>
+<p>As notas são <strong>ordinais</strong>: sua ordem não garante distâncias iguais nem proporcionalidade. A medida original mantém sua escala. Atribuir a maior nota cuja condição seja satisfeita pelo valor sem arredondamento.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Nível</th>
+<th style="text-align: left;">Significado para o Projeto DF no Ponto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Excelente</td>
+<td style="text-align: left;">Eficácia plena; o aplicativo atende perfeitamente às expectativas do cidadão.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Bom</td>
+<td style="text-align: left;">Presença de desvios menores (como pequenos atrasos toleráveis), aceitáveis no contexto de transporte público.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Insuficiente</td>
+<td style="text-align: left;">O desvio afeta consideravelmente a utilidade prática; demanda plano corretivo de urgência.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Crítico</td>
+<td style="text-align: left;">Inviabiliza o uso da funcionalidade; alto risco de rejeição ou abandono pelo usuário.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limites-de-pontuacao-por-metrica">Limites de Pontuação por Métrica</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Nota 4 (Excelente)</th>
+<th style="text-align: center;">Nota 3 (Bom)</th>
+<th style="text-align: center;">Nota 2 (Insuficiente)</th>
+<th style="text-align: center;">Nota 1 (Crítico)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1 / M1.2</strong> (Adaptabilidade)</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;">≥ 0,90</td>
+<td style="text-align: center;">≥ 0,75</td>
+<td style="text-align: center;">&lt; 0,75</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.1 / M2.2</strong> (Instalação/Desinstalação)</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;">≥ 0,95</td>
+<td style="text-align: center;">≥ 0,85</td>
+<td style="text-align: center;">&lt; 0,85</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.1 / M3.2</strong> (Sessões sem crashes / congelamentos)</td>
+<td style="text-align: center;">≥ 0,99</td>
+<td style="text-align: center;">≥ 0,95</td>
+<td style="text-align: center;">≥ 0,90</td>
+<td style="text-align: center;">&lt; 0,90</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.1 / M4.2</strong> (Tolerância a Falhas)</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;">≥ 0,85</td>
+<td style="text-align: center;">≥ 0,70</td>
+<td style="text-align: center;">&lt; 0,70</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.1</strong> (Precisão de Tempo)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 2\)</span> min de erro</td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 5\)</span> min de erro</td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 10\)</span> min de erro</td>
+<td style="text-align: center;"><span class="arithmatex">\(&gt; 10\)</span> min de erro</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2</strong> (Correção Espacial do Mapa)</td>
+<td style="text-align: center;">≥ 0,95</td>
+<td style="text-align: center;">≥ 0,85</td>
+<td style="text-align: center;">≥ 0,70</td>
+<td style="text-align: center;">&lt; 0,70</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.1 / M6.2</strong> (Completude e Cobertura)</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;">≥ 0,95</td>
+<td style="text-align: center;">≥ 0,80</td>
+<td style="text-align: center;">&lt; 0,80</td>
+</tr>
+</tbody>
+</table>
+<h3 id="justificativa-tecnica-dos-limiares-de-decisao">Justificativa Técnica dos Limiares de Decisão</h3>
+<p>A definição das metas numéricas e das faixas de decisão (<em>Thresholds</em>) fundamenta-se nas normas <strong>ISO/IEC 25010</strong> e <strong>ISO/IEC 25023</strong>, combinadas às restrições operacionais do aplicativo móvel <strong>DF no Ponto</strong> e ao perfil dos usuários do transporte público coletivo:</p>
+<h4 id="1-portabilidade-m11-m12-m21-e-m22">1. Portabilidade (M1.1, M1.2, M2.1 e M2.2)</h4>
+<ul>
+<li><strong>Faixas de Decisão:</strong> Satisfatório (<span class="arithmatex">\(\ge 0,90\)</span> a <span class="arithmatex">\(1,00\)</span>) | Tolerável (<span class="arithmatex">\(0,75\)</span> a <span class="arithmatex">\(0,89\)</span>) | Crítico (<span class="arithmatex">\(&lt; 0,75\)</span>).</li>
+<li><strong>Justificativa:</strong> O público do transporte coletivo no Distrito Federal e Entorno apresenta ampla heterogeneidade de dispositivos, incluindo aparelhos de entrada com telas compactas e sistemas operacionais em versões anteriores à versão 14 (sem suporte oficial). Uma taxa de adaptabilidade inferior a 75% excluiria mais de um quarto dos usuários por distorções de interface ou incompatibilidade. Além disso, falhas de instalação ou resíduos excessivos de dados pós-desinstalação penalizam severamente aparelhos com armazenamento interno restrito.</li>
+</ul>
+<h4 id="2-confiabilidade-m31-m32-m41-e-m42">2. Confiabilidade (M3.1, M3.2, M4.1 e M4.2)</h4>
+<ul>
+<li><strong>Faixas de Decisão:</strong> Satisfatório (<span class="arithmatex">\(\ge 0,95\)</span> a <span class="arithmatex">\(0,99\)</span>) | Tolerável (<span class="arithmatex">\(0,85\)</span> a <span class="arithmatex">\(0,94\)</span>) | Crítico (<span class="arithmatex">\(&lt; 0,85\)</span>).</li>
+<li><strong>Justificativa:</strong> Baseado nas diretrizes do <em>Google Play Android Vitals</em>, onde as taxas de encerramento forçado (<em>crashes</em>) percebidas pelo usuário devem ser mantidas abaixo de 1,09% e as de congelamento de tela (<em>ANRs</em>) abaixo de 0,47% no agregado dos aparelhos. Em paradas de ônibus, um encerramento abrupto do aplicativo durante a aproximação de um coletivo acarreta perda imediata da viagem. Da mesma forma, devido às frequentes oscilações de conectividade 3G/4G e instabilidade de satélites GPS no ambiente urbano, o aplicativo precisa demonstrar tolerância a falhas em mais de 85% das ocorrências, exibindo mensagens amigáveis de recuperação em vez de quebrar a sessão.</li>
+</ul>
+<h4 id="3-adequacao-funcional-precisao-temporal-e-espacial-m51-e-m52">3. Adequação Funcional: Precisão Temporal e Espacial (M5.1 e M5.2)</h4>
+<ul>
+<li><strong>Faixas de Decisão (M5.1 - Horários):</strong> Excelente (<span class="arithmatex">\(\le 2\)</span> min) | Bom (<span class="arithmatex">\(\le 5\)</span> min) | Tolerável (<span class="arithmatex">\(\le 10\)</span> min) | Crítico (<span class="arithmatex">\(&gt; 10\)</span> min).</li>
+<li><strong>Faixas de Decisão (M5.2 - Mapa/GPS):</strong> Satisfatório (<span class="arithmatex">\(\ge 0,85\)</span> a <span class="arithmatex">\(0,95\)</span>) | Crítico (<span class="arithmatex">\(&lt; 0,70\)</span>).</li>
+<li><strong>Justificativa:</strong> No transporte público, a tolerância de atraso do passageiro é extremamente sensível. Um desvio de até 2 minutos representa alta precisão de aproximação física; até 5 minutos é considerado plenamente aceitável diante das oscilações naturais de tráfego urbano no Distrito Federal. Desvios acima de 10 minutos quebram a confiabilidade do serviço, levando o cidadão a perder compromissos ou a esperas prolongadas. No aspecto espacial (M5.2), erros cartográficos acima de 15% na localização das paradas induzem o usuário a aguardar em locais incorretos.</li>
+</ul>
+<h4 id="4-adequacao-funcional-completude-e-cobertura-m61-e-m62">4. Adequação Funcional: Completude e Cobertura (M6.1 e M6.2)</h4>
+<ul>
+<li><strong>Faixas de Decisão:</strong> Satisfatório (<span class="arithmatex">\(\ge 0,95\)</span> a <span class="arithmatex">\(1,00\)</span>) | Crítico (<span class="arithmatex">\(&lt; 0,80\)</span>).</li>
+<li><strong>Justificativa:</strong> O DF no Ponto é a ferramenta digital oficial de transporte do Distrito Federal. Dessa forma, as tarefas essenciais (busca de linhas, itinerários e paradas) devem possuir taxa de sucesso plena (<span class="arithmatex">\(\ge 95\%\)</span>). Uma omissão de mais de 20% das linhas ativas em relação ao catálogo oficial da SEMOB-DF (<span class="arithmatex">\(&lt; 0,80\)</span>) inviabiliza o propósito central do aplicativo.</li>
+</ul>
+<h3 id="julgamento-dos-objetivos">Julgamento dos Objetivos</h3>
+<p>O veredito de cada objetivo de medição (G1 a G6) adota o <strong>critério conservador (pior nota obtida entre suas métricas filhas)</strong>, evitando que falhas críticas fiquem ocultas por médias aritméticas.</p>
+<p>A pior nota respeita a ordem da escala ordinal. Para julgar o objetivo, todas as métricas filhas e os casos obrigatórios devem estar avaliados. Caso contrário, registrar <strong>Não avaliado (dados incompletos)</strong>, mantendo visíveis as notas e falhas observadas.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pior nota nas métricas do objetivo</th>
+<th style="text-align: left;">Veredito do Objetivo</th>
+<th style="text-align: left;">Ação Recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Apenas notas 3 e 4</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+<td style="text-align: left;">Operação regular e estável.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pelo menos uma nota 2</td>
+<td style="text-align: left;"><strong>Satisfeito com Ressalvas</strong></td>
+<td style="text-align: left;">Abertura de <em>issue</em> corretiva; não inviabiliza o uso imediato, mas exige melhoria.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pelo menos uma nota 1</td>
+<td style="text-align: left;"><strong>Não Satisfeito</strong></td>
+<td style="text-align: left;">Funcionalidade comprometida criticamente; exige correção imediata (<em>hotfix</em>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
+<ul>
+<li>ISO/IEC 25023:2016. <em>Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality</em>. Disponível em: <a href="https://www.iso.org/standard/35747.html">https://www.iso.org/standard/35747.html</a>. Acesso em: 11 nov. 2026.</li>
+<li>NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY (NIST). <em>Metrics and Measures</em>. Seção “Measurement Scales”. Disponível em: <a href="https://www.nist.gov/itl/ai/ai-standards-and-guidelines-group/metrics-and-measures">https://www.nist.gov/itl/ai/ai-standards-and-guidelines-group/metrics-and-measures</a>. Acesso em: 11 nov. 2026.</li>
+<li>GOOGLE. <em>Android vitals — bad behavior thresholds</em>. Disponível em: <a href="https://developer.android.com/google/play/vitals">https://developer.android.com/google/play/vitals</a>. Acesso em: 13 nov. 2026.</li>
+<li>FENTON, Norman; BIEMAN, James. <em>Software Metrics: A Rigorous and Practical Approach</em> (3rd Edition). CRC Press, 2014.</li>
+</ul>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor</th>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Revisor</th>
+<th style="text-align: left;">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">01</td>
+<td style="text-align: left;">Criação inicial do documento</td>
+<td style="text-align: left;"><a href="https://github.com/CristianoMoraiss">Cristiano</a></td>
+<td style="text-align: left;">31/10/2026</td>
+<td style="text-align: left;"><a href="https://github.com/bessazs">Bessa</a></td>
+<td style="text-align: left;">31/10/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">02</td>
+<td style="text-align: left;">Adição das justificativas técnicas dos limiares de decisão</td>
+<td style="text-align: left;"><a href="https://github.com/jonas3688">João Capozzi</a></td>
+<td style="text-align: left;">10/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: left;">11/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">03</td>
+<td style="text-align: left;">Especificação das escalas, variáveis, unidades e métodos de cálculo das métricas</td>
+<td style="text-align: left;"><a href="https://github.com/rodrigogontijoo">Rodrigo Gontijo</a></td>
+<td style="text-align: left;">11/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: left;">11/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">04</td>
+<td style="text-align: left;">Vínculo com a fundamentação das métricas e correção do patamar de crashes do Android vitals (1,09%)</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: left;">13/11/2026</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../planejamento-objetivos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Planejamento e Objetivos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Planejamento e Objetivos
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../rastreabilidade-diagrama%20GQM/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Representação Gráfica da Hierarquia GQM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Representação Gráfica da Hierarquia GQM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Carol Shaw - Qualidade de Software (2026.2) | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank">Repositório</a> | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1" target="_blank">Release E1</a> | v1.0 - E1 | Atualizado em 26/10/2026
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank" rel="noopener" title="Repositório da equipe Carol Shaw" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

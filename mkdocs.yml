@@ -92,14 +92,15 @@ nav:
       - Uso de Ferramentas de IA: fase1/7-uso_de_IA.md
 
   - Fase 2:
+      - Introdução: fase2/introducao.md
       - Planejamento e Objetivos: fase2/planejamento-objetivos.md
       - Desdobramento GQM e Critérios de Julgamento: fase2/metricas-julgamento.md
       - Representação Gráfica da Hierarquia GQM: fase2/rastreabilidade-diagrama GQM.md
 
   - Fase 3:
       - Introdução: fase3/introducao.md
-      - Método: fase3/1-metodo.md
-      - Procedimentos: fase3/2-procedimentos.md
+      - Método de Avaliação: fase3/1-metodo.md
+      - Procedimentos de Execução: fase3/2-procedimentos.md
       - Recursos: fase3/3-recursos.md
 
   - Fase 4:

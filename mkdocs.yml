@@ -98,14 +98,15 @@ nav:
 
   - Fase 3:
       - Introdução: fase3/introducao.md
-      - Procedimentos: fase3/procedimentos.md
-      - Recursos: fase3/recursos.md
+      - Método: fase3/1-metodo.md
+      - Procedimentos: fase3/2-procedimentos.md
+      - Recursos: fase3/3-recursos.md
 
   - Fase 4:
       - Introdução: fase4/introducao.md
-      - Coleta de Dados: fase4/coleta.md
-      - Análise de Dados: fase4/analise.md
-      - Resultados e Conclusões: fase4/resultados.md
+      - Coleta de Dados: fase4/1-coleta.md
+      - Análise de Dados: fase4/2-analise.md
+      - Resultados e Conclusões: fase4/3-resultados.md
 
   - Gestão do Projeto:
       - Visão Geral: gestao/visao-geral.md

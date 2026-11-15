@@ -96,6 +96,17 @@ nav:
       - Desdobramento GQM e Critérios de Julgamento: fase2/metricas-julgamento.md
       - Representação Gráfica da Hierarquia GQM: fase2/rastreabilidade-diagrama GQM.md
 
+  - Fase 3:
+      - Introdução: fase3/introducao.md
+      - Procedimentos: fase3/procedimentos.md
+      - Recursos: fase3/recursos.md
+
+  - Fase 4:
+      - Introdução: fase4/introducao.md
+      - Coleta de Dados: fase4/coleta.md
+      - Análise de Dados: fase4/analise.md
+      - Resultados e Conclusões: fase4/resultados.md
+
   - Gestão do Projeto:
       - Visão Geral: gestao/visao-geral.md
       - Calendário e Progresso: gestao/calendario.md

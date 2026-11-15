@@ -60,23 +60,23 @@ Os resultados obtidos refletem exclusivamente o comportamento observado na vers�
 
 Alterações posteriores na base de dados da Semob-DF, manutenções em servidores de API externos, atualizações de versão do aplicativo ou modificações na frota operante poderão alterar ou invalidar parcialmente as conclusões empíricas desta avaliação.
 
-A identificação da versão avaliada e as fronteiras do escopo (o que está dentro e fora da avaliação) estão em [Descrição do Produto](3-descricao.md#alvo-da-avaliacao).
+A identificação da versão avaliada e as fronteiras do escopo (o que está dentro e fora da avaliação) estão em [Descrição do Produto](3-descricao.md#4-alvo-da-avaliacao).
 
 ---
 
 ## 6. Alinhamento com os Objetivos de Desenvolvimento Sustentável (ODS)
 
-A avaliação alinha-se diretamente à agenda global das Nações Unidas (ONU) para 2030, apoiando as seguintes metas:
+### 6.1. Seleção e Delimitação
 
-### ODS 11 — Cidades e Comunidades Sustentáveis
-O DF no Ponto atua como elemento central de acesso à mobilidade urbana no Distrito Federal.
-- **Meta 11.2:** *Até 2030, proporcionar o acesso a sistemas de transporte seguros, acessíveis, sustentáveis e a preço acessível para todos, melhorando a segurança rodoviária por meio da expansão dos transportes públicos.*  
-  *Conexão com a Avaliação:* Ao validar a correção dos horários e itinerários (D3 / QN3) e garantir a acessibilidade em dispositivos de baixo custo (D1 / QN1), a avaliação incentiva a utilização confiável do transporte coletivo.
+A seleção considera a função do **aplicativo Android** e o que as métricas conseguem observar. Adota-se o **ODS 11 — Cidades e Comunidades Sustentáveis**, especificamente a **meta 11.2**, por sua relação com o acesso de todos ao transporte público e a atenção às necessidades de grupos vulneráveis, conforme a [ONU Brasil](https://brasil.un.org/pt-br/sdgs/11).
 
-### ODS 9 — Indústria, Inovação e Infraestrutura
-O aplicativo representa o componente de tecnologia da informação na infraestrutura de serviços urbanos de Brasília.
-- **Meta 9.1:** *Desenvolver infraestrutura de qualidade, confiável, sustentável e resiliente, para apoiar o desenvolvimento econômico e o bem-estar humano, com foco no acesso equitativo para todos.*  
-  *Conexão com a Avaliação:* A investigação da resiliência perante falhas de conexão e tolerância a quedas de GPS (D2 / QN2) garante uma infraestrutura digital robusta e confiável para a população.
+### 6.2. Contribuição Técnica para a Meta 11.2
+
+O DF no Ponto apoia o planejamento das viagens por meio da consulta de linhas, horários e paradas. A avaliação verifica as condições técnicas desse apoio: **D1 / QN1** trata do acesso ao aplicativo; **D2 / QN2**, da estabilidade e do tratamento de falhas; e **D3 / QN3**, da correção e da completude das informações.
+
+O vínculo com a meta 11.2 é de **apoio informacional ao transporte público**. Os ensaios não demonstram aumento de passageiros, redução de emissões, melhoria da segurança viária ou atendimento integral dos grupos vulneráveis. Compatibilidade com aparelhos também não equivale a uma avaliação de acessibilidade para pessoas com deficiência.
+
+O [mapeamento das 12 métricas GQM para a meta 11.2](../fase2/rastreabilidade-diagrama%20GQM.md#21-relacao-das-metricas-com-a-meta-112) explicita a evidência técnica de cada grupo e distingue essas medidas do indicador oficial da ONU.
 
 ---
 
@@ -84,8 +84,7 @@ O aplicativo representa o componente de tecnologia da informação na infraestru
 
 - **ISO/IEC 25010:2023.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
 - **ISO/IEC 25040:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
-- **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU).** *Objetivos de Desenvolvimento Sustentável (ODS)*. Disponível em: <https://brasil.un.org/pt-br/sdgs>. Acesso em: 17 out. 2026.
-- **INSTITUTO DE PESQUISA ECONÔMICA APLICADA (IPEA).** *ODS 9 e ODS 11*. Disponível em: <https://www.ipea.gov.br/ods/>. Acesso em: 17 out. 2026.
+- **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU BRASIL).** *Objetivo 11 — Cidades e comunidades sustentáveis*, meta 11.2. Disponível em: <https://brasil.un.org/pt-br/sdgs/11>. Acesso em: 15 nov. 2026.
 
 ---
 
@@ -97,3 +96,4 @@ O aplicativo representa o componente de tecnologia da informação na infraestru
 | 02 | Atualização e alinhamento com ODS | Equipe Carol Shaw | 26/10/2026 | — | — |
 | 03 | Formalização das Decisões Apoiadas (D1, D2, D3), Questões Norteadoras Transversais (QN1, QN2, QN3) e harmonização de escopo com a Fase 2 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
 | 04 | Esclarecimento do papel da Pertinência Funcional, correspondência Fase 1/Fase 2 com as atividades da ISO/IEC 25040 e vínculo com as fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
+| 05 | Seleção da meta 11.2 e vínculo com as métricas GQM | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |

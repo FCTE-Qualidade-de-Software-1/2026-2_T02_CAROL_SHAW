@@ -1,10 +1,33 @@
-# Fase 3 — Procedimentos de Execução
+# Fase 3 — Procedimentos de Execução, Parâmetros, Catálogos e Amostragem
 
 ## 1. Objetivo e escopo
 
 Este documento estabelece as **instruções detalhadas de execução, roteiros de ensaio e formulários padronizados de coleta** para a avaliação de qualidade do aplicativo móvel **DF no Ponto** (versão `5.25.1(1149)`, plataforma Android), conforme a etapa de **projetar a avaliação** da norma **ISO/IEC 25040:2011**.[1]
 
 O propósito deste guia operacional é garantir a **autossuficiência, reprodutibilidade e auditabilidade** dos ensaios. Qualquer membro da equipe técnica ou avaliador independente deve ser capaz de seguir estes procedimentos de ponta a ponta e obter medições consistentes e comparáveis, alimentando as fórmulas das 12 métricas formalizadas na Fase 2 ([Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md)) sob o método definido em [Método de Avaliação](1-metodo.md) e utilizando os recursos listados em [Recursos](3-recursos.md).
+
+O documento também define os catálogos, as amostras e os parâmetros das 12 métricas, conforme o [Método de Avaliação](1-metodo.md) e as [fórmulas, unidades e faixas de pontuação da Fase 2](../fase2/metricas-julgamento.md). Os parâmetros, catálogos e amostragem constam nas seções 3 a 7; a gestão de evidências, os formulários e as regras de anomalia, nas seções 8 a 12; e os roteiros passo a passo, nas seções 13 a 15.
+
+Adota-se uma **amostra intencional**, dimensionada para a execução acadêmica e a resolução dos resultados. Os valores são decisões do projeto, não medições realizadas ou exigências numéricas das normas ISO.
+
+Prevê-se um smartphone com Android atualizado e a versão mais recente do app instalada. A [identificação do alvo](../fase1/3-descricao.md#4-alvo-da-avaliacao) e o método registram `5.25.1(1149)`; atualizar essa identificação se a versão usada for outra. Manter a mesma versão do app em todos os ambientes, registrando eventual indisponibilidade.
+
+### 1.1. Definições anteriores à coleta
+
+**Locais, dias e horários de campo serão definidos depois**, com verificação da viabilidade das quantidades propostas. A seleção das linhas/itinerários e da parada usada nas tarefas também ficará para outro integrante da equipe. Antes da coleta oficial, completar os registros abaixo e fixar os valores finais:
+
+| Registro | Conteúdo a fixar |
+| :--- | :--- |
+| Ambiente | Modelo/perfil, versão exata do Android, versão/build do app, resolução, densidade e escala de fonte |
+| Catálogo oficial | Fonte, data/hora da consulta e lista identificada de linhas, sentidos e variantes |
+| Entradas funcionais | `L01` e `L02`: dois itens desse catálogo; `P01`: uma parada pertencente ao itinerário de `L01` |
+| Campo | Paradas com código, sentido, linhas, dias, intervalos de observação e responsáveis |
+| Comparação espacial | Referência de comparação, sistema de coordenadas, horários e precisão estimada |
+| Inspeção de arquivos | Identificador do pacote e lista de locais acessíveis efetivamente inspecionados |
+
+`L01`, `L02` e `P01` são identificadores internos dos itens selecionados na fonte oficial antes da consulta no app. Versionar o plano; alterações exigem justificativa e identificação das séries afetadas, mantendo separados os resultados obtidos sob critérios diferentes.
+
+Em todas as métricas, informar quantidades previstas, executadas e válidas, com os motivos das pendências e exclusões. Manter as falhas observadas na avaliação; não excluir nem substituir casos por causa dos resultados. Denominador zero ou ausência de pares temporais válidos resulta em avaliação sem nota; casos obrigatórios pendentes mantêm a avaliação incompleta, conforme a Fase 2.
 
 ---
 
@@ -21,33 +44,200 @@ A execução das atividades de medição é regida por diretrizes estritas que v
 
 ---
 
-## 3. Gestão e convenção de evidências
+## 3. Catálogos de tarefas e compatibilidade
+
+### 3.1. Tarefas essenciais — M6.1
+
+O catálogo contém **oito tarefas** do [escopo do produto](../fase1/3-descricao.md#5-fronteiras-e-exclusoes-de-escopo), executadas uma vez no aparelho principal, com rede e localização disponíveis. Preparar o estado de favoritos indicado nas entradas.
+
+| ID | Tarefa e entrada | Resultado esperado |
+| :--- | :--- | :--- |
+| TE01 | Buscar `L01` pelo código oficial | Encontrar a linha com identificação e sentido correspondentes à fonte oficial |
+| TE02 | Consultar os horários de `L01` para o dia de referência registrado | Exibir a grade da linha, sentido e dia consultados, sem confundir horário de partida com previsão de chegada |
+| TE03 | Abrir o itinerário de `L01` | Exibir o traçado e as paradas do sentido selecionado, permitindo consultar seus detalhes |
+| TE04 | Consultar `P01` | Exibir a identificação da parada e permitir consultar as linhas que a atendem |
+| TE05 | Acompanhar um veículo de `L02`, com operação confirmada no período | Exibir um veículo identificável e sua posição no mapa; a precisão dessa posição é avaliada separadamente em M5.2 |
+| TE06 | Salvar `L01`, inicialmente ausente dos favoritos, e reabrir a lista | Encontrar `L01` nos favoritos com a identificação correta |
+| TE07 | Salvar `P01`, inicialmente ausente dos favoritos, e reabrir a lista | Encontrar `P01` nos favoritos com a identificação correta |
+| TE08 | Remover `L01`, previamente presente nos favoritos, e reabrir a lista | Confirmar sua ausência, mantendo os outros favoritos |
+
+Contar uma falha por tarefa que não atingir o resultado esperado. Preparar cada estado independentemente da aprovação de outras tarefas; impedimentos deixam o catálogo incompleto. Em TE05, operação não verificável é um impedimento de observação, sem aprovação presumida ou atribuição automática de falha ao app.
+
+### 3.2. Telas e configurações — M1.1
+
+Selecionam-se cinco telas da consulta e navegação do passageiro:
+
+| ID | Tela e conteúdo utilizado |
+| :--- | :--- |
+| T01 | Resultado da busca por `L01` |
+| T02 | Horários de `L01` |
+| T03 | Mapa do itinerário de `L01` |
+| T04 | Detalhes de `P01` |
+| T05 | Lista de favoritos com `L01` e `P01` previamente cadastrados |
+
+Avaliar cada tela nas quatro configurações propostas, totalizando **20 casos**. Os perfis não descrevem o celular disponível.
+
+| ID | Resolução e densidade do perfil | Orientação | Escala de fonte |
+| :--- | :--- | :--- | :--- |
+| C01 | 640 × 1136 px; 320 dpi | Retrato | 100% |
+| C02 | Mesmo perfil de C01, com dimensões invertidas | Paisagem | 100% |
+| C03 | Mesmo perfil de C01 | Retrato | 200% |
+| C04 | 1080 × 2400 px; 420 dpi | Retrato | 100% |
+
+Os perfis cobrem tela compacta, rotação, fonte ampliada e maior área de exibição. Registrar a configuração aplicada e o espaço das barras do sistema. Identificar cada caso como `Txx-Cxx` e aprovar quando informações e controles necessários estiverem visíveis e utilizáveis, sem corte ou sobreposição impeditivos.
+
+Usar a mesma versão do Android nos quatro perfis. A configuração dos ambientes será descrita em [Recursos](3-recursos.md).
+
+### 3.3. Versões do Android — M1.2
+
+A lista prevista contém **Android 9, 10, 11, 12 e 13**, conforme a hipótese da Fase 2, e a **versão atual do aparelho físico**. Contar versões coincidentes uma única vez: são até seis versões distintas, com ambientes físicos ou emulados a especificar em [Recursos](3-recursos.md).
+
+Aplicar TE01 a TE08 em cada versão, nas mesmas condições funcionais. Aprovar a versão somente se todos os fluxos concluírem sem erro impeditivo de compatibilidade. Registrar a causa observável, sem atribuir indisponibilidade externa automaticamente ao Android.
+
+Instalação recusada por incompatibilidade demonstrada integra o resultado. Ambiente não preparado ou distribuição indisponível por motivo externo fica pendente/não observável, sem aprovação presumida. Repetições no mesmo Android não ampliam o denominador.
+
+---
+
+## 4. Parâmetros dos ensaios de laboratório
+
+### 4.1. Instalação e resíduos — M2.1 e M2.2
+
+Planejam-se **10 ciclos de instalação limpa e remoção** no aparelho principal, pela distribuição oficial, começando com o app ausente. M2.1 considera somente a primeira tentativa, sem exigir abertura inicial; tentativas posteriores não alteram esse resultado.
+
+Para M2.2, usar busca, horários, mapa e favoritos entre a instalação concluída e a remoção. A instalação existente na preparação não conta como ciclo. Fixar os locais acessíveis abaixo e inspecionar o mesmo conjunto antes da instalação e depois da desinstalação:
+
+| Grupo | Locais e critério de inspeção |
+| :--- | :--- |
+| Áreas específicas do app | Diretórios identificados pelo pacote em `Android/data` e `Android/obb`, quando acessíveis |
+| Armazenamento compartilhado | Pastas identificadas com o app, `Download`, `Documents` e `Android/media`, quando acessíveis |
+| Atribuição | Arquivo novo ou alterado durante o uso, com nome, conteúdo ou vínculo com o pacote que demonstre origem no app |
+
+Excluir da contagem as evidências produzidas pelo avaliador e os arquivos sem atribuição demonstrável ao app. Segundo a [documentação do Android](https://developer.android.com/training/data-storage), áreas específicas são removidas na desinstalação, enquanto arquivos compartilhados podem permanecer. O resultado limita-se aos locais observáveis, sem presumir acesso irrestrito ou ausência de resíduos nas demais áreas.
+
+Inspeção inviável de um local obrigatório invalida a inspeção do ciclo. Instalação não concluída não produz desinstalação aprovada. Registrar separadamente as quantidades de M2.1 e M2.2, conforme as regras comuns.
+
+### 4.2. Sessões de uso — M3.1 e M3.2
+
+Planejam-se **20 sessões de cinco minutos**, totalizando 100 minutos previstos. Cada sessão dedica **um minuto a cada atividade, nesta ordem**: busca de linha e resultados; horários; itinerário no mapa; parada e acompanhamento de veículo, quando disponível; consulta e manutenção dos favoritos. Registrar atrasos e interrupções sem prolongar a sessão. Não induzir quedas de rede ou desativação da localização.
+
+**Crash** é encerramento inesperado. **Congelamento** é ausência de resposta da interface a uma ação por mais de cinco segundos, medida em gravação com marcação temporal. Carregamento responsivo não conta; diagnóstico de ANR do sistema operacional exige log específico.
+
+Contar a sessão afetada uma vez por métrica aplicável, incluindo as encerradas por crash. A retomada inicia outra sessão identificada, sem apagar a falha ou ampliar automaticamente a amostra. Registrar duração efetiva e amostra válida por métrica.
+
+### 4.3. Interrupções de rede e localização — M4.1 e M4.2
+
+Planejam-se **20 ensaios de rede e 20 de localização**, separados das sessões de maturidade, com uma interrupção por ensaio. O recurso deve funcionar inicialmente e ser restabelecido antes do próximo caso.
+
+| Parâmetro | Valor definido | Justificativa operacional |
+| :--- | :--- | :--- |
+| Duração da indisponibilidade induzida | 30 s | Sustentar a falha por um intervalo observável, permitindo verificar a orientação e o uso das funções disponíveis |
+| Tempo máximo de aviso | 5 s | Dar retorno breve à tentativa de usar uma função dependente do recurso indisponível |
+| Tempo máximo de retomada | 30 s | Delimitar uma espera controlada pela recuperação após reativação, incluindo nova consulta |
+
+Os tempos não têm calibração empírica prévia. Medir o aviso da primeira solicitação dependente do recurso já desativado até a indicação inequívoca de indisponibilidade. Medir a retomada da confirmação da reativação no sistema até a conclusão de nova consulta dependente do recurso. Registrar os instantes na gravação e aplicar os prazos sem arredondamento.
+
+Na interrupção de rede, desativar todas as conexões capazes de manter o app online. Em ambos os recursos, exigir que o app permaneça aberto, informe a indisponibilidade, mantenha a interface responsiva e retome a consulta nos prazos da tabela. Na localização, exigir também consultas independentes da posição disponíveis e retomada da função de localização.
+
+Recurso indisponível antes do ensaio caracteriza impedimento de preparação. Os tempos refletem o conjunto app/ambiente; registrar limitações de infraestrutura sem presumir a causa interna das falhas.
+
+---
+
+## 5. Amostras e parâmetros de campo
+
+### 5.1. Previsão e chegada — M5.1
+
+Propõem-se **20 eventos de chegada**, em dois blocos de dez e pelo menos duas linhas. As paradas, os dias e as janelas de observação seguem pendentes. Na janela fixada, selecionar os primeiros eventos elegíveis das linhas registradas, sem seleção pelo erro observado.
+
+Usar a primeira previsão obtida ao iniciar a observação de cada evento, registrando a captura sem substituí-la por atualizações. Deve ser uma previsão de chegada à parada selecionada, não uma grade de partidas de terminal.
+
+Registrar a chegada quando a frente do veículo alcançar o ponto físico de referência da parada, identificado previamente. Parear linha, sentido, parada e veículo/viagem identificável. Usar relógios sincronizados, data completa, fuso `America/Sao_Paulo` e deslocamento UTC do dia. Converter tempo restante em previsão somando-o ao instante de captura, conforme a Fase 2.
+
+Separar previsões ausentes, identificação insuficiente e chegadas não observadas na janela; esses casos não recebem erro zero. Informar a antecedência das previsões, a dispersão dos erros e as quantidades previstas e válidas. Calcular a mediana somente com os pares válidos, sem reposição de eventos após verificar os resultados.
+
+### 5.2. Posições no mapa — M5.2
+
+Propõem-se **dez paradas distintas e 20 eventos de parada de veículos**, uma comparação por entidade/evento. Nas janelas e linhas registradas, observar os primeiros eventos elegíveis. Quadros sucessivos do mesmo veículo no mesmo evento não ampliam a amostra.
+
+| Parâmetro | Valor definido | Condição de uso |
+| :--- | :--- | :--- |
+| Tolerância espacial `ε` | 30 m, para paradas e veículos | Comparação com referência de campo, preservando a identificação da entidade |
+| Diferença temporal máxima `Δt_max` | 2 s, para veículos | Comparar o horário da posição no app com o horário da referência |
+| Precisão horizontal informada da referência | Até 10 m | Usar posição com precisão e horário disponíveis em ferramenta independente do DF no Ponto |
+
+A tolerância de 30 m é três vezes a precisão informada máxima aceita para a referência. A precisão é uma estimativa, não um limite absoluto do erro real ([documentação do Android](https://developer.android.com/reference/android/location/Location#getAccuracy())). O limite de dois segundos reduz a defasagem entre as posições comparadas.
+
+A referência é a posição do celular obtida pelo **GPSTest**, independente dos dados do DF no Ponto, com coordenadas WGS84, precisão e horário UTC ([documentação](https://github.com/barbeau/gpstest/blob/v3.10.6/LOGGING-v3.md)).
+
+Medir as paradas no ponto físico identificado. Para veículos, observar somente os parados junto à parada, registrando o ponto que representa o veículo e o deslocamento do observador. Isso reduz o efeito do movimento e limita as conclusões a essa condição.
+
+O roteiro de execução detalhará a obtenção e o registro dos dados. O horário da posição no app é distinto do horário da captura de tela. Posições copiadas de outro cliente do mesmo serviço não constituem referência independente; observações sem os dados necessários seguem as regras de dados não observáveis da Fase 2.
+
+Aplicar a distância e o critério `d ≤ ε` da Fase 2. Invalidar pares de veículos separados por mais de dois segundos. Apurar paradas e veículos separadamente; consolidar por soma de acertos e totais apenas sob os mesmos critérios espaciais. Informar exclusões e limitações da referência por grupo.
+
+---
+
+## 6. Amostra do catálogo oficial — M6.2
+
+Na [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/), preservar o resultado oficial com data/hora, ordenar por código, sentido e variante e selecionar os **primeiros 20 itens distintos de linha/itinerário**, antes da consulta no app.
+
+Outro integrante concluirá a seleção e registrará a lista como `L01` a `L20`, com código oficial, nome, sentido, variante quando houver e itinerário de referência. Sem a lista e seus identificadores, a seleção permanece pendente. A data de acesso não comprova a data de atualização do catálogo.
+
+Auditar todos os itens; consultas repetidas não ampliam a amostra. A ordenação facilita reproduzir a seleção, mas concentra os itens numa parte do catálogo. O resultado limita-se à amostra e à data de referência, sem estimar a cobertura de toda a malha do DF.
+
+---
+
+## 7. Quantidades, resolução e limitações
+
+Nas proporções com total válido `n`, uma unidade altera o resultado em `1/n`. A tabela relaciona a amostra planejada às faixas de nota da Fase 2, aplicadas sem arredondamento.
+
+| Métricas | Amostra planejada | Resolução | Totais favoráveis por nota, se toda a amostra for válida |
+| :--- | :--- | :--- | :--- |
+| M1.1 | 20 casos de tela × configuração | 5 pontos percentuais | 4: 20; 3: 18–19; 2: 15–17; 1: 0–14 |
+| M1.2 | Até seis versões distintas | 16,67 pontos percentuais, se `n = 6` | Para seis versões: 4: 6; 3: nenhum total possível; 2: 5; 1: 0–4 |
+| M2.1/M2.2 | 10 ciclos de instalação/remoção | 10 pontos percentuais | 4: 10; 3: nenhum total possível; 2: 9; 1: 0–8 |
+| M3.1/M3.2 | 20 sessões de cinco minutos | 5 pontos percentuais | 4: 20; 3: 19; 2: 18; 1: 0–17 |
+| M4.1/M4.2 | 20 interrupções de cada recurso | 5 pontos percentuais | 4: 20; 3: 17–19; 2: 14–16; 1: 0–13 |
+| M5.1 | 20 eventos de chegada previstos | Não se aplica a regra `1/n` | Mediana dos erros válidos, em minutos; notas conforme a Fase 2 |
+| M5.2 — paradas | Dez paradas distintas | 10 pontos percentuais | 4: 10; 3: 9; 2: 7–8; 1: 0–6 |
+| M5.2 — veículos | 20 eventos com veículo parado | 5 pontos percentuais | 4: 19–20; 3: 17–18; 2: 14–16; 1: 0–13 |
+| M6.1 | Oito tarefas essenciais | 12,5 pontos percentuais | 4: 8; 3: nenhum total possível; 2: 7; 1: 0–6 |
+| M6.2 | 20 itens oficiais | 5 pontos percentuais | 4: 20; 3: 19; 2: 16–18; 1: 0–15 |
+
+Vinte repetições distinguem as quatro faixas de várias métricas com esforço delimitado, mas não estimam taxas populacionais de falhas raras. Em M3.1/M3.2, 20 sessões sem falha recebem a nota da escala sem demonstrar estabilidade de 99% no uso geral; crashes podem reduzir os 100 minutos previstos.
+
+Em M5.1, os 20 eventos em dois blocos delimitam o esforço de campo e incluem pelo menos duas linhas. A mediana descreve essa amostra; a viabilidade das janelas será conferida ao escolher os locais e horários, conforme a pendência registrada na seção 1.1.
+
+Em M1.2 e M6.1, as unidades são versões do Android e tarefas essenciais; não criar unidades artificiais para alcançar a nota 3. Recalcular a resolução se o total válido mudar, preservando pendências e exclusões conforme as regras comuns da seção 1.1.
+
+---
+
+## 8. Gestão e convenção de evidências
 
 Todas as medições devem ser respaldadas por evidências digitais verificáveis (capturas de tela, gravações contínuas de tela, registros de log do sistema ou arquivos de dados brutos).
 
-### 3.1 Padrão de nomenclatura de arquivos
+### 8.1 Padrão de nomenclatura de arquivos
 
 Os artefatos de evidência coletados devem ser nomeados obrigatoriamente seguindo o padrão estruturado:
 
 $$\text{EVI\_[ID\_METRICA]\_[ID\_CASO]\_[DISPOSITIVO]\_[DATA\_HORA].[EXT]}$$
 
-* **ID_METRICA:** Código da métrica associada (ex.: `M1.1`, `M2.2`, `M5.1`).
-* **ID_CASO:** Identificador sequencial do caso de ensaio (ex.: `C01`, `C02`, `LINHA_0.108`).
-* **DISPOSITIVO:** Código do dispositivo físico ou emulador utilizado, conforme catalogado em [Recursos](3-recursos.md) (ex.: `DISP-01`, `EMU-01`).
-* **DATA_HORA:** Carimbo temporal no formato `YYYYMMDD_HHMMSS` (ex.: `20261116_143000`).
-* **EXT:** Extensão do arquivo conforme o tipo de artefato (`png`, `mp4`, `log`, `json`, `csv`).
+- **ID_METRICA:** Código da métrica associada (ex.: `M1.1`, `M2.2`, `M5.1`).
+- **ID_CASO:** Identificador sequencial do caso de ensaio (ex.: `C01`, `C02`, `LINHA_0.108`).
+- **DISPOSITIVO:** Código do dispositivo físico ou emulador utilizado, conforme catalogado em [Recursos](3-recursos.md) (ex.: `DISP-01`, `EMU-01`).
+- **DATA_HORA:** Carimbo temporal no formato `YYYYMMDD_HHMMSS` (ex.: `20261116_143000`).
+- **EXT:** Extensão do arquivo conforme o tipo de artefato (`png`, `mp4`, `log`, `json`, `csv`).
 
 *Exemplo de registro fotográfico/print:* `EVI_M1.1_C03_DISP-01_20261116_091522.png`  
 *Exemplo de gravação de vídeo de sessão:* `EVI_M3.1_C01_DISP-02_20261116_100015.mp4`
 
-### 3.2 Repositório e armazenamento
+### 8.2 Repositório e armazenamento
 
-* As evidências brutas de grande volume (vídeos e capturas completas) devem ser arquivadas em diretório compartilhado em nuvem de acesso restrito da equipe (`/evidencias_fase3/`), mantendo integridade com hash SHA-256 gerado no momento do arquivamento.
-* Amostras ilustrativas de conformidade e falhas serão incluídas nos relatórios finais e artefatos de publicação da Fase 4.
+- As evidências brutas de grande volume (vídeos e capturas completas) devem ser arquivadas em diretório compartilhado em nuvem de acesso restrito da equipe (`/evidencias_fase3/`), mantendo integridade com hash SHA-256 gerado no momento do arquivamento.
+- Amostras ilustrativas de conformidade e falhas serão incluídas nos relatórios finais e artefatos de publicação da Fase 4.
 
 ---
 
-## 4. Proteção de dados e privacidade (LGPD)
+## 9. Proteção de dados e privacidade (LGPD)
 
 Em estrita conformidade com a Lei Geral de Proteção de Dados Pessoais (**LGPD — Lei nº 13.709/2018**):[3]
 
@@ -57,11 +247,11 @@ Em estrita conformidade com a Lei Geral de Proteção de Dados Pessoais (**LGPD 
 
 ---
 
-## 5. Protocolo de coleta e formulário padronizado
+## 10. Protocolo de coleta e formulário padronizado
 
 Para garantir a homogeneidade dos registros efetuados pelos múltiplos avaliadores da equipe Carol Shaw, todas as execuções de ensaio devem ser documentadas em uma **Matriz de Coleta Padronizada**, elaborada em planilha eletrônica auditável e consolidada no repositório.
 
-### 5.1 Campos obrigatórios do formulário de coleta
+### 10.1 Campos obrigatórios do formulário de coleta
 
 | Campo | Tipo | Descrição e formato esperado |
 | :--- | :--- | :--- |
@@ -78,10 +268,10 @@ Para garantir a homogeneidade dos registros efetuados pelos múltiplos avaliador
 | **RESULTADO_OBSERVADO** | Texto | Descrição fática do comportamento da interface ou dado exibido. |
 | **VALOR_MEDIDO** | Numérico / Texto | Valor numérico medido (ex.: segundos, metros, booleano sim/não). |
 | **STATUS** | Categórico | Veredito do ensaio: `Conforme`, `Defeito`, `Não Observável` ou `Pendente`. |
-| **EVIDENCIA_REF** | Nome de arquivo | Nome do arquivo de evidência gerado conforme o padrão da Seção 3.1. |
+| **EVIDENCIA_REF** | Nome de arquivo | Nome do arquivo de evidência gerado conforme o padrão da Seção 8.1. |
 | **OBSERVACOES** | Texto livre | Notas contextuais, desvios operacionais ou comportamentos atípicos. |
 
-### 5.2 Modelo estrutural da planilha de coleta
+### 10.2 Modelo estrutural da planilha de coleta
 
 ```csv
 ID_EXEC;METRICA;CASO_ID;AVALIADOR;DATA_HORA;DISPOSITIVO;VERSAO_SO;VERSAO_APP;PARAMETROS_ENTRADA;RESULTADO_OBSERVADO;VALOR_MEDIDO;STATUS;EVIDENCIA_REF;OBSERVACOES
@@ -91,7 +281,7 @@ EXEC-002;M4.1;TC-M4.1-01;Avaliador 2;2026-11-16 10:30;DISP-01;Android 14;5.25.1(
 
 ---
 
-## 6. Tratamento de anomalias, estados de execução e política de reteste
+## 11. Tratamento de anomalias, estados de execução e política de reteste
 
 A contabilização correta dos dados nas fórmulas do GQM requer a classificação inequívoca de cada caso executado em um dos quatro estados formais:
 
@@ -110,14 +300,14 @@ flowchart TD
     I -- "Condição Inviável" --> C
 ```
 
-### 6.1 Definição dos estados de execução
+### 11.1 Definição dos estados de execução
 
-* **Conforme (Aprovado):** O aplicativo executou a funcionalidade satisfazendo todos os critérios de aprovação definidos no roteiro, sem falhas de renderização, travamentos ou violações de tolerância.
-* **Não Conforme / Defeito (Reprovado):** O aplicativo apresentou comportamento incorreto, erro de layout, travamento (*freeze*), encerramento forçado (*crash*) ou medição fora do limiar aceitável. **Permanece obrigatoriamente no denominador da amostra e pontua contra a métrica.**
-* **Não Observável:** O ensaio não pôde ser concluído por impedimento externo ou limitação intransponível do ambiente de teste alheia ao aplicativo (ex.: queda total da infraestrutura de telecomunicações do provedor de telefonia, ausência de sinal de satélite em túnel, inexistência de ônibus em circulação no período noturno). Casos não observáveis são documentados com justificativa explícita e **excluídos do denominador válido** da métrica correspondente, sem penalizar o aplicativo.
-* **Pendente:** Estado transitório aplicado quando há divergência de interpretação entre avaliadores ou instabilidade atípica do aparelho. Deve ser submetido à revisão cruzada antes da consolidação final da base da Fase 4.
+- **Conforme (Aprovado):** O aplicativo executou a funcionalidade satisfazendo todos os critérios de aprovação definidos no roteiro, sem falhas de renderização, travamentos ou violações de tolerância.
+- **Não Conforme / Defeito (Reprovado):** O aplicativo apresentou comportamento incorreto, erro de layout, travamento (*freeze*), encerramento forçado (*crash*) ou medição fora do limiar aceitável. **Permanece obrigatoriamente no denominador da amostra e pontua contra a métrica.**
+- **Não Observável:** O ensaio não pôde ser concluído por impedimento externo ou limitação intransponível do ambiente de teste alheia ao aplicativo (ex.: queda total da infraestrutura de telecomunicações do provedor de telefonia, ausência de sinal de satélite em túnel, inexistência de ônibus em circulação no período noturno). Casos não observáveis são documentados com justificativa explícita e **excluídos do denominador válido** da métrica correspondente, sem penalizar o aplicativo.
+- **Pendente:** Estado transitório aplicado quando há divergência de interpretação entre avaliadores ou instabilidade atípica do aparelho. Deve ser submetido à revisão cruzada antes da consolidação final da base da Fase 4.
 
-### 6.2 Política de registro de anomalias e reteste
+### 11.2 Política de registro de anomalias e reteste
 
 Para evitar o enviesamento de resultados ("garimpar" execuções bem-sucedidas):
 
@@ -127,7 +317,7 @@ Para evitar o enviesamento de resultados ("garimpar" execuções bem-sucedidas):
 
 ---
 
-## 7. Protocolo de validação cruzada entre pares
+## 12. Protocolo de validação cruzada entre pares
 
 Para mitigar a variabilidade interobservador e garantir a clareza e precisão dos roteiros de ensaio:
 
@@ -137,23 +327,23 @@ Para mitigar a variabilidade interobservador e garantir a clareza e precisão do
 
 ---
 
-## 8. Roteiros detalhados de execução — Portabilidade (G1 e G2)
+## 13. Roteiros detalhados de execução — Portabilidade (G1 e G2)
 
 Esta seção define os procedimentos operacionais para as métricas da característica **Portabilidade** (subcaracterísticas *Adaptabilidade* e *Capacidade de Instalação*), respondendo à **Decisão D1** (viabilidade de homologação e implantação no ecossistema Android).
 
 ---
 
-### 8.1 Roteiro M1.1 — Adaptabilidade de hardware (telas)
+### 13.1 Roteiro M1.1 — Adaptabilidade de hardware (telas)
 
-* **Objetivo e métrica:** $M_{1.1} = \frac{T_s}{T_t}$ (Proporção de combinações de tela × configuração aprovadas sem defeitos visuais impeditivos).
-* **Escopo do ensaio:** Laboratório (dispositivos físicos e emuladores do inventário de [Recursos](3-recursos.md)).
-* **Catálogo de telas avaliadas:**
+- **Objetivo e métrica:** $M_{1.1} = \frac{T_s}{T_t}$ (Proporção de combinações de tela × configuração aprovadas sem defeitos visuais impeditivos).
+- **Escopo do ensaio:** Laboratório (dispositivos físicos e emuladores do inventário de [Recursos](3-recursos.md)).
+- **Catálogo de telas avaliadas:**
   1. `TELA-01`: Tela Principal / Mapa de Navegação;
   2. `TELA-02`: Pesquisa de Linhas e Itinerários;
   3. `TELA-03`: Detalhamento da Linha (trajeto e lista de paradas);
   4. `TELA-04`: Detalhes do Ponto de Parada e Previsões;
   5. `TELA-05`: Tela de Configurações / Informações do App.
-* **Fatores de variação de tela:**
+- **Fatores de variação de tela:**
   - Orientação: Retrato (*portrait*).
   - Escala de fonte: Padrão (100%) e Aumentada / Acessibilidade (130%).
   - Densidades de tela: Pequena/Média (~320-360dp de largura) e Grande (~400-480dp de largura).
@@ -174,11 +364,11 @@ Esta seção define os procedimentos operacionais para as métricas da caracter�
 
 ---
 
-### 8.2 Roteiro M1.2 — Adaptabilidade de SO (versões de Android)
+### 13.2 Roteiro M1.2 — Adaptabilidade de SO (versões de Android)
 
-* **Objetivo e métrica:** $M_{1.2} = \frac{O_s}{O_t}$ (Proporção de versões de sistema operacional aprovadas na execução dos fluxos críticos).
-* **Escopo do ensaio:** Laboratório em dispositivos físicos e emuladores cobrindo versões suportadas do Android (Android 9/10, Android 11/12, Android 13/14).
-* **Catálogo de fluxos críticos de verificação:**
+- **Objetivo e métrica:** $M_{1.2} = \frac{O_s}{O_t}$ (Proporção de versões de sistema operacional aprovadas na execução dos fluxos críticos).
+- **Escopo do ensaio:** Laboratório em dispositivos físicos e emuladores cobrindo versões suportadas do Android (Android 9/10, Android 11/12, Android 13/14).
+- **Catálogo de fluxos críticos de verificação:**
   - `FC-01`: Inicialização do app, solicitação e concessão de permissão de localização.
   - `FC-02`: Pesquisa de linha pelo código numérico e renderização do itinerário no mapa.
   - `FC-03`: Seleção de parada próxima e visualização das previsões de chegada.
@@ -197,10 +387,10 @@ Esta seção define os procedimentos operacionais para as métricas da caracter�
 
 ---
 
-### 8.3 Roteiro M2.1 — Sucesso de instalação
+### 13.3 Roteiro M2.1 — Sucesso de instalação
 
-* **Objetivo e métrica:** $M_{2.1} = \frac{I_s}{I_t}$ (Taxa de sucesso na instalação a partir do canal oficial na primeira tentativa).
-* **Escopo do ensaio:** Laboratório / Dispositivos físicos representativos com conexão Wi-Fi e dados móveis estáveis.
+- **Objetivo e métrica:** $M_{2.1} = \frac{I_s}{I_t}$ (Taxa de sucesso na instalação a partir do canal oficial na primeira tentativa).
+- **Escopo do ensaio:** Laboratório / Dispositivos físicos representativos com conexão Wi-Fi e dados móveis estáveis.
 
 #### Procedimento de ensaio passo a passo
 
@@ -216,10 +406,10 @@ Esta seção define os procedimentos operacionais para as métricas da caracter�
 
 ---
 
-### 8.4 Roteiro M2.2 — Resíduo pós-desinstalação
+### 13.4 Roteiro M2.2 — Resíduo pós-desinstalação
 
-* **Objetivo e métrica:** $M_{2.2} = 1 - \frac{D_r}{D_t}$ (Proporção de desinstalações limpas, sem arquivos órfãos remanescentes no armazenamento do usuário).
-* **Escopo do ensaio:** Laboratório em aparelhos físicos ou emuladores com ferramenta de inspeção de arquivos (gerenciador de arquivos ou comando via `adb shell`).
+- **Objetivo e métrica:** $M_{2.2} = 1 - \frac{D_r}{D_t}$ (Proporção de desinstalações limpas, sem arquivos órfãos remanescentes no armazenamento do usuário).
+- **Escopo do ensaio:** Laboratório em aparelhos físicos ou emuladores com ferramenta de inspeção de arquivos (gerenciador de arquivos ou comando via `adb shell`).
 
 #### Procedimento de ensaio passo a passo
 
@@ -245,17 +435,17 @@ Esta seção define os procedimentos operacionais para as métricas da caracter�
 
 ---
 
-## 9. Roteiros detalhados de execução — Confiabilidade (G3 e G4)
+## 14. Roteiros detalhados de execução — Confiabilidade (G3 e G4)
 
 Esta seção estabelece os procedimentos operacionais para as métricas da característica **Confiabilidade** (subcaracterísticas *Maturidade* e *Tolerância a Falhas*), respondendo à **Decisão D2** (estabilidade operacional e resiliência em condições adversas de uso real).
 
 ---
 
-### 9.1 Roteiro M3.1 — Sessões sem *crashes*
+### 14.1 Roteiro M3.1 — Sessões sem *crashes*
 
-* **Objetivo e métrica:** $M_{3.1} = 1 - \frac{S_c}{S_t}$ (Proporção de sessões concluídas sem encerramento inesperado ou interrupção anômala).
-* **Definição de sessão padronizada:** Uma sessão de uso ativo contínuo com duração planejada de **15 minutos**, executando um ciclo repetitivo de ações típicas do usuário: busca de linhas, consulta de horários, zoom e movimentação no mapa, alternância entre abas e retorno da aplicação após segundo plano.
-* **Escopo:** Laboratório e campo, monitorando aparelhos físicos com gravação contínua ou registro em logcat:
+- **Objetivo e métrica:** $M_{3.1} = 1 - \frac{S_c}{S_t}$ (Proporção de sessões concluídas sem encerramento inesperado ou interrupção anômala).
+- **Definição de sessão padronizada:** Uma sessão de uso ativo contínuo com duração planejada de **15 minutos**, executando um ciclo repetitivo de ações típicas do usuário: busca de linhas, consulta de horários, zoom e movimentação no mapa, alternância entre abas e retorno da aplicação após segundo plano.
+- **Escopo:** Laboratório e campo, monitorando aparelhos físicos com gravação contínua ou registro em logcat:
   ```bash
   adb logcat -v time | grep -E "FATAL EXCEPTION|AndroidRuntime|SIGSEGV"
   ```
@@ -280,11 +470,11 @@ Esta seção estabelece os procedimentos operacionais para as métricas da carac
 
 ---
 
-### 9.2 Roteiro M3.2 — Sessões sem congelamentos
+### 14.2 Roteiro M3.2 — Sessões sem congelamentos
 
-* **Objetivo e métrica:** $M_{3.2} = 1 - \frac{S_a}{S_t}$ (Proporção de sessões padronizadas livres de travamento de interface superior a 5 segundos).
-* **Definição de congelamento (*freeze*):** Inoperância total ou ausência de resposta da interface gráfica a toques, rolagens ou comandos por tempo **$\Delta t > 5{,}0\text{ segundos}$**.
-* **Distinção metodológica fundamental:** Requisições de rede lentas onde o aplicativo exibe um indicador visual ativo de progresso (*spinner*, barra de carregamento ou esqueleto de tela) mantendo o botão de voltar funcional **não são classificadas como congelamento**. O congelamento é caracterizado pela paralisação do thread de renderização (UI Thread travada ou diálogo ANR — *Application Not Responding*).
+- **Objetivo e métrica:** $M_{3.2} = 1 - \frac{S_a}{S_t}$ (Proporção de sessões padronizadas livres de travamento de interface superior a 5 segundos).
+- **Definição de congelamento (*freeze*):** Inoperância total ou ausência de resposta da interface gráfica a toques, rolagens ou comandos por tempo **$\Delta t > 5{,}0\text{ segundos}$**.
+- **Distinção metodológica fundamental:** Requisições de rede lentas onde o aplicativo exibe um indicador visual ativo de progresso (*spinner*, barra de carregamento ou esqueleto de tela) mantendo o botão de voltar funcional **não são classificadas como congelamento**. O congelamento é caracterizado pela paralisação do thread de renderização (UI Thread travada ou diálogo ANR — *Application Not Responding*).
 
 #### Procedimento de ensaio passo a passo
 
@@ -301,10 +491,10 @@ Esta seção estabelece os procedimentos operacionais para as métricas da carac
 
 ---
 
-### 9.3 Roteiro M4.1 — Evitação de quebra por conexão
+### 14.3 Roteiro M4.1 — Evitação de quebra por conexão
 
-* **Objetivo e métrica:** $M_{4.1} = \frac{R_s}{R_t}$ (Proporção de interrupções de rede induzidas com tratamento aprovado e recuperação adequada).
-* **Escopo do ensaio:** Laboratório, simulando a instabilidade crônica de cobertura celular na malha rodoviária do Distrito Federal.
+- **Objetivo e métrica:** $M_{4.1} = \frac{R_s}{R_t}$ (Proporção de interrupções de rede induzidas com tratamento aprovado e recuperação adequada).
+- **Escopo do ensaio:** Laboratório, simulando a instabilidade crônica de cobertura celular na malha rodoviária do Distrito Federal.
 
 #### Procedimento de ensaio passo a passo
 
@@ -324,10 +514,10 @@ Esta seção estabelece os procedimentos operacionais para as métricas da carac
 
 ---
 
-### 9.4 Roteiro M4.2 — Tratamento de perda de GPS
+### 14.4 Roteiro M4.2 — Tratamento de perda de GPS
 
-* **Objetivo e métrica:** $M_{4.2} = \frac{G_s}{G_t}$ (Proporção de eventos de perda de sinal de geolocalização tratados com aviso adequado e continuidade de uso).
-* **Escopo do ensaio:** Laboratório ou campo em aparelhos com sensor GNSS nativo.
+- **Objetivo e métrica:** $M_{4.2} = \frac{G_s}{G_t}$ (Proporção de eventos de perda de sinal de geolocalização tratados com aviso adequado e continuidade de uso).
+- **Escopo do ensaio:** Laboratório ou campo em aparelhos com sensor GNSS nativo.
 
 #### Procedimento de ensaio passo a passo
 
@@ -346,17 +536,17 @@ Esta seção estabelece os procedimentos operacionais para as métricas da carac
 
 ---
 
-## 10. Roteiros detalhados de execução — Adequação Funcional (G5 e G6)
+## 15. Roteiros detalhados de execução — Adequação Funcional (G5 e G6)
 
 Esta seção estabelece os procedimentos para as métricas da característica **Adequação Funcional** (subcaracterísticas *Exatidão Funcional* e *Completude Funcional*), correspondendo à **Decisão D3** (viabilidade do aplicativo como fonte de informação fidedigna para a mobilidade urbana da população).
 
 ---
 
-### 10.1 Roteiro M5.1 — Precisão de tempo de chegada
+### 15.1 Roteiro M5.1 — Precisão de tempo de chegada
 
-* **Objetivo e métrica:** $e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}$ e $M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_n)$ (Erro absoluto mediano entre a chegada prevista no app e o instante real de chegada do ônibus, em minutos).
-* **Escopo do ensaio:** Medição direta em campo realizada em pontos de parada reais do Distrito Federal (ex.: Rodoviária do Plano Piloto, paradas de integração de Taguatinga e EPTG).
-* **Instrumentos necessários:**
+- **Objetivo e métrica:** $e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}$ e $M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_n)$ (Erro absoluto mediano entre a chegada prevista no app e o instante real de chegada do ônibus, em minutos).
+- **Escopo do ensaio:** Medição direta em campo realizada em pontos de parada reais do Distrito Federal (ex.: Rodoviária do Plano Piloto, paradas de integração de Taguatinga e EPTG).
+- **Instrumentos necessários:**
   - Dispositivo com o DF no Ponto conectado à internet;
   - Relógio de referência com sincronização automática de horário via rede/NTP (Hora Oficial de Brasília / `time.google.com`);
   - Prancheta ou formulário de campo para anotação imediata.
@@ -381,13 +571,13 @@ Esta seção estabelece os procedimentos para as métricas da característica **
 
 ---
 
-### 10.2 Roteiro M5.2 — Correção de dados do mapa (tolerância espacial)
+### 15.2 Roteiro M5.2 — Correção de dados do mapa (tolerância espacial)
 
-* **Objetivo e métrica:** $M_{5.2} = \frac{P_s}{P_t}$ (Proporção de pontos de parada e posições de veículos dentro da tolerância espacial previamente fixada $\varepsilon = 100\text{ metros}$).
-* **Fundamento matemático:** Distância geodésica $d_i$ calculada pela fórmula de Haversine entre a coordenada exibida no app $(\phi_1, \lambda_1)$ e a coordenada real de referência $(\phi_2, \lambda_2)$:
+- **Objetivo e métrica:** $M_{5.2} = \frac{P_s}{P_t}$ (Proporção de pontos de parada e posições de veículos dentro da tolerância espacial previamente fixada $\varepsilon = 100\text{ metros}$).
+- **Fundamento matemático:** Distância geodésica $d_i$ calculada pela fórmula de Haversine entre a coordenada exibida no app $(\phi_1, \lambda_1)$ e a coordenada real de referência $(\phi_2, \lambda_2)$:
   $$d_i = 2 R \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos(\phi_1)\cos(\phi_2)\sin^2\left(\frac{\Delta\lambda}{2}\right)}\right)$$
   onde $R \approx 6.371.000\text{ m}$ (raio médio da Terra).
-* **Escopo do ensaio:** Campo e laboratório contra a base georreferenciada oficial de paradas da Semob-DF.
+- **Escopo do ensaio:** Campo e laboratório contra a base georreferenciada oficial de paradas da Semob-DF.
 
 #### Procedimento de ensaio passo a passo
 
@@ -403,10 +593,10 @@ Esta seção estabelece os procedimentos para as métricas da característica **
 
 ---
 
-### 10.3 Roteiro M6.1 — Cobertura de tarefas essenciais
+### 15.3 Roteiro M6.1 — Cobertura de tarefas essenciais
 
-* **Objetivo e métrica:** $M_{6.1} = 1 - \frac{F_f}{F_t}$ (Proporção de tarefas essenciais do catálogo padrão concluídas com êxito de ponta a ponta).
-* **Catálogo de tarefas essenciais do usuário ($F_t = 6$ tarefas nucleares):**
+- **Objetivo e métrica:** $M_{6.1} = 1 - \frac{F_f}{F_t}$ (Proporção de tarefas essenciais do catálogo padrão concluídas com êxito de ponta a ponta).
+- **Catálogo de tarefas essenciais do usuário ($F_t = 6$ tarefas nucleares):**
   - `T-01`: Pesquisar linha por número de código (ex.: "0.108") e acessar seus detalhes.
   - `T-02`: Visualizar o traçado geográfico do itinerário completo no mapa (Ida e Volta).
   - `T-03`: Localizar uma parada próxima através do mapa interativo.
@@ -428,10 +618,10 @@ Esta seção estabelece os procedimentos para as métricas da característica **
 
 ---
 
-### 10.4 Roteiro M6.2 — Completude do banco de dados
+### 15.4 Roteiro M6.2 — Completude do banco de dados
 
-* **Objetivo e métrica:** $M_{6.2} = \frac{L_c}{L_t}$ (Proporção de linhas e itinerários da amostra oficial da Semob-DF encontrados no aplicativo com correspondência cadastral correta).
-* **Amostragem oficial de referência ($L_t$):** Conjunto amostral balanceado de **50 linhas representativas** do Distrito Federal, extraídas da tabela oficial aberta de linhas da Semob-DF, contemplando diferentes bacias operacionais (Bacia 1 a Bacia 5), linhas circulares, troncais e alimentadoras.
+- **Objetivo e métrica:** $M_{6.2} = \frac{L_c}{L_t}$ (Proporção de linhas e itinerários da amostra oficial da Semob-DF encontrados no aplicativo com correspondência cadastral correta).
+- **Amostragem oficial de referência ($L_t$):** Conjunto amostral balanceado de **50 linhas representativas** do Distrito Federal, extraídas da tabela oficial aberta de linhas da Semob-DF, contemplando diferentes bacias operacionais (Bacia 1 a Bacia 5), linhas circulares, troncais e alimentadoras.
 
 #### Procedimento de ensaio passo a passo
 
@@ -448,7 +638,7 @@ Esta seção estabelece os procedimentos para as métricas da característica **
 
 ---
 
-## 11. Quadro síntese operacional de ensaios e parâmetros
+## 16. Quadro síntese operacional de ensaios e parâmetros
 
 A tabela a seguir sintetiza as diretrizes operacionais de cada métrica para consulta rápida dos avaliadores durante a fase de coleta:
 
@@ -469,13 +659,13 @@ A tabela a seguir sintetiza as diretrizes operacionais de cada métrica para con
 
 ---
 
-## 12. Rastreabilidade com as demais fases da avaliação
+## 17. Rastreabilidade com as demais fases da avaliação
 
 Estes procedimentos operacionais conectam as especificações teóricas da Fase 2 à infraestrutura e aos resultados da avaliação:
 
-* **Entrada Teórica (Fase 2):** As fórmulas, limiares de julgamento (Graus 1 a 4) e decisões apoiadas D1, D2 e D3 originam-se em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md) e [Rastreabilidade GQM](../fase2/rastreabilidade-diagrama%20GQM.md).
-* **Fundamentação Metodológica (Fase 3):** O delineamento global da estratégia de caixa-preta está em [Método de Avaliação](1-metodo.md), com inventário de equipamentos em [Recursos](3-recursos.md) e planejamento temporal em [Cronograma](4-cronograma.md).
-* **Alimentação da Coleta (Fase 4):** Os dados brutos gerados pela aplicação estrita destes procedimentos alimentam diretamente a [Coleta de Dados](../fase4/1-coleta.md), a [Análise de Dados](../fase4/2-analise.md) e a emissão do parecer final em [Resultados e Conclusões](../fase4/3-resultados.md).
+- **Entrada Teórica (Fase 2):** As fórmulas, limiares de julgamento (Graus 1 a 4) e decisões apoiadas D1, D2 e D3 originam-se em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md) e [Rastreabilidade GQM](../fase2/rastreabilidade-diagrama%20GQM.md).
+- **Fundamentação Metodológica (Fase 3):** O delineamento global da estratégia de caixa-preta está em [Método de Avaliação](1-metodo.md), com inventário de equipamentos em [Recursos](3-recursos.md) e planejamento temporal em [Cronograma](4-cronograma.md).
+- **Alimentação da Coleta (Fase 4):** Os dados brutos gerados pela aplicação estrita destes procedimentos alimentam diretamente a [Coleta de Dados](../fase4/1-coleta.md), a [Análise de Dados](../fase4/2-analise.md) e a emissão do parecer final em [Resultados e Conclusões](../fase4/3-resultados.md).
 
 ---
 
@@ -493,10 +683,22 @@ Estes procedimentos operacionais conectam as especificações teóricas da Fase 
 
 [6] Equipe Carol Shaw. [Métricas e Critérios de Julgamento — Fase 2](../fase2/metricas-julgamento.md).
 
+[7] Equipe Carol Shaw. [Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md).
+
+[8] Android Developers. [Armazenamento de dados e arquivos](https://developer.android.com/training/data-storage).
+
+[9] Android Developers. [Location: precisão horizontal estimada](https://developer.android.com/reference/android/location/Location#getAccuracy()).
+
+[10] GPSTest. [Registros de localização — documentação da versão 3.10.6](https://github.com/barbeau/gpstest/blob/v3.10.6/LOGGING-v3.md).
+
+[11] Semob-DF. [Pesquisa por Linhas — DF no Ponto](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/).
+
 ---
 
 ## Histórico de Versões
 
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 01 | Criação dos procedimentos detalhados de execução, roteiros das 12 métricas, convenção de evidências, regras de anomalias e formulários de coleta (#46) | [João Pedro Capozzi](https://github.com/jonas3688) | 16/11/2026 | — | — |
+| 01 | Definição dos catálogos, parâmetros de laboratório, proposta de amostragem de campo e auditoria oficial | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | — | — |
+| 02 | Redução dos ciclos de instalação e remoção para dez e ajuste da resolução da amostra | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 16/11/2026 | — | — |
+| 03 | Criação dos procedimentos detalhados de execução, roteiros das 12 métricas, convenção de evidências, regras de anomalias e formulários de coleta (#46); integração com os catálogos e parâmetros das versões anteriores | [João Pedro Capozzi](https://github.com/jonas3688) | 16/11/2026 | — | — |

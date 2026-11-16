@@ -108,7 +108,27 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Cor
 - **Custo Financeiro Equivalente Acumulado:** R$ Et * 50,00
 
 
-### 7.3. Avaliação dos Critérios de Decisão
+## 8. Correção da Entrega 1
+
+Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Correção utiliza os dados extraídos diretamente das *Issues* e do quadro no GitHub Projects.
+
+### 8.1. Apuração de Esforço por Issue
+
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-11" width="1000" height="630" frameborder="0"></iframe>
+
+### 8.2. Consolidação dos Dados da Milestone
+
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
+
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
+
+- **Esforço Estimado do Escopo Concluído :** {Soma dos He das issues concluídas}h
+- **Esforço Realizado Acumulado :** {Soma dos Hr das issues concluídas}h
+- **Variação Global do Esforço :** {Resultado da fórmula}%
+- **Custo Financeiro Equivalente Acumulado:** R$ Et * 50,00
+
+
+### 9. Avaliação dos Critérios de Decisão
 
 Com base na variação apurada de **{Resultado do Ve}%**:
 
@@ -123,3 +143,4 @@ Com base na variação apurada de **{Resultado do Ve}%**:
 | [Cristiano Morais](https://github.com/CristianoMoraiss) | Adição da página de recursos e custos | 10/11/2026 | [fb837e6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/fb837e6) |
 | [Vitor Bessa](https://github.com/bessazs) | Adição dos graficos de horas por mebros, horas de milestone e tabela de esforço por issue | 11/11/2026|[6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
+| [Vitor Bessa](https://github.com/bessazs) | Adição do conteudo da entrega 2 | 15/11/2026|[0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600)|

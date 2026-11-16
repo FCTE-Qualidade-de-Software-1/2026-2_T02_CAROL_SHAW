@@ -136,3 +136,111 @@ Para mitigar a variabilidade interobservador e garantir a clareza e precisão do
 3. **Auditoria de amostra:** No encerramento da coleta, 10% dos registros de cada métrica serão auditados por um segundo membro da equipe, conferindo se a evidência arquivada comprova categoricamente o veredito assinalado na planilha.
 
 ---
+
+## 8. Roteiros detalhados de execução — Portabilidade (G1 e G2)
+
+Esta seção define os procedimentos operacionais para as métricas da característica **Portabilidade** (subcaracterísticas *Adaptabilidade* e *Capacidade de Instalação*), respondendo à **Decisão D1** (viabilidade de homologação e implantação no ecossistema Android).
+
+---
+
+### 8.1 Roteiro M1.1 — Adaptabilidade de hardware (telas)
+
+* **Objetivo e métrica:** $M_{1.1} = \frac{T_s}{T_t}$ (Proporção de combinações de tela × configuração aprovadas sem defeitos visuais impeditivos).
+* **Escopo do ensaio:** Laboratório (dispositivos físicos e emuladores do inventário de [Recursos](3-recursos.md)).
+* **Catálogo de telas avaliadas:**
+  1. `TELA-01`: Tela Principal / Mapa de Navegação;
+  2. `TELA-02`: Pesquisa de Linhas e Itinerários;
+  3. `TELA-03`: Detalhamento da Linha (trajeto e lista de paradas);
+  4. `TELA-04`: Detalhes do Ponto de Parada e Previsões;
+  5. `TELA-05`: Tela de Configurações / Informações do App.
+* **Fatores de variação de tela:**
+  - Orientação: Retrato (*portrait*).
+  - Escala de fonte: Padrão (100%) e Aumentada / Acessibilidade (130%).
+  - Densidades de tela: Pequena/Média (~320-360dp de largura) e Grande (~400-480dp de largura).
+
+#### Procedimento de ensaio passo a passo
+
+1. **Configuração inicial:** No dispositivo de teste, ajustar o tamanho da fonte do sistema para o valor do ensaio (100% ou 130%) nas configurações de acessibilidade do Android.
+2. **Inicialização:** Abrir o aplicativo DF no Ponto com dados limpos de sessão anterior.
+3. **Navegação sistemática:** Acessar sucessivamente as telas `TELA-01` a `TELA-05`. Em cada uma, realizar interações básicas de rolagem e toque nos botões principais.
+4. **Inspeção de conformidade:** Verificar se há:
+   - Texto truncado ou elipsado que oculte informação crítica (código de linha, horário, nome de parada);
+   - Sobreposição de elementos visuais (botão cobrindo campo de busca ou texto);
+   - Elemento interativo empurrado para fora da área visível e inacessível por rolagem.
+5. **Registro de evidência:** Capturar screenshot de cada tela testada (`EVI_M1.1_TELAxx_...png`).
+6. **Contabilização:**
+   - **Aprovado ($T_s$):** A interface renderiza com layout íntegro, todas as informações essenciais estão legíveis e todos os botões e campos estão operacionais.
+   - **Reprovado:** Há corte, distorção, sobreposição ou inacessibilidade de elemento que impeça ou dificulte gravemente a tarefa.
+
+---
+
+### 8.2 Roteiro M1.2 — Adaptabilidade de SO (versões de Android)
+
+* **Objetivo e métrica:** $M_{1.2} = \frac{O_s}{O_t}$ (Proporção de versões de sistema operacional aprovadas na execução dos fluxos críticos).
+* **Escopo do ensaio:** Laboratório em dispositivos físicos e emuladores cobrindo versões suportadas do Android (Android 9/10, Android 11/12, Android 13/14).
+* **Catálogo de fluxos críticos de verificação:**
+  - `FC-01`: Inicialização do app, solicitação e concessão de permissão de localização.
+  - `FC-02`: Pesquisa de linha pelo código numérico e renderização do itinerário no mapa.
+  - `FC-03`: Seleção de parada próxima e visualização das previsões de chegada.
+  - `FC-04`: Retorno da aplicação após segundo plano (*background resume*).
+
+#### Procedimento de ensaio passo a passo
+
+1. **Preparação:** Selecionar o dispositivo configurado com a versão específica do Android a ser auditada.
+2. **Conexão e permissões:** Assegurar conexão com a internet ativa e GPS ativado em modo alta precisão.
+3. **Execução de fluxos:** Executar sequencialmente os fluxos críticos `FC-01`, `FC-02`, `FC-03` e `FC-04`.
+4. **Verificação de anomalias:** Observar se ocorrem exceções não tratadas, diálogos de incompatibilidade do SO, congelamentos de renderização ou falhas nas APIs nativas do Android.
+5. **Registro de evidência:** Gravação de tela contínua da execução dos quatro fluxos (`EVI_M1.2_ANDROIDxx_...mp4`).
+6. **Contabilização:**
+   - **Aprovado ($O_s$):** A versão de SO é aprovada se e somente se **todos os 4 fluxos críticos** forem concluídos com pleno êxito, sem erro de compatibilidade.
+   - **Reprovado:** Falha impeditiva ou encerramento inesperado em qualquer um dos fluxos críticos na respectiva versão do SO.
+
+---
+
+### 8.3 Roteiro M2.1 — Sucesso de instalação
+
+* **Objetivo e métrica:** $M_{2.1} = \frac{I_s}{I_t}$ (Taxa de sucesso na instalação a partir do canal oficial na primeira tentativa).
+* **Escopo do ensaio:** Laboratório / Dispositivos físicos representativos com conexão Wi-Fi e dados móveis estáveis.
+
+#### Procedimento de ensaio passo a passo
+
+1. **Pré-condição obrigatória:** Certificar-se de que o aplicativo DF no Ponto **não está instalado** no dispositivo (desinstalar previamente se presente e reiniciar o aparelho).
+2. **Acesso ao repositório oficial:** Abrir o aplicativo da Google Play Store e pesquisar por "DF no Ponto" (distribuição oficial da Semob-DF).
+3. **Disparo do ciclo:** Tocar no botão "Instalar". Iniciar a cronometragem e observação no instante do toque.
+4. **Monitoramento:** Acompanhar as fases de download, verificação de segurança da loja e instalação propriamente dita pelo instalador de pacotes do Android.
+5. **Primeira abertura:** Concluída a instalação pela loja, tocar em "Abrir" e aguardar a renderização da tela inicial.
+6. **Registro de evidência:** Captura de tela da página da loja indicando "Instalado" e da tela inicial do aplicativo aberto com sucesso (`EVI_M2.1_CICLOxx_...png`).
+7. **Contabilização:**
+   - **Aprovado ($I_s$):** Instalação e primeira inicialização concluídas na primeira tentativa sem códigos de erro (`Error -505`, falha de assinatura, loop de download ou congelamento).
+   - **Reprovado:** Qualquer erro ou interrupção durante o download/instalação que exija intervenção do usuário para reiniciar o processo. Tentativas subsequentes não alteram uma reprovação inicial.
+
+---
+
+### 8.4 Roteiro M2.2 — Resíduo pós-desinstalação
+
+* **Objetivo e métrica:** $M_{2.2} = 1 - \frac{D_r}{D_t}$ (Proporção de desinstalações limpas, sem arquivos órfãos remanescentes no armazenamento do usuário).
+* **Escopo do ensaio:** Laboratório em aparelhos físicos ou emuladores com ferramenta de inspeção de arquivos (gerenciador de arquivos ou comando via `adb shell`).
+
+#### Procedimento de ensaio passo a passo
+
+1. **Pré-condição:** Aplicativo devidamente instalado e utilizado durante uma sessão de testes prévia (navegando por linhas e mapas) para garantir que arquivos de cache, preferências e bancos locais tenham sido criados.
+2. **Mapeamento pré-remoção:** Conectar o dispositivo ao computador via USB com depuração ativada e inspecionar os diretórios públicos e acessíveis do armazenamento:
+   ```bash
+   adb shell ls -la /sdcard/Android/data/ | grep -i dfno
+   adb shell ls -la /sdcard/Android/media/ | grep -i dfno
+   adb shell ls -la /sdcard/Download/ | grep -i dfno
+   ```
+3. **Execução da desinstalação:** Desinstalar o aplicativo DF no Ponto pelo método padrão do sistema operacional (Arrastar para "Desinstalar" ou via Configurações -> Apps -> DF no Ponto -> Desinstalar).
+4. **Mapeamento pós-remoção:** Imediatamente após a confirmação da desinstalação pelo SO, reexecutar a varredura nos mesmos caminhos de armazenamento:
+   ```bash
+   adb shell ls -la /sdcard/Android/data/ | grep -i dfno
+   adb shell ls -la /sdcard/ | grep -i ponto
+   ```
+5. **Inspeção de resíduos:** Verificar se restaram pastas órfãs, arquivos de log, bancos SQLite residuais ou imagens temporárias gravadas fora do escopo do sandbox privado do app.
+6. **Registro de evidência:** Registro em arquivo de log contendo a saída completa dos comandos `adb` antes e depois da desinstalação (`EVI_M2.2_CICLOxx_...log`).
+7. **Contabilização:**
+   - **Aprovado:** Nenhuma pasta ou arquivo atribuível ao DF no Ponto localizado no armazenamento inspecionado.
+   - **Reprovado ($D_r$):** Pelo menos um diretório ou arquivo residual do aplicativo permaneceu no armazenamento do dispositivo após a remoção.
+   - **Não Observável:** Caso restrições de permissão do Android (ex.: scoped storage estrito sem acesso de inspeção) impeçam categoricamente a verificação dos diretórios, registrar a impossibilidade técnica motivada.
+
+---

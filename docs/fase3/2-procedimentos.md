@@ -447,3 +447,49 @@ Esta seção estabelece os procedimentos para as métricas da característica **
 4. **Registro de evidência:** Captura de tela do resultado de busca e detalhe do itinerário para cada linha auditada da amostra (`EVI_M6.2_LINHAxxx_...png`).
 
 ---
+
+## 11. Quadro síntese operacional de ensaios e parâmetros
+
+A tabela a seguir sintetiza as diretrizes operacionais de cada métrica para consulta rápida dos avaliadores durante a fase de coleta:
+
+| Métrica | Característica / GQM | Ambiente | Unidade de Medida | Parâmetros Pré-fixados | Evidência Primária |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **M1.1** | Portabilidade (G1) | Laboratório | Proporção $[0,1]$ | 5 telas do catálogo; fontes 100% e 130%; retrato | Captura de tela (`.png`) |
+| **M1.2** | Portabilidade (G1) | Laboratório | Proporção $[0,1]$ | 4 fluxos críticos; faixas Android 9 a 14 | Gravação contínua (`.mp4`) |
+| **M2.1** | Portabilidade (G2) | Laboratório | Proporção $[0,1]$ | Instalação limpa; 1ª tentativa na Google Play | Print loja + app aberto |
+| **M2.2** | Portabilidade (G2) | Laboratório | Proporção $[0,1]$ | Varrer `/sdcard/Android/data/` via `adb` | Log de comandos (`.log`) |
+| **M3.1** | Confiabilidade (G3) | Ambos | Proporção $[0,1]$ | Sessões padronizadas de 15 minutos contínuos | Vídeo + `adb logcat` |
+| **M3.2** | Confiabilidade (G3) | Ambos | Proporção $[0,1]$ | Congelamento de UI $> 5{,}0\text{ s}$ ou diálogo ANR | Vídeo com toques ativados |
+| **M4.1** | Confiabilidade (G4) | Laboratório | Proporção $[0,1]$ | 15s de Modo Avião; aviso em $\le 5$s; retorno $\le 10$s | Gravação contínua (`.mp4`) |
+| **M4.2** | Confiabilidade (G4) | Ambos | Proporção $[0,1]$ | Desativação de GPS; aviso amigável; reativação $\le 5$s | Gravação contínua (`.mp4`) |
+| **M5.1** | Adequação Funcional (G5) | Campo | Minutos $[0, +\infty)$ | Confronto horário previsto vs chegada real na baia | Foto app + Foto ônibus na parada |
+| **M5.2** | Adequação Funcional (G5) | Ambos | Proporção $[0,1]$ | Distância geodésica $\le \varepsilon = 100{,}0\text{ m}$ (Haversine) | Mapa app + Planilha geodésica |
+| **M6.1** | Adequação Funcional (G6) | Laboratório | Proporção $[0,1]$ | 6 tarefas essenciais do catálogo de ponta a ponta | Gravação contínua de tarefas |
+| **M6.2** | Adequação Funcional (G6) | Laboratório | Proporção $[0,1]$ | Amostra de 50 linhas oficiais da Semob-DF | Prints de busca e itinerário |
+
+---
+
+## 12. Rastreabilidade com as demais fases da avaliação
+
+Estes procedimentos operacionais conectam as especificações teóricas da Fase 2 à infraestrutura e aos resultados da avaliação:
+
+* **Entrada Teórica (Fase 2):** As fórmulas, limiares de julgamento (Graus 1 a 4) e decisões apoiadas D1, D2 e D3 originam-se em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md) e [Rastreabilidade GQM](../fase2/rastreabilidade-diagrama%20GQM.md).
+* **Fundamentação Metodológica (Fase 3):** O delineamento global da estratégia de caixa-preta está em [Método de Avaliação](1-metodo.md), com inventário de equipamentos em [Recursos](3-recursos.md) e planejamento temporal em [Cronograma](4-cronograma.md).
+* **Alimentação da Coleta (Fase 4):** Os dados brutos gerados pela aplicação estrita destes procedimentos alimentam diretamente a [Coleta de Dados](../fase4/1-coleta.md), a [Análise de Dados](../fase4/2-analise.md) e a emissão do parecer final em [Resultados e Conclusões](../fase4/3-resultados.md).
+
+---
+
+## 13. Histórico de versão
+
+| Versão | Data | Descrição da alteração | Autor(es) | Revisor(es) |
+| :--- | :--- | :--- | :--- | :--- |
+| `1.0` | 16/11/2026 | Criação dos procedimentos detalhados de execução, roteiros das 12 métricas, convenção de evidências, regras de anomalias e formulários de coleta (Issue #46). | João Pedro Capozzi (jonas3688) | Equipe Carol Shaw |
+
+---
+
+## 14. Referências bibliográficas
+
+* [1] **ISO/IEC 25040:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*. Geneva: International Organization for Standardization, 2011.
+* [2] **ISO/IEC 25010:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*. Geneva: International Organization for Standardization, 2011.
+* [3] **BRASIL.** *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.
+* [4] **SECRETARIA DE TRANSPORTE E MOBILIDADE DO DISTRITO FEDERAL (SEMOB-DF).** *Dados Abertos do Transporte Público Coletivo do DF (DF no Ponto / GTFS)*. Disponível em: <https://semob.df.gov.br/>. Acesso em: 16 nov. 2026.

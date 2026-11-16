@@ -70,4 +70,4 @@ Como a avaliação é de caixa preta e utiliza amostragem intencional delimitada
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação do método de avaliação da Fase 3, com técnicas para as 12 métricas, rastreabilidade e ameaças à validade | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
 | 02 | Reestruturação do documento para focar na estrutura do método, contagem tabular com evidência por exceção | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
-| 03 | Inclusão de links cruzados para Abordagem GQM e Metas de Avaliação (Fase 2) e alinhamento de rastreabilidade | [João Capozzi](https://github.com/jonas3688) | 15/11/2026 | — | — |
+| 03 | Inclusão de links cruzados para Abordagem GQM e Metas de Avaliação (Fase 2) e alinhamento de rastreabilidade | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |

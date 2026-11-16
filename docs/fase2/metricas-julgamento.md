@@ -184,4 +184,4 @@ A pior nota respeita a ordem da escala ordinal. Para julgar o objetivo, todas as
 | 02  | Adição das justificativas técnicas dos limiares de decisão | [João Capozzi](https://github.com/jonas3688) | 10/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
 | 03  | Especificação das escalas, variáveis, unidades e métodos de cálculo das métricas | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
 | 04  | Vínculo com a fundamentação das métricas e correção do patamar de crashes do Android vitals (1,09%) | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
-| 05  | Inclusão de links cruzados e rastreabilidade com a Fase 3 (Planejamento, Método, Procedimentos e Recursos) e âncoras para métricas | [João Capozzi](https://github.com/jonas3688) | 15/11/2026 | — | — |
+| 05  | Inclusão de links cruzados e rastreabilidade com a Fase 3 (Planejamento, Método, Procedimentos e Recursos) e âncoras para métricas | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |

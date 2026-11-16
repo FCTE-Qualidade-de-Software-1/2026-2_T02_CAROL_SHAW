@@ -8,9 +8,9 @@
 
 <p align="center">
   <img alt="Versão" src="https://img.shields.io/badge/versão-v1.0--E1-pink"/>
-  <img alt="Atualização" src="https://img.shields.io/badge/atualizado-15%2F11%2F2026-pink"/>
+  <img alt="Atualização" src="https://img.shields.io/badge/atualizado-16%2F11%2F2026-pink"/>
   <img alt="Fase" src="https://img.shields.io/badge/fase-Fases%201%2C%202%20e%203-pink"/>
-  <img alt="Status" src="https://img.shields.io/badge/status-Fase%203%20conclu%C3%ADda-pink"/>
+  <img alt="Status" src="https://img.shields.io/badge/status-Fase%203%20em%20finaliza%C3%A7%C3%A3o-pink"/>
 </p>
 
 ---
@@ -21,7 +21,7 @@ Este site é o **portal oficial de documentação** do projeto de avaliação de
 
 Avaliamos o aplicativo **DF no Ponto** — ferramenta oficial de consulta ao Sistema de Transporte Público Coletivo do Distrito Federal (STPC-DF) — sob a perspectiva do usuário final, com foco em três características de qualidade da norma **ISO/IEC 25010**: **Adequação Funcional**, **Confiabilidade** e **Portabilidade**. A escolha dessas três características foi derivada diretamente das necessidades dos stakeholders mapeados na Fase 1, conforme detalhado nas seções seguintes.
 
-> ℹ️ Este repositório contém apenas a documentação e o site do projeto acadêmico. Ele **não** contém o código-fonte do aplicativo DF no Ponto.
+> **Nota:** Este repositório contém apenas a documentação e o site do projeto acadêmico. Ele **não** contém o código-fonte do aplicativo DF no Ponto.
 
 ---
 
@@ -74,10 +74,10 @@ Diante desse cenário, a equipe **Carol Shaw** estruturou uma avaliação rigoro
 
 | Fase | Descrição | Status |
 | :-: | :-- | :-: |
-| **Fase 1** | Estabelecimento dos requisitos da avaliação (propósito, stakeholders, escopo, modelo de qualidade) | ✅ Concluída |
-| **Fase 2** | Especificação da avaliação (objetivos GQM, questões, hipóteses, métricas e critérios de julgamento) | ✅ Concluída |
-| **Fase 3** | Planejamento da avaliação (método, recursos, ambiente e cronograma) | ✅ Concluída |
-| **Fase 4** | Execução e julgamento (coleta de dados, análise, conclusões e ações de melhoria) | ⏳ Prevista para a Entrega 2 |
+| **Fase 1** | Estabelecimento dos requisitos da avaliação (propósito, stakeholders, escopo, modelo de qualidade) | Concluída |
+| **Fase 2** | Especificação da avaliação (objetivos GQM, questões, hipóteses, métricas e critérios de julgamento) | Concluída |
+| **Fase 3** | Planejamento da avaliação (método, recursos, ambiente e cronograma) | Em finalização (inventário de recursos e responsáveis pendentes) |
+| **Fase 4** | Execução e julgamento (coleta de dados, análise, conclusões e ações de melhoria) | Prevista para a Entrega 2 |
 
 ---
 
@@ -85,19 +85,19 @@ Diante desse cenário, a equipe **Carol Shaw** estruturou uma avaliação rigoro
 
 A documentação está organizada em seções que espelham as fases do processo de avaliação:
 
-### 📌 [Fase 1 — Requisitos da Avaliação](fase1/introducao.md)
+### [Fase 1 — Requisitos da Avaliação](fase1/introducao.md)
 
 Apresenta o propósito da avaliação, os requisitantes e partes interessadas, a descrição do produto avaliado, a justificativa para o recorte do escopo, o modelo de qualidade adotado (ISO/IEC 25010) e a tabela de contribuição da equipe. É a base que justifica todas as decisões metodológicas subsequentes.
 
-### 📌 [Fase 2 — Especificação da Avaliação](fase2/planejamento-objetivos.md)
+### [Fase 2 — Especificação da Avaliação](fase2/planejamento-objetivos.md)
 
 Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três características priorizadas na Fase 1, formalizando seis objetivos de medição, doze questões operacionais com hipóteses preditivas e doze métricas quantitativas com seus respectivos critérios de julgamento. Inclui também a representação gráfica da hierarquia GQM completa.
 
-### 📌 [Fase 3 — Planejamento da Avaliação](fase3/introducao.md)
+### [Fase 3 — Planejamento da Avaliação](fase3/introducao.md)
 
 Define o projeto da avaliação conforme a ISO/IEC 25040, transformando a especificação da Fase 2 em um plano operacional executável: estabelece o método de avaliação de caixa preta com as técnicas e unidades de contagem para as 12 métricas, as instruções detalhadas e roteiros de execução, o levantamento de recursos (dispositivos físicos, emuladores e ferramentas) e o cronograma planejado para a coleta de dados.
 
-> 💡 **Dica de leitura:** comece pela [Introdução da Fase 1](fase1/introducao.md) e siga pela ordem do menu. As seções foram escritas para serem lidas em sequência, com referências cruzadas entre si.
+> **Dica de leitura:** comece pela [Introdução da Fase 1](fase1/introducao.md) e siga pela ordem do menu. As seções foram escritas para serem lidas em sequência, com referências cruzadas entre si.
 
 ---
 
@@ -105,9 +105,9 @@ Define o projeto da avaliação conforme a ISO/IEC 25040, transformando a especi
 
 O escopo documentado prioriza três características da norma ISO/IEC 25010, listadas abaixo por ordem de prioridade:
 
-- **Adequação Funcional (P1):** completude e correção das funcionalidades de transporte, com a pertinência delimitando as tarefas essenciais avaliadas — se os horários e rotas exibidos estão corretos, o aplicativo cumpre sua função social básica.
-- **Confiabilidade (P2):** maturidade do aplicativo e tolerância a falhas, como instabilidade de conexão móvel — essencial para quem usa o app em trânsito, frequentemente sob rede instável.
-- **Portabilidade (P3):** adaptação da interface a diferentes dispositivos móveis e versões de sistema operacional, além da instalação e da desinstalação do aplicativo — necessário dado o perfil demográfico diverso dos usuários do transporte público do DF.
+- **Adequação Funcional (prioridade 1):** completude e correção das funcionalidades de transporte, com a pertinência delimitando as tarefas essenciais avaliadas — se os horários e rotas exibidos estão corretos, o aplicativo cumpre sua função social básica.
+- **Confiabilidade (prioridade 2):** maturidade do aplicativo e tolerância a falhas, como instabilidade de conexão móvel — essencial para quem usa o app em trânsito, frequentemente sob rede instável.
+- **Portabilidade (prioridade 3):** adaptação da interface a diferentes dispositivos móveis e versões de sistema operacional, além da instalação e da desinstalação do aplicativo — necessário dado o perfil demográfico diverso dos usuários do transporte público do DF.
 
 A ordem de prioridade reflete o impacto direto de cada característica na tarefa central do passageiro: primeiro os dados precisam estar corretos, depois o sistema precisa estar disponível e, por fim, precisa funcionar no aparelho que o usuário tem em mãos.
 
@@ -121,17 +121,17 @@ O escopo cobre o **aplicativo móvel (Android)**. A versão web, os tablets, o *
 
 | Recurso | Link |
 | :-- | :-- |
-| 📦 Repositório GitHub | [FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW) |
-| 🚀 Release da Entrega 1 (E1) | [v1.0-E1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1) |
-| 🌐 GitPage (este site) | [fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/) |
-| 🚌 DF no Ponto (site oficial; a avaliação cobre o aplicativo móvel) | [dfnoponto.com.br](https://dfnoponto.com.br/) |
+| Repositório GitHub | [FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW) |
+| Release da Entrega 1 (E1) | [v1.0-E1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1) |
+| GitPage (este site) | [fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/) |
+| DF no Ponto (site oficial; a avaliação cobre o aplicativo móvel) | [dfnoponto.com.br](https://dfnoponto.com.br/) |
 
 ---
 
 ## Referências
 
 - [ISO/IEC 25010 — ISO 25000](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
-- [ISO/IEC 25040 — Evaluation process](https://www.iso.org/standard/35641.html)
+- ISO/IEC 25040:2011 — *Evaluation process* (edição adotada na disciplina; substituída pela edição de 2024)
 - [MkDocs](https://www.mkdocs.org/)
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 
@@ -145,3 +145,4 @@ O escopo cobre o **aplicativo móvel (Android)**. A versão web, os tablets, o *
 | 02 | Revisão geral: narrativa para leitor externo, badges de versão, links de repositório e release, tabela de fases | Equipe Carol Shaw | 26/10/2026 | — | — |
 | 03 | Alinhamento com a Fase 1: Instalabilidade na Portabilidade, papel da Pertinência e fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
 | 04 | Integração dos documentos da Fase 3: atualização da tabela de fases, status da Fase 3 e seção Como navegar neste site | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
+| 05 | Remoção de emojis e ícones, conforme os critérios da disciplina, e atualização da data | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |

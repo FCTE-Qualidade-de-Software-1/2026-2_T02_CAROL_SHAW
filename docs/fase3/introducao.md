@@ -7,7 +7,7 @@ No processo de avaliação da **ISO/IEC 25040**, esta fase corresponde à ativid
 Nos arquivos desta fase, são abordados:
 
 - O [Método de Avaliação](1-metodo.md) escolhido, a técnica adotada para cada métrica e sua justificativa e as ameaças à validade;
-- Os [Procedimentos de Execução](2-procedimentos.md): **parâmetros, catálogos e plano de amostragem** e, em etapa posterior, roteiros passo a passo por métrica e formulários padronizados de coleta de dados;
+- Os [Procedimentos de Execução](2-procedimentos.md): **parâmetros, catálogos e plano de amostragem**, roteiros passo a passo por métrica e formulário padronizado de coleta de dados;
 - Os [Recursos](3-recursos.md) **necessários** à execução: dispositivos, ferramentas, ambientes, dados de entrada e papéis da equipe;
 - O [Cronograma](4-cronograma.md) **de execução**: planejamento temporal das etapas de coleta, sequência de realização dos testes, prazos e marcos de entrega para a Fase 4.
 

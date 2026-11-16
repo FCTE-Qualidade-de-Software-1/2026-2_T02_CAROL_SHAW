@@ -47,7 +47,7 @@ Os dados reais obtidos no repositório GitHub evidenciam a totalidade das issues
 | **Total de Issues Cadastradas** | 5 |
 | **Issues Concluídas** | 5 |
 | **Taxa de Conclusão de Escopo** | **100%** |
-| **Padrão de Fechamento** | Abertas e fechadas no mesmo dia, exceto a issue #7 que foi fechada apenas no dia 04/11, mas foi concluida no dia 31/10 |
+| **Padrão de Fechamento** | Abertas e fechadas no mesmo dia, exceto a issue #7 que foi fechada apenas no dia 04/11, mas foi concluída no dia 31/10 |
 
 #### Detalhamento das Issues da Entrega 1
 
@@ -118,7 +118,7 @@ A milestone **Correção Entrega 1** foi instituída para executar o plano de me
 
 A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo de 5 frentes de trabalho estruturantes:
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-10" width="600git" height="350" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-10" width="600" height="350" frameborder="0"></iframe>
 
 #### Detalhamento das Tarefas da Correção da Entrega 1
 
@@ -175,13 +175,13 @@ A milestone foi aberta no dia 15 de Novembro de 2026, com o escopo de 4 frentes 
 | **Coleta de Medidas e Análise Comparativa (Fase 4)** | Executar os procedimentos planejados na Fase 3 para coletar as métricas reais do software e realizar a análise comparativa dos dados obtidos frente aos critérios e requisitos definidos. | ~10 horas | Planejado |
 | **Julgamento dos Resultados e Parecer Técnico (Fase 4)** | Interpretar e consolidar os resultados das comparações em um parecer técnico documentado, emitindo um diagnóstico conclusivo sobre a qualidade do produto avaliado. | ~6 horas | Planejado |
 
-**Cálculo da Taxa de Conclusão da Correção:**
+**Cálculo da Taxa de Conclusão da Entrega 2:**
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=1794794065410&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
 
 *Cálculo feito apenas sobre as issues abertas e fechadas até o momento*
 
-### 6.3. Gráfico de Burndown da Correção da Entrega 1
+### 6.3. Gráfico de Burndown da Entrega 2
 
 Como a milestone encontra-se em sua fase inicial de execução, o conjunto de dados coletados ainda é insuficiente para inferir tendências no gráfico de burndown. A análise de desempenho será atualizada conforme o avanço das atividades planejadas.
 
@@ -195,6 +195,6 @@ Como a milestone encontra-se em sua fase inicial de execução, o conjunto de da
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :---: | :---: |
 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | Criação e estruturação da página de Calendário e Progresso | 09/11/2026 | [85e6b25](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/85e6b25) |
-| [Vitor Bessa](https://github.com/Bessazs) | Adição da tabela de desempenho da milestone e do grafico de burndow | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
+| [Vitor Bessa](https://github.com/Bessazs) | Adição da tabela de desempenho da milestone e do gráfico de burndown | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
-| [Vitor Bessa](https://github.com/Bessazs) | [0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600) |
+| [Vitor Bessa](https://github.com/Bessazs) | Adição do conteúdo da Entrega 2 | 15/11/2026 | [0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600) |

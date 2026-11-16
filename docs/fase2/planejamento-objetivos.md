@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: Método GQM e Objetivos de Medição
 description: Aplicação do paradigma Goal-Question-Metric na especificação da avaliação do aplicativo DF no Ponto a partir das premissas da Fase 1
 ---
@@ -16,7 +15,21 @@ Esta seção consolida a **Fase 2 (Especificação da Avaliação)**. O intuito 
 
 A especificação da Fase 2 não é um artefato isolado; ela estabelece a continuidade lógica e a operacionalização dos requisitos levantados na Fase 1 e conecta-se diretamente à sua execução prática no **[Planejamento da Avaliação (Fase 3)](../fase3/introducao.md)**. Enquanto a Fase 1 delimitou as decisões estratégicas e a Fase 2 definiu as metas e métricas GQM, a Fase 3 projeta os roteiros operacionais ([Método](../fase3/1-metodo.md), [Procedimentos](../fase3/2-procedimentos.md), [Recursos](../fase3/3-recursos.md) e [Cronograma](../fase3/4-cronograma.md)) necessários para a coleta de dados que ocorrerá na Fase 4. A transição dá-se pela conexão entre as necessidades dos *stakeholders*, as **Questões Norteadoras Transversais** e as **Decisões Estratégicas Apoiadas**:
 
-![Diagrama Transição Metodológica: Da Fase 1 ao Ciclo GQM](imagens/GraficoTransicao.jpeg)
+```mermaid
+flowchart TD
+    subgraph F1["Fase 1 — Requisitos da avaliação"]
+        A["Partes interessadas<br>(passageiros, Semob-DF, equipe e avaliadores)"] --> B["Questões norteadoras<br>(QN1, QN2, QN3)"]
+        B --> C["Decisões apoiadas<br>(D1, D2, D3)"]
+        C --> D["Escopo ISO/IEC 25010<br>(Adequação Funcional, Confiabilidade, Portabilidade)"]
+    end
+    subgraph F2["Fase 2 — Especificação da avaliação (GQM)"]
+        E["Nível conceitual<br>6 objetivos (G1 a G6)"] --> F["Nível operacional<br>12 questões e hipóteses (Q1.1 a Q6.2)"]
+        F --> G["Nível quantitativo<br>12 métricas (M1.1 a M6.2)"]
+    end
+    D --> E
+```
+
+<p class="legenda">Figura 1. Transição da Fase 1 para o ciclo GQM da Fase 2. Fonte: elaboração própria (2026).</p>
 
 ### 1.1. Questões Norteadoras Transversais
 
@@ -66,6 +79,8 @@ Para abranger as necessidades mapeadas na Fase 1, o escopo foi desdobrado em **6
 | [**G6**](#g6) | [**QN3**](#qn3) | **D3** | Adequação Funcional / Completude (e Pertinência) | [Q6.1](#q6-1), [Q6.2](#q6-2) | [**M6.1**](#m6-1) – Cobertura de Tarefas Essenciais<br>[**M6.2**](#m6-2) – Completude do Banco |
 | **Total** | **3 QNs** | **3 Decisões** | **3 Características / 6 Subcaracterísticas** | **12 Questões** | **12 Métricas** |
 
+<p class="legenda">Tabela 1. Visão geral do planejamento GQM. Fonte: elaboração própria (2026).</p>
+
 ### 3.1. Fundamentação, Adaptação e Relevância das Métricas
 
 A ISO/IEC 25023 define medidas genéricas, em geral razões do tipo $X = A/B$. As métricas deste projeto são **adaptações** dessas medidas a um aplicativo móvel de transporte público; quando a norma não traz medida equivalente, a métrica é declarada como **extensão do projeto**. Fórmulas, escalas e limiares estão detalhados em [Métricas e Julgamento](metricas-julgamento.md#detalhamento-das-metricas).
@@ -85,7 +100,7 @@ A ISO/IEC 25023 define medidas genéricas, em geral razões do tipo $X = A/B$. A
 | <a id="m6-1"></a>[**M6.1** Cobertura de Tarefas Essenciais](metricas-julgamento.md#m61-cobertura-de-tarefas-essenciais) | ISO/IEC 25010 (completude e pertinência funcional); ISO 9241-11; Tullis e Albert (2013) | Tarefas executadas de ponta a ponta; combina completude e correção do fluxo, por isso o catálogo fixa entradas e resultados esperados | Buscar linha, ver itinerário e horários e salvar favoritos são o propósito do app ([**QN3**](#qn3)) |
 | <a id="m6-2"></a>[**M6.2** Completude do Banco](metricas-julgamento.md#m62-completude-do-banco) | ISO/IEC 25012 (completude); ISO/IEC 25024; ISO/IEC 25023 (completude funcional) | Confronto, em amostra auditada, com o catálogo oficial da Semob-DF; o resultado vale para a amostra e a data de referência | Linha ou itinerário ausente é invisível ao usuário, que não sabe que o app está incompleto ([**QN3**](#qn3)) |
 
-<p class="legenda">Tabela 2. Fundamentação, adaptação e relevância das 12 métricas.</p>
+<p class="legenda">Tabela 2. Fundamentação, adaptação e relevância das 12 métricas. Fonte: elaboração própria (2026).</p>
 
 ---
 
@@ -96,7 +111,7 @@ Os objetivos de medição foram formalizados utilizando o template clássico do 
 ### <a id="g1"></a>G1 — Portabilidade (Adaptabilidade) · *Orientado por [QN1](#qn1) e D1*
 | Parâmetro do Template | Especificação do Alvo |
 | :--- | :--- |
-| **Analisar** | o aplicativo móvel DF no Ponto em diferentes arquiteturas de hardware, resoluções de tela e versões de sistema operacional |
+| **Analisar** | o aplicativo móvel DF no Ponto em diferentes resoluções de tela, orientações, escalas de fonte e versões do Android |
 | **com a finalidade de** | compreender o comportamento adaptativo da interface gráfica e a compatibilidade operacional |
 | **no que se refere à** | Portabilidade (subcaracterística de Adaptabilidade) |
 | **do ponto de vista de** | usuários finais e cidadãos que utilizam smartphones de entrada com telas compactas |
@@ -113,7 +128,7 @@ Os objetivos de medição foram formalizados utilizando o template clássico do 
 | **Analisar** | o processo de distribuição, instalação e remoção do DF no Ponto |
 | **com a finalidade de** | avaliar a taxa de sucesso nas lojas oficiais e a integridade de armazenamento pós-desinstalação |
 | **no que se refere à** | Portabilidade (subcaracterística de Instalabilidade) |
-| **do ponto de vista de** | cidadãos com aparelhos de armazenamento restrito e equipes de suporte |
+| **do ponto de vista de** | cidadãos com aparelhos de armazenamento restrito e órgãos mantenedores (Semob-DF) |
 | **no contexto de** | ciclos padronizados de instalação limpa e auditoria de arquivos residuais no sistema de arquivos |
 
 * **Questões operacionais:** [**Q2.1**](#q2-1) (sucesso na primeira tentativa de instalação) e [**Q2.2**](#q2-2) (ausência de arquivos residuais pós-desinstalação).
@@ -167,7 +182,7 @@ Os objetivos de medição foram formalizados utilizando o template clássico do 
 | Parâmetro do Template | Especificação do Alvo |
 | :--- | :--- |
 | **Analisar** | a cobertura da malha de linhas/itinerários e o sucesso na execução de tarefas vitais |
-| **com a finalidade de** | certificar a sincronização do banco com a Semob-DF e a eficácia das funções essenciais |
+| **com a finalidade de** | verificar a correspondência do catálogo do aplicativo com o da Semob-DF e a conclusão das funções essenciais |
 | **no que se refere à** | Adequação Funcional (subcaracterística de Completude, delimitada pela Pertinência) |
 | **do ponto de vista de** | passageiros planejando trajetos complexos e órgãos gestores do transporte |
 | **no contexto de** | execução integral do catálogo de tarefas essenciais e confronto amostral com a base da Semob-DF |
@@ -181,24 +196,26 @@ Os objetivos de medição foram formalizados utilizando o template clássico do 
 
 ## 5. Matriz de Questões, Hipóteses e Abstraction Sheets
 
-O desdobramento das metas conceituais resultou em 12 questões operacionais acompanhadas de suas hipóteses preditivas, vinculadas diretamente aos seus respectivos objetivos e métricas:
+O desdobramento das metas conceituais resultou em 12 questões operacionais acompanhadas de suas hipóteses, vinculadas aos respectivos objetivos e métricas. Cada hipótese é formulada em termos da métrica e dos [limites de pontuação](metricas-julgamento.md#limites-de-pontuacao-por-metrica), de modo que possa ser confirmada ou refutada pelo resultado da Fase 4:
 
 ### Matriz de Questões e Hipóteses Operacionais
 
 | Objetivo / Eixo | ID | Questão Operacional (*Question*) | Hipótese Preditiva (*Hypothesis*) | Métrica Vinculada |
 | :--- | :---: | :--- | :--- | :--- |
-| [**G1 — Portabilidade (Adaptabilidade)**](#g1) | <a id="q1-1"></a>**Q1.1** | A interface gráfica se redimensiona sem sobreposições ou cortes em telas compactas, diferentes orientações e fontes ampliadas? | **H1.1:** Telas abaixo de 5 polegadas ou com escala de fonte ampliada podem apresentar sobreposições pontuais na camada do mapa. | [**M1.1** – Adaptabilidade de Hardware (Telas)](#m1-1) |
-| | <a id="q1-2"></a>**Q1.2** | O aplicativo executa sem erros críticos de compatibilidade em diferentes versões de SO (incluindo versões legadas)? | **H1.2:** Espera-se pleno funcionamento nas versões de SO testadas (Android 9 a 13). | [**M1.2** – Adaptabilidade de Sistema Operacional](#m1-2) |
-| [**G2 — Portabilidade (Instalabilidade)**](#g2) | <a id="q2-1"></a>**Q2.1** | O processo de instalação nas lojas oficiais ocorre na primeira tentativa sem erro? | **H2.1:** Espera-se taxa de sucesso de 100% nas instalações oficiais. | [**M2.1** – Sucesso de Instalação](#m2-1) |
-| | <a id="q2-2"></a>**Q2.2** | O aplicativo evita deixar arquivos residuais no armazenamento compartilhado após a desinstalação? | **H2.2:** Espera-se a permanência de arquivos residuais de cache no armazenamento compartilhado. | [**M2.2** – Resíduo Pós-Desinstalação](#m2-2) |
-| [**G3 — Confiabilidade (Maturidade)**](#g3) | <a id="q3-1"></a>**Q3.1** | O aplicativo evita encerramentos forçados (*crashes*) durante sessões ativas? | **H3.1:** Alta estabilidade geral, com eventuais falhas concentradas em picos de requisição de dados. | [**M3.1** – Sessões sem Crashes](#m3-1) |
-| | <a id="q3-2"></a>**Q3.2** | O sistema previne congelamentos prolongados de tela superiores a 5 segundos (*ANRs*)? | **H3.2:** Ocorrência pontual de travamentos temporários ao sincronizar grandes bases geográficas. | [**M3.2** – Sessões sem Congelamentos](#m3-2) |
-| [**G4 — Confiabilidade (Tolerância a Falhas)**](#g4) | <a id="q4-1"></a>**Q4.1** | O aplicativo evita quebras, exibe mensagens amigáveis e retoma a operação após quedas momentâneas de conexão? | **H4.1:** O app pode apresentar telas de carregamento infinito por carência de modo offline. | [**M4.1** – Mitigação de Perda de Conexão](#m4-1) |
-| | <a id="q4-2"></a>**Q4.2** | O sistema reage apropriadamente à ausência ou desativação do sinal de GPS? | **H4.2:** O app orienta visualmente o usuário a restabelecer a localização sem quebrar a sessão e mantém consultas independentes disponíveis. | [**M4.2** – Tratamento de Perda de GPS](#m4-2) |
-| [**G5 — Adequação Funcional (Correção)**](#g5) | <a id="q5-1"></a>**Q5.1** | As previsões de horários de chegada refletem com precisão a aproximação física? | **H5.1:** Margem de divergência tolerável de poucos minutos decorrente do tráfego urbano real. | [**M5.1** – Precisão de Tempo](#m5-1) |
-| | <a id="q5-2"></a>**Q5.2** | A posição dos ônibus e paradas no mapa coincide com a posição espacial real? | **H5.2:** Exatidão satisfatória, sujeita a eventuais atrasos na transmissão dos dados do hardware embarcado. | [**M5.2** – Correção de Dados (Mapa)](#m5-2) |
-| [**G6 — Adequação Funcional (Completude)**](#g6) | <a id="q6-1"></a>**Q6.1** | O catálogo de tarefas essenciais executa de ponta a ponta com sucesso? | **H6.1:** Módulos de busca de rotas e salvamento de favoritos operam sem falhas estruturais. | [**M6.1** – Cobertura de Tarefas Essenciais](#m6-1) |
-| | <a id="q6-2"></a>**Q6.2** | A base de linhas e itinerários do app está plenamente sincronizada com a Semob-DF? | **H6.2:** Cobertura satisfatória das principais linhas troncais registradas no DF. | [**M6.2** – Completude do Banco](#m6-2) |
+| [**G1 — Portabilidade (Adaptabilidade)**](#g1) | <a id="q1-1"></a>**Q1.1** | A interface gráfica se redimensiona sem sobreposições ou cortes em telas compactas, diferentes orientações e fontes ampliadas? | **H1.1:** Espera-se M1.1 < 1,00: ao menos um caso de tela compacta ou fonte ampliada apresenta sobreposição ou corte na camada do mapa. | [**M1.1** – Adaptabilidade de Hardware (Telas)](#m1-1) |
+| | <a id="q1-2"></a>**Q1.2** | O aplicativo executa sem erros críticos de compatibilidade em diferentes versões de SO (incluindo versões legadas)? | **H1.2:** Espera-se M1.2 = 1,00: todos os fluxos concluem nas versões testadas (Android 9 a 13 e a versão atual do aparelho). | [**M1.2** – Adaptabilidade de Sistema Operacional](#m1-2) |
+| [**G2 — Portabilidade (Instalabilidade)**](#g2) | <a id="q2-1"></a>**Q2.1** | O processo de instalação nas lojas oficiais ocorre na primeira tentativa sem erro? | **H2.1:** Espera-se M2.1 = 1,00: todas as instalações concluem na primeira tentativa. | [**M2.1** – Sucesso de Instalação](#m2-1) |
+| | <a id="q2-2"></a>**Q2.2** | O aplicativo evita deixar arquivos residuais no armazenamento compartilhado após a desinstalação? | **H2.2:** Espera-se M2.2 < 1,00: ao menos um ciclo deixa arquivo residual no armazenamento compartilhado. | [**M2.2** – Resíduo Pós-Desinstalação](#m2-2) |
+| [**G3 — Confiabilidade (Maturidade)**](#g3) | <a id="q3-1"></a>**Q3.1** | O aplicativo evita encerramentos forçados (*crashes*) durante sessões ativas? | **H3.1:** Espera-se M3.1 ≥ 0,95: no máximo uma sessão com *crash* em 20, associada ao carregamento de dados. | [**M3.1** – Sessões sem Crashes](#m3-1) |
+| | <a id="q3-2"></a>**Q3.2** | O sistema previne congelamentos prolongados de tela superiores a 5 segundos (*ANRs*)? | **H3.2:** Espera-se M3.2 ≥ 0,95: no máximo uma sessão com congelamento em 20, ao carregar o mapa. | [**M3.2** – Sessões sem Congelamentos](#m3-2) |
+| [**G4 — Confiabilidade (Tolerância a Falhas)**](#g4) | <a id="q4-1"></a>**Q4.1** | O aplicativo evita quebras, exibe mensagens amigáveis e retoma a operação após quedas momentâneas de conexão? | **H4.1:** Espera-se M4.1 < 0,85: sem modo *offline*, parte dos ensaios termina em carregamento sem aviso dentro do prazo. | [**M4.1** – Mitigação de Perda de Conexão](#m4-1) |
+| | <a id="q4-2"></a>**Q4.2** | O sistema reage apropriadamente à ausência ou desativação do sinal de GPS? | **H4.2:** Espera-se M4.2 ≥ 0,85: o app avisa a perda de localização, mantém as consultas independentes e retoma a função. | [**M4.2** – Tratamento de Perda de GPS](#m4-2) |
+| [**G5 — Adequação Funcional (Correção)**](#g5) | <a id="q5-1"></a>**Q5.1** | As previsões de horários de chegada refletem com precisão a aproximação física? | **H5.1:** Espera-se erro absoluto mediano de até 5 minutos (nota 3 ou superior). | [**M5.1** – Precisão de Tempo](#m5-1) |
+| | <a id="q5-2"></a>**Q5.2** | A posição dos ônibus e paradas no mapa coincide com a posição espacial real? | **H5.2:** Espera-se M5.2 ≥ 0,85 para paradas e valor menor para veículos, pela defasagem de transmissão da posição. | [**M5.2** – Correção de Dados (Mapa)](#m5-2) |
+| [**G6 — Adequação Funcional (Completude)**](#g6) | <a id="q6-1"></a>**Q6.1** | O catálogo de tarefas essenciais executa de ponta a ponta com sucesso? | **H6.1:** Espera-se M6.1 = 1,00: as oito tarefas essenciais concluem com o resultado esperado. | [**M6.1** – Cobertura de Tarefas Essenciais](#m6-1) |
+| | <a id="q6-2"></a>**Q6.2** | A base de linhas e itinerários do app está plenamente sincronizada com a Semob-DF? | **H6.2:** Espera-se M6.2 ≥ 0,95: no máximo um item oficial ausente ou divergente em 20. | [**M6.2** – Completude do Banco](#m6-2) |
+
+<p class="legenda">Tabela 3. Matriz de questões e hipóteses operacionais. Fonte: elaboração própria (2026).</p>
 
 ---
 
@@ -224,7 +241,7 @@ O desdobramento das metas conceituais resultou em 12 questões operacionais acom
 ## 6. Referências Bibliográficas
 
 - **BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter.** *The Goal Question Metric Approach*. Encyclopedia of Software Engineering, 1994.
-- **ISO/IEC 25010:2023.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
+- **ISO/IEC 25010:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
 - **ISO/IEC 25023:2016.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality*.
 - **BASILI, Victor R.; WEISS, David M.** *A methodology for collecting valid software engineering data*. IEEE Transactions on Software Engineering, v. SE-10, n. 6, p. 728–738, 1984.
 - **ANDROID DEVELOPERS.** Documentação sobre ANRs, armazenamento específico do app e suporte a diferentes tamanhos de tela. Disponível em: <https://developer.android.com>.
@@ -260,3 +277,4 @@ O desdobramento das metas conceituais resultou em 12 questões operacionais acom
 | 04 | Correção do número de atividades do processo de avaliação da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss)| 15/11/2026 |
 | 05 | Alinhamento das questões do GQM aos objetivos e adição de links internos| [Cristiano Morais](https://github.com/CristianoMoraiss) | 15/11/2026 | — | — |
 | 06 | Inclusão de links cruzados e rastreabilidade bidirecional com a Fase 3 (Planejamento, Método, Procedimentos e Recursos) | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
+| 07 | Hipóteses reescritas em termos das métricas e dos limiares, ajuste dos pontos de vista de G2 e da finalidade de G6, diagrama de transição em Mermaid e legendas das tabelas | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |

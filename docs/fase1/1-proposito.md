@@ -12,7 +12,7 @@ O objetivo fundamental não é cobrir exaustivamente todos os atributos do padr�
 
 ## 2. Propósito da Avaliação e Decisões Apoiadas
 
-A avaliação tem como finalidade primordial subsidiar a tomada de decisões técnicas e gerenciais acerca da viabilidade, usabilidade operacional e eficácia do DF no Ponto como ferramenta pública oficial. Conforme preconizado pelo ciclo de vida de medição, os resultados obtidos fundamentarão três decisões estratégicas centrais:
+A avaliação tem como finalidade primordial subsidiar a tomada de decisões técnicas e gerenciais acerca da viabilidade, adequação operacional e eficácia do DF no Ponto como ferramenta pública oficial. Conforme preconizado pelo ciclo de vida de medição, os resultados obtidos fundamentarão três decisões estratégicas centrais:
 
 | Código | Decisão Estratégica Apoiada | Escopo de Decisão e Ação |
 | :---: | :--- | :--- |
@@ -82,7 +82,7 @@ O [mapeamento das 12 métricas GQM para a meta 11.2](../fase2/rastreabilidade-di
 
 ## 7. Referências Bibliográficas
 
-- **ISO/IEC 25010:2023.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
+- **ISO/IEC 25010:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
 - **ISO/IEC 25040:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
 - **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU BRASIL).** *Objetivo 11 — Cidades e comunidades sustentáveis*, meta 11.2. Disponível em: <https://brasil.un.org/pt-br/sdgs/11>. Acesso em: 15 nov. 2026.
 

@@ -46,7 +46,7 @@ Este relatório apresenta a primeira entrega do projeto final da disciplina Qual
 \section{Introdução}
 \label{sec:intro}
 
-O transporte público desempenha um papel fundamental na mobilidade urbana do Distrito Federal. Nesse contexto, o aplicativo \textit{DF no Ponto} tornou-se a ferramenta oficial e amplamente utilizada por milhares de cidadãos diariamente para planejar rotas, verificar horários e acompanhar as linhas de ônibus em tempo real. No entanto, passageiros frequentemente relatam problemas graves na experiência de uso: ônibus que ``somem'' do mapa interativo, previsões de horários que não coincidem com a realidade e fechamentos abruptos (\textit{crashes}) do sistema exatamente no momento de decisão de embarque. Estudos sobre avaliações de usuários de aplicativos móveis confirmam que falhas de estabilidade e precisão funcional figuram entre as principais causas de rejeição e desinstalação~\cite{khalid2015,minelli2015}. Tais falhas geram atrasos sistemáticos, perda de tempo e insatisfação generalizada, minando a confiança da população no serviço digital.
+O transporte público desempenha um papel fundamental na mobilidade urbana do Distrito Federal. Nesse contexto, o aplicativo \textit{DF no Ponto} tornou-se a ferramenta oficial e amplamente utilizada por milhares de cidadãos diariamente para planejar rotas, verificar horários e acompanhar as linhas de ônibus em tempo real. No entanto, passageiros frequentemente relatam problemas graves na experiência de uso: ônibus que ``somem'' do mapa interativo, previsões de horários que não coincidem com a realidade e fechamentos abruptos (\textit{crashes}) do sistema exatamente no momento de decisão de embarque. Um estudo de avaliações de usuários de aplicativos móveis aponta erros funcionais e \textit{crashes} entre as reclamações mais frequentes~\cite{khalid2015}. Tais falhas geram atrasos sistemáticos, perda de tempo e insatisfação generalizada, minando a confiança da população no serviço digital.
 
 O objetivo geral deste trabalho é realizar uma avaliação rigorosa da qualidade de software do produto \textit{DF no Ponto}, sob a perspectiva do usuário final, com foco em identificar fragilidades e propor melhorias técnicas concretas. Para conduzir essa análise de forma estruturada e metodologicamente fundamentada, este trabalho utiliza o modelo de qualidade da norma ISO/IEC 25010, que fornece características padronizadas para a avaliação de sistemas~\cite{deissenboeck2009}, aliado à abordagem \textit{Goal-Question-Metric} (GQM)~\cite{basili1988}. O GQM permite derivar de forma sistemática métricas operacionais e quantitativas a partir dos objetivos conceituais de medição, garantindo que os dados coletados estejam diretamente atrelados à percepção de valor do passageiro.
 
@@ -60,11 +60,11 @@ Nesta seção, contextualizam-se os conceitos fundamentais que sustentam a avali
 
 A base normativa deste trabalho apoia-se na família de normas ISO/IEC 25000 (SQuaRE --- \textit{Systems and software Quality Requirements and Evaluation})~\cite{iso25000}, que estabelece diretrizes e modelos de referência para orientar a especificação e a avaliação da qualidade de produtos de software. Em especial, a norma ISO/IEC 25010~\cite{iso25010} define o modelo de qualidade de produto organizado hierarquicamente em características e subcaracterísticas, tais como Adequação Funcional, Confiabilidade e Portabilidade, provendo vocabulário comum e critérios unificados de análise. Conforme discutido por Deissenboeck et al.~\cite{deissenboeck2009}, modelos de qualidade genéricos devem ser selecionados e adaptados aos propósitos e ao contexto específico de uso de cada sistema, o que fundamenta a escolha criteriosa das características priorizadas nesta pesquisa.
 
-Para operacionalizar a condução da análise, adota-se o processo estabelecido pela norma ISO/IEC 25040~\cite{iso25040}, a qual prescreve quatro fases sequenciais: o estabelecimento dos requisitos da avaliação (Fase~1), a especificação da avaliação (Fase~2), o planejamento (Fase~3) e a execução para obtenção dos resultados e julgamento (Fase~4). O escopo do presente relatório compreende integralmente as Fases~1 e~2, delimitando a análise a partir da perspectiva do usuário e traduzindo os requisitos em especificações formais de medição.
+Para operacionalizar a condução da análise, adota-se o processo estabelecido pela norma ISO/IEC 25040~\cite{iso25040}, a qual define cinco atividades: estabelecer os requisitos da avaliação, especificar a avaliação, projetar a avaliação, executar a avaliação e concluir a avaliação. Neste projeto, elas são agrupadas em quatro fases: requisitos (Fase~1), especificação (Fase~2), projeto da avaliação (Fase~3) e execução com conclusão (Fase~4). O escopo do presente relatório compreende integralmente as Fases~1 e~2, delimitando a análise a partir da perspectiva do usuário e traduzindo os requisitos em especificações formais de medição.
 
 A definição e o alinhamento das métricas foram estruturados sob a abordagem \textit{Goal-Question-Metric} (GQM), concebida por Basili e Rombach~\cite{basili1988} e formalizada em Basili et al.~\cite{basili1994}. O método estabelece um fluxo hierárquico descendente em que objetivos conceituais de medição (\textit{Goals}) são formulados para caracterizar o propósito do projeto; tais metas são subsequentemente desdobradas em questões avaliativas operacionais (\textit{Questions}), as quais determinam objetivamente as métricas quantitativas (\textit{Metrics}) a serem coletadas. Essa metodologia assegura que cada dado gerado na avaliação possua justificativa técnica e rastreabilidade direta com os anseios das partes interessadas.
 
-Por fim, a fundamentação empírica específica sobre sistemas móveis apoia-se em estudos da literatura especializada. Khalid et al.~\cite{khalid2015}, ao analisarem mais de 20 mil avaliações de usuários em lojas de aplicativos, identificaram que interrupções forçadas (\textit{crashes}), divergências em dados funcionais e falhas no tratamento de conexões instáveis constituem as causas preponderantes de insatisfação e abandono de software móvel. De modo análogo, Minelli et al.~\cite{minelli2015} ressaltam a centralidade da maturidade e da estabilidade no uso diário de aplicações. Tais constatações empíricas convergem diretamente com os problemas relatados pelos passageiros do Distrito Federal e justificam tecnicamente o direcionamento da avaliação para Adequação Funcional, Confiabilidade e Portabilidade.
+Por fim, a fundamentação empírica específica sobre sistemas móveis apoia-se em estudos da literatura especializada. Khalid et al.~\cite{khalid2015}, ao analisarem 6.390 avaliações de baixa nota de 20 aplicativos iOS, identificaram 12 tipos de reclamação, sendo erros funcionais, pedidos de funcionalidade e \textit{crashes} os mais frequentes. Esses achados são coerentes com os problemas relatados pelos passageiros do Distrito Federal e apoiam o direcionamento da avaliação para Adequação Funcional e Confiabilidade; a inclusão de Portabilidade decorre da diversidade de aparelhos dos usuários do transporte público.
 
 % ---------------------------------------------------------------------
 \section{Metodologia de Desenvolvimento do Projeto}
@@ -72,7 +72,7 @@ Por fim, a fundamentação empírica específica sobre sistemas móveis apoia-se
 
 A metodologia de avaliação adotada neste trabalho fundamenta-se no processo de avaliação prescrito pela norma ISO/IEC 25040~\cite{iso25040}, utilizando o modelo de qualidade da ISO/IEC 25010~\cite{iso25010} e adaptado para a análise externa do aplicativo móvel \textit{DF no Ponto}. O processo executado nesta primeira entrega divide-se em duas fases fundamentais. Na Fase 1 (Requisitos da Avaliação), o escopo foi delimitado com base na perspectiva do usuário final (passageiro), priorizando as características de Adequação Funcional, Confiabilidade e Portabilidade a partir do modelo de qualidade da ISO/IEC 25010~\cite{iso25010}.
 
-Na Fase 2 (Especificação da Avaliação), a modelagem foi operacionalizada por meio da abordagem \textit{Goal-Question-Metric} (GQM)~\cite{basili1994,basili1988}. Essa estrutura garantiu que os objetivos conceituais de qualidade fossem desdobrados em questões avaliativas precisas e, consequentemente, em métricas quantitativas com critérios de julgamento rigorosos, assegurando a rastreabilidade técnica dos testes que serão executados. A adoção de testes de caixa-preta está em consonância com abordagens consolidadas na literatura para avaliação externa de produtos de software~\cite{deissenboeck2009}.
+Na Fase 2 (Especificação da Avaliação), a modelagem foi operacionalizada por meio da abordagem \textit{Goal-Question-Metric} (GQM)~\cite{basili1994,basili1988}. Essa estrutura garantiu que os objetivos conceituais de qualidade fossem desdobrados em questões avaliativas precisas e, consequentemente, em métricas quantitativas com critérios de julgamento rigorosos, assegurando a rastreabilidade técnica dos testes que serão executados. A adoção de testes de caixa-preta decorre da ausência de acesso ao código-fonte e do foco no comportamento percebido pelo passageiro.
 
 Toda a documentação dinâmica (\textit{GitPage}), artefatos de avaliação e este relatório gerado em \LaTeX\ (modelo SBC) estão mantidos sob controle de versão no repositório institucional da equipe~\cite{fcte2026} e acessíveis em:
 
@@ -117,14 +117,14 @@ Semob-DF & Gestores & Atender à população com eficiência & Destinatários da
 \end{table}
 
 \subsection{Produto, Escopo e Exclusões}
-O produto avaliado é o aplicativo móvel (Android e iOS) \textit{DF no Ponto} em ambiente de produção. O escopo abrange as funcionalidades centrais de pesquisa de rotas e consulta de horários. A avaliação é externa (\textit{caixa-preta}), focada na interface e na interação de rede. Estão \textbf{fora do escopo}: eficiência técnica de \textit{backend}, manutenibilidade do código-fonte, usabilidade estética, segurança da base de dados e funcionamento em plataformas web/tablets.
+O produto avaliado é o aplicativo móvel \textit{DF no Ponto} para Android, versão 5.25.1 (\textit{build} 1149), em ambiente de produção. O escopo abrange as funcionalidades centrais de pesquisa de rotas e consulta de horários. A avaliação é externa (\textit{caixa-preta}), focada na interface e na interação de rede. Estão \textbf{fora do escopo}: eficiência técnica de \textit{backend}, manutenibilidade do código-fonte, usabilidade estética, segurança da base de dados e funcionamento em iOS, na versão web e em \textit{tablets}.
 
 \subsection{Seleção das Características e Justificativa (ISO/IEC 25010)}
 Com base na norma e nas dores reportadas pelos usuários, foram priorizadas três características:
 \begin{enumerate}
-    \item \textbf{Adequação Funcional (P1):} Sem horários e trajetos precisos (correção e completude), o aplicativo perde sua finalidade primária, justificando a prioridade máxima. Estudos de avaliação de aplicativos de mobilidade urbana apontam a precisão funcional como o atributo de maior impacto na satisfação do usuário~\cite{khalid2015}.
-    \item \textbf{Confiabilidade (P2):} Passageiros usam o aplicativo sob instabilidade de rede. Falhas de maturidade (\textit{crashes}) durante o embarque tornam a ferramenta inutilizável em momentos críticos~\cite{minelli2015}.
-    \item \textbf{Portabilidade (P3):} A diversidade demográfica do DF exige adaptabilidade a variados tamanhos de tela e versões de sistemas operacionais~\cite{deissenboeck2009}.
+    \item \textbf{Adequação Funcional (P1):} Sem horários e trajetos precisos (correção e completude), o aplicativo perde sua finalidade primária, justificando a prioridade máxima. Erros funcionais estão entre as reclamações mais frequentes de usuários de aplicativos móveis~\cite{khalid2015}.
+    \item \textbf{Confiabilidade (P2):} Passageiros usam o aplicativo sob instabilidade de rede. Falhas de maturidade (\textit{crashes}) durante o embarque tornam a ferramenta inutilizável em momentos críticos.
+    \item \textbf{Portabilidade (P3):} A diversidade demográfica do DF exige adaptabilidade a variados tamanhos de tela e versões de sistemas operacionais.
 \end{enumerate}
 
 A Figura~\ref{fig:modelo} ilustra a estrutura conceitual do modelo adaptado, demarcando as características priorizadas e as exclusões de escopo.
@@ -174,7 +174,7 @@ O escopo foi desdobrado em seis objetivos de medição conceituais, aderentes ao
 \begin{itemize}
     \item \textbf{G1 --- Portabilidade (Adaptabilidade):} \textbf{Analisar} o aplicativo móvel \textbf{com a finalidade de} compreender o comportamento adaptativo da interface gráfica, \textbf{no que se refere à} Adaptabilidade, \textbf{do ponto de vista de} usuários finais com variados modelos de \textit{smartphones}, \textbf{no contexto de} testes em múltiplos dispositivos físicos e simuladores.
     
-    \item \textbf{G2 --- Portabilidade (Instalabilidade):} \textbf{Analisar} o processo de empacotamento, instalação e remoção \textbf{com a finalidade de} avaliar a eficiência dos arquivos nas lojas oficiais, \textbf{no que se refere à} Instalabilidade, \textbf{do ponto de vista de} usuários finais e suporte técnico, \textbf{no contexto de} ciclos limpos de instalação e desinstalação.
+    \item \textbf{G2 --- Portabilidade (Instalabilidade):} \textbf{Analisar} o processo de instalação e remoção \textbf{com a finalidade de} avaliar o sucesso da instalação pela loja oficial e a ausência de resíduos após a remoção, \textbf{no que se refere à} Instalabilidade, \textbf{do ponto de vista de} usuários finais e órgãos mantenedores, \textbf{no contexto de} ciclos limpos de instalação e desinstalação.
     
     \item \textbf{G3 --- Confiabilidade (Maturidade):} \textbf{Analisar} a estabilidade de execução e a frequência de travamentos \textbf{com a finalidade de} compreender o nível de robustez contra falhas abruptas, \textbf{no que se refere à} Maturidade, \textbf{do ponto de vista de} passageiros em trânsito diário, \textbf{no contexto de} sessões de uso contínuo e navegação ativa.
     
@@ -200,23 +200,23 @@ O desdobramento das metas conceituais gerou interrogações analíticas focadas 
 \toprule
 \textbf{Objetivo} & \textbf{ID} & \textbf{Questão Operacional} & \textbf{Hipótese Preditiva} \\
 \midrule
-\textbf{G1} & Q1.1 & A interface gráfica se redimensiona sem sobreposições em telas compactas? & \textbf{H1.1:} Espera-se que telas abaixo de 5'' apresentem sobreposições pontuais no mapa. \\
-(Adaptab.) & Q1.2 & O aplicativo executa sem erros críticos de compatibilidade em sistemas legados? & \textbf{H1.2:} Espera-se pleno funcionamento nas versões testadas do Android. \\
+\textbf{G1} & Q1.1 & A interface se redimensiona sem sobreposições ou cortes em telas compactas, outras orientações e fontes ampliadas? & \textbf{H1.1:} $M_{1.1} < 1{,}00$: ao menos um caso apresenta sobreposição no mapa. \\
+(Adaptab.) & Q1.2 & O aplicativo executa sem erros de compatibilidade em diferentes versões do Android? & \textbf{H1.2:} $M_{1.2} = 1{,}00$ nas versões testadas. \\
 \midrule
-\textbf{G2} & Q2.1 & O processo de instalação nas lojas oficiais ocorre sem fricção ou corrompimento? & \textbf{H2.1:} Espera-se sucesso de 100\% nas instalações limpas oficiais. \\
-(Instalab.) & Q2.2 & O aplicativo remove totalmente seus dados temporários após a desinstalação? & \textbf{H2.2:} Espera-se que o sistema deixe vestígios menores em \textit{cache} no armazenamento. \\
+\textbf{G2} & Q2.1 & A instalação pela loja oficial ocorre na primeira tentativa, sem erro? & \textbf{H2.1:} $M_{2.1} = 1{,}00$. \\
+(Instalab.) & Q2.2 & O aplicativo evita arquivos residuais após a desinstalação? & \textbf{H2.2:} $M_{2.2} < 1{,}00$: ao menos um ciclo deixa resíduo. \\
 \midrule
-\textbf{G3} & Q3.1 & O aplicativo evita encerramentos forçados (\textit{crashes}) durante sessões ativas? & \textbf{H3.1:} Espera-se alta estabilidade geral, com falhas em picos de dados. \\
-(Maturid.) & Q3.2 & O sistema previne congelamentos prolongados de tela (\textit{ANRs})? & \textbf{H3.2:} Espera-se ocorrência pontual de travamentos leves ao sincronizar bases. \\
+\textbf{G3} & Q3.1 & O aplicativo evita encerramentos forçados (\textit{crashes}) durante sessões ativas? & \textbf{H3.1:} $M_{3.1} \geq 0{,}95$. \\
+(Maturid.) & Q3.2 & O aplicativo previne congelamentos superiores a 5 segundos? & \textbf{H3.2:} $M_{3.2} \geq 0{,}95$. \\
 \midrule
-\textbf{G4} & Q4.1 & O aplicativo trata de forma adequada quedas momentâneas de conexão? & \textbf{H4.1:} Esperam-se telas de carregamento infinito por carência de modo \textit{offline}. \\
-(Tol. Falhas) & Q4.2 & O sistema reage apropriadamente à ausência ou desativação de sinal de GPS? & \textbf{H4.2:} Espera-se emissão de alertas visuais claros para reativar serviços. \\
+\textbf{G4} & Q4.1 & O aplicativo trata quedas de conexão e retoma a operação? & \textbf{H4.1:} $M_{4.1} < 0{,}85$, por ausência de modo \textit{offline}. \\
+(Tol. Falhas) & Q4.2 & O aplicativo reage adequadamente à ausência de GPS? & \textbf{H4.2:} $M_{4.2} \geq 0{,}85$. \\
 \midrule
-\textbf{G5} & Q5.1 & As previsões de horários de chegada refletem com precisão a realidade? & \textbf{H5.1:} Espera-se margem de divergência tolerável de poucos minutos. \\
-(Correção) & Q5.2 & A geolocalização dos veículos no mapa coincide com a posição espacial real? & \textbf{H5.2:} Espera-se exatidão satisfatória, sujeita a limitações de hardware externo. \\
+\textbf{G5} & Q5.1 & As previsões de chegada refletem a aproximação física do ônibus? & \textbf{H5.1:} erro mediano de até 5 minutos. \\
+(Correção) & Q5.2 & A posição de ônibus e paradas no mapa coincide com a posição real? & \textbf{H5.2:} $M_{5.2} \geq 0{,}85$ para paradas; menor para veículos. \\
 \midrule
-\textbf{G6} & Q6.1 & O catálogo de fluxos e tarefas essenciais executa de ponta a ponta sem barreiras? & \textbf{H6.1:} Espera-se que módulos principais operem sem falhas estruturais. \\
-(Completude) & Q6.2 & A base de dados de linhas está plenamente sincronizada com a Semob? & \textbf{H6.2:} Espera-se cobertura integral e correta das linhas troncais cadastradas. \\
+\textbf{G6} & Q6.1 & As tarefas essenciais executam de ponta a ponta com sucesso? & \textbf{H6.1:} $M_{6.1} = 1{,}00$. \\
+(Completude) & Q6.2 & A base de linhas e itinerários corresponde à da Semob-DF? & \textbf{H6.2:} $M_{6.2} \geq 0{,}95$. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -224,98 +224,38 @@ O desdobramento das metas conceituais gerou interrogações analíticas focadas 
 \subsection{Definição das Métricas: Cálculo, Fonte e Coleta}
 \label{sec:metricas}
 
-As métricas quantitativas respondem diretamente às questões operacionais, fundamentadas na ISO/IEC 25023. Com exceção das métricas baseadas em tempo, utilizam-se razões normalizadas entre 0 e 1.
+As métricas respondem às questões operacionais e adaptam medidas da ISO/IEC 25023~\cite{iso25023} (Tabela~\ref{tab:metricas}). Onze são proporções entre 0 e 1, nas quais maior é melhor; a M5.1 é um erro em minutos, no qual menor é melhor. As definições completas de variáveis, escalas, regras de contagem e procedimentos de coleta estão na GitPage do projeto~\cite{fcte2026}.
 
-\begin{itemize}
-    \item \textbf{M1.1 --- Adaptabilidade de Hardware (Telas)} (Q1.1):
-    \begin{itemize}
-        \item \textit{Fórmula:} $Ts / Tt$ (Telas executadas sem sobreposição ou distorção / Total de telas testadas).
-        \item \textit{Fonte / Coleta:} Telas em emuladores e dispositivos físicos de diferentes dimensões; inspeção visual da interface.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M1.2 --- Adaptabilidade de SO} (Q1.2):
-    \begin{itemize}
-        \item \textit{Fórmula:} $Os / Ot$ (Versões de SO em que o aplicativo funciona sem erros / Total de versões testadas).
-        \item \textit{Fonte / Coleta:} Relatório de testes de compatibilidade; execução de fluxos críticos em diferentes versões suportadas.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M2.1 --- Sucesso de Instalação} (Q2.1):
-    \begin{itemize}
-        \item \textit{Fórmula:} $Is / It$ (Instalações concluídas na primeira tentativa / Total de tentativas).
-        \item \textit{Fonte / Coleta:} Logs de download/instalação; execução de ciclos controlados de instalação.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M2.2 --- Resíduo Pós-Desinstalação} (Q2.2):
-    \begin{itemize}
-        \item \textit{Fórmula:} $1 - (Dr / Dt)$ (1 - Tentativas que deixaram arquivos órfãos / Total de desinstalações).
-        \item \textit{Fonte / Coleta:} Gerenciamento de armazenamento interno; inspeção do diretório de dados após remoção limpa.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M3.1 --- Densidade de Falhas (\textit{Crashes})} (Q3.1):
-    \begin{itemize}
-        \item \textit{Fórmula:} $1 - (Fc / Et)$ (1 - Número de encerramentos forçados / Sessões de teste executadas).
-        \item \textit{Fonte / Coleta:} Logs de sistema e \textit{crash}; contagem de interrupções durante sessões padronizadas.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M3.2 --- Densidade de ANRs (Congelamentos)} (Q3.2):
-    \begin{itemize}
-        \item \textit{Fórmula:} $1 - (Fa / Et)$ (1 - Número de ocorrências de tela travada $>5$s / Sessões executadas).
-        \item \textit{Fonte / Coleta:} Logs de desempenho; monitoramento de respostas da UI durante carga.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M4.1 --- Evitação de Quebra (Conexão)} (Q4.1):
-    \begin{itemize}
-        \item \textit{Fórmula:} $Te / Tf$ (Tratamentos de exceção corretos exibindo aviso / Total de falhas de rede induzidas).
-        \item \textit{Fonte / Coleta:} Comportamento da interface; desligamento simulado de 4G/Wi-Fi durante consultas.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M4.2 --- Tratamento de Perda de GPS} (Q4.2):
-    \begin{itemize}
-        \item \textit{Fórmula:} $Gs / Gt$ (Reações apropriadas à desativação do GPS / Total de desativações induzidas).
-        \item \textit{Fonte / Coleta:} Mensagens de alerta e \textit{fallback}; desativação induzida do GPS durante rastreamento.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M5.1 --- Precisão de Tempo} (Q5.1):
-    \begin{itemize}
-        \item \textit{Fórmula:} $\text{mediana}(\lvert \text{Horário Observado} - \text{Horário Previsto} \rvert)$ (em minutos).
-        \item \textit{Fonte / Coleta:} Registros comparativos de tempo real vs. aplicativo; cronometragem \textit{in loco} da chegada física dos ônibus.
-        \item \textit{Interpretação:} Menor é melhor (minutos).
-    \end{itemize}
-
-    \item \textbf{M5.2 --- Correção de Dados (Mapa)} (Q5.2):
-    \begin{itemize}
-        \item \textit{Fórmula:} $Ps / Pt$ (Paradas e veículos na posição exata / Total verificado em amostra).
-        \item \textit{Fonte / Coleta:} Inspeção cartográfica; validação \textit{in loco} da geolocalização.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M6.1 --- Cobertura de Tarefas Essenciais} (Q6.1):
-    \begin{itemize}
-        \item \textit{Fórmula:} $1 - (Tf / Tt)$ (1 - Tarefas essenciais que falham / Total de tarefas do catálogo).
-        \item \textit{Fonte / Coleta:} Relatórios de execução do catálogo de testes funcionais.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-
-    \item \textbf{M6.2 --- Completude do Banco} (Q6.2):
-    \begin{itemize}
-        \item \textit{Fórmula:} $Lc / Lt$ (Linhas reais da Semob encontradas no aplicativo / Amostra testada).
-        \item \textit{Fonte / Coleta:} Documentação oficial cruzada com catálogo do sistema; auditoria de linhas urbanas.
-        \item \textit{Interpretação:} Maior é melhor (0 a 1).
-    \end{itemize}
-\end{itemize}
+\begin{table}[H]
+\centering
+\caption{Métricas, fórmulas e fontes dos dados. Fonte: elaboração própria (2026).}
+\label{tab:metricas}
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.1cm} >{\raggedright\arraybackslash}p{4.4cm} X}
+\toprule
+\textbf{Métrica (questão)} & \textbf{Fórmula} & \textbf{Fonte e coleta} \\
+\midrule
+M1.1 Adaptabilidade de Hardware (Q1.1) & $T_s/T_t$: casos tela $\times$ configuração aprovados / avaliados & Capturas de tela em aparelhos e emuladores \\
+M1.2 Adaptabilidade de SO (Q1.2) & $O_s/O_t$: versões aprovadas em todos os fluxos / avaliadas & Execução dos fluxos críticos por versão do Android \\
+M2.1 Sucesso de Instalação (Q2.1) & $I_s/I_t$: ciclos concluídos na 1ª tentativa / ciclos & Ciclos de instalação limpa pela loja oficial \\
+M2.2 Resíduo Pós-Desinstalação (Q2.2) & $1 - D_r/D_t$: desinstalações com resíduo / inspecionadas & Inspeção do armazenamento antes e depois \\
+M3.1 Sessões sem \textit{Crashes} (Q3.1) & $1 - S_c/S_t$: sessões com \textit{crash} / sessões & Sessões padronizadas, gravação e \textit{logs} \\
+M3.2 Sessões sem Congelamentos (Q3.2) & $1 - S_a/S_t$: sessões com congelamento $> 5$~s / sessões & Gravação com marcação temporal \\
+M4.1 Mitigação de Perda de Conexão (Q4.1) & $R_s/R_t$: interrupções tratadas / induzidas & Interrupção induzida da rede, com gravação \\
+M4.2 Tratamento de Perda de GPS (Q4.2) & $G_s/G_t$: desativações tratadas / induzidas & Desativação induzida da localização \\
+M5.1 Precisão de Tempo (Q5.1) & $\mathrm{mediana}(\lvert t^{obs}_i - t^{prev}_i \rvert)$, em minutos & Previsão do aplicativo e chegada observada em campo \\
+M5.2 Correção de Dados do Mapa (Q5.2) & $P_s/P_t$: posições com $d_i \leq \varepsilon$ / observadas & Posição no aplicativo e referência de campo \\
+M6.1 Cobertura de Tarefas Essenciais (Q6.1) & $1 - F_f/F_t$: tarefas que falham / tarefas do catálogo & Execução do catálogo de tarefas \\
+M6.2 Completude do Banco (Q6.2) & $L_c/L_t$: itens oficiais encontrados / auditados & Amostra do catálogo da Semob-DF e consultas ao aplicativo \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \subsection{Níveis de Pontuação e Critérios de Julgamento}
 \label{sec:julgamento}
 
-Os patamares de pontuação (Tabelas~\ref{tab:escala_notas} e~\ref{tab:limites_pontuacao}) foram definidos previamente à coleta para garantir objetividade. O veredito por objetivo (Tabela~\ref{tab:criterio_conservador}) adota um critério conservador (pior nota obtida entre suas métricas filhas), evitando que médias ocultem falhas críticas~\cite{deissenboeck2009}.
+Os patamares de pontuação (Tabelas~\ref{tab:escala_notas} e~\ref{tab:limites_pontuacao}) foram definidos previamente à coleta para garantir objetividade. O veredito por objetivo (Tabela~\ref{tab:criterio_conservador}) adota um critério conservador (pior nota obtida entre suas métricas filhas), evitando que médias ocultem falhas críticas.
 
 \begin{table}[H]
 \centering
@@ -345,7 +285,7 @@ Os patamares de pontuação (Tabelas~\ref{tab:escala_notas} e~\ref{tab:limites_p
 \midrule
 \textbf{M1.1 / M1.2} (Adaptabilidade) & 1,00 & $\geq$ 0,90 & $\geq$ 0,75 & $<$ 0,75 \\
 \textbf{M2.1 / M2.2} (Instalação/Desinstalação) & 1,00 & $\geq$ 0,95 & $\geq$ 0,85 & $<$ 0,85 \\
-\textbf{M3.1 / M3.2} (\textit{Crashes} / \textit{ANRs}) & $\geq$ 0,99 & $\geq$ 0,95 & $\geq$ 0,90 & $<$ 0,90 \\
+\textbf{M3.1 / M3.2} (\textit{Crashes} / congelamentos) & $\geq$ 0,99 & $\geq$ 0,95 & $\geq$ 0,90 & $<$ 0,90 \\
 \textbf{M4.1 / M4.2} (Tolerância a Falhas) & 1,00 & $\geq$ 0,85 & $\geq$ 0,70 & $<$ 0,70 \\
 \textbf{M5.1} (Precisão de Tempo) & $\leq$ 2 min & $\leq$ 5 min & $\leq$ 10 min & $>$ 10 min \\
 \textbf{M5.2} (Correção Espacial do Mapa) & $\geq$ 0,95 & $\geq$ 0,85 & $\geq$ 0,70 & $<$ 0,70 \\
@@ -358,7 +298,7 @@ A determinação das metas numéricas e das faixas de decisão fundamenta-se nos
 
 No âmbito da Portabilidade, os limiares diferenciam a flexibilidade de execução do rigor de instalação. Para Adaptabilidade ($M_{1.1}$ e $M_{1.2}$), a faixa satisfatória ($\geq 0,90$) e o limiar crítico ($< 0,75$) refletem a ampla diversidade de aparelhos e versões legadas de sistemas operacionais no Distrito Federal, evitando a exclusão digital de cidadãos com dispositivos de entrada. Já para Instalabilidade ($M_{2.1}$ e $M_{2.2}$), exige-se rigor superior: a faixa satisfatória é $\geq 0,95$ e taxas inferiores a 85\% configuram nível crítico ($< 0,85$), pois falhas de instalação nas lojas oficiais ou acúmulo excessivo de resíduos pós-desinstalação penalizam severamente aparelhos populares com armazenamento interno restrito.
 
-Em relação à Confiabilidade ($M_{3.1}, M_{3.2}, M_{4.1}, M_{4.2}$), os critérios alinham-se aos patamares consolidados da indústria móvel, como as diretrizes de estabilidade do \textit{Google Play Android Vitals}, exigindo estabilidade superior a 99\% para excelência e taxas de congelamento (\textit{ANRs}) inferiores a 1\% ($M_{3.2} \geq 0,99$). A tolerância a falhas diante de perda transitória de conexão de rede ou sinal de GPS impõe patamares mínimos satisfatórios de 85\%, dado que oscilações de conectividade são rotineiras no tráfego urbano e o encerramento inesperado do aplicativo no momento do embarque impõe prejuízo direto ao passageiro na parada de ônibus.
+Em relação à Confiabilidade, os limiares de Maturidade ($M_{3.1}$ e $M_{3.2}$) tomam como ordem de grandeza os patamares do \textit{Android vitals} (1,09\% para \textit{crashes} e 0,47\% para ANRs percebidos pelo usuário), com a ressalva de que lá a unidade é o usuário ativo diário e aqui é a sessão; exige-se ao menos 0,99 para a nota~4 e 0,90 para evitar a nota~1. Para Tolerância a Falhas ($M_{4.1}$ e $M_{4.2}$), a nota~4 exige o tratamento de todas as falhas induzidas, e proporções abaixo de 0,70 configuram nível crítico, pois oscilações de conectividade são rotineiras no deslocamento urbano.
 
 Por fim, na dimensão de Adequação Funcional ($M_{5.1}$ a $M_{6.2}$), os limiares temporais de previsão de chegada foram calibrados conforme a dinâmica rodoviária do Distrito Federal: divergências de até 2 minutos caracterizam precisão em nível de aproximação física, e discrepâncias de até 5 minutos refletem flutuações normais de trânsito. Desvios medianos superiores a 10 minutos quebram a previsibilidade do serviço e ensejam penalização crítica. No aspecto espacial e funcional, imprecisões cartográficas superiores a 15\% no mapa reduzem a avaliação para nível insuficiente ($M_{5.2} < 0,85$), enquanto imprecisões severas superiores a 30\% ($M_{5.2} < 0,70$) ou a omissão de mais de 20\% das linhas ativas ($M_{6.2} < 0,80$) configuram patamar crítico, inviabilizando o propósito central do aplicativo.
 
@@ -471,14 +411,12 @@ texto foi unificado no português do Brasil.
 Em atendimento aos critérios de avaliação da disciplina, declaramos que
 utilizamos modelos de Inteligência Artificial (Gemini e ChatGPT) para
 auxiliar nas tarefas de formatação de tabelas, adequação do código para
-\LaTeX, estruturação das subcaracterísticas GQM e revisão gramatical e
+\LaTeX, estruturação do desdobramento GQM e revisão gramatical e
 ortográfica do texto. Todo o conteúdo gerado foi integralmente lido,
 validado, ajustado tecnicamente e consolidado pela equipe, incluindo a
 unificação da terminologia em português do Brasil e a conferência dos
 conceitos contra a norma ISO/IEC 25010, para garantir a coerência total com o
-escopo do projeto e o rigor da disciplina. Não há inclusão bruta de respostas
-das ferramentas, ícones de aplicativos ou alucinações não mitigadas neste
-documento.
+escopo do projeto e o rigor da disciplina. Não há inclusão bruta de respostas das ferramentas nem ícones neste documento.
 
 % ---------------------------------------------------------------------
 \begin{thebibliography}{99}
@@ -503,12 +441,6 @@ IEEE, 2009. p.~9--14.
 KHALID, H.; SHIHAB, E.; NAGAPPAN, M.; HASSAN, A. E. What Do Mobile App
 Users Complain About? \emph{IEEE Software}, v.~32, n.~3, p.~70--77,
 mai./jun. 2015.
-
-\bibitem{minelli2015}
-MINELLI, R.; MOCCI, A.; LANZA, M. I Know What You Did Last Summer: An
-Investigation of How Developers Spend Their Time. In: \emph{Proceedings of
-the 23rd IEEE International Conference on Program Comprehension (ICPC)}.
-Los Alamitos: IEEE, 2015. p.~25--35.
 
 \bibitem{iso25000}
 ISO/IEC. \emph{ISO/IEC 25000:2014} --- Systems and software Quality

@@ -4,7 +4,7 @@
 
 Este documento define o método de avaliação da qualidade do aplicativo móvel **DF no Ponto** (versão `5.25.1(1149)`, plataforma Android), correspondente à etapa de **projetar a avaliação** da norma **ISO/IEC 25040:2011**.[1]
 
-A avaliação adota uma abordagem técnica de **caixa preta** baseada no comportamento observável da interface e dos dados exibidos ao usuário, sem acesso ao código-fonte, *backend* ou APIs internas.[2] Para cobrir as 12 métricas definidas na Fase 2, o método combina duas estratégias complementares:
+A avaliação adota uma abordagem técnica de **caixa preta** baseada no comportamento observável da interface e dos dados exibidos ao usuário, sem acesso ao código-fonte, *backend* ou APIs internas.[2] Para cobrir as 12 métricas e os 6 objetivos de medição (G1 a G6) definidos na Fase 2 ([Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md)), o método combina duas estratégias complementares:
 
 * **Ensaios controlados em laboratório:** testes executados em aparelhos físicos e emuladores Android para verificar instalação, compatibilidade de tela/sistema operacional, estabilidade e comportamento diante de falhas simuladas de rede e GPS.
 * **Medições em campo:** observações realizadas em pontos de parada reais do Distrito Federal para confrontar os tempos de chegada e as posições exibidas pelo aplicativo com a operação real dos ônibus e com a base oficial da Semob-DF.
@@ -13,16 +13,16 @@ Este arquivo estabelece a estrutura do método e a lógica de coleta e contabili
 
 ## 2. Como o método funciona (fluxo de utilização)
 
-A aplicação do método segue um ciclo de quatro etapas para cada métrica (`M1.1` a `M6.2`):
+A aplicação do método segue um ciclo de quatro etapas para cada métrica (`M1.1` a `M6.2`), rastreadas a partir dos objetivos de medição e questões de [Planejamento e Objetivos](../fase2/planejamento-objetivos.md):
 
 1. **Preparação do ambiente:** configurar o dispositivo físico ou emulador (ou posicionar-se no ponto de parada definido) conforme os requisitos de [Recursos](3-recursos.md), garantindo que a versão `5.25.1(1149)` esteja instalada.
 2. **Execução dos roteiros:** seguir as instruções específicas de cada métrica descritas em [Procedimentos de Execução](2-procedimentos.md), percorrendo o catálogo fixo de telas, tarefas ou observações de campo.
 3. **Contabilização tabular:** registrar cada caso executado em uma matriz de contagem, classificando o resultado de forma objetiva (**Conforme**, **Não conforme / Defeito** ou **Não observável**). Itens não observáveis são excluídos do denominador válido, enquanto defeitos permanecem na amostra.
-4. **Cálculo e julgamento:** aplicar as fórmulas, escalas e limiares definidos em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md), julgando cada objetivo GQM pela pior nota entre suas métricas associadas.
+4. **Cálculo e julgamento:** aplicar as fórmulas, escalas e limiares definidos em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md), julgando cada objetivo GQM pela pior nota entre suas métricas associadas, conforme a regra de [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos).
 
 ## 3. Técnicas de avaliação por métrica
 
-A tabela abaixo resume a técnica aplicada a cada métrica da Fase 2 e como os resultados são contabilizados:
+A tabela abaixo resume a técnica aplicada a cada métrica da Fase 2 (especificadas em [Desdobramento GQM e Critérios de Julgamento](../fase2/metricas-julgamento.md) e vinculadas aos objetivos em [Planejamento e Objetivos](../fase2/planejamento-objetivos.md)) e como os resultados são contabilizados:
 
 | Objetivo / Decisão | Métrica | Técnica de avaliação | Unidade de contagem |
 | :--- | :--- | :--- | :--- |
@@ -60,6 +60,8 @@ Como a avaliação é de caixa preta e utiliza amostragem intencional delimitada
 
 [3] Equipe Carol Shaw. [Métricas e Critérios de Julgamento — Fase 2](../fase2/metricas-julgamento.md).
 
+[4] Equipe Carol Shaw. [Abordagem GQM e Metas de Avaliação — Fase 2](../fase2/planejamento-objetivos.md).
+
 ---
 
 ## Histórico de Versões
@@ -68,3 +70,4 @@ Como a avaliação é de caixa preta e utiliza amostragem intencional delimitada
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação do método de avaliação da Fase 3, com técnicas para as 12 métricas, rastreabilidade e ameaças à validade | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
 | 02 | Reestruturação do documento para focar na estrutura do método, contagem tabular com evidência por exceção | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
+| 03 | Inclusão de links cruzados para Abordagem GQM e Metas de Avaliação (Fase 2) e alinhamento de rastreabilidade | [João Capozzi](https://github.com/jonas3688) | 15/11/2026 | — | — |

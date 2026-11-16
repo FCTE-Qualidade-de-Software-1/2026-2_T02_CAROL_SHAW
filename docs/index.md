@@ -144,4 +144,4 @@ O escopo cobre o **aplicativo móvel (Android)**. A versão web, os tablets, o *
 | 01 | Criação da página inicial | Equipe Carol Shaw | 17/10/2026 | — | — |
 | 02 | Revisão geral: narrativa para leitor externo, badges de versão, links de repositório e release, tabela de fases | Equipe Carol Shaw | 26/10/2026 | — | — |
 | 03 | Alinhamento com a Fase 1: Instalabilidade na Portabilidade, papel da Pertinência e fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
-| 04 | Integração dos documentos da Fase 3: atualização da tabela de fases, status da Fase 3 e seção Como navegar neste site | [João Capozzi](https://github.com/jonas3688) | 15/11/2026 | — | — |
+| 04 | Integração dos documentos da Fase 3: atualização da tabela de fases, status da Fase 3 e seção Como navegar neste site | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |

@@ -14,7 +14,7 @@ Esta seção consolida a **Fase 2 (Especificação da Avaliação)**. O intuito 
 
 ## 1. Transição Metodológica: Da Fase 1 ao Ciclo GQM
 
-A especificação da Fase 2 não é um artefato isolado; ela estabelece a continuidade lógica e a operacionalização dos requisitos levantados na Fase 1. A transição dá-se pela conexão entre as necessidades dos *stakeholders*, as **Questões Norteadoras Transversais** e as **Decisões Estratégicas Apoiadas**:
+A especificação da Fase 2 não é um artefato isolado; ela estabelece a continuidade lógica e a operacionalização dos requisitos levantados na Fase 1 e conecta-se diretamente à sua execução prática no **[Planejamento da Avaliação (Fase 3)](../fase3/introducao.md)**. Enquanto a Fase 1 delimitou as decisões estratégicas e a Fase 2 definiu as metas e métricas GQM, a Fase 3 projeta os roteiros operacionais ([Método](../fase3/1-metodo.md), [Procedimentos](../fase3/2-procedimentos.md), [Recursos](../fase3/3-recursos.md) e [Cronograma](../fase3/4-cronograma.md)) necessários para a coleta de dados que ocorrerá na Fase 4. A transição dá-se pela conexão entre as necessidades dos *stakeholders*, as **Questões Norteadoras Transversais** e as **Decisões Estratégicas Apoiadas**:
 
 ![Diagrama Transição Metodológica: Da Fase 1 ao Ciclo GQM](imagens/GraficoTransicao.jpeg)
 
@@ -54,7 +54,7 @@ A escolha de cada métrica não é arbitrária: ela deriva de um objetivo, respo
 
 ## 3. Visão Geral do Planejamento GQM
 
-Para abranger as necessidades mapeadas na Fase 1, o escopo foi desdobrado em **6 objetivos de medição** (*Goals*), estruturados em estrita consonância com as Questões Norteadoras e as Decisões Apoiadas:
+Para abranger as necessidades mapeadas na Fase 1, o escopo foi desdobrado em **6 objetivos de medição** (*Goals*), estruturados em estrita consonância com as Questões Norteadoras e as Decisões Apoiadas. Cada objetivo e métrica possui sua técnica de ensaio ou medição em campo projetada no **[Método de Avaliação da Fase 3](../fase3/1-metodo.md#3-tecnicas-de-avaliacao-por-metrica)**:
 
 | Objetivo | Questão Norteadora | Decisão Apoiada | Característica / Subcaracterística (ISO 25010) | Questões Operacionais | Métricas (ISO 25023) |
 | :---: | :---: | :---: | :--- | :---: | :--- |
@@ -91,7 +91,7 @@ A ISO/IEC 25023 define medidas genéricas, em geral razões do tipo $X = A/B$. A
 
 ## 4. Metas de Medição (Objetivos GQM)
 
-Os objetivos de medição foram formalizados utilizando o template clássico do GQM, explicitando a transição direta das prioridades da Fase 1 e o encadeamento entre cada objetivo, suas questões operacionais e suas métricas:
+Os objetivos de medição foram formalizados utilizando o template clássico do GQM, explicitando a transição direta das prioridades da Fase 1 e o encadeamento entre cada objetivo, suas questões operacionais e suas métricas. A forma de medição prática de cada objetivo é projetada no **[Método de Avaliação da Fase 3](../fase3/1-metodo.md)** e detalhada nos **[Procedimentos de Execução](../fase3/2-procedimentos.md)**:
 
 ### <a id="g1"></a>G1 — Portabilidade (Adaptabilidade) · *Orientado por [QN1](#qn1) e D1*
 | Parâmetro do Template | Especificação do Alvo |
@@ -246,6 +246,7 @@ O desdobramento das metas conceituais resultou em 12 questões operacionais acom
 - **W3C.** *Web Content Accessibility Guidelines (WCAG) 2.1* — critério 1.4.4, Redimensionar texto. Disponível em: <https://www.w3.org/TR/WCAG21/>.
 - **WATKINS, Kari E.; FERRIS, Brian; BORNING, Alan; RUTHERFORD, G. Scott; LAYTON, David.** Where Is My Bus? Impact of mobile real-time information on the perceived and actual wait time of transit riders. Transportation Research Part A, v. 45, n. 8, p. 839–848, 2011.
 - **ISO/IEC 25040:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
+- **Equipe Carol Shaw.** *Fase 3 — Método de Avaliação*. Disponível em: [Método de Avaliação](../fase3/1-metodo.md).
 
 ---
 
@@ -258,3 +259,4 @@ O desdobramento das metas conceituais resultou em 12 questões operacionais acom
 | 03 | Inclusão da seção 3.1, dos nomes e descrições das métricas nas seções 3, 4 e 5 e das referências correspondentes | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 15/11/2026  |
 | 04 | Correção do número de atividades do processo de avaliação da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss)| 15/11/2026 |
 | 05 | Alinhamento das questões do GQM aos objetivos e adição de links internos| [Cristiano Morais](https://github.com/CristianoMoraiss) | 15/11/2026 | — | — |
+| 06 | Inclusão de links cruzados e rastreabilidade bidirecional com a Fase 3 (Planejamento, Método, Procedimentos e Recursos) | [João Capozzi](https://github.com/jonas3688) | 15/11/2026 | — | — |

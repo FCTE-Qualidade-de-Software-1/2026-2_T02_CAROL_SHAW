@@ -8,16 +8,16 @@
 
 <p align="center">
   <img alt="Versão" src="https://img.shields.io/badge/versão-v1.0--E1-pink"/>
-  <img alt="Atualização" src="https://img.shields.io/badge/atualizado-26%2F10%2F2026-pink"/>
-  <img alt="Fase" src="https://img.shields.io/badge/fase-Fase%201%20e%202-pink"/>
-  <img alt="Status" src="https://img.shields.io/badge/status-Entrega%201%20concluída-pink"/>
+  <img alt="Atualização" src="https://img.shields.io/badge/atualizado-15%2F11%2F2026-pink"/>
+  <img alt="Fase" src="https://img.shields.io/badge/fase-Fases%201%2C%202%20e%203-pink"/>
+  <img alt="Status" src="https://img.shields.io/badge/status-Fase%203%20conclu%C3%ADda-pink"/>
 </p>
 
 ---
 
 ## Sobre este site
 
-Este site é o **portal oficial de documentação** do projeto de avaliação de qualidade do aplicativo **DF no Ponto**, conduzido pela equipe **Carol Shaw** como Trabalho Final da disciplina Qualidade de Software 1. Aqui você encontra todos os artefatos produzidos nas Fases 1 e 2 do processo de avaliação de produto de software recomendado pela norma **ISO/IEC 25040**, com rastreabilidade completa entre as decisões tomadas.
+Este site é o **portal oficial de documentação** do projeto de avaliação de qualidade do aplicativo **DF no Ponto**, conduzido pela equipe **Carol Shaw** como Trabalho Final da disciplina Qualidade de Software 1. Aqui você encontra todos os artefatos produzidos nas Fases 1, 2 e 3 do processo de avaliação de produto de software recomendado pela norma **ISO/IEC 25040**, com rastreabilidade completa entre as decisões tomadas.
 
 Avaliamos o aplicativo **DF no Ponto** — ferramenta oficial de consulta ao Sistema de Transporte Público Coletivo do Distrito Federal (STPC-DF) — sob a perspectiva do usuário final, com foco em três características de qualidade da norma **ISO/IEC 25010**: **Adequação Funcional**, **Confiabilidade** e **Portabilidade**. A escolha dessas três características foi derivada diretamente das necessidades dos stakeholders mapeados na Fase 1, conforme detalhado nas seções seguintes.
 
@@ -76,14 +76,14 @@ Diante desse cenário, a equipe **Carol Shaw** estruturou uma avaliação rigoro
 | :-: | :-- | :-: |
 | **Fase 1** | Estabelecimento dos requisitos da avaliação (propósito, stakeholders, escopo, modelo de qualidade) | ✅ Concluída |
 | **Fase 2** | Especificação da avaliação (objetivos GQM, questões, hipóteses, métricas e critérios de julgamento) | ✅ Concluída |
-| **Fase 3** | Planejamento da avaliação (método, recursos, ambiente e cronograma) | ⏳ Prevista para a Entrega 2 |
+| **Fase 3** | Planejamento da avaliação (método, recursos, ambiente e cronograma) | ✅ Concluída |
 | **Fase 4** | Execução e julgamento (coleta de dados, análise, conclusões e ações de melhoria) | ⏳ Prevista para a Entrega 2 |
 
 ---
 
 ## Como navegar neste site
 
-A documentação está organizada em duas grandes seções, que espelham as fases do processo de avaliação:
+A documentação está organizada em seções que espelham as fases do processo de avaliação:
 
 ### 📌 [Fase 1 — Requisitos da Avaliação](fase1/introducao.md)
 
@@ -92,6 +92,10 @@ Apresenta o propósito da avaliação, os requisitantes e partes interessadas, a
 ### 📌 [Fase 2 — Especificação da Avaliação](fase2/planejamento-objetivos.md)
 
 Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três características priorizadas na Fase 1, formalizando seis objetivos de medição, doze questões operacionais com hipóteses preditivas e doze métricas quantitativas com seus respectivos critérios de julgamento. Inclui também a representação gráfica da hierarquia GQM completa.
+
+### 📌 [Fase 3 — Planejamento da Avaliação](fase3/introducao.md)
+
+Define o projeto da avaliação conforme a ISO/IEC 25040, transformando a especificação da Fase 2 em um plano operacional executável: estabelece o método de avaliação de caixa preta com as técnicas e unidades de contagem para as 12 métricas, as instruções detalhadas e roteiros de execução, o levantamento de recursos (dispositivos físicos, emuladores e ferramentas) e o cronograma planejado para a coleta de dados.
 
 > 💡 **Dica de leitura:** comece pela [Introdução da Fase 1](fase1/introducao.md) e siga pela ordem do menu. As seções foram escritas para serem lidas em sequência, com referências cruzadas entre si.
 
@@ -140,3 +144,4 @@ O escopo cobre o **aplicativo móvel (Android)**. A versão web, os tablets, o *
 | 01 | Criação da página inicial | Equipe Carol Shaw | 17/10/2026 | — | — |
 | 02 | Revisão geral: narrativa para leitor externo, badges de versão, links de repositório e release, tabela de fases | Equipe Carol Shaw | 26/10/2026 | — | — |
 | 03 | Alinhamento com a Fase 1: Instalabilidade na Portabilidade, papel da Pertinência e fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
+| 04 | Integração dos documentos da Fase 3: atualização da tabela de fases, status da Fase 3 e seção Como navegar neste site | [João Capozzi](https://github.com/jonas3688) | 15/11/2026 | — | — |

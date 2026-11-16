@@ -25,6 +25,7 @@ O DF no Ponto foi desenvolvido com foco em:
 - **Precisão Geográfica:** Integração com mapas e sistemas GPS da frota.
 - **Desempenho:** Respostas rápidas em redes móveis (3G/4G/5G).
 
+<a id="alvo-da-avaliacao"></a>
 ## 4. Alvo da Avaliação
 
 Conforme a ISO/IEC 25040, a avaliação identifica o produto e as partes do produto que serão avaliadas. Neste projeto, o alvo é o **aplicativo móvel** do DF no Ponto, observado como caixa preta, sem acesso ao código-fonte.

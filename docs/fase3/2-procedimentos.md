@@ -345,3 +345,105 @@ Esta seção estabelece os procedimentos operacionais para as métricas da carac
    - **Reprovado:** Encerramento inesperado, mapa inoperante ou travamento generalizado da interface.
 
 ---
+
+## 10. Roteiros detalhados de execução — Adequação Funcional (G5 e G6)
+
+Esta seção estabelece os procedimentos para as métricas da característica **Adequação Funcional** (subcaracterísticas *Exatidão Funcional* e *Completude Funcional*), correspondendo à **Decisão D3** (viabilidade do aplicativo como fonte de informação fidedigna para a mobilidade urbana da população).
+
+---
+
+### 10.1 Roteiro M5.1 — Precisão de tempo de chegada
+
+* **Objetivo e métrica:** $e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}$ e $M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_n)$ (Erro absoluto mediano entre a chegada prevista no app e o instante real de chegada do ônibus, em minutos).
+* **Escopo do ensaio:** Medição direta em campo realizada em pontos de parada reais do Distrito Federal (ex.: Rodoviária do Plano Piloto, paradas de integração de Taguatinga e EPTG).
+* **Instrumentos necessários:**
+  - Dispositivo com o DF no Ponto conectado à internet;
+  - Relógio de referência com sincronização automática de horário via rede/NTP (Hora Oficial de Brasília / `time.google.com`);
+  - Prancheta ou formulário de campo para anotação imediata.
+
+#### Procedimento de ensaio passo a passo
+
+1. **Posicionamento e prontidão:** O avaliador posiciona-se em segurança no ponto de parada selecionado e abre o aplicativo DF no Ponto na aba da referida parada.
+2. **Registro da previsão inicial ($t_i^{prev}$):**
+   - Localizar a linha-alvo na listagem de previsões da parada;
+   - Anotar o número de prefixo/linha e o horário exato estimado exibido pelo aplicativo para a chegada do veículo ($t_i^{prev}$ em minutos ou carimbo de hora/minuto);
+   - Registrar captura de tela imediata do aplicativo exibindo a estimativa e o relógio do sistema.
+3. **Observação da chegada real ($t_i^{obs}$):**
+   - Aguardar a aproximação física do ônibus da linha correspondente na baia de parada;
+   - No exato instante em que o veículo para e abre as portas para embarque/desembarque de passageiros, registrar o carimbo temporal de chegada ($t_i^{obs}$);
+   - Fotografar o ônibus com o letreiro e prefixo do veículo visíveis em frente à parada.
+4. **Cálculo do erro absoluto ($e_i$):**
+   - Calcular a diferença absoluta em minutos: $e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}$.
+5. **Tratamento de desvios:**
+   - Se o ônibus chegar e o aplicativo não tiver listado a previsão previamente, registrar como anomalia de completude em M6.1;
+   - Se a previsão do aplicativo expirar (ex.: sumir da tela) e o ônibus não tiver chegado, registrar o caso com nota de discrepância.
+6. **Registro de evidência:** Par de arquivos fotográficos comprovando a previsão no aplicativo e a chegada na parada (`EVI_M5.1_PARxx_APP.png` e `EVI_M5.1_PARxx_REAL.jpg`).
+
+---
+
+### 10.2 Roteiro M5.2 — Correção de dados do mapa (tolerância espacial)
+
+* **Objetivo e métrica:** $M_{5.2} = \frac{P_s}{P_t}$ (Proporção de pontos de parada e posições de veículos dentro da tolerância espacial previamente fixada $\varepsilon = 100\text{ metros}$).
+* **Fundamento matemático:** Distância geodésica $d_i$ calculada pela fórmula de Haversine entre a coordenada exibida no app $(\phi_1, \lambda_1)$ e a coordenada real de referência $(\phi_2, \lambda_2)$:
+  $$d_i = 2 R \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos(\phi_1)\cos(\phi_2)\sin^2\left(\frac{\Delta\lambda}{2}\right)}\right)$$
+  onde $R \approx 6.371.000\text{ m}$ (raio médio da Terra).
+* **Escopo do ensaio:** Campo e laboratório contra a base georreferenciada oficial de paradas da Semob-DF.
+
+#### Procedimento de ensaio passo a passo
+
+1. **Seleção do elemento de verificação:**
+   - *Caso Estático (Paradas):* Selecionar uma parada na base cadastral oficial da Semob-DF com coordenadas conhecidas $(\phi_2, \lambda_2)$ medidas com GPS de alta precisão em campo.
+   - *Caso Dinâmico (Veículo):* No momento em que um ônibus estiver parado em um ponto conhecido, observar o ícone do veículo plotado no mapa do aplicativo.
+2. **Extração das coordenadas no app:** Obter a coordenada $(\phi_1, \lambda_1)$ indicada no aplicativo para o mesmo elemento (por geocodificação reversa ou medição na malha cartográfica).
+3. **Cálculo do desvio espacial:** Aplicar a equação geodésica de Haversine para computar a distância $d_i$ em metros.
+4. **Julgamento:**
+   - **Aprovado ($P_s$):** A distância calculada atende à tolerância: $d_i \le 100{,}0\text{ metros}$.
+   - **Reprovado:** A distância excede o raio aceitável: $d_i > 100{,}0\text{ metros}$ (parada plotada na quadra errada ou veículo desenhado a quilômetros da localização real).
+5. **Registro de evidência:** Captura de tela do mapa do aplicativo sobreposta à malha de referência e planilha de cálculo geodésico (`EVI_M5.2_CASOxx_...png` e `.csv`).
+
+---
+
+### 10.3 Roteiro M6.1 — Cobertura de tarefas essenciais
+
+* **Objetivo e métrica:** $M_{6.1} = 1 - \frac{F_f}{F_t}$ (Proporção de tarefas essenciais do catálogo padrão concluídas com êxito de ponta a ponta).
+* **Catálogo de tarefas essenciais do usuário ($F_t = 6$ tarefas nucleares):**
+  - `T-01`: Pesquisar linha por número de código (ex.: "0.108") e acessar seus detalhes.
+  - `T-02`: Visualizar o traçado geográfico do itinerário completo no mapa (Ida e Volta).
+  - `T-03`: Localizar uma parada próxima através do mapa interativo.
+  - `T-04`: Consultar o quadro de horários programados de uma linha.
+  - `T-05`: Adicionar uma linha ou ponto de parada à lista de Favoritos do aplicativo.
+  - `T-06`: Visualizar a posição em tempo real dos veículos em trânsito de uma linha selecionada.
+
+#### Procedimento de ensaio passo a passo
+
+1. **Preparação:** Iniciar o DF no Ponto com dados limpos de cache e conectividade de rede ativa.
+2. **Execução sequencial:** Executar cada uma das tarefas nucleares `T-01` a `T-06` exatamente como um cidadão usuário do transporte público.
+3. **Critérios de validação:**
+   - A tarefa deve ser concluída sem erros impeditivos, travamentos ou ausência de dados cruciais para a finalidade da tela;
+   - O resultado visual exibido deve condizer com o objetivo esperado da ação.
+4. **Registro de evidência:** Gravação de tela contínua da execução do catálogo de tarefas (`EVI_M6.1_CATALOGO_...mp4`).
+5. **Contabilização:**
+   - **Aprovado:** A tarefa foi executada integralmente até seu objetivo final.
+   - **Reprovado ($F_f$):** A tarefa não pôde ser completada devido a botão inoperante, tela em branco permanente, erro genérico ou ausência da função.
+
+---
+
+### 10.4 Roteiro M6.2 — Completude do banco de dados
+
+* **Objetivo e métrica:** $M_{6.2} = \frac{L_c}{L_t}$ (Proporção de linhas e itinerários da amostra oficial da Semob-DF encontrados no aplicativo com correspondência cadastral correta).
+* **Amostragem oficial de referência ($L_t$):** Conjunto amostral balanceado de **50 linhas representativas** do Distrito Federal, extraídas da tabela oficial aberta de linhas da Semob-DF, contemplando diferentes bacias operacionais (Bacia 1 a Bacia 5), linhas circulares, troncais e alimentadoras.
+
+#### Procedimento de ensaio passo a passo
+
+1. **Preparação da amostra:** Dispor da planilha contendo a relação oficial das 50 linhas selecionadas na Fase 2 com seus atributos oficiais: Código da Linha, Nome da Linha, Sentidos cadastrados (Ida/Volta ou Circular) e Trajeto.
+2. **Consulta no aplicativo:** Para cada linha da amostra oficial:
+   - Digitar o código da linha no campo de pesquisa do DF no Ponto;
+   - Verificar se a linha é retornada nos resultados de busca;
+   - Abrir o detalhe da linha e verificar se os sentidos oficiais de operação estão presentes;
+   - Verificar se o itinerário desenhado no mapa corresponde ao traçado homologado.
+3. **Contabilização do veredito:**
+   - **Aprovado ($L_c$):** A linha é localizada no aplicativo e apresenta código, denominação e sentidos coerentes com o cadastro oficial da Semob-DF.
+   - **Reprovado:** A linha não é localizada na busca, não carrega itinerário ou apresenta sentido faltante em relação à base pública oficial.
+4. **Registro de evidência:** Captura de tela do resultado de busca e detalhe do itinerário para cada linha auditada da amostra (`EVI_M6.2_LINHAxxx_...png`).
+
+---

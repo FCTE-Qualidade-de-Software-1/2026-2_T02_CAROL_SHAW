@@ -8,7 +8,7 @@ edit_uri: edit/main/docs/
 
 extra:
   version_actual: v1.0 - E1
-  data_atualizacao: 26/10/2026
+  data_atualizacao: 16/11/2026
   release_e1: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1
   social:
     - icon: fontawesome/brands/github
@@ -77,7 +77,7 @@ copyright: >
   Carol Shaw - Qualidade de Software (2026.2) |
   <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank">Repositório</a> |
   <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1" target="_blank">Release E1</a> |
-  v1.0 - E1 | Atualizado em 26/10/2026
+  v1.0 - E1 | Atualizado em 16/11/2026
 
 nav:
   - Início: index.md
@@ -106,9 +106,10 @@ nav:
 
   - Fase 4:
       - Introdução: fase4/introducao.md
-      - Coleta de Dados: fase4/1-coleta.md
-      - Análise de Dados: fase4/2-analise.md
-      - Resultados e Conclusões: fase4/3-resultados.md
+      # As páginas abaixo voltam ao menu quando tiverem conteúdo (Entrega 2):
+      # - Coleta de Dados: fase4/1-coleta.md
+      # - Análise de Dados: fase4/2-analise.md
+      # - Resultados e Conclusões: fase4/3-resultados.md
 
   - Gestão do Projeto:
       - Visão Geral: gestao/visao-geral.md

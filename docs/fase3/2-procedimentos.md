@@ -6,7 +6,7 @@ Este documento estabelece as **instruções detalhadas de execução, roteiros d
 
 O propósito deste guia operacional é garantir a **autossuficiência, reprodutibilidade e auditabilidade** dos ensaios. Qualquer membro da equipe técnica ou avaliador independente deve ser capaz de seguir estes procedimentos de ponta a ponta e obter medições consistentes e comparáveis, alimentando as fórmulas das 12 métricas formalizadas na Fase 2 ([Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md)) sob o método definido em [Método de Avaliação](1-metodo.md) e utilizando os recursos listados em [Recursos](3-recursos.md).
 
-O documento também define os catálogos, as amostras e os parâmetros das 12 métricas, conforme o [Método de Avaliação](1-metodo.md) e as [fórmulas, unidades e faixas de pontuação da Fase 2](../fase2/metricas-julgamento.md). Os parâmetros, catálogos e amostragem constam nas seções 3 a 7; a gestão de evidências, os formulários e as regras de anomalia, nas seções 8 a 12; e os roteiros passo a passo, nas seções 13 a 15.
+O documento também define os catálogos, as amostras e os parâmetros das 12 métricas, conforme o [Método de Avaliação](1-metodo.md) e as [fórmulas, unidades e faixas de pontuação da Fase 2](../fase2/metricas-julgamento.md). Os parâmetros, catálogos e amostragem constam nas seções 3 a 7 e são a **fonte única dos valores**; a gestão de evidências, os formulários e as regras de anomalia estão nas seções 8 a 12; os roteiros passo a passo, nas seções 13 a 15, e o quadro síntese, na seção 16, apenas aplicam esses valores.
 
 Adota-se uma **amostra intencional**, dimensionada para a execução acadêmica e a resolução dos resultados. Os valores são decisões do projeto, não medições realizadas ou exigências numéricas das normas ISO.
 
@@ -222,18 +222,19 @@ Os artefatos de evidência coletados devem ser nomeados obrigatoriamente seguind
 $$\text{EVI\_[ID\_METRICA]\_[ID\_CASO]\_[DISPOSITIVO]\_[DATA\_HORA].[EXT]}$$
 
 - **ID_METRICA:** Código da métrica associada (ex.: `M1.1`, `M2.2`, `M5.1`).
-- **ID_CASO:** Identificador sequencial do caso de ensaio (ex.: `C01`, `C02`, `LINHA_0.108`).
+- **ID_CASO:** Identificador do caso conforme o catálogo da métrica (ex.: `T03-C01`, `TE05`, `SESSAO07`, `L12`).
 - **DISPOSITIVO:** Código do dispositivo físico ou emulador utilizado, conforme catalogado em [Recursos](3-recursos.md) (ex.: `DISP-01`, `EMU-01`).
 - **DATA_HORA:** Carimbo temporal no formato `YYYYMMDD_HHMMSS` (ex.: `20261116_143000`).
 - **EXT:** Extensão do arquivo conforme o tipo de artefato (`png`, `mp4`, `log`, `json`, `csv`).
 
-*Exemplo de registro fotográfico/print:* `EVI_M1.1_C03_DISP-01_20261116_091522.png`  
-*Exemplo de gravação de vídeo de sessão:* `EVI_M3.1_C01_DISP-02_20261116_100015.mp4`
+*Exemplo de registro fotográfico/print:* `EVI_M1.1_T03-C01_DISP-01_20261118_091522.png`  
+*Exemplo de gravação de vídeo de sessão:* `EVI_M3.1_SESSAO01_DISP-02_20261118_100015.mp4`
 
 ### 8.2 Repositório e armazenamento
 
-- As evidências brutas de grande volume (vídeos e capturas completas) devem ser arquivadas em diretório compartilhado em nuvem de acesso restrito da equipe (`/evidencias_fase3/`), mantendo integridade com hash SHA-256 gerado no momento do arquivamento.
-- Amostras ilustrativas de conformidade e falhas serão incluídas nos relatórios finais e artefatos de publicação da Fase 4.
+- As planilhas de coleta e as evidências de **todos os casos** (aprovados e reprovados) são versionadas no repositório da equipe, em `dados/fase4/<métrica>/`, de modo que cada linha da planilha aponte para o arquivo de evidência pelo campo `EVIDENCIA_REF`.
+- Vídeos que excedam o limite de tamanho do repositório ficam em pasta compartilhada da equipe; a planilha registra o link e o hash SHA-256 do arquivo, gerado no momento do arquivamento.
+- Evidências com dados de terceiros seguem a seção 9 antes de serem publicadas.
 
 ---
 
@@ -257,7 +258,7 @@ Para garantir a homogeneidade dos registros efetuados pelos múltiplos avaliador
 | :--- | :--- | :--- |
 | **ID_EXEC** | Alfanumérico | Identificador único da execução (ex.: `EXEC-M1.1-001`). |
 | **METRICA** | Código | Código da métrica avaliada (`M1.1` a `M6.2`). |
-| **CASO_ID** | Código | Identificador do caso de teste dentro do roteiro (ex.: `TC-M1.1-01`). |
+| **CASO_ID** | Código | Identificador do caso conforme o catálogo da métrica (ex.: `T03-C01`, `TE05`, `L12`). |
 | **AVALIADOR** | Texto | Nome ou identificador do responsável pela execução do ensaio. |
 | **DATA_HORA** | Timestamp | Data e horário de início da medição (`YYYY-MM-DD HH:MM`). |
 | **DISPOSITIVO** | Código | Dispositivo utilizado (`DISP-01`, `EMU-01`), conforme [Recursos](3-recursos.md). |
@@ -274,9 +275,9 @@ Para garantir a homogeneidade dos registros efetuados pelos múltiplos avaliador
 ### 10.2 Modelo estrutural da planilha de coleta
 
 ```csv
-ID_EXEC;METRICA;CASO_ID;AVALIADOR;DATA_HORA;DISPOSITIVO;VERSAO_SO;VERSAO_APP;PARAMETROS_ENTRADA;RESULTADO_OBSERVADO;VALOR_MEDIDO;STATUS;EVIDENCIA_REF;OBSERVACOES
-EXEC-001;M1.1;TC-M1.1-01;Avaliador 1;2026-11-16 10:00;DISP-01;Android 14;5.25.1(1149);Tela Inicial - Fonte Padrão;Layout íntegro sem sobreposição;1;Conforme;EVI_M1.1_TC01_DISP01.png;Nenhuma
-EXEC-002;M4.1;TC-M4.1-01;Avaliador 2;2026-11-16 10:30;DISP-01;Android 14;5.25.1(1149);Perda de conexão em consulta;Exibiu snackbar e reteve tela;1;Conforme;EVI_M4.1_TC01_DISP01.mp4;Retomada em 2.1s
+ID_EXEC;METRICA;CASO_ID;AVALIADOR;DATA_HORA;DISPOSITIVO;VERSAO_SO;VERSAO_APP;CONDICAO_CONEXAO;PARAMETROS_ENTRADA;RESULTADO_OBSERVADO;VALOR_MEDIDO;STATUS;EVIDENCIA_REF;OBSERVACOES
+EXEC-M1.1-001;M1.1;T01-C01;Avaliador 1;2026-11-18 10:00;DISP-01;Android 14 (API 34);5.25.1(1149);Wi-Fi;L01;Layout íntegro, sem sobreposição;1;Conforme;EVI_M1.1_T01-C01_DISP-01_20261118_100000.png;Nenhuma
+EXEC-M4.1-001;M4.1;ENSAIO01;Avaliador 2;2026-11-18 10:30;DISP-01;Android 14 (API 34);5.25.1(1149);4G/5G;Consulta de L01;Aviso em 2,1 s e retomada em 8,4 s;1;Conforme;EVI_M4.1_ENSAIO01_DISP-01_20261118_103000.mp4;Linhas ilustrativas, não são dados coletados
 ```
 
 ---
@@ -329,333 +330,284 @@ Para mitigar a variabilidade interobservador e garantir a clareza e precisão do
 
 ## 13. Roteiros detalhados de execução — Portabilidade (G1 e G2)
 
-Esta seção define os procedimentos operacionais para as métricas da característica **Portabilidade** (subcaracterísticas *Adaptabilidade* e *Capacidade de Instalação*), respondendo à **Decisão D1** (viabilidade de homologação e implantação no ecossistema Android).
+Esta seção define os procedimentos das métricas de **Portabilidade** (subcaracterísticas *Adaptabilidade* e *Instalabilidade*), que respondem à **Decisão D1**. Os catálogos, as amostras e os parâmetros são os das seções 3 a 7; os roteiros abaixo apenas descrevem como executá-los e não definem valores próprios.
 
 ---
 
 ### 13.1 Roteiro M1.1 — Adaptabilidade de hardware (telas)
 
-- **Objetivo e métrica:** $M_{1.1} = \frac{T_s}{T_t}$ (Proporção de combinações de tela × configuração aprovadas sem defeitos visuais impeditivos).
-- **Escopo do ensaio:** Laboratório (dispositivos físicos e emuladores do inventário de [Recursos](3-recursos.md)).
-- **Catálogo de telas avaliadas:**
-  1. `TELA-01`: Tela Principal / Mapa de Navegação;
-  2. `TELA-02`: Pesquisa de Linhas e Itinerários;
-  3. `TELA-03`: Detalhamento da Linha (trajeto e lista de paradas);
-  4. `TELA-04`: Detalhes do Ponto de Parada e Previsões;
-  5. `TELA-05`: Tela de Configurações / Informações do App.
-- **Fatores de variação de tela:**
-  - Orientação: Retrato (*portrait*).
-  - Escala de fonte: Padrão (100%) e Aumentada / Acessibilidade (130%).
-  - Densidades de tela: Pequena/Média (~320-360dp de largura) e Grande (~400-480dp de largura).
+- **Objetivo e métrica:** $M_{1.1} = \frac{T_s}{T_t}$ (proporção de casos tela × configuração aprovados).
+- **Ambiente:** laboratório, nos dispositivos e emuladores do inventário de [Recursos](3-recursos.md).
+- **Casos:** as cinco telas `T01` a `T05` nas quatro configurações `C01` a `C04` da [seção 3.2](#32-telas-e-configuracoes-m11), totalizando 20 casos identificados como `Txx-Cxx`.
+- **Entradas:** `L01` e `P01`, com ambos previamente salvos nos favoritos para `T05`.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Configuração inicial:** No dispositivo de teste, ajustar o tamanho da fonte do sistema para o valor do ensaio (100% ou 130%) nas configurações de acessibilidade do Android.
-2. **Inicialização:** Abrir o aplicativo DF no Ponto com dados limpos de sessão anterior.
-3. **Navegação sistemática:** Acessar sucessivamente as telas `TELA-01` a `TELA-05`. Em cada uma, realizar interações básicas de rolagem e toque nos botões principais.
-4. **Inspeção de conformidade:** Verificar se há:
-   - Texto truncado ou elipsado que oculte informação crítica (código de linha, horário, nome de parada);
-   - Sobreposição de elementos visuais (botão cobrindo campo de busca ou texto);
-   - Elemento interativo empurrado para fora da área visível e inacessível por rolagem.
-5. **Registro de evidência:** Capturar screenshot de cada tela testada (`EVI_M1.1_TELAxx_...png`).
+1. **Configuração:** aplicar no dispositivo ou emulador a configuração do caso (resolução e densidade, orientação e escala de fonte), usando a mesma versão do Android nas quatro configurações.
+2. **Inicialização:** abrir o DF no Ponto com rede e localização disponíveis.
+3. **Navegação:** abrir a tela do caso (`T01` a `T05`) e executar as interações necessárias à consulta: rolagem, toque nos controles principais e, em `T03`, movimentação e zoom do mapa.
+4. **Inspeção:** verificar se há texto cortado que oculte informação necessária (código da linha, horário, nome da parada), sobreposição de elementos ou controle inacessível, inclusive por rolagem.
+5. **Evidência:** capturar a tela de cada caso (`EVI_M1.1_Txx-Cxx_[DISPOSITIVO]_[DATA_HORA].png`), aprovado ou reprovado.
 6. **Contabilização:**
-   - **Aprovado ($T_s$):** A interface renderiza com layout íntegro, todas as informações essenciais estão legíveis e todos os botões e campos estão operacionais.
-   - **Reprovado:** Há corte, distorção, sobreposição ou inacessibilidade de elemento que impeça ou dificulte gravemente a tarefa.
+   - **Aprovado ($T_s$):** informações e controles necessários visíveis e utilizáveis, sem corte ou sobreposição impeditivos.
+   - **Reprovado:** corte, sobreposição ou inacessibilidade que impeça a tarefa da tela.
 
 ---
 
-### 13.2 Roteiro M1.2 — Adaptabilidade de SO (versões de Android)
+### 13.2 Roteiro M1.2 — Adaptabilidade de SO (versões do Android)
 
-- **Objetivo e métrica:** $M_{1.2} = \frac{O_s}{O_t}$ (Proporção de versões de sistema operacional aprovadas na execução dos fluxos críticos).
-- **Escopo do ensaio:** Laboratório em dispositivos físicos e emuladores cobrindo versões suportadas do Android (Android 9/10, Android 11/12, Android 13/14).
-- **Catálogo de fluxos críticos de verificação:**
-  - `FC-01`: Inicialização do app, solicitação e concessão de permissão de localização.
-  - `FC-02`: Pesquisa de linha pelo código numérico e renderização do itinerário no mapa.
-  - `FC-03`: Seleção de parada próxima e visualização das previsões de chegada.
-  - `FC-04`: Retorno da aplicação após segundo plano (*background resume*).
+- **Objetivo e métrica:** $M_{1.2} = \frac{O_s}{O_t}$ (proporção de versões aprovadas em todos os fluxos críticos).
+- **Ambiente:** laboratório, em dispositivos físicos e emuladores.
+- **Versões:** Android 9, 10, 11, 12 e 13 e a versão atual do aparelho físico, contando versões coincidentes uma única vez ([seção 3.3](#33-versoes-do-android-m12)).
+- **Fluxos críticos:** as tarefas `TE01` a `TE08` da [seção 3.1](#31-tarefas-essenciais-m61), com as mesmas entradas.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Preparação:** Selecionar o dispositivo configurado com a versão específica do Android a ser auditada.
-2. **Conexão e permissões:** Assegurar conexão com a internet ativa e GPS ativado em modo alta precisão.
-3. **Execução de fluxos:** Executar sequencialmente os fluxos críticos `FC-01`, `FC-02`, `FC-03` e `FC-04`.
-4. **Verificação de anomalias:** Observar se ocorrem exceções não tratadas, diálogos de incompatibilidade do SO, congelamentos de renderização ou falhas nas APIs nativas do Android.
-5. **Registro de evidência:** Gravação de tela contínua da execução dos quatro fluxos (`EVI_M1.2_ANDROIDxx_...mp4`).
+1. **Preparação:** selecionar o ambiente com a versão do Android a avaliar e instalar a versão `5.25.1(1149)` do aplicativo pela distribuição oficial.
+2. **Condições:** garantir rede ativa e localização disponível.
+3. **Execução:** executar `TE01` a `TE08` em sequência, preparando o estado de favoritos indicado em cada tarefa.
+4. **Observação:** registrar diálogos de incompatibilidade, recusa de instalação, encerramentos e erros impeditivos, anotando a causa observável.
+5. **Evidência:** gravação de tela contínua da execução (`EVI_M1.2_ANDROIDxx_[DISPOSITIVO]_[DATA_HORA].mp4`).
 6. **Contabilização:**
-   - **Aprovado ($O_s$):** A versão de SO é aprovada se e somente se **todos os 4 fluxos críticos** forem concluídos com pleno êxito, sem erro de compatibilidade.
-   - **Reprovado:** Falha impeditiva ou encerramento inesperado em qualquer um dos fluxos críticos na respectiva versão do SO.
+   - **Aprovado ($O_s$):** todas as oito tarefas concluídas sem erro impeditivo de compatibilidade.
+   - **Reprovado:** erro impeditivo de compatibilidade em qualquer tarefa ou instalação recusada por incompatibilidade demonstrada.
+   - **Não observável:** ambiente não preparado ou distribuição indisponível por motivo externo.
 
 ---
 
 ### 13.3 Roteiro M2.1 — Sucesso de instalação
 
-- **Objetivo e métrica:** $M_{2.1} = \frac{I_s}{I_t}$ (Taxa de sucesso na instalação a partir do canal oficial na primeira tentativa).
-- **Escopo do ensaio:** Laboratório / Dispositivos físicos representativos com conexão Wi-Fi e dados móveis estáveis.
+- **Objetivo e métrica:** $M_{2.1} = \frac{I_s}{I_t}$ (proporção de ciclos com instalação concluída na primeira tentativa).
+- **Ambiente:** laboratório, no aparelho principal, com conexão estável.
+- **Amostra:** 10 ciclos de instalação limpa ([seção 4.1](#41-instalacao-e-residuos-m21-e-m22)).
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Pré-condição obrigatória:** Certificar-se de que o aplicativo DF no Ponto **não está instalado** no dispositivo (desinstalar previamente se presente e reiniciar o aparelho).
-2. **Acesso ao repositório oficial:** Abrir o aplicativo da Google Play Store e pesquisar por "DF no Ponto" (distribuição oficial da Semob-DF).
-3. **Disparo do ciclo:** Tocar no botão "Instalar". Iniciar a cronometragem e observação no instante do toque.
-4. **Monitoramento:** Acompanhar as fases de download, verificação de segurança da loja e instalação propriamente dita pelo instalador de pacotes do Android.
-5. **Primeira abertura:** Concluída a instalação pela loja, tocar em "Abrir" e aguardar a renderização da tela inicial.
-6. **Registro de evidência:** Captura de tela da página da loja indicando "Instalado" e da tela inicial do aplicativo aberto com sucesso (`EVI_M2.1_CICLOxx_...png`).
-7. **Contabilização:**
-   - **Aprovado ($I_s$):** Instalação e primeira inicialização concluídas na primeira tentativa sem códigos de erro (`Error -505`, falha de assinatura, loop de download ou congelamento).
-   - **Reprovado:** Qualquer erro ou interrupção durante o download/instalação que exija intervenção do usuário para reiniciar o processo. Tentativas subsequentes não alteram uma reprovação inicial.
+1. **Pré-condição:** confirmar que o aplicativo não está instalado; a instalação existente na preparação não conta como ciclo.
+2. **Loja oficial:** abrir a Google Play Store e localizar o DF no Ponto.
+3. **Início do ciclo:** tocar em "Instalar" e observar a partir desse instante.
+4. **Acompanhamento:** observar o download, a verificação da loja e a instalação.
+5. **Evidência:** capturar a página da loja com o estado "Instalado" ou com a mensagem de erro (`EVI_M2.1_CICLOxx_[DISPOSITIVO]_[DATA_HORA].png`). A abertura do aplicativo pode ser registrada como informação complementar, mas não integra o critério.
+6. **Contabilização:**
+   - **Aprovado ($I_s$):** instalação concluída na primeira tentativa, sem erro.
+   - **Reprovado:** erro ou interrupção que exija nova tentativa. Tentativas posteriores não alteram a reprovação.
 
 ---
 
 ### 13.4 Roteiro M2.2 — Resíduo pós-desinstalação
 
-- **Objetivo e métrica:** $M_{2.2} = 1 - \frac{D_r}{D_t}$ (Proporção de desinstalações limpas, sem arquivos órfãos remanescentes no armazenamento do usuário).
-- **Escopo do ensaio:** Laboratório em aparelhos físicos ou emuladores com ferramenta de inspeção de arquivos (gerenciador de arquivos ou comando via `adb shell`).
+- **Objetivo e métrica:** $M_{2.2} = 1 - \frac{D_r}{D_t}$ (proporção de desinstalações sem resíduos observados).
+- **Ambiente:** laboratório, no aparelho principal, com `adb` e depuração USB.
+- **Amostra:** os mesmos 10 ciclos de M2.1, com uso do aplicativo (busca, horários, mapa e favoritos) entre a instalação e a remoção.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Pré-condição:** Aplicativo devidamente instalado e utilizado durante uma sessão de testes prévia (navegando por linhas e mapas) para garantir que arquivos de cache, preferências e bancos locais tenham sido criados.
-2. **Mapeamento pré-remoção:** Conectar o dispositivo ao computador via USB com depuração ativada e inspecionar os diretórios públicos e acessíveis do armazenamento:
+1. **Pré-condição:** registrar o identificador do pacote do aplicativo, conforme a seção 1.1.
+2. **Inspeção anterior à instalação:** listar os locais fixados na seção 4.1 e salvar a saída:
    ```bash
-   adb shell ls -la /sdcard/Android/data/ | grep -i dfno
-   adb shell ls -la /sdcard/Android/media/ | grep -i dfno
-   adb shell ls -la /sdcard/Download/ | grep -i dfno
+   for d in Android/data Android/obb Android/media Download Documents; do
+     echo "== /sdcard/$d"; adb shell ls -laR "/sdcard/$d"
+   done > EVI_M2.2_CICLOxx_antes.log
    ```
-3. **Execução da desinstalação:** Desinstalar o aplicativo DF no Ponto pelo método padrão do sistema operacional (Arrastar para "Desinstalar" ou via Configurações -> Apps -> DF no Ponto -> Desinstalar).
-4. **Mapeamento pós-remoção:** Imediatamente após a confirmação da desinstalação pelo SO, reexecutar a varredura nos mesmos caminhos de armazenamento:
-   ```bash
-   adb shell ls -la /sdcard/Android/data/ | grep -i dfno
-   adb shell ls -la /sdcard/ | grep -i ponto
-   ```
-5. **Inspeção de resíduos:** Verificar se restaram pastas órfãs, arquivos de log, bancos SQLite residuais ou imagens temporárias gravadas fora do escopo do sandbox privado do app.
-6. **Registro de evidência:** Registro em arquivo de log contendo a saída completa dos comandos `adb` antes e depois da desinstalação (`EVI_M2.2_CICLOxx_...log`).
+3. **Instalação e uso:** instalar (roteiro 13.3) e usar busca, horários, mapa e favoritos.
+4. **Desinstalação:** remover o aplicativo pelo método padrão do sistema.
+5. **Inspeção posterior:** repetir exatamente o comando do passo 2, salvando em `EVI_M2.2_CICLOxx_depois.log`.
+6. **Comparação:** comparar os dois arquivos (`diff`) e identificar arquivos ou pastas novos ou alterados atribuíveis ao aplicativo pelo nome, pelo conteúdo ou pelo identificador do pacote. Evidências criadas pelo avaliador não contam.
 7. **Contabilização:**
-   - **Aprovado:** Nenhuma pasta ou arquivo atribuível ao DF no Ponto localizado no armazenamento inspecionado.
-   - **Reprovado ($D_r$):** Pelo menos um diretório ou arquivo residual do aplicativo permaneceu no armazenamento do dispositivo após a remoção.
-   - **Não Observável:** Caso restrições de permissão do Android (ex.: scoped storage estrito sem acesso de inspeção) impeçam categoricamente a verificação dos diretórios, registrar a impossibilidade técnica motivada.
+   - **Aprovado:** nenhum arquivo ou pasta atribuível ao aplicativo nos locais inspecionados.
+   - **Reprovado ($D_r$):** ao menos um arquivo ou pasta residual atribuível ao aplicativo.
+   - **Não observável:** inspeção inviável de um local obrigatório, com o motivo registrado.
 
 ---
 
 ## 14. Roteiros detalhados de execução — Confiabilidade (G3 e G4)
 
-Esta seção estabelece os procedimentos operacionais para as métricas da característica **Confiabilidade** (subcaracterísticas *Maturidade* e *Tolerância a Falhas*), respondendo à **Decisão D2** (estabilidade operacional e resiliência em condições adversas de uso real).
+Esta seção define os procedimentos das métricas de **Confiabilidade** (subcaracterísticas *Maturidade* e *Tolerância a Falhas*), que respondem à **Decisão D2**.
 
 ---
 
 ### 14.1 Roteiro M3.1 — Sessões sem *crashes*
 
-- **Objetivo e métrica:** $M_{3.1} = 1 - \frac{S_c}{S_t}$ (Proporção de sessões concluídas sem encerramento inesperado ou interrupção anômala).
-- **Definição de sessão padronizada:** Uma sessão de uso ativo contínuo com duração planejada de **15 minutos**, executando um ciclo repetitivo de ações típicas do usuário: busca de linhas, consulta de horários, zoom e movimentação no mapa, alternância entre abas e retorno da aplicação após segundo plano.
-- **Escopo:** Laboratório e campo, monitorando aparelhos físicos com gravação contínua ou registro em logcat:
-  ```bash
-  adb logcat -v time | grep -E "FATAL EXCEPTION|AndroidRuntime|SIGSEGV"
-  ```
+- **Objetivo e métrica:** $M_{3.1} = 1 - \frac{S_c}{S_t}$ (proporção de sessões sem encerramento inesperado).
+- **Ambiente:** laboratório, no aparelho principal.
+- **Amostra:** 20 sessões de 5 minutos ([seção 4.2](#42-sessoes-de-uso-m31-e-m32)), sem indução de falhas de rede ou de localização.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Preparação:** Iniciar a gravação de tela no dispositivo de teste e disparar o cronômetro oficial do ensaio.
-2. **Execução do ciclo de ações:** Durante o período de 15 minutos, alternar a cada 2 a 3 minutos entre:
-   - Pesquisa de 3 linhas diferentes;
-   - Seleção de itinerário e exibição da rota no mapa;
-   - Consulta das previsões de chegada em 2 paradas distintas;
-   - Minimização temporária do app por 10 segundos e reabertura.
-3. **Detecção de anomalia:** Monitorar se ocorre:
-   - Fechamento súbito do aplicativo com retorno involuntário à tela inicial do Android;
-   - Exibição de diálogo nativo do sistema operacional (*"O DF no Ponto parou"* ou *"O app apresenta falhas contínuas"*);
-   - Registro de exceção fatal no logcat.
-4. **Tratamento de interrupção:** Se o aplicativo sofrer *crash* aos 7 minutos, a sessão é encerrada imediatamente, contabilizada como afetada por crash ($S_c$) no total de sessões $S_t$. Para continuar a bateria, uma nova sessão independente é iniciada com novo identificador.
-5. **Registro de evidência:** Gravação de vídeo do momento do encerramento e captura de logcat com a pilha de chamada (*stack trace*) do erro (`EVI_M3.1_SESSAOxx_...mp4` e `.log`).
+1. **Preparação:** iniciar a gravação de tela e, quando disponível, o registro de log:
+   ```bash
+   adb logcat -v time | grep -E "FATAL EXCEPTION|AndroidRuntime|SIGSEGV"
+   ```
+2. **Execução:** dedicar um minuto a cada atividade, nesta ordem: busca de linha e resultados; horários; itinerário no mapa; parada e acompanhamento de veículo, quando disponível; consulta e manutenção dos favoritos.
+3. **Detecção:** registrar fechamento súbito do aplicativo, diálogo do sistema informando que o aplicativo parou ou exceção fatal no log.
+4. **Interrupção:** se houver *crash*, a sessão termina e é contada como afetada ($S_c$), permanecendo em $S_t$. A continuação da bateria ocorre em nova sessão, com novo identificador.
+5. **Evidência:** gravação da sessão (`EVI_M3.1_SESSAOxx_[DISPOSITIVO]_[DATA_HORA].mp4`) e, em caso de *crash*, o trecho de log correspondente (`.log`).
 6. **Contabilização:**
-   - **Aprovado:** A sessão completa os 15 minutos sem nenhum encerramento involuntário.
-   - **Reprovado ($S_c$):** Ocorreu ao menos um *crash* durante a sessão.
+   - **Aprovado:** sessão concluída nos 5 minutos sem encerramento inesperado.
+   - **Reprovado ($S_c$):** ao menos um *crash* na sessão.
 
 ---
 
 ### 14.2 Roteiro M3.2 — Sessões sem congelamentos
 
-- **Objetivo e métrica:** $M_{3.2} = 1 - \frac{S_a}{S_t}$ (Proporção de sessões padronizadas livres de travamento de interface superior a 5 segundos).
-- **Definição de congelamento (*freeze*):** Inoperância total ou ausência de resposta da interface gráfica a toques, rolagens ou comandos por tempo **$\Delta t > 5{,}0\text{ segundos}$**.
-- **Distinção metodológica fundamental:** Requisições de rede lentas onde o aplicativo exibe um indicador visual ativo de progresso (*spinner*, barra de carregamento ou esqueleto de tela) mantendo o botão de voltar funcional **não são classificadas como congelamento**. O congelamento é caracterizado pela paralisação do thread de renderização (UI Thread travada ou diálogo ANR — *Application Not Responding*).
+- **Objetivo e métrica:** $M_{3.2} = 1 - \frac{S_a}{S_t}$ (proporção de sessões sem congelamento superior a 5 segundos).
+- **Definição:** congelamento é a ausência de resposta da interface a uma ação por mais de 5,0 segundos. Carregamento com indicador de progresso e interface responsiva não conta.
+- **Amostra:** as mesmas 20 sessões de 5 minutos do roteiro 14.1, com amostra válida informada separadamente.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Preparação:** Dispositivo físico ou emulador com gravação de tela com exibição de toques ativada nas Opções do Desenvolvedor do Android (*"Mostrar toques"* ativado).
-2. **Execução do roteiro padrão:** Durante a sessão padronizada de 15 minutos, interagir ativamente com a interface a cada 10-15 segundos (clicar em linhas, expandir menus, arrastar mapa).
-3. **Identificação e cronometragem de travamentos:**
-   - Ao emitir um comando (toque em parada, abertura de linha ou rolagem de lista), observar se a resposta visual ocorre de imediato.
-   - Caso a interface permaneça inerte e indiferente a novos toques, disparar cronômetro no vídeo gravado.
-   - Se a paralisação ultrapassar **5,0 segundos** ou disparar diálogo de ANR do SO, o evento é registrado formalmente como congelamento.
-4. **Registro de evidência:** Fragmento de vídeo contendo o carimbo de tempo evidenciando o período exato de inércia da tela superior a 5 segundos (`EVI_M3.2_SESSAOxx_...mp4`).
+1. **Preparação:** ativar "Mostrar toques" nas opções do desenvolvedor e iniciar a gravação de tela.
+2. **Execução:** seguir a sessão padronizada do roteiro 14.1.
+3. **Medição:** quando a interface não responder a uma ação, medir na gravação o intervalo entre o toque e a resposta. Intervalo superior a 5,0 segundos ou diálogo de ANR do sistema caracteriza congelamento.
+4. **Evidência:** a gravação da sessão, com a marcação do instante do congelamento (`EVI_M3.2_SESSAOxx_[DISPOSITIVO]_[DATA_HORA].mp4`).
 5. **Contabilização:**
-   - **Aprovado:** Sessão sem nenhum evento de congelamento $> 5\text{s}$.
-   - **Reprovado ($S_a$):** Sessão em que ocorreu ao menos um congelamento $> 5\text{s}$.
+   - **Aprovado:** sessão sem congelamento superior a 5,0 segundos.
+   - **Reprovado ($S_a$):** ao menos um congelamento superior a 5,0 segundos.
 
 ---
 
-### 14.3 Roteiro M4.1 — Evitação de quebra por conexão
+### 14.3 Roteiro M4.1 — Mitigação de perda de conexão
 
-- **Objetivo e métrica:** $M_{4.1} = \frac{R_s}{R_t}$ (Proporção de interrupções de rede induzidas com tratamento aprovado e recuperação adequada).
-- **Escopo do ensaio:** Laboratório, simulando a instabilidade crônica de cobertura celular na malha rodoviária do Distrito Federal.
+- **Objetivo e métrica:** $M_{4.1} = \frac{R_s}{R_t}$ (proporção de interrupções de rede com tratamento aprovado).
+- **Ambiente:** laboratório, em dispositivo físico.
+- **Amostra e parâmetros:** 20 ensaios, com indisponibilidade de 30 s, aviso em até 5 s e retomada em até 30 s ([seção 4.3](#43-interrupcoes-de-rede-e-localizacao-m41-e-m42)).
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Pré-condição:** Aplicativo aberto em dispositivo físico conectado à rede de dados ou Wi-Fi, com exibição de linhas ou mapa em funcionamento.
-2. **Disparo da consulta:** Realizar uma busca por linha ou abrir uma parada de ônibus que exija carregamento de dados em tempo real.
-3. **Indução da falha de rede:** No exato momento do carregamento da consulta, acionar o **Modo Avião** na central rápida do Android, cortando integralmente o tráfego de dados por **15 segundos**.
-4. **Verificação de resiliência (Critérios de aprovação):**
-   - O aplicativo deve permanecer aberto sem encerrar ou exibir tela preta/branca opaca;
-   - Deve apresentar, em até **5,0 segundos**, uma mensagem amigável e inteligível ao usuário informando a indisponibilidade de rede (ex.: *"Sem conexão com a internet"*, *"Verifique sua conexão"* ou ícone explicativo);
-   - A interface deve manter botões de navegação e voltar totalmente operacionais.
-5. **Restauração da rede:** Desativar o Modo Avião e tocar no botão de tentar novamente ou aguardar a atualização automática.
-6. **Tempo de retomada:** O aplicativo deve reestabelecer os dados válidos na tela em até **10,0 segundos** após a reconexão.
-7. **Registro de evidência:** Gravação contínua do ensaio demonstrando a injeção do corte, o alerta exibido e a recuperação dos dados (`EVI_M4.1_ENSAIOxx_...mp4`).
+1. **Pré-condição:** aplicativo aberto, com rede disponível e uma consulta em funcionamento; gravação de tela iniciada.
+2. **Indução da falha:** ativar o Modo Avião, desativando todas as conexões, e mantê-lo por 30 segundos.
+3. **Solicitação:** logo após a desativação, realizar uma consulta dependente de rede (busca de linha ou abertura de parada).
+4. **Verificação durante a falha:** o aplicativo deve permanecer aberto, manter a interface responsiva e informar a indisponibilidade em até 5,0 segundos, contados da solicitação.
+5. **Restauração:** desativar o Modo Avião e, confirmada a reconexão no sistema, repetir a consulta.
+6. **Verificação da retomada:** a nova consulta deve concluir em até 30,0 segundos, contados da confirmação da reconexão.
+7. **Evidência:** gravação contínua do ensaio (`EVI_M4.1_ENSAIOxx_[DISPOSITIVO]_[DATA_HORA].mp4`), com os instantes medidos anotados no formulário.
 8. **Contabilização:**
-   - **Aprovado ($R_s$):** Tratamento informativo claro sem travamento e retomada no tempo limite.
-   - **Reprovado:** Fechamento forçado, travamento em loop infinito sem aviso de erro ou exigência de reiniciar o app para voltar a utilizá-lo.
+   - **Aprovado ($R_s$):** aplicativo aberto, aviso e retomada dentro dos prazos e interface responsiva.
+   - **Reprovado:** encerramento, carregamento sem aviso dentro do prazo, interface sem resposta ou necessidade de reiniciar o aplicativo.
 
 ---
 
 ### 14.4 Roteiro M4.2 — Tratamento de perda de GPS
 
-- **Objetivo e métrica:** $M_{4.2} = \frac{G_s}{G_t}$ (Proporção de eventos de perda de sinal de geolocalização tratados com aviso adequado e continuidade de uso).
-- **Escopo do ensaio:** Laboratório ou campo em aparelhos com sensor GNSS nativo.
+- **Objetivo e métrica:** $M_{4.2} = \frac{G_s}{G_t}$ (proporção de desativações de localização com tratamento aprovado).
+- **Ambiente:** laboratório, em dispositivo físico com receptor de localização.
+- **Amostra e parâmetros:** 20 ensaios, com os mesmos prazos do roteiro 14.3.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Pré-condição:** Aplicativo em execução com o mapa principal aberto, GPS ativo e a localização do usuário exibida com o marcador azul centralizado.
-2. **Indução da falha de localização:** Deslizar a barra de notificações do Android e desativar o botão de **"Localização" / "GPS"**. Retornar imediatamente ao aplicativo.
-3. **Inspeção de resposta do aplicativo:**
-   - O aplicativo não pode encerrar nem travar;
-   - Deve exibir diálogo ou aviso indicando que a localização está desativada, oferecendo atalho para ativar o recurso ou permitindo continuar em modo de busca manual;
-   - O mapa deve manter operacionais as funcionalidades de navegação manual, busca de linhas por texto e consulta a paradas.
-4. **Restauração:** Reativar a localização do aparelho e retornar ao aplicativo.
-5. **Verificação de retomada:** O aplicativo deve identificar a volta do sensor e atualizar a posição no mapa em até **5,0 segundos**.
-6. **Registro de evidência:** Gravação de tela do ciclo de desativação, aviso e reativação (`EVI_M4.2_ENSAIOxx_...mp4`).
-7. **Contabilização:**
-   - **Aprovado ($G_s$):** Mensagem de alerta adequada, retenção da operabilidade das buscas e reaquisição correta da posição.
-   - **Reprovado:** Encerramento inesperado, mapa inoperante ou travamento generalizado da interface.
+1. **Pré-condição:** aplicativo aberto no mapa, com a localização do usuário exibida; gravação de tela iniciada.
+2. **Indução da falha:** desativar a localização do aparelho e mantê-la desativada por 30 segundos.
+3. **Solicitação:** acionar uma função dependente de localização.
+4. **Verificação durante a falha:** o aplicativo deve permanecer aberto, informar a indisponibilidade em até 5,0 segundos e manter disponíveis as consultas independentes de localização (busca de linha por código e consulta de parada).
+5. **Restauração:** reativar a localização e acionar novamente a função dependente.
+6. **Verificação da retomada:** a função de localização deve voltar a operar em até 30,0 segundos, contados da reativação.
+7. **Evidência:** gravação contínua do ensaio (`EVI_M4.2_ENSAIOxx_[DISPOSITIVO]_[DATA_HORA].mp4`).
+8. **Contabilização:**
+   - **Aprovado ($G_s$):** aviso no prazo, consultas independentes disponíveis e retomada no prazo.
+   - **Reprovado:** encerramento, ausência de aviso, consultas independentes indisponíveis ou retomada fora do prazo.
 
 ---
 
 ## 15. Roteiros detalhados de execução — Adequação Funcional (G5 e G6)
 
-Esta seção estabelece os procedimentos para as métricas da característica **Adequação Funcional** (subcaracterísticas *Exatidão Funcional* e *Completude Funcional*), correspondendo à **Decisão D3** (viabilidade do aplicativo como fonte de informação fidedigna para a mobilidade urbana da população).
+Esta seção define os procedimentos das métricas de **Adequação Funcional** (subcaracterísticas *Correção Funcional* e *Completude Funcional*), que respondem à **Decisão D3**.
 
 ---
 
 ### 15.1 Roteiro M5.1 — Precisão de tempo de chegada
 
-- **Objetivo e métrica:** $e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}$ e $M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_n)$ (Erro absoluto mediano entre a chegada prevista no app e o instante real de chegada do ônibus, em minutos).
-- **Escopo do ensaio:** Medição direta em campo realizada em pontos de parada reais do Distrito Federal (ex.: Rodoviária do Plano Piloto, paradas de integração de Taguatinga e EPTG).
-- **Instrumentos necessários:**
-  - Dispositivo com o DF no Ponto conectado à internet;
-  - Relógio de referência com sincronização automática de horário via rede/NTP (Hora Oficial de Brasília / `time.google.com`);
-  - Prancheta ou formulário de campo para anotação imediata.
+- **Objetivo e métrica:** $e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}$ e $M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_n)$, em minutos.
+- **Ambiente:** campo, nas paradas, linhas e janelas registradas conforme a [seção 5.1](#51-previsao-e-chegada-m51).
+- **Amostra:** 20 eventos de chegada, em dois blocos de dez e pelo menos duas linhas.
+- **Instrumentos:** aparelho com o DF no Ponto; relógio sincronizado por rede, no fuso `America/Sao_Paulo`; formulário de campo.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Posicionamento e prontidão:** O avaliador posiciona-se em segurança no ponto de parada selecionado e abre o aplicativo DF no Ponto na aba da referida parada.
-2. **Registro da previsão inicial ($t_i^{prev}$):**
-   - Localizar a linha-alvo na listagem de previsões da parada;
-   - Anotar o número de prefixo/linha e o horário exato estimado exibido pelo aplicativo para a chegada do veículo ($t_i^{prev}$ em minutos ou carimbo de hora/minuto);
-   - Registrar captura de tela imediata do aplicativo exibindo a estimativa e o relógio do sistema.
-3. **Observação da chegada real ($t_i^{obs}$):**
-   - Aguardar a aproximação física do ônibus da linha correspondente na baia de parada;
-   - No exato instante em que o veículo para e abre as portas para embarque/desembarque de passageiros, registrar o carimbo temporal de chegada ($t_i^{obs}$);
-   - Fotografar o ônibus com o letreiro e prefixo do veículo visíveis em frente à parada.
-4. **Cálculo do erro absoluto ($e_i$):**
-   - Calcular a diferença absoluta em minutos: $e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}$.
-5. **Tratamento de desvios:**
-   - Se o ônibus chegar e o aplicativo não tiver listado a previsão previamente, registrar como anomalia de completude em M6.1;
-   - Se a previsão do aplicativo expirar (ex.: sumir da tela) e o ônibus não tiver chegado, registrar o caso com nota de discrepância.
-6. **Registro de evidência:** Par de arquivos fotográficos comprovando a previsão no aplicativo e a chegada na parada (`EVI_M5.1_PARxx_APP.png` e `EVI_M5.1_PARxx_REAL.jpg`).
+1. **Posicionamento:** posicionar-se com segurança na parada e identificar o ponto físico de referência da chegada.
+2. **Previsão ($t_i^{prev}$):** abrir a parada no aplicativo e registrar a **primeira** previsão exibida para a linha observada, com captura de tela que mostre a previsão e o relógio do sistema. Se o aplicativo exibir tempo restante, somá-lo ao instante da captura. Atualizações posteriores não substituem esse registro.
+3. **Chegada ($t_i^{obs}$):** registrar o instante em que a frente do veículo alcança o ponto de referência, fotografando o veículo com letreiro e prefixo visíveis, sem enquadrar rostos.
+4. **Pareamento:** conferir linha, sentido, parada e veículo ou viagem identificável.
+5. **Casos sem par válido:** previsão ausente, identificação insuficiente ou chegada não observada na janela são registrados separadamente, fora da amostra válida e sem erro zero.
+6. **Evidência:** `EVI_M5.1_EVENTOxx_APP_[DATA_HORA].png` e `EVI_M5.1_EVENTOxx_REAL_[DATA_HORA].jpg`.
+7. **Cálculo:** calcular $e_i$ de cada par válido e a mediana, informando também a antecedência das previsões e a dispersão dos erros.
 
 ---
 
-### 15.2 Roteiro M5.2 — Correção de dados do mapa (tolerância espacial)
+### 15.2 Roteiro M5.2 — Correção de dados do mapa
 
-- **Objetivo e métrica:** $M_{5.2} = \frac{P_s}{P_t}$ (Proporção de pontos de parada e posições de veículos dentro da tolerância espacial previamente fixada $\varepsilon = 100\text{ metros}$).
-- **Fundamento matemático:** Distância geodésica $d_i$ calculada pela fórmula de Haversine entre a coordenada exibida no app $(\phi_1, \lambda_1)$ e a coordenada real de referência $(\phi_2, \lambda_2)$:
-  $$d_i = 2 R \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos(\phi_1)\cos(\phi_2)\sin^2\left(\frac{\Delta\lambda}{2}\right)}\right)$$
-  onde $R \approx 6.371.000\text{ m}$ (raio médio da Terra).
-- **Escopo do ensaio:** Campo e laboratório contra a base georreferenciada oficial de paradas da Semob-DF.
+- **Objetivo e métrica:** $M_{5.2} = \frac{P_s}{P_t}$ (proporção de posições com $d_i \le \varepsilon$, sendo $\varepsilon = 30$ metros).
+- **Ambiente:** campo, com referência independente obtida no **GPSTest** ([seção 5.2](#52-posicoes-no-mapa-m52)).
+- **Amostra:** dez paradas distintas e 20 eventos de veículo parado junto à parada, apurados separadamente.
+- **Cálculo da distância:** fórmula de haversine definida em [Verificação Espacial](../fase2/metricas-julgamento.md#verificacao-espacial-m52).
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Seleção do elemento de verificação:**
-   - *Caso Estático (Paradas):* Selecionar uma parada na base cadastral oficial da Semob-DF com coordenadas conhecidas $(\phi_2, \lambda_2)$ medidas com GPS de alta precisão em campo.
-   - *Caso Dinâmico (Veículo):* No momento em que um ônibus estiver parado em um ponto conhecido, observar o ícone do veículo plotado no mapa do aplicativo.
-2. **Extração das coordenadas no app:** Obter a coordenada $(\phi_1, \lambda_1)$ indicada no aplicativo para o mesmo elemento (por geocodificação reversa ou medição na malha cartográfica).
-3. **Cálculo do desvio espacial:** Aplicar a equação geodésica de Haversine para computar a distância $d_i$ em metros.
-4. **Julgamento:**
-   - **Aprovado ($P_s$):** A distância calculada atende à tolerância: $d_i \le 100{,}0\text{ metros}$.
-   - **Reprovado:** A distância excede o raio aceitável: $d_i > 100{,}0\text{ metros}$ (parada plotada na quadra errada ou veículo desenhado a quilômetros da localização real).
-5. **Registro de evidência:** Captura de tela do mapa do aplicativo sobreposta à malha de referência e planilha de cálculo geodésico (`EVI_M5.2_CASOxx_...png` e `.csv`).
+1. **Referência:** no ponto físico da parada, registrar no GPSTest a coordenada (WGS84), a precisão horizontal informada e o horário UTC. Só são válidos registros com precisão de até 10 m. Para veículos, o registro é feito com o veículo parado junto à parada, anotando o deslocamento do observador em relação ao veículo.
+2. **Posição no aplicativo:** com o mapa no zoom máximo, capturar a tela mostrando o marcador da parada ou do veículo. Obter a latitude e a longitude do marcador localizando o mesmo ponto em um mapa de referência com leitura de coordenadas, registrado em [Recursos](3-recursos.md), com seis casas decimais.
+3. **Sincronismo (veículos):** registrar o horário da posição exibida pelo aplicativo. Pares com diferença superior a 2 segundos em relação à referência são inválidos; se o aplicativo não exibir esse horário, o evento é **não observável** e o motivo é registrado.
+4. **Cálculo:** calcular $d_i$ em metros para cada observação válida.
+5. **Contabilização:**
+   - **Aprovado ($P_s$):** $d_i \le 30$ metros.
+   - **Reprovado:** $d_i > 30$ metros.
+6. **Evidência:** captura do mapa do aplicativo, registro exportado do GPSTest e planilha de cálculo (`EVI_M5.2_CASOxx_[DATA_HORA].png` e `.csv`).
 
 ---
 
 ### 15.3 Roteiro M6.1 — Cobertura de tarefas essenciais
 
-- **Objetivo e métrica:** $M_{6.1} = 1 - \frac{F_f}{F_t}$ (Proporção de tarefas essenciais do catálogo padrão concluídas com êxito de ponta a ponta).
-- **Catálogo de tarefas essenciais do usuário ($F_t = 6$ tarefas nucleares):**
-  - `T-01`: Pesquisar linha por número de código (ex.: "0.108") e acessar seus detalhes.
-  - `T-02`: Visualizar o traçado geográfico do itinerário completo no mapa (Ida e Volta).
-  - `T-03`: Localizar uma parada próxima através do mapa interativo.
-  - `T-04`: Consultar o quadro de horários programados de uma linha.
-  - `T-05`: Adicionar uma linha ou ponto de parada à lista de Favoritos do aplicativo.
-  - `T-06`: Visualizar a posição em tempo real dos veículos em trânsito de uma linha selecionada.
+- **Objetivo e métrica:** $M_{6.1} = 1 - \frac{F_f}{F_t}$ (proporção de tarefas essenciais concluídas com sucesso).
+- **Catálogo:** as oito tarefas `TE01` a `TE08` da [seção 3.1](#31-tarefas-essenciais-m61), com as entradas `L01`, `L02` e `P01` e os resultados esperados ali fixados ($F_t = 8$).
+- **Ambiente:** laboratório, no aparelho principal, com rede e localização disponíveis.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Preparação:** Iniciar o DF no Ponto com dados limpos de cache e conectividade de rede ativa.
-2. **Execução sequencial:** Executar cada uma das tarefas nucleares `T-01` a `T-06` exatamente como um cidadão usuário do transporte público.
-3. **Critérios de validação:**
-   - A tarefa deve ser concluída sem erros impeditivos, travamentos ou ausência de dados cruciais para a finalidade da tela;
-   - O resultado visual exibido deve condizer com o objetivo esperado da ação.
-4. **Registro de evidência:** Gravação de tela contínua da execução do catálogo de tarefas (`EVI_M6.1_CATALOGO_...mp4`).
+1. **Preparação:** preparar o estado de favoritos exigido por cada tarefa, independentemente do resultado das demais.
+2. **Execução:** executar cada tarefa uma vez, de ponta a ponta.
+3. **Validação:** comparar o resultado obtido com o resultado esperado do catálogo.
+4. **Evidência:** gravação de tela contínua (`EVI_M6.1_TExx_[DISPOSITIVO]_[DATA_HORA].mp4`).
 5. **Contabilização:**
-   - **Aprovado:** A tarefa foi executada integralmente até seu objetivo final.
-   - **Reprovado ($F_f$):** A tarefa não pôde ser completada devido a botão inoperante, tela em branco permanente, erro genérico ou ausência da função.
+   - **Aprovado:** resultado esperado atingido.
+   - **Reprovado ($F_f$):** tarefa não concluída ou resultado diferente do esperado.
+   - **Não observável:** em `TE05`, operação da linha não verificável no período; o catálogo permanece incompleto.
 
 ---
 
 ### 15.4 Roteiro M6.2 — Completude do banco de dados
 
-- **Objetivo e métrica:** $M_{6.2} = \frac{L_c}{L_t}$ (Proporção de linhas e itinerários da amostra oficial da Semob-DF encontrados no aplicativo com correspondência cadastral correta).
-- **Amostragem oficial de referência ($L_t$):** Conjunto amostral balanceado de **50 linhas representativas** do Distrito Federal, extraídas da tabela oficial aberta de linhas da Semob-DF, contemplando diferentes bacias operacionais (Bacia 1 a Bacia 5), linhas circulares, troncais e alimentadoras.
+- **Objetivo e métrica:** $M_{6.2} = \frac{L_c}{L_t}$ (proporção de itens oficiais encontrados no aplicativo com correspondência correta).
+- **Amostra:** os 20 primeiros itens distintos de linha/itinerário (`L01` a `L20`), selecionados e arquivados conforme a [seção 6](#6-amostra-do-catalogo-oficial-m62), antes da consulta no aplicativo.
 
-#### Procedimento de ensaio passo a passo
+#### Procedimento passo a passo
 
-1. **Preparação da amostra:** Dispor da planilha contendo a relação oficial das 50 linhas selecionadas na Fase 2 com seus atributos oficiais: Código da Linha, Nome da Linha, Sentidos cadastrados (Ida/Volta ou Circular) e Trajeto.
-2. **Consulta no aplicativo:** Para cada linha da amostra oficial:
-   - Digitar o código da linha no campo de pesquisa do DF no Ponto;
-   - Verificar se a linha é retornada nos resultados de busca;
-   - Abrir o detalhe da linha e verificar se os sentidos oficiais de operação estão presentes;
-   - Verificar se o itinerário desenhado no mapa corresponde ao traçado homologado.
-3. **Contabilização do veredito:**
-   - **Aprovado ($L_c$):** A linha é localizada no aplicativo e apresenta código, denominação e sentidos coerentes com o cadastro oficial da Semob-DF.
-   - **Reprovado:** A linha não é localizada na busca, não carrega itinerário ou apresenta sentido faltante em relação à base pública oficial.
-4. **Registro de evidência:** Captura de tela do resultado de busca e detalhe do itinerário para cada linha auditada da amostra (`EVI_M6.2_LINHAxxx_...png`).
+1. **Preparação:** dispor da lista `L01` a `L20`, com código oficial, nome, sentido, variante e itinerário de referência, e da data e hora da consulta à fonte oficial.
+2. **Consulta:** para cada item, pesquisar o código no aplicativo, verificar se a linha é retornada, se os sentidos oficiais estão presentes e se o itinerário corresponde ao de referência.
+3. **Contabilização:**
+   - **Aprovado ($L_c$):** item localizado com código, sentido e itinerário correspondentes.
+   - **Reprovado:** item ausente ou com divergência de sentido ou itinerário.
+4. **Evidência:** captura do resultado da busca e do detalhe do itinerário de cada item (`EVI_M6.2_Lxx_[DISPOSITIVO]_[DATA_HORA].png`).
 
 ---
 
 ## 16. Quadro síntese operacional de ensaios e parâmetros
 
-A tabela a seguir sintetiza as diretrizes operacionais de cada métrica para consulta rápida dos avaliadores durante a fase de coleta:
+O quadro resume, para consulta rápida, os valores definidos nas seções 3 a 7.
 
-| Métrica | Característica / GQM | Ambiente | Unidade de Medida | Parâmetros Pré-fixados | Evidência Primária |
+| Métrica | Objetivo | Ambiente | Unidade | Amostra e parâmetros | Evidência |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **M1.1** | Portabilidade (G1) | Laboratório | Proporção $[0,1]$ | 5 telas do catálogo; fontes 100% e 130%; retrato | Captura de tela (`.png`) |
-| **M1.2** | Portabilidade (G1) | Laboratório | Proporção $[0,1]$ | 4 fluxos críticos; faixas Android 9 a 14 | Gravação contínua (`.mp4`) |
-| **M2.1** | Portabilidade (G2) | Laboratório | Proporção $[0,1]$ | Instalação limpa; 1ª tentativa na Google Play | Print loja + app aberto |
-| **M2.2** | Portabilidade (G2) | Laboratório | Proporção $[0,1]$ | Varrer `/sdcard/Android/data/` via `adb` | Log de comandos (`.log`) |
-| **M3.1** | Confiabilidade (G3) | Ambos | Proporção $[0,1]$ | Sessões padronizadas de 15 minutos contínuos | Vídeo + `adb logcat` |
-| **M3.2** | Confiabilidade (G3) | Ambos | Proporção $[0,1]$ | Congelamento de UI $> 5{,}0\text{ s}$ ou diálogo ANR | Vídeo com toques ativados |
-| **M4.1** | Confiabilidade (G4) | Laboratório | Proporção $[0,1]$ | 15s de Modo Avião; aviso em $\le 5$s; retorno $\le 10$s | Gravação contínua (`.mp4`) |
-| **M4.2** | Confiabilidade (G4) | Ambos | Proporção $[0,1]$ | Desativação de GPS; aviso amigável; reativação $\le 5$s | Gravação contínua (`.mp4`) |
-| **M5.1** | Adequação Funcional (G5) | Campo | Minutos $[0, +\infty)$ | Confronto horário previsto vs chegada real na baia | Foto app + Foto ônibus na parada |
-| **M5.2** | Adequação Funcional (G5) | Ambos | Proporção $[0,1]$ | Distância geodésica $\le \varepsilon = 100{,}0\text{ m}$ (Haversine) | Mapa app + Planilha geodésica |
-| **M6.1** | Adequação Funcional (G6) | Laboratório | Proporção $[0,1]$ | 6 tarefas essenciais do catálogo de ponta a ponta | Gravação contínua de tarefas |
-| **M6.2** | Adequação Funcional (G6) | Laboratório | Proporção $[0,1]$ | Amostra de 50 linhas oficiais da Semob-DF | Prints de busca e itinerário |
+| **M1.1** | G1 | Laboratório | Proporção $[0,1]$ | 20 casos: `T01`–`T05` × `C01`–`C04` | Captura de tela por caso |
+| **M1.2** | G1 | Laboratório | Proporção $[0,1]$ | Até 6 versões (Android 9 a 13 e a atual); `TE01`–`TE08` | Gravação por versão |
+| **M2.1** | G2 | Laboratório | Proporção $[0,1]$ | 10 ciclos; primeira tentativa na loja oficial | Captura da loja |
+| **M2.2** | G2 | Laboratório | Proporção $[0,1]$ | 10 ciclos; locais da seção 4.1, antes e depois | Saídas do `adb` |
+| **M3.1** | G3 | Laboratório | Proporção $[0,1]$ | 20 sessões de 5 minutos | Gravação e log |
+| **M3.2** | G3 | Laboratório | Proporção $[0,1]$ | Mesmas 20 sessões; congelamento > 5,0 s | Gravação com toques |
+| **M4.1** | G4 | Laboratório | Proporção $[0,1]$ | 20 ensaios; 30 s sem rede; aviso ≤ 5 s; retomada ≤ 30 s | Gravação |
+| **M4.2** | G4 | Laboratório | Proporção $[0,1]$ | 20 ensaios; 30 s sem localização; aviso ≤ 5 s; retomada ≤ 30 s | Gravação |
+| **M5.1** | G5 | Campo | Minutos $[0,+\infty)$ | 20 eventos de chegada; primeira previsão exibida | Captura do app e foto do veículo |
+| **M5.2** | G5 | Campo | Proporção $[0,1]$ | 10 paradas e 20 veículos; $\varepsilon = 30$ m; $\Delta t_{max} = 2$ s | Captura do mapa, GPSTest e planilha |
+| **M6.1** | G6 | Laboratório | Proporção $[0,1]$ | 8 tarefas (`TE01`–`TE08`) | Gravação por tarefa |
+| **M6.2** | G6 | Laboratório | Proporção $[0,1]$ | 20 itens oficiais (`L01`–`L20`) | Capturas por item |
+
+<p class="legenda">Tabela 1. Quadro síntese dos ensaios e parâmetros por métrica. Fonte: elaboração própria (2026).</p>
 
 ---
 
@@ -671,9 +623,9 @@ Estes procedimentos operacionais conectam as especificações teóricas da Fase 
 
 ## Referências
 
-[1] ISO. *ISO/IEC 25040:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*. https://www.iso.org/standard/35747.html
+[1] ISO. *ISO/IEC 25040:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
 
-[2] ISO. *ISO/IEC 25010:2023 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*. https://www.iso.org/standard/78176.html
+[2] ISO. *ISO/IEC 25010:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
 
 [3] BRASIL. *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.
 
@@ -702,3 +654,4 @@ Estes procedimentos operacionais conectam as especificações teóricas da Fase 
 | 01 | Definição dos catálogos, parâmetros de laboratório, proposta de amostragem de campo e auditoria oficial | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | — | — |
 | 02 | Redução dos ciclos de instalação e remoção para dez e ajuste da resolução da amostra | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 16/11/2026 | — | — |
 | 03 | Criação dos procedimentos detalhados de execução, roteiros das 12 métricas, convenção de evidências, regras de anomalias e formulários de coleta (#46); integração com os catálogos e parâmetros das versões anteriores | [João Pedro Capozzi](https://github.com/jonas3688) | 16/11/2026 | — | — |
+| 03 | Roteiros das seções 13 a 16 alinhados aos parâmetros das seções 3 a 7 (telas, versões, sessões, prazos, tolerância espacial, tarefas e amostra oficial), evidências versionadas em `dados/fase4/` e formulário com os 15 campos | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |

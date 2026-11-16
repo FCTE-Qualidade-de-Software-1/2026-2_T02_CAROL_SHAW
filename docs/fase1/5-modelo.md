@@ -2,7 +2,7 @@
 
 ## 1. Introdução
 
-O modelo de qualidade do projeto fundamenta-se na norma internacional **ISO/IEC 25010** (da família SQuaRE - *Software Product Quality Requirements and Evaluation*). A definição do escopo prioriza as três características mais críticas para a usabilidade e eficácia social do **DF no Ponto**: **Portabilidade**, **Confiabilidade** e **Adequação Funcional**.
+O modelo de qualidade do projeto fundamenta-se na norma internacional **ISO/IEC 25010** (da família SQuaRE - *Software Product Quality Requirements and Evaluation*). A definição do escopo prioriza as três características mais críticas para a utilidade e a eficácia social do **DF no Ponto**: **Portabilidade**, **Confiabilidade** e **Adequação Funcional**.
 
 ---
 
@@ -64,29 +64,35 @@ Cada subcaracterística selecionada possui definição própria na ISO/IEC 25010
 | **Completude Funcional** | Grau em que o conjunto de funções cobre todas as tarefas e objetivos especificados do usuário. | Fundamenta M6.1 (tarefas) e M6.2 (base de linhas). |
 | **Pertinência Funcional** | Grau em que as funções facilitam a realização de tarefas e objetivos especificados. | Critério transversal de seleção do catálogo de tarefas de M6.1, sem métrica própria. |
 
-> **Nota sobre a edição da norma:** as definições acima seguem o modelo da edição de 2011 da ISO/IEC 25010, que também baseia a ISO/IEC 25023:2016 usada para as métricas. A edição de 2023 reorganizou o modelo e renomeou algumas características (por exemplo, Portabilidade passou a se chamar Flexibilidade); a equipe deve manter, em todo o projeto, a terminologia coerente com a edição adotada.
+> **Nota sobre a edição da norma:** o projeto adota a edição de 2011 da ISO/IEC 25010, que é a base da ISO/IEC 25023:2016 usada para as métricas. A edição de 2023 reorganizou o modelo e renomeou características (Portabilidade passou a Flexibilidade, por exemplo); por isso, toda a documentação usa a terminologia de 2011.
 
 A fundamentação de cada métrica, com fontes, adaptação e impacto técnico, está na seção 3.1 de [Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md#31-fundamentacao-adaptacao-e-relevancia-das-metricas).
 
 ---
 
-### 2.4. Definições Normativas que Sustentam o Escopo
+### 2.5. Representação Gráfica do Modelo Adaptado
 
-Cada subcaracterística selecionada possui definição própria na ISO/IEC 25010, que serve de base conceitual para as métricas da Fase 2. As definições abaixo são traduções livres do texto da norma.
+A Figura 1 mostra o modelo adaptado: as três características selecionadas, em ordem de prioridade, suas subcaracterísticas e o objetivo de medição (Fase 2) que cada uma origina. As demais características da ISO/IEC 25010 ficam fora do escopo.
 
-| Subcaracterística | Definição (ISO/IEC 25010) | Por que sustenta uma métrica do projeto |
-| :--- | :--- | :--- |
-| **Adaptabilidade** | Grau em que um produto ou sistema pode ser adaptado, com eficácia e eficiência, a hardwares, softwares ou outros ambientes operacionais ou de uso diferentes ou em evolução. | Fundamenta M1.1 (telas) e M1.2 (versões de SO). |
-| **Instalabilidade** | Grau de eficácia e eficiência com que um produto pode ser instalado e/ou desinstalado com sucesso em um ambiente especificado. | Fundamenta M2.1 (instalação) e M2.2 (resíduos pós-desinstalação). |
-| **Maturidade** | Grau em que um sistema atende às necessidades de confiabilidade em operação normal. | Fundamenta M3.1 (crashes) e M3.2 (congelamentos). |
-| **Tolerância a Falhas** | Grau em que um sistema opera conforme o previsto apesar da presença de falhas de hardware ou software. | Fundamenta M4.1 (queda de rede) e M4.2 (perda de GPS). |
-| **Correção Funcional** | Grau em que as funções fornecem resultados corretos com o grau de precisão necessário. | Fundamenta M5.1 (tempo) e M5.2 (posição). |
-| **Completude Funcional** | Grau em que o conjunto de funções cobre todas as tarefas e objetivos especificados do usuário. | Fundamenta M6.1 (tarefas) e M6.2 (base de linhas). |
-| **Pertinência Funcional** | Grau em que as funções facilitam a realização de tarefas e objetivos especificados. | Critério de seleção do catálogo de tarefas de M6.1. |
+```mermaid
+flowchart TD
+    R["Qualidade de produto<br>ISO/IEC 25010:2011"]
+    R --> AF["Adequação Funcional<br>prioridade 1 · D3 / QN3"]
+    R --> CF["Confiabilidade<br>prioridade 2 · D2 / QN2"]
+    R --> PO["Portabilidade<br>prioridade 3 · D1 / QN1"]
+    AF --> AF1["Correção funcional"] --> G5["G5"]
+    AF --> AF2["Completude funcional"] --> G6["G6"]
+    AF -.-> AF3["Pertinência funcional<br>critério transversal, sem métrica"] -.-> G6
+    CF --> CF1["Maturidade"] --> G3["G3"]
+    CF --> CF2["Tolerância a falhas"] --> G4["G4"]
+    PO --> PO1["Adaptabilidade"] --> G1["G1"]
+    PO --> PO2["Instalabilidade"] --> G2["G2"]
+    R -.-> FE["Fora do escopo: Eficiência de desempenho, Compatibilidade,<br>Usabilidade, Segurança e Manutenibilidade"]
+```
 
-> **Nota sobre a edição da norma:** as definições acima seguem o modelo da edição de 2011 da ISO/IEC 25010, que também baseia a ISO/IEC 25023:2016 usada para as métricas. A edição de 2023 reorganizou o modelo e renomeou algumas características (por exemplo, Portabilidade passou a Flexibilidade); a equipe deve manter, em todo o projeto, a terminologia coerente com a edição adotada.
+<p class="legenda">Figura 1. Modelo de qualidade adaptado ao DF no Ponto, com subcaracterísticas e objetivos de medição. Fonte: elaboração própria (2026).</p>
 
-A fundamentação de cada métrica, com fontes, adaptação e impacto técnico, está na seção 3.1 de [Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md#31-fundamentacao-adaptacao-e-relevancia-das-metricas).
+A ordem de prioridade segue o impacto na tarefa central do passageiro: primeiro a informação precisa estar correta e completa (Adequação Funcional), depois o aplicativo precisa permanecer disponível sob rede instável (Confiabilidade) e, por fim, precisa funcionar no aparelho que o usuário possui (Portabilidade). A numeração das decisões (D1 a D3) e dos objetivos (G1 a G6) identifica os itens e não indica prioridade.
 
 ---
 
@@ -107,7 +113,7 @@ A tabela a seguir resume a correspondência formal entre o modelo de qualidade a
 
 ## 4. Referências Bibliográficas
 
-- **ISO/IEC 25010:2023.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
+- **ISO/IEC 25010:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
 - **ISO/IEC 25040:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
 
 ---
@@ -119,5 +125,5 @@ A tabela a seguir resume a correspondência formal entre o modelo de qualidade a
 | 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02 | Correção da seleção de Instalabilidade, detalhamento da Pertinência e alinhamento com GQM e Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
 | 03 | Inclusão das definições normativas das subcaracterísticas (seção 2.4) e vínculo com a fundamentação das métricas (Fase 2, seção 3.1) | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
-| 04 | Inclusão das definições normativas das subcaracterísticas e vínculo com a fundamentação das métricas | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
 | 05 | Esclarecimento do papel da Pertinência Funcional, plataforma Android como escopo do sistema operacional e vínculo da modelagem com a atividade "especificar a avaliação" da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
+| 06 | Remoção da seção 2.4 duplicada, inclusão do diagrama do modelo adaptado (seção 2.5), ordem de prioridade e fixação da edição de 2011 da norma | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |

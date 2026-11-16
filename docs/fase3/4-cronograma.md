@@ -14,11 +14,11 @@ Este plano deriva diretamente da lógica de execução definida em [Método de A
 
 ## 2. Alinhamento com as entregas e período de coleta
 
-A elaboração dos artefatos de projeto da Fase 3 ([Introdução](introducao.md), [Método de Avaliação](1-metodo.md), [Procedimentos de Execução](2-procedimentos.md), [Recursos](3-recursos.md) e este cronograma) está alinhada à **Milestone: Entrega 2** do projeto, com prazo previsto para **21/11/2026**, conforme registrado em [Calendário e Progresso do Projeto](../gestao/calendario.md).
+O prazo final do projeto é **22/11/2026**. Para que a coleta, a análise e a redação da Fase 4 caibam nesse prazo, os artefatos da Fase 3 ([Introdução](introducao.md), [Método de Avaliação](1-metodo.md), [Procedimentos de Execução](2-procedimentos.md), [Recursos](3-recursos.md) e este cronograma) são fechados até **17/11/2026**, com o plano congelado após o teste-piloto. O acompanhamento gerencial da *milestone* está em [Calendário e Progresso do Projeto](../gestao/calendario.md).
 
-Como o início efetivo das medições depende da conclusão dos catálogos, roteiros detalhados e confirmação final dos aparelhos e locais de parada (pendências das *issues* #45, #46 e #47), as datas exatas da Fase 4 permanecem **a definir** e deverão ser fixadas antes da primeira coleta oficial:
-
-- **Período de coleta (referência para [Descrição do Produto](../fase1/3-descricao.md)):** **A definir** (janela operacional prevista após o encerramento da Fase 3 em `21/11/2026` e anterior à consolidação final da Fase 4, a ser registrada com data de início e término antes do início da Etapa 1).
+- **Período de coleta (referência para [Descrição do Produto](../fase1/3-descricao.md)):** **18/11/2026 a 19/11/2026**, com contingência de laboratório em 20/11/2026 e de campo em 21/11/2026.
+- **Restrição de calendário:** 20/11/2026 é feriado nacional e 21/11/2026 é sábado; nesses dias a operação dos ônibus pode seguir tabela reduzida. Coletas de campo feitas na contingência devem registrar essa condição como limitação.
+- **Consolidação, cálculo e julgamento:** 19/11/2026 a 21/11/2026. A revisão final e a entrega ocorrem em 22/11/2026.
 
 ---
 
@@ -30,55 +30,54 @@ Para assegurar a validade interna e a reprodutibilidade descritas em [Método de
 2. **Captura prévia da base oficial da Semob-DF:** a extração e o arquivamento dos 20 primeiros itens distintos (`L01` a `L20`) da [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/), com data e hora de acesso, devem ocorrer **antes** da consulta no aplicativo para `M6.2` e **antes** da definição das entradas `L01`, `L02` e `P01` usadas em `M6.1`, `M1.1` e `M1.2`.
 3. **Preparação do ambiente e teste-piloto:** a configuração dos aparelhos (`DISP-01`, `DISP-02`) e emuladores (`EMU-01`), a verificação da versão `5.25.1(1149)` e a realização de um **teste-piloto dos roteiros** (validando gravação de tela, cronometragem, bloqueio de rede/GPS e coleta no **GPSTest**) precedem todas as medições oficiais.
 4. **Sequenciamento interno do laboratório:** a execução das tarefas essenciais no aparelho principal (`M6.1`) precede os testes multiplataforma de sistema operacional (`M1.2`), servindo como linha de base funcional para diferenciar defeitos funcionais gerais de falhas específicas de versão do Android.
-5. **Laboratório antes do campo:** os ensaios em ambiente controlado (especialmente estabilidade em `M3.1`/`M3.2` e resiliência de rede/GPS em `M4.1`/`M4.2`) devem ser concluídos antes das saídas de campo (`M5.1` e `M5.2`), evitando deslocamentos presenciais com problemas operacionais nos instrumentos de registro.
+5. **Teste-piloto antes do campo:** as saídas de campo (`M5.1` e `M5.2`) dependem apenas do teste-piloto (`1.3`), que valida os instrumentos de registro e o GPSTest. Laboratório e campo correm em paralelo, com avaliadores diferentes, para que a coleta de campo ocorra em dias úteis.
 6. **Consolidação antes do julgamento:** o cálculo dos indicadores e a atribuição de notas em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md) ocorrem somente após a conferência integral dos formulários, a classificação dos casos não observáveis e a vinculação das evidências por exceção.
 
-```text
-[Pré-condição: Parâmetros, Roteiros e Recursos (#45, #46, #47)]
-                               │
-                               ▼
-    [Etapa 1: Preparação, Base Semob-DF (L01–L20) e Teste-Piloto]
-                               │
-          ┌────────────────────┼────────────────────┐
-          ▼                    ▼                    ▼
- [2.1 Portabilidade    [2.2 Sessões de     [2.3 Injeção de     [2.4 Auditoria
-  e Tarefas: M6.1 →     Uso Contínuo:       Falhas: M4.1,       Comparativa:
-  M1.1, M1.2, M2.x]     M3.1, M3.2]         M4.2]               M6.2]
-          └────────────────────┼────────────────────┘
-                               │
-                               ▼
-         [Etapa 3: Execução em Campo (M5.2 Paradas → M5.1 e M5.2 Veículos)]
-                               │
-                               ▼
-         [Etapa 4: Consolidação das Evidências e Formulários]
-                               │
-                               ▼
-         [Etapa 5: Cálculo e Julgamento na Fase 4]
+```mermaid
+flowchart TD
+    P["0.1 Parâmetros, roteiros e recursos fechados"] --> E1["Etapa 1: preparação, amostra Semob-DF (L01–L20) e teste-piloto"]
+    E1 --> A["2.1a Tarefas essenciais e telas<br>M6.1, M1.1"]
+    A --> B["2.1b Versões de SO e instalação<br>M1.2, M2.1, M2.2"]
+    E1 --> C["2.2 Sessões de uso<br>M3.1, M3.2"]
+    E1 --> D["2.3 Injeção de falhas<br>M4.1, M4.2"]
+    E1 --> F["2.4 Auditoria do catálogo<br>M6.2"]
+    E1 --> G["3.1 Campo: paradas<br>M5.2"]
+    G --> H["3.2 Campo: previsões e veículos<br>M5.1, M5.2"]
+    B --> I["4.1 Consolidação de formulários e evidências"]
+    C --> I
+    D --> I
+    F --> I
+    H --> I
+    I --> J["5.1 Cálculo e julgamento (Fase 4)"]
 ```
+
+<p class="legenda">Figura 1. Dependências entre as atividades da avaliação. Fonte: elaboração própria (2026).</p>
 
 ---
 
 ## 4. Cronograma detalhado das atividades de avaliação
 
-Os papéis atribuídos na tabela seguem a definição da Seção 6 de [Recursos](3-recursos.md) (**Responsável pela execução**, **Responsável pelos registros**, **Responsável pela coleta de campo** e **Revisor dos procedimentos**), cujos integrantes nominais encontram-se **a definir** naquele documento.
+Os papéis atribuídos na tabela seguem a definição da Seção 6 de [Recursos](3-recursos.md) (**Responsável pela execução**, **Responsável pelos registros**, **Responsável pela coleta de campo** e **Revisor dos procedimentos**), cujos integrantes nominais devem ser registrados naquele documento antes do teste-piloto (17/11/2026).
 
 | Etapa / ID | Atividade de execução | Métricas / Entregáveis | Dependências | Início | Término | Duração estimada | Folga prevista | Papel responsável (Integrante) |
 | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **0.1** | Fechamento dos parâmetros, catálogos, roteiros e inventário de recursos | Conclusão de [Procedimentos](2-procedimentos.md) e [Recursos](3-recursos.md) (#45, #46, #47) | Fase 2 concluída | Em andamento | 21/11/2026 | — | — | Revisor dos procedimentos *(A definir)* |
-| **1.1** | Preparação do ambiente de laboratório, dispositivos (`DISP-01`, `DISP-02`), emuladores (`EMU-01`) e instalação da versão `5.25.1(1149)` | Ambiente configurado e ferramentas (`adb`, `logcat`, gravação, GPSTest) validadas | **0.1** | A definir | A definir | 3 h | 2 h | Responsável pela execução *(A definir)* |
-| **1.2** | Coleta, ordenação e arquivamento da amostra oficial da Semob-DF (`L01`–`L20`) e seleção de `L01`, `L02` e `P01` | Base de referência oficial preservada com data/hora | **0.1** | A definir | A definir | 2 h | 2 h | Responsável pelos registros *(A definir)* |
-| **1.3** | Execução do teste-piloto dos roteiros e validação dos formulários de coleta | Roteiros e planilhas calibrados sem ambiguidade | **1.1**, **1.2** | A definir | A definir | 3 h | 2 h | Revisor dos procedimentos e Responsável pela execução *(A definir)* |
-| **2.1a** | **Laboratório — Tarefas essenciais e adaptabilidade de tela:** execução de `TE01`–`TE08` no aparelho principal e avaliação de 20 casos tela × configuração (`T01`–`T05` × `C01`–`C04`) | **M6.1** (8 tarefas) e **M1.1** (20 casos) | **1.3** | A definir | A definir | 3 h | 2 h | Responsável pela execução *(A definir)* |
-| **2.1b** | **Laboratório — Compatibilidade de SO e instalabilidade:** execução de `TE01`–`TE08` em até 6 versões do Android (9 a 13 + atual) e 10 ciclos de instalação limpa e remoção com inspeção de diretórios | **M1.2** (até 6 versões), **M2.1** (10 ciclos) e **M2.2** (10 ciclos) | **2.1a** | A definir | A definir | 5 h | 4 h | Responsável pela execução *(A definir)* |
-| **2.2** | **Laboratório — Sessão padronizada de uso contínuo:** execução de 20 sessões cronometradas de 5 minutos (100 min ativos) com gravação e monitoramento de logs | **M3.1** e **M3.2** (20 sessões) | **1.3** | A definir | A definir | 3 h 30 min | 2 h | Responsável pela execução *(A definir)* |
-| **2.3** | **Laboratório — Ensaio com injeção de falhas:** execução de 20 interrupções de rede (30 s) e 20 desativações de localização/GPS (30 s) com medição temporal em vídeo | **M4.1** (20 ensaios) e **M4.2** (20 ensaios) | **1.3** | A definir | A definir | 3 h | 2 h | Responsável pela execução *(A definir)* |
-| **2.4** | **Laboratório — Auditoria comparativa de catálogo:** confronto dos 20 itens oficiais (`L01`–`L20`) da Semob-DF com os registros do aplicativo | **M6.2** (20 itens) | **1.2**, **1.3** | A definir | A definir | 2 h | 1 h | Responsável pelos registros *(A definir)* |
-| **3.1** | **Campo — Medição estática de paradas:** levantamento de coordenadas de referência via GPSTest nas 10 paradas selecionadas e comparação com o mapa do app | **M5.2 — paradas** (10 paradas) | **1.3**, **2.1a** | A definir | A definir | 3 h | 1 janela (3 h) | Responsável pela coleta de campo *(A definir)* |
-| **3.2** | **Campo — Observação de previsões e veículos:** registro de 20 eventos de chegada (2 blocos de 10, ≥ 2 linhas) e 20 eventos de veículo parado junto à parada | **M5.1** (20 eventos) e **M5.2 — veículos** (20 eventos) | **2.2**, **2.3**, **3.1** | A definir | A definir | 6 h (2 blocos de 3 h) | 2 janelas (6 h) | Responsável pela coleta de campo *(A definir)* |
-| **4.1** | **Consolidação das evidências e formulários:** auditoria de preenchimento, classificação de pendências/exclusões, vinculação de capturas/logs/vídeos por exceção e versionamento em `docs/fase3/` | Tabelas de contagem revisadas e evidências organizadas | **2.1b**, **2.2**, **2.3**, **2.4**, **3.2** | A definir | A definir | 4 h | 2 h | Responsável pelos registros *(A definir)* |
-| **5.1** | **Cálculo e julgamento na Fase 4:** apuração das 12 métricas, atribuição das notas (1 a 4), julgamento dos objetivos `G1`–`G6` e elaboração do relatório da Fase 4 | Resultados consolidados e relatório final da avaliação | **4.1** | A definir | A definir | 4 h | 2 h | Toda a equipe / Revisor dos procedimentos *(A definir)* |
+| **0.1** | Fechamento dos parâmetros, catálogos, roteiros e inventário de recursos | Conclusão de [Procedimentos](2-procedimentos.md) e [Recursos](3-recursos.md) (#45, #46, #47) | Fase 2 concluída | 16/11/2026 | 17/11/2026 | — | — | Revisor dos procedimentos *(A definir)* |
+| **1.1** | Preparação do ambiente de laboratório, dispositivos (`DISP-01`, `DISP-02`), emuladores (`EMU-01`) e instalação da versão `5.25.1(1149)` | Ambiente configurado e ferramentas (`adb`, `logcat`, gravação, GPSTest) validadas | **0.1** | 17/11/2026 | 17/11/2026 | 3 h | 2 h | Responsável pela execução *(A definir)* |
+| **1.2** | Coleta, ordenação e arquivamento da amostra oficial da Semob-DF (`L01`–`L20`) e seleção de `L01`, `L02` e `P01` | Base de referência oficial preservada com data/hora | **0.1** | 17/11/2026 | 17/11/2026 | 2 h | 2 h | Responsável pelos registros *(A definir)* |
+| **1.3** | Execução do teste-piloto dos roteiros e validação dos formulários de coleta | Roteiros e planilhas calibrados sem ambiguidade | **1.1**, **1.2** | 17/11/2026 | 17/11/2026 | 3 h | 2 h | Revisor dos procedimentos e Responsável pela execução *(A definir)* |
+| **2.1a** | **Laboratório — Tarefas essenciais e adaptabilidade de tela:** execução de `TE01`–`TE08` no aparelho principal e avaliação de 20 casos tela × configuração (`T01`–`T05` × `C01`–`C04`) | **M6.1** (8 tarefas) e **M1.1** (20 casos) | **1.3** | 18/11/2026 | 18/11/2026 | 3 h | 2 h | Responsável pela execução *(A definir)* |
+| **2.1b** | **Laboratório — Compatibilidade de SO e instalabilidade:** execução de `TE01`–`TE08` em até 6 versões do Android (9 a 13 + atual) e 10 ciclos de instalação limpa e remoção com inspeção de diretórios | **M1.2** (até 6 versões), **M2.1** (10 ciclos) e **M2.2** (10 ciclos) | **2.1a** | 18/11/2026 | 19/11/2026 | 5 h | 4 h | Responsável pela execução *(A definir)* |
+| **2.2** | **Laboratório — Sessão padronizada de uso contínuo:** execução de 20 sessões cronometradas de 5 minutos (100 min ativos) com gravação e monitoramento de logs | **M3.1** e **M3.2** (20 sessões) | **1.3** | 18/11/2026 | 18/11/2026 | 3 h 30 min | 2 h | Responsável pela execução *(A definir)* |
+| **2.3** | **Laboratório — Ensaio com injeção de falhas:** execução de 20 interrupções de rede (30 s) e 20 desativações de localização/GPS (30 s) com medição temporal em vídeo | **M4.1** (20 ensaios) e **M4.2** (20 ensaios) | **1.3** | 18/11/2026 | 18/11/2026 | 3 h | 2 h | Responsável pela execução *(A definir)* |
+| **2.4** | **Laboratório — Auditoria comparativa de catálogo:** confronto dos 20 itens oficiais (`L01`–`L20`) da Semob-DF com os registros do aplicativo | **M6.2** (20 itens) | **1.2**, **1.3** | 18/11/2026 | 18/11/2026 | 2 h | 1 h | Responsável pelos registros *(A definir)* |
+| **3.1** | **Campo — Medição estática de paradas:** levantamento de coordenadas de referência via GPSTest nas 10 paradas selecionadas e comparação com o mapa do app | **M5.2 — paradas** (10 paradas) | **1.3**, **2.1a** | 18/11/2026 | 18/11/2026 | 3 h | 1 janela (3 h) | Responsável pela coleta de campo *(A definir)* |
+| **3.2** | **Campo — Observação de previsões e veículos:** registro de 20 eventos de chegada (2 blocos de 10, ≥ 2 linhas) e 20 eventos de veículo parado junto à parada | **M5.1** (20 eventos) e **M5.2 — veículos** (20 eventos) | **1.3**, **3.1** | 18/11/2026 | 19/11/2026 | 6 h (2 blocos de 3 h) | 2 janelas (6 h) | Responsável pela coleta de campo *(A definir)* |
+| **4.1** | **Consolidação das evidências e formulários:** auditoria de preenchimento, classificação de pendências/exclusões, vinculação de capturas/logs/vídeos por exceção e versionamento em `dados/fase4/` | Tabelas de contagem revisadas e evidências organizadas | **2.1b**, **2.2**, **2.3**, **2.4**, **3.2** | 19/11/2026 | 20/11/2026 | 4 h | 2 h | Responsável pelos registros *(A definir)* |
+| **5.1** | **Cálculo e julgamento na Fase 4:** apuração das 12 métricas, atribuição das notas (1 a 4), julgamento dos objetivos `G1`–`G6` e elaboração do relatório da Fase 4 | Resultados consolidados e relatório final da avaliação | **4.1** | 20/11/2026 | 21/11/2026 | 4 h | 2 h | Toda a equipe / Revisor dos procedimentos *(A definir)* |
 
-> **Nota sobre paralelismo:** após a conclusão da **Etapa 1** (`1.1` a `1.3`), as atividades de laboratório (`2.1a`/`2.1b`, `2.2`, `2.3` e `2.4`) podem ser executadas em paralelo caso haja mais de um dispositivo ou avaliador disponível, respeitando a precedência entre `2.1a` e `2.1b`.
+<p class="legenda">Tabela 1. Cronograma das atividades de avaliação. Fonte: elaboração própria (2026).</p>
+
+> **Nota sobre paralelismo:** as durações somam cerca de 41 h de execução, mais 30 h de folga. Para caber no período de coleta, após a **Etapa 1** as atividades de laboratório (`2.1a`/`2.1b`, `2.2`, `2.3` e `2.4`) e de campo (`3.1` e `3.2`) são executadas em paralelo por avaliadores diferentes, respeitando a precedência entre `2.1a` e `2.1b` e entre `3.1` e `3.2`.
 
 ---
 
@@ -115,3 +114,4 @@ As folgas previstas na Seção 4 foram dimensionadas para absorver reexecuções
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação inicial do cronograma de execução da avaliação (Fase 3), definindo sequência de atividades, dependências, durações, folgas e papéis responsáveis | [Cristiano](https://github.com/CristianoMoraiss) | 16/11/2026 | — | — |
+| 02 | Datas das atividades ajustadas ao prazo de 22/11/2026, campo em paralelo ao laboratório, diagrama de dependências em Mermaid e evidências em `dados/fase4/` | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |

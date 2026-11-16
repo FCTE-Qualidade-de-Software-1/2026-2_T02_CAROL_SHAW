@@ -19,8 +19,11 @@ $$\text{Taxa de Conclusão } (\%) = \left( \frac{\text{Issues Concluídas}}{\tex
 
 A métrica indica a completude do escopo acordado para a entrega, devendo ser confrontada com a distribuição temporal (gráfico de *burndown*) para verificar se a conclusão ocorreu de forma gradual e sustentável ou de forma abrupta.
 
-
 ## 3. Milestone: Entrega 1
+
+<details class="note" markdown="1">
+<summary>Entrega 1</summary>
+
 
 ### 3.1. Objetivo da Milestone
 
@@ -74,6 +77,11 @@ O gráfico de *burndown* a seguir ilustra a anomalia gerada pelo registro retroa
 
 
 
+</details>
+
+
+
+
 
 ## 4. Ações de Correção para a Entrega 2 e Ciclo Corretivo
 
@@ -92,8 +100,10 @@ As regras operacionais obrigatórias para a fase de correção e para a Entrega 
 4. **Isolamento em Branches (Git Flow):** Todo desenvolvimento ocorre em branch temática específica da issue (ex: `docs/gestao_calendario`), eliminando commits diretos desordenados.
 5. **Fim do Registro Retroativo:** Fica estritamente vedada a criação de issues após a conclusão do trabalho, assegurando que o *burndown*, o *Lead Time* e o *Cycle Time* reflitam dados verídicos e auditáveis.
 
-
 ## 5. Milestone: Correção Entrega 1
+
+<details class="note" markdown="1">
+<summary>Correção Entrega 1</summary>
 
 ### 5.1. Objetivo da Milestone
 
@@ -132,6 +142,53 @@ Diferentemente da Entrega 1, o gráfico de *burndown* da fase de correção refl
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-1" width="450" height="200" frameborder="0"></iframe>
 
+</details>
+
+## 6. Milestone: Entrega 2
+<details class="note" markdown="1">
+<summary>Entrega 2</summary>
+
+### 6.1. Objetivo da Milestone
+
+A milestone **Entrega 2** foi instituída para conectar as especificações de qualidade do projeto à sua aplicação prática, estruturando um plano reprodutível que permita coletar dados reais e convertê-los em julgamentos fundamentados sobre o produto de software, contemplando as seguintes frentes:
+
+1. **Projeto e Documentação do Método de Avaliação (Fase 3)**: elaboração de um plano de avaliação autossuficiente e padronizado, definindo, documentando e fundamentando o método escolhido, acompanhado de instruções detalhadas que garantam sua execução completa e reprodutível por qualquer avaliador.
+
+2. **Especificação de Recursos e Cronograma (Fase 3)**: levantamento e detalhamento de toda a infraestrutura necessária para a realização dos testes — incluindo ferramentas, ambientes de execução e massas de dados — aliados à estruturação do cronograma das atividades de avaliação.
+
+3. **Coleta de Medidas e Análise Comparativa (Fase 4)**: execução prática dos procedimentos planejados na Fase 3 para obtenção das métricas reais do software, realizando o cruzamento e a análise dos dados coletados frente aos critérios e requisitos de qualidade previamente estabelecidos.
+
+4. **Julgamento dos Resultados e Parecer Técnico (Fase 4)**: consolidação e interpretação das comparações realizadas em um parecer formal e documentado, traduzindo as evidências empíricas em um diagnóstico conclusivo sobre a qualidade do produto avaliado.
+
+### 6.2. Dados da Milestone "Entrega 2"
+
+A milestone foi aberta no dia 15 de Novembro de 2026, com o escopo de 4 frentes de trabalho estruturantes:
+
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=1794794065410&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-10" width="600" height="350" frameborder="0"></iframe>
+
+#### Detalhamento das Tarefas da Entrega 2
+
+| Tarefa / Frente de Trabalho | Escopo Principal | Tempo Aprox. | Status |
+| :--- | :--- | :---: | :---: |
+| **Projeto e Documentação do Método de Avaliação (Fase 3)** | Definir, fundamentar e documentar o método de avaliação escolhido, elaborando instruções detalhadas e autossuficientes para garantir que qualquer avaliador consiga reproduzir os testes completamente. | ~8 horas | Em andamento |
+| **Especificação de Recursos e Cronograma (Fase 3)** | Levantar e especificar toda a infraestrutura necessária para a execução (ferramentas, ambientes e massas de dados), além de estruturar o cronograma detalhado das ações de avaliação. | ~6 horas | Em andamento |
+| **Coleta de Medidas e Análise Comparativa (Fase 4)** | Executar os procedimentos planejados na Fase 3 para coletar as métricas reais do software e realizar a análise comparativa dos dados obtidos frente aos critérios e requisitos definidos. | ~10 horas | Planejado |
+| **Julgamento dos Resultados e Parecer Técnico (Fase 4)** | Interpretar e consolidar os resultados das comparações em um parecer técnico documentado, emitindo um diagnóstico conclusivo sobre a qualidade do produto avaliado. | ~6 horas | Planejado |
+
+**Cálculo da Taxa de Conclusão da Correção:**
+
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=1794794065410&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
+
+*Cálculo feito apenas sobre as issues abertas e fechadas até o momento*
+
+### 6.3. Gráfico de Burndown da Correção da Entrega 1
+
+Como a milestone encontra-se em sua fase inicial de execução, o conjunto de dados coletados ainda é insuficiente para inferir tendências no gráfico de burndown. A análise de desempenho será atualizada conforme o avanço das atividades planejadas.
+
+
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=1794794065410&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-1" width="450" height="200" frameborder="0"></iframe>
+
+</details>
 
 ## Tabela de Contribuição
 
@@ -140,3 +197,4 @@ Diferentemente da Entrega 1, o gráfico de *burndown* da fase de correção refl
 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | Criação e estruturação da página de Calendário e Progresso | 09/11/2026 | [85e6b25](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/85e6b25) |
 | [Vitor Bessa](https://github.com/Bessazs) | Adição da tabela de desempenho da milestone e do grafico de burndow | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
+| [Vitor Bessa](https://github.com/Bessazs) | [0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600) |

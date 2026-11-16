@@ -101,7 +101,8 @@ nav:
       - Introdução: fase3/introducao.md
       - Método de Avaliação: fase3/1-metodo.md
       - Procedimentos de Execução: fase3/2-procedimentos.md
-      - Recursos e Cronograma: fase3/3-recursos.md
+      - Recursos: fase3/3-recursos.md
+      - Cronograma de Execução: fase3/4-cronograma.md
 
   - Fase 4:
       - Introdução: fase4/introducao.md

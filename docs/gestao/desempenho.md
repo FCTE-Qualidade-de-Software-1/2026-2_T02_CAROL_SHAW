@@ -90,4 +90,4 @@ Na milestone **Entrega 1**, os tempos refletem registros retroativos e não repr
 | [Pedro Ramos Sousa Reis](https://github.com/Pedro) | Criação das tabelas de registro das Issues | 10/11/2026 | [89ba979](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
 | [Vitor Bessa](https://github.com/bessazs) | Atualização da tabela de desempenho por issue pela tabela do grafana | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
-| [Vitor Bessa](https://github.com/bessazs) | Adição do conteudo da entrega 2 | 15/11/2026|[-----](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/------) |
+| [Vitor Bessa](https://github.com/bessazs) | Adição do conteudo da entrega 2 | 15/11/2026|[0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600)|

@@ -479,17 +479,24 @@ Estes procedimentos operacionais conectam as especificações teóricas da Fase 
 
 ---
 
-## 13. Histórico de versão
+## Referências
 
-| Versão | Data | Descrição da alteração | Autor(es) | Revisor(es) |
-| :--- | :--- | :--- | :--- | :--- |
-| `1.0` | 16/11/2026 | Criação dos procedimentos detalhados de execução, roteiros das 12 métricas, convenção de evidências, regras de anomalias e formulários de coleta (Issue #46). | João Pedro Capozzi (jonas3688) | Equipe Carol Shaw |
+[1] ISO. *ISO/IEC 25040:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*. https://www.iso.org/standard/35747.html
+
+[2] ISO. *ISO/IEC 25010:2023 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*. https://www.iso.org/standard/78176.html
+
+[3] BRASIL. *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.
+
+[4] SECRETARIA DE TRANSPORTE E MOBILIDADE DO DISTRITO FEDERAL (SEMOB-DF). *Dados Abertos do Transporte Público Coletivo do DF (DF no Ponto / GTFS)*. Disponível em: <https://semob.df.gov.br/>. Acesso em: 16 nov. 2026.
+
+[5] SINNOTT, Roger W. *Virtues of the Haversine*. Sky and Telescope, v. 68, n. 2, p. 159, 1984.
+
+[6] Equipe Carol Shaw. [Métricas e Critérios de Julgamento — Fase 2](../fase2/metricas-julgamento.md).
 
 ---
 
-## 14. Referências bibliográficas
+## Histórico de Versões
 
-* [1] **ISO/IEC 25040:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*. Geneva: International Organization for Standardization, 2011.
-* [2] **ISO/IEC 25010:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*. Geneva: International Organization for Standardization, 2011.
-* [3] **BRASIL.** *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.
-* [4] **SECRETARIA DE TRANSPORTE E MOBILIDADE DO DISTRITO FEDERAL (SEMOB-DF).** *Dados Abertos do Transporte Público Coletivo do DF (DF no Ponto / GTFS)*. Disponível em: <https://semob.df.gov.br/>. Acesso em: 16 nov. 2026.
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| 01 | Criação dos procedimentos detalhados de execução, roteiros das 12 métricas, convenção de evidências, regras de anomalias e formulários de coleta (#46) | [João Pedro Capozzi](https://github.com/jonas3688) | 16/11/2026 | — | — |

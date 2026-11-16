@@ -6,8 +6,8 @@ No processo de avaliação da **ISO/IEC 25040**, esta fase corresponde à ativid
 
 Nos arquivos desta fase, são abordados:
 
-- O [Método de Avaliação](1-metodo.md) escolhido, a técnica adotada para cada métrica e sua justificativa, os **parâmetros e o plano de amostragem** fixados antes da coleta e as ameaças à validade;
-- Os [Procedimentos de Execução](2-procedimentos.md): **instruções detalhadas de execução**, roteiros passo a passo por métrica e formulários padronizados de coleta de dados;
+- O [Método de Avaliação](1-metodo.md) escolhido, a técnica adotada para cada métrica e sua justificativa e as ameaças à validade;
+- Os [Procedimentos de Execução](2-procedimentos.md): **parâmetros, catálogos e plano de amostragem** e, em etapa posterior, roteiros passo a passo por métrica e formulários padronizados de coleta de dados;
 - Os [Recursos](3-recursos.md) **necessários** à execução: dispositivos, ferramentas, ambientes, dados de entrada e papéis da equipe;
 - O [Cronograma](4-cronograma.md) **de execução**: planejamento temporal das etapas de coleta, sequência de realização dos testes, prazos e marcos de entrega para a Fase 4.
 
@@ -20,3 +20,4 @@ A Fase 3 não redefine métricas nem critérios de julgamento: fórmulas, escala
 | ID  | Descrição            | Autor                                          | Data       | Revisor | Data |
 | :-: | :------------------- | :--------------------------------------------- | :--------- | :------ | :--: |
 | 01  | Criação do documento | [Pedro Ramos](https://github.com/PedroRSR)     | 15/11/2026 | —       | —    |
+| 02 | Alinhamento da localização dos parâmetros, catálogos e amostragem com a página de procedimentos | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | — | — |

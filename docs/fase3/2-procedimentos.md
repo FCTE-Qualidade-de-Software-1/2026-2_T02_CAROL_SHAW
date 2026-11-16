@@ -244,3 +244,104 @@ Esta seção define os procedimentos operacionais para as métricas da caracter�
    - **Não Observável:** Caso restrições de permissão do Android (ex.: scoped storage estrito sem acesso de inspeção) impeçam categoricamente a verificação dos diretórios, registrar a impossibilidade técnica motivada.
 
 ---
+
+## 9. Roteiros detalhados de execução — Confiabilidade (G3 e G4)
+
+Esta seção estabelece os procedimentos operacionais para as métricas da característica **Confiabilidade** (subcaracterísticas *Maturidade* e *Tolerância a Falhas*), respondendo à **Decisão D2** (estabilidade operacional e resiliência em condições adversas de uso real).
+
+---
+
+### 9.1 Roteiro M3.1 — Sessões sem *crashes*
+
+* **Objetivo e métrica:** $M_{3.1} = 1 - \frac{S_c}{S_t}$ (Proporção de sessões concluídas sem encerramento inesperado ou interrupção anômala).
+* **Definição de sessão padronizada:** Uma sessão de uso ativo contínuo com duração planejada de **15 minutos**, executando um ciclo repetitivo de ações típicas do usuário: busca de linhas, consulta de horários, zoom e movimentação no mapa, alternância entre abas e retorno da aplicação após segundo plano.
+* **Escopo:** Laboratório e campo, monitorando aparelhos físicos com gravação contínua ou registro em logcat:
+  ```bash
+  adb logcat -v time | grep -E "FATAL EXCEPTION|AndroidRuntime|SIGSEGV"
+  ```
+
+#### Procedimento de ensaio passo a passo
+
+1. **Preparação:** Iniciar a gravação de tela no dispositivo de teste e disparar o cronômetro oficial do ensaio.
+2. **Execução do ciclo de ações:** Durante o período de 15 minutos, alternar a cada 2 a 3 minutos entre:
+   - Pesquisa de 3 linhas diferentes;
+   - Seleção de itinerário e exibição da rota no mapa;
+   - Consulta das previsões de chegada em 2 paradas distintas;
+   - Minimização temporária do app por 10 segundos e reabertura.
+3. **Detecção de anomalia:** Monitorar se ocorre:
+   - Fechamento súbito do aplicativo com retorno involuntário à tela inicial do Android;
+   - Exibição de diálogo nativo do sistema operacional (*"O DF no Ponto parou"* ou *"O app apresenta falhas contínuas"*);
+   - Registro de exceção fatal no logcat.
+4. **Tratamento de interrupção:** Se o aplicativo sofrer *crash* aos 7 minutos, a sessão é encerrada imediatamente, contabilizada como afetada por crash ($S_c$) no total de sessões $S_t$. Para continuar a bateria, uma nova sessão independente é iniciada com novo identificador.
+5. **Registro de evidência:** Gravação de vídeo do momento do encerramento e captura de logcat com a pilha de chamada (*stack trace*) do erro (`EVI_M3.1_SESSAOxx_...mp4` e `.log`).
+6. **Contabilização:**
+   - **Aprovado:** A sessão completa os 15 minutos sem nenhum encerramento involuntário.
+   - **Reprovado ($S_c$):** Ocorreu ao menos um *crash* durante a sessão.
+
+---
+
+### 9.2 Roteiro M3.2 — Sessões sem congelamentos
+
+* **Objetivo e métrica:** $M_{3.2} = 1 - \frac{S_a}{S_t}$ (Proporção de sessões padronizadas livres de travamento de interface superior a 5 segundos).
+* **Definição de congelamento (*freeze*):** Inoperância total ou ausência de resposta da interface gráfica a toques, rolagens ou comandos por tempo **$\Delta t > 5{,}0\text{ segundos}$**.
+* **Distinção metodológica fundamental:** Requisições de rede lentas onde o aplicativo exibe um indicador visual ativo de progresso (*spinner*, barra de carregamento ou esqueleto de tela) mantendo o botão de voltar funcional **não são classificadas como congelamento**. O congelamento é caracterizado pela paralisação do thread de renderização (UI Thread travada ou diálogo ANR — *Application Not Responding*).
+
+#### Procedimento de ensaio passo a passo
+
+1. **Preparação:** Dispositivo físico ou emulador com gravação de tela com exibição de toques ativada nas Opções do Desenvolvedor do Android (*"Mostrar toques"* ativado).
+2. **Execução do roteiro padrão:** Durante a sessão padronizada de 15 minutos, interagir ativamente com a interface a cada 10-15 segundos (clicar em linhas, expandir menus, arrastar mapa).
+3. **Identificação e cronometragem de travamentos:**
+   - Ao emitir um comando (toque em parada, abertura de linha ou rolagem de lista), observar se a resposta visual ocorre de imediato.
+   - Caso a interface permaneça inerte e indiferente a novos toques, disparar cronômetro no vídeo gravado.
+   - Se a paralisação ultrapassar **5,0 segundos** ou disparar diálogo de ANR do SO, o evento é registrado formalmente como congelamento.
+4. **Registro de evidência:** Fragmento de vídeo contendo o carimbo de tempo evidenciando o período exato de inércia da tela superior a 5 segundos (`EVI_M3.2_SESSAOxx_...mp4`).
+5. **Contabilização:**
+   - **Aprovado:** Sessão sem nenhum evento de congelamento $> 5\text{s}$.
+   - **Reprovado ($S_a$):** Sessão em que ocorreu ao menos um congelamento $> 5\text{s}$.
+
+---
+
+### 9.3 Roteiro M4.1 — Evitação de quebra por conexão
+
+* **Objetivo e métrica:** $M_{4.1} = \frac{R_s}{R_t}$ (Proporção de interrupções de rede induzidas com tratamento aprovado e recuperação adequada).
+* **Escopo do ensaio:** Laboratório, simulando a instabilidade crônica de cobertura celular na malha rodoviária do Distrito Federal.
+
+#### Procedimento de ensaio passo a passo
+
+1. **Pré-condição:** Aplicativo aberto em dispositivo físico conectado à rede de dados ou Wi-Fi, com exibição de linhas ou mapa em funcionamento.
+2. **Disparo da consulta:** Realizar uma busca por linha ou abrir uma parada de ônibus que exija carregamento de dados em tempo real.
+3. **Indução da falha de rede:** No exato momento do carregamento da consulta, acionar o **Modo Avião** na central rápida do Android, cortando integralmente o tráfego de dados por **15 segundos**.
+4. **Verificação de resiliência (Critérios de aprovação):**
+   - O aplicativo deve permanecer aberto sem encerrar ou exibir tela preta/branca opaca;
+   - Deve apresentar, em até **5,0 segundos**, uma mensagem amigável e inteligível ao usuário informando a indisponibilidade de rede (ex.: *"Sem conexão com a internet"*, *"Verifique sua conexão"* ou ícone explicativo);
+   - A interface deve manter botões de navegação e voltar totalmente operacionais.
+5. **Restauração da rede:** Desativar o Modo Avião e tocar no botão de tentar novamente ou aguardar a atualização automática.
+6. **Tempo de retomada:** O aplicativo deve reestabelecer os dados válidos na tela em até **10,0 segundos** após a reconexão.
+7. **Registro de evidência:** Gravação contínua do ensaio demonstrando a injeção do corte, o alerta exibido e a recuperação dos dados (`EVI_M4.1_ENSAIOxx_...mp4`).
+8. **Contabilização:**
+   - **Aprovado ($R_s$):** Tratamento informativo claro sem travamento e retomada no tempo limite.
+   - **Reprovado:** Fechamento forçado, travamento em loop infinito sem aviso de erro ou exigência de reiniciar o app para voltar a utilizá-lo.
+
+---
+
+### 9.4 Roteiro M4.2 — Tratamento de perda de GPS
+
+* **Objetivo e métrica:** $M_{4.2} = \frac{G_s}{G_t}$ (Proporção de eventos de perda de sinal de geolocalização tratados com aviso adequado e continuidade de uso).
+* **Escopo do ensaio:** Laboratório ou campo em aparelhos com sensor GNSS nativo.
+
+#### Procedimento de ensaio passo a passo
+
+1. **Pré-condição:** Aplicativo em execução com o mapa principal aberto, GPS ativo e a localização do usuário exibida com o marcador azul centralizado.
+2. **Indução da falha de localização:** Deslizar a barra de notificações do Android e desativar o botão de **"Localização" / "GPS"**. Retornar imediatamente ao aplicativo.
+3. **Inspeção de resposta do aplicativo:**
+   - O aplicativo não pode encerrar nem travar;
+   - Deve exibir diálogo ou aviso indicando que a localização está desativada, oferecendo atalho para ativar o recurso ou permitindo continuar em modo de busca manual;
+   - O mapa deve manter operacionais as funcionalidades de navegação manual, busca de linhas por texto e consulta a paradas.
+4. **Restauração:** Reativar a localização do aparelho e retornar ao aplicativo.
+5. **Verificação de retomada:** O aplicativo deve identificar a volta do sensor e atualizar a posição no mapa em até **5,0 segundos**.
+6. **Registro de evidência:** Gravação de tela do ciclo de desativação, aviso e reativação (`EVI_M4.2_ENSAIOxx_...mp4`).
+7. **Contabilização:**
+   - **Aprovado ($G_s$):** Mensagem de alerta adequada, retenção da operabilidade das buscas e reaquisição correta da posição.
+   - **Reprovado:** Encerramento inesperado, mapa inoperante ou travamento generalizado da interface.
+
+---

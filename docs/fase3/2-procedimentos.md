@@ -31,7 +31,7 @@ Os valores abaixo são decisões do projeto para uma execução acadêmica com a
 
 ### 3.1 Itens do catálogo oficial
 
-`L01` e `L02` são duas linhas da [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/)[3], e `P01` é uma parada do itinerário de `L01`. Eles são escolhidos e registrados **antes** da coleta (ver seção 7).
+`L01` e `L02` são duas linhas do [Relatório de Linhas da Semob-DF](https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df)[3], e `P01` é uma parada do itinerário de `L01`. Eles são escolhidos e registrados **antes** da coleta (ver seção 7).
 
 ### 3.2 Tarefas essenciais (M6.1 e M1.2)
 
@@ -200,9 +200,9 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 
 #### M6.2 — Completude do banco (Lab)
 
-- **Amostra:** os **20 primeiros itens distintos** de linha e itinerário da Pesquisa por Linhas da Semob-DF, ordenados por código, sentido e variante, com data e hora da consulta preservadas. Os itens são identificados como `A01` a `A20`.
-- **Passos:** buscar cada item no app, conferir código, sentido e itinerário, e comparar com o cadastro oficial.
-- **Conforme se:** código, sentido e itinerário correspondem ao cadastro oficial.
+- **Amostra:** **20 linhas** do Relatório de Linhas da Semob-DF, 4 por bacia (01 a 05), sorteadas aleatoriamente. O sorteio usa só linhas com viagens em dia útil. Um código que aparece em mais de uma bacia entra uma vez só; se for sorteado de novo, sorteia-se outro. Método para realizar o sorteio fica registrado e os PDFs de origem ficam arquivados. Os itens são `A01` a `A20`.
+- **Passos:** buscar o código no app e conferir se a linha existe e se a denominação (origem/destino) bate com o relatório.
+- **Conforme se:** o código existe no app com a mesma denominação. Se o relatório mostra viagens de ida e de volta, o app deve mostrar os dois sentidos.
 - **Limite:** o resultado vale só para a amostra e a data. Não estima a cobertura de toda a malha.
 - **Evidência:** captura de tela do resultado da busca de cada item.
 
@@ -273,7 +273,7 @@ Os itens da Tabela 7 precisam estar preenchidos e versionados antes do primeiro 
 
 [2] BRASIL. *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.
 
-[3] Semob-DF. [Pesquisa por Linhas — DF no Ponto](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/). Acesso em: 16 nov. 2026.
+[3] Semob-DF. [Relatório de Linhas — DF no Ponto](https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df). Acesso em: 17 nov. 2026.
 
 [4] Android Developers. [Armazenamento de dados e arquivos](https://developer.android.com/training/data-storage).
 

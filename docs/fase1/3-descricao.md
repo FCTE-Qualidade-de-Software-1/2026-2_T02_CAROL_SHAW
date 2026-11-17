@@ -34,8 +34,8 @@ Conforme a ISO/IEC 25040, a avaliação identifica o produto e as partes do prod
 | :--- | :--- |
 | **Produto avaliado** | Aplicativo móvel *DF no Ponto*, versão de produção distribuída pela loja oficial |
 | **Plataforma** | Android (aparelhos físicos e emuladores do Android Studio) |
-| **Versão / *build* avaliada** | `5.25.1(1149) (Mais Recente)` |
-| **Período de coleta** | `[A PREENCHER: datas de início e fim da coleta]` |
+| **Versão / *build* avaliada** | `5.25.1(1149)` |
+| **Período de coleta** | Previsto: 18/11/2026 a 19/11/2026, com contingência até 21/11/2026, conforme o [Cronograma](../fase3/4-cronograma.md); confirmar ao final da coleta |
 | **Origem da instalação** | Loja oficial de aplicativos (Play Store) |
 
 ## 5. Fronteiras e Exclusões de Escopo
@@ -66,5 +66,5 @@ Esses limites seguem o caráter acadêmico e de caixa preta da avaliação, desc
 
 | ID  | Descrição         | Autor                               | Data       | Revisor                              |  Data   |
 | :-: | :---------------- | :---------------------------------- | :--------- | :----------------------------------- | :-----: |
-| 01  | Criação da Página | [Bessa](https://github.com/bessazs) | 17/10/2026 | [------](https://github.com/-------) | ------- |
+| 01  | Criação da Página | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
 | 02 | Inclusão do Alvo da Avaliação (produto, plataforma, versão) e das Fronteiras e Exclusões de Escopo, conforme a ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |

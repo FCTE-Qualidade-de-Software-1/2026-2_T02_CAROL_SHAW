@@ -27,7 +27,7 @@ A tabela a seguir detalha cada parte interessada, suas necessidades centrais, a 
 
 ## 4. Transição Lógica: Dos Requisitantes às Metas de Medição (Fase 2)
 
-A ligação entre as dores das partes interessadas e a formulação matemática do modelo GQM dá-se por meio do encadeamento lógico estruturado na matriz abaixo:
+A ligação entre as dores das partes interessadas e a formulação matemática do modelo GQM dá-se por meio do encadeamento lógico estruturado no fluxo e na matriz abaixo:
 
 ```mermaid
 flowchart LR
@@ -41,7 +41,7 @@ flowchart LR
 | :--- | :--- | :---: | :---: | :---: |
 | **Passageiro / Cidadão** | O aplicativo não pode falhar ou desconfigurar em celulares de entrada nem sobrecarregar o armazenamento interno. | **QN1** *(Acesso Universal)* | **D1** | **G1** (Adaptabilidade de Telas e SO)<br>**G2** (Instalação e Resíduos) |
 | **Passageiro / Semob-DF** | O aplicativo não pode fechar inesperadamente nem travar no meio da rua sob sinal de internet oscilante ou sem GPS. | **QN2** *(Resiliência Operacional)* | **D2** | **G3** (Maturidade: Crashes/ANRs)<br>**G4** (Tolerância a Falhas de Conexão/GPS) |
-| **Passageiro / Semob-DF** | Os horários previstos e o mapa do ônibus devem ser pontuais e confere com a realidade das paradas e linhas oficiais. | **QN3** *(Fidelidade da Informação)* | **D3** | **G5** (Correção Temporal e Espacial)<br>**G6** (Completude e Tarefas Essenciais) |
+| **Passageiro / Semob-DF** | Os horários previstos e o mapa do ônibus devem ser pontuais e conferir com a realidade das paradas e linhas oficiais. | **QN3** *(Fidelidade da Informação)* | **D3** | **G5** (Correção Temporal e Espacial)<br>**G6** (Completude e Tarefas Essenciais) |
 
 Essa conexão explícita assegura a rastreabilidade bidirecional do processo de avaliação: cada número medido na Fase 4 possui correspondência direta com uma necessidade humana e social estabelecida nesta Fase 1.
 
@@ -49,7 +49,7 @@ Essa conexão explícita assegura a rastreabilidade bidirecional do processo de 
 
 ## 5. Referências Bibliográficas
 
-- **ISO/IEC 25010:2023.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
+- **ISO/IEC 25010:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
 - **ISO/IEC 25040:2011.** *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
 - **BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter.** *The Goal Question Metric Approach*. Encyclopedia of Software Engineering, 1994.
 

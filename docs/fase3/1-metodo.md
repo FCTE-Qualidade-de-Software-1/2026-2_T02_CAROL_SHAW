@@ -17,7 +17,7 @@ A aplicação do método segue um ciclo de quatro etapas para cada métrica (`M1
 
 1. **Preparação do ambiente:** configurar o dispositivo físico ou emulador (ou posicionar-se no ponto de parada definido) conforme os requisitos de [Recursos](3-recursos.md), garantindo que a versão `5.25.1(1149)` esteja instalada.
 2. **Execução dos roteiros:** seguir as instruções específicas de cada métrica descritas em [Procedimentos de Execução](2-procedimentos.md), percorrendo o catálogo fixo de telas, tarefas ou observações de campo.
-3. **Contabilização tabular:** registrar cada caso executado em uma matriz de contagem, classificando o resultado de forma objetiva (**Conforme**, **Não conforme / Defeito** ou **Não observável**; o estado **Pendente** é transitório e é resolvido por revisão cruzada antes da consolidação, conforme a seção 11 de [Procedimentos de Execução](2-procedimentos.md)). Itens não observáveis são excluídos do denominador válido, enquanto defeitos permanecem na amostra.
+3. **Contabilização tabular:** registrar cada caso executado em uma matriz de contagem, classificando o resultado de forma objetiva (**Conforme**, **Não conforme / Defeito** ou **Não observável**; o estado **Pendente** é transitório e é resolvido por revisão cruzada antes da consolidação, conforme as regras comuns de [Procedimentos de Execução](2-procedimentos.md#2-regras-comuns)). Itens não observáveis são excluídos do denominador válido, enquanto defeitos permanecem na amostra.
 4. **Cálculo e julgamento:** aplicar as fórmulas, escalas e limiares definidos em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md)[3], julgando cada objetivo GQM pela pior nota entre suas métricas associadas, conforme a regra de [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos).
 
 ## 3. Técnicas de avaliação por métrica
@@ -52,10 +52,10 @@ A tabela abaixo resume a técnica aplicada a cada métrica da Fase 2 (especifica
 
 Para que cada resultado possa ser verificado por terceiros, o registro combina **tabelas de execução** e **evidências por caso**:
 
-* **Tabelas de execução (todos os casos):** toda execução, aprovada ou reprovada, é registrada na planilha de coleta descrita em [Procedimentos de Execução](2-procedimentos.md#10-protocolo-de-coleta-e-formulario-padronizado), com data, dispositivo e versão do Android, caso testado e resultado.
+* **Tabelas de execução (todos os casos):** toda execução, aprovada ou reprovada, é registrada na planilha de coleta descrita em [Procedimentos de Execução](2-procedimentos.md#6-registro-e-evidencias), com data, dispositivo e versão do Android, caso testado e resultado.
 * **Evidências (todos os casos):** cada linha da planilha aponta para a evidência prevista no roteiro da métrica (captura de tela, gravação, log ou arquivo de dados), inclusive nos casos aprovados. Nos casos reprovados, a evidência deve mostrar o defeito contabilizado.
 
-As planilhas e as evidências são versionadas no repositório da equipe, em `dados/fase4/<métrica>/`, e vinculadas pelo identificador do caso. Vídeos que excedam o limite do repositório ficam em pasta compartilhada, com link e hash registrados na planilha.
+A planilha, as capturas, as listagens e os logs são versionados no repositório da equipe, em `dados/fase4/<métrica>/`, e vinculados pelo identificador do caso. As gravações de vídeo ficam em pasta compartilhada, com o link registrado na planilha.
 
 ## 6. Limitações do método e ameaças à validade
 
@@ -63,11 +63,12 @@ Como a avaliação é de caixa preta e usa amostragem intencional, os resultados
 
 | Ameaça | Efeito possível | Tratamento |
 | :--- | :--- | :--- |
-| Amostra intencional e pequena | Os resultados não estimam taxas da população de usuários; em M1.2, M2.1, M2.2 e M6.1 a nota 3 não é atingível | Informar o tamanho da amostra e a resolução de cada métrica; aplicar a regra de amostras pequenas da Fase 2 |
-| Falhas de infraestrutura externa (rede, API da Semob-DF) confundidas com falhas do aplicativo | Reprovação indevida ou exclusão indevida | Estados de execução e política de reteste da seção 11 dos procedimentos; registro da causa observável |
-| Erro da referência de posição (GPS do celular) | Classificação incorreta em M5.2 | Aceitar apenas referência com precisão informada de até 10 m; tolerância de 30 m; apuração separada de paradas e veículos |
+| Amostra intencional e pequena | Os resultados não estimam taxas da população de usuários; em M1.2, M2.1, M2.2, M5.2 (paradas) e M6.1 nem todas as notas são atingíveis | Informar a contagem junto de cada nota; aplicar a regra de amostras pequenas da Fase 2 e a tabela de notas possíveis dos procedimentos |
+| Falhas de infraestrutura externa (rede, API da Semob-DF) confundidas com falhas do aplicativo | Reprovação indevida ou exclusão indevida | Estados de execução e regra de repetição das regras comuns dos procedimentos; registro da causa observável |
+| Erro da referência de posição (GPS do celular) e da leitura da distância no mapa | Classificação incorreta em M5.2 | Aceitar apenas referência com precisão informada de até 10 m; tolerância de 30 m; registrar o modo de obtenção da distância; apuração separada de paradas e veículos |
 | Variação entre avaliadores | Julgamentos diferentes para o mesmo caso | Critérios de aprovação por roteiro, teste-piloto por avaliador que não redigiu o roteiro e auditoria de 10% dos registros |
 | Atualização do aplicativo durante a coleta | Mistura de versões na amostra | Registrar a versão em cada execução e manter separados os resultados de versões diferentes |
+| Apenas três versões do Android em M1.2 | A faixa intermediária (Android 10 a 12) não é verificada | Declarar que a amostra cobre os extremos e o aparelho físico; não generalizar |
 | Emuladores em lugar de aparelhos físicos | Comportamento diferente do real em sensores e desempenho | Usar emuladores apenas em M1.1 e M1.2; identificar o ambiente em cada registro |
 | Seleção dos 20 primeiros itens do catálogo oficial (M6.2) | Amostra concentrada em parte do catálogo | Limitar a conclusão à amostra e à data de referência |
 | Dias e horários de campo limitados | Previsões medidas em condições de tráfego específicas | Registrar dia, horário e antecedência de cada previsão; informar a dispersão dos erros |
@@ -94,3 +95,4 @@ Como a avaliação é de caixa preta e usa amostragem intencional, os resultados
 | 02 | Reestruturação do documento para focar na estrutura do método, contagem tabular com evidência por exceção | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
 | 03 | Inclusão de links cruzados para Abordagem GQM e Metas de Avaliação (Fase 2) e alinhamento de rastreabilidade | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
 | 04 | Justificativa do método, evidências para todos os casos em `dados/fase4/`, ameaças à validade, unidade de M1.1 e nome de M4.1 alinhados à Fase 2 | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |
+| 05 | Referências às seções dos procedimentos e ameaças à validade ajustadas à nova estrutura e às amostras revistas | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |

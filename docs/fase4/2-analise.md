@@ -117,3 +117,286 @@ Ao converter as notas individuais das métricas em vereditos dos objetivos (`G1`
 
 1. **Veredito por objetivo (`G1` a `G6`):** o objetivo assume a **pior nota** entre suas duas métricas filhas — apenas notas 3 e 4 resultam em **Satisfeito**; pelo menos uma nota 2 resulta em **Satisfeito com Ressalvas**; e pelo menos uma nota 1 resulta em **Não Satisfeito**. Se alguma métrica filha ou caso obrigatório estiver pendente ou sem dados válidos, o objetivo recebe **Não avaliado (dados incompletos)**.
 2. **Veredito por característica e resposta às questões norteadoras (`QN1`–`QN3`):** cada característica (**Portabilidade**: `G1`, `G2`; **Confiabilidade**: `G3`, `G4`; **Adequação Funcional**: `G5`, `G6`) recebe o **pior veredito** dentre os dois objetivos associados, fundamentando as decisões estratégicas **D1**, **D2** e **D3** sem cálculo de nota global única para o aplicativo.
+
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+Esta seção apresenta o cálculo, a atribuição de notas, o confronto com as hipóteses preditivas e o veredito parcial dos objetivos **G1 (Adaptabilidade)** e **G2 (Instalabilidade)** da característica **Portabilidade** (ISO/IEC 25010:2011), vinculados à questão norteadora **QN1** e à decisão estratégica **D1** ([Planejamento e Objetivos](../fase2/planejamento-objetivos.md#g1), [Modelo de Qualidade](../fase1/5-modelo.md#21-portabilidade-decisao-d1-questao-norteadora-qn1)).
+
+> **Aviso de rastreabilidade e completude da coleta:** conforme verificado na matriz de consolidação (Seção 3) e nos registros publicados em [Coleta de Dados](1-coleta.md), até este momento apenas a métrica **M6.2** possui dados coletados. As métricas **M1.1, M1.2, M2.1 e M2.2** ainda não possuem registros de execução versionados em `1-coleta.md`. Em estrita conformidade com as [Regras Gerais de Cálculo](../fase2/metricas-julgamento.md#regras-gerais-de-calculo) (regras 3 e 4) e a metodologia da Seção 2.2, **nenhum valor empírico é simulado ou inferido**: as métricas permanecem com estado **Não avaliado (sem dados)** e os objetivos associados com veredito **Não avaliado (dados incompletos)** até a incorporação das respectivas tabelas e evidências de coleta.
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+##### 1. Definição matemática e variáveis medidas
+
+Definida em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#m11-adaptabilidade-de-hardware-telas) com base na ISO/IEC 25023:2016:
+
+$$
+M_{1.1} = \frac{T_s}{T_t}
+$$
+
+- **$T_s$:** quantidade de casos `tela × configuração` aprovados (**Conforme**), em que informações e controles necessários estão visíveis e utilizáveis sem corte ou sobreposição impeditivos que bloqueiem a tarefa.
+- **$T_t$:** total de casos `tela × configuração` válidos avaliados na mesma versão do aplicativo (`5.25.1(1149)`) e do Android (exclui apenas casos classificados como **Não observável** com justificativa documentada; casos **Defeito** permanecem obrigatoriamente em $T_t$).
+- **Escala, unidade e domínio:** Razão, adimensional, domínio $[0, 1]$ (maior é melhor).
+- **Catálogo de ensaios ([Procedimentos de Execução](../fase3/2-procedimentos.md#33-telas-e-configuracoes-m11)):** 5 telas (`T01`: Resultado da busca por `L01`; `T02`: Horários de `L01`; `T03`: Mapa do itinerário de `L01`; `T04`: Detalhes de `P01`; `T05`: Favoritos com `L01` e `P01`) $\times$ 4 configurações (`C01`: 640 × 1136 px, 320 dpi, Retrato, Fonte 100%; `C02`: 640 × 1136 px, 320 dpi, Paisagem, Fonte 100%; `C03`: 640 × 1136 px, 320 dpi, Retrato, Fonte 200%; `C04`: 1080 × 2400 px, 420 dpi, Retrato, Fonte 100%), perfazendo **20 casos** (`T01-C01` a `T05-C04`). *(Nota de alinhamento: o arranjo `5 × 4` fixado na Fase 3 operacionaliza as duas resoluções/densidades, duas escalas de fonte — 100% e 200% — e duas orientações em 20 combinações.)*
+- **Limiares de pontuação:** Nota 4 (Excelente): $= 1{,}00$ (`20/20`); Nota 3 (Bom): $\ge 0{,}90$ (`18–19/20`); Nota 2 (Insuficiente): $\ge 0{,}75$ (`15–17/20`); Nota 1 (Crítico): $< 0{,}75$ (`0–14/20`).
+
+##### 2. Tabela de resultados dos ensaios
+
+| ID | Caso | Tela | Configuração (Resolução · Densidade · Orientação · Fonte) | Ambiente | Estado | Evidência | Observações |
+| :--- | :---: | :--- | :--- | :--- | :---: | :--- | :--- |
+| M1.1-01 | `T01-C01` | T01 (Busca `L01`) | 640 × 1136 px · 320 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-02 | `T01-C02` | T01 (Busca `L01`) | 640 × 1136 px · 320 dpi · Paisagem · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-03 | `T01-C03` | T01 (Busca `L01`) | 640 × 1136 px · 320 dpi · Retrato · 200% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-04 | `T01-C04` | T01 (Busca `L01`) | 1080 × 2400 px · 420 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-05 | `T02-C01` | T02 (Horários `L01`) | 640 × 1136 px · 320 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-06 | `T02-C02` | T02 (Horários `L01`) | 640 × 1136 px · 320 dpi · Paisagem · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-07 | `T02-C03` | T02 (Horários `L01`) | 640 × 1136 px · 320 dpi · Retrato · 200% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-08 | `T02-C04` | T02 (Horários `L01`) | 1080 × 2400 px · 420 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-09 | `T03-C01` | T03 (Mapa `L01`) | 640 × 1136 px · 320 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-10 | `T03-C02` | T03 (Mapa `L01`) | 640 × 1136 px · 320 dpi · Paisagem · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-11 | `T03-C03` | T03 (Mapa `L01`) | 640 × 1136 px · 320 dpi · Retrato · 200% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-12 | `T03-C04` | T03 (Mapa `L01`) | 1080 × 2400 px · 420 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-13 | `T04-C01` | T04 (Detalhes `P01`) | 640 × 1136 px · 320 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-14 | `T04-C02` | T04 (Detalhes `P01`) | 640 × 1136 px · 320 dpi · Paisagem · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-15 | `T04-C03` | T04 (Detalhes `P01`) | 640 × 1136 px · 320 dpi · Retrato · 200% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-16 | `T04-C04` | T04 (Detalhes `P01`) | 1080 × 2400 px · 420 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-17 | `T05-C01` | T05 (Favoritos) | 640 × 1136 px · 320 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-18 | `T05-C02` | T05 (Favoritos) | 640 × 1136 px · 320 dpi · Paisagem · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-19 | `T05-C03` | T05 (Favoritos) | 640 × 1136 px · 320 dpi · Retrato · 200% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.1-20 | `T05-C04` | T05 (Favoritos) | 1080 × 2400 px · 420 dpi · Retrato · 100% | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+
+<p class="legenda">Tabela P1. Matriz de consolidação dos ensaios da métrica M1.1. Fonte: elaboração própria (2026), com base em Procedimentos de Execução (Fase 3) e Coleta de Dados (Fase 4).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição da nota
+
+- **Contagens apuradas:** previstos = 20; executados = 0; não observáveis = 0; pendentes de coleta = 20; amostra válida apurada $T_t = 0$; casos aprovados $T_s = 0$.
+- **Cálculo:**
+
+$$
+M_{1.1} = \frac{T_s}{T_t} = \frac{0}{0} \rightarrow \text{Não avaliado (sem dados)}
+$$
+
+- **Grau / Nota atribuída:** **Sem nota (Não avaliado)**, conforme a regra 3 de [Regras Gerais de Cálculo](../fase2/metricas-julgamento.md#regras-gerais-de-calculo) (denominador zero). Quando os 20 casos forem executados, a nota será atribuída pela faixa exata sem arredondamento: `20/20` ($1{,}00$) $\rightarrow$ Nota 4; `18–19/20` ($\ge 0{,}90$) $\rightarrow$ Nota 3; `15–17/20` ($\ge 0{,}75$) $\rightarrow$ Nota 2; `0–14/20` ($< 0{,}75$) $\rightarrow$ Nota 1.
+
+##### 4. Confronto com a hipótese preditiva H1.1
+
+- **Enunciado de H1.1 ([Fase 2](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** *$M_{1.1} < 1{,}00$: ao menos um caso de tela compacta ou fonte ampliada apresenta sobreposição ou corte na camada do mapa.*
+- **Situação:** **Não verificada (aguardando coleta em `1-coleta.md`).**
+- **Critério técnico de julgamento:** a hipótese será **Confirmada** caso a coleta apure $M_{1.1} < 1{,}00$ com falha de corte ou sobreposição na camada do mapa (`T03`) sob perfil compacto (`640 × 1136 px`) ou fonte ampliada (`200%`, configuração `C03`). Caso todos os 20 pares sejam aprovados ($M_{1.1} = 1{,}00$), ou caso eventuais defeitos ocorram exclusivamente fora da condição prevista, H1.1 será **Refutada** com indicação da causa raiz observada nas capturas de tela.
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+##### 1. Definição matemática e variáveis medidas
+
+Definida em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#m12-adaptabilidade-de-sistema-operacional) com base na ISO/IEC 25023:2016:
+
+$$
+M_{1.2} = \frac{O_s}{O_t}
+$$
+
+- **$O_s$:** quantidade de versões de sistema operacional Android aprovadas integralmente em **todos** os fluxos críticos definidos, sem erro de compatibilidade impeditivo.
+- **$O_t$:** total de versões de SO válidas avaliadas, identificadas pelo sistema e sua versão (exclui apenas versões cujo ambiente não pôde ser preparado por impedimento externo, classificadas como **Não observável**).
+- **Escala, unidade e domínio:** Razão, adimensional, domínio $[0, 1]$ (maior é melhor).
+- **Catálogo de ensaios ([Procedimentos de Execução](../fase3/2-procedimentos.md#m12-adaptabilidade-de-so-lab)):** execução do catálogo de tarefas essenciais (`TE01` a `TE08`, Seção 3.2 dos Procedimentos) em **até 3 versões distintas** de Android: Android 9 (extremo legado), Android 13 (referência recente) e a versão do aparelho físico utilizado (caso o aparelho execute versão distinta, como Android 14, totalizam-se 3 versões; caso repita Android 9 ou 13, 2 versões). *(Nota de rastreabilidade: a Fase 3 consolidou a bateria completa de 8 tarefas `TE01`–`TE08` nas 3 versões especificadas, em vez de 4 fluxos genéricos entre Android 9 e 14.)*
+- **Limiares de pontuação e efeito de amostra pequena:** Nota 4 (Excelente): $= 1{,}00$; Nota 3 (Bom): $\ge 0{,}90$; Nota 2 (Insuficiente): $\ge 0{,}75$; Nota 1 (Crítico): $< 0{,}75$. Pela Tabela 5 (Seção 4.3), com $O_t = 3$ versões válidas, **apenas as notas 4 (`3/3 = 1,00`) e 1 (`0–2/3 ≤ 0,67`) são matematicamente atingíveis**; qualquer reprovação em uma única versão reduz a métrica para $< 0{,}75$.
+
+##### 2. Tabela de resultados dos ensaios
+
+| ID | Caso | Versão do SO | Ambiente / Dispositivo | Fluxos críticos executados (`TE01`–`TE08`) | Estado da versão | Evidência | Observações |
+| :--- | :---: | :--- | :--- | :---: | :---: | :--- | :--- |
+| M1.2-01 | `SO-01` | Android 9 | Emulador (`EMU-01` ou equivalente) | `0/8` | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.2-02 | `SO-02` | Android 13 | Dispositivo/Emulador | `0/8` | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M1.2-03 | `SO-03` | Versão do aparelho físico *(ex.: Android 14 ou distinta)* | Aparelho físico (`DISP01`) | `0/8` | Aguardando coleta | — | Confirmar versão em `3-recursos.md` / `1-coleta.md` |
+
+<p class="legenda">Tabela P2. Matriz de consolidação dos ensaios da métrica M1.2. Fonte: elaboração própria (2026), com base em Procedimentos de Execução (Fase 3) e Coleta de Dados (Fase 4).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição da nota
+
+- **Contagens apuradas:** previstos = 3 versões (ou 2, caso o aparelho físico utilize Android 9 ou 13); executados = 0; não observáveis = 0; pendentes de coleta = 3; amostra válida apurada $O_t = 0$; versões aprovadas $O_s = 0$.
+- **Cálculo:**
+
+$$
+M_{1.2} = \frac{O_s}{O_t} = \frac{0}{0} \rightarrow \text{Não avaliado (sem dados)}
+$$
+
+- **Grau / Nota atribuída:** **Sem nota (Não avaliado)**, conforme a regra 3 de [Regras Gerais de Cálculo](../fase2/metricas-julgamento.md#regras-gerais-de-calculo).
+
+##### 4. Confronto com a hipótese preditiva H1.2
+
+- **Enunciado de H1.2 ([Fase 2](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** *$M_{1.2} = 1{,}00$: todos os fluxos concluem nas versões testadas (Android 9, Android 13 e a versão do aparelho físico).*
+- **Situação:** **Não verificada (aguardando coleta em `1-coleta.md`).**
+- **Critério técnico de julgamento:** H1.2 será **Confirmada** somente se $M_{1.2} = 1{,}00$, isto é, todas as versões válidas concluírem `TE01`–`TE08` sem erros impeditivos de compatibilidade (API level, permissões de armazenamento/localização ou renderização). Qualquer versão reprovada reduzirá $M_{1.2}$ para $\le 0{,}67$ (ou $\le 0{,}50$ se $O_t = 2$), **Refutando** H1.2 e derrubando imediatamente a nota da métrica para **1 (Crítico)**.
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+Pelo critério conservador de [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos):
+
+$$
+\text{Nota}(G_1) = \min\big(\text{Nota}(M_{1.1}),\, \text{Nota}(M_{1.2})\big)
+$$
+
+| Métrica | Fórmula | Amostra válida ($n$) | Valor medido | Nota (1–4) | Hipótese | Situação |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **M1.1** — Adaptabilidade de Hardware (Telas) | $T_s / T_t$ | $T_t = 0$ *(prev. 20)* | — | — | H1.1 ($M_{1.1} < 1{,}00$) | **Não avaliado (sem dados)** |
+| **M1.2** — Adaptabilidade de SO | $O_s / O_t$ | $O_t = 0$ *(prev. 3)* | — | — | H1.2 ($M_{1.2} = 1{,}00$) | **Não avaliado (sem dados)** |
+| **Veredito Parcial de G1** | **Pior nota** | — | — | **—** | — | **Não avaliado (dados incompletos)** |
+
+<p class="legenda">Tabela P3. Síntese analítica e veredito parcial do objetivo G1. Fonte: elaboração própria (2026).</p>
+
+Como ambas as métricas filhas de G1 (`M1.1` e `M1.2`) ainda não dispõem de registros em [Coleta de Dados](1-coleta.md), o objetivo **G1 — Portabilidade (Adaptabilidade)** recebe formalmente o veredito parcial **Não avaliado (dados incompletos)**, não podendo ser declarado satisfeito nesta etapa.
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+##### 1. Definição matemática e variáveis medidas
+
+Definida em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#m21-sucesso-de-instalacao) como extensão do projeto alinhada à ISO/IEC 25010 (Instalabilidade) e ISO 9241-11:
+
+$$
+M_{2.1} = \frac{I_s}{I_t}
+$$
+
+- **$I_s$:** número de ciclos de instalação limpa concluídos com êxito na **primeira tentativa**, sem erro de download, verificação ou instalação.
+- **$I_t$:** total de ciclos de instalação limpa válidos avaliados (tentativas posteriores de correção não alteram um **Defeito** ocorrido na primeira tentativa; ciclos em que a loja esteja indisponível por falha externa são registrados como **Não observável** e excluídos de $I_t$).
+- **Escala, unidade e domínio:** Razão, adimensional, domínio $[0, 1]$ (maior é melhor).
+- **Procedimento ([Fase 3](../fase3/2-procedimentos.md#m21-sucesso-de-instalacao-lab-aparelho-fisico)):** **10 ciclos** de instalação limpa em aparelho físico via loja oficial (Google Play Store), partindo com o aplicativo previamente ausente do dispositivo e capturando a tela final da loja ("Instalado" ou mensagem de erro).
+- **Limiares de pontuação e efeito de amostra pequena:** Nota 4 (Excelente): $= 1{,}00$; Nota 3 (Bom): $\ge 0{,}95$; Nota 2 (Insuficiente): $\ge 0{,}85$; Nota 1 (Crítico): $< 0{,}85$. Pela Tabela 5 (Seção 4.3), com $I_t = 10$ ciclos válidos, **a Nota 3 é matematicamente inatingível** ($9/10 = 0{,}90 < 0{,}95$): `10/10` atribui Nota 4; `9/10` atribui Nota 2; `0–8/10` ($\le 0{,}80$) atribui Nota 1.
+
+##### 2. Tabela de resultados dos ensaios
+
+| ID | Caso | Canal oficial | Ambiente | Resultado 1ª tentativa | Estado | Evidência | Observações |
+| :--- | :---: | :--- | :--- | :---: | :---: | :--- | :--- |
+| M2.1-01 | `CICLO01` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-02 | `CICLO02` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-03 | `CICLO03` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-04 | `CICLO04` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-05 | `CICLO05` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-06 | `CICLO06` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-07 | `CICLO07` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-08 | `CICLO08` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-09 | `CICLO09` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.1-10 | `CICLO10` | Google Play Store | Aparelho físico (`DISP01`) | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+
+<p class="legenda">Tabela P4. Matriz de consolidação dos ensaios da métrica M2.1. Fonte: elaboração própria (2026), com base em Procedimentos de Execução (Fase 3) e Coleta de Dados (Fase 4).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição da nota
+
+- **Contagens apuradas:** previstos = 10 ciclos; executados = 0; não observáveis = 0; pendentes de coleta = 10; amostra válida apurada $I_t = 0$; instalações bem-sucedidas $I_s = 0$.
+- **Cálculo:**
+
+$$
+M_{2.1} = \frac{I_s}{I_t} = \frac{0}{0} \rightarrow \text{Não avaliado (sem dados)}
+$$
+
+- **Grau / Nota atribuída:** **Sem nota (Não avaliado)**, conforme a regra 3 de [Regras Gerais de Cálculo](../fase2/metricas-julgamento.md#regras-gerais-de-calculo).
+
+##### 4. Confronto com a hipótese preditiva H2.1
+
+- **Enunciado de H2.1 ([Fase 2](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** *$M_{2.1} = 1{,}00$: todas as instalações concluem na primeira tentativa.*
+- **Situação:** **Não verificada (aguardando coleta em `1-coleta.md`).**
+- **Critério técnico de julgamento:** H2.1 será **Confirmada** se os 10 ciclos válidos concluírem a instalação pela Google Play na primeira tentativa ($M_{2.1} = 1{,}00$, Nota 4). Bastará 1 ciclo com falha atribuível ao pacote ou à compatibilidade de distribuição do aplicativo para **Refutar** H2.1, rebaixando a nota imediatamente para **2 (Insuficiente)** (ou **1**, caso ocorram $\ge 2$ falhas).
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+##### 1. Definição matemática e variáveis medidas
+
+Definida em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#m22-residuo-pos-desinstalacao) como extensão do projeto para a dimensão de desinstalação da ISO/IEC 25010:
+
+$$
+M_{2.2} = 1 - \frac{D_r}{D_t}
+$$
+
+- **$D_r$:** quantidade de ciclos de desinstalação nos quais restou **pelo menos um** arquivo ou pasta atribuível ao aplicativo (por nome, conteúdo ou vínculo com o identificador do pacote) nos diretórios inspecionados.
+- **$D_t$:** total de ciclos de desinstalação com inspeção válida antes e depois da remoção (exclui apenas ciclos em que algum diretório obrigatório esteja inacessível, classificados como **Não observável**).
+- **Escala, unidade e domínio:** Razão, adimensional, domínio $[0, 1]$ (maior é melhor; mede proporção de remoções limpas, não volume em bytes).
+- **Procedimento ([Fase 3](../fase3/2-procedimentos.md#m22-residuo-pos-desinstalacao-lab)):** **10 ciclos** (pareados aos ciclos de M2.1) com uso padronizado de busca, horários, mapa e favoritos, remoção pelo método padrão do sistema e comparação via `adb shell ls -laR` + `diff` entre os registros `_antes.txt` e `_depois.txt` nos diretórios públicos/armazenamento compartilhado `/sdcard/Android/data`, `/sdcard/Android/obb`, `/sdcard/Android/media`, `/sdcard/Download`, `/sdcard/Documents` e pastas com o nome do app (o armazenamento interno privado do aplicativo não é inspecionado por limitação do método de caixa preta sem acesso *root*).
+- **Limiares de pontuação e efeito de amostra pequena:** Nota 4 (Excelente): $= 1{,}00$; Nota 3 (Bom): $\ge 0{,}95$; Nota 2 (Insuficiente): $\ge 0{,}85$; Nota 1 (Crítico): $< 0{,}85$. Pela Tabela 5 (Seção 4.3), com $D_t = 10$ ciclos válidos, **a Nota 3 é matematicamente inatingível**: `D_r = 0` ($1{,}00$) $\rightarrow$ Nota 4; `D_r = 1` ($0{,}90$) $\rightarrow$ Nota 2; `D_r ≥ 2` ($\le 0{,}80$) $\rightarrow$ Nota 1.
+
+##### 2. Tabela de resultados dos ensaios
+
+| ID | Caso | Locais inspecionados via `adb` | Ambiente | Resíduo identificado ($D_r$?) | Estado | Evidência (`_antes` / `_depois` / `diff`) | Observações |
+| :--- | :---: | :--- | :--- | :---: | :---: | :--- | :--- |
+| M2.2-01 | `CICLO01` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-02 | `CICLO02` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-03 | `CICLO03` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-04 | `CICLO04` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-05 | `CICLO05` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-06 | `CICLO06` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-07 | `CICLO07` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-08 | `CICLO08` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-09 | `CICLO09` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+| M2.2-10 | `CICLO10` | `Android/data`, `obb`, `media`, `Download`, `Documents` | `DISP01` | — | Aguardando coleta | — | Sem registro em `1-coleta.md` |
+
+<p class="legenda">Tabela P5. Matriz de consolidação dos ensaios da métrica M2.2. Fonte: elaboração própria (2026), com base em Procedimentos de Execução (Fase 3) e Coleta de Dados (Fase 4).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição da nota
+
+- **Contagens apuradas:** previstos = 10 ciclos; executados = 0; não observáveis = 0; pendentes de coleta = 10; amostra válida apurada $D_t = 0$; desinstalações com resíduo $D_r = 0$.
+- **Cálculo:**
+
+$$
+M_{2.2} = 1 - \frac{D_r}{D_t} = 1 - \frac{0}{0} \rightarrow \text{Não avaliado (sem dados)}
+$$
+
+- **Grau / Nota atribuída:** **Sem nota (Não avaliado)**, conforme a regra 3 de [Regras Gerais de Cálculo](../fase2/metricas-julgamento.md#regras-gerais-de-calculo).
+
+##### 4. Confronto com a hipótese preditiva H2.2
+
+- **Enunciado de H2.2 ([Fase 2](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** *$M_{2.2} < 1{,}00$: ao menos um dos dez ciclos deixa arquivo residual no armazenamento compartilhado.*
+- **Situação:** **Não verificada (aguardando coleta em `1-coleta.md`).**
+- **Critério técnico de julgamento:** H2.2 será **Confirmada** se $M_{2.2} < 1{,}00$ ($D_r \ge 1$ ciclo com arquivos residuais atribuíveis ao app após remoção pelo método padrão do Android). Caso o `diff` entre `_antes.txt` e `_depois.txt` não revele nenhum arquivo residual nos 10 ciclos válidos ($D_r = 0 \Rightarrow M_{2.2} = 1{,}00$, Nota 4), H2.2 será **Refutada**, indicando que o mecanismo de remoção do Android (inclusive sob *Scoped Storage*) removeu integralmente os rastros observáveis nos locais auditados.
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+Pelo critério conservador de [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos):
+
+$$
+\text{Nota}(G_2) = \min\big(\text{Nota}(M_{2.1}),\, \text{Nota}(M_{2.2})\big)
+$$
+
+| Métrica | Fórmula | Amostra válida ($n$) | Valor medido | Nota (1–4) | Hipótese | Situação |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **M2.1** — Sucesso de Instalação | $I_s / I_t$ | $I_t = 0$ *(prev. 10)* | — | — | H2.1 ($M_{2.1} = 1{,}00$) | **Não avaliado (sem dados)** |
+| **M2.2** — Resíduo Pós-Desinstalação | $1 - D_r / D_t$ | $D_t = 0$ *(prev. 10)* | — | — | H2.2 ($M_{2.2} < 1{,}00$) | **Não avaliado (sem dados)** |
+| **Veredito Parcial de G2** | **Pior nota** | — | — | **—** | — | **Não avaliado (dados incompletos)** |
+
+<p class="legenda">Tabela P6. Síntese analítica e veredito parcial do objetivo G2. Fonte: elaboração própria (2026).</p>
+
+Como as duas métricas filhas de G2 (`M2.1` e `M2.2`) aguardam o registro das coletas em [Coleta de Dados](1-coleta.md), o objetivo **G2 — Portabilidade (Instalabilidade)** recebe o veredito parcial **Não avaliado (dados incompletos)**.
+
+---
+
+## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+
+Aplicando a regra de julgamento por característica ([Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#julgamento-por-caracteristica-e-resposta-as-questoes-norteadoras)), a característica **Portabilidade** assume o pior veredito entre **G1** e **G2**:
+
+| Objetivo | Subcaracterística (ISO 25010) | Pior nota apurada | Veredito parcial | Dependência para fechamento |
+| :---: | :--- | :---: | :--- | :--- |
+| **G1** | Adaptabilidade (`M1.1`, `M1.2`) | — | **Não avaliado (dados incompletos)** | Registro dos 20 casos de `M1.1` e das versões de `M1.2` em `1-coleta.md` |
+| **G2** | Instalabilidade (`M2.1`, `M2.2`) | — | **Não avaliado (dados incompletos)** | Registro dos 10 ciclos pareados de `M2.1` e `M2.2` em `1-coleta.md` |
+| **Portabilidade (QN1 / D1)** | **Pior veredito (G1, G2)** | **—** | **Não avaliada (dados incompletos)** | **Conclusão da coleta de Portabilidade em `1-coleta.md`** |
+
+<p class="legenda">Tabela P7. Consolidação parcial da característica Portabilidade. Fonte: elaboração própria (2026).</p>
+
+**Limitações e pendências registradas antes do fechamento final:**
+1. **Pendências de pré-coleta herdadas da Fase 3 ([Tabela 7 dos Procedimentos](../fase3/2-procedimentos.md#7-pendencias-antes-da-coleta)):** confirmar e versionar os itens `L01`, `L02`, `P01`, o identificador de pacote do aplicativo para a auditoria `adb` de `M2.2`, bem como o inventário definitivo dos aparelhos e emuladores em [Recursos](../fase3/3-recursos.md).
+2. **Restrição de inspeção em `M2.2`:** a auditoria via `adb` sem *root* cobre apenas os diretórios de armazenamento compartilhado listados; áreas privadas do aplicativo não são observáveis e não entram no cálculo de $D_r$.
+3. **Granularidade discreta em `M1.2`, `M2.1` e `M2.2`:** por restrição do tamanho amostral ($O_t = 3$; $I_t = D_t = 10$), um único defeito em `M1.2` resulta diretamente em Nota 1 (sem faixas 2 ou 3 possíveis), e um único defeito em `M2.1` ou `M2.2` resulta diretamente em Nota 2 (sem faixa 3 possível).

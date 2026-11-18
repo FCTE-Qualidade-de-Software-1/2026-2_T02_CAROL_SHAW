@@ -250,7 +250,7 @@ Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, 
 
 - **Evidência de todos os casos:** cada linha da planilha aponta para a evidência indicada na ficha da métrica, também nos casos Conforme, para que qualquer resultado possa ser conferido.
 - **Nome do arquivo:** `<métrica>_<caso>_<dispositivo>.<ext>`, por exemplo `M1.1_T03-C02_DISP01.png`.
-- **Onde ficam:** a planilha, as capturas, as listagens e os logs ficam no repositório, em `dados/fase4/<métrica>/`. As gravações de vídeo ficam em pasta compartilhada da equipe, indicada em [Recursos](3-recursos.md), com o link anotado no campo `Evidência`.
+- **Onde ficam:** a planilha, as capturas, as listagens e os logs ficam no repositório, em `docs/fase4/imagens/`. As gravações de vídeo ficam em pasta compartilhada da equipe, indicada em [Recursos](3-recursos.md), com o link anotado no campo `Evidência`.
 - **Anomalias:** falhas do app são registradas na linha do caso, com sintoma, passos para reproduzir e evidência.
 
 ## 7. Pendências antes da coleta

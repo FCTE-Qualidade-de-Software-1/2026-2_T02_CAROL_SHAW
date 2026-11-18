@@ -150,9 +150,9 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 
 - **Amostra:** 10 ensaios, uma interrupção por ensaio.
 - **Passos:**
-    1. Com o app aberto e funcionando, desativar todas as conexões (modo avião) por **30 s**.
+    1. Com o app aberto e funcionando, desligar os **dados móveis e o Wi-Fi** nas configurações do aparelho e manter assim por **30 s**. Nenhuma conexão pode permanecer ativa: se só uma for desligada, o app continua online e o ensaio não vale.
     2. Fazer uma consulta que dependa de dados.
-    3. Reativar a conexão e repetir a consulta.
+    3. Religar a conexão e repetir a consulta.
 - **Conforme se:** o app continua aberto e responsivo, informa a indisponibilidade em até **5 s** (da consulta até o aviso) e retoma a consulta em até **30 s** (da reativação até a consulta concluir).
 - **Não observável:** rede indisponível antes do ensaio.
 - **Evidência:** gravação de tela de cada ensaio, com os instantes visíveis.
@@ -160,8 +160,11 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 #### M4.2 — Perda de localização (Lab, aparelho físico)
 
 - **Amostra:** 10 ensaios, uma desativação por ensaio.
-- **Passos:** mesma lógica de M4.1, desativando o serviço de localização por **30 s**.
-- **Conforme se:** o app continua aberto e responsivo, informa a indisponibilidade em até 5 s, mantém consultas independentes da posição (busca por texto, paradas) e retoma a função de localização em até 30 s após a reativação.
+- **Passos:** mesma lógica de M4.1, desligando o **serviço de localização** nas configurações do aparelho por **30 s**.
+- **Conforme se:** os três critérios abaixo se verificam no mesmo ensaio:
+    1. o app continua aberto e responsivo e informa a indisponibilidade em até **5 s**;
+    2. continuam disponíveis as funções que não dependem da posição do usuário — no ensaio, verificar `TE01` (buscar `L01` pelo código) e `TE04` (consultar `P01`). Funções que dependem da posição (paradas próximas, centralizar o mapa no usuário) podem deixar de funcionar sem que isso seja defeito;
+    3. depois de religar a localização, a posição do usuário volta ao mapa em até **30 s**.
 - **Evidência:** gravação de tela de cada ensaio.
 
 ### Adequação funcional

@@ -1054,4 +1054,4 @@ Esta seção registra formalmente as anomalias observadas nos dados publicados a
 
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 01 | Consolidação dos dados, cálculo das 12 métricas, avaliação de hipóteses e matriz comparativa da Fase 4 (#49) | [João Pedro Capozzi](https://github.com/jonas3688) | 18/11/2026 | — | — |
+| 01 | Consolidação dos dados, cálculo das 12 métricas, avaliação de hipóteses e matriz comparativa da Fase 4 (#49) | [João Guilherme Capozzi](https://github.com/jonas3688) | 18/11/2026 | — | — |

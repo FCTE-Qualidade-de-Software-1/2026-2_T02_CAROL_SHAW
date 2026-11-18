@@ -955,3 +955,102 @@ Aplicando o **critério conservador da pior nota** estabelecido em [Julgamento d
 | **Característica: Adequação Funcional (`QN3` / `D3`)** | **G5** e **G6** | **G5:** *Não avaliado* · **G6:** *Não avaliado* (com `M6.2` = Nota 4) | **Não avaliado (dados incompletos)** | Conclusão das coletas pendentes de `M5.1`, `M5.2` e `M6.1` em `1-coleta.md` para resposta definitiva a **QN3** e suporte à decisão **D3**. |
 
 <p class="legenda">Tabela A5. Síntese dos resultados parciais e vereditos dos objetivos G5 e G6 pelo critério conservador. Fonte: elaboração própria (2026).</p>
+
+
+---
+
+## 8. Quadro Comparativo Global das 12 Métricas e Hipóteses Preditivas
+
+Esta seção consolida, em uma visão unificada, todas as **12 métricas (`M1.1` a `M6.2`)**, seus respectivos objetivos de medição (`G1` a `G6`), características da norma **ISO/IEC 25010:2011**, amostras previstas na Fase 3, valores apurados a partir dos registros de [Coleta de Dados](1-coleta.md), notas na escala ordinal (`1` a `4`), confronto com as **12 hipóteses preditivas (`H1.1` a `H6.2`)** e vereditos parciais pelo critério conservador da pior nota.
+
+> **Destaque de consolidação e conformidade com a ISO/IEC 25040:2011:** até o fechamento desta análise, apenas a métrica **M6.2 — Completude do Banco** possui coleta completa publicada e auditada em [Coleta de Dados](1-coleta.md), obtendo **$20/20 = 1{,}00$ ($100{,}00\%$)**, **Nota 4 (Excelente)** e **confirmação plena da hipótese preditiva `H6.2`** ($M_{6.2} \ge 0{,}95$). Para todas as demais métricas (**`M1.1` a `M6.1`**), cujas tabelas de execução ainda aguardam incorporação em `1-coleta.md`, registra-se rigorosamente o estado **Não avaliado (sem dados)** e a situação **Não verificada (aguardando coleta)**, sem simulação, extrapolação ou fabricação de valores empíricos, em estrita observância à **ISO/IEC 25040:2011** e às [Regras Gerais de Cálculo](../fase2/metricas-julgamento.md#regras-gerais-de-calculo).
+
+| Código | Métrica | Característica / Objetivo | Amostra Prevista | Valor Medido | Nota (1 a 4) | Hipótese Preditiva | Veredito da Hipótese | Veredito do Objetivo |
+| :---: | :--- | :--- | :---: | :---: | :---: | :--- | :--- | :--- |
+| **M1.1** | Adaptabilidade de Hardware (Telas) | Portabilidade / **G1** (Adaptabilidade) | 20 casos (`T01`–`T05` × `C01`–`C04`) | Não avaliado (sem dados) | — *(Sem nota)* | **H1.1:** $M_{1.1} < 1{,}00$ (corte/sobreposição no mapa em tela compacta ou fonte 200%) | Não verificada (aguardando coleta) | **G1:** Não avaliado (dados incompletos) |
+| **M1.2** | Adaptabilidade de SO | Portabilidade / **G1** (Adaptabilidade) | 3 versões (Android 9, 13 e aparelho físico) | Não avaliado (sem dados) | — *(Sem nota)* | **H1.2:** $M_{1.2} = 1{,}00$ (todos os fluxos críticos concluem nas versões testadas) | Não verificada (aguardando coleta) | **G1:** Não avaliado (dados incompletos) |
+| **M2.1** | Sucesso de Instalação | Portabilidade / **G2** (Instalabilidade) | 10 ciclos (1ª tentativa via Play Store) | Não avaliado (sem dados) | — *(Sem nota)* | **H2.1:** $M_{2.1} = 1{,}00$ (todas as instalações concluem na 1ª tentativa) | Não verificada (aguardando coleta) | **G2:** Não avaliado (dados incompletos) |
+| **M2.2** | Resíduo Pós-Desinstalação | Portabilidade / **G2** (Instalabilidade) | 10 ciclos (inspeção `adb` compartilhada) | Não avaliado (sem dados) | — *(Sem nota)* | **H2.2:** $M_{2.2} < 1{,}00$ (ao menos 1 ciclo deixa arquivo residual) | Não verificada (aguardando coleta) | **G2:** Não avaliado (dados incompletos) |
+| **M3.1** | Sessões sem *Crashes* | Confiabilidade / **G3** (Maturidade) | 20 sessões (5 min cada) | Não avaliado (sem dados) | — *(Sem nota)* | **H3.1:** $M_{3.1} \ge 0{,}95$ (no máximo 1 sessão com *crash* em 20) | Não verificada (aguardando coleta) | **G3:** Não avaliado (dados incompletos) |
+| **M3.2** | Sessões sem Congelamentos | Confiabilidade / **G3** (Maturidade) | 20 sessões (5 min cada) | Não avaliado (sem dados) | — *(Sem nota)* | **H3.2:** $M_{3.2} \ge 0{,}95$ (no máximo 1 sessão com congelamento $> 5\text{ s}$ em 20) | Não verificada (aguardando coleta) | **G3:** Não avaliado (dados incompletos) |
+| **M4.1** | Mitigação de Perda de Conexão | Confiabilidade / **G4** (Tolerância a Falhas) | 10 ensaios (corte de rede 30 s) | Não avaliado (sem dados) | — *(Sem nota)* | **H4.1:** $M_{4.1} < 0{,}85$ (parte dos ensaios sem aviso no prazo por falta de modo *offline*) | Não verificada (aguardando coleta) | **G4:** Não avaliado (dados incompletos) |
+| **M4.2** | Tratamento de Perda de GPS | Confiabilidade / **G4** (Tolerância a Falhas) | 10 ensaios (GPS desligado 30 s) | Não avaliado (sem dados) | — *(Sem nota)* | **H4.2:** $M_{4.2} \ge 0{,}85$ (avisa perda, mantém buscas independentes e retoma) | Não verificada (aguardando coleta) | **G4:** Não avaliado (dados incompletos) |
+| **M5.1** | Precisão de Tempo | Adequação Funcional / **G5** (Correção) | 10 eventos de chegada (2 blocos de 5) | Não avaliado (sem dados) | — *(Sem nota)* | **H5.1:** $M_{5.1} \le 5\text{ min}$ (erro absoluto mediano até 5 min; Nota $\ge 3$) | Não verificada (aguardando coleta) | **G5:** Não avaliado (dados incompletos) |
+| **M5.2** | Correção de Dados (Mapa) | Adequação Funcional / **G5** (Correção) | 5 paradas e 10 veículos ($\varepsilon = 30\text{ m}$, $\Delta t_{\max} = 2\text{ s}$) | Não avaliado (sem dados) | — *(Sem nota)* | **H5.2:** $M_{5.2} \ge 0{,}85$ para paradas e valor menor para veículos | Não verificada (aguardando coleta) | **G5:** Não avaliado (dados incompletos) |
+| **M6.1** | Cobertura de Tarefas Essenciais | Adequação Funcional / **G6** (Completude e Pertinência) | 8 tarefas (`TE01`–`TE08`) | Não avaliado (sem dados) | — *(Sem nota)* | **H6.1:** $M_{6.1} = 1{,}00$ (as 8 tarefas essenciais concluem com o resultado esperado) | Não verificada (aguardando coleta) | **G6:** Não avaliado (dados incompletos) |
+| **M6.2** | **Completude do Banco** | Adequação Funcional / **G6** (Completude e Pertinência) | **20 itens** (`A01`–`A20`, 4 por bacia) | **$20/20 = 1{,}00$ ($100{,}00\%$)** | **4 — Excelente** | **H6.2:** $M_{6.2} \ge 0{,}95$ (no máximo 1 item ausente ou divergente em 20) | **Confirmada** | **G6:** Não avaliado (dados incompletos)* *(aguarda `M6.1`)* |
+
+<p class="legenda">Tabela 13. Quadro comparativo global das 12 métricas, notas, hipóteses preditivas e vereditos dos objetivos na Fase 4. *Nota: embora M6.2 tenha atingido Nota 4 (Excelente), o objetivo G6 permanece como "Não avaliado (dados incompletos)" até a coleta de M6.1, conforme o critério conservador de Julgamento dos Objetivos. Fonte: elaboração própria (2026).</p>
+
+### 8.1. Síntese de Fechamento Parcial por Característica, Questão Norteadora e Decisão Apoiada
+
+Aplicando a regra hierárquica de [Julgamento por Característica](../fase2/metricas-julgamento.md#julgamento-por-caracteristica-e-resposta-as-questoes-norteadoras) — na qual cada característica assume o pior veredito dentre seus dois objetivos —, o panorama consolidado para resposta às questões norteadoras (`QN1` a `QN3`) e suporte às decisões estratégicas (`D1` a `D3`) apresenta-se da seguinte forma:
+
+1. **Portabilidade (`QN1` / `D1` — `G1` e `G2`):** **Não avaliada (dados incompletos)**. A ausência dos registros de `M1.1` (20 pares tela × configuração), `M1.2` (versões do Android), `M2.1` (10 ciclos de instalação) e `M2.2` (10 ciclos de desinstalação) em [Coleta de Dados](1-coleta.md) impede emissão de parecer conclusivo sobre adaptabilidade e instalabilidade.
+2. **Confiabilidade (`QN2` / `D2` — `G3` e `G4`):** **Não avaliada (dados incompletos)**. Sem as 20 sessões padronizadas de `M3.1`/`M3.2` e os 20 ensaios de injeção de falha de `M4.1`/`M4.2`, a estabilidade sob uso contínuo e a tolerância a quedas de rede/GPS permanecem abertas.
+3. **Adequação Funcional (`QN3` / `D3` — `G5` e `G6`):** **Não avaliada (dados incompletos)**, com **evidência positiva consolidada em `M6.2`**. A auditoria completa de `M6.2` ($20/20 = 1{,}00$, Nota 4 — Excelente) comprova plena sincronização cadastral da amostra de linhas com o Relatório de Linhas da Semob-DF de `17/11/2026`; todavia, o fechamento de `G6` depende de `M6.1` (`TE01`–`TE08`) e o fechamento de `G5` depende das medições de campo de `M5.1` e `M5.2`.
+
+---
+
+## 9. Documentação de Anomalias, Exclusões e Limitações Metodológicas
+
+Esta seção registra formalmente as anomalias observadas nos dados publicados até o momento, os critérios de exclusão aplicáveis e as limitações metodológicas que condicionam a interpretação dos resultados desta avaliação, em conformidade com a transparência exigida pela **ISO/IEC 25040:2011** e com as ameaças à validade mapeadas no [Método de Avaliação](../fase3/1-metodo.md#6-limitacoes-do-metodo-e-ameacas-a-validade).
+
+### 9.1. Anomalias Registradas nos Dados Coletados e na Consolidação
+
+1. **Inconsistência de formatação de data em `1-coleta.md` (`M6.2-01` a `M6.2-20`):** durante a auditoria dos 20 registros publicados na Tabela 1 de [Coleta de Dados](1-coleta.md#m62-completude-do-banco), verificou-se que a coluna `Data/hora` de todas as linhas (`M6.2-01` a `M6.2-20`) está preenchida como `17/19/2026` (mês `19`), tratando-se de erro material de digitação referente à data `17/11/2026` (coerente com a data de referência oficial do Relatório de Linhas da Semob-DF e com o histórico da etapa). Essa anomalia editorial não compromete a validade técnica das capturas de tela (`M6.2_A01_DISP01.jpg` a `M6.2_A20_DISP01.jpg`) nem altera o índice $M_{6.2} = 1{,}00$, mas deve ser saneada no arquivo de coleta para manter a integridade cronológica dos logs.
+2. **Incompletude da publicação das coletas (`M1.1` a `M6.1`):** até a consolidação deste documento, apenas `M6.2` teve sua tabela completa e evidências anexadas em [Coleta de Dados](1-coleta.md). Para preservar a rastreabilidade e evitar o viés de omissão, todas as 11 métricas restantes permanecem explicitamente declaradas como **Não avaliado (sem dados)**.
+3. **Ausência de defeitos funcionais na amostra auditada de `M6.2`:** nas 20 linhas auditadas (`A01`–`A20`) em `DISP01` (`Android 13`, app `5.25.1(1149)`), não houve ocorrências de código inexistente, divergência de denominação ou ausência de sentido (ida/volta em linhas de duplo sentido), resultando em **0 defeitos**.
+
+### 9.2. Registro de Exclusões (`Não observável` e `Pendente`)
+
+- **Em `M6.2` (única métrica consolidada):** contabilizaram-se **0 exclusões** (`0` casos *Não observáveis* e `0` *Pendentes*), garantindo aproveitamento integral da amostra prevista ($L_t = 20/20$).
+- **Critério formal para as métricas pendentes (`M1.1` a `M6.1`):** nenhuma falha atribuível ao aplicativo pode ser excluída da amostra válida. Exclusões são admitidas **exclusivamente** sob o estado **Não observável**, mediante justificativa e contagem à parte, nos casos de impedimento externo previstos na Seção 2.2 e na Fase 3:
+  - Indisponibilidade externa da loja de aplicativos (`M2.1`) ou diretório inacessível por restrição do sistema (`M2.2`);
+  - Queda de bateria ou erro operacional do avaliador durante sessões cronometradas (`M3.1`/`M3.2`);
+  - Rede ou localização já previamente inativas antes do início do ensaio (`M4.1`/`M4.2`);
+  - Previsão ausente no aplicativo, chegada sem identificação suficiente do veículo/linha ou ausência de operação da linha `L02` (`M5.1`, `M6.1-TE05`) — ressaltando que ausências em `M5.1` **nunca recebem erro zero** ($e_i = 0$);
+  - Registros de posição com defasagem temporal $\Delta t > 2\text{ s}$ entre aplicativo e receptor de referência ou precisão horizontal informada pelo GPSTest $> 10\text{ m}$ (`M5.2`).
+
+### 9.3. Limitações Metodológicas e Fatores que Afetam a Interpretação
+
+1. **Limitação de amostragem e efeito de granularidade discreta:**
+   - A avaliação adota **amostragem intencional reduzida** dimensionada à capacidade acadêmica da equipe; portanto, os índices obtidos **não estimam taxas populacionais** para todos os usuários do DF nem constituem certificação formal do produto.
+   - Em amostras com $n < 20$, cada unidade altera o índice em $1/n$, criando degraus discretos nos quais faixas intermediárias da escala de notas tornam-se inatingíveis: em `M1.2` ($O_t = 3$), apenas as notas `4` e `1` são atingíveis; em `M2.1`, `M2.2` ($10$ ciclos), `M5.2` paradas ($5$ paradas) e `M6.1` ($8$ tarefas), a **Nota 3 é matematicamente inatingível**, fazendo com que um único defeito derrube a métrica diretamente da Nota 4 para a Nota 2.
+   - Especificamente para **M6.2** ($M_{6.2} = 1{,}00$), embora a amostra de 20 itens seja estratificada nas 5 bacias operacionais (4 itens por bacia, sorteados entre linhas com viagens em dia útil), o resultado vale estritamente para a amostra auditada na data de referência `17/11/2026` e não garante cobertura integral de linhas operadas apenas aos finais de semana ou de alterações cadastrais posteriores.
+2. **Cobertura de versões do Android e uso de emuladores:**
+   - Na métrica `M1.2`, o plano cobre os extremos definidos (`Android 9` e `Android 13`) e o aparelho físico de referência (`DISP01`), deixando a **faixa intermediária (`Android 10`, `11` e `12`) sem verificação direta**. Falhas específicas de API ou permissões introduzidas nessas versões intermediárias não são capturadas pela amostra.
+   - Os emuladores previstos para `M1.1` e `M1.2` oferecem controle preciso de resolução, densidade e escala de fonte, mas podem divergir de aparelhos físicos de entrada quanto à gestão térmica, consumo de memória RAM e latência de renderização de mapas.
+3. **Dependência dos dados abertos e da infraestrutura da Semob-DF:**
+   - Como o *DF no Ponto* exibe dados cadastrais, localização em tempo real e previsões alimentadas pela infraestrutura de dados abertos e sistemas de monitoramento da **Semob-DF**, eventuais atrasos de transmissão dos rastreadores embarcados, quedas temporárias da API governamental ou congestionamentos severos nas vias do Distrito Federal impactam diretamente as medições de `M3.2`, `M4.1`, `M5.1` e `M5.2`.
+   - Em particular, como o aplicativo não exibe ao usuário o instante exato de transmissão do pacote de telemetria de cada ônibus, o protocolo de `M5.2` restringe a amostra de veículos a **veículos parados junto à parada** com $\Delta t_{\max} \le 2\text{ s}$, o que reduz o erro de movimento, mas não elimina eventual latência acumulada entre o rastreador embarcado e o servidor antes da captura.
+4. **Restrições inerentes à abordagem de caixa preta, precisão GNSS e conformidade com a LGPD:**
+   - Sem acesso ao código-fonte, *backend* ou permissões *root*, a auditoria de resíduos em `M2.2` limita-se aos diretórios de armazenamento compartilhado inspecionáveis via `adb` (`/sdcard/Android/data`, `obb`, `media`, `Download`, `Documents`), não observando áreas privadas internas removidas pelo próprio sistema Android.
+   - A referência posicional de campo em `M5.2` depende de receptor GNSS de smartphone (validado no GPSTest com precisão $\le 10\text{ m}$ sob tolerância $\varepsilon = 30\text{ m}$), sujeito a atenuação por edificações, marquises de paradas e cobertura arbórea.
+   - Todas as capturas e gravações em campo e laboratório devem obedecer à **LGPD (Lei nº 13.709/2018)**, utilizando apenas dados públicos do sistema de transporte e vedando o registro identificável de rostos, placas particulares ou documentos de terceiros, o que impõe cuidado de enquadramento durante a coleta de campo (`M5.1` e `M5.2`).
+
+---
+
+## Referências
+
+[1] ISO. *ISO/IEC 25040:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*. Geneva: International Organization for Standardization, 2011.
+
+[2] ISO. *ISO/IEC 25010:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*. Geneva: International Organization for Standardization, 2011.
+
+[3] ISO. *ISO/IEC 25023:2016 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality*. Geneva: International Organization for Standardization, 2016.
+
+[4] SEMOB-DF — Secretaria de Transporte e Mobilidade do Distrito Federal. *Dados do Sistema de Transporte Público do DF — Relatório de Linhas (DF no Ponto)*. Disponível em: <https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df>. Acesso em: 17 nov. 2026.
+
+[5] BRASIL. *Lei nº 13.709, de 14 de agosto de 2018*. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.
+
+[6] SINNOTT, Roger W. Virtues of the Haversine. *Sky and Telescope*, v. 68, n. 2, p. 159, 1984.
+
+[7] EQUIPE CAROL SHAW. [Abordagem GQM e Metas de Avaliação — Fase 2](../fase2/planejamento-objetivos.md); [Métricas e Critérios de Julgamento — Fase 2](../fase2/metricas-julgamento.md); [Procedimentos de Execução — Fase 3](../fase3/2-procedimentos.md); [Coleta de Dados — Fase 4](1-coleta.md).
+
+---
+
+## Histórico de Versões
+
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| 01 | Consolidação dos dados, cálculo das 12 métricas, avaliação de hipóteses e matriz comparativa da Fase 4 (#49) | [João Pedro Capozzi](https://github.com/jonas3688) | 18/11/2026 | — | — |

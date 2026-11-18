@@ -706,3 +706,252 @@ Aplicando a regra hierárquica de [Julgamento por Característica](../fase2/metr
 <p class="legenda">Tabela 12. Síntese parcial da característica Confiabilidade e vínculo com QN2 e D2. Fonte: elaboração própria (2026).</p>
 
 **Bloqueio para fechamento de QN2 e D2:** enquanto os registros das atividades `2.2` (`M3.1` e `M3.2`, 20 sessões de 5 min) e `2.3` (`M4.1` e `M4.2`, 10 + 10 ensaios de injeção de falha) não forem publicados em [Coleta de Dados](1-coleta.md) com suas respectivas evidências em vídeo e `adb logcat`, a avaliação da característica **Confiabilidade** permanece inconclusiva, impedindo a emissão de recomendação definitiva sobre estabilidade e resiliência para a decisão **D2**.
+
+
+---
+
+## Análise da Característica Adequação Funcional (Objetivos G5 e G6)
+
+A característica **Adequação Funcional** da ISO/IEC 25010:2011 ocupa a **prioridade 1** no modelo de qualidade do projeto ([Modelo de Qualidade e Escopo](../fase1/5-modelo.md#23-adequacao-funcional-decisao-d3-questao-norteadora-qn3)) e responde diretamente à questão norteadora **QN3** (*fidelidade da informação e utilidade pública*), subsidiando a decisão estratégica **D3**. Seu desdobramento GQM compreende dois objetivos de medição ([Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md#g5)):
+
+* **G5 — Adequação Funcional (Correção):** avalia a exatidão quantitativa das previsões de chegada (`M5.1`) e da localização espacial de paradas e veículos no mapa (`M5.2`) em campo.
+* **G6 — Adequação Funcional (Completude e Pertinência):** avalia a cobertura funcional ponta a ponta das tarefas essenciais do passageiro (`M6.1`) e a completude do catálogo consultável de linhas e itinerários frente à base oficial da Semob-DF (`M6.2`).
+
+Conforme as regras de consolidação estabelecidas na [Seção 2.2](#22-classificacao-de-estados-e-tratamento-formal-de-excecoes) e em [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#regras-gerais-de-calculo), somente métricas com registros válidos publicados em [Coleta de Dados](1-coleta.md) recebem cálculo e nota definitivos; métricas sem registros publicados permanecem declaradas como **Não avaliado (sem dados)**, sem atribuição de nota ou confirmação/refutação de hipótese.
+
+---
+
+### Objetivo G5 — Correção Funcional (`Q5.1`, `Q5.2`)
+
+#### M5.1 — Precisão de Tempo (`Q5.1`)
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M5.1** mede o erro absoluto mediano, em minutos, entre o instante de chegada previsto pelo aplicativo *DF no Ponto* e o instante de chegada físico observado do veículo em paradas reais do Distrito Federal ([Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#calculo-da-mediana-do-erro-temporal-m51)).
+
+Para cada par válido $i \in \{1, \ldots, n\}$ (pareado por linha, sentido, parada e veículo ou viagem identificável, no fuso `America/Sao_Paulo` com relógios sincronizados via referência NTP/GPS):
+
+$$
+e_i = \frac{\lvert t_i^{obs} - t_i^{prev} \rvert}{60}
+$$
+
+Ordenando os $n$ erros individuais como $e_{(1)} \le e_{(2)} \le \cdots \le e_{(n)}$ (para $n > 0$):
+
+$$
+M_{5.1} =
+\begin{cases}
+e_{((n+1)/2)}, & \text{se } n \text{ for ímpar}, \\
+\dfrac{e_{(n/2)} + e_{(n/2+1)}}{2}, & \text{se } n \text{ for par}.
+\end{cases}
+$$
+
+Onde:
+
+* $t_i^{obs}$: instante de chegada real observado (quando a frente do veículo alcança o ponto de referência da parada), em segundos;
+* $t_i^{prev}$: instante de chegada previsto pelo aplicativo na **primeira previsão** capturada no início da janela de observação (caso o app exiba tempo restante, soma-se esse valor ao instante de captura), em segundos;
+* $e_i$: erro absoluto do par $i$, em minutos;
+* $n$: número de pares válidos previsão/chegada (amostra planejada na Fase 3: $10$ eventos em dois blocos de $5$, com duas linhas);
+* **Escala, unidade e domínio:** razão, minutos, $[0, +\infty)$ — menor é melhor.
+
+Previsões ausentes, chegadas sem identificação suficiente e chegadas não observadas são contabilizadas à parte como **Não observável** e **jamais recebem erro zero** ($e_i = 0$).
+
+##### 2. Tabela de resultados dos ensaios
+
+Conforme a Tabela 2 de consolidação, ainda não há registros de coleta em campo publicados para **M5.1** em [Coleta de Dados](1-coleta.md). A matriz abaixo preserva a estrutura prevista nos [Procedimentos de Execução](../fase3/2-procedimentos.md#m51-precisao-do-tempo-de-chegada-campo) para recepção dos $10$ eventos planejados:
+
+| ID | Bloco / Caso | Linha · Sentido · Parada | $t_i^{prev}$ (s / horário) | $t_i^{obs}$ (s / horário) | Estado | Erro $e_i$ (min) | Evidência |
+| :--- | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
+| M5.1-01 a M5.1-05 | Bloco 1 (5 eventos) | A registrar em `1-coleta.md` | — | — | Aguardando coleta | — | Captura + foto de chegada |
+| M5.1-06 a M5.1-10 | Bloco 2 (5 eventos) | A registrar em `1-coleta.md` | — | — | Aguardando coleta | — | Captura + foto de chegada |
+| **Exclusões à parte** | Não observáveis | Previsão ausente / ID insuficiente | — | — | Não contabilizado | **0** *(aguardando)* | Registro separado |
+
+<p class="legenda">Tabela A1. Situação da coleta de campo da métrica M5.1 — Precisão de Tempo. Fonte: elaboração própria (2026), com base em Coleta de Dados (Fase 4) e Procedimentos de Execução (Fase 3).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota
+
+* **Amostra válida apurada:** $n = 0$ pares válidos (de $10$ previstos).
+* **Valor calculado ($M_{5.1}$):** **Não calculável** (amostra temporal vazia).
+* **Limiares de referência (Tabela 4):** $\le 2\text{ min}$ (**Nota 4**); $\le 5\text{ min}$ (**Nota 3**); $\le 10\text{ min}$ (**Nota 2**); $> 10\text{ min}$ (**Nota 1**).
+* **Grau/Nota atribuída:** **Não avaliado (sem dados)** — sem nota atribuída (Regra 3 de [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#regras-gerais-de-calculo)). Quando os $10$ pares forem coletados, o relatório deverá informar também o menor erro $e_{(1)}$, o maior erro $e_{(n)}$ e o tamanho $n$ válido.
+
+##### 4. Confronto com a hipótese preditiva (`H5.1`)
+
+* **Hipótese H5.1:** espera-se erro absoluto mediano de até $5\text{ minutos}$ (Nota 3 ou superior), isto é, $M_{5.1} \le 5{,}00\text{ min}$.
+* **Situação:** **Não verificada (aguardando coleta de campo).** Não há evidência empírica publicada em [Coleta de Dados](1-coleta.md) para confirmar ou refutar **H5.1**. Na execução futura em campo, eventual violação de $M_{5.1} \le 5\text{ min}$ deverá ser analisada em conjunto com os fatores de variação previstos na *Abstraction Sheet* C da Fase 2 (congestionamentos severos e falhas nos rastreadores embarcados), distinguindo desvios de operação viária de falhas do algoritmo de estimativa exibido pelo aplicativo.
+
+---
+
+#### M5.2 — Correção de Dados do Mapa (`Q5.2`)
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M5.2** avalia a exatidão espacial das posições exibidas no mapa do aplicativo frente a uma referência independente obtida em campo pelo receptor GNSS do avaliador (conferida no **GPSTest** em datum **WGS84** / horário UTC, com precisão horizontal informada $\le 10\text{ m}$).
+
+A razão de conformidade espacial é dada por:
+
+$$
+M_{5.2} = \frac{P_s}{P_t}
+$$
+
+Em que:
+
+* $P_s$: número de observações posicionais válidas com distância $d_i \le \varepsilon$ em relação à posição de referência;
+* $P_t$: total de observações posicionais válidas na amostra;
+* $\varepsilon$: tolerância espacial fixada **antes da coleta** nos [Procedimentos de Execução](../fase3/2-procedimentos.md#m52-posicoes-no-mapa-campo) em **$\varepsilon = 30\text{ m}$** (nota: adota-se estritamente o valor $\varepsilon = 30\text{ m}$ vigente na Fase 3 e consolidado na Tabela 2 deste documento);
+* $\Delta t_{\max}$: diferença temporal máxima admissível entre a captura no aplicativo e o registro do GPSTest para **veículos**, fixada em **$\Delta t_{\max} = 2\text{ s}$** (observando-se exclusivamente veículos parados junto à parada, uma vez que o aplicativo não exibe o instante de transmissão do sinal);
+* **Escala, unidade e domínio:** razão, adimensional, $[0, 1]$ — maior é melhor.
+
+Conforme [Verificação Espacial](../fase2/metricas-julgamento.md#verificacao-espacial-m52), a distância $d_i$ (em metros) pode ser obtida por **medição direta no mapa** (convertida pela escala do mapa no mesmo nível de zoom) ou por **cálculo geodésico via fórmula de Haversine** (com raio terrestre convencional $R = 6\,371\,000\text{ m}$ e coordenadas $\varphi, \lambda$ em radianos):
+
+$$
+a_i = \sin^2\!\left(\frac{\varphi_i^{app} - \varphi_i^{ref}}{2}\right)
++ \cos(\varphi_i^{app})\cos(\varphi_i^{ref})
+\sin^2\!\left(\frac{\lambda_i^{app} - \lambda_i^{ref}}{2}\right)
+$$
+
+$$
+d_i = 2R\arcsin\!\left(\sqrt{a_i}\right)
+$$
+
+Paradas e veículos são apurados e pontuados **separadamente**, atribuindo-se a **M5.2** para fins de julgamento de **G5** a **pior nota** entre os dois estratos (com a proporção consolidada informada apenas de modo complementar).
+
+##### 2. Tabela de resultados dos ensaios
+
+Não há registros de coleta publicados em [Coleta de Dados](1-coleta.md) para os estratos de **Paradas** nem de **Veículos**. As tabelas a seguir refletem as amostras planejadas na Fase 3:
+
+| Estrato | Amostra prevista | Parâmetros fixados (Fase 3) | Executados em `1-coleta.md` | Inválidos ($\Delta t > 2\text{ s}$ ou prec. $> 10\text{ m}$) | Válidos ($P_t$) | Conformes ($P_s$, $d_i \le 30\text{ m}$) | Modo de obtenção de $d_i$ |
+| :--- | :---: | :--- | :---: | :---: | :---: | :---: | :--- |
+| **Paradas** | 5 paradas distintas | $\varepsilon = 30\text{ m}$; ref. GPSTest $\le 10\text{ m}$ | 0 | — | — | — | A registrar (Haversine ou escala no mapa) |
+| **Veículos** | 10 eventos (veículo parado na parada) | $\varepsilon = 30\text{ m}$; $\Delta t_{\max} = 2\text{ s}$; ref. GPSTest $\le 10\text{ m}$ | 0 | — | — | — | A registrar (Haversine ou escala no mapa) |
+| **Consolidado complementar** | 15 observações | Soma de acertos e totais válidos | 0 | — | — | — | Informativo (não substitui pior nota) |
+
+<p class="legenda">Tabela A2. Situação da coleta de campo da métrica M5.2 — Correção de Dados do Mapa (Paradas e Veículos). Fonte: elaboração própria (2026), com base em Coleta de Dados (Fase 4) e Procedimentos de Execução (Fase 3).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota
+
+* **Paradas ($P_t = 0$ de $5$ previstos):** **Não avaliado (sem dados)** — sem nota atribuída. Observação discreta (Tabela 5): para $5$ paradas válidas, $5/5$ resulta em **Nota 4**, $4/5 = 0{,}80$ em **Nota 2** e $0\text{–}3/5$ em **Nota 1**, não havendo nota 3 atingível.
+* **Veículos ($P_t = 0$ de $10$ previstos):** **Não avaliado (sem dados)** — sem nota atribuída. Observação discreta (Tabela 5): para $10$ eventos válidos, $10/10$ resulta em **Nota 4**, $9/10 = 0{,}90$ em **Nota 3**, $7\text{–}8/10$ em **Nota 2** e $0\text{–}6/10$ em **Nota 1**.
+* **Limiares de referência (Tabela 4):** $\ge 0{,}95$ (**Nota 4**); $\ge 0{,}85$ (**Nota 3**); $\ge 0{,}70$ (**Nota 2**); $< 0{,}70$ (**Nota 1**).
+* **Grau/Nota atribuída a M5.2 (pior entre paradas e veículos):** **Não avaliado (sem dados)**.
+
+##### 4. Confronto com a hipótese preditiva (`H5.2`)
+
+* **Hipótese H5.2:** espera-se $M_{5.2} \ge 0{,}85$ para paradas e valor menor para veículos, pela defasagem de transmissão da posição.
+* **Situação:** **Não verificada (aguardando coleta de campo).** Como não há observações publicadas em [Coleta de Dados](1-coleta.md), não é possível confirmar nem refutar **H5.2**. Ressalta-se que, pela limitação operacional registrada na Fase 3 (ausência do horário de transmissão da posição no aplicativo e restrição a veículos parados junto à parada), espera-se que parte da latência de atualização embarcada ainda se manifeste caso haja atraso no servidor mesmo com o veículo estacionado, o que será quantificado após a coleta de campo.
+
+---
+
+### Objetivo G6 — Completude e Pertinência Funcional (`Q6.1`, `Q6.2`)
+
+#### M6.1 — Cobertura de Tarefas Essenciais (`Q6.1`)
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M6.1** avalia a proporção de tarefas essenciais do catálogo fixo concluídas de ponta a ponta com o resultado esperado no aplicativo, combinando completude e correção dos fluxos principais selecionados sob o critério transversal de Pertinência Funcional:
+
+$$
+M_{6.1} = 1 - \frac{F_f}{F_t}
+$$
+
+Onde:
+
+* $F_f$: número de tarefas do catálogo essencial que falharam na execução ponta a ponta (`Defeito`);
+* $F_t$: total de tarefas do catálogo essencial com avaliação completa válida (amostra planejada na Fase 3: $8$ tarefas, identificadas como **`TE01` a `TE08`**, executadas no aparelho principal com rede e localização ativas);
+* **Escala, unidade e domínio:** razão, adimensional, $[0, 1]$ — maior é melhor.
+
+O catálogo oficial fixado na Seção 3.2 de [Procedimentos de Execução](../fase3/2-procedimentos.md#32-tarefas-essenciais-m61-e-m12) abrange: busca por linha (`TE01`), consulta de quadro de horários (`TE02`), exibição de itinerário no mapa (`TE03`), consulta a parada (`TE04`), acompanhamento de veículo em trânsito (`TE05`) e gerenciamento de favoritos (`TE06`–`TE08`).
+
+##### 2. Tabela de resultados dos ensaios
+
+Ainda não há registros publicados para **M6.1** em [Coleta de Dados](1-coleta.md). A tabela abaixo consolida o catálogo completo de $8$ tarefas essenciais (`TE01`–`TE08`) aguardando registro:
+
+| ID | Caso | Tarefa essencial (Fase 3, Tabela 2) | Resultado esperado | Estado em `1-coleta.md` | Valor medido | Evidência prevista |
+| :--- | :---: | :--- | :--- | :---: | :---: | :--- |
+| M6.1-01 | TE01 | Buscar `L01` pelo código | Linha encontrada, com identificação e sentido corretos | Aguardando coleta | — | Captura de tela |
+| M6.1-02 | TE02 | Consultar horários de `L01` no dia de referência | Grade da linha, sentido e dia corretos | Aguardando coleta | — | Captura de tela |
+| M6.1-03 | TE03 | Abrir o itinerário de `L01` | Traçado e paradas do sentido selecionado | Aguardando coleta | — | Captura de tela |
+| M6.1-04 | TE04 | Consultar `P01` | Identificação da parada e linhas que a atendem | Aguardando coleta | — | Captura de tela |
+| M6.1-05 | TE05 | Acompanhar um veículo de `L02` em operação | Veículo identificável e posição no mapa *(Não observável se `L02` sem operação)* | Aguardando coleta | — | Captura de tela |
+| M6.1-06 | TE06 | Salvar `L01` nos favoritos e reabrir a lista | `L01` presente na lista | Aguardando coleta | — | Captura de tela |
+| M6.1-07 | TE07 | Salvar `P01` nos favoritos e reabrir a lista | `P01` presente na lista | Aguardando coleta | — | Captura de tela |
+| M6.1-08 | TE08 | Remover `L01` dos favoritos e reabrir a lista | `L01` ausente, outros favoritos mantidos | Aguardando coleta | — | Captura de tela |
+
+<p class="legenda">Tabela A3. Catálogo de tarefas essenciais e situação da coleta da métrica M6.1. Fonte: elaboração própria (2026), com base em Procedimentos de Execução (Fase 3) e Coleta de Dados (Fase 4).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota
+
+* **Amostra válida apurada:** $F_t = 0$ tarefas válidas (de $8$ previstas).
+* **Valor calculado ($M_{6.1}$):** **Não calculável** (denominador zero).
+* **Limiares de referência (Tabela 4):** $= 1{,}00$ (**Nota 4**); $\ge 0{,}95$ (**Nota 3**); $\ge 0{,}80$ (**Nota 2**); $< 0{,}80$ (**Nota 1**).
+* **Mapeamento discreto de amostra pequena (Tabela 5):** com $F_t = 8$ tarefas válidas, cada falha altera o índice em $1/8 = 0{,}125$: $8/8 = 1{,}00$ (**Nota 4**), $7/8 = 0{,}875$ (**Nota 2**) e $0\text{–}6/8 \le 0{,}750$ (**Nota 1**), sendo a **Nota 3 inatingível**.
+* **Grau/Nota atribuída:** **Não avaliado (sem dados)**.
+
+##### 4. Confronto com a hipótese preditiva (`H6.1`)
+
+* **Hipótese H6.1:** espera-se $M_{6.1} = 1{,}00$: as oito tarefas essenciais concluem com o resultado esperado.
+* **Situação:** **Não verificada (aguardando coleta em laboratório).** A verificação depende da publicação dos $8$ registros (`TE01`–`TE08`) em [Coleta de Dados](1-coleta.md). Do ponto de vista analítico, como a amostra tem $F_t = 8$, a ocorrência de uma única tarefa com `Defeito` será suficiente para refutar **H6.1** e rebaixar a métrica diretamente para **Nota 2 (Insuficiente)**.
+
+---
+
+#### M6.2 — Completude do Banco (`Q6.2`)
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M6.2** avalia a sincronização e completude da base consultável de linhas e itinerários do aplicativo frente ao Relatório de Linhas oficial da Semob-DF:
+
+$$
+M_{6.2} = \frac{L_c}{L_t}
+$$
+
+Onde:
+
+* $L_c$: número de linhas/itinerários da amostra oficial encontrados no aplicativo com código, denominação (origem/destino) e sentidos correspondentes (ida e volta quando aplicável, ou circular);
+* $L_t$: total de linhas/itinerários oficiais auditados na amostra estratificada ($20$ itens sorteados com viagens em dia útil, sendo $4$ por bacia operacional de 01 a 05);
+* **Escala, unidade e domínio:** razão, adimensional, $[0, 1]$ — maior é melhor.
+
+##### 2. Tabela de resultados dos ensaios
+
+Os dados completos dos $20$ casos (`A01` a `A20`, IDs `M6.2-01` a `M6.2-20`) constam integralmente na **Tabela 1 de [Coleta de Dados](1-coleta.md#m62-completude-do-banco)**, coletados pelo avaliador Pedro Ramos no ambiente `DISP01 · Android 13 · app 5.25.1(1149)` contra o Relatório de Linhas da Semob-DF (data de referência `17/11/2026`), com evidências visuais anexadas (`M6.2_A01_DISP01.jpg` a `M6.2_A20_DISP01.jpg`). A Tabela A4 sintetiza a apuração por bacia operacional:
+
+| Bacia operacional | Itens auditados (`1-coleta.md`, Tabela 1) | Códigos sorteados | Tipologia observada | Conformes ($L_c$) | Defeitos | Não observáveis / Pendentes | Evidências vinculadas |
+| :---: | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **Bacia 01** | `M6.2-01` a `M6.2-04` (`A01`–`A04`) | `0.110`, `0.504`, `062.1`, `620.1` | 3 Circulares, 1 Duplo Sentido | 4 | 0 | 0 | `M6.2_A01_DISP01.jpg`–`A04` |
+| **Bacia 02** | `M6.2-05` a `M6.2-08` (`A05`–`A08`) | `0.102`, `0.761`, `180.2`, `2201` | 1 Circular, 3 Duplo Sentido | 4 | 0 | 0 | `M6.2_A05_DISP01.jpg`–`A08` |
+| **Bacia 03** | `M6.2-09` a `M6.2-12` (`A09`–`A12`) | `0.082`, `0.809`, `119.0`, `870.1` | 3 Circulares, 1 Duplo Sentido | 4 | 0 | 0 | `M6.2_A09_DISP01.jpg`–`A12` |
+| **Bacia 04** | `M6.2-13` a `M6.2-16` (`A13`–`A16`) | `0.008`, `0.336`, `154.2`, `933.1` | 2 Circulares, 2 Duplo Sentido | 4 | 0 | 0 | `M6.2_A13_DISP01.jpg`–`A16` |
+| **Bacia 05** | `M6.2-17` a `M6.2-20` (`A17`–`A20`) | `0.005`, `0.400`, `0.808`, `158.6` | 1 Circular, 3 Duplo Sentido | 4 | 0 | 0 | `M6.2_A17_DISP01.jpg`–`A20` |
+| **Total** | **20 casos (`A01`–`A20`)** | **20 linhas (4 por bacia)** | **10 Circulares, 10 Duplo Sentido** | **20** | **0** | **0** | **20 capturas validadas** |
+
+<p class="legenda">Tabela A4. Síntese por bacia da auditoria da métrica M6.2 — Completude do Banco, referenciada à Tabela 1 de Coleta de Dados (Fase 4). Fonte: elaboração própria (2026).</p>
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota
+
+Com base nos $20$ registros válidos e zero exclusões da Tabela 1 de [Coleta de Dados](1-coleta.md):
+
+$$
+M_{6.2} = \frac{L_c}{L_t} = \frac{20}{20} = 1{,}00 \ (100{,}00\%)
+$$
+
+* **Contagem informada:** **$20$ de $20$** itens conformes ($0$ defeitos, $0$ não observáveis, $0$ pendentes).
+* **Limiares de referência (Tabela 4):** $= 1{,}00$ (**Nota 4**); $\ge 0{,}95$ (**Nota 3**); $\ge 0{,}80$ (**Nota 2**); $< 0{,}80$ (**Nota 1**).
+* **Grau/Nota atribuída:** **Nota 4 (Excelente)** — eficácia plena na amostra auditada, satisfazendo o limiar máximo ($1{,}00$) sem necessidade de arredondamento.
+
+##### 4. Confronto com a hipótese preditiva (`H6.2`)
+
+* **Hipótese H6.2:** espera-se $M_{6.2} \ge 0{,}95$ (no máximo um item oficial ausente ou divergente em $20$).
+* **Situação:** **Confirmada.** O resultado observado ($M_{6.2} = 1{,}00$, $20/20$) supera o patamar mínimo previsto na hipótese ($0{,}95$), demonstrando que, para a versão `5.25.1(1149)` na data de referência `17/11/2026`, todas as $20$ linhas sorteadas nas cinco bacias operacionais (tanto linhas circulares quanto de duplo sentido) estão cadastradas no aplicativo com código, denominação e sentidos compatíveis com o Relatório de Linhas da Semob-DF.
+* **Ressalva de escopo amostral:** conforme as limitações da Fase 3, o índice vale estritamente para a amostra estratificada de $20$ linhas com viagens em dia útil na data de `17/11/2026` e não constitui estimativa estatística da cobertura integral de toda a malha do STPC-DF.
+
+---
+
+### Veredito Parcial dos Objetivos G5 e G6 e Síntese de Adequação Funcional (`QN3` / `D3`)
+
+Aplicando o **critério conservador da pior nota** estabelecido em [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos) e na Seção 4.3 deste documento (segundo o qual todas as métricas filhas obrigatórias devem estar avaliadas para que o objetivo receba veredito definitivo), consolida-se o quadro parcial abaixo:
+
+| Objetivo / Característica | Métricas filhas | Valores e Notas individuais apurados | Veredito parcial (critério da pior nota) | Condição para fechamento definitivo |
+| :--- | :--- | :--- | :--- | :--- |
+| **G5 — Adequação Funcional (Correção)** | **M5.1** (Precisão de Tempo)<br>**M5.2** (Correção do Mapa: Paradas e Veículos) | • **M5.1:** *Não avaliado (sem dados)* ($0/10$)<br>• **M5.2 (Paradas):** *Não avaliado (sem dados)* ($0/5$)<br>• **M5.2 (Veículos):** *Não avaliado (sem dados)* ($0/10$) | **Não avaliado (dados incompletos)** | Publicar os $10$ pares válidos de campo de `M5.1` e os estratos válidos de `M5.2` ($5$ paradas e $10$ eventos de veículos) em `1-coleta.md`. |
+| **G6 — Adequação Funcional (Completude e Pertinência)** | **M6.1** (Cobertura de Tarefas Essenciais)<br>**M6.2** (Completude do Banco) | • **M6.1:** *Não avaliado (sem dados)* ($0/8$)<br>• **M6.2:** **$1{,}00$ ($20/20$) — Nota 4 (Excelente)** | **Não avaliado (dados incompletos)** *(mantém-se visível Nota 4 em M6.2)* | Publicar a execução das $8$ tarefas (`TE01`–`TE08`) de `M6.1` em `1-coleta.md`. Pela regra discreta ($F_t = 8$), `G6` só será **Satisfeito** se `M6.1` atingir $8/8$ (Nota 4); uma única falha leva `M6.1` e `G6` para Nota 2 (**Satisfeito com Ressalvas**). |
+| **Característica: Adequação Funcional (`QN3` / `D3`)** | **G5** e **G6** | **G5:** *Não avaliado* · **G6:** *Não avaliado* (com `M6.2` = Nota 4) | **Não avaliado (dados incompletos)** | Conclusão das coletas pendentes de `M5.1`, `M5.2` e `M6.1` em `1-coleta.md` para resposta definitiva a **QN3** e suporte à decisão **D3**. |
+
+<p class="legenda">Tabela A5. Síntese dos resultados parciais e vereditos dos objetivos G5 e G6 pelo critério conservador. Fonte: elaboração própria (2026).</p>

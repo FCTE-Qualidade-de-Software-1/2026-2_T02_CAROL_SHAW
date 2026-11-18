@@ -400,3 +400,309 @@ Aplicando a regra de julgamento por característica ([Métricas e Critérios de 
 1. **Pendências de pré-coleta herdadas da Fase 3 ([Tabela 7 dos Procedimentos](../fase3/2-procedimentos.md#7-pendencias-antes-da-coleta)):** confirmar e versionar os itens `L01`, `L02`, `P01`, o identificador de pacote do aplicativo para a auditoria `adb` de `M2.2`, bem como o inventário definitivo dos aparelhos e emuladores em [Recursos](../fase3/3-recursos.md).
 2. **Restrição de inspeção em `M2.2`:** a auditoria via `adb` sem *root* cobre apenas os diretórios de armazenamento compartilhado listados; áreas privadas do aplicativo não são observáveis e não entram no cálculo de $D_r$.
 3. **Granularidade discreta em `M1.2`, `M2.1` e `M2.2`:** por restrição do tamanho amostral ($O_t = 3$; $I_t = D_t = 10$), um único defeito em `M1.2` resulta diretamente em Nota 1 (sem faixas 2 ou 3 possíveis), e um único defeito em `M2.1` ou `M2.2` resulta diretamente em Nota 2 (sem faixa 3 possível).
+
+
+---
+
+## 6. Cálculo e Análise — Confiabilidade (`G3` e `G4`)
+
+Esta seção apresenta a análise das métricas vinculadas à característica **Confiabilidade** da ISO/IEC 25010, que responde à questão norteadora **QN2** e subsidia a decisão estratégica **D2** por meio dos objetivos **G3 (Maturidade)** e **G4 (Tolerância a Falhas)**. Conforme as diretrizes de [Introdução da Fase 4](introducao.md) e a Seção 2.2 deste documento, nenhum resultado empírico é estimado ou simulado: as apurações utilizam exclusivamente os registros publicados em [Coleta de Dados](1-coleta.md).
+
+> **Aviso de estado da coleta (`1-coleta.md`) e alinhamento normativo:** até o momento desta análise, [Coleta de Dados](1-coleta.md) contém registros executados apenas para `M6.2`; **não há ensaios registrados para `M3.1`, `M3.2`, `M4.1` e `M4.2`**. Em conformidade com as Regras 3 e 4 de [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#regras-gerais-de-calculo) e com a Tabela 1 da Seção 2.2, métricas com amostra vazia ($S_t = 0$, $R_t = 0$ ou $G_t = 0$) recebem o estado **Não avaliado (sem dados)**, sem nota numérica, e seus objetivos recebem **Não avaliado (dados incompletos)**. Adicionalmente, todos os parâmetros operacionais abaixo seguem a versão vigente de [Procedimentos de Execução](../fase3/2-procedimentos.md#confiabilidade) e [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#detalhamento-das-metricas) (sessões de **5 min** em `M3.1`/`M3.2`; nome **M4.1 — Mitigação de Perda de Conexão**; interrupção/desativação por **30 s** e janela de retomada de até **30 s** em `M4.1`/`M4.2`), prevalecendo sobre parâmetros preliminares anteriores à revisão de procedimentos da Fase 3 (`15 min` em `M3.1`/`M3.2`; `15 s` de corte e `10 s` de retomada em `M4.1`; `5 s` de retorno em `M4.2`).
+
+---
+
+### 6.1. Objetivo `G3` — Confiabilidade (Maturidade)
+
+O objetivo **G3** avalia a estabilidade operacional e a frequência de travamentos do aplicativo **DF no Ponto** durante sessões padronizadas de navegação contínua (busca de linha, horários, itinerário no mapa, parada e veículo, e favoritos), sem injeção externa de falhas de rede ou GPS.
+
+#### 6.1.1. `M3.1` — Sessões sem *Crashes* (`Q3.1`)
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M3.1** mensura, em escala de razão no domínio $[0, 1]$ (maior é melhor), a proporção de sessões padronizadas concluídas sem encerramento inesperado (*crash*):
+
+$$
+M_{3.1} = 1 - \frac{S_c}{S_t}
+$$
+
+Em que:
+
+- $S_c$: número de sessões válidas em que ocorreu **ao menos um encerramento inesperado** do aplicativo durante a execução do roteiro padronizado, observado na gravação de tela ou confirmado via `adb logcat -v time | grep -E "FATAL EXCEPTION|AndroidRuntime"` (restrição $0 \le S_c \le S_t$).
+- $S_t$: número total de sessões válidas avaliadas quanto a *crashes* (amostra planejada de **20 sessões de 5 minutos**, totalizando 100 minutos ativos; 1 minuto por atividade na ordem definida em [M3.1 e M3.2](../fase3/2-procedimentos.md#m31-e-m32-sessoes-sem-crashes-e-sem-congelamentos-lab)). Sessões interrompidas por *crash* permanecem em $S_t$ e são contabilizadas em $S_c$; a retomada do uso inicia nova sessão com identificador próprio.
+
+Critério de classificação por sessão:
+
+- **Conforme:** ausência de encerramento inesperado durante os 5 minutos do roteiro.
+- **Defeito:** ocorrência de encerramento inesperado (*crash*).
+- **Não observável:** interrupção causada exclusivamente por falha do ambiente de teste (ex.: queda de bateria do aparelho ou erro operacional do avaliador), excluída de $S_t$ com justificativa documentada.
+
+Limiares de pontuação definidos na Fase 2: **Nota 4 (Excelente)** $\ge 0{,}99$ ($20/20$); **Nota 3 (Bom)** $\ge 0{,}95$ ($19/20$); **Nota 2 (Insuficiente)** $\ge 0{,}90$ ($18/20$); **Nota 1 (Crítico)** $< 0{,}90$ ($0\text{–}17/20$).
+
+##### 2. Tabela de resultados dos ensaios
+
+Conforme verificado em [Coleta de Dados](1-coleta.md), nenhuma das 20 sessões padronizadas previstas (`S01` a `S20`) foi registrada até o momento. A Tabela 6 consolida a apuração atual da amostra para `M3.1`.
+
+| ID | Caso | Duração prevista | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+| :--- | :---: | :---: | :--- | :---: | :--- | :---: | :---: | :--- | :--- |
+| `M3.1-01` a `M3.1-20` | `S01`–`S20` | 5 min cada | *Pendente de coleta* | — | `DISP01` · app `5.25.1(1149)` *(previsto)* | **Pendente** *(não coletado)* | — | *Aguardando vídeo e `logcat` em `1-coleta.md`* | Amostra de 20 sessões ainda não incorporada a `1-coleta.md`. |
+
+<p class="legenda">Tabela 6. Registro consolidado dos ensaios da métrica M3.1. Fonte: elaboração própria (2026), com base em Coleta de Dados (Fase 4).</p>
+
+Contagem apurada das variáveis de entrada:
+
+- Sessões previstas: $20$
+- Sessões executadas em `1-coleta.md`: $0$
+- Sessões não observáveis (excluídas): $0$
+- Sessões pendentes / não coletadas: $20$
+- Amostra válida apurada ($S_t$): $0$
+- Sessões com *crash* ($S_c$): não apurado ($0$ registradas)
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota (1 a 4)
+
+Aplicando os valores apurados na fórmula definida na Fase 2:
+
+$$
+M_{3.1} = 1 - \frac{S_c}{S_t} = 1 - \frac{\text{—}}{0} \implies \text{Indefinido (denominador } S_t = 0\text{)}
+$$
+
+De acordo com a **Regra 3 (Ausência de dados)** e a **Regra 4 (Coleta parcial)** de [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#regras-gerais-de-calculo):
+
+- **Valor da métrica (`M3.1`):** **Não avaliado (sem dados)**.
+- **Grau / Nota (1 a 4):** **Sem nota atribuída** (a conversão para a escala ordinal de 1 a 4 só ocorre após a consolidação das 20 sessões válidas em `1-coleta.md`, segundo a faixa discreta da Tabela 5: Nota 4 = $20/20$; Nota 3 = $19/20$; Nota 2 = $18/20$; Nota 1 = $\le 17/20$).
+
+##### 4. Confronto com a hipótese preditiva (`H3.1`)
+
+- **Enunciado de H3.1 ([Planejamento e Objetivos](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** espera-se $M_{3.1} \ge 0{,}95$, isto é, no máximo 1 sessão com *crash* em 20 sessões avaliadas (associada ao carregamento de dados).
+- **Situação do confronto:** **Não avaliada (aguardando coleta)**. Não é possível confirmar nem refutar `H3.1` sem os registros empíricos de execução das 20 sessões monitoradas via gravação e `adb logcat`.
+- **Critério objetivo de decisão após a coleta:** quando os 20 ensaios válidos forem publicados em `1-coleta.md`, `H3.1` será **Confirmada** se $S_c \le 1$ ($M_{3.1} \in \{0{,}95;\ 1{,}00\}$, Notas 3 ou 4) e **Refutada** se $S_c \ge 2$ ($M_{3.1} \le 0{,}90$, Notas 1 ou 2). Tecnicamente, a hipótese apoia-se na referência do *Android vitals* (patamar de 1,09% de *crashes* percebidos por usuário ativo diário) adaptada à granularidade de sessão e reconhece que exceções não tratadas na desserialização ou renderização de dados da API da Semob-DF são a principal fonte potencial de encerramentos forçados.
+
+---
+
+#### 6.1.2. `M3.2` — Sessões sem Congelamentos (`Q3.2`)
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M3.2** mensura, em escala de razão no domínio $[0, 1]$ (maior é melhor), a proporção de sessões padronizadas sem congelamento prolongado da interface do usuário:
+
+$$
+M_{3.2} = 1 - \frac{S_a}{S_t}
+$$
+
+Em que:
+
+- $S_a$: número de sessões válidas em que ocorreu **ao menos um congelamento da interface superior a 5 segundos** após uma ação do usuário (com "Mostrar toques" visível na gravação com marcação temporal), ou evento de **ANR (*Application Not Responding*)** confirmado em log do sistema operacional (restrição $0 \le S_a \le S_t$). Carregamento assíncrono em que a interface permanece responsiva (animação de progresso, cancelamento ou navegação fluida) não é contabilizado como congelamento.
+- $S_t$: número total de sessões válidas avaliadas quanto a congelamentos nas mesmas 20 sessões padronizadas de **5 minutos** de `M3.1`, sendo cada sessão afetada contada uma única vez.
+
+Limiares de pontuação definidos na Fase 2: **Nota 4 (Excelente)** $\ge 0{,}99$ ($20/20$); **Nota 3 (Bom)** $\ge 0{,}95$ ($19/20$); **Nota 2 (Insuficiente)** $\ge 0{,}90$ ($18/20$); **Nota 1 (Crítico)** $< 0{,}90$ ($0\text{–}17/20$).
+
+##### 2. Tabela de resultados dos ensaios
+
+Conforme verificado em [Coleta de Dados](1-coleta.md), nenhuma das 20 sessões previstas (`S01` a `S20`) foi registrada até o momento. A Tabela 7 consolida a apuração atual da amostra para `M3.2`.
+
+| ID | Caso | Duração prevista | Avaliador | Data/hora | Ambiente | Estado | Valor medido (maior tempo sem resposta) | Evidência | Observações |
+| :--- | :---: | :---: | :--- | :---: | :--- | :---: | :---: | :--- | :--- |
+| `M3.2-01` a `M3.2-20` | `S01`–`S20` | 5 min cada | *Pendente de coleta* | — | `DISP01` · app `5.25.1(1149)` *(previsto)* | **Pendente** *(não coletado)* | — | *Aguardando vídeo com "Mostrar toques" e `logcat` em `1-coleta.md`* | Amostra de 20 sessões ainda não incorporada a `1-coleta.md`. |
+
+<p class="legenda">Tabela 7. Registro consolidado dos ensaios da métrica M3.2. Fonte: elaboração própria (2026), com base em Coleta de Dados (Fase 4).</p>
+
+Contagem apurada das variáveis de entrada:
+
+- Sessões previstas: $20$
+- Sessões executadas em `1-coleta.md`: $0$
+- Sessões não observáveis (excluídas): $0$
+- Sessões pendentes / não coletadas: $20$
+- Amostra válida apurada ($S_t$): $0$
+- Sessões com congelamento $> 5\text{ s}$ ou ANR ($S_a$): não apurado ($0$ registradas)
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota (1 a 4)
+
+Aplicando os valores apurados na fórmula definida na Fase 2:
+
+$$
+M_{3.2} = 1 - \frac{S_a}{S_t} = 1 - \frac{\text{—}}{0} \implies \text{Indefinido (denominador } S_t = 0\text{)}
+$$
+
+De acordo com a **Regra 3** e a **Regra 4** de [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#regras-gerais-de-calculo):
+
+- **Valor da métrica (`M3.2`):** **Não avaliado (sem dados)**.
+- **Grau / Nota (1 a 4):** **Sem nota atribuída** (conversão aplicável apenas após conclusão das 20 sessões válidas: Nota 4 = $20/20$; Nota 3 = $19/20$; Nota 2 = $18/20$; Nota 1 = $\le 17/20$).
+
+##### 4. Confronto com a hipótese preditiva (`H3.2`)
+
+- **Enunciado de H3.2 ([Planejamento e Objetivos](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** espera-se $M_{3.2} \ge 0{,}95$, isto é, no máximo 1 sessão com congelamento superior a 5 segundos em 20 sessões avaliadas, associada ao carregamento do mapa.
+- **Situação do confronto:** **Não avaliada (aguardando coleta)**. A ausência de registros temporais de resposta da UI impede validar ou refutar a hipótese neste momento.
+- **Critério objetivo de decisão após a coleta:** quando os 20 ensaios válidos forem registrados em `1-coleta.md`, `H3.2` será **Confirmada** se $S_a \le 1$ ($M_{3.2} \in \{0{,}95;\ 1{,}00\}$, Notas 3 ou 4) e **Refutada** se $S_a \ge 2$ ($M_{3.2} \le 0{,}90$, Notas 1 ou 2). Do ponto de vista técnico, a renderização simultânea de múltiplos marcadores vetoriais de paradas e veículos em *main thread* (ou travamentos na camada de mapa em picos de requisição) constitui o principal risco de bloqueio superior ao limiar de 5 s definido pelo Android para detecção de ANR.
+
+---
+
+#### 6.1.3. Veredito parcial do Objetivo `G3` (Maturidade)
+
+Pelo **critério conservador da pior nota** estabelecido na Seção 4.3 deste documento e em [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos):
+
+| Métrica filha | Questão | Amostra válida | Valor apurado | Nota (1–4) | Situação da hipótese |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **M3.1** — Sessões sem *Crashes* | `Q3.1` | $S_t = 0 / 20$ | Não avaliado | — | `H3.1`: Não avaliada |
+| **M3.2** — Sessões sem Congelamentos | `Q3.2` | $S_t = 0 / 20$ | Não avaliado | — | `H3.2`: Não avaliada |
+
+<p class="legenda">Tabela 8. Síntese parcial do objetivo G3 (Maturidade). Fonte: elaboração própria (2026).</p>
+
+- **Veredito parcial de `G3`:** **Não avaliado (dados incompletos)**. Conforme a regra de julgamento dos objetivos, enquanto `M3.1` e `M3.2` permanecerem sem dados válidos consolidados em `1-coleta.md`, o objetivo **não pode ser declarado satisfeito**. Após a coleta, `G3` assumirá a **menor nota** entre `M3.1` e `M3.2`: será **Satisfeito** se ambas obtiverem nota $\ge 3$ ($S_c \le 1$ e $S_a \le 1$); **Satisfeito com Ressalvas** se a pior nota for $2$ ($S_c = 2$ ou $S_a = 2$); e **Não Satisfeito** se qualquer uma obtiver nota $1$ ($S_c \ge 3$ ou $S_a \ge 3$).
+
+---
+
+### 6.2. Objetivo `G4` — Confiabilidade (Tolerância a Falhas)
+
+O objetivo **G4** verifica a resiliência do aplicativo diante de falhas externas induzidas em laboratório (aparelho físico), medindo a capacidade de evitar encerramentos inesperados, informar o passageiro de modo oportuno e retomar a operação normal após o restabelecimento da infraestrutura.
+
+#### 6.2.1. `M4.1` — Mitigação de Perda de Conexão (`Q4.1`)
+
+*(Nota terminológica: em versões preliminares do planejamento o indicador apareceu como "Evitação de Quebra por Conexão"; desde a revisão 06 de [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md) e a revisão 04 de [Método de Avaliação](../fase3/1-metodo.md), a denominação oficial adotada em todo o projeto é **M4.1 — Mitigação de Perda de Conexão**.)*
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M4.1** mensura, em escala de razão no domínio $[0, 1]$ (maior é melhor), a proporção de interrupções de rede induzidas tratadas adequadamente pelo aplicativo:
+
+$$
+M_{4.1} = \frac{R_s}{R_t}
+$$
+
+Em que:
+
+- $R_s$: número de ensaios válidos de corte de rede em que o aplicativo atendeu **simultaneamente** a todos os critérios de aprovação do roteiro [M4.1 — Falha de rede](../fase3/2-procedimentos.md#m41-falha-de-rede-lab-aparelho-fisico):
+  1. Permanece aberto e com interface responsiva durante a interrupção induzida (Modo Avião por **30 s**);
+  2. Exibe aviso claro de indisponibilidade de conexão em até **5 s** (contados da tentativa de consulta dependente de dados até o aparecimento do aviso);
+  3. Retoma a consulta automaticamente ou sob solicitação em até **30 s** após a reativação da rede (da reconexão até a conclusão da consulta).
+- $R_t$: número total de interrupções de rede induzidas válidas (amostra planejada de **10 ensaios**, uma interrupção por ensaio em aparelho físico, partindo obrigatoriamente de estado inicial com rede ativa). Ensaios em que a rede já estava indisponível antes do teste são registrados como **Não observável** e excluídos de $R_t$.
+
+Limiares de pontuação definidos na Fase 2: **Nota 4 (Excelente)** $= 1{,}00$ ($10/10$); **Nota 3 (Bom)** $\ge 0{,}85$ ($9/10$); **Nota 2 (Insuficiente)** $\ge 0{,}70$ ($7\text{–}8/10$); **Nota 1 (Crítico)** $< 0{,}70$ ($0\text{–}6/10$).
+
+##### 2. Tabela de resultados dos ensaios
+
+Conforme verificado em [Coleta de Dados](1-coleta.md), nenhum dos 10 ensaios previstos (`E01` a `E10`) foi registrado até o momento. A Tabela 9 consolida a apuração atual da amostra para `M4.1`.
+
+| ID | Caso | Corte induzido | Avaliador | Data/hora | Ambiente | Estado | Valor medido (tempo de aviso / tempo de retomada) | Evidência | Observações |
+| :--- | :---: | :---: | :--- | :---: | :--- | :---: | :---: | :--- | :--- |
+| `M4.1-01` a `M4.1-10` | `E01`–`E10` | Modo Avião 30 s | *Pendente de coleta* | — | Aparelho físico · app `5.25.1(1149)` *(previsto)* | **Pendente** *(não coletado)* | — | *Aguardando gravação de tela com instantes visíveis em `1-coleta.md`* | Amostra de 10 ensaios ainda não incorporada a `1-coleta.md`. |
+
+<p class="legenda">Tabela 9. Registro consolidado dos ensaios da métrica M4.1. Fonte: elaboração própria (2026), com base em Coleta de Dados (Fase 4).</p>
+
+Contagem apurada das variáveis de entrada:
+
+- Ensaios previstos: $10$
+- Ensaios executados em `1-coleta.md`: $0$
+- Ensaios não observáveis (excluídos): $0$
+- Ensaios pendentes / não coletados: $10$
+- Amostra válida apurada ($R_t$): $0$
+- Ensaios aprovados ($R_s$): não apurado ($0$ registrados)
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota (1 a 4)
+
+Aplicando os valores apurados na fórmula definida na Fase 2:
+
+$$
+M_{4.1} = \frac{R_s}{R_t} = \frac{\text{—}}{0} \implies \text{Indefinido (denominador } R_t = 0\text{)}
+$$
+
+De acordo com a **Regra 3** e a **Regra 4** de [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#regras-gerais-de-calculo):
+
+- **Valor da métrica (`M4.1`):** **Não avaliado (sem dados)**.
+- **Grau / Nota (1 a 4):** **Sem nota atribuída** (para 10 ensaios válidos: Nota 4 = $10/10$; Nota 3 = $9/10$; Nota 2 = $7\text{–}8/10$; Nota 1 = $\le 6/10$).
+
+##### 4. Confronto com a hipótese preditiva (`H4.1`)
+
+- **Enunciado de H4.1 ([Planejamento e Objetivos](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** espera-se $M_{4.1} < 0{,}85$, prevendo que, por ausência de modo *offline*, parte dos ensaios termine em carregamento indefinido ou sem exibição de aviso adequado dentro do prazo de 5 s (ou sem retomada dentro da janela estipulada).
+- **Situação do confronto:** **Não avaliada (aguardando coleta)**. Sem os tempos cronometrados em vídeo dos 10 ensaios de corte de rede, não é possível confirmar nem refutar `H4.1`.
+- **Critério objetivo de decisão após a coleta:** quando os 10 ensaios válidos forem publicados em `1-coleta.md`, `H4.1` será **Confirmada** se $R_s \le 8$ ($M_{4.1} \le 0{,}80 < 0{,}85$, Notas 1 ou 2) e **Refutada** se $R_s \ge 9$ ($M_{4.1} \ge 0{,}90 \ge 0{,}85$, Notas 3 ou 4). Note-se que `H4.1` formula uma expectativa negativa de qualidade: confirmá-la evidencia falha real de tolerância à desconexão e implica nota $\le 2$ para `M4.1`.
+
+---
+
+#### 6.2.2. `M4.2` — Tratamento de Perda de GPS (`Q4.2`)
+
+##### 1. Definição matemática e variáveis medidas
+
+A métrica **M4.2** mensura, em escala de razão no domínio $[0, 1]$ (maior é melhor), a proporção de desativações induzidas do serviço de localização tratadas adequadamente pelo aplicativo:
+
+$$
+M_{4.2} = \frac{G_s}{G_t}
+$$
+
+Em que:
+
+- $G_s$: número de ensaios válidos de perda de GPS em que o aplicativo atendeu **simultaneamente** a todos os critérios do roteiro [M4.2 — Perda de localização](../fase3/2-procedimentos.md#m42-perda-de-localizacao-lab-aparelho-fisico):
+  1. Permanece aberto e responsivo após a desativação do serviço de localização do dispositivo por **30 s**;
+  2. Informa ao usuário a indisponibilidade de localização em até **5 s**;
+  3. Mantém operacionais as **consultas independentes da posição do usuário** (como busca manual de linhas por texto e consulta a paradas);
+  4. Retoma a função de geolocalização no mapa em até **30 s** após a reativação do serviço de localização.
+- $G_t$: número total de desativações de localização induzidas válidas (amostra planejada de **10 ensaios**, uma desativação por ensaio em aparelho físico, com localização inicialmente ativa).
+
+Limiares de pontuação definidos na Fase 2: **Nota 4 (Excelente)** $= 1{,}00$ ($10/10$); **Nota 3 (Bom)** $\ge 0{,}85$ ($9/10$); **Nota 2 (Insuficiente)** $\ge 0{,}70$ ($7\text{–}8/10$); **Nota 1 (Crítico)** $< 0{,}70$ ($0\text{–}6/10$).
+
+##### 2. Tabela de resultados dos ensaios
+
+Conforme verificado em [Coleta de Dados](1-coleta.md), nenhum dos 10 ensaios previstos (`E01` a `E10`) foi registrado até o momento. A Tabela 10 consolida a apuração atual da amostra para `M4.2`.
+
+| ID | Caso | Desativação induzida | Avaliador | Data/hora | Ambiente | Estado | Valor medido (aviso / busca manual / retomada) | Evidência | Observações |
+| :--- | :---: | :---: | :--- | :---: | :--- | :---: | :---: | :--- | :--- |
+| `M4.2-01` a `M4.2-10` | `E01`–`E10` | Localização desligada 30 s | *Pendente de coleta* | — | Aparelho físico · app `5.25.1(1149)` *(previsto)* | **Pendente** *(não coletado)* | — | *Aguardando gravação de tela em `1-coleta.md`* | Amostra de 10 ensaios ainda não incorporada a `1-coleta.md`. |
+
+<p class="legenda">Tabela 10. Registro consolidado dos ensaios da métrica M4.2. Fonte: elaboração própria (2026), com base em Coleta de Dados (Fase 4).</p>
+
+Contagem apurada das variáveis de entrada:
+
+- Ensaios previstos: $10$
+- Ensaios executados em `1-coleta.md`: $0$
+- Ensaios não observáveis (excluídos): $0$
+- Ensaios pendentes / não coletados: $10$
+- Amostra válida apurada ($G_t$): $0$
+- Ensaios aprovados ($G_s$): não apurado ($0$ registrados)
+
+##### 3. Cálculo do valor da métrica e atribuição do Grau/Nota (1 a 4)
+
+Aplicando os valores apurados na fórmula definida na Fase 2:
+
+$$
+M_{4.2} = \frac{G_s}{G_t} = \frac{\text{—}}{0} \implies \text{Indefinido (denominador } G_t = 0\text{)}
+$$
+
+De acordo com a **Regra 3** e a **Regra 4** de [Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#regras-gerais-de-calculo):
+
+- **Valor da métrica (`M4.2`):** **Não avaliado (sem dados)**.
+- **Grau / Nota (1 a 4):** **Sem nota atribuída** (para 10 ensaios válidos: Nota 4 = $10/10$; Nota 3 = $9/10$; Nota 2 = $7\text{–}8/10$; Nota 1 = $\le 6/10$).
+
+##### 4. Confronto com a hipótese preditiva (`H4.2`)
+
+- **Enunciado de H4.2 ([Planejamento e Objetivos](../fase2/planejamento-objetivos.md#matriz-de-questoes-e-hipoteses-operacionais)):** espera-se $M_{4.2} \ge 0{,}85$, prevendo que o aplicativo informe a perda de localização, preserve as consultas independentes de GPS (busca manual) e retome a função após a reativação.
+- **Situação do confronto:** **Não avaliada (aguardando coleta)**. A ausência dos 10 ensaios gravados impede validar ou refutar a hipótese nesta etapa.
+- **Critério objetivo de decisão após a coleta:** quando os 10 ensaios válidos forem registrados em `1-coleta.md`, `H4.2` será **Confirmada** se $G_s \ge 9$ ($M_{4.2} \in \{0{,}90;\ 1{,}00\} \ge 0{,}85$, Notas 3 ou 4) e **Refutada** se $G_s \le 8$ ($M_{4.2} \le 0{,}80 < 0{,}85$, Notas 1 ou 2). Tecnicamente, espera-se bom tratamento porque a API padrão de localização do Android (`LocationManager` / `FusedLocationProviderClient`) notifica mudanças de estado do provedor e a busca textual por código de linha não depende de coordenadas geográficas do dispositivo.
+
+---
+
+#### 6.2.3. Veredito parcial do Objetivo `G4` (Tolerância a Falhas)
+
+Pelo **critério conservador da pior nota** estabelecido na Seção 4.3 deste documento e em [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos):
+
+| Métrica filha | Questão | Amostra válida | Valor apurado | Nota (1–4) | Situação da hipótese |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **M4.1** — Mitigação de Perda de Conexão | `Q4.1` | $R_t = 0 / 10$ | Não avaliado | — | `H4.1`: Não avaliada |
+| **M4.2** — Tratamento de Perda de GPS | `Q4.2` | $G_t = 0 / 10$ | Não avaliado | — | `H4.2`: Não avaliada |
+
+<p class="legenda">Tabela 11. Síntese parcial do objetivo G4 (Tolerância a Falhas). Fonte: elaboração própria (2026).</p>
+
+- **Veredito parcial de `G4`:** **Não avaliado (dados incompletos)**. Conforme a regra de julgamento dos objetivos, sem os registros válidos de `M4.1` e `M4.2` em `1-coleta.md`, o objetivo **não pode ser declarado satisfeito**. Após a coleta, `G4` assumirá a **menor nota** entre `M4.1` e `M4.2`: será **Satisfeito** apenas se ambas obtiverem nota $\ge 3$ ($R_s \ge 9$ e $G_s \ge 9$); **Satisfeito com Ressalvas** se a pior nota for $2$ ($7\text{–}8$ acertos em 10 na pior métrica); e **Não Satisfeito** se qualquer uma obtiver nota $1$ ($\le 6$ acertos em 10).
+
+---
+
+### 6.3. Síntese Parcial da Característica Confiabilidade (`QN2` / `D2`)
+
+Aplicando a regra hierárquica de [Julgamento por Característica](../fase2/metricas-julgamento.md#julgamento-por-caracteristica-e-resposta-as-questoes-norteadoras), a característica **Confiabilidade** recebe o pior veredito dentre os objetivos **G3 (Maturidade)** e **G4 (Tolerância a Falhas)**:
+
+| Objetivo | Subcaracterística (ISO/IEC 25010) | Métricas associadas | Coleta em `1-coleta.md` | Veredito parcial |
+| :--- | :--- | :---: | :---: | :--- |
+| **G3** | Maturidade | `M3.1`, `M3.2` | 0 / 20 sessões registradas | **Não avaliado (dados incompletos)** |
+| **G4** | Tolerância a Falhas | `M4.1`, `M4.2` | 0 / 20 ensaios registrados (10 + 10) | **Não avaliado (dados incompletos)** |
+| **Confiabilidade** | **QN2 / D2** | `M3.1`–`M4.2` | **Aguardando coleta** | **Não avaliada (dados incompletos)** |
+
+<p class="legenda">Tabela 12. Síntese parcial da característica Confiabilidade e vínculo com QN2 e D2. Fonte: elaboração própria (2026).</p>
+
+**Bloqueio para fechamento de QN2 e D2:** enquanto os registros das atividades `2.2` (`M3.1` e `M3.2`, 20 sessões de 5 min) e `2.3` (`M4.1` e `M4.2`, 10 + 10 ensaios de injeção de falha) não forem publicados em [Coleta de Dados](1-coleta.md) com suas respectivas evidências em vídeo e `adb logcat`, a avaliação da característica **Confiabilidade** permanece inconclusiva, impedindo a emissão de recomendação definitiva sobre estabilidade e resiliência para a decisão **D2**.

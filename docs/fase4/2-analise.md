@@ -121,7 +121,9 @@ Ao converter as notas individuais das métricas em vereditos dos objetivos (`G1`
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+---
+
+## 5. Cálculo e Análise — Característica Portabilidade (G1 e G2)
 
 Esta seção apresenta o cálculo, a atribuição de notas, o confronto com as hipóteses preditivas e o veredito parcial dos objetivos **G1 (Adaptabilidade)** e **G2 (Instalabilidade)** da característica **Portabilidade** (ISO/IEC 25010:2011), vinculados à questão norteadora **QN1** e à decisão estratégica **D1** ([Planejamento e Objetivos](../fase2/planejamento-objetivos.md#g1), [Modelo de Qualidade](../fase1/5-modelo.md#21-portabilidade-decisao-d1-questao-norteadora-qn1)).
 
@@ -129,9 +131,9 @@ Esta seção apresenta o cálculo, a atribuição de notas, o confronto com as h
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+### 5.1. Objetivo G1 — Portabilidade (Adaptabilidade)
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+#### 5.1.1. M1.1 — Adaptabilidade de Hardware (Telas) *(Q1.1)*
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -193,7 +195,7 @@ $$
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+#### 5.1.2. M1.2 — Adaptabilidade de Sistema Operacional *(Q1.2)*
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -238,7 +240,7 @@ $$
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+#### 5.1.3. Veredito parcial do objetivo G1 (Critério da Pior Nota)
 
 Pelo critério conservador de [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos):
 
@@ -258,9 +260,9 @@ Como ambas as métricas filhas de G1 (`M1.1` e `M1.2`) ainda não dispõem de re
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+### 5.2. Objetivo G2 — Portabilidade (Instalabilidade)
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+#### 5.2.1. M2.1 — Sucesso de Instalação *(Q2.1)*
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -312,7 +314,7 @@ $$
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+#### 5.2.2. M2.2 — Resíduo Pós-Desinstalação *(Q2.2)*
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -364,7 +366,7 @@ $$
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+#### 5.2.3. Veredito parcial do objetivo G2 (Critério da Pior Nota)
 
 Pelo critério conservador de [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos):
 
@@ -384,7 +386,7 @@ Como as duas métricas filhas de G2 (`M2.1` e `M2.2`) aguardam o registro das co
 
 ---
 
-## 5. Cálculo e Análise — Portabilidade (G1 e G2)
+### 5.3. Síntese Parcial da Característica Portabilidade (QN1 / D1)
 
 Aplicando a regra de julgamento por característica ([Métricas e Critérios de Julgamento](../fase2/metricas-julgamento.md#julgamento-por-caracteristica-e-resposta-as-questoes-norteadoras)), a característica **Portabilidade** assume o pior veredito entre **G1** e **G2**:
 
@@ -400,7 +402,6 @@ Aplicando a regra de julgamento por característica ([Métricas e Critérios de 
 1. **Pendências de pré-coleta herdadas da Fase 3 ([Tabela 7 dos Procedimentos](../fase3/2-procedimentos.md#7-pendencias-antes-da-coleta)):** confirmar e versionar os itens `L01`, `L02`, `P01`, o identificador de pacote do aplicativo para a auditoria `adb` de `M2.2`, bem como o inventário definitivo dos aparelhos e emuladores em [Recursos](../fase3/3-recursos.md).
 2. **Restrição de inspeção em `M2.2`:** a auditoria via `adb` sem *root* cobre apenas os diretórios de armazenamento compartilhado listados; áreas privadas do aplicativo não são observáveis e não entram no cálculo de $D_r$.
 3. **Granularidade discreta em `M1.2`, `M2.1` e `M2.2`:** por restrição do tamanho amostral ($O_t = 3$; $I_t = D_t = 10$), um único defeito em `M1.2` resulta diretamente em Nota 1 (sem faixas 2 ou 3 possíveis), e um único defeito em `M2.1` ou `M2.2` resulta diretamente em Nota 2 (sem faixa 3 possível).
-
 
 ---
 
@@ -707,10 +708,9 @@ Aplicando a regra hierárquica de [Julgamento por Característica](../fase2/metr
 
 **Bloqueio para fechamento de QN2 e D2:** enquanto os registros das atividades `2.2` (`M3.1` e `M3.2`, 20 sessões de 5 min) e `2.3` (`M4.1` e `M4.2`, 10 + 10 ensaios de injeção de falha) não forem publicados em [Coleta de Dados](1-coleta.md) com suas respectivas evidências em vídeo e `adb logcat`, a avaliação da característica **Confiabilidade** permanece inconclusiva, impedindo a emissão de recomendação definitiva sobre estabilidade e resiliência para a decisão **D2**.
 
-
 ---
 
-## Análise da Característica Adequação Funcional (Objetivos G5 e G6)
+## 7. Cálculo e Análise — Adequação Funcional (G5 e G6)
 
 A característica **Adequação Funcional** da ISO/IEC 25010:2011 ocupa a **prioridade 1** no modelo de qualidade do projeto ([Modelo de Qualidade e Escopo](../fase1/5-modelo.md#23-adequacao-funcional-decisao-d3-questao-norteadora-qn3)) e responde diretamente à questão norteadora **QN3** (*fidelidade da informação e utilidade pública*), subsidiando a decisão estratégica **D3**. Seu desdobramento GQM compreende dois objetivos de medição ([Abordagem GQM e Metas de Avaliação](../fase2/planejamento-objetivos.md#g5)):
 
@@ -721,9 +721,9 @@ Conforme as regras de consolidação estabelecidas na [Seção 2.2](#22-classifi
 
 ---
 
-### Objetivo G5 — Correção Funcional (`Q5.1`, `Q5.2`)
+### 7.1. Objetivo G5 — Adequação Funcional (Correção)
 
-#### M5.1 — Precisão de Tempo (`Q5.1`)
+#### 7.1.1. M5.1 — Precisão de Tempo (`Q5.1`)
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -781,7 +781,7 @@ Conforme a Tabela 2 de consolidação, ainda não há registros de coleta em cam
 
 ---
 
-#### M5.2 — Correção de Dados do Mapa (`Q5.2`)
+#### 7.1.2. M5.2 — Correção de Dados do Mapa (`Q5.2`)
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -841,9 +841,9 @@ Não há registros de coleta publicados em [Coleta de Dados](1-coleta.md) para o
 
 ---
 
-### Objetivo G6 — Completude e Pertinência Funcional (`Q6.1`, `Q6.2`)
+### 7.2. Objetivo G6 — Adequação Funcional (Completude)
 
-#### M6.1 — Cobertura de Tarefas Essenciais (`Q6.1`)
+#### 7.2.1. M6.1 — Cobertura de Tarefas Essenciais (`Q6.1`)
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -893,7 +893,7 @@ Ainda não há registros publicados para **M6.1** em [Coleta de Dados](1-coleta.
 
 ---
 
-#### M6.2 — Completude do Banco (`Q6.2`)
+#### 7.2.2. M6.2 — Completude do Banco (`Q6.2`)
 
 ##### 1. Definição matemática e variáveis medidas
 
@@ -944,7 +944,7 @@ $$
 
 ---
 
-### Veredito Parcial dos Objetivos G5 e G6 e Síntese de Adequação Funcional (`QN3` / `D3`)
+### 7.3. Síntese Parcial da Característica Adequação Funcional (QN3 / D3)
 
 Aplicando o **critério conservador da pior nota** estabelecido em [Julgamento dos Objetivos](../fase2/metricas-julgamento.md#julgamento-dos-objetivos) e na Seção 4.3 deste documento (segundo o qual todas as métricas filhas obrigatórias devem estar avaliadas para que o objetivo receba veredito definitivo), consolida-se o quadro parcial abaixo:
 
@@ -956,6 +956,7 @@ Aplicando o **critério conservador da pior nota** estabelecido em [Julgamento d
 
 <p class="legenda">Tabela A5. Síntese dos resultados parciais e vereditos dos objetivos G5 e G6 pelo critério conservador. Fonte: elaboração própria (2026).</p>
 
+---
 
 ---
 

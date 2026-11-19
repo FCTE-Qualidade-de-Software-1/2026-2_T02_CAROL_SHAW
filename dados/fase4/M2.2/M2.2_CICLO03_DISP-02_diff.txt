@@ -1,0 +1,702 @@
+4c4
+< drwxrwx--x 171 root      sdcard_rw 20480 2026-11-19 16:48 .
+---
+> drwxrwx--x 171 root      sdcard_rw 20480 2026-11-19 16:55 .
+180c180
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+191c191
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+202c202
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+213c213
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+237c237
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+269c269
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+280c280
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+291c291
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+344c344
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+367c367
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+420c420
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+431c431
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+448c448
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+465c465
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+482c482
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+776c776
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+2042c2042
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+2205c2205
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+2258c2258
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+2317c2317
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+2334c2334
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+2351c2351
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+2380c2380
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+2391c2391
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+2473c2473
+< drwxrwx--x 171 root  sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root  sdcard_rw 20480 2026-11-19 16:55 ..
+2484c2484
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+2520c2520
+< drwxrwx--x 171 root  sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root  sdcard_rw 20480 2026-11-19 16:55 ..
+3553c3553
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3576c3576
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3587c3587
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3598c3598
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3610c3610
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3627c3627
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3638c3638
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3661c3661
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3672c3672
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3689c3689
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3700c3700
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3717c3717
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3746c3746
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3775c3775
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3786c3786
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3797c3797
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3808c3808
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3819c3819
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3830c3830
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+3996c3996
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4007c4007
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4018c4018
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4029c4029
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4040c4040
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4058c4058
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4090c4090
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4138c4138
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4170c4170
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4194c4194
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4247c4247
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4365c4365
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4412c4412
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+4453c4453
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6664c6664
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6711c6711
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6722c6722
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6739c6739
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6768c6768
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6779c6779
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6790c6790
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6801c6801
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6812c6812
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6823c6823
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6834c6834
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6845c6845
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6856c6856
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6867c6867
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6878c6878
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6889c6889
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6900c6900
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6911c6911
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+6922c6922
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6933c6933
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6957c6957
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+6982c6982
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7040c7040
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7051c7051
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7198c7198
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7210c7210
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7230c7230
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7251c7251
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7262c7262
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7285c7285
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+7296c7296
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+7307c7307
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7324c7324
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7798c7798
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7809c7809
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7820c7820
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7831c7831
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+7842c7842
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+7955c7955
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+7978c7978
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+7989c7989
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+8000c8000
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+8011c8011
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+50503c50503
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50552c50552
+< -rw-rw---- 1 u0_a126 sdcard_rw   27321 2026-11-19 16:47 1090533802
+---
+> -rw-rw---- 1 u0_a126 sdcard_rw   27321 2026-11-19 16:54 1090533802
+50609c50609
+< -rw-rw---- 1 u0_a126 sdcard_rw    2192 2026-11-19 16:47 88640940
+---
+> -rw-rw---- 1 u0_a126 sdcard_rw    2192 2026-11-19 16:54 88640940
+50616c50616
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50639c50639
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+50663c50663
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50674c50674
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50685c50685
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50696c50696
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50707c50707
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50895c50895
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50924c50924
+< drwxrwx--x 171 root  sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root  sdcard_rw 20480 2026-11-19 16:55 ..
+50935c50935
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50946c50946
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50957c50957
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+50968c50968
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+50997c50997
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51008c51008
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51031c51031
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51125c51125
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51136c51136
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51147c51147
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51158c51158
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51169c51169
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51180c51180
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51191c51191
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51202c51202
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51213c51213
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51224c51224
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51780c51780
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51791c51791
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51802c51802
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51819c51819
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+51830c51830
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51848c51848
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51859c51859
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+51913c51913
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+52008c52008
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+52031c52031
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+52385c52385
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+52408c52408
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+52435c52435
+< -rw-rw----   1 u0_a313 sdcard_rw 16383 2026-11-19 16:50 pe_counters.dat
+---
+> -rw-rw----   1 u0_a313 sdcard_rw 16383 2026-11-19 16:55 pe_counters.dat
+55694c55694
+< -rw-rw---- 1 u0_a313 sdcard_rw  496 2026-11-19 16:50 039246.log
+---
+> -rw-rw---- 1 u0_a313 sdcard_rw 1635 2026-11-19 16:55 039246.log
+55705c55705
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+55716c55716
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+57775c57775
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+57786c57786
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+57797c57797
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+57814c57814
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+57837c57837
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+57869c57869
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+57886c57886
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+58252c58252
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+58263c58263
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+58322c58322
+< drwxrwx--x 171 root      sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root      sdcard_rw 20480 2026-11-19 16:55 ..
+58347c58347
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+58358c58358
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+58389c58389
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+59613c59613
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+59624c59624
+< drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root   sdcard_rw 20480 2026-11-19 16:55 ..
+59635c59635
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+59652c59652
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+59663c59663
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+62310c62310
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+62321c62321
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+62332c62332
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+62343c62343
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+62354c62354
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+62365c62365
+< drwxrwx--x 171 root    sdcard_rw  20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw  20480 2026-11-19 16:55 ..
+64453c64453
+< drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:48 ..
+---
+> drwxrwx--x 171 root    sdcard_rw 20480 2026-11-19 16:55 ..
+119140,119141c119140,119141
+< drwxrwx--- 2 u0_a316 everybody 3488 2026-11-19 16:17 Telegram Images
+< drwxrwx--- 2 u0_a316 everybody 3488 2026-11-19 16:17 Telegram Video
+---
+> drwxrwx--- 2 u0_a316 everybody 3488 2026-11-19 16:56 Telegram Images
+> drwxrwx--- 2 u0_a316 everybody 3488 2026-11-19 16:56 Telegram Video

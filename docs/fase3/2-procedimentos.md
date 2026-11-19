@@ -36,7 +36,7 @@ Os valores abaixo são decisões do projeto para uma execução acadêmica com a
 | ID | Item selecionado | Registro oficial |
 | :--- | :--- | :--- |
 | `L01` | Linha **0.089** — Setor P Sul (Av. das Palmeiras) / Av. Comercial | Sentido, variante e data/hora da consulta à fonte oficial a registrar |
-| `L02` | A definir | A registrar |
+| `L02` | Linha **933.4** — Setor P Sul / Sol Nascente (Av. das Palmeiras) / Taguacenter | Sentido, variante e data/hora da consulta à fonte oficial a registrar |
 | `P01` | Parada **N1 P Norte**, Ceilândia, CEP 72225-273 | Código oficial da parada e confirmação de que pertence ao itinerário de `L01` a registrar |
 
 <p class="legenda">Tabela 2. Entradas funcionais fixadas antes da coleta. Fonte: elaboração própria (2026).</p>
@@ -193,16 +193,16 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 
 #### M5.2 — Posições no mapa (Campo)
 
-- **Amostra:** 5 paradas distintas e 10 eventos de veículo parado junto à parada (um evento por veículo). Os eventos de veículo são observados nas mesmas saídas de campo de M5.1.
-- **Parâmetros:** tolerância ε = **30 m**; para veículos, diferença de tempo máxima Δt = **2 s**.
+- **Amostra:** 5 paradas distintas. A métrica é apurada apenas com paradas (ver a limitação abaixo).
+- **Parâmetros:** tolerância ε = **30 m**.
 - **Referência:** a posição do próprio avaliador, obtida pelo receptor do celular e conferida no **GPSTest**[5] (WGS84, horário UTC), com precisão horizontal informada de até 10 m[6]. Ela é independente dos dados do DF no Ponto.
 - **Passos:**
-    1. Posicionar-se no ponto físico da parada (ou junto ao veículo parado) e conferir no GPSTest a precisão informada.
-    2. Abrir o mapa do app no maior zoom em que apareçam, na mesma tela, o marcador da parada (ou do veículo) e o indicador da posição do usuário, e capturar a tela.
+    1. Posicionar-se no ponto físico da parada e conferir no GPSTest a precisão informada, que deve ser de até 10 m.
+    2. Abrir o mapa do app no maior zoom em que apareçam, na mesma tela, o marcador da parada e o indicador da posição do usuário, e capturar a tela.
     3. Obter a distância $d_i$ por um dos modos previstos na [Verificação Espacial](../fase2/metricas-julgamento.md#verificacao-espacial-m52) da Fase 2 e anotar qual foi usado: **medição direta** na captura, convertendo pela escala do mapa, ou **cálculo por coordenadas**, quando houver latitude e longitude das duas posições.
-- **Conforme se:** $d_i \le$ ε. Para veículos, a captura e o registro do GPSTest devem ter até 2 s de diferença; pares fora disso são inválidos.
-- **Limitação:** o app não informa o horário em que a posição do veículo foi transmitida; usa-se o instante da captura. Por isso, só entram veículos parados.
-- **Apuração:** paradas e veículos são calculados separadamente.
+- **Conforme se:** $d_i \le$ ε.
+- **Por que só paradas:** o aplicativo atualiza a posição dos veículos em intervalos da ordem de um minuto e informa essa idade no detalhe da viagem, no campo *Last update*. Um ônibus em operação percorre centenas de metros nesse intervalo, e permanece parado na parada por 20 a 30 segundos, bem menos que o período de atualização. Comparar a posição exibida com a posição de referência mediria o deslocamento do veículo durante a defasagem, não o erro do aplicativo, e nenhuma tolerância de 30 m resistiria a isso. Paradas são entidades fixas e não têm esse problema, por isso a métrica é apurada só com elas.
+- **Apuração:** somente paradas.
 - **Evidência:** captura do mapa e registro do GPSTest de cada caso.
 
 #### M6.1 — Cobertura de tarefas essenciais (Lab)
@@ -231,8 +231,7 @@ A Tabela 6 relaciona cada amostra às faixas de nota da Fase 2, aplicadas sem ar
 | M3.1 / M3.2 | 20 sessões | 4: 20; 3: 19; 2: 18; 1: 0–17 |
 | M4.1 / M4.2 | 10 ensaios | 4: 10; 3: 9; 2: 7–8; 1: 0–6 |
 | M5.1 | 10 eventos | Mediana dos erros, em minutos |
-| M5.2 paradas | 5 paradas | 4: 5; 2: 4; 1: 0–3 (sem nota 3) |
-| M5.2 veículos | 10 eventos | 4: 10; 3: 9; 2: 7–8; 1: 0–6 |
+| M5.2 | 5 paradas | 4: 5; 2: 4; 1: 0–3 (sem nota 3) |
 | M6.1 | 8 tarefas | 4: 8; 2: 7; 1: 0–6 (sem nota 3) |
 | M6.2 | 20 itens | 4: 20; 3: 19; 2: 16–18; 1: 0–15 |
 
@@ -274,9 +273,9 @@ Os itens da Tabela 8 precisam estar preenchidos e versionados antes do primeiro 
 |---|---|
 | Itens `L01`, `L02`, `P01` e lista `A01`–`A20` (código, sentido, variante, data da consulta) | `L01` e `P01` selecionados em 18/11/2026; falta o registro oficial de ambos, além de `L02` e da lista `A01`–`A20` |
 | Paradas, dias, janelas e responsáveis do campo (M5.1 e M5.2) | Pendente |
-| Identificador do pacote do app, para a inspeção de M2.2 | Pendente |
-| Aparelhos e emuladores (Android 9, Android 13 e o aparelho físico), conforme [Recursos](3-recursos.md) | Pendente |
-| Modo de obter a distância em M5.2: confirmar no piloto se o mapa do app exibe a posição do usuário e como converter a medida da captura em metros (barra de escala do mapa ou distância conhecida entre dois pontos no mesmo zoom) | Pendente |
+| Identificador do pacote do app, para a inspeção de M2.2 | Resolvido: `br.bus2.dfnoponto` |
+| Versões do Android de M1.2, conforme [Recursos](3-recursos.md) | Em aberto: os dois aparelhos estão no Android 13 e os emuladores disponíveis recusam a instalação do app; definir a amostra efetiva antes de coletar |
+| Modo de obter a distância em M5.2: confirmar se o mapa do app exibe a posição do usuário e como converter a medida da captura em metros (barra de escala do mapa, distância conhecida entre dois pontos no mesmo zoom ou coordenadas obtidas pela função de compartilhar) | Pendente, bloqueia a saída de campo |
 
 <p class="legenda">Tabela 8. Pendências a resolver antes da coleta. Fonte: elaboração própria (2026).</p>
 

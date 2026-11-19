@@ -11,14 +11,14 @@ Este documento lista os recursos necessários para executar a avaliação do apl
 
 | ID | Fabricante e modelo | Tela | Android | Métricas atendidas | Observações |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| DISP-01 | Samsung Galaxy S20 FE 5G (`SM-G781B`), serial `RXCT500A02D` | 6,5", 1080 × 2400 px; densidade física de 480 dpi, com ajuste de 450 dpi aplicado pelo usuário | 13 (API 33, One UI 5.1) | Campo: M5.1 e M5.2 | Valores lidos no aparelho em 19/11/2026. A escala de fonte original é 0,9. O aparelho está com o zoom de tela alterado (`Override density: 450`); se vier a executar métricas de laboratório, restaurar a densidade física antes |
-| DISP-02 | Xiaomi Redmi Note 11S (`2201117SY`), serial `QCPNDMG6X4XKOV7X` | 6,43", 1080 × 2400 px, 440 dpi (densidade efetiva lida no aparelho) | 13 (API 33) | Laboratório: M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M4.1, M4.2, M6.1 e M6.2 | Valores lidos no aparelho em 17/11/2026, com o app na versão 5.25.1. A escala de fonte original é 0,92, e não 1,0 |
+| DISP-01 | Samsung Galaxy S20 FE 5G (`SM-G781B`), serial `RXCT500A02D` | 6,5", 1080 × 2400 px; densidade física de 480 dpi, com ajuste de 450 dpi aplicado pelo usuário | 13 (API 33, One UI 5.1) | Campo: M5.1 e M5.2. Laboratório: M4.1 e M6.2 (executadas) | Valores lidos no aparelho em 19/11/2026. A escala de fonte original é 0,9. O aparelho está com o zoom de tela alterado (`Override density: 450`); se vier a executar métricas de laboratório, restaurar a densidade física antes |
+| DISP-02 | Xiaomi Redmi Note 11S (`2201117SY`), serial `QCPNDMG6X4XKOV7X` | 6,43", 1080 × 2400 px, 440 dpi (densidade efetiva lida no aparelho) | 13 (API 33) | Laboratório: M1.1 (executada), M1.2, M2.1, M2.2, M3.1, M3.2, M4.2 e M6.1 | Valores lidos no aparelho em 17/11/2026, com o app na versão 5.25.1. A escala de fonte original é 0,92, e não 1,0 |
 
 <p class="legenda">Tabela 1. Dispositivos físicos da avaliação. Fonte: elaboração própria (2026).</p>
 
-**Todas as métricas que dependem do `adb` são executadas no `DISP-02`:** M1.1 (configuração de tela, densidade e escala de fonte), M2.2 (listagem dos diretórios antes e depois da desinstalação) e o registro de log de M3.1. Para isso, o aparelho precisa da chave **"Depuração USB (Configurações de segurança)"** das opções do desenvolvedor do MIUI, além da depuração USB comum; sem ela, o Android recusa os comandos com `SecurityException`, como ocorreu no teste-piloto de 17/11/2026.
+**As métricas que dependem do `adb` são executadas no `DISP-02`:** M1.1 (configuração de tela, densidade e escala de fonte), M2.2 (listagem dos diretórios antes e depois da desinstalação) e o registro de log de M3.1. Para isso, o aparelho precisa da chave **"Depuração USB (Configurações de segurança)"** das opções do desenvolvedor do MIUI, além da depuração USB comum; sem ela, o Android recusa os comandos com `SecurityException`, como ocorreu no teste-piloto de 17/11/2026.
 
-A divisão entre os dois aparelhos permite executar laboratório e campo em paralelo, conforme o [Cronograma](4-cronograma.md).
+A divisão entre os dois aparelhos é operacional: permite que dois avaliadores trabalhem em paralelo, conforme o [Cronograma](4-cronograma.md), e acompanha a disponibilidade de cada aparelho no momento de cada bateria. Com exceção das que dependem do `adb`, as métricas de laboratório não exigem um aparelho específico, apenas um aparelho físico com a versão de referência do aplicativo. Cada linha da planilha de coleta registra o aparelho, o modelo, a versão do Android e a versão do app, de modo que a rastreabilidade se mantém mesmo com a alocação variando. A Tabela 1 reflete a alocação efetiva: **M4.1** e **M6.2** foram executadas no `DISP-01`, em 17 e 18/11/2026, e **M1.1** no `DISP-02`, em 18/11/2026.
 
 Os perfis de tela `C01` a `C04` de M1.1 não correspondem à configuração nativa de nenhum dos dois aparelhos, que são ambos 1080 × 2400. Eles são aplicados por `adb` e conferidos automaticamente pelo script `scripts/m1-1-telas.sh`, que interrompe a bateria se a configuração não tiver sido aplicada e restaura o aparelho ao final.
 
@@ -102,7 +102,7 @@ Os locais e horários devem ser registrados junto aos dados de cada execução. 
 | Catálogo de telas e configurações | Casos de M1.1 | Seção 3.3 dos procedimentos | `T01`–`T05` × `C01`–`C04` | Definido |
 | Catálogo de tarefas essenciais | M6.1 e M1.2 | Seção 3.2 dos procedimentos | `TE01`–`TE08` | Definido |
 | Itens do catálogo oficial | M6.2, e entradas de M6.1, M1.1 e M1.2 | [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/) | `L01` = linha 0.089 (Setor P Sul / Av. Comercial); `P01` = parada N1 P Norte, Ceilândia; `L02` e `A01`–`A20` a definir | `L01` e `P01` selecionados em 18/11/2026; registro oficial pendente |
-| Posições de referência | M5.2 | GPSTest, em campo | WGS84, precisão informada de até 10 m | A coletar |
+| Posições de referência | M5.2 | GPSTest, em campo | WGS84, precisão informada de até 10 m, em 5 paradas | A coletar |
 | Previsões e chegadas | M5.1 | Aplicativo e observação em campo | Data completa e fuso `America/Sao_Paulo` | A coletar |
 
 
@@ -129,7 +129,7 @@ Uma mesma pessoa pode exercer mais de um papel, mas o laboratório e o campo oco
 | Aplicativo incompatível com os emuladores disponíveis | Redução da amostra de M1.2 | Testar imagem `arm64-v8a` na API 28; se não funcionar, registrar a limitação e ajustar a amostra antes da coleta | Em aberto |
 | Os dois aparelhos na mesma versão do Android | M1.2 depende inteiramente dos emuladores | Mesma mitigação acima; declarar a faixa de versões efetivamente verificada | Confirmado |
 | Mapa do aplicativo sem indicação da posição do usuário | Impossibilidade de medir a distância diretamente na captura em M5.2 | Obter as coordenadas das duas posições e aplicar a fórmula de haversine da Fase 2 | Pendente do teste-piloto |
-| Aplicativo sem horário da posição do veículo | Impossibilidade de aplicar a diferença temporal máxima em M5.2 | Observar somente veículos parados e declarar a limitação | Pendente do teste-piloto |
+| Defasagem da posição dos veículos no aplicativo, da ordem de um minuto | Inviabiliza medir o erro posicional de veículos | M5.2 apurada somente com paradas, que são entidades fixas; veículos ficam fora da métrica | Resolvido em 19/11/2026, com a ficha de M5.2 atualizada |
 | Indisponibilidade ou alteração da fonte oficial da Semob-DF | Dificuldade para reproduzir M6.2 | Arquivar a captura datada da consulta antes da auditoria | Pendente da seleção da amostra |
 | Chuva, condições inseguras ou ausência de operação da linha | Interrupção da coleta de campo | Usar as janelas de contingência do cronograma e registrar a alteração | Em aberto |
 | Exposição de dados pessoais em gravações ou fotos | Risco de privacidade | Não enquadrar rostos, documentos nem placas de terceiros; revisar as evidências antes de arquivar | Regra permanente dos procedimentos |
@@ -154,3 +154,4 @@ Antes da coleta, conferir se:
 | 01 | Criação da estrutura inicial do inventário de recursos da avaliação | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
 | 02 | Identificação dos aparelhos, estação de trabalho, ferramentas e versões, divisão das métricas entre laboratório e campo, dados de entrada e riscos observados no teste-piloto | [Bessa](https://github.com/bessazs) | 18/11/2026 | — | — |
 | 03 | Registro dos dados do `DISP-01` lidos por `adb` (serial, modelo, densidade física e ajustada, escala de fonte) e dos seriais dos dois aparelhos | [Bessa](https://github.com/bessazs) | 19/11/2026 | — | — |
+| 04 | Alocação efetiva das métricas por aparelho (M4.1 e M6.2 no `DISP-01`, M1.1 no `DISP-02`), evidências consolidadas em `dados/fase4/` e M5.2 restrita a paradas | [Bessa](https://github.com/bessazs) | 19/11/2026 | — | — |

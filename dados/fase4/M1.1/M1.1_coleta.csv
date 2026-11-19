@@ -1,0 +1,21 @@
+ID;Metrica;Caso;Avaliador;DataHora;Dispositivo;Modelo;VersaoSO;VersaoApp;Estado;Evidencia;Observacoes
+EXEC-M1.1-T01-C01;M1.1;T01-C01;Vitor Bessa;2026-11-18 10:43;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T01-C01_DISP-02.png;
+EXEC-M1.1-T02-C01;M1.1;T02-C01;Vitor Bessa;2026-11-18 10:43;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T02-C01_DISP-02.png;
+EXEC-M1.1-T03-C01;M1.1;T03-C01;Vitor Bessa;2026-11-18 10:45;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T03-C01_DISP-02.png;
+EXEC-M1.1-T04-C01;M1.1;T04-C01;Vitor Bessa;2026-11-18 10:45;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T04-C01_DISP-02.png;
+EXEC-M1.1-T05-C01;M1.1;T05-C01;Vitor Bessa;2026-11-18 10:46;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T05-C01_DISP-02.png;
+EXEC-M1.1-T01-C02;M1.1;T01-C02;Vitor Bessa;2026-11-18 10:47;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T01-C02_DISP-02.png;
+EXEC-M1.1-T02-C02;M1.1;T02-C02;Vitor Bessa;2026-11-18 10:48;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T02-C02_DISP-02.png;
+EXEC-M1.1-T03-C02;M1.1;T03-C02;Vitor Bessa;2026-11-18 10:48;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T03-C02_DISP-02.png;
+EXEC-M1.1-T04-C02;M1.1;T04-C02;Vitor Bessa;2026-11-18 10:50;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T04-C02_DISP-02.png;
+EXEC-M1.1-T05-C02;M1.1;T05-C02;Vitor Bessa;2026-11-18 10:50;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T05-C02_DISP-02.png;
+EXEC-M1.1-T01-C03;M1.1;T01-C03;Vitor Bessa;2026-11-18 10:51;DISP-02;2201117SY;13 (API 33);5.25.1;Defeito;M1.1_T01-C03_DISP-02.png;Codigo da linha cortado no badge laranja (0.089 ilegivel), nome da linha truncado para “Setor P Sul” sem reticencias, titulo “All lines” coberto pela barra inferior, rotulos da barra inferior quebrados em varias linhas e sobrepostos
+EXEC-M1.1-T02-C03;M1.1;T02-C03;Vitor Bessa;2026-11-18 10:51;DISP-02;2201117SY;13 (API 33);5.25.1;Defeito;M1.1_T02-C03_DISP-02.png;Titulo da tela truncado, descricao do itinerario quebrada no meio das palavras (“Palm/eiras”), cada horario ocupa quase a tela inteira e apenas um horario fica visivel sem rolagem
+EXEC-M1.1-T03-C03;M1.1;T03-C03;Vitor Bessa;2026-11-18 10:52;DISP-02;2201117SY;13 (API 33);5.25.1;Defeito;M1.1_T03-C03_DISP-02.png;Codigo da linha cortado no badge, titulo da linha truncado, cabecalho ampliado reduz a area util do mapa e empurra a lista de paradas para fora da area visivel
+EXEC-M1.1-T04-C03;M1.1;T04-C03;Vitor Bessa;2026-11-18 10:52;DISP-02;2201117SY;13 (API 33);5.25.1;Defeito;M1.1_T04-C03_DISP-02.png;Botoes de filtro truncados para “Le...” e “Arr...”, impedindo distinguir partida de chegada, titulo da parada truncado e cartao da linha favorita cortado
+EXEC-M1.1-T05-C03;M1.1;T05-C03;Vitor Bessa;2026-11-18 10:53;DISP-02;2201117SY;13 (API 33);5.25.1;Defeito;M1.1_T05-C03_DISP-02.png;Abas truncadas para “Rou”, “Line” e “Poin”, codigo da linha cortado no badge, nome da linha truncado e rotulos da barra inferior quebrados e sobrepostos
+EXEC-M1.1-T01-C04;M1.1;T01-C04;Vitor Bessa;2026-11-18 10:53;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T01-C04_DISP-02.png;
+EXEC-M1.1-T02-C04;M1.1;T02-C04;Vitor Bessa;2026-11-18 10:53;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T02-C04_DISP-02.png;
+EXEC-M1.1-T03-C04;M1.1;T03-C04;Vitor Bessa;2026-11-18 10:54;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T03-C04_DISP-02.png;
+EXEC-M1.1-T04-C04;M1.1;T04-C04;Vitor Bessa;2026-11-18 10:54;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T04-C04_DISP-02.png;
+EXEC-M1.1-T05-C04;M1.1;T05-C04;Vitor Bessa;2026-11-18 10:54;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;M1.1_T05-C04_DISP-02.png;

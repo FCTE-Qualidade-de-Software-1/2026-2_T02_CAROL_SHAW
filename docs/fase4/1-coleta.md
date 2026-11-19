@@ -8,6 +8,39 @@ Reunir os registros da execução dos procedimentos definidos na Fase 3 para as 
 
 Os dados são organizados por métrica, seguindo os procedimentos e os recursos previstos na [Fase 3](../fase3/introducao.md). Cada registro identifica os casos avaliados e apresenta seus resultados e evidências.
 
+### M4.1 — Mitigação de Perda de Conexão
+
+#### Questão e critério de avaliação
+
+A questão avaliada é **Q4.1**: o aplicativo mantém-se utilizável durante a indisponibilidade temporária da rede e retoma normalmente as consultas após a reconexão? A hipótese **H4.1** prevê **M4.1 ≥ 0,70**, isto é, pelo menos 7 ensaios conformes em uma amostra de 10.
+
+Conforme se o app continua aberto e responsivo, informa a indisponibilidade em até 5 s e retoma a consulta em até 30 s depois da reativação dos dados móveis e do Wi-Fi.
+
+#### Procedimento de coleta
+
+Foram realizados 10 ensaios de interrupção de rede no aparelho `DISP-01`, com desconexão dos dados móveis e do Wi-Fi e consulta ao aplicativo. A reconexão foi seguida de nova consulta para verificar a retomada do serviço.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M4.1-01 | ENS01 | Pedro Ramos | 18/11/2026 - 20:41 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E01_DISP-01.mp4](videos/M4.1_E01_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-02 | ENS02 | Pedro Ramos | 18/11/2026 - 20:41 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E02_DISP-01.mp4](videos/M4.1_E02_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-03 | ENS03 | Pedro Ramos | 18/11/2026 - 20:42 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E03_DISP-01.mp4](videos/M4.1_E03_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-04 | ENS04 | Pedro Ramos | 18/11/2026 - 20:45 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E04_DISP-01.mp4](videos/M4.1_E04_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-05 | ENS05 | Pedro Ramos | 18/11/2026 - 20:46 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E05_DISP-01.mp4](videos/M4.1_E05_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-06 | ENS06 | Pedro Ramos | 18/11/2026 - 21:11 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E06_DISP-01.mp4](videos/M4.1_E06_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-07 | ENS07 | Pedro Ramos | 18/11/2026 - 21:11 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E07_DISP-01.mp4](videos/M4.1_E07_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-08 | ENS08 | Pedro Ramos | 18/11/2026 - 21:12 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E08_DISP-01.mp4](videos/M4.1_E08_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-09 | ENS09 | Pedro Ramos | 18/11/2026 - 21:13 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E09_DISP-01.mp4](videos/M4.1_E09_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+| M4.1-10 | ENS10 | Pedro Ramos | 18/11/2026 - 21:15 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Sim; aviso e retomada dentro dos limites | [M4.1_E10_DISP-01.mp4](videos/M4.1_E10_DISP-01.mp4) | Dados móveis e Wi-Fi desativados; consulta retomada após reconexão |
+
+<p class="legenda">Tabela 1. Registro da coleta da M4.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{4.1} = \frac{E_c}{E_t} = \frac{10}{10} = 1{,}00 \ (100\%)
+$$
+
+Em que $E_c = 10$ corresponde aos ensaios que atenderam aos critérios de aviso e retomada, e $E_t = 10$ é o total de ensaios válidos.
+
 ### M6.2 — Completude do Banco
 
 #### Questão e critério de avaliação

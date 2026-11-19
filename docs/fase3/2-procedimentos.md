@@ -160,7 +160,7 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 
 - **Amostra:** 10 ensaios, uma interrupção por ensaio.
 - **Passos:**
-    1. Com o app aberto e funcionando, desligar os **dados móveis e o Wi-Fi** nas configurações do aparelho e manter assim por **30 s**. Nenhuma conexão pode permanecer ativa: se só uma for desligada, o app continua online e o ensaio não vale.
+    1. Com o app aberto e funcionando, desligar os **dados móveis e o Wi-Fi** nas configurações do aparelho. Nenhuma conexão pode permanecer ativa: se só uma for desligada, o app continua online e o ensaio não vale.
     2. Fazer uma consulta que dependa de dados.
     3. Religar a conexão e repetir a consulta.
 - **Conforme se:** o app continua aberto e responsivo, informa a indisponibilidade em até **5 s** (da consulta até o aviso) e retoma a consulta em até **30 s** (da reativação até a consulta concluir).

@@ -1,0 +1,3 @@
+ID;Metrica;Caso;Avaliador;DataHora;Dispositivo;Modelo;VersaoSO;VersaoApp;Estado;ValorMedido;Evidencia;Observacoes
+EXEC-M5.2-PARADA01;M5.2;PARADA01;;2026-11-__ __:__;DISP-01;SM-G781B;13 (API 33);5.25.1;;distancia_m=__ precisao_ref_m=__ metodo=;M5.2_PARADA01_MAPA.png + M5.2_PARADA01_GPSTEST.png;parada= codigo=
+EXEC-M5.2-VEICULO01;M5.2;VEICULO01;;2026-11-__ __:__;DISP-01;SM-G781B;13 (API 33);5.25.1;;distancia_m=__ precisao_ref_m=__ metodo=;M5.2_VEICULO01_MAPA.png + M5.2_VEICULO01_GPSTEST.png;linha= prefixo= veiculo parado junto a parada

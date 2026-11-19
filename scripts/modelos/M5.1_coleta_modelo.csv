@@ -1,0 +1,2 @@
+ID;Metrica;Caso;Avaliador;DataHora;Dispositivo;Modelo;VersaoSO;VersaoApp;Estado;ValorMedido;Evidencia;Observacoes
+EXEC-M5.1-EVENTO01;M5.1;EVENTO01;;2026-11-__ __:__;DISP-01;SM-G781B;13 (API 33);5.25.1;;previsto=__:__ chegada=__:__ erro_min=__;M5.1_EVENTO01_APP.png + M5.1_EVENTO01_REAL.jpg;linha= sentido= parada= prefixo=

@@ -42,7 +42,7 @@ flowchart TD
     E1 --> D["2.3 Injeção de falhas<br>M4.1, M4.2"]
     E1 --> F["2.4 Auditoria do catálogo<br>M6.2"]
     E1 --> G["3.1 Campo: paradas<br>M5.2"]
-    G --> H["3.2 Campo: previsões e veículos<br>M5.1, M5.2"]
+    G --> H["3.2 Campo: previsões de chegada<br>M5.1"]
     B --> I["4.1 Consolidação de formulários e evidências"]
     C --> I
     D --> I
@@ -70,8 +70,8 @@ Os papéis atribuídos na tabela seguem a definição da Seção 6 de [Recursos]
 | **2.2** | **Laboratório — Sessão padronizada de uso contínuo:** execução de 20 sessões cronometradas de 5 minutos (100 min ativos) com gravação e monitoramento de logs | **M3.1** e **M3.2** (20 sessões) | **1.3** | 18/11/2026 | 18/11/2026 | 3 h 30 min | 2 h | Responsável pela execução *(A definir)* |
 | **2.3** | **Laboratório — Ensaio com injeção de falhas:** execução de 10 interrupções de rede (30 s) e 10 desativações de localização/GPS (30 s) com medição temporal em vídeo | **M4.1** (10 ensaios) e **M4.2** (10 ensaios) | **1.3** | 18/11/2026 | 18/11/2026 | 2 h | 1 h | Responsável pela execução *(A definir)* |
 | **2.4** | **Laboratório — Auditoria comparativa de catálogo:** confronto dos 20 itens oficiais (`A01`–`A20`) da Semob-DF com os registros do aplicativo | **M6.2** (20 itens) | **1.2**, **1.3** | 18/11/2026 | 18/11/2026 | 2 h | 1 h | Responsável pelos registros *(A definir)* |
-| **3.1** | **Campo — Medição estática de paradas:** registro da posição de referência (GPSTest) nas 5 paradas selecionadas e comparação com o mapa do app | **M5.2 — paradas** (5 paradas) | **1.3** | 18/11/2026 | 18/11/2026 | 2 h | 1 janela (2 h) | Responsável pela coleta de campo *(A definir)* |
-| **3.2** | **Campo — Observação de previsões e veículos:** registro de 10 eventos de chegada (2 blocos de 5, com 2 linhas) e 10 eventos de veículo parado junto à parada | **M5.1** (10 eventos) e **M5.2 — veículos** (10 eventos) | **1.3**, **3.1** | 18/11/2026 | 19/11/2026 | 4 h (2 blocos de 2 h) | 2 janelas (4 h) | Responsável pela coleta de campo *(A definir)* |
+| **3.1** | **Campo — Medição estática de paradas:** registro da posição de referência (GPSTest) nas 5 paradas selecionadas e comparação com o mapa do app | **M5.2** (5 paradas) | **1.3** | 18/11/2026 | 18/11/2026 | 2 h | 1 janela (2 h) | Responsável pela coleta de campo *(A definir)* |
+| **3.2** | **Campo — Observação das previsões de chegada:** registro de 10 eventos de chegada (2 blocos de 5, com as linhas `L01` e `L02`) | **M5.1** (10 eventos) | **1.3**, **3.1** | 18/11/2026 | 19/11/2026 | 4 h (2 blocos de 2 h) | 2 janelas (4 h) | Responsável pela coleta de campo *(A definir)* |
 | **4.1** | **Consolidação das evidências e formulários:** auditoria de preenchimento, classificação de pendências/exclusões, vinculação de capturas, logs e vídeos a cada caso e versionamento em `docs/fase4/` | Tabelas de contagem revisadas e evidências organizadas | **2.1b**, **2.2**, **2.3**, **2.4**, **3.2** | 19/11/2026 | 20/11/2026 | 4 h | 2 h | Responsável pelos registros *(A definir)* |
 | **5.1** | **Cálculo e julgamento na Fase 4:** apuração das 12 métricas, atribuição das notas (1 a 4), julgamento dos objetivos `G1`–`G6` e elaboração do relatório da Fase 4 | Resultados consolidados e relatório final da avaliação | **4.1** | 20/11/2026 | 21/11/2026 | 4 h | 2 h | Toda a equipe / Revisor dos procedimentos *(A definir)* |
 

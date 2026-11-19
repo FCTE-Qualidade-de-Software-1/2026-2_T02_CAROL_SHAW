@@ -71,7 +71,7 @@ A tabela a seguir consolida a origem dos dados e os critérios conceituais de cl
 | **M4.1** | Gravação da interface e registro das interrupções de rede. | Induzir uma interrupção por ensaio, com rede disponível inicialmente. Aprovar se o app permanece aberto, informa a indisponibilidade, mantém a interface responsiva e permite retomar a consulta após a reconexão. Definir previamente, no roteiro, os tempos máximos de aviso e retomada, em segundos. |
 | **M4.2** | Alertas, mapa e registro das alterações do serviço de localização. | Induzir uma desativação por ensaio, com localização disponível inicialmente. Aprovar se o app permanece aberto, informa a indisponibilidade, mantém disponíveis as funções que não dependem da posição do usuário e retoma a localização após a reativação. Definir previamente, no roteiro, os tempos máximos de aviso e retomada, em segundos. |
 | **M5.1** | Previsão exibida e registro da chegada física do ônibus. | Parear por linha, sentido, parada e veículo/viagem identificável. Fixar a regra de captura antes da coleta; registrar data completa, fuso e instante da captura. Aplicar a mesma regra a toda a amostra, sem selecionar retrospectivamente previsões de menor erro. |
-| **M5.2** | Posição exibida no app e referência independente, obtida em campo. | Registrar posições, horários e referência, separando paradas e veículos. Fixar previamente a tolerância espacial e, para veículos, a diferença temporal admissível. Aplicar a verificação espacial abaixo. |
+| **M5.2** | Posição exibida no app e referência independente, obtida em campo. | Registrar posições, horários, referência e precisão informada. Fixar previamente a tolerância espacial. Aplicar a verificação espacial abaixo. |
 | **M6.1** | Catálogo de tarefas essenciais e relatório de execução funcional. | Fixar antes da coleta o catálogo com entradas e resultados esperados. Executar cada tarefa de ponta a ponta e contar uma vez cada tarefa que falhar. Calcular após avaliar todo o catálogo; casos pendentes mantêm o resultado incompleto. |
 | **M6.2** | Catálogo oficial da Semob-DF, com data de referência, e consultas ao app. | Selecionar a amostra da fonte oficial antes da coleta, identificando código, sentido e variante de itinerário, quando houver. Auditar todos os itens; ausência ou divergência não incrementa $L_c$, e consultas repetidas não ampliam a amostra. |
 
@@ -95,7 +95,7 @@ Registrar separadamente previsões ausentes e chegadas sem identificação sufic
 
 ### Verificação Espacial (M5.2)
 
-Antes da coleta, registrar a tolerância espacial $\varepsilon > 0$ (metros) e, para veículos, a diferença temporal máxima $\Delta t_{max} \ge 0$ (segundos) entre app e referência. Esses parâmetros classificam as posições; os limiares de pontuação se aplicam à proporção aprovada.
+Antes da coleta, registrar a tolerância espacial $\varepsilon > 0$ (metros) entre a posição exibida pelo aplicativo e a referência. Esse parâmetro classifica as posições; os limiares de pontuação se aplicam à proporção aprovada. A entidade medida deve ser fixa no intervalo entre a última atualização da posição e a captura, condição que a Fase 3 restringe às paradas.
 
 A distância $d_i$ entre a posição exibida no aplicativo e a referência pode ser obtida de dois modos. O modo usado é registrado em cada observação:
 
@@ -112,9 +112,9 @@ $$
 d_i = 2R\arcsin\!\left(\sqrt{a_i}\right)
 $$
 
-Na fórmula, $\varphi$ e $\lambda$ são latitude e longitude em radianos; $app$ e $ref$ identificam aplicativo e referência. Nos dois modos, para cada observação válida, incrementar $P_t$ e, se $d_i \le \varepsilon$, também $P_s$. Em veículos, registros separados por mais de $\Delta t_{max}$ são inválidos. Sem tolerância e referência documentadas, a métrica permanece não avaliada.
+Na fórmula, $\varphi$ e $\lambda$ são latitude e longitude em radianos; $app$ e $ref$ identificam aplicativo e referência. Nos dois modos, para cada observação válida, incrementar $P_t$ e, se $d_i \le \varepsilon$, também $P_s$. Sem tolerância e referência documentadas, a métrica permanece não avaliada.
 
-Apurar paradas e veículos separadamente. Havendo consolidação de amostras com os mesmos critérios, somar seus acertos e totais antes de dividir, preservando os resultados por tipo de entidade.
+Havendo consolidação de amostras obtidas sob os mesmos critérios, somar seus acertos e totais antes de dividir, preservando os resultados por tipo de entidade.
 
 ---
 
@@ -165,7 +165,7 @@ Os limiares da Tabela 5 são decisões do projeto, fixadas antes da coleta. A IS
 
 Em uma proporção com total válido $n$, cada unidade altera o resultado em $1/n$. Quando $n < 20$, algumas faixas da Tabela 5 não têm total possível: é o caso de M1.2 (três versões), M2.1 e M2.2 (dez ciclos), M5.2 para paradas (cinco paradas) e M6.1 (oito tarefas). Nessas métricas, os limiares são aplicados sem alteração, e as notas que cada amostra pode produzir estão na tabela de [Amostras e limitação](../fase3/2-procedimentos.md#5-amostras-e-limitacao) da Fase 3. A contagem (por exemplo, "9 de 10") é sempre informada junto da nota, e os resultados são tratados como indicativos para a amostra observada.
 
-A M5.2 é apurada separadamente para paradas e para veículos. Cada grupo recebe sua nota, e a nota de M5.2 usada no julgamento de G5 é a **pior das duas**; a proporção consolidada é informada como complemento.
+A M5.2 é apurada somente com paradas, pela restrição registrada na ficha da métrica em [Procedimentos de Execução](../fase3/2-procedimentos.md): a posição dos veículos exibida pelo aplicativo tem defasagem da ordem de um minuto, e compará-la com a referência mediria o deslocamento do veículo, não o erro do aplicativo.
 
 ### Julgamento dos Objetivos
 

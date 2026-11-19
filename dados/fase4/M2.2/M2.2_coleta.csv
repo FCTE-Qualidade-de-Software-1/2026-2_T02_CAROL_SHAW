@@ -1,0 +1,11 @@
+ID;Metrica;Caso;Avaliador;DataHora;Dispositivo;Modelo;VersaoSO;VersaoApp;Estado;ValorMedido;Evidencia;Observacoes
+EXEC-M2.2-CICLO01;M2.2;CICLO01;Vitor Bessa;2026-11-19 16:45;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO01_DISP-02_diff.txt;
+EXEC-M2.2-CICLO02;M2.2;CICLO02;Vitor Bessa;2026-11-19 16:52;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO02_DISP-02_diff.txt;
+EXEC-M2.2-CICLO03;M2.2;CICLO03;Vitor Bessa;2026-11-19 16:57;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO03_DISP-02_diff.txt;
+EXEC-M2.2-CICLO04;M2.2;CICLO04;Vitor Bessa;2026-11-19 17:01;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO04_DISP-02_diff.txt;
+EXEC-M2.2-CICLO05;M2.2;CICLO05;Vitor Bessa;2026-11-19 17:05;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO05_DISP-02_diff.txt;
+EXEC-M2.2-CICLO06;M2.2;CICLO06;Vitor Bessa;2026-11-19 17:10;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO06_DISP-02_diff.txt;
+EXEC-M2.2-CICLO07;M2.2;CICLO07;Vitor Bessa;2026-11-19 17:14;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO07_DISP-02_diff.txt;
+EXEC-M2.2-CICLO08;M2.2;CICLO08;Vitor Bessa;2026-11-19 17:18;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO08_DISP-02_diff.txt;
+EXEC-M2.2-CICLO09;M2.2;CICLO09;Vitor Bessa;2026-11-19 17:24;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO09_DISP-02_diff.txt;
+EXEC-M2.2-CICLO10;M2.2;CICLO10;Vitor Bessa;2026-11-19 17:28;DISP-02;2201117SY;13 (API 33);nao instalado;Conforme;0 mencoes;M2.2_CICLO10_DISP-02_diff.txt;

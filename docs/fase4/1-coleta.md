@@ -8,7 +8,7 @@ Reunir os registros da execução dos procedimentos definidos na Fase 3 para as 
 
 Os dados são organizados por métrica, seguindo os procedimentos e os recursos previstos na [Fase 3](../fase3/introducao.md). Cada registro identifica os casos avaliados e apresenta seus resultados e evidências.
 
-### M4.1 — Mitigação de Perda de Conexão
+### M4.1 — Perda de Conexão
 
 #### Questão e critério de avaliação
 
@@ -40,6 +40,39 @@ M_{4.1} = \frac{E_c}{E_t} = \frac{10}{10} = 1{,}00 \ (100\%)
 $$
 
 Em que $E_c = 10$ corresponde aos ensaios que atenderam aos critérios de aviso e retomada, e $E_t = 10$ é o total de ensaios válidos.
+
+### M4.2 — Perda de Localização
+
+#### Questão e critério de avaliação
+
+A questão avaliada é **Q4.2**: o sistema reage apropriadamente à ausência ou desativação do sinal de GPS? A hipótese **H4.2** prevê **M4.2 ≥ 0,85**, isto é, pelo menos 9 ensaios conformes em uma amostra de 10.
+
+Conforme se o app continua aberto e responsivo, informa a indisponibilidade da localização em até 5 s, mantém disponíveis as funções independentes da posição — `TE01` (buscar `L01` pelo código) e `TE04` (consultar `P01`) — e retoma a posição no mapa em até 30 s após a reativação do serviço de localização.
+
+#### Procedimento de coleta
+
+Foram realizados 10 ensaios de desativação do serviço de localização no aparelho `DISP-01`, mantendo o aparelho com o app aberto. Em cada ensaio, a localização foi desativada. Após a reativação da localização, foi observado o retorno da posição no mapa.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M4.2-01 | ENS01 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E01_DISP-01.mp4](videos/M4.2_E01_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-02 | ENS02 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E02_DISP-01.mp4](videos/M4.2_E02_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-03 | ENS03 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E03_DISP-01.mp4](videos/M4.2_E03_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-04 | ENS04 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E04_DISP-01.mp4](videos/M4.2_E04_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-05 | ENS05 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E05_DISP-01.mp4](videos/M4.2_E05_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-06 | ENS06 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E06_DISP-01.mp4](videos/M4.2_E06_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-07 | ENS07 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E07_DISP-01.mp4](videos/M4.2_E07_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-08 | ENS08 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E08_DISP-01.mp4](videos/M4.2_E08_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-09 | ENS09 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E09_DISP-01.mp4](videos/M4.2_E09_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-10 | ENS10 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E10_DISP-01.mp4](videos/M4.2_E10_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+
+<p class="legenda">Tabela 2. Registro da coleta da M4.2. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{4.2} = \frac{G_c}{G_t} = \frac{10}{10} = 1{,}00 \ (100\%)
+$$
+
+Em que $G_c = 10$ corresponde aos ensaios que atenderam aos critérios de aviso, continuidade das funções independentes da posição e retomada da localização, e $G_t = 10$ é o total de ensaios válidos.
 
 ### M6.2 — Completude do Banco
 
@@ -76,7 +109,7 @@ Auditoria dos 20 itens sorteados do Relatório de Linhas da Semob-DF (referênci
 | M6.2-19 | A19 | 05 · 0.808 | Pedro Ramos | 17/19/2026 - 20:00 | DISP01 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [M6.2_A19_DISP01.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A19_DISP01.jpg) | Duplo Sentido |
 | M6.2-20 | A20 | 05 · 158.6 | Pedro Ramos | 17/19/2026 - 20:00 | DISP01 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [M6.2_A20_DISP01.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A20_DISP01.jpg) | Duplo Sentido |
 
-<p class="legenda">Tabela 1. Registro da coleta da M6.2. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 3. Registro da coleta da M6.2. Fonte: elaboração própria (2026).</p>
 
 $$
 M_{6.2} = \frac{L_c}{L_t} = \frac{20}{20} = 1{,}00 \ (100\%)

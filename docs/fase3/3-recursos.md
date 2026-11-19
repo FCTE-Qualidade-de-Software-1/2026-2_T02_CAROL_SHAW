@@ -11,8 +11,8 @@ Este documento lista os recursos necessários para executar a avaliação do apl
 
 | ID | Fabricante e modelo | Tela | Android | Métricas atendidas | Observações |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| DISP-01 | Samsung Galaxy S20 FE 5G (SM-G781B) | 6,5", 1080 × 2400 px, 407 ppi; densidade efetiva estimada em 420 dpi | 13 (API 33, One UI 5.1) | Campo: M5.1 e M5.2 | Dados da ficha técnica do fabricante; confirmar modelo e densidade com `adb` antes da coleta |
-| DISP-02 | Xiaomi Redmi Note 11S (`2201117SY`) | 6,43", 1080 × 2400 px, 440 dpi (densidade efetiva lida no aparelho) | 13 (API 33) | Laboratório: M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M4.1, M4.2, M6.1 e M6.2 | Valores lidos no aparelho em 17/11/2026, com o app na versão 5.25.1. A escala de fonte original é 0,92, e não 1,0 |
+| DISP-01 | Samsung Galaxy S20 FE 5G (`SM-G781B`), serial `RXCT500A02D` | 6,5", 1080 × 2400 px; densidade física de 480 dpi, com ajuste de 450 dpi aplicado pelo usuário | 13 (API 33, One UI 5.1) | Campo: M5.1 e M5.2 | Valores lidos no aparelho em 19/11/2026. A escala de fonte original é 0,9. O aparelho está com o zoom de tela alterado (`Override density: 450`); se vier a executar métricas de laboratório, restaurar a densidade física antes |
+| DISP-02 | Xiaomi Redmi Note 11S (`2201117SY`), serial `QCPNDMG6X4XKOV7X` | 6,43", 1080 × 2400 px, 440 dpi (densidade efetiva lida no aparelho) | 13 (API 33) | Laboratório: M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M4.1, M4.2, M6.1 e M6.2 | Valores lidos no aparelho em 17/11/2026, com o app na versão 5.25.1. A escala de fonte original é 0,92, e não 1,0 |
 
 <p class="legenda">Tabela 1. Dispositivos físicos da avaliação. Fonte: elaboração própria (2026).</p>
 
@@ -62,6 +62,7 @@ Os emuladores não substituem os aparelhos físicos em métricas que dependem de
 | Configurações do aparelho: dados móveis e Wi-Fi | Induzir a indisponibilidade de rede prevista em M4.1, desligando as duas conexões | Nativas do sistema | M4.1 | Disponível |
 | Configurações do aparelho: serviço de localização | Induzir a perda de localização prevista em M4.2 | Nativas do sistema | M4.2 | Disponível |
 | GPSTest | Obter a posição de referência (WGS84), a precisão horizontal e o horário UTC | 3.10.6 | M5.2 | A instalar no `DISP-01` |
+| `adb` na estação de trabalho | Ler e registrar modelo, versão, resolução, densidade e escala de fonte de cada aparelho | 1.0.41 | Preparação | Executado nos dois aparelhos |
 | Recurso de leitura de distância no mapa | Converter a medida da captura em metros | A definir | M5.2 | Pendente do teste-piloto |
 | Planilha de coleta | Registrar todas as execuções, conforme a seção 6 dos procedimentos | Formato CSV, versionado no repositório | Todas | Gerada em `dados/fase4/` |
 | Android Studio e emulador | Executar as versões do Android indisponíveis nos aparelhos | Rabbit 2, 2026.2.2 Patch 1 | M1.2 | Perfis a definir |
@@ -80,6 +81,7 @@ Se uma ferramenta planejada não estiver disponível, registrar a alternativa ut
 - **Dispositivos:** `DISP-02` e, quando aplicável, os emuladores da seção 2.2.
 - **Conectividade:** Wi-Fi estável para as métricas que dependem de dados; a condição de rede de cada execução é registrada na planilha.
 - **Preparação dos dispositivos:** aplicativo na versão de referência, cache limpo quando o roteiro exigir e sem aplicativos concorrentes de alto consumo em segundo plano.
+- **Idioma da interface:** o aplicativo foi observado em inglês no `DISP-02` em 18/11/2026. O idioma fica registrado porque os nomes de tela e as evidências dependem dele; se mudar durante a coleta, anotar na planilha.
 - **Métricas executadas:** M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M4.1, M4.2, M6.1 e M6.2.
 
 ### 4.2 Ambiente de campo
@@ -99,7 +101,7 @@ Os locais e horários devem ser registrados junto aos dados de cada execução. 
 | Aplicativo avaliado | Objeto da avaliação | Google Play Store | Pacote `br.bus2.dfnoponto`, versão 5.25.1;  | Instalado no `DISP-02` |
 | Catálogo de telas e configurações | Casos de M1.1 | Seção 3.3 dos procedimentos | `T01`–`T05` × `C01`–`C04` | Definido |
 | Catálogo de tarefas essenciais | M6.1 e M1.2 | Seção 3.2 dos procedimentos | `TE01`–`TE08` | Definido |
-| Itens do catálogo oficial | M6.2, e entradas de M6.1, M1.1 e M1.2 | [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/) | `A01`–`A20`, mais `L01`, `L02` e `P01` | A confirmar, com data e hora da consulta |
+| Itens do catálogo oficial | M6.2, e entradas de M6.1, M1.1 e M1.2 | [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/) | `L01` = linha 0.089 (Setor P Sul / Av. Comercial); `P01` = parada N1 P Norte, Ceilândia; `L02` e `A01`–`A20` a definir | `L01` e `P01` selecionados em 18/11/2026; registro oficial pendente |
 | Posições de referência | M5.2 | GPSTest, em campo | WGS84, precisão informada de até 10 m | A coletar |
 | Previsões e chegadas | M5.1 | Aplicativo e observação em campo | Data completa e fuso `America/Sao_Paulo` | A coletar |
 
@@ -151,3 +153,4 @@ Antes da coleta, conferir se:
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação da estrutura inicial do inventário de recursos da avaliação | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
 | 02 | Identificação dos aparelhos, estação de trabalho, ferramentas e versões, divisão das métricas entre laboratório e campo, dados de entrada e riscos observados no teste-piloto | [Bessa](https://github.com/bessazs) | 18/11/2026 | — | — |
+| 03 | Registro dos dados do `DISP-01` lidos por `adb` (serial, modelo, densidade física e ajustada, escala de fonte) e dos seriais dos dois aparelhos | [Bessa](https://github.com/bessazs) | 19/11/2026 | — | — |

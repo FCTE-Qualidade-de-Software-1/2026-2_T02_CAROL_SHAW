@@ -31,7 +31,17 @@ Os valores abaixo são decisões do projeto para uma execução acadêmica com a
 
 ### 3.1 Itens do catálogo oficial
 
-`L01` e `L02` são duas linhas do [Relatório de Linhas da Semob-DF](https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df)[3], e `P01` é uma parada do itinerário de `L01`. Eles são escolhidos e registrados **antes** da coleta (ver seção 7).
+`L01` e `L02` são duas linhas do [Relatório de Linhas da Semob-DF](https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df)[3], e `P01` é uma parada do itinerário de `L01`. Eles são escolhidos e registrados **antes** da coleta.
+
+| ID | Item selecionado | Registro oficial |
+| :--- | :--- | :--- |
+| `L01` | Linha **0.089** — Setor P Sul (Av. das Palmeiras) / Av. Comercial | Sentido, variante e data/hora da consulta à fonte oficial a registrar |
+| `L02` | A definir | A registrar |
+| `P01` | Parada **N1 P Norte**, Ceilândia, CEP 72225-273 | Código oficial da parada e confirmação de que pertence ao itinerário de `L01` a registrar |
+
+<p class="legenda">Tabela 2. Entradas funcionais fixadas antes da coleta. Fonte: elaboração própria (2026).</p>
+
+`L01` e `P01` foram salvos nos favoritos em 18/11/2026, estado exigido pelos casos `T05`, `TE06` e `TE07`.
 
 ### 3.2 Tarefas essenciais (M6.1 e M1.2)
 
@@ -46,7 +56,7 @@ Os valores abaixo são decisões do projeto para uma execução acadêmica com a
 | TE07 | Salvar `P01` nos favoritos e reabrir a lista | `P01` presente na lista |
 | TE08 | Remover `L01` dos favoritos e reabrir a lista | `L01` ausente, outros favoritos mantidos |
 
-<p class="legenda">Tabela 2. Catálogo de tarefas essenciais. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 3. Catálogo de tarefas essenciais. Fonte: elaboração própria (2026).</p>
 
 Cada tarefa é preparada de forma independente. Em TE05, se não for possível confirmar operação de `L02`, o caso é **Não observável**.
 
@@ -60,7 +70,7 @@ Cada tarefa é preparada de forma independente. Em TE05, se não for possível c
 | T04 | Detalhes de `P01` |
 | T05 | Favoritos com `L01` e `P01` |
 
-<p class="legenda">Tabela 3. Telas avaliadas em M1.1. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 4. Telas avaliadas em M1.1. Fonte: elaboração própria (2026).</p>
 
 | Config. | Resolução e densidade | Orientação | Fonte |
 |---|---|---|---|
@@ -69,7 +79,7 @@ Cada tarefa é preparada de forma independente. Em TE05, se não for possível c
 | C03 | Mesmo perfil de C01 | Retrato | 200% |
 | C04 | 1080 × 2400 px, 420 dpi | Retrato | 100% |
 
-<p class="legenda">Tabela 4. Configurações de tela avaliadas em M1.1. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 5. Configurações de tela avaliadas em M1.1. Fonte: elaboração própria (2026).</p>
 
 Combinações 5 × 4 = **20 casos**, identificados como `T03-C02`.
 
@@ -211,7 +221,7 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 
 ## 5. Amostras e limitação
 
-A Tabela 5 relaciona cada amostra às faixas de nota da Fase 2, aplicadas sem arredondamento, supondo todos os casos válidos.
+A Tabela 6 relaciona cada amostra às faixas de nota da Fase 2, aplicadas sem arredondamento, supondo todos os casos válidos.
 
 | Métrica | Amostra | Notas possíveis (total de casos conformes) |
 |---|---|---|
@@ -226,7 +236,7 @@ A Tabela 5 relaciona cada amostra às faixas de nota da Fase 2, aplicadas sem ar
 | M6.1 | 8 tarefas | 4: 8; 2: 7; 1: 0–6 (sem nota 3) |
 | M6.2 | 20 itens | 4: 20; 3: 19; 2: 16–18; 1: 0–15 |
 
-<p class="legenda">Tabela 5. Amostras planejadas e notas possíveis por métrica. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 6. Amostras planejadas e notas possíveis por métrica. Fonte: elaboração própria (2026).</p>
 
 Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, pode mudar o veredito do objetivo. Por isso:
 
@@ -236,7 +246,7 @@ Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, 
 
 ## 6. Registro e evidências
 
-**Planilha única de coleta**, com uma linha por caso executado e os campos da Tabela 6:
+**Planilha única de coleta**, com uma linha por caso executado e os campos da Tabela 7:
 
 | Campo | Conteúdo |
 |---|---|
@@ -249,7 +259,7 @@ Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, 
 | `Evidência` | Nome do arquivo ou link |
 | `Observações` | Desvios e anomalias |
 
-<p class="legenda">Tabela 6. Campos da planilha de coleta. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 7. Campos da planilha de coleta. Fonte: elaboração própria (2026).</p>
 
 - **Evidência de todos os casos:** cada linha da planilha aponta para a evidência indicada na ficha da métrica, também nos casos Conforme, para que qualquer resultado possa ser conferido.
 - **Nome do arquivo:** `<métrica>_<caso>_<dispositivo>.<ext>`, por exemplo `M1.1_T03-C02_DISP01.png`.
@@ -258,17 +268,17 @@ Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, 
 
 ## 7. Pendências antes da coleta
 
-Os itens da Tabela 7 precisam estar preenchidos e versionados antes do primeiro caso oficial.
+Os itens da Tabela 8 precisam estar preenchidos e versionados antes do primeiro caso oficial.
 
 | Item | Situação |
 |---|---|
-| Itens `L01`, `L02`, `P01` e lista `A01`–`A20` (código, sentido, variante, data da consulta) | Pendente |
+| Itens `L01`, `L02`, `P01` e lista `A01`–`A20` (código, sentido, variante, data da consulta) | `L01` e `P01` selecionados em 18/11/2026; falta o registro oficial de ambos, além de `L02` e da lista `A01`–`A20` |
 | Paradas, dias, janelas e responsáveis do campo (M5.1 e M5.2) | Pendente |
 | Identificador do pacote do app, para a inspeção de M2.2 | Pendente |
 | Aparelhos e emuladores (Android 9, Android 13 e o aparelho físico), conforme [Recursos](3-recursos.md) | Pendente |
 | Modo de obter a distância em M5.2: confirmar no piloto se o mapa do app exibe a posição do usuário e como converter a medida da captura em metros (barra de escala do mapa ou distância conhecida entre dois pontos no mesmo zoom) | Pendente |
 
-<p class="legenda">Tabela 7. Pendências a resolver antes da coleta. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 8. Pendências a resolver antes da coleta. Fonte: elaboração própria (2026).</p>
 
 ## Referências
 

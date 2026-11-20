@@ -55,16 +55,16 @@ Foram realizados 10 ensaios de desativação do serviço de localização no apa
 
 | ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
 |---|---|---|---|---|---|---|---|---|
-| M4.2-01 | ENS01 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E01_DISP-01.mp4](videos/M4.2_E01_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-02 | ENS02 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E02_DISP-01.mp4](videos/M4.2_E02_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-03 | ENS03 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E03_DISP-01.mp4](videos/M4.2_E03_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-04 | ENS04 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E04_DISP-01.mp4](videos/M4.2_E04_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-05 | ENS05 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E05_DISP-01.mp4](videos/M4.2_E05_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-06 | ENS06 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E06_DISP-01.mp4](videos/M4.2_E06_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-07 | ENS07 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E07_DISP-01.mp4](videos/M4.2_E07_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-08 | ENS08 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E08_DISP-01.mp4](videos/M4.2_E08_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-09 | ENS09 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E09_DISP-01.mp4](videos/M4.2_E09_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
-| M4.2-10 | ENS10 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E10_DISP-01.mp4](videos/M4.2_E10_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-01 | ENS01 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E01_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E08_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-02 | ENS02 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E02_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E02_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-03 | ENS03 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E03_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E03_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-04 | ENS04 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E04_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E04_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-05 | ENS05 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E05_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E05_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-06 | ENS06 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E06_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E06_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-07 | ENS07 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E07_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E07_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-08 | ENS08 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E08_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E08_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-09 | ENS09 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E09_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E09_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
+| M4.2-10 | ENS10 | Pedro Ramos | 19/11/2026 - 18:24 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s | [M4.2_E10_DISP-01.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2_E10_DISP-01.mp4) | Localização desativada e reativada; posição voltou ao mapa |
 
 <p class="legenda">Tabela 2. Registro da coleta da M4.2. Fonte: elaboração própria (2026).</p>
 
@@ -74,6 +74,35 @@ $$
 
 Em que $G_c = 10$ corresponde aos ensaios que atenderam aos critérios de aviso, continuidade das funções independentes da posição e retomada da localização, e $G_t = 10$ é o total de ensaios válidos.
 
+### M5.2 — Posições no mapa
+
+#### Questão e critério de avaliação
+
+A questão avaliada é **Q5.2**: a posição das paradas no mapa coincide com a posição espacial real? A hipótese **H5.2** prevê **M5.2 ≥ 0,85**.
+
+Considera-se conforme cada parada cuja distância entre a posição exibida no aplicativo e a referência independentemente obtida em campo seja menor ou igual à tolerância espacial fixada de $\varepsilon = 30$ m. Pela amostra de cinco paradas, a métrica só produz a nota 4 com cinco casos conformes e a nota 2 com quatro; com três ou menos casos conformes, a nota é 1.
+
+#### Procedimento de coleta
+
+Foram obtidas cinco capturas do mapa no aparelho `DISP-01`, identificadas como `P01` a `P05`, em 20/11/2026. Os arquivos mostram o marcador do aplicativo, o indicador da posição do usuário e a região de precisão exibida pelo mapa. A avaliação ficou limitada a paradas; veículos não foram incluídos, conforme a restrição registrada na Fase 3.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M5.2-01 | P01 | A definir | 20/11/2026 - aproximadamente 10:42 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | 4 metros | [M5.2-P01.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P01.jpg) | Medição direta na captura por cálculo visual dos pixels com auxilio de IA |
+| M5.2-02 | P02 | A definir | 20/11/2026 - aproximadamente 10:48 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | 29 metros | [M5.2-P02.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P02.jpg) | Medição direta na captura por cálculo visual dos pixels com auxilio de IA |
+| M5.2-03 | P03 | A definir | 20/11/2026 - aproximadamente 10:51 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | 4,5 metros | [M5.2-P03.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P03.jpg) | Medição direta na captura por cálculo visual dos pixels com auxilio de IA |
+| M5.2-04 | P04 | A definir | 20/11/2026 - aproximadamente 10:52 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | 3 metros | [M5.2-P04.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P04.jpg) | Medição direta na captura por cálculo visual dos pixels com auxilio de IA |
+| M5.2-05 | P05 | A definir | 20/11/2026 - aproximadamente 10:53 | DISP-01 · Android 13 · app 5.25.1(1149) | Conforme | 5 metros | [M5.2-P05.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P05.jpg) | Medição direta na captura por cálculo visual dos pixels com auxilio de IA |
+
+<p class="legenda">Tabela 3. Registro da coleta da M5.2. Fonte: elaboração própria (2026).</p>
+
+As distâncias $d_i$ foram obtidas por medição direta das capturas. Esse método não exige calcular coordenadas WGS84 nem aplicar a fórmula de haversine: a distância visual foi convertida em metros pela escala do nível de zoom utilizado. Os cinco valores medidos são menores ou iguais à tolerância $\varepsilon = 30$ m, portanto os cinco casos são conformes.
+
+$$
+M_{5.2} = \frac{P_s}{P_t} = \frac{5}{5} = 1{,}00 \ (100\%)
+$$
+
+Em que $P_s = 5$ corresponde às paradas cuja distância $d_i$ ficou dentro da tolerância e $P_t = 5$ é o total de paradas válidas.
 ### M6.2 — Completude do Banco
 
 #### Questão e critério de avaliação
@@ -109,7 +138,7 @@ Auditoria dos 20 itens sorteados do Relatório de Linhas da Semob-DF (referênci
 | M6.2-19 | A19 | 05 · 0.808 | Pedro Ramos | 17/19/2026 - 20:00 | DISP01 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [M6.2_A19_DISP01.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A19_DISP01.jpg) | Duplo Sentido |
 | M6.2-20 | A20 | 05 · 158.6 | Pedro Ramos | 17/19/2026 - 20:00 | DISP01 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [M6.2_A20_DISP01.jpg](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A20_DISP01.jpg) | Duplo Sentido |
 
-<p class="legenda">Tabela 3. Registro da coleta da M6.2. Fonte: elaboração própria (2026).</p>
+<p class="legenda">Tabela 4. Registro da coleta da M6.2. Fonte: elaboração própria (2026).</p>
 
 $$
 M_{6.2} = \frac{L_c}{L_t} = \frac{20}{20} = 1{,}00 \ (100\%)

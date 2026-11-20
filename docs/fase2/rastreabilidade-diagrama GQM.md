@@ -177,4 +177,4 @@ flowchart TD
 | 02 | Refatoração dos diagramas para Mermaid nativo | [João Capozzi](https://github.com/jonas3688) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
 | 03 | Inclusão das Questões Norteadoras (QN1-QN3), Decisões (D1-D3) na matriz de rastreabilidade e harmonização das nomenclaturas com a ISO/IEC 25023 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
 | 04 | Mapeamento das 12 métricas GQM para a meta 11.2 | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
-| 05 | Diagramas GQM refeitos em Mermaid, com os três níveis identificados, fontes nas legendas e nome único de M4.1 | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |
+| 05 | Diagramas GQM refeitos em Mermaid, com os três níveis identificados, fontes nas legendas e nome único de M4.1 | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |

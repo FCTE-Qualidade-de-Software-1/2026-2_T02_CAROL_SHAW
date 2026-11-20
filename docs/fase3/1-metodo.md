@@ -91,8 +91,8 @@ Como a avaliação é de caixa preta e usa amostragem intencional, os resultados
 
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 01 | Criação do método de avaliação da Fase 3, com técnicas para as 12 métricas, rastreabilidade e ameaças à validade | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
-| 02 | Reestruturação do documento para focar na estrutura do método, contagem tabular com evidência por exceção | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
+| 01 | Criação do método de avaliação da Fase 3, com técnicas para as 12 métricas, rastreabilidade e ameaças à validade | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
+| 02 | Reestruturação do documento para focar na estrutura do método, contagem tabular com evidência por exceção | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
 | 03 | Inclusão de links cruzados para Abordagem GQM e Metas de Avaliação (Fase 2) e alinhamento de rastreabilidade | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
-| 04 | Justificativa do método, evidências para todos os casos em `dados/fase4/`, ameaças à validade, unidade de M1.1 e nome de M4.1 alinhados à Fase 2 | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |
-| 05 | Referências às seções dos procedimentos e ameaças à validade ajustadas à nova estrutura e às amostras revistas | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |
+| 04 | Justificativa do método, evidências para todos os casos em `dados/fase4/`, ameaças à validade, unidade de M1.1 e nome de M4.1 alinhados à Fase 2 | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 05 | Referências às seções dos procedimentos e ameaças à validade ajustadas à nova estrutura e às amostras revistas | [Bessa](https://github.com/bessazs) | 16/11/2026 |[Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |

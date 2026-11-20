@@ -147,11 +147,11 @@ Antes da coleta, conferir se:
 - os responsáveis por cada papel estão registrados;
 - as alternativas para os riscos em aberto estão decididas.
 
-## Histórico de versões
+## Histórico de Versões
 
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Criação da estrutura inicial do inventário de recursos da avaliação | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 | — | — |
-| 02 | Identificação dos aparelhos, estação de trabalho, ferramentas e versões, divisão das métricas entre laboratório e campo, dados de entrada e riscos observados no teste-piloto | [Bessa](https://github.com/bessazs) | 18/11/2026 | — | — |
-| 03 | Registro dos dados do `DISP-01` lidos por `adb` (serial, modelo, densidade física e ajustada, escala de fonte) e dos seriais dos dois aparelhos | [Bessa](https://github.com/bessazs) | 19/11/2026 | — | — |
-| 04 | Alocação efetiva das métricas por aparelho (M4.1 e M6.2 no `DISP-01`, M1.1 no `DISP-02`), evidências consolidadas em `dados/fase4/` e M5.2 restrita a paradas | [Bessa](https://github.com/bessazs) | 19/11/2026 | — | — |
+| 02 | Identificação dos aparelhos, estação de trabalho, ferramentas e versões, divisão das métricas entre laboratório e campo, dados de entrada e riscos observados no teste-piloto | [Bessa](https://github.com/bessazs) | 18/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 03 | Registro dos dados do `DISP-01` lidos por `adb` (serial, modelo, densidade física e ajustada, escala de fonte) e dos seriais dos dois aparelhos | [Bessa](https://github.com/bessazs) | 19/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 04 | Alocação efetiva das métricas por aparelho (M4.1 e M6.2 no `DISP-01`, M1.1 no `DISP-02`), evidências consolidadas em `dados/fase4/` e M5.2 restrita a paradas | [Bessa](https://github.com/bessazs) | 19/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |

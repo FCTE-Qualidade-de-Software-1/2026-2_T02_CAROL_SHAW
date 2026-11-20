@@ -116,3 +116,6 @@ nav:
       - Recursos e Custos: gestao/recursos.md
       - Desempenho do Processo: gestao/desempenho.md
       - Acompanhamento do Projeto: gestao/acompanhamento.md
+
+  - Uso de Ferramentas de IA:
+      - Visão Geral: uso_de_IA/visao-geral.md

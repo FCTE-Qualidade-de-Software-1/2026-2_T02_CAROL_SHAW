@@ -145,3 +145,13 @@ M_{6.2} = \frac{L_c}{L_t} = \frac{20}{20} = 1{,}00 \ (100\%)
 $$
 
 Em que $L_c = 20$ corresponde aos itens da amostra encontrados no app com código, sentido e itinerário correspondentes, e $L_t = 20$ é o total de itens auditados.
+
+## Histórico de Versões
+
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| 1.0 | Inclusão da tabela de coleta, das evidências e do cálculo da métrica M6.2. | PedroRSR | 17/11/2026 | A definir | — |
+| 1.1 | Inclusão da seção de coleta da métrica M4.1, com registros dos ensaios, evidências e cálculo. | PedroRSR | 19/11/2026 | A definir | — |
+| 1.2 | Atualização dos registros de coleta das métricas M2.1, M2.2 e M6.1. | Bessazs | 19/11/2026 | A definir | — |
+| 1.3 | Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação. | PedroRSR | 19/11/2026 | A definir | — |
+| 1.4 | Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências. | PedroRSR | 20/11/2026 | A definir | — |

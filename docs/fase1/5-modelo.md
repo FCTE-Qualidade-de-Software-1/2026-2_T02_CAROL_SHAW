@@ -122,8 +122,8 @@ A tabela a seguir resume a correspondência formal entre o modelo de qualidade a
 
 | ID  | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
+| 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
 | 02 | Correção da seleção de Instalabilidade, detalhamento da Pertinência e alinhamento com GQM e Decisões D1-D3 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
-| 03 | Inclusão das definições normativas das subcaracterísticas (seção 2.4) e vínculo com a fundamentação das métricas (Fase 2, seção 3.1) | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | — | — |
-| 05 | Esclarecimento do papel da Pertinência Funcional, plataforma Android como escopo do sistema operacional e vínculo da modelagem com a atividade "especificar a avaliação" da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
-| 06 | Remoção da seção 2.4 duplicada, inclusão do diagrama do modelo adaptado (seção 2.5), ordem de prioridade e fixação da edição de 2011 da norma | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |
+| 03 | Inclusão das definições normativas das subcaracterísticas (seção 2.4) e vínculo com a fundamentação das métricas (Fase 2, seção 3.1) | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
+| 05 | Esclarecimento do papel da Pertinência Funcional, plataforma Android como escopo do sistema operacional e vínculo da modelagem com a atividade "especificar a avaliação" da ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
+| 06 | Remoção da seção 2.4 duplicada, inclusão do diagrama do modelo adaptado (seção 2.5), ordem de prioridade e fixação da edição de 2011 da norma | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |

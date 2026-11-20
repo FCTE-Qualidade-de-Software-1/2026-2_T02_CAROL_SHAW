@@ -1,4 +1,4 @@
-# Fase 1 - Uso de Ferramentas de IA
+# Fase 1
 
 Com base nos critérios éticos da disciplina, declaramos o uso de ferramentas de Inteligência Artificial durante a elaboração desta Fase 1, com o objetivo de deixar claro quais ferramentas foram utilizadas e qual foi o nível de revisão humana aplicado ao conteúdo gerado.
 
@@ -14,7 +14,19 @@ Além disso, removemos quaisquer ícones, emojis ou figuras geradas por IA dos r
 
 <p align="center"><em>Autores: Vitor Bessa </em></p>
 
-## **Histórico de Versão**
+# Fase 2
+
+A Preencher
+
+# Fase 3
+
+A Preencher
+
+# Fase 4
+
+A Preencher
+
+## Histórico de Versões
 
 | ID  | Descrição            | Autor                               | Data       | Revisor | Data |
 | :-: | :------------------- | :---------------------------------- | :--------- | :------ | :--: |

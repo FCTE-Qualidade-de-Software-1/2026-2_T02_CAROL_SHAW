@@ -14,8 +14,8 @@ Nos arquivos desta fase, são abordados:
 
 A Fase 2 não define instrumentos, amostras, roteiros nem recursos de execução, que são responsabilidade da [Fase 3](../fase3/introducao.md), e não coleta dados, que é tarefa da [Fase 4](../fase4/introducao.md). Ela parte do propósito e das decisões apoiadas em [Propósito da Avaliação](../fase1/1-proposito.md), das necessidades dos requisitantes em [Requisitantes e Partes Interessadas](../fase1/2-requisitantes.md) e da seleção de características em [Modelo de Qualidade e Escopo](../fase1/5-modelo.md). O produto avaliado, sua versão e as fronteiras de escopo estão em [Descrição do Produto](../fase1/3-descricao.md).
 
-## **Histórico de Versão**
+## Histórico de Versões
 
 | ID  | Descrição            | Autor                                          | Data       | Revisor | Data |
 | :-: | :------------------- | :--------------------------------------------- | :--------- | :------ | :--: |
-| 01  | Criação do documento | [Pedro Ramos](https://github.com/PedroRSR)     | 15/11/2026 | —       | —    |
+| 01  | Criação do documento | [Pedro Ramos](https://github.com/PedroRSR)     | 15/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |

@@ -113,6 +113,6 @@ As folgas previstas na Seção 4 foram dimensionadas para absorver reexecuções
 
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 01 | Criação inicial do cronograma de execução da avaliação (Fase 3), definindo sequência de atividades, dependências, durações, folgas e papéis responsáveis | [Cristiano](https://github.com/CristianoMoraiss) | 16/11/2026 | — | — |
-| 02 | Datas das atividades ajustadas ao prazo de 22/11/2026, campo em paralelo ao laboratório, diagrama de dependências em Mermaid e evidências em `dados/fase4/` | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |
-| 03 | Quantidades e durações ajustadas às amostras revistas dos procedimentos (3 versões do Android, 10 ensaios de falha, 10 chegadas, 5 paradas, lista `A01`–`A20`) | [Bessa](https://github.com/bessazs) | 16/11/2026 | — | — |
+| 01 | Criação inicial do cronograma de execução da avaliação (Fase 3), definindo sequência de atividades, dependências, durações, folgas e papéis responsáveis | [Cristiano](https://github.com/CristianoMoraiss) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 02 | Datas das atividades ajustadas ao prazo de 22/11/2026, campo em paralelo ao laboratório, diagrama de dependências em Mermaid e evidências em `dados/fase4/` | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 03 | Quantidades e durações ajustadas às amostras revistas dos procedimentos (3 versões do Android, 10 ensaios de falha, 10 chegadas, 5 paradas, lista `A01`–`A20`) | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |

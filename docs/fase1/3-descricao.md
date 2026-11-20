@@ -62,9 +62,9 @@ Esses limites seguem o caráter acadêmico e de caixa preta da avaliação, desc
 
 ---
 
-## Histórico de Versão
+## Histórico de Versões
 
 | ID  | Descrição         | Autor                               | Data       | Revisor                              |  Data   |
 | :-: | :---------------- | :---------------------------------- | :--------- | :----------------------------------- | :-----: |
-| 01  | Criação da Página | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
-| 02 | Inclusão do Alvo da Avaliação (produto, plataforma, versão) e das Fronteiras e Exclusões de Escopo, conforme a ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
+| 01  | Criação da Página | [Bessa](https://github.com/bessazs) | 17/10/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 02 | Inclusão do Alvo da Avaliação (produto, plataforma, versão) e das Fronteiras e Exclusões de Escopo, conforme a ISO/IEC 25040 | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |

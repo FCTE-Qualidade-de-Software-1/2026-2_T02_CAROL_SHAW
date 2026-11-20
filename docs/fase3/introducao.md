@@ -15,9 +15,9 @@ Nos arquivos desta fase, são abordados:
 
 A Fase 3 não redefine métricas nem critérios de julgamento: fórmulas, escalas, limiares e notas permanecem em [Desdobramento GQM e Critérios de Julgamento](../fase2/metricas-julgamento.md), e a relação entre objetivos, questões e métricas em [Planejamento e Objetivos](../fase2/planejamento-objetivos.md). O produto avaliado, sua versão e as fronteiras de escopo estão em [Descrição do Produto](../fase1/3-descricao.md).
 
-## **Histórico de Versão**
+## Histórico de Versões
 
 | ID  | Descrição            | Autor                                          | Data       | Revisor | Data |
 | :-: | :------------------- | :--------------------------------------------- | :--------- | :------ | :--: |
-| 01  | Criação do documento | [Pedro Ramos](https://github.com/PedroRSR)     | 15/11/2026 | —       | —    |
-| 02 | Alinhamento da localização dos parâmetros, catálogos e amostragem com a página de procedimentos | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | — | — |
+| 01  | Criação do documento | [Pedro Ramos](https://github.com/PedroRSR)     | 15/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
+| 02 | Alinhamento da localização dos parâmetros, catálogos e amostragem com a página de procedimentos | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |

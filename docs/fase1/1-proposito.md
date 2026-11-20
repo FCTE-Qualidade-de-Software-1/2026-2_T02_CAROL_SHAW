@@ -92,8 +92,8 @@ O [mapeamento das 12 métricas GQM para a meta 11.2](../fase2/rastreabilidade-di
 
 | ID  | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
-| 02 | Atualização e alinhamento com ODS | Equipe Carol Shaw | 26/10/2026 | — | — |
+| 01 | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 02 | Atualização e alinhamento com ODS | [Bessa](https://github.com/bessazs) | 26/10/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
 | 03 | Formalização das Decisões Apoiadas (D1, D2, D3), Questões Norteadoras Transversais (QN1, QN2, QN3) e harmonização de escopo com a Fase 2 | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
-| 04 | Esclarecimento do papel da Pertinência Funcional, correspondência Fase 1/Fase 2 com as atividades da ISO/IEC 25040 e vínculo com as fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | — | — |
+| 04 | Esclarecimento do papel da Pertinência Funcional, correspondência Fase 1/Fase 2 com as atividades da ISO/IEC 25040 e vínculo com as fronteiras de escopo | [Pedro Ramos](https://github.com/PedroRSR) | 14/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
 | 05 | Seleção da meta 11.2 e vínculo com as métricas GQM | [Rodrigo Gontijo](https://github.com/rodrigogontijoo) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |

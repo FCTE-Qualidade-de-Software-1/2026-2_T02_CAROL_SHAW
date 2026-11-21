@@ -134,6 +134,28 @@ $$
 
 Em que $I_c$ corresponde às instalações concluídas na primeira tentativa, sem erro, e $I_t = 10$ é o total de ciclos executados.
 
+### M2.2 — Resíduo pós-desinstalação
+
+#### Questão e critério de avaliação
+
+A métrica avalia se a desinstalação do aplicativo remove os arquivos e pastas atribuíveis a ele nos locais acessíveis do armazenamento. Os locais inspecionados são `Android/data/<pacote>`, `Android/obb/<pacote>`, `Android/media`, `Download`, `Documents` e pastas com o nome do app.
+
+Há **Defeito** se restar arquivo ou pasta que se possa atribuir ao app, por nome, conteúdo ou vínculo com o pacote; arquivos criados pelo avaliador não contam. O ciclo é **Não observável** se um local obrigatório estiver inacessível. O resultado vale só para os locais observáveis, pois o armazenamento privado do app não é inspecionado. Pela amostra de 10 ciclos, a métrica produz a nota 4 com 10 ciclos conformes, a nota 2 com 9 e a nota 1 com 8 ou menos, sem nota 3.
+
+#### Procedimento de coleta
+
+Foram realizados 10 ciclos de instalação, uso e remoção no aparelho `DISP-02`, os mesmos da M2.1. Em cada ciclo, os locais inspecionados foram listados por `adb` antes da instalação. Depois, o app foi instalado e usado (busca, horários, mapa e favoritos) e desinstalado pelo método padrão do sistema, repetindo-se a listagem. As duas listagens foram comparadas com `diff`. A evidência de cada ciclo são as listagens `antes` e `depois` e o resultado do `diff`.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M2.2-01 | CICLO01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-02 | CICLO02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-03 | CICLO03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-04 | CICLO04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-05 | CICLO05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-06 | CICLO06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-07 |
+
 ### M4.1 — Perda de Conexão
 
 #### Questão e critério de avaliação

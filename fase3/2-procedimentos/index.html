@@ -1,0 +1,2677 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/fase3/2-procedimentos/">
+      
+      
+        <link rel="prev" href="../1-metodo/">
+      
+      
+        <link rel="next" href="../3-recursos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Procedimentos de Execução - Carol Shaw - Qualidade de Software (2026.2)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fase-3-procedimentos-de-execucao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-header__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carol Shaw - Qualidade de Software (2026.2)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Procedimentos de Execução
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase2/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase4/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gestao/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Gestão do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../uso_de_IA/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Uso de Ferramentas de IA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-nav__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carol Shaw - Qualidade de Software (2026.2)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/1-proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/2-requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/3-descricao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/4-justificativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/5-modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/6-tabela_de_contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/7-uso_de_IA.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Ferramentas de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/planejamento-objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento e Objetivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/metricas-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desdobramento GQM e Critérios de Julgamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/rastreabilidade-diagrama%20GQM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Gráfica da Hierarquia GQM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-metodo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Método de Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Procedimentos de Execução
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Procedimentos de Execução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regras-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Regras comuns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-entradas-fixas-catalogos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Entradas fixas (catálogos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Entradas fixas (catálogos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-itens-do-catalogo-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Itens do catálogo oficial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tarefas-essenciais-m61-e-m12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Tarefas essenciais (M6.1 e M1.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-telas-e-configuracoes-m11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Telas e configurações (M1.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-fichas-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Fichas por métrica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Fichas por métrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#portabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confiabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confiabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adequacao-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adequação funcional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-amostras-e-limitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Amostras e limitação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-registro-e-evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Registro e evidências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pendencias-antes-da-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Pendências antes da coleta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma de Execução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4/1-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coleta de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4/2-analise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase4/3-resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados e Conclusões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/calendario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendário e Progresso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos e Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desempenho do Processo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/acompanhamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acompanhamento do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Ferramentas de IA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Uso de Ferramentas de IA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso_de_IA/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regras-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Regras comuns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-entradas-fixas-catalogos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Entradas fixas (catálogos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Entradas fixas (catálogos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-itens-do-catalogo-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Itens do catálogo oficial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tarefas-essenciais-m61-e-m12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Tarefas essenciais (M6.1 e M1.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-telas-e-configuracoes-m11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Telas e configurações (M1.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-fichas-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Fichas por métrica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Fichas por métrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#portabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confiabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confiabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adequacao-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adequação funcional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-amostras-e-limitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Amostras e limitação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-registro-e-evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Registro e evidências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pendencias-antes-da-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Pendências antes da coleta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fase-3-procedimentos-de-execucao">Fase 3 — Procedimentos de Execução</h1>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Este documento diz <strong>como executar</strong> o <a href="../1-metodo/">método de avaliação</a> no aplicativo <strong>DF no Ponto</strong> (Android): quais casos testar, com quais parâmetros, em que passos e com que evidência. Ele é a fonte única dos números do plano (quantidades, tolerâncias e tempos). Fórmulas, escalas e faixas de nota ficam na <a href="../../fase2/metricas-julgamento/">Fase 2</a>, e aparelhos, ferramentas e prazos ficam em <a href="../3-recursos/">Recursos</a> e <a href="../4-cronograma/">Cronograma</a>.</p>
+<p>Os valores abaixo são decisões do projeto para uma execução acadêmica com amostra intencional. Não são exigências da ISO/IEC 25040[1] nem medições já realizadas. As amostras foram dimensionadas para o tempo e a disponibilidade da equipe, mantendo, sempre que o custo permitiu, quantidade suficiente para distinguir as faixas de nota (ver seção 5).</p>
+<h2 id="2-regras-comuns">2. Regras comuns</h2>
+<ol>
+<li><strong>Parâmetros fixos antes da coleta.</strong> Quantidades, tolerâncias, tempos e catálogos não mudam depois que a coleta começa. Se precisarem mudar, registrar a justificativa e separar os resultados das séries afetadas.</li>
+<li><strong>Toda execução é registrada.</strong> Não descartar nem repetir casos por causa do resultado. Só se repete um caso quando a falha for do ambiente de teste (bateria acabou, erro do avaliador), e isso fica anotado.</li>
+<li>
+<p><strong>Estados de cada caso:</strong> cada execução recebe um dos estados da Tabela 1.</p>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Quando</th>
+<th>Efeito na métrica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conforme</strong></td>
+<td>Atendeu o critério de aprovação</td>
+<td>Entra no numerador e no denominador</td>
+</tr>
+<tr>
+<td><strong>Defeito</strong></td>
+<td>O app falhou no critério</td>
+<td>Entra só no denominador</td>
+</tr>
+<tr>
+<td><strong>Não observável</strong></td>
+<td>Impedimento externo ao app (sem ônibus em operação, indisponibilidade da loja, sinal)</td>
+<td>Sai do denominador, com justificativa</td>
+</tr>
+<tr>
+<td><strong>Pendente</strong></td>
+<td>Dúvida entre avaliadores</td>
+<td>Revisão por um segundo membro antes de fechar</td>
+</tr>
+</tbody>
+</table>
+<p><p class="legenda">Tabela 1. Estados de execução e efeito na métrica. Fonte: elaboração própria (2026).</p></p>
+</li>
+<li>
+<p><strong>Contagens por métrica:</strong> informar quantidades previstas, executadas e válidas. Denominador zero significa "não avaliado", conforme a Fase 2.</p>
+</li>
+<li><strong>Versão do app:</strong> registrar a versão instalada em cada execução. A versão de referência é <code>5.25.1(1149)</code>. Se a Play Store instalar outra, atualizar a referência e anotar a data.</li>
+<li><strong>Piloto:</strong> antes da coleta, uma pessoa que não escreveu o roteiro executa 1 caso de cada métrica e corrige os passos ambíguos.</li>
+<li><strong>Auditoria:</strong> ao final da coleta, um segundo membro confere 10% dos registros de cada métrica (no mínimo um), verificando se a evidência comprova o estado anotado.</li>
+<li><strong>Privacidade (LGPD)[2]:</strong> não enquadrar rostos nem documentos de terceiros em fotos e gravações. A avaliação usa só dados públicos do transporte coletivo.</li>
+</ol>
+<h2 id="3-entradas-fixas-catalogos">3. Entradas fixas (catálogos)</h2>
+<h3 id="31-itens-do-catalogo-oficial">3.1 Itens do catálogo oficial</h3>
+<p><code>L01</code> e <code>L02</code> são duas linhas do <a href="https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df">Relatório de Linhas da Semob-DF</a>[3], e <code>P01</code> é uma parada do itinerário de <code>L01</code>. Eles são escolhidos e registrados <strong>antes</strong> da coleta.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Item selecionado</th>
+<th style="text-align: left;">Registro oficial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>L01</code></td>
+<td style="text-align: left;">Linha <strong>0.089</strong> — Setor P Sul (Av. das Palmeiras) / Av. Comercial</td>
+<td style="text-align: left;">Sentido, variante e data/hora da consulta à fonte oficial a registrar</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>L02</code></td>
+<td style="text-align: left;">Linha <strong>933.4</strong> — Setor P Sul / Sol Nascente (Av. das Palmeiras) / Taguacenter</td>
+<td style="text-align: left;">Sentido, variante e data/hora da consulta à fonte oficial a registrar</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>P01</code></td>
+<td style="text-align: left;">Parada <strong>N1 P Norte</strong>, Ceilândia, CEP 72225-273</td>
+<td style="text-align: left;">Código oficial da parada e confirmação de que pertence ao itinerário de <code>L01</code> a registrar</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 2. Entradas funcionais fixadas antes da coleta. Fonte: elaboração própria (2026).</p>
+
+<p><code>L01</code> e <code>P01</code> foram salvos nos favoritos em 18/11/2026, estado exigido pelos casos <code>T05</code>, <code>TE06</code> e <code>TE07</code>.</p>
+<h3 id="32-tarefas-essenciais-m61-e-m12">3.2 Tarefas essenciais (M6.1 e M1.2)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Tarefa</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TE01</td>
+<td>Buscar <code>L01</code> pelo código</td>
+<td>Linha encontrada, com identificação e sentido corretos</td>
+</tr>
+<tr>
+<td>TE02</td>
+<td>Consultar horários de <code>L01</code> no dia de referência</td>
+<td>Grade da linha, sentido e dia corretos</td>
+</tr>
+<tr>
+<td>TE03</td>
+<td>Abrir o itinerário de <code>L01</code></td>
+<td>Traçado e paradas do sentido selecionado</td>
+</tr>
+<tr>
+<td>TE04</td>
+<td>Consultar <code>P01</code></td>
+<td>Identificação da parada e linhas que a atendem</td>
+</tr>
+<tr>
+<td>TE05</td>
+<td>Acompanhar um veículo de <code>L02</code> em operação</td>
+<td>Veículo identificável e posição no mapa</td>
+</tr>
+<tr>
+<td>TE06</td>
+<td>Salvar <code>L01</code> nos favoritos e reabrir a lista</td>
+<td><code>L01</code> presente na lista</td>
+</tr>
+<tr>
+<td>TE07</td>
+<td>Salvar <code>P01</code> nos favoritos e reabrir a lista</td>
+<td><code>P01</code> presente na lista</td>
+</tr>
+<tr>
+<td>TE08</td>
+<td>Remover <code>L01</code> dos favoritos e reabrir a lista</td>
+<td><code>L01</code> ausente, outros favoritos mantidos</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 3. Catálogo de tarefas essenciais. Fonte: elaboração própria (2026).</p>
+
+<p>Cada tarefa é preparada de forma independente. Em TE05, se não for possível confirmar operação de <code>L02</code>, o caso é <strong>Não observável</strong>.</p>
+<h3 id="33-telas-e-configuracoes-m11">3.3 Telas e configurações (M1.1)</h3>
+<table>
+<thead>
+<tr>
+<th>Tela</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T01</td>
+<td>Resultado da busca por <code>L01</code></td>
+</tr>
+<tr>
+<td>T02</td>
+<td>Horários de <code>L01</code></td>
+</tr>
+<tr>
+<td>T03</td>
+<td>Mapa do itinerário de <code>L01</code></td>
+</tr>
+<tr>
+<td>T04</td>
+<td>Detalhes de <code>P01</code></td>
+</tr>
+<tr>
+<td>T05</td>
+<td>Favoritos com <code>L01</code> e <code>P01</code></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 4. Telas avaliadas em M1.1. Fonte: elaboração própria (2026).</p>
+
+<table>
+<thead>
+<tr>
+<th>Config.</th>
+<th>Resolução e densidade</th>
+<th>Orientação</th>
+<th>Fonte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C01</td>
+<td>640 × 1136 px, 320 dpi</td>
+<td>Retrato</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>C02</td>
+<td>Mesmo perfil de C01</td>
+<td>Paisagem</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>C03</td>
+<td>Mesmo perfil de C01</td>
+<td>Retrato</td>
+<td>200%</td>
+</tr>
+<tr>
+<td>C04</td>
+<td>1080 × 2400 px, 420 dpi</td>
+<td>Retrato</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 5. Configurações de tela avaliadas em M1.1. Fonte: elaboração própria (2026).</p>
+
+<p>Combinações 5 × 4 = <strong>20 casos</strong>, identificados como <code>T03-C02</code>.</p>
+<h2 id="4-fichas-por-metrica">4. Fichas por métrica</h2>
+<p>Convenção de ambiente: <strong>Lab</strong> significa aparelho físico ou emulador, e <strong>Campo</strong> significa parada real do DF.</p>
+<h3 id="portabilidade">Portabilidade</h3>
+<h4 id="m11-adaptabilidade-de-hardware-lab">M1.1 — Adaptabilidade de hardware (Lab)</h4>
+<ul>
+<li><strong>Amostra:</strong> 20 casos <code>Txx-Cxx</code> (seção 3.3), todos na mesma versão do Android.</li>
+<li><strong>Passos:</strong><ol>
+<li>Aplicar a configuração do caso. No emulador, criar o perfil com a resolução e a densidade da Tabela 4. Em aparelho físico, usar o <code>adb</code>:
+    <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>shell<span class="w"> </span>wm<span class="w"> </span>size<span class="w"> </span>640x1136<span class="w">        </span><span class="c1"># C01 a C03 (C04: 1080x2400)</span>
+adb<span class="w"> </span>shell<span class="w"> </span>wm<span class="w"> </span>density<span class="w"> </span><span class="m">320</span><span class="w">          </span><span class="c1"># C01 a C03 (C04: 420)</span>
+adb<span class="w"> </span>shell<span class="w"> </span>settings<span class="w"> </span>put<span class="w"> </span>system<span class="w"> </span>font_scale<span class="w"> </span><span class="m">2</span>.0<span class="w">                </span><span class="c1"># só em C03</span>
+adb<span class="w"> </span>shell<span class="w"> </span>settings<span class="w"> </span>put<span class="w"> </span>system<span class="w"> </span>accelerometer_rotation<span class="w"> </span><span class="m">0</span><span class="w">     </span><span class="c1"># só em C02</span>
+adb<span class="w"> </span>shell<span class="w"> </span>settings<span class="w"> </span>put<span class="w"> </span>system<span class="w"> </span>user_rotation<span class="w"> </span><span class="m">1</span><span class="w">              </span><span class="c1"># só em C02 (paisagem)</span>
+</code></pre></div></li>
+<li>Abrir a tela do caso, rolar e tocar nos controles principais; em <code>T03</code>, mover e ampliar o mapa.</li>
+<li>Ao terminar a bateria, restaurar o aparelho: <code>adb shell wm size reset</code>, <code>adb shell wm density reset</code>, <code>font_scale 1.0</code> e <code>user_rotation 0</code>.</li>
+</ol>
+</li>
+<li><strong>Conforme se:</strong> informações e controles necessários estão visíveis e utilizáveis, sem corte ou sobreposição que impeçam a tarefa.</li>
+<li><strong>Evidência:</strong> captura de tela de cada caso.</li>
+</ul>
+<h4 id="m12-adaptabilidade-de-so-lab">M1.2 — Adaptabilidade de SO (Lab)</h4>
+<ul>
+<li><strong>Amostra:</strong> Android 9, Android 13 e a versão do aparelho físico (até 3 versões distintas; se o aparelho tiver uma dessas versões, são 2).</li>
+<li><strong>Passos:</strong> em cada versão, instalar o app pela distribuição oficial e executar TE01 a TE08.</li>
+<li><strong>Conforme se:</strong> todas as tarefas terminam sem erro de compatibilidade impeditivo.</li>
+<li><strong>Não observável:</strong> versão sem ambiente preparado ou distribuição indisponível por motivo externo. Instalação recusada por incompatibilidade comprovada é <strong>Defeito</strong>.</li>
+<li><strong>Evidência:</strong> gravação de tela da execução em cada versão e log do erro, quando houver.</li>
+</ul>
+<h4 id="m21-sucesso-de-instalacao-lab-aparelho-fisico">M2.1 — Sucesso de instalação (Lab, aparelho físico)</h4>
+<ul>
+<li><strong>Amostra:</strong> 10 ciclos de instalação limpa.</li>
+<li><strong>Passos:</strong> com o app ausente, instalar pela Play Store e observar a primeira tentativa.</li>
+<li><strong>Conforme se:</strong> a instalação conclui na primeira tentativa sem erro. Abrir o app não é exigido, e tentativas posteriores não mudam um Defeito.</li>
+<li><strong>Evidência:</strong> captura da página da loja ao final de cada ciclo ("Instalado" ou mensagem de erro).</li>
+</ul>
+<h4 id="m22-residuo-pos-desinstalacao-lab">M2.2 — Resíduo pós-desinstalação (Lab)</h4>
+<ul>
+<li><strong>Amostra:</strong> 10 ciclos de instalação, uso e remoção (os mesmos de M2.1).</li>
+<li><strong>Passos:</strong><ol>
+<li>Antes de instalar, listar os locais inspecionados e salvar a saída:
+    <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>d<span class="w"> </span><span class="k">in</span><span class="w"> </span>Android/data<span class="w"> </span>Android/obb<span class="w"> </span>Android/media<span class="w"> </span>Download<span class="w"> </span>Documents<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"== /sdcard/</span><span class="nv">$d</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span>adb<span class="w"> </span>shell<span class="w"> </span>ls<span class="w"> </span>-laR<span class="w"> </span><span class="s2">"/sdcard/</span><span class="nv">$d</span><span class="s2">"</span>
+<span class="k">done</span><span class="w"> </span>&gt;<span class="w"> </span>M2.2_CICLO01_DISP01_antes.txt
+</code></pre></div></li>
+<li>Instalar e usar busca, horários, mapa e favoritos.</li>
+<li>Desinstalar pelo método padrão do sistema e repetir o mesmo comando, salvando em <code>..._depois.txt</code>.</li>
+<li>Comparar os dois arquivos com <code>diff</code>.</li>
+</ol>
+</li>
+<li><strong>Locais inspecionados</strong> (quando acessíveis): <code>Android/data/&lt;pacote&gt;</code>, <code>Android/obb/&lt;pacote&gt;</code>, <code>Android/media</code>, <code>Download</code>, <code>Documents</code> e pastas com o nome do app[4].</li>
+<li><strong>Defeito se:</strong> restar arquivo ou pasta que se possa atribuir ao app, por nome, conteúdo ou vínculo com o pacote. Arquivos criados pelo avaliador não contam.</li>
+<li><strong>Não observável:</strong> local obrigatório inacessível no ciclo.</li>
+<li><strong>Limite:</strong> o resultado vale só para os locais observáveis. Não se inspeciona o armazenamento privado do app.</li>
+<li><strong>Evidência:</strong> as duas listagens de cada ciclo.</li>
+</ul>
+<h3 id="confiabilidade">Confiabilidade</h3>
+<p>Definições: <strong>crash</strong> é encerramento inesperado do app. <strong>Congelamento</strong> é ausência de resposta da interface a uma ação por mais de 5 s, medida em gravação com marcação de tempo. Carregamento com interface responsiva não conta.</p>
+<h4 id="m31-e-m32-sessoes-sem-crashes-e-sem-congelamentos-lab">M3.1 e M3.2 — Sessões sem crashes e sem congelamentos (Lab)</h4>
+<ul>
+<li><strong>Amostra:</strong> 20 sessões de 2 min 30 s (50 min no total). As duas métricas usam as mesmas sessões, e cada sessão afetada conta uma vez por métrica.</li>
+<li><strong>Passos:</strong> cada sessão dedica 30 s a cada atividade, nesta ordem: busca de linha, horários, itinerário no mapa, parada e veículo, favoritos. Não induzir queda de rede nem de localização. Gravar a tela com "Mostrar toques" ativado e, quando possível, registrar o log:
+    <div class="highlight"><pre><span></span><code>adb<span class="w"> </span>logcat<span class="w"> </span>-v<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"FATAL EXCEPTION|AndroidRuntime"</span>
+</code></pre></div></li>
+<li><strong>Conforme (M3.1) se:</strong> não houve encerramento inesperado.</li>
+<li><strong>Conforme (M3.2) se:</strong> não houve congelamento maior que 5 s.</li>
+<li><strong>Se houver crash:</strong> a sessão conta como afetada e uma nova sessão, com novo ID, continua a bateria.</li>
+<li><strong>Evidência:</strong> gravação de todas as sessões e trecho do log nas sessões com crash.</li>
+</ul>
+<h4 id="m41-falha-de-rede-lab-aparelho-fisico">M4.1 — Falha de rede (Lab, aparelho físico)</h4>
+<ul>
+<li><strong>Amostra:</strong> 10 ensaios, uma interrupção por ensaio.</li>
+<li><strong>Passos:</strong><ol>
+<li>Com o app aberto e funcionando, desligar os <strong>dados móveis e o Wi-Fi</strong> nas configurações do aparelho. Nenhuma conexão pode permanecer ativa: se só uma for desligada, o app continua online e o ensaio não vale.</li>
+<li>Fazer uma consulta que dependa de dados.</li>
+<li>Religar a conexão e repetir a consulta.</li>
+</ol>
+</li>
+<li><strong>Conforme se:</strong> o app continua aberto e responsivo, informa a indisponibilidade em até <strong>5 s</strong> (da consulta até o aviso) e retoma a consulta em até <strong>30 s</strong> (da reativação até a consulta concluir).</li>
+<li><strong>Não observável:</strong> rede indisponível antes do ensaio.</li>
+<li><strong>Evidência:</strong> gravação de tela de cada ensaio, com os instantes visíveis.</li>
+</ul>
+<h4 id="m42-perda-de-localizacao-lab-aparelho-fisico">M4.2 — Perda de localização (Lab, aparelho físico)</h4>
+<ul>
+<li><strong>Amostra:</strong> 10 ensaios, uma desativação por ensaio.</li>
+<li><strong>Passos:</strong> mesma lógica de M4.1, desligando o <strong>serviço de localização</strong> nas configurações do aparelho por <strong>30 s</strong>.</li>
+<li><strong>Conforme se:</strong> os três critérios abaixo se verificam no mesmo ensaio:<ol>
+<li>o app continua aberto e responsivo e informa a indisponibilidade em até <strong>5 s</strong>;</li>
+<li>continuam disponíveis as funções que não dependem da posição do usuário — no ensaio, verificar <code>TE01</code> (buscar <code>L01</code> pelo código) e <code>TE04</code> (consultar <code>P01</code>). Funções que dependem da posição (paradas próximas, centralizar o mapa no usuário) podem deixar de funcionar sem que isso seja defeito;</li>
+<li>depois de religar a localização, a posição do usuário volta ao mapa em até <strong>30 s</strong>.</li>
+</ol>
+</li>
+<li><strong>Evidência:</strong> gravação de tela de cada ensaio.</li>
+</ul>
+<h3 id="adequacao-funcional">Adequação funcional</h3>
+<h4 id="m51-precisao-do-tempo-de-chegada-campo">M5.1 — Precisão do tempo de chegada (Campo)</h4>
+<ul>
+<li><strong>Amostra:</strong> 10 eventos de chegada, em dois blocos de 5, com 2 linhas. Em cada janela de observação, usar os primeiros eventos elegíveis, sem escolher pelo erro.</li>
+<li><strong>Passos:</strong><ol>
+<li>No início da observação de cada evento, capturar a <strong>primeira previsão</strong> de chegada à parada e o horário.</li>
+<li>Registrar a chegada quando a frente do veículo alcançar o ponto de referência da parada.</li>
+<li>Parear por linha, sentido, parada e veículo ou viagem identificável.</li>
+</ol>
+</li>
+<li><strong>Tempo:</strong> relógios sincronizados, data completa e fuso <code>America/Sao_Paulo</code>. Se o app mostra tempo restante, somar ao instante da captura.</li>
+<li><strong>Cálculo:</strong> erro absoluto de cada par, em minutos, e mediana dos pares válidos (Fase 2). Com número par de pares, a mediana é a média dos dois valores centrais. Informar também o menor e o maior erro.</li>
+<li><strong>Sem erro zero:</strong> previsão ausente, identificação insuficiente e chegada não observada são registradas à parte e não entram como erro zero.</li>
+<li><strong>Evidência:</strong> captura da previsão com o horário e foto da chegada, sem enquadrar rostos.</li>
+</ul>
+<h4 id="m52-posicoes-no-mapa-campo">M5.2 — Posições no mapa (Campo)</h4>
+<ul>
+<li><strong>Amostra:</strong> 5 paradas distintas. A métrica é apurada apenas com paradas (ver a limitação abaixo).</li>
+<li><strong>Parâmetros:</strong> tolerância ε = <strong>30 m</strong>.</li>
+<li><strong>Referência:</strong> a posição do próprio avaliador, obtida pelo receptor do celular e conferida no <strong>GPSTest</strong>[5] (WGS84, horário UTC), com precisão horizontal informada de até 10 m[6]. Ela é independente dos dados do DF no Ponto.</li>
+<li><strong>Passos:</strong><ol>
+<li>Posicionar-se no ponto físico da parada e conferir no GPSTest a precisão informada, que deve ser de até 10 m.</li>
+<li>Abrir o mapa do app no maior zoom em que apareçam, na mesma tela, o marcador da parada e o indicador da posição do usuário, e capturar a tela.</li>
+<li>Obter a distância <span class="arithmatex">\(d_i\)</span> por um dos modos previstos na <a href="../../fase2/metricas-julgamento/#verificacao-espacial-m52">Verificação Espacial</a> da Fase 2 e anotar qual foi usado: <strong>medição direta</strong> na captura, convertendo pela escala do mapa, ou <strong>cálculo por coordenadas</strong>, quando houver latitude e longitude das duas posições.</li>
+</ol>
+</li>
+<li><strong>Conforme se:</strong> <span class="arithmatex">\(d_i \le\)</span> ε.</li>
+<li><strong>Por que só paradas:</strong> o aplicativo atualiza a posição dos veículos em intervalos da ordem de um minuto e informa essa idade no detalhe da viagem, no campo <em>Last update</em>. Um ônibus em operação percorre centenas de metros nesse intervalo, e permanece parado na parada por 20 a 30 segundos, bem menos que o período de atualização. Comparar a posição exibida com a posição de referência mediria o deslocamento do veículo durante a defasagem, não o erro do aplicativo, e nenhuma tolerância de 30 m resistiria a isso. Paradas são entidades fixas e não têm esse problema, por isso a métrica é apurada só com elas.</li>
+<li><strong>Apuração:</strong> somente paradas.</li>
+<li><strong>Evidência:</strong> captura do mapa e registro do GPSTest de cada caso.</li>
+</ul>
+<h4 id="m61-cobertura-de-tarefas-essenciais-lab">M6.1 — Cobertura de tarefas essenciais (Lab)</h4>
+<ul>
+<li><strong>Amostra:</strong> as 8 tarefas TE01 a TE08, uma vez cada, no aparelho principal, com rede e localização ativas.</li>
+<li><strong>Conforme se:</strong> a tarefa atinge o resultado esperado da seção 3.2.</li>
+<li><strong>Evidência:</strong> captura de tela do resultado de cada tarefa.</li>
+</ul>
+<h4 id="m62-completude-do-banco-lab">M6.2 — Completude do banco (Lab)</h4>
+<ul>
+<li><strong>Amostra:</strong> <strong>20 linhas</strong> do Relatório de Linhas da Semob-DF, 4 por bacia (01 a 05), sorteadas aleatoriamente. O sorteio usa só linhas com viagens em dia útil. Um código que aparece em mais de uma bacia entra uma vez só; se for sorteado de novo, sorteia-se outro. Método para realizar o sorteio fica registrado e os PDFs de origem ficam arquivados. Os itens são <code>A01</code> a <code>A20</code>.</li>
+<li><strong>Passos:</strong> buscar o código no app e conferir se a linha existe e se a denominação (origem/destino) bate com o relatório.</li>
+<li><strong>Conforme se:</strong> o código existe no app com a mesma denominação. Se o relatório mostra viagens de ida e de volta, o app deve mostrar os dois sentidos.</li>
+<li><strong>Limite:</strong> o resultado vale só para a amostra e a data. Não estima a cobertura de toda a malha.</li>
+<li><strong>Evidência:</strong> captura de tela do resultado da busca de cada item.</li>
+</ul>
+<h2 id="5-amostras-e-limitacao">5. Amostras e limitação</h2>
+<p>A Tabela 6 relaciona cada amostra às faixas de nota da Fase 2, aplicadas sem arredondamento, supondo todos os casos válidos.</p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Amostra</th>
+<th>Notas possíveis (total de casos conformes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1.1</td>
+<td>20 casos</td>
+<td>4: 20; 3: 18–19; 2: 15–17; 1: 0–14</td>
+</tr>
+<tr>
+<td>M1.2</td>
+<td>3 versões</td>
+<td>4: 3; 1: 0–2 (sem notas 2 e 3)</td>
+</tr>
+<tr>
+<td>M2.1 / M2.2</td>
+<td>10 ciclos</td>
+<td>4: 10; 2: 9; 1: 0–8 (sem nota 3)</td>
+</tr>
+<tr>
+<td>M3.1 / M3.2</td>
+<td>20 sessões</td>
+<td>4: 20; 3: 19; 2: 18; 1: 0–17</td>
+</tr>
+<tr>
+<td>M4.1 / M4.2</td>
+<td>10 ensaios</td>
+<td>4: 10; 3: 9; 2: 7–8; 1: 0–6</td>
+</tr>
+<tr>
+<td>M5.1</td>
+<td>10 eventos</td>
+<td>Mediana dos erros, em minutos</td>
+</tr>
+<tr>
+<td>M5.2</td>
+<td>5 paradas</td>
+<td>4: 5; 2: 4; 1: 0–3 (sem nota 3)</td>
+</tr>
+<tr>
+<td>M6.1</td>
+<td>8 tarefas</td>
+<td>4: 8; 2: 7; 1: 0–6 (sem nota 3)</td>
+</tr>
+<tr>
+<td>M6.2</td>
+<td>20 itens</td>
+<td>4: 20; 3: 19; 2: 16–18; 1: 0–15</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 6. Amostras planejadas e notas possíveis por métrica. Fonte: elaboração própria (2026).</p>
+
+<p>A duração da sessão de M3.1 e M3.2 foi reduzida de 5 min para 2 min 30 s para caber na janela de coleta. A unidade da métrica continua sendo a sessão, mas o tempo total de exposição cai de 100 min para 50 min: falhas raras têm menos oportunidade de aparecer, o que tende a favorecer o resultado. Esse limite deve ser declarado junto da nota na Fase 4.</p>
+<p>Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, pode mudar o veredito do objetivo. Por isso:</p>
+<ul>
+<li>Os resultados são <strong>indicativos</strong> e valem só para a amostra, a versão do app e o período observados. Não se generaliza para o app inteiro.</li>
+<li>Na Fase 4, apresentar sempre as contagens (por exemplo, "9 de 10") junto da nota.</li>
+<li>Em M1.2, as 3 versões cobrem os extremos (Android 9 e 13) e o aparelho físico, e não a faixa intermediária; qualquer versão reprovada leva à nota 1.</li>
+</ul>
+<h2 id="6-registro-e-evidencias">6. Registro e evidências</h2>
+<p><strong>Planilha única de coleta</strong>, com uma linha por caso executado e os campos da Tabela 7:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID</code></td>
+<td>Identificador da execução</td>
+</tr>
+<tr>
+<td><code>Métrica</code> e <code>Caso</code></td>
+<td>Por exemplo <code>M1.1</code> e <code>T03-C02</code></td>
+</tr>
+<tr>
+<td><code>Avaliador</code> e <code>Data/hora</code></td>
+<td>Quem executou e quando</td>
+</tr>
+<tr>
+<td><code>Ambiente</code></td>
+<td>Dispositivo, versão do Android e versão do app</td>
+</tr>
+<tr>
+<td><code>Estado</code></td>
+<td>Conforme, Defeito, Não observável ou Pendente</td>
+</tr>
+<tr>
+<td><code>Valor medido</code></td>
+<td>Segundos, metros, minutos ou sim/não</td>
+</tr>
+<tr>
+<td><code>Evidência</code></td>
+<td>Nome do arquivo ou link</td>
+</tr>
+<tr>
+<td><code>Observações</code></td>
+<td>Desvios e anomalias</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 7. Campos da planilha de coleta. Fonte: elaboração própria (2026).</p>
+
+<ul>
+<li><strong>Evidência de todos os casos:</strong> cada linha da planilha aponta para a evidência indicada na ficha da métrica, também nos casos Conforme, para que qualquer resultado possa ser conferido.</li>
+<li><strong>Nome do arquivo:</strong> <code>&lt;métrica&gt;_&lt;caso&gt;_&lt;dispositivo&gt;.&lt;ext&gt;</code>, por exemplo <code>M1.1_T03-C02_DISP01.png</code>.</li>
+<li><strong>Onde ficam:</strong> a planilha, as capturas, as listagens e os logs ficam no repositório, em <code>docs/fase4/imagens/</code>. As gravações de vídeo ficam em pasta compartilhada da equipe, indicada em <a href="../3-recursos/">Recursos</a>, com o link anotado no campo <code>Evidência</code>.</li>
+<li><strong>Anomalias:</strong> falhas do app são registradas na linha do caso, com sintoma, passos para reproduzir e evidência.</li>
+</ul>
+<h2 id="7-pendencias-antes-da-coleta">7. Pendências antes da coleta</h2>
+<p>Os itens da Tabela 8 precisam estar preenchidos e versionados antes do primeiro caso oficial.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Itens <code>L01</code>, <code>L02</code>, <code>P01</code> e lista <code>A01</code>–<code>A20</code> (código, sentido, variante, data da consulta)</td>
+<td><code>L01</code> e <code>P01</code> selecionados em 18/11/2026; falta o registro oficial de ambos, além de <code>L02</code> e da lista <code>A01</code>–<code>A20</code></td>
+</tr>
+<tr>
+<td>Paradas, dias, janelas e responsáveis do campo (M5.1 e M5.2)</td>
+<td>Pendente</td>
+</tr>
+<tr>
+<td>Identificador do pacote do app, para a inspeção de M2.2</td>
+<td>Resolvido: <code>br.bus2.dfnoponto</code></td>
+</tr>
+<tr>
+<td>Versões do Android de M1.2, conforme <a href="../3-recursos/">Recursos</a></td>
+<td>Em aberto: os dois aparelhos estão no Android 13 e os emuladores disponíveis recusam a instalação do app; definir a amostra efetiva antes de coletar</td>
+</tr>
+<tr>
+<td>Modo de obter a distância em M5.2: confirmar se o mapa do app exibe a posição do usuário e como converter a medida da captura em metros (barra de escala do mapa, distância conhecida entre dois pontos no mesmo zoom ou coordenadas obtidas pela função de compartilhar)</td>
+<td>Pendente, bloqueia a saída de campo</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 8. Pendências a resolver antes da coleta. Fonte: elaboração própria (2026).</p>
+
+<h2 id="referencias">Referências</h2>
+<p>[1] ISO. <em>ISO/IEC 25040:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process</em>.</p>
+<p>[2] BRASIL. <em>Lei nº 13.709, de 14 de agosto de 2018</em>. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.</p>
+<p>[3] Semob-DF. <a href="https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df">Relatório de Linhas — DF no Ponto</a>. Acesso em: 17 nov. 2026.</p>
+<p>[4] Android Developers. <a href="https://developer.android.com/training/data-storage">Armazenamento de dados e arquivos</a>.</p>
+<p>[5] GPSTest. <a href="https://github.com/barbeau/gpstest/blob/v3.10.6/LOGGING-v3.md">Registros de localização — documentação da versão 3.10.6</a>.</p>
+<p>[6] Android Developers. <a href="https://developer.android.com/reference/android/location/Location#getAccuracy()">Location: precisão horizontal estimada</a>.</p>
+<p>[7] Equipe Carol Shaw. <a href="../../fase2/metricas-julgamento/">Métricas e Critérios de Julgamento — Fase 2</a>.</p>
+<hr />
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Revisor</th>
+<th style="text-align: center;">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">01</td>
+<td style="text-align: left;">Definição dos catálogos, parâmetros de laboratório, proposta de amostragem de campo e auditoria oficial</td>
+<td style="text-align: left;"><a href="https://github.com/rodrigogontijoo">Rodrigo Gontijo</a></td>
+<td style="text-align: center;">15/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/bessazs">Bessa</a></td>
+<td style="text-align: center;">18/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">02</td>
+<td style="text-align: left;">Redução dos ciclos de instalação e remoção para dez e ajuste da resolução da amostra</td>
+<td style="text-align: left;"><a href="https://github.com/rodrigogontijoo">Rodrigo Gontijo</a></td>
+<td style="text-align: center;">16/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/bessazs">Bessa</a></td>
+<td style="text-align: center;">18/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">03</td>
+<td style="text-align: left;">Criação dos procedimentos detalhados de execução, roteiros das 12 métricas, convenção de evidências, regras de anomalias e formulários de coleta (#46); integração com os catálogos e parâmetros das versões anteriores</td>
+<td style="text-align: left;"><a href="https://github.com/jonas3688">João Pedro Capozzi</a></td>
+<td style="text-align: center;">16/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/bessazs">Bessa</a></td>
+<td style="text-align: center;">18/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">04</td>
+<td style="text-align: left;">Roteiros das seções 13 a 16 alinhados aos parâmetros das seções 3 a 7 (telas, versões, sessões, prazos, tolerância espacial, tarefas e amostra oficial), evidências versionadas em <code>dados/fase4/</code> e formulário com os 15 campos</td>
+<td style="text-align: left;"><a href="https://github.com/bessazs">Bessa</a></td>
+<td style="text-align: center;">16/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">20/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">05</td>
+<td style="text-align: left;">Reestruturação em fichas por métrica, com parâmetros em fonte única, amostras revistas (3 versões do Android, 10 ciclos, 20 sessões, 10 ensaios, 10 chegadas, 5 paradas, 20 itens), evidência de todos os casos e pendências em tabela</td>
+<td style="text-align: left;"><a href="https://github.com/bessazs">Bessa</a></td>
+<td style="text-align: center;">16/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">20/11/2026</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../1-metodo/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Método de Avaliação">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Método de Avaliação
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../3-recursos/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Recursos">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Recursos
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Carol Shaw - Qualidade de Software (2026.2) | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank">Repositório</a> | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v1.0-E1" target="_blank">Release E1</a> | v1.0 - E1 | Atualizado em 16/11/2026
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank" rel="noopener" title="Repositório da equipe Carol Shaw" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

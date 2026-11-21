@@ -8,6 +8,199 @@ Reunir os registros da execução dos procedimentos definidos na Fase 3 para as 
 
 Os dados são organizados por métrica, seguindo os procedimentos e os recursos previstos na [Fase 3](../fase3/introducao.md). Cada registro identifica os casos avaliados e apresenta seus resultados e evidências.
 
+### M1.1 — Adaptabilidade de hardware
+
+#### Questão e critério de avaliação
+
+A métrica avalia se as telas essenciais do aplicativo se adaptam a diferentes resoluções, densidades, orientações e escalas de fonte. Cada caso combina uma tela (`T01` a `T05`) com uma configuração (`C01` a `C04`), totalizando 5 × 4 = 20 casos.
+
+Conforme se as informações e os controles necessários estão visíveis e utilizáveis, sem corte ou sobreposição que impeçam a tarefa. Pela amostra de 20 casos, a métrica produz a nota 4 com 20 casos conformes, a nota 3 com 18 ou 19, a nota 2 com 15 a 17 e a nota 1 com 14 ou menos.
+
+| Tela | Conteúdo |
+|---|---|
+| `T01` | Resultado da busca por `L01` |
+| `T02` | Horários de `L01` |
+| `T03` | Mapa do itinerário de `L01` |
+| `T04` | Detalhes de `P01` |
+| `T05` | Favoritos com `L01` e `P01` |
+
+| Config. | Resolução e densidade | Orientação | Fonte |
+|---|---|---|---|
+| `C01` | 640 × 1136 px, 320 dpi | Retrato | 100% |
+| `C02` | 640 × 1136 px, 320 dpi | Paisagem | 100% |
+| `C03` | 640 × 1136 px, 320 dpi | Retrato | 200% |
+| `C04` | 1080 × 2400 px, 420 dpi | Retrato | 100% |
+
+#### Procedimento de coleta
+
+Foram avaliados 20 casos tela × configuração no aparelho `DISP-02`, com a configuração de cada caso aplicada por `adb` (resolução, densidade, escala de fonte e orientação). Em cada caso, a tela foi aberta, rolada e os controles principais foram acionados; em `T03`, o mapa foi movido e ampliado. Cada caso tem como evidência uma captura de tela. Ao final da bateria, o aparelho foi restaurado às configurações originais.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M1.1-01 | T01-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C01_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-02 | T01-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C02_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-03 | T01-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C03_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-04 | T01-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C04_DISP-02.png) | Busca por `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-05 | T02-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C01_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-06 | T02-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C02_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-07 | T02-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C03_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-08 | T02-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C04_DISP-02.png) | Horários de `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-09 | T03-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C01_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-10 | T03-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C02_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-11 | T03-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C03_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-12 | T03-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C04_DISP-02.png) | Mapa do itinerário de `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-13 | T04-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C01_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-14 | T04-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C02_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-15 | T04-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C03_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-16 | T04-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C04_DISP-02.png) | Detalhes de `P01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-17 | T05-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C01_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-18 | T05-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C02_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-19 | T05-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C03_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-20 | T05-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C04_DISP-02.png) | Favoritos com `L01` e `P01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+
+<p class="legenda">Tabela 5. Registro da coleta da M1.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{1.1} = \frac{C_c}{C_t} = \frac{C_c}{20}
+$$
+
+Em que $C_c$ corresponde aos casos tela × configuração sem corte, sobreposição ou bloqueio de interação, e $C_t = 20$ é o total de casos avaliados.
+
+### M1.2 — Adaptabilidade de Sistema Operacional
+
+#### Questão e critério de avaliação
+
+A métrica avalia se o aplicativo funciona sem erro de compatibilidade impeditivo em diferentes versões do Android. Em cada versão, o app é instalado pela distribuição oficial e as tarefas essenciais `TE01` a `TE08` são executadas.
+
+Conforme se todas as tarefas terminam sem erro de compatibilidade impeditivo. É **Não observável** a versão sem ambiente preparado ou com distribuição indisponível por motivo externo; instalação recusada por incompatibilidade comprovada é **Defeito**. Pela amostra planejada de 3 versões (Android 9, Android 13 e a versão do aparelho físico), a métrica produz a nota 4 com 3 versões conformes e a nota 1 com 2 ou menos, sem notas 2 e 3.
+
+| Tarefa | Descrição | Resultado esperado |
+|---|---|---|
+| `TE01` | Buscar `L01` pelo código | Linha encontrada, com identificação e sentido corretos |
+| `TE02` | Consultar horários de `L01` no dia de referência | Grade da linha, sentido e dia corretos |
+| `TE03` | Abrir o itinerário de `L01` | Traçado e paradas do sentido selecionado |
+| `TE04` | Consultar `P01` | Identificação da parada e linhas que a atendem |
+| `TE05` | Acompanhar um veículo de `L02` em operação | Veículo identificável e posição no mapa |
+| `TE06` | Salvar `L01` nos favoritos e reabrir a lista | `L01` presente na lista |
+| `TE07` | Salvar `P01` nos favoritos e reabrir a lista | `P01` presente na lista |
+| `TE08` | Remover `L01` dos favoritos e reabrir a lista | `L01` ausente, outros favoritos mantidos |
+
+#### Procedimento de coleta
+
+Em cada versão do Android avaliada, o aplicativo foi instalado pela distribuição oficial e as tarefas `TE01` a `TE08` foram executadas em sequência, com gravação de tela e "Mostrar toques" ativado. Cada versão corresponde a um caso e tem como evidência a gravação da execução.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M1.2-01 | Android 13 (API 33) | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2_SESSAO01_DISP-02.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M2_SESSAO01_DISP-02.mp4) | Execução de `TE01` a `TE08` na versão do aparelho físico |
+
+<p class="legenda">Tabela 6. Registro da coleta da M1.2. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{1.2} = \frac{V_c}{V_t} = \frac{V_c}{V_t}
+$$
+
+Em que $V_c$ corresponde às versões do Android em que as tarefas `TE01` a `TE08` terminaram sem erro de compatibilidade impeditivo, e $V_t$ é o total de versões testadas.
+
+### M2.1 — Sucesso de Instalação
+
+#### Questão e critério de avaliação
+
+A métrica avalia se o aplicativo é instalado com sucesso a partir da loja oficial, na primeira tentativa, em ciclos de instalação limpa realizados em aparelho físico.
+
+Conforme se a instalação conclui na primeira tentativa, sem erro. Abrir o app não é exigido, e tentativas posteriores não mudam um Defeito. Pela amostra de 10 ciclos, a métrica produz a nota 4 com 10 ciclos conformes, a nota 2 com 9 e a nota 1 com 8 ou menos, sem nota 3.
+
+#### Procedimento de coleta
+
+Foram realizados 10 ciclos de instalação limpa no aparelho `DISP-02`. Em cada ciclo, com o app ausente, ele foi instalado pela Google Play Store e a primeira tentativa foi observada. A evidência de cada ciclo é a captura da página da loja ao final da instalação ("Instalado" ou mensagem de erro).
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M2.1-01 | CICLO01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO01_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-02 | CICLO02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO02_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-03 | CICLO03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO03_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-04 | CICLO04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO04_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-05 | CICLO05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO05_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO05_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-06 | CICLO06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO06_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO06_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-07 | CICLO07 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO07_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO07_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-08 | CICLO08 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO08_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO08_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-09 | CICLO09 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO09_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO09_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-10 | CICLO10 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO10_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO10_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+
+<p class="legenda">Tabela 7. Registro da coleta da M2.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{2.1} = \frac{I_c}{I_t} = \frac{I_c}{10}
+$$
+
+Em que $I_c$ corresponde às instalações concluídas na primeira tentativa, sem erro, e $I_t = 10$ é o total de ciclos executados.
+
+### M2.2 — Resíduo pós-desinstalação
+
+#### Questão e critério de avaliação
+
+A métrica avalia se a desinstalação do aplicativo remove os arquivos e pastas atribuíveis a ele nos locais acessíveis do armazenamento. Os locais inspecionados são `Android/data/<pacote>`, `Android/obb/<pacote>`, `Android/media`, `Download`, `Documents` e pastas com o nome do app.
+
+Há **Defeito** se restar arquivo ou pasta que se possa atribuir ao app, por nome, conteúdo ou vínculo com o pacote; arquivos criados pelo avaliador não contam. O ciclo é **Não observável** se um local obrigatório estiver inacessível. O resultado vale só para os locais observáveis, pois o armazenamento privado do app não é inspecionado. Pela amostra de 10 ciclos, a métrica produz a nota 4 com 10 ciclos conformes, a nota 2 com 9 e a nota 1 com 8 ou menos, sem nota 3.
+
+#### Procedimento de coleta
+
+Foram realizados 10 ciclos de instalação, uso e remoção no aparelho `DISP-02`, os mesmos da M2.1. Em cada ciclo, os locais inspecionados foram listados por `adb` antes da instalação. Depois, o app foi instalado e usado (busca, horários, mapa e favoritos) e desinstalado pelo método padrão do sistema, repetindo-se a listagem. As duas listagens foram comparadas com `diff`. A evidência de cada ciclo são as listagens `antes` e `depois` e o resultado do `diff`.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M2.2-01 | CICLO01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-02 | CICLO02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-03 | CICLO03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-04 | CICLO04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-05 | CICLO05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-06 | CICLO06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
+| M2.2-07 |
+
+### M3.1 e M3.2 — Sessões sem crashes e sem congelamentos
+
+#### Questão e critério de avaliação
+
+As duas métricas usam as mesmas 20 sessões, e cada sessão afetada conta uma vez por métrica. A **M3.1** avalia se a sessão ocorre sem *crash*, isto é, sem encerramento inesperado do app. A **M3.2** avalia se a sessão ocorre sem congelamento, isto é, sem ausência de resposta da interface a uma ação por mais de 5 s, medida em gravação com marcação de tempo. Carregamento com interface responsiva não conta como congelamento.
+
+Pela amostra de 20 sessões, cada métrica produz a nota 4 com 20 sessões conformes, a nota 3 com 19, a nota 2 com 18 e a nota 1 com 17 ou menos. Se houver *crash*, a sessão conta como afetada e uma nova sessão, com novo ID, continua a bateria.
+
+#### Procedimento de coleta
+
+Foram realizadas 20 sessões de 2 min 30 s (50 min no total) no aparelho `DISP-02`, sem indução de queda de rede nem de localização. Cada sessão dedicou 30 s a cada atividade, nesta ordem: busca de linha, horários, itinerário no mapa, parada e veículo, favoritos. A tela foi gravada com "Mostrar toques" ativado e o log foi registrado com `adb logcat`, filtrando `FATAL EXCEPTION` e `AndroidRuntime`. A duração da sessão foi reduzida de 5 min para 2 min 30 s para caber na janela de coleta, o que diminui o tempo de exposição e pode favorecer o resultado; os valores são indicativos para a janela observada.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado M3.1 (crash) | Estado M3.2 (congelamento) | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|---|
+| M3-01 | SESSAO01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO01_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO01_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-02 | SESSAO02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO02_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO02_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-03 | SESSAO03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO03_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO03_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-04 | SESSAO04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO04_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO04_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-05 | SESSAO05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO05_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO05_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-06 | SESSAO06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO06_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO06_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-07 | SESSAO07 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO07_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO07_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-08 | SESSAO08 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO08_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO08_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-09 | SESSAO09 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO09_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO09_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-10 | SESSAO10 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO10_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO10_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-11 | SESSAO11 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO11_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO11_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-12 | SESSAO12 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO12_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO12_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-13 | SESSAO13 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO13_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO13_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-14 | SESSAO14 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO14_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO14_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-15 | SESSAO15 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO15_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO15_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-16 | SESSAO16 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO16_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO16_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-17 | SESSAO17 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO17_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO17_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-18 | SESSAO18 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO18_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO18_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-19 | SESSAO19 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO19_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO19_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-20 | SESSAO20 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO20_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO20_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+
+<p class="legenda">Tabela 9. Registro da coleta da M3.1 e da M3.2. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{3.1} = \frac{S_{sc}}{S_t} = \frac{S_{sc}}{20}
+\qquad
+M_{3.2} = \frac{S_{sf}}{S_t} = \frac{S_{sf}}{20}
+$$
+
+Em que $S_{sc}$ corresponde às sessões concluídas sem *crash*, $S_{sf}$ às sessões sem congelamento superior a 5 s, e $S_t = 20$ é o total de sessões executadas.
+
 ### M4.1 — Perda de Conexão
 
 #### Questão e critério de avaliação
@@ -74,6 +267,39 @@ $$
 
 Em que $G_c = 10$ corresponde aos ensaios que atenderam aos critérios de aviso, continuidade das funções independentes da posição e retomada da localização, e $G_t = 10$ é o total de ensaios válidos.
 
+### M5.1 — Precisão do tempo de chegada
+
+#### Questão e critério de avaliação
+
+A métrica avalia a precisão da previsão de chegada exibida pelo aplicativo, comparando a primeira previsão de chegada de um veículo à parada com a chegada real observada em campo. O resultado é o erro absoluto mediano, em minutos, entre previsão e chegada.
+
+O erro de cada par é calculado em minutos, em valor absoluto. Com número par de pares válidos, a mediana é a média dos dois valores centrais. Também se informam o menor e o maior erro. Previsão ausente, identificação insuficiente e chegada não observada são registradas à parte e não entram como erro zero.
+
+#### Procedimento de coleta
+
+Foram observados 10 eventos de chegada, em dois blocos de 5, com as linhas `L01` e `L02`, no aparelho `DISP-01`. Em cada janela de observação, foram usados os primeiros eventos elegíveis, sem escolha pelo erro. No início da observação de cada evento, foram capturadas a primeira previsão de chegada à parada e o horário. A chegada foi registrada quando a frente do veículo alcançou o ponto de referência da parada, e o pareamento foi feito por linha, sentido, parada e veículo ou viagem identificável. Os relógios foram sincronizados, com data completa e fuso `America/Sao_Paulo`; quando o app mostrou tempo restante, ele foi somado ao instante da captura. A evidência de cada evento é a captura da previsão com o horário e a foto da chegada, sem enquadrar rostos.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M5.1-01 | E01 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-02 | E02 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-03 | E03 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-04 | E04 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-05 | E05 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-06 | E06 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-07 | E07 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-08 | E08 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-09 | E09 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-10 | E10 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+
+<p class="legenda">Tabela 10. Registro da coleta da M5.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{5.1} = \operatorname{mediana}\left(\left|t_{c,i} - t_{p,i}\right|\right), \quad i = 1, \dots, n
+$$
+
+Em que $t_{p,i}$ é o instante da primeira previsão de chegada do evento $i$, $t_{c,i}$ é o instante da chegada observada e $n$ é o número de pares válidos (no máximo 10).
+
 ### M5.2 — Posições no mapa
 
 #### Questão e critério de avaliação
@@ -103,6 +329,49 @@ M_{5.2} = \frac{P_s}{P_t} = \frac{5}{5} = 1{,}00 \ (100\%)
 $$
 
 Em que $P_s = 5$ corresponde às paradas cuja distância $d_i$ ficou dentro da tolerância e $P_t = 5$ é o total de paradas válidas.
+
+### M6.1 — Cobertura de Tarefas Essenciais
+
+#### Questão e critério de avaliação
+
+A métrica avalia se o aplicativo permite concluir as tarefas essenciais do catálogo (`TE01` a `TE08`), com rede e localização ativas. Conforme se a tarefa atinge o resultado esperado. Em `TE05`, se não for possível confirmar a operação de `L02`, o caso é **Não observável**.
+
+Pela amostra de 8 tarefas, a métrica produz a nota 4 com 8 tarefas conformes, a nota 2 com 7 e a nota 1 com 6 ou menos, sem nota 3.
+
+| Tarefa | Descrição | Resultado esperado |
+|---|---|---|
+| `TE01` | Buscar `L01` pelo código | Linha encontrada, com identificação e sentido corretos |
+| `TE02` | Consultar horários de `L01` no dia de referência | Grade da linha, sentido e dia corretos |
+| `TE03` | Abrir o itinerário de `L01` | Traçado e paradas do sentido selecionado |
+| `TE04` | Consultar `P01` | Identificação da parada e linhas que a atendem |
+| `TE05` | Acompanhar um veículo de `L02` em operação | Veículo identificável e posição no mapa |
+| `TE06` | Salvar `L01` nos favoritos e reabrir a lista | `L01` presente na lista |
+| `TE07` | Salvar `P01` nos favoritos e reabrir a lista | `P01` presente na lista |
+| `TE08` | Remover `L01` dos favoritos e reabrir a lista | `L01` ausente, outros favoritos mantidos |
+
+#### Procedimento de coleta
+
+As 8 tarefas `TE01` a `TE08` foram executadas uma vez cada, no aparelho `DISP-02`, com rede e localização ativas. Cada tarefa foi preparada de forma independente, e o resultado foi comparado com o resultado esperado do catálogo. A evidência de cada tarefa é a captura de tela do resultado.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M6.1-01 | TE01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE01_DISP-02.png) | Buscar `L01` pelo código |
+| M6.1-02 | TE02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE02_DISP-02.png) | Consultar horários de `L01` no dia de referência |
+| M6.1-03 | TE03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE03_DISP-02.png) | Abrir o itinerário de `L01` |
+| M6.1-04 | TE04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE04_DISP-02.png) | Consultar `P01` |
+| M6.1-05 | TE05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE05_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE05_DISP-02.png) | Acompanhar um veículo de `L02` em operação |
+| M6.1-06 | TE06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE06_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE06_DISP-02.png) | Salvar `L01` nos favoritos e reabrir a lista |
+| M6.1-07 | TE07 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE07_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE07_DISP-02.png) | Salvar `P01` nos favoritos e reabrir a lista |
+| M6.1-08 | TE08 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE08_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE08_DISP-02.png) | Remover `L01` dos favoritos e reabrir a lista |
+
+<p class="legenda">Tabela 11. Registro da coleta da M6.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{6.1} = \frac{T_c}{T_t} = \frac{T_c}{8}
+$$
+
+Em que $T_c$ corresponde às tarefas concluídas com o resultado esperado do catálogo, e $T_t = 8$ é o total de tarefas do catálogo.
+
 ### M6.2 — Completude do Banco
 
 #### Questão e critério de avaliação
@@ -150,8 +419,9 @@ Em que $L_c = 20$ corresponde aos itens da amostra encontrados no app com códig
 
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 1.0 | Inclusão da tabela de coleta, das evidências e do cálculo da métrica M6.2. | PedroRSR | 17/11/2026 | A definir | — |
-| 1.1 | Inclusão da seção de coleta da métrica M4.1, com registros dos ensaios, evidências e cálculo. | PedroRSR | 19/11/2026 | A definir | — |
-| 1.2 | Atualização dos registros de coleta das métricas M2.1, M2.2 e M6.1. | Bessazs | 19/11/2026 | A definir | — |
-| 1.3 | Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação. | PedroRSR | 19/11/2026 | A definir | — |
-| 1.4 | Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências. | PedroRSR | 20/11/2026 | A definir | — |
+| 1.0 | Inclusão da tabela de coleta, das evidências e do cálculo da métrica M6.2. | [Pedro Ramos](https://github.com/PedroRSR) | 17/11/2026 | A definir | — |
+| 1.1 | Inclusão da seção de coleta da métrica M4.1, com registros dos ensaios, evidências e cálculo. | [Pedro Ramos](https://github.com/PedroRSR) | 19/11/2026 | A definir | — |
+| 1.2 | Atualização dos registros de coleta das métricas M2.1, M2.2 e M6.1. | [Bessa](https://github.com/bessazs) | 19/11/2026 | A definir | — |
+| 1.3 | Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação. | [Pedro Ramos](https://github.com/PedroRSR) | 19/11/2026 | A definir | — |
+| 1.4 | Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências. | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |
+| 1.5 | Inclusão da seções M1.1 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |

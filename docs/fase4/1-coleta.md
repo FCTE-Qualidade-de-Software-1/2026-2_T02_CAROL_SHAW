@@ -267,6 +267,39 @@ $$
 
 Em que $G_c = 10$ corresponde aos ensaios que atenderam aos critérios de aviso, continuidade das funções independentes da posição e retomada da localização, e $G_t = 10$ é o total de ensaios válidos.
 
+### M5.1 — Precisão do tempo de chegada
+
+#### Questão e critério de avaliação
+
+A métrica avalia a precisão da previsão de chegada exibida pelo aplicativo, comparando a primeira previsão de chegada de um veículo à parada com a chegada real observada em campo. O resultado é o erro absoluto mediano, em minutos, entre previsão e chegada.
+
+O erro de cada par é calculado em minutos, em valor absoluto. Com número par de pares válidos, a mediana é a média dos dois valores centrais. Também se informam o menor e o maior erro. Previsão ausente, identificação insuficiente e chegada não observada são registradas à parte e não entram como erro zero.
+
+#### Procedimento de coleta
+
+Foram observados 10 eventos de chegada, em dois blocos de 5, com as linhas `L01` e `L02`, no aparelho `DISP-01`. Em cada janela de observação, foram usados os primeiros eventos elegíveis, sem escolha pelo erro. No início da observação de cada evento, foram capturadas a primeira previsão de chegada à parada e o horário. A chegada foi registrada quando a frente do veículo alcançou o ponto de referência da parada, e o pareamento foi feito por linha, sentido, parada e veículo ou viagem identificável. Os relógios foram sincronizados, com data completa e fuso `America/Sao_Paulo`; quando o app mostrou tempo restante, ele foi somado ao instante da captura. A evidência de cada evento é a captura da previsão com o horário e a foto da chegada, sem enquadrar rostos.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M5.1-01 | E01 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-02 | E02 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-03 | E03 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-04 | E04 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-05 | E05 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 1; linha, sentido e parada: A definir |
+| M5.1-06 | E06 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-07 | E07 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-08 | E08 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-09 | E09 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+| M5.1-10 | E10 | Vitor Bessa | A definir | DISP-01 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | Bloco 2; linha, sentido e parada: A definir |
+
+<p class="legenda">Tabela 10. Registro da coleta da M5.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{5.1} = \operatorname{mediana}\left(\left|t_{c,i} - t_{p,i}\right|\right), \quad i = 1, \dots, n
+$$
+
+Em que $t_{p,i}$ é o instante da primeira previsão de chegada do evento $i$, $t_{c,i}$ é o instante da chegada observada e $n$ é o número de pares válidos (no máximo 10).
+
 ### M5.2 — Posições no mapa
 
 #### Questão e critério de avaliação

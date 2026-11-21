@@ -146,8 +146,8 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 
 #### M3.1 e M3.2 — Sessões sem crashes e sem congelamentos (Lab)
 
-- **Amostra:** 20 sessões de 5 min (100 min no total). As duas métricas usam as mesmas sessões, e cada sessão afetada conta uma vez por métrica.
-- **Passos:** cada sessão dedica 1 min a cada atividade, nesta ordem: busca de linha, horários, itinerário no mapa, parada e veículo, favoritos. Não induzir queda de rede nem de localização. Gravar a tela com "Mostrar toques" ativado e, quando possível, registrar o log:
+- **Amostra:** 20 sessões de 2 min 30 s (50 min no total). As duas métricas usam as mesmas sessões, e cada sessão afetada conta uma vez por métrica.
+- **Passos:** cada sessão dedica 30 s a cada atividade, nesta ordem: busca de linha, horários, itinerário no mapa, parada e veículo, favoritos. Não induzir queda de rede nem de localização. Gravar a tela com "Mostrar toques" ativado e, quando possível, registrar o log:
     ```bash
     adb logcat -v time | grep -E "FATAL EXCEPTION|AndroidRuntime"
     ```
@@ -236,6 +236,8 @@ A Tabela 6 relaciona cada amostra às faixas de nota da Fase 2, aplicadas sem ar
 | M6.2 | 20 itens | 4: 20; 3: 19; 2: 16–18; 1: 0–15 |
 
 <p class="legenda">Tabela 6. Amostras planejadas e notas possíveis por métrica. Fonte: elaboração própria (2026).</p>
+
+A duração da sessão de M3.1 e M3.2 foi reduzida de 5 min para 2 min 30 s para caber na janela de coleta. A unidade da métrica continua sendo a sessão, mas o tempo total de exposição cai de 100 min para 50 min: falhas raras têm menos oportunidade de aparecer, o que tende a favorecer o resultado. Esse limite deve ser declarado junto da nota na Fase 4.
 
 Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, pode mudar o veredito do objetivo. Por isso:
 

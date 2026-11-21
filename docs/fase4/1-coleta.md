@@ -156,6 +156,51 @@ Foram realizados 10 ciclos de instalação, uso e remoção no aparelho `DISP-02
 | M2.2-06 | CICLO06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [antes](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_antes.txt) · [depois](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_depois.txt) · [diff](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_diff.txt) | Listagem dos diretórios antes e depois da desinstalação |
 | M2.2-07 |
 
+### M3.1 e M3.2 — Sessões sem crashes e sem congelamentos
+
+#### Questão e critério de avaliação
+
+As duas métricas usam as mesmas 20 sessões, e cada sessão afetada conta uma vez por métrica. A **M3.1** avalia se a sessão ocorre sem *crash*, isto é, sem encerramento inesperado do app. A **M3.2** avalia se a sessão ocorre sem congelamento, isto é, sem ausência de resposta da interface a uma ação por mais de 5 s, medida em gravação com marcação de tempo. Carregamento com interface responsiva não conta como congelamento.
+
+Pela amostra de 20 sessões, cada métrica produz a nota 4 com 20 sessões conformes, a nota 3 com 19, a nota 2 com 18 e a nota 1 com 17 ou menos. Se houver *crash*, a sessão conta como afetada e uma nova sessão, com novo ID, continua a bateria.
+
+#### Procedimento de coleta
+
+Foram realizadas 20 sessões de 2 min 30 s (50 min no total) no aparelho `DISP-02`, sem indução de queda de rede nem de localização. Cada sessão dedicou 30 s a cada atividade, nesta ordem: busca de linha, horários, itinerário no mapa, parada e veículo, favoritos. A tela foi gravada com "Mostrar toques" ativado e o log foi registrado com `adb logcat`, filtrando `FATAL EXCEPTION` e `AndroidRuntime`. A duração da sessão foi reduzida de 5 min para 2 min 30 s para caber na janela de coleta, o que diminui o tempo de exposição e pode favorecer o resultado; os valores são indicativos para a janela observada.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado M3.1 (crash) | Estado M3.2 (congelamento) | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|---|
+| M3-01 | SESSAO01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO01_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO01_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-02 | SESSAO02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO02_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO02_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-03 | SESSAO03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO03_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO03_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-04 | SESSAO04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO04_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO04_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-05 | SESSAO05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO05_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO05_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-06 | SESSAO06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO06_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO06_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-07 | SESSAO07 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO07_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO07_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-08 | SESSAO08 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO08_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO08_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-09 | SESSAO09 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO09_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO09_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-10 | SESSAO10 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO10_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO10_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-11 | SESSAO11 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO11_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO11_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-12 | SESSAO12 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO12_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO12_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-13 | SESSAO13 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO13_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO13_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-14 | SESSAO14 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO14_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO14_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-15 | SESSAO15 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO15_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO15_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-16 | SESSAO16 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO16_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO16_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-17 | SESSAO17 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO17_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO17_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-18 | SESSAO18 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO18_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO18_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-19 | SESSAO19 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO19_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO19_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+| M3-20 | SESSAO20 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | A definir | [M3_SESSAO20_DISP-02_logcat.txt](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO20_DISP-02_logcat.txt) | Sessão de 2 min 30 s; 5 atividades de 30 s |
+
+<p class="legenda">Tabela 9. Registro da coleta da M3.1 e da M3.2. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{3.1} = \frac{S_{sc}}{S_t} = \frac{S_{sc}}{20}
+\qquad
+M_{3.2} = \frac{S_{sf}}{S_t} = \frac{S_{sf}}{20}
+$$
+
+Em que $S_{sc}$ corresponde às sessões concluídas sem *crash*, $S_{sf}$ às sessões sem congelamento superior a 5 s, e $S_t = 20$ é o total de sessões executadas.
+
 ### M4.1 — Perda de Conexão
 
 #### Questão e critério de avaliação

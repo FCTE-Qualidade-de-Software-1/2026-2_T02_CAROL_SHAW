@@ -329,6 +329,49 @@ M_{5.2} = \frac{P_s}{P_t} = \frac{5}{5} = 1{,}00 \ (100\%)
 $$
 
 Em que $P_s = 5$ corresponde às paradas cuja distância $d_i$ ficou dentro da tolerância e $P_t = 5$ é o total de paradas válidas.
+
+### M6.1 — Cobertura de Tarefas Essenciais
+
+#### Questão e critério de avaliação
+
+A métrica avalia se o aplicativo permite concluir as tarefas essenciais do catálogo (`TE01` a `TE08`), com rede e localização ativas. Conforme se a tarefa atinge o resultado esperado. Em `TE05`, se não for possível confirmar a operação de `L02`, o caso é **Não observável**.
+
+Pela amostra de 8 tarefas, a métrica produz a nota 4 com 8 tarefas conformes, a nota 2 com 7 e a nota 1 com 6 ou menos, sem nota 3.
+
+| Tarefa | Descrição | Resultado esperado |
+|---|---|---|
+| `TE01` | Buscar `L01` pelo código | Linha encontrada, com identificação e sentido corretos |
+| `TE02` | Consultar horários de `L01` no dia de referência | Grade da linha, sentido e dia corretos |
+| `TE03` | Abrir o itinerário de `L01` | Traçado e paradas do sentido selecionado |
+| `TE04` | Consultar `P01` | Identificação da parada e linhas que a atendem |
+| `TE05` | Acompanhar um veículo de `L02` em operação | Veículo identificável e posição no mapa |
+| `TE06` | Salvar `L01` nos favoritos e reabrir a lista | `L01` presente na lista |
+| `TE07` | Salvar `P01` nos favoritos e reabrir a lista | `P01` presente na lista |
+| `TE08` | Remover `L01` dos favoritos e reabrir a lista | `L01` ausente, outros favoritos mantidos |
+
+#### Procedimento de coleta
+
+As 8 tarefas `TE01` a `TE08` foram executadas uma vez cada, no aparelho `DISP-02`, com rede e localização ativas. Cada tarefa foi preparada de forma independente, e o resultado foi comparado com o resultado esperado do catálogo. A evidência de cada tarefa é a captura de tela do resultado.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M6.1-01 | TE01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE01_DISP-02.png) | Buscar `L01` pelo código |
+| M6.1-02 | TE02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE02_DISP-02.png) | Consultar horários de `L01` no dia de referência |
+| M6.1-03 | TE03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE03_DISP-02.png) | Abrir o itinerário de `L01` |
+| M6.1-04 | TE04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE04_DISP-02.png) | Consultar `P01` |
+| M6.1-05 | TE05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE05_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE05_DISP-02.png) | Acompanhar um veículo de `L02` em operação |
+| M6.1-06 | TE06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE06_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE06_DISP-02.png) | Salvar `L01` nos favoritos e reabrir a lista |
+| M6.1-07 | TE07 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE07_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE07_DISP-02.png) | Salvar `P01` nos favoritos e reabrir a lista |
+| M6.1-08 | TE08 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M6.1_TE08_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE08_DISP-02.png) | Remover `L01` dos favoritos e reabrir a lista |
+
+<p class="legenda">Tabela 11. Registro da coleta da M6.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{6.1} = \frac{T_c}{T_t} = \frac{T_c}{8}
+$$
+
+Em que $T_c$ corresponde às tarefas concluídas com o resultado esperado do catálogo, e $T_t = 8$ é o total de tarefas do catálogo.
+
 ### M6.2 — Completude do Banco
 
 #### Questão e critério de avaliação

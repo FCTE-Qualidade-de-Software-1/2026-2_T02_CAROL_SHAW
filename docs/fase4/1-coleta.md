@@ -101,6 +101,39 @@ $$
 
 Em que $V_c$ corresponde às versões do Android em que as tarefas `TE01` a `TE08` terminaram sem erro de compatibilidade impeditivo, e $V_t$ é o total de versões testadas.
 
+### M2.1 — Sucesso de Instalação
+
+#### Questão e critério de avaliação
+
+A métrica avalia se o aplicativo é instalado com sucesso a partir da loja oficial, na primeira tentativa, em ciclos de instalação limpa realizados em aparelho físico.
+
+Conforme se a instalação conclui na primeira tentativa, sem erro. Abrir o app não é exigido, e tentativas posteriores não mudam um Defeito. Pela amostra de 10 ciclos, a métrica produz a nota 4 com 10 ciclos conformes, a nota 2 com 9 e a nota 1 com 8 ou menos, sem nota 3.
+
+#### Procedimento de coleta
+
+Foram realizados 10 ciclos de instalação limpa no aparelho `DISP-02`. Em cada ciclo, com o app ausente, ele foi instalado pela Google Play Store e a primeira tentativa foi observada. A evidência de cada ciclo é a captura da página da loja ao final da instalação ("Instalado" ou mensagem de erro).
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M2.1-01 | CICLO01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO01_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-02 | CICLO02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO02_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-03 | CICLO03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO03_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-04 | CICLO04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO04_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-05 | CICLO05 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO05_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO05_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-06 | CICLO06 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO06_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO06_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-07 | CICLO07 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO07_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO07_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-08 | CICLO08 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO08_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO08_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-09 | CICLO09 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO09_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO09_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+| M2.1-10 | CICLO10 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2.1_CICLO10_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO10_DISP-02.png) | Instalação limpa pela Play Store; primeira tentativa |
+
+<p class="legenda">Tabela 7. Registro da coleta da M2.1. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{2.1} = \frac{I_c}{I_t} = \frac{I_c}{10}
+$$
+
+Em que $I_c$ corresponde às instalações concluídas na primeira tentativa, sem erro, e $I_t = 10$ é o total de ciclos executados.
+
 ### M4.1 — Perda de Conexão
 
 #### Questão e critério de avaliação

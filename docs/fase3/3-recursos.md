@@ -100,7 +100,7 @@ Os locais e horários devem ser registrados junto aos dados de cada execução. 
 | Aplicativo avaliado | Objeto da avaliação | Google Play Store | Pacote `br.bus2.dfnoponto`, versão 5.25.1;  | Instalado no `DISP-02` |
 | Catálogo de telas e configurações | Casos de M1.1 | Seção 3.3 dos procedimentos | `T01`–`T05` × `C01`–`C04` | Definido |
 | Catálogo de tarefas essenciais | M6.1 e M1.2 | Seção 3.2 dos procedimentos | `TE01`–`TE08` | Definido |
-| Itens do catálogo oficial | M6.2, e entradas de M6.1, M1.1 e M1.2 | [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/) | `L01` = linha 0.089 (Setor P Sul / Av. Comercial); `P01` = parada N1 P Norte, Ceilândia; `L02` e `A01`–`A20` a definir | `L01` e `P01` selecionados em 18/11/2026; registro oficial pendente |
+| Itens do catálogo oficial | M6.2, e entradas de M6.1, M1.1 e M1.2 | [Pesquisa por Linhas da Semob-DF](https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/) | `L01` = linha 0.089 (Setor P Sul / Av. Comercial); `P01` = parada N1 P Norte, Ceilândia; `L02` e `A01`–`A20` a definir | `L01` e `P01` selecionados em 18/11/2026; registro oficial coletado 19/11/2026 |
 | Posições de referência | M5.2 | GPSTest, em campo | WGS84, precisão informada de até 10 m, em 5 paradas | A coletar |
 | Previsões e chegadas | M5.1 | Aplicativo e observação em campo | Data completa e fuso `America/Sao_Paulo` | A coletar |
 

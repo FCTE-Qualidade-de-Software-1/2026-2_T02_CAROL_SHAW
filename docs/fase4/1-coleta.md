@@ -37,26 +37,26 @@ Foram avaliados 20 casos tela × configuração no aparelho `DISP-02`, com a con
 
 | ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
 |---|---|---|---|---|---|---|---|---|
-| M1.1-01 | T01-C01 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C01_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
-| M1.1-02 | T01-C02 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C02_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
-| M1.1-03 | T01-C03 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C03_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
-| M1.1-04 | T01-C04 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C04_DISP-02.png) | Busca por `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
-| M1.1-05 | T02-C01 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C01_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
-| M1.1-06 | T02-C02 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C02_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
-| M1.1-07 | T02-C03 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C03_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
-| M1.1-08 | T02-C04 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C04_DISP-02.png) | Horários de `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
-| M1.1-09 | T03-C01 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C01_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
-| M1.1-10 | T03-C02 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C02_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
-| M1.1-11 | T03-C03 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C03_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
-| M1.1-12 | T03-C04 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C04_DISP-02.png) | Mapa do itinerário de `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
-| M1.1-13 | T04-C01 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C01_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
-| M1.1-14 | T04-C02 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C02_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
-| M1.1-15 | T04-C03 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C03_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
-| M1.1-16 | T04-C04 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C04_DISP-02.png) | Detalhes de `P01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
-| M1.1-17 | T05-C01 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C01_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
-| M1.1-18 | T05-C02 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C02_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
-| M1.1-19 | T05-C03 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C03_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
-| M1.1-20 | T05-C04 | A definir | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C04_DISP-02.png) | Favoritos com `L01` e `P01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-01 | T01-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C01_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-02 | T01-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C02_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-03 | T01-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C03_DISP-02.png) | Busca por `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-04 | T01-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T01-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C04_DISP-02.png) | Busca por `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-05 | T02-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C01_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-06 | T02-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C02_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-07 | T02-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C03_DISP-02.png) | Horários de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-08 | T02-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T02-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C04_DISP-02.png) | Horários de `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-09 | T03-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C01_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-10 | T03-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C02_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-11 | T03-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C03_DISP-02.png) | Mapa do itinerário de `L01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-12 | T03-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T03-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C04_DISP-02.png) | Mapa do itinerário de `L01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-13 | T04-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C01_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-14 | T04-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C02_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-15 | T04-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C03_DISP-02.png) | Detalhes de `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-16 | T04-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T04-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C04_DISP-02.png) | Detalhes de `P01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
+| M1.1-17 | T05-C01 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C01_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C01_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 100% |
+| M1.1-18 | T05-C02 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C02_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C02_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; paisagem; fonte 100% |
+| M1.1-19 | T05-C03 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C03_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C03_DISP-02.png) | Favoritos com `L01` e `P01`; 640 × 1136 px, 320 dpi; retrato; fonte 200% |
+| M1.1-20 | T05-C04 | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M1.1_T05-C04_DISP-02.png](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C04_DISP-02.png) | Favoritos com `L01` e `P01`; 1080 × 2400 px, 420 dpi; retrato; fonte 100% |
 
 <p class="legenda">Tabela 5. Registro da coleta da M1.1. Fonte: elaboração própria (2026).</p>
 
@@ -65,6 +65,41 @@ M_{1.1} = \frac{C_c}{C_t} = \frac{C_c}{20}
 $$
 
 Em que $C_c$ corresponde aos casos tela × configuração sem corte, sobreposição ou bloqueio de interação, e $C_t = 20$ é o total de casos avaliados.
+
+### M1.2 — Adaptabilidade de Sistema Operacional
+
+#### Questão e critério de avaliação
+
+A métrica avalia se o aplicativo funciona sem erro de compatibilidade impeditivo em diferentes versões do Android. Em cada versão, o app é instalado pela distribuição oficial e as tarefas essenciais `TE01` a `TE08` são executadas.
+
+Conforme se todas as tarefas terminam sem erro de compatibilidade impeditivo. É **Não observável** a versão sem ambiente preparado ou com distribuição indisponível por motivo externo; instalação recusada por incompatibilidade comprovada é **Defeito**. Pela amostra planejada de 3 versões (Android 9, Android 13 e a versão do aparelho físico), a métrica produz a nota 4 com 3 versões conformes e a nota 1 com 2 ou menos, sem notas 2 e 3.
+
+| Tarefa | Descrição | Resultado esperado |
+|---|---|---|
+| `TE01` | Buscar `L01` pelo código | Linha encontrada, com identificação e sentido corretos |
+| `TE02` | Consultar horários de `L01` no dia de referência | Grade da linha, sentido e dia corretos |
+| `TE03` | Abrir o itinerário de `L01` | Traçado e paradas do sentido selecionado |
+| `TE04` | Consultar `P01` | Identificação da parada e linhas que a atendem |
+| `TE05` | Acompanhar um veículo de `L02` em operação | Veículo identificável e posição no mapa |
+| `TE06` | Salvar `L01` nos favoritos e reabrir a lista | `L01` presente na lista |
+| `TE07` | Salvar `P01` nos favoritos e reabrir a lista | `P01` presente na lista |
+| `TE08` | Remover `L01` dos favoritos e reabrir a lista | `L01` ausente, outros favoritos mantidos |
+
+#### Procedimento de coleta
+
+Em cada versão do Android avaliada, o aplicativo foi instalado pela distribuição oficial e as tarefas `TE01` a `TE08` foram executadas em sequência, com gravação de tela e "Mostrar toques" ativado. Cada versão corresponde a um caso e tem como evidência a gravação da execução.
+
+| ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
+|---|---|---|---|---|---|---|---|---|
+| M1.2-01 | Android 13 (API 33) | Vitor Bessa | A definir | DISP-02 · Android 13 · app 5.25.1(1149) | A definir | A definir | [M2_SESSAO01_DISP-02.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M2_SESSAO01_DISP-02.mp4) | Execução de `TE01` a `TE08` na versão do aparelho físico |
+
+<p class="legenda">Tabela 6. Registro da coleta da M1.2. Fonte: elaboração própria (2026).</p>
+
+$$
+M_{1.2} = \frac{V_c}{V_t} = \frac{V_c}{V_t}
+$$
+
+Em que $V_c$ corresponde às versões do Android em que as tarefas `TE01` a `TE08` terminaram sem erro de compatibilidade impeditivo, e $V_t$ é o total de versões testadas.
 
 ### M4.1 — Perda de Conexão
 
@@ -208,8 +243,9 @@ Em que $L_c = 20$ corresponde aos itens da amostra encontrados no app com códig
 
 | ID | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 1.0 | Inclusão da tabela de coleta, das evidências e do cálculo da métrica M6.2. | PedroRSR | 17/11/2026 | A definir | — |
-| 1.1 | Inclusão da seção de coleta da métrica M4.1, com registros dos ensaios, evidências e cálculo. | PedroRSR | 19/11/2026 | A definir | — |
-| 1.2 | Atualização dos registros de coleta das métricas M2.1, M2.2 e M6.1. | Bessazs | 19/11/2026 | A definir | — |
-| 1.3 | Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação. | PedroRSR | 19/11/2026 | A definir | — |
-| 1.4 | Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências. | PedroRSR | 20/11/2026 | A definir | — |
+| 1.0 | Inclusão da tabela de coleta, das evidências e do cálculo da métrica M6.2. | [Pedro Ramos](https://github.com/PedroRSR) | 17/11/2026 | A definir | — |
+| 1.1 | Inclusão da seção de coleta da métrica M4.1, com registros dos ensaios, evidências e cálculo. | [Pedro Ramos](https://github.com/PedroRSR) | 19/11/2026 | A definir | — |
+| 1.2 | Atualização dos registros de coleta das métricas M2.1, M2.2 e M6.1. | [Bessa](https://github.com/bessazs) | 19/11/2026 | A definir | — |
+| 1.3 | Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação. | [Pedro Ramos](https://github.com/PedroRSR) | 19/11/2026 | A definir | — |
+| 1.4 | Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências. | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |
+| 1.5 | Inclusão da seções M1.1 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |

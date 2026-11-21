@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# M3.1 (sessoes sem crashes) e M3.2 (sessoes sem congelamentos) - 20 sessoes de 5 min.
+# M3.1 (sessoes sem crashes) e M3.2 (sessoes sem congelamentos) - 20 sessoes de 2 min 30 s.
 # Uso: AVALIADOR="Nome" DISP=DISP-02 ./scripts/m3-sessoes.sh [n_sessoes]
 set -uo pipefail
 source "$(dirname "${BASH_SOURCE[0]}")/lib_coleta.sh"
@@ -13,7 +13,7 @@ csv_init "$C31"; csv_init "$C32"; mkdir -p "$OUT"
 app_instalado || { echo "ERRO: $PKG nao esta instalado."; exit 1; }
 
 echo "============================================================"
-echo " M3.1 e M3.2 - $N sessoes de 5 min | $DISP ($MODELO) | Android $SO | app $VAPP"
+echo " M3.1 e M3.2 - $N sessoes de 2 min 30 s | $DISP ($MODELO) | Android $SO | app $VAPP"
 echo " Antes de comecar: ative 'Mostrar toques' nas opcoes do desenvolvedor."
 echo " Grave a tela com o gravador nativo do aparelho em cada sessao."
 echo " Nao induza queda de rede nem de localizacao."
@@ -31,7 +31,7 @@ for i in $(seq 1 "$N"); do
   INICIO=$(date '+%H:%M:%S')
   for k in 0 1 2 3 4; do
     echo "   [$((k+1))/5] ${ATIV[$k]}"
-    contagem 60 "${ATIV[$k]}"
+    contagem 30 "${ATIV[$k]}"
   done
   FIM=$(date '+%H:%M:%S')
   LOG="$OUT/M3_${S}_${DISP}_logcat.txt"

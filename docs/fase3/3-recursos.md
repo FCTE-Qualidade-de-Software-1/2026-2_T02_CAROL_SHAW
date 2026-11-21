@@ -16,11 +16,11 @@ Este documento lista os recursos necessários para executar a avaliação do apl
 
 <p class="legenda">Tabela 1. Dispositivos físicos da avaliação. Fonte: elaboração própria (2026).</p>
 
-**As métricas que dependem do `adb` são executadas no `DISP-02`:** M1.1 (configuração de tela, densidade e escala de fonte), M2.2 (listagem dos diretórios antes e depois da desinstalação) e o registro de log de M3.1. Para isso, o aparelho precisa da chave **"Depuração USB (Configurações de segurança)"** das opções do desenvolvedor do MIUI, além da depuração USB comum; sem ela, o Android recusa os comandos com `SecurityException`, como ocorreu no teste-piloto de 17/11/2026.
+**As métricas que dependem do `adb` são executadas no `DISP-02`:** M1.1 (configuração de tela, densidade e escala de fonte), M2.2 (listagem dos diretórios antes e depois da desinstalação) e o registro de log de M3.1. Para isso, o aparelho precisa da chave **"Depuração USB (Configurações de segurança)"** das opções do desenvolvedor do MIUI, além da depuração USB comum; sem ela, o Android recusa os comandos com `SecurityException`.
 
-A divisão entre os dois aparelhos é operacional: permite que dois avaliadores trabalhem em paralelo, conforme o [Cronograma](4-cronograma.md), e acompanha a disponibilidade de cada aparelho no momento de cada bateria. Com exceção das que dependem do `adb`, as métricas de laboratório não exigem um aparelho específico, apenas um aparelho físico com a versão de referência do aplicativo. Cada linha da planilha de coleta registra o aparelho, o modelo, a versão do Android e a versão do app, de modo que a rastreabilidade se mantém mesmo com a alocação variando. A Tabela 1 reflete a alocação efetiva: **M4.1** e **M6.2** foram executadas no `DISP-01`, em 17 e 18/11/2026, e **M1.1** no `DISP-02`, em 18/11/2026.
+A divisão entre os dois aparelhos é operacional: permite que dois avaliadores trabalhem em paralelo, conforme o [Cronograma](4-cronograma.md), e acompanha a disponibilidade de cada aparelho no momento de cada bateria. Com exceção das que dependem do `adb`, as métricas de laboratório não exigem um aparelho específico, apenas um aparelho físico com a versão de referência do aplicativo. Cada linha da planilha de coleta registra o aparelho, o modelo, a versão do Android e a versão do app, de modo que a rastreabilidade se mantém mesmo com a alocação variando.
 
-Os perfis de tela `C01` a `C04` de M1.1 não correspondem à configuração nativa de nenhum dos dois aparelhos, que são ambos 1080 × 2400. Eles são aplicados por `adb` e conferidos automaticamente pelo script `scripts/m1-1-telas.sh`, que interrompe a bateria se a configuração não tiver sido aplicada e restaura o aparelho ao final.
+
 
 ### 2.2 Emuladores
 
@@ -35,7 +35,7 @@ Os perfis de tela `C01` a `C04` de M1.1 não correspondem à configuração nati
 
 - a imagem precisa ser do tipo *Google Play*, para que o aplicativo possa ser instalado pela distribuição oficial;
 - o aplicativo pode publicar binários apenas para ARM, o que impediria a instalação em imagens x86_64 sem tradução ARM, especialmente na API 28;
-- o **Waydroid foi descartado**: a Play Store o recusa como dispositivo incompatível, o que é limitação do ambiente e não defeito do aplicativo, e por isso não entra no denominador de M1.2.
+
 
 Se nenhum emulador puder ser preparado, a amostra de M1.2 fica restrita à versão dos aparelhos físicos. Nesse caso, a redução deve ser registrada antes da coleta, com atualização da ficha de M1.2, da tabela de notas possíveis (seção 5 dos procedimentos), da hipótese H1.2 e das ameaças à validade em [Método de Avaliação](1-metodo.md).
 
@@ -77,11 +77,10 @@ Se uma ferramenta planejada não estiver disponível, registrar a alternativa ut
 
 ### 4.1 Ambiente de laboratório
 
-- **Local:** a confirmar.
+
 - **Dispositivos:** `DISP-02` e, quando aplicável, os emuladores da seção 2.2.
 - **Conectividade:** Wi-Fi estável para as métricas que dependem de dados; a condição de rede de cada execução é registrada na planilha.
 - **Preparação dos dispositivos:** aplicativo na versão de referência, cache limpo quando o roteiro exigir e sem aplicativos concorrentes de alto consumo em segundo plano.
-- **Idioma da interface:** o aplicativo foi observado em inglês no `DISP-02` em 18/11/2026. O idioma fica registrado porque os nomes de tela e as evidências dependem dele; se mudar durante a coleta, anotar na planilha.
 - **Métricas executadas:** M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M4.1, M4.2, M6.1 e M6.2.
 
 ### 4.2 Ambiente de campo

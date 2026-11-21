@@ -1,0 +1,2 @@
+ID;Metrica;Caso;Avaliador;DataHora;Dispositivo;Modelo;VersaoSO;VersaoApp;Estado;ValorMedido;Evidencia;Observacoes
+EXEC-M1.2-Android_13_(API_33)_-_2201117SY;M1.2;Android_13_(API_33)_-_2201117SY;Vitor Bessa;2026-11-20 20:35;DISP-02;2201117SY;13 (API 33);5.25.1;Conforme;8/8;;Falhas: nenhuma

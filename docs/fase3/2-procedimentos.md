@@ -276,7 +276,7 @@ Os itens da Tabela 8 precisam estar preenchidos e versionados antes do primeiro 
 | Itens `L01`, `L02`, `P01` e lista `A01`–`A20` (código, sentido, variante, data da consulta) | `L01` e `P01` selecionados em 18/11/2026; registro oficial de ambos, além de `L02` e da lista `A01`–`A20` coletados em 19/11/2026 |
 | Paradas, dias, janelas e responsáveis do campo (M5.1 e M5.2) | Pendente |
 | Identificador do pacote do app, para a inspeção de M2.2 | Resolvido: `br.bus2.dfnoponto` |
-| Versões do Android de M1.2, conforme [Recursos](3-recursos.md) | Em aberto: os dois aparelhos estão no Android 13 e os emuladores disponíveis recusam a instalação do app; definir a amostra efetiva antes de coletar |
+| Versões do Android de M1.2, conforme [Recursos](3-recursos.md) | Encerrada em 21/11/2026: definidos os emuladores `EMU-01` (API 28), `EMU-02` (API 29) e `EMU-03` (API 37), todos com imagem *Google Play*. As três tentativas foram recusadas pela loja por filtro de arquitetura (imagens x86/x86_64, aplicativo apenas ARM) e registradas como **Não observáveis** na [Fase 4](../fase4/1-coleta.md#m12--adaptabilidade-de-sistema-operacional). A amostra planejada de 3 versões permanece inalterada; a divergência entre previsto e executado é reportada na execução, pela regra 4 |
 | Modo de obter a distância em M5.2: confirmar se o mapa do app exibe a posição do usuário e como converter a medida da captura em metros (barra de escala do mapa, distância conhecida entre dois pontos no mesmo zoom ou coordenadas obtidas pela função de compartilhar) | Pendente, bloqueia a saída de campo |
 
 <p class="legenda">Tabela 8. Pendências a resolver antes da coleta. Fonte: elaboração própria (2026).</p>

@@ -45,7 +45,7 @@ A Tabela 2 compara o previsto na Fase 3 com o que consta em [Coleta de Dados](1-
 | **M3.2** | `DISP-02` · Android 13 | 20 sessões | 20 | 20 | 0 | 0 | 20 | Completa |
 | **M4.1** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M4.2** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
-| **M5.1** | `DISP-01` · Android 13 | 10 eventos | 0 | — | — | — | 0 | **Sem dados** (todas as linhas “A definir”) |
+| **M5.1** | `DISP-01` · Android 13 | 10 eventos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M5.2** (paradas) | `DISP-01` · Android 13 | 5 paradas | 5 | 5 | 0 | 0 | 5 | Completa |
 | **M6.1** | `DISP-02` · Android 13 | 8 tarefas | 8 | 8 | 0 | 0 | 8 | Completa |
 | **M6.2** | `DISP-01` · Android 13 | 20 itens | 20 | 20 | 0 | 0 | 20 | Completa |
@@ -202,13 +202,16 @@ $$
 #### M5.1 — Precisão de Tempo
 
 $$
-M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_n), \qquad n = 0
+M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_{10}) = 3{,}34\text{ min}
 $$
 
-- **Situação:** os dez registros `M5.1-01` a `M5.1-10` seguem com data, estado, valor, evidência e identificação da linha como “A definir”. Não há pares previsão/chegada válidos ($n = 0$ de 10 previstos).
-- **Resultado:** **Não avaliado (sem dados)**, sem nota (regra 3 da Fase 2). Previsão ausente ou chegada sem identificação nunca entra como erro zero.
-- **Hipótese H5.1** (mediana $\le 5$ min): **não verificada.**
-- **Para fechar:** coletar 10 eventos de campo, em dois blocos de 5 e com duas linhas, informando mediana, menor e maior erro e $n$ válido.
+- **Amostra e medição:** 10 eventos válidos coletados em campo em 21/11/2026 no `DISP-01` (parada `P01`, Ceilândia Norte), cobrindo as linhas `0.089` (5 eventos) e `933.4` (5 eventos). Um 11º evento foi descartado antes do cálculo por passagem sem parada/foto (`X01`).
+- **Distribuição dos erros absolutos (minutos):** $[0{,}53;\ 0{,}65;\ 0{,}67;\ 0{,}95;\ 2{,}05;\ 4{,}63;\ 5{,}62;\ 13{,}32;\ 13{,}97;\ 38{,}97]$.
+  - Erro mínimo: $0{,}53\text{ min}$ (32 s)
+  - Erro máximo: $38{,}97\text{ min}$ (atraso severo na linha 0.089)
+  - Mediana: $\frac{2{,}05 + 4{,}63}{2} = 3{,}34\text{ min}$ (3 min 20 s)
+- **Nota:** $3{,}34\text{ min} \le 5\text{ min}$ (e $> 2\text{ min}$) $\rightarrow$ **Nota 3 (Bom)**, conforme escala da Fase 2 ($[0, 2] \rightarrow 4$, $(2, 5] \rightarrow 3$, $(5, 10] \rightarrow 2$, $> 10 \rightarrow 1$).
+- **Hipótese H5.1** (mediana $\le 5$ min): **confirmada.**
 
 #### M5.2 — Correção de Dados do Mapa (paradas)
 
@@ -237,9 +240,9 @@ $$
 
 | Métrica | Valor | Nota | Hipótese | Situação |
 | :--- | :---: | :---: | :--- | :--- |
-| **M5.1** | $n = 0$ | — | H5.1 não verificada | Sem dados |
+| **M5.1** | $\text{Mediana } 3{,}34\text{ min}$ | **3** | H5.1 confirmada ($\le 5\text{ min}$) | Avaliada |
 | **M5.2** | $5/5 = 1{,}00$ | **4** | H5.2 confirmada (paradas) | Avaliada |
-| **G5** | — | $\min(\text{—},\ 4)$ | — | **Não avaliado (dados incompletos)** |
+| **G5** | — | $\min(3,\ 4) = 3$ | — | **Satisfeito** |
 
 <p class="legenda">Tabela 8. Síntese de G5. Fonte: elaboração própria (2026).</p>
 
@@ -292,14 +295,14 @@ $$
 | **M3.2** | Sessões sem congelamentos | G3 | 20 / 20 | 1,00 | **4** | $M_{3.2} \ge 0{,}95$ | Confirmada |
 | **M4.1** | Mitigação de perda de conexão | G4 | 10 / 10 | 1,00 | **4** | $M_{4.1} < 0{,}85$ | Refutada |
 | **M4.2** | Tratamento de perda de GPS | G4 | 10 / 10 | 1,00 | **4** | $M_{4.2} \ge 0{,}85$ | Confirmada |
-| **M5.1** | Precisão de tempo | G5 | 0 / 10 | — | — | mediana $\le 5$ min | Não verificada |
+| **M5.1** | Precisão de tempo | G5 | 10 / 10 | Mediana 3,34 min | **3** | mediana $\le 5$ min | Confirmada |
 | **M5.2** | Correção do mapa (paradas) | G5 | 5 / 5 | 1,00 | **4** | $M_{5.2} \ge 0{,}85$ (paradas) | Confirmada (paradas) |
 | **M6.1** | Cobertura de tarefas essenciais | G6 | 8 / 8 | 1,00 | **4** | $M_{6.1} = 1{,}00$ | Confirmada |
 | **M6.2** | Completude do banco | G6 | 20 / 20 | 1,00 | **4** | $M_{6.2} \ge 0{,}95$ | Confirmada |
 
 <p class="legenda">Tabela 10. Quadro comparativo das 12 métricas, notas e hipóteses. Fonte: elaboração própria (2026).</p>
 
-Das 12 hipóteses, **6 foram confirmadas** (H2.1, H3.1, H3.2, H4.2, H6.1, H6.2), **2 refutadas** (H2.2 e H4.1, ambas de expectativa pessimista), **3 verificadas só em parte** (H1.1, H1.2, H5.2) e **1 não pôde ser verificada** (H5.1).
+Das 12 hipóteses, **7 foram confirmadas** (H2.1, H3.1, H3.2, H4.2, H5.1, H6.1, H6.2), **2 refutadas** (H2.2 e H4.1, ambas de expectativa pessimista), e **3 verificadas só em parte** (H1.1, H1.2, H5.2).
 
 ### 5.1. Vereditos dos objetivos
 
@@ -309,7 +312,7 @@ Das 12 hipóteses, **6 foram confirmadas** (H2.1, H3.1, H3.2, H4.2, H6.1, H6.2),
 | **G2** | Portabilidade — Instalabilidade | M2.1 = 4; M2.2 = 4 | **Satisfeito** |
 | **G3** | Confiabilidade — Maturidade | M3.1 = 4; M3.2 = 4 | **Satisfeito** *(exposição reduzida)* |
 | **G4** | Confiabilidade — Tolerância a falhas | M4.1 = 4; M4.2 = 4 | **Satisfeito** |
-| **G5** | Adequação Funcional — Correção | M5.1 sem dados; M5.2 = 4 | **Não avaliado (dados incompletos)** |
+| **G5** | Adequação Funcional — Correção | M5.1 = 3; M5.2 = 4 | **Satisfeito** |
 | **G6** | Adequação Funcional — Completude | M6.1 = 4; M6.2 = 4 | **Satisfeito** |
 
 <p class="legenda">Tabela 11. Vereditos dos objetivos G1 a G6 pelo critério da pior nota. Fonte: elaboração própria (2026).</p>
@@ -326,18 +329,19 @@ Com amostras pequenas, um único caso pode mudar uma nota e o veredito do objeti
 | **M1.2** | $1/1$, com Android 9 sem registro | Android 9 como Defeito: $1/2 = 0{,}50$ → Nota 1 | G1 passaria a *Não Satisfeito* |
 | **M2.1 / M2.2** | $10/10$, sem Nota 3 possível | 1 defeito → Nota 2 | G2 passaria a *Satisfeito com Ressalvas* |
 | **M3.1 / M3.2** | $20/20$ em sessões de 2 min 30 s | 2 sessões afetadas → Nota 1 (com 1 afetada, Nota 3) | G3 mudaria conforme a pior nota |
-| **M5.2** | $5/5$, com `P02` a 29 m do limite de 30 m | `P02` fora da tolerância: $4/5 = 0{,}80$ → Nota 2 | G5, quando fechado, não poderia ser *Satisfeito* |
+| **M5.1** | Mediana $3{,}34$ min (Nota 3) | Mediana $> 5$ min → Nota 2 | G5 passaria a *Satisfeito com Ressalvas* (pior nota = 2) |
+| **M5.2** | $5/5$, com `P02` a 29 m do limite de 30 m | `P02` fora da tolerância: $4/5 = 0{,}80$ → Nota 2 | G5 passaria a *Satisfeito com Ressalvas* (pior nota = 2) |
 | **M6.1** | $8/8$, sem Nota 3 possível | 1 tarefa com defeito → Nota 2 | G6 passaria a *Satisfeito com Ressalvas* |
 
 <p class="legenda">Tabela 12. Sensibilidade das notas ao tamanho da amostra. Fonte: elaboração própria (2026).</p>
 
-A predominância da Nota 4 (9 das 10 métricas com nota definitiva) reflete amostras pequenas, critérios binários por caso e um único aparelho por ensaio. Não indica ausência de defeitos fora do que foi observado.
+A predominância de notas altas reflete amostras pequenas, critérios binários por caso e um único aparelho por ensaio. Não indica ausência de defeitos fora do que foi observado.
 
 ---
 
 ## 7. Anomalias, exclusões e limitações dos registros
 
-**Exclusões.** Não houve casos **Não observáveis** nem **Pendentes** nas métricas com dados, e nenhum defeito foi descartado. A única amostra incompleta é a de `M1.2`, e a única sem dados é `M5.1`.
+**Exclusões.** Não houve casos **Não observáveis** nem **Pendentes** nas métricas com dados, e nenhum defeito foi descartado (à exceção do evento `X01` em M5.1, descartado antes do cálculo por passagem sem parada). A única amostra incompleta é a de `M1.2` (sem o ensaio previsto em Android 9).
 
 As inconsistências abaixo foram encontradas na leitura de `1-coleta.md` e dos procedimentos. Elas não alteram as contagens, mas devem ser sanadas antes do fechamento.
 
@@ -352,7 +356,7 @@ As inconsistências abaixo foram encontradas na leitura de `1-coleta.md` e dos p
 | 7 | M1.2 | A evidência está salva como `M2_SESSAO01_DISP-02.mp4`, fora do padrão `M1.2_*` dos demais arquivos. | Renomear o arquivo e atualizar a ligação. |
 | 8 | M3.1 / M3.2 | O repositório guarda apenas os `logcat` das sessões. A Fase 3 exige gravação de todas as sessões, e o congelamento de `M3.2` é medido na gravação. O filtro do `logcat` (`FATAL EXCEPTION\|AndroidRuntime`) cobre *crashes*, não registros de ANR. | Arquivar as gravações e indicar onde estão. |
 | 9 | M5.2 | O avaliador consta como “A definir”, os horários são aproximados, as distâncias foram obtidas por medição visual com auxílio de IA, e não há registro do GPSTest, que a Fase 3 lista como evidência. | Anexar o registro do GPSTest e declarar o uso de IA conforme a política do projeto. |
-| 10 | M5.1 | Todos os registros estão “A definir”. As paradas, dias e janelas de campo constam como pendentes na Fase 3. | Executar a coleta de campo. |
+| 10 | M5.1 | Coleta de campo realizada em 21/11/2026 com 10 eventos válidos e 1 descarte pré-cálculo (`X01`). | Registros consolidados e calculados com sucesso (mediana 3,34 min, Nota 3). |
 | 11 | M6.2 | O método do sorteio, que a Fase 3 manda registrar, não consta na coleta. A tabela de ameaças de [Método de Avaliação](../fase3/1-metodo.md) fala em “20 primeiros itens do catálogo”, o que diverge do sorteio previsto nos procedimentos. | Registrar o método do sorteio e corrigir o texto do método. |
 | 12 | Todas | Não há registro da auditoria de 10% dos registros por segundo avaliador, e a coluna de revisor está “A definir” em várias versões do histórico. | Realizar e registrar a auditoria. |
 
@@ -378,3 +382,4 @@ As inconsistências abaixo foram encontradas na leitura de `1-coleta.md` e dos p
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Consolidação dos dados, cálculo das 12 métricas, avaliação de hipóteses e matriz comparativa da Fase 4 (#49) | [João Guilherme Capozzi](https://github.com/jonas3688) | 18/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 02 | Atualização com os registros de coleta de M1.1 a M6.2 (exceto M5.1): cálculo, notas, hipóteses, vereditos de G1 a G6, sensibilidade e anomalias | [Pedro Ramos](https://github.com/PedroRSR)| 21/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
+| 03 | Sincronização dos cálculos da métrica M5.1 (mediana 3,34 min, Nota 3), consolidação do veredito de G5 (Satisfeito) e script de cálculo (#49) | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 22/11/2026 |

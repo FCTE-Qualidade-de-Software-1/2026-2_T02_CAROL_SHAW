@@ -241,6 +241,8 @@ Para a métrica M5.2 (Correção de Dados do Mapa), a distância $d_i$ entre a c
 \end{equation}
 onde $R = 6\,371\,000\text{ m}$ é o raio terrestre adotado. A observação é aprovada se $d_i \le \varepsilon$, sendo $\varepsilon$ a tolerância definida. Para evitar desvios com o veículo em movimento, a medição é feita na parada com intervalo máximo $\Delta t_{max}$ entre o app e o campo. O cálculo final é $M_{5.2} = P_s / P_t$, sendo $P_s$ as posições aprovadas e $P_t$ o total avaliado.
 
+Para a métrica de Mitigação de Perda de Conexão (M4.1), a fórmula adota $R_s / R_t$, onde $R_s$ são as interrupções tratadas e $R_t$ o total testado. Já para a Cobertura de Tarefas Essenciais (M6.1), adota-se $1 - F_f / F_t$, onde $F_f$ são as tarefas com erro e $F_t$ o total do catálogo. Caso uma métrica não tenha testes realizados ou o total seja zero, o resultado é classificado como ``Não avaliado (sem dados)'', evitando divisão por zero.
+
 \begin{table}[H]
 \centering
 \caption{Métricas, fórmulas e fontes dos dados. Fonte: elaboração própria (2026).}

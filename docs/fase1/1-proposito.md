@@ -76,7 +76,7 @@ O DF no Ponto apoia o planejamento das viagens por meio da consulta de linhas, h
 
 O vínculo com a meta 11.2 é de **apoio informacional ao transporte público**. Os ensaios não demonstram aumento de passageiros, redução de emissões, melhoria da segurança viária ou atendimento integral dos grupos vulneráveis. Compatibilidade com aparelhos também não equivale a uma avaliação de acessibilidade para pessoas com deficiência.
 
-O [mapeamento das 12 métricas GQM para a meta 11.2](../fase2/rastreabilidade-diagrama%20GQM.md#21-relacao-das-metricas-com-a-meta-112) explicita a evidência técnica de cada grupo e distingue essas medidas do indicador oficial da ONU.
+O [mapeamento das 12 métricas GQM para a meta 11.2](../fase2/rastreabilidade-diagrama-gqm.md#21-relacao-das-metricas-com-a-meta-112) explicita a evidência técnica de cada grupo e distingue essas medidas do indicador oficial da ONU.
 
 ---
 

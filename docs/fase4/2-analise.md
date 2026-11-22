@@ -45,7 +45,7 @@ A Tabela 2 compara o previsto na Fase 3 com o que consta em [Coleta de Dados](1-
 | **M3.2** | `DISP-02` · Android 13 | 20 sessões | 20 | 20 | 0 | 0 | 20 | Completa |
 | **M4.1** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M4.2** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
-| **M5.1** | `DISP-01` · Android 13 | 10 eventos | 10 | 10 | 0 | 0 | 10 | Completa |
+| **M5.1** | `DISP-02` · Android 13 | 10 eventos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M5.2** (paradas) | `DISP-01` · Android 13 | 5 paradas | 5 | 5 | 0 | 0 | 5 | Completa |
 | **M6.1** | `DISP-02` · Android 13 | 8 tarefas | 8 | 8 | 0 | 0 | 8 | Completa |
 | **M6.2** | `DISP-01` · Android 13 | 20 itens | 20 | 20 | 0 | 0 | 20 | Completa |
@@ -205,7 +205,7 @@ $$
 M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_{10}) = 3{,}34\text{ min}
 $$
 
-- **Amostra e medição:** 10 eventos válidos coletados em campo em 21/11/2026 no `DISP-01` (parada `P01`, Ceilândia Norte), cobrindo as linhas `0.089` (5 eventos) e `933.4` (5 eventos). Um 11º evento foi descartado antes do cálculo por passagem sem parada/foto (`X01`).
+- **Amostra e medição:** 10 eventos válidos coletados em campo em 21/11/2026 no `DISP-02` (parada `P01`, Ceilândia Norte), cobrindo as linhas `933.4` (7 eventos) e `0.089` (3 eventos). Um 11º evento da linha `0.089` foi descartado antes do cálculo por passagem sem parada/foto (`X01`).
 - **Distribuição dos erros absolutos (minutos):** $[0{,}53;\ 0{,}65;\ 0{,}67;\ 0{,}95;\ 2{,}05;\ 4{,}63;\ 5{,}62;\ 13{,}32;\ 13{,}97;\ 38{,}97]$.
   - Erro mínimo: $0{,}53\text{ min}$ (32 s)
   - Erro máximo: $38{,}97\text{ min}$ (atraso severo na linha 0.089)

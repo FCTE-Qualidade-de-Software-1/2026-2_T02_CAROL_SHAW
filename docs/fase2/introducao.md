@@ -8,7 +8,7 @@ Nos arquivos desta fase, são abordados:
 
 - A [Abordagem GQM e Metas de Avaliação](planejamento-objetivos.md): a transição da Fase 1 para o ciclo *Goal–Question–Metric*, os objetivos de medição, a matriz de questões e hipóteses e as *abstraction sheets*;
 - O [Desdobramento GQM e Critérios de Julgamento](metricas-julgamento.md): **equações, escalas e fontes de dados** de cada métrica, as regras gerais de cálculo, as notas de 1 a 4 e o veredito de cada objetivo;
-- A [Representação Gráfica da Hierarquia GQM](rastreabilidade-diagrama%20GQM.md): a **matriz de rastreabilidade** entre as Fases 1 e 2, a verificação de conformidade com a série SQuaRE e os diagramas da hierarquia objetivo, questão e métrica.
+- A [Representação Gráfica da Hierarquia GQM](rastreabilidade-diagrama-gqm.md): a **matriz de rastreabilidade** entre as Fases 1 e 2, a verificação de conformidade com a série SQuaRE e os diagramas da hierarquia objetivo, questão e métrica.
 
 ## Relação com as demais fases
 

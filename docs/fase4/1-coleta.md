@@ -6,7 +6,19 @@ Reunir os registros da execução dos procedimentos definidos na Fase 3 para as 
 
 ## Organização dos registros
 
-Os dados são organizados por métrica, seguindo os procedimentos e os recursos previstos na [Fase 3](../fase3/introducao.md). Cada registro identifica os casos avaliados e apresenta seus resultados e evidências.
+Os dados de coleta são organizados por métrica, seguindo os procedimentos, parâmetros e recursos operacionais previstos na [Fase 3](../fase3/introducao.md). 
+
+Para assegurar a rastreabilidade e a auditabilidade exigidas pelo processo (atividade C11), todos os registros da avaliação estruturam-se segundo a seguinte padronização de campos:
+
+- **ID:** Identificador unívoco do ensaio ou observação (ex: `M1.1-01`).
+- **Caso:** Identificador do cenário ou caso de teste associado (ex: `T01-C01`, `CHEGADA01`).
+- **Avaliador:** Nome do membro da equipe responsável pela condução e registro do ensaio.
+- **Data/hora:** Timestamp da execução da coleta em campo ou em ambiente controlado.
+- **Ambiente:** Dispositivo físico ou Máquina Virtual (AVD) utilizada, com versão do SO e resolução.
+- **Estado:** Classificação do resultado frente ao critério de aceitação (`Conforme`, `Não Conforme` ou `Excluído`).
+- **Valor medido:** Medida quantitativa ou qualitativa observada (tempo em segundos, distância em metros, booleanos, contagens).
+- **Evidência:** Nome do artefato comprobatório (captura de tela ou gravação de vídeo mantida em repositório).
+- **Observações:** Notas contextuais, desvios operacionais ou justificativas técnicas de exclusão amostral.
 
 ### M1.1 — Adaptabilidade de hardware
 
@@ -493,3 +505,4 @@ Em que $L_c = 20$ corresponde aos itens da amostra encontrados no app com códig
 | 1.3 | Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação. | [Pedro Ramos](https://github.com/PedroRSR) | 19/11/2026 | A definir | — |
 | 1.4 | Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências. | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |
 | 1.5 | Inclusão das seções M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M5.1 E M6.1 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |
+| 1.6 | Auditoria C11: conferência da integridade das colunas e formalização do dicionário de registros | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | — | — |

@@ -339,31 +339,6 @@ A predominância de notas altas reflete amostras pequenas, critérios binários 
 
 ---
 
-## 7. Anomalias, exclusões e limitações dos registros
-
-**Exclusões.** Não houve casos **Não observáveis** nem **Pendentes** nas métricas com dados, e nenhum defeito foi descartado (à exceção do evento `X01` em M5.1, descartado antes do cálculo por passagem sem parada). A única amostra incompleta é a de `M1.2` (sem o ensaio previsto em Android 9).
-
-As inconsistências abaixo foram encontradas na leitura de `1-coleta.md` e dos procedimentos. Elas não alteram as contagens, mas devem ser sanadas antes do fechamento.
-
-| Nº | Métrica | Anomalia | Efeito e ação sugerida |
-| :-: | :---: | :--- | :--- |
-| 1 | M6.2 | A coluna `Data/hora` dos 20 registros traz `17/19/2026` (mês inexistente), quando o esperado é `17/11/2026`. | Erro de digitação; corrigir a data nos 20 registros. |
-| 2 | M4.2 | Os dez ensaios têm o mesmo horário (`19/11/2026 - 18:24`), embora cada um exija 30 s de localização desligada. As ligações de `M4.2-02` a `M4.2-10` apontam para `dados/fase4/M4.2_E0x_DISP-01.mp4`, sem a subpasta `M4.2/` onde os arquivos estão, e `M4.2-01` aponta para o arquivo `E08`. | Corrigir as ligações e confirmar horários na auditoria de 10%. |
-| 3 | M4.2 | A Fase 3 ([Recursos](../fase3/3-recursos.md)) aloca `M4.2` ao `DISP-02`, mas o registro foi feito no `DISP-01`. Ambos estão no Android 13 e na mesma versão do app. | Registrar o desvio de alocação. |
-| 4 | M4.1 | O texto de `1-coleta.md` diz que H4.1 prevê $M_{4.1} \ge 0{,}70$, mas a Fase 2 define H4.1 como $M_{4.1} < 0{,}85$. Esta análise usa a Fase 2. | Alinhar o texto da coleta à Fase 2. |
-| 5 | M2.1 | `M2.1-01` está **Conforme**, mas com `Valor medido` igual a “A definir”. | Preencher o valor (“Sim”). |
-| 6 | M2.2 | Os dez registros indicam ambiente “app não instalado” e datas de 19/11, enquanto os mesmos ciclos de `M2.1` são de 20/11. A Fase 3 diz que os ciclos são os mesmos. | Conferir a correspondência entre os ciclos e corrigir ambiente e datas. |
-| 7 | M1.2 | A evidência está salva como `M2_SESSAO01_DISP-02.mp4`, fora do padrão `M1.2_*` dos demais arquivos. | Renomear o arquivo e atualizar a ligação. |
-| 8 | M3.1 / M3.2 | O repositório guarda apenas os `logcat` das sessões. A Fase 3 exige gravação de todas as sessões, e o congelamento de `M3.2` é medido na gravação. O filtro do `logcat` (`FATAL EXCEPTION\|AndroidRuntime`) cobre *crashes*, não registros de ANR. | Arquivar as gravações e indicar onde estão. |
-| 9 | M5.2 | O avaliador consta como “A definir”, os horários são aproximados, as distâncias foram obtidas por medição visual com auxílio de IA, e não há registro do GPSTest, que a Fase 3 lista como evidência. | Anexar o registro do GPSTest e declarar o uso de IA conforme a política do projeto. |
-| 10 | M5.1 | Coleta de campo realizada em 21/11/2026 com 10 eventos válidos e 1 descarte pré-cálculo (`X01`). | Registros consolidados e calculados com sucesso (mediana 3,34 min, Nota 3). |
-| 11 | M6.2 | O método do sorteio, que a Fase 3 manda registrar, não consta na coleta. A tabela de ameaças de [Método de Avaliação](../fase3/1-metodo.md) fala em “20 primeiros itens do catálogo”, o que diverge do sorteio previsto nos procedimentos. | Registrar o método do sorteio e corrigir o texto do método. |
-| 12 | Todas | Não há registro da auditoria de 10% dos registros por segundo avaliador, e a coluna de revisor está “A definir” em várias versões do histórico. | Realizar e registrar a auditoria. |
-
-<p class="legenda">Tabela 13. Anomalias e limitações dos registros. Fonte: elaboração própria (2026).</p>
-
----
-
 ## Referências
 
 [1] ISO. *ISO/IEC 25040:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*. Geneva: ISO, 2011.

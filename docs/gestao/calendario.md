@@ -118,7 +118,7 @@ A milestone **Correção Entrega 1** foi instituída para executar o plano de me
 
 A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo de 5 frentes de trabalho estruturantes:
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-10" width="600" height="350" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-10" width="600" height="350" frameborder="0"></iframe>
 
 #### Detalhamento das Tarefas da Correção da Entrega 1
 
@@ -131,7 +131,7 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 
 **Cálculo da Taxa de Conclusão da Correção:**
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
 
 *Cálculo feito apenas sobre as issues abertas e fechadas até o momento*
 
@@ -140,7 +140,7 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 Diferentemente da Entrega 1, o gráfico de *burndown* da fase de correção reflete uma taxa de consumo de escopo progressiva, à medida que os artefatos foram revisados, documentados e submetidos via Pull Request:
 
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-1" width="450" height="200" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-1" width="450" height="200" frameborder="0"></iframe>
 
 </details>
 

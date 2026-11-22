@@ -74,11 +74,11 @@ Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia ge
 
 ### 5.2. Correção Entrega 1
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-8" width="1000" height="650" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-8" width="1000" height="650" frameborder="0"></iframe>
 
 ### 5.3. Entrega 2
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-8" width="1000" height="550" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-8" width="1000" height="550" frameborder="0"></iframe>
 
 Na milestone **Entrega 1**, os tempos refletem registros retroativos e não representam a duração real do desenvolvimento. 
 

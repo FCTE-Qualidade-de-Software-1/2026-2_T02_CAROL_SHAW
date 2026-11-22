@@ -169,15 +169,15 @@ A M5.2 é apurada somente com paradas, pela restrição registrada na ficha da m
 
 ### Julgamento dos Objetivos
 
-O veredito de cada objetivo de medição (G1 a G6) adota o **critério conservador (pior nota obtida entre suas métricas filhas)**, evitando que falhas críticas fiquem ocultas por médias aritméticas. A padronização da contagem e o protocolo de contabilização tabular e evidência por exceção que alimentam este veredito são detalhados no **[Método de Avaliação da Fase 3](../fase3/1-metodo.md#2-como-o-metodo-funciona-fluxo-de-utilizacao)**.
+O veredito de cada objetivo de medição ($G_k$) adota o **critério conservador**, formalizado matematicamente pela função da pior nota obtida entre suas métricas filhas: $V(G_k) = f(\min(\text{notas filhas}))$, evitando que falhas críticas fiquem ocultas por médias aritméticas. A padronização da contagem e o protocolo de contabilização tabular e evidência por exceção que alimentam este veredito são detalhados no **[Método de Avaliação da Fase 3](../fase3/1-metodo.md#2-como-o-metodo-funciona-fluxo-de-utilizacao)**.
 
 A pior nota respeita a ordem da escala ordinal. Para julgar o objetivo, todas as métricas filhas e os casos obrigatórios devem estar avaliados. Caso contrário, registrar **Não avaliado (dados incompletos)**, mantendo visíveis as notas e falhas observadas.
 
-| Pior nota nas métricas do objetivo | Veredito do Objetivo | Ação Recomendada |
-| :--- | :--- | :--- |
-| Apenas notas 3 e 4 | **Satisfeito** | Operação regular e estável. |
-| Pelo menos uma nota 2 | **Satisfeito com Ressalvas** | Abertura de *issue* corretiva; não inviabiliza o uso imediato, mas exige melhoria. |
-| Pelo menos uma nota 1 | **Não Satisfeito** | Funcionalidade comprometida criticamente; exige correção imediata (*hotfix*). |
+| Operador Matemático | Pior nota nas métricas filhas | Veredito do Objetivo | Ação Recomendada |
+| :---: | :--- | :--- | :--- |
+| $\min(\text{notas}) \in \{3, 4\}$ | Apenas notas 3 e 4 | **Satisfeito** | Operação regular e estável. |
+| $\min(\text{notas}) = 2$ | Pelo menos uma nota 2 | **Satisfeito com Ressalvas** | Abertura de *issue* corretiva; não inviabiliza o uso imediato, mas exige melhoria. |
+| $\min(\text{notas}) = 1$ | Pelo menos uma nota 1 | **Não Satisfeito** | Funcionalidade comprometida criticamente; exige correção imediata (*hotfix*). |
 
 <p class="legenda">Tabela 6. Veredito dos objetivos de medição pelo critério conservador. Fonte: elaboração própria (2026).</p>
 
@@ -212,3 +212,4 @@ Não se calcula nota global do aplicativo: as três características são aprese
 | 04  | Vínculo com a fundamentação das métricas e correção do patamar de crashes do Android vitals (1,09%) | [Pedro Ramos](https://github.com/PedroRSR) | 13/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
 | 05  | Inclusão de links cruzados e rastreabilidade com a Fase 3 (Planejamento, Método, Procedimentos e Recursos) e âncoras para métricas | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
 | 06  | Justificativa dos limiares alinhada à tabela de notas, regra para amostras pequenas, nota de M5.2, julgamento por característica, legendas das tabelas e nome único de M4.1 | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 07  | Formalização matemática do critério conservador com operador min(notas) (#36) | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | — | — |

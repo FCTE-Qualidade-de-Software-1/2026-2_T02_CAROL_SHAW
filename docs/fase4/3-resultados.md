@@ -154,24 +154,24 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 ---
 
-## 6. Recomendações priorizadas
+## 6. Recomendações de melhoria para o DF no Ponto
 
-**Critério:** prioridade **Alta** para o que impede um veredito ou afeta a decisão central do projeto; **Média** para correção de defeito observado ou de evidência; **Baixa** para ampliação de cobertura em ciclos futuros.
+As recomendações abaixo são para a equipe do aplicativo e se baseiam nos testes feitos nesta avaliação.
 
-| ID | Prioridade | Responsável | Métrica / Objetivo | Diagnóstico | Ação recomendada |
-| :---: | :---: | :--- | :--- | :--- | :--- |
-| **REC-01** | **Alta** | Equipe de avaliação | `M5.1` · G5 · D3 | Nenhum par previsão/chegada coletado; pendências de campo (paradas, dias, janelas) na Fase 3. | Executar os 10 eventos em dois blocos e duas linhas, informando mediana, mínimo, máximo e $n$ válido. |
-| **REC-02** | **Alta** | Equipe de avaliação | `M1.2` · G1 · D1 | Caso de Android 9 sem registro; redução de amostra não formalizada. | Registrar o caso como *Não observável* ou *Defeito*, com a evidência da recusa de instalação, atualizar a ficha de `M1.2` e a tabela de notas possíveis, e recalcular `G1`. |
-| **REC-03** | **Média** | Equipe de desenvolvimento do app | `M1.1` · G1 · D1 | Defeitos em fonte 200% nas telas de busca e de detalhes de parada (`T01-C03`, `T04-C03`); índice no limite da Nota 3. | Descrever a causa a partir das capturas e corrigir o dimensionamento com escala de fonte ampliada (WCAG 2.1, critério 1.4.4), incluindo teste nessas telas. |
-| **REC-04** | **Média** | Equipe de avaliação | `M5.2` · G5 · D3 | `P02` a 29 m do limite; distância por medição visual com IA; sem registro do GPSTest. | Anexar o registro do GPSTest, confirmar a distância por coordenadas ou escala conhecida e declarar o uso de IA. |
-| **REC-05** | **Média** | Equipe de avaliação | Todas · auditoria | Datas inválidas (`M6.2`), ligações e horários de `M4.2`, valor “A definir” (`M2.1-01`), datas de `M2.2`, evidência de `M1.2` fora do padrão, gravações de `M3` não arquivadas. | Sanar os registros da Tabela 13 de [Análise de Dados](2-analise.md) e realizar a **auditoria de 10%** por segundo avaliador. |
-| **REC-06** | **Média** | Equipe de avaliação | `M6.2` · G6 | Método do sorteio não registrado; texto de [Método de Avaliação](../fase3/1-metodo.md) fala em “20 primeiros itens”. | Registrar o método do sorteio, arquivar os PDFs do relatório e corrigir o texto do método. |
-| **REC-07** | **Baixa** | Equipe de avaliação | `M3.1` / `M3.2` · G3 | Sessões de 2 min 30 s em um aparelho. | Em reavaliação futura, usar sessões de 5 min ou mais e aparelhos adicionais. |
-| **REC-08** | **Baixa** | Equipe de avaliação / Semob-DF | `M1.2` · `M6.2` | Faixa Android 10–12 sem verificação; catálogo auditado só em dia útil e em uma data. | Ampliar versões de Android e incluir linhas de fim de semana e feriados em ciclo futuro. |
+**Prioridade:** **Alta** é o que pode fazer o passageiro tomar uma decisão errada sobre a viagem. **Média** é um problema que apareceu nos testes. **Baixa** é uma melhoria que não corrige defeito, mas pode ajudar no futuro.
 
-<p class="legenda">Tabela 6. Recomendações priorizadas. Fonte: elaboração própria (2026).</p>
+| ID | Prioridade | Problema para o passageiro | O que os testes mostraram | O que melhorar | Métrica |
+| :---: | :---: | :--- | :--- | :--- | :---: |
+| **REC-01** | **Alta** | O app pode mostrar um horário errado de chegada do ônibus quando perde o sinal dele. | Na linha `0.089`, o sinal se perdeu em todos os eventos observados (4 de 4). O erro típico foi de 14 min e o maior foi de 39 min. Em dois casos, o ônibus sumiu da lista e entrou outro horário no lugar (31 min e 24 min). Na linha `933.4`, sem perda de sinal, o erro típico foi de menos de 1 min. | Manter o ônibus na lista com um aviso, como "sem sinal há X min". Deixar claro quando o horário é de tabela e não em tempo real. Descobrir por que o sinal se perde nessa linha. | `M5.1` |
+| **REC-02** | **Média** | O horário previsto para ônibus ainda longe é pouco confiável, e o app não avisa isso. | A previsão inicial errou em média 3,3 min. A última previsão antes da chegada errou 1,2 min. | Avisar que a previsão de ônibus distantes é aproximada e vai se ajustando conforme ele chega perto. | `M5.1` |
+| **REC-03** | **Média** | Com a letra do celular bem grande, duas telas ficam com problema. | Com a letra no tamanho máximo (200%), falharam a tela de resultado da busca e a de detalhes da parada. Foram 2 falhas em 20 testes. Os outros 18 passaram. | Ajustar essas duas telas para a letra grande não quebrar o layout. Testar com letra grande a cada nova versão. A causa exata ainda deve ser conferida nas capturas de tela. | `M1.1` |
+| **REC-04** | **Média** | Uma parada pode estar um pouco fora do lugar real no mapa. | A parada `P02` ficou a 29 m do lugar real, quase no limite aceito (30 m). As outras 4 ficaram a no máximo 5 m. A medida foi feita nas imagens, com ajuda de IA, então pode ter pequena imprecisão. | Conferir a posição de `P02` pelas coordenadas e corrigir o cadastro se o erro se confirmar. Conferir também as outras paradas. | `M5.2` |
+| **REC-05** | **Média** | O passageiro não sabe há quanto tempo a posição do ônibus foi atualizada. | A posição atualiza a cada cerca de 1 min. A informação de "última atualização" só aparece na tela de detalhes da viagem. Esse atraso não foi medido nos testes. | Mostrar a hora da última atualização também no mapa e na lista de horários. Ver se dá para atualizar com mais frequência. | `M5.1` `M5.2` |
+| **REC-06** | **Baixa** | Não dá para saber se o app funciona bem em celulares com Android mais antigo. | O app só foi testado no Android 13. Nos emuladores de versões mais antigas, a instalação foi recusada, porque o app é feito só para um tipo de processador (ARM) e os emuladores usavam outro. Isso não prova defeito nas versões antigas. | Informar a versão mínima de Android aceita e continuar testando nas versões antigas (Android 9 a 12). Avaliar criar uma versão para outros processadores, para facilitar os testes. | `M1.2` |
+| **REC-07** | **Baixa** | Sem internet, o app não mostra nada útil. | Quando a internet ou o GPS caíram, o app avisou em até 5 s e voltou ao normal em até 30 s, sem travar, nos 10 testes de cada. O app não funciona sem internet. | Melhoria opcional: guardar no celular o que não muda (favoritos, horários de tabela, rotas recentes) para consultar sem internet, avisando que não são dados em tempo real. | `M4.1` `M4.2` |
 
-As recomendações **REC-01 e REC-02** têm precedência porque fecham os dois objetivos sem veredito (`G5` e `G1`) e, com eles, as características Adequação Funcional e Portabilidade.
+**O que já está bom e deve ser mantido:** instalação sem erros, app sem travamentos nos testes, avisos quando a internet ou o GPS caem, lista de linhas igual à da Semob-DF na amostra e tarefas principais funcionando.
+
 
 ---
 
@@ -181,8 +181,7 @@ Os resultados seguem as ameaças previstas em [Método de Avaliação](../fase3/
 
 | Dimensão | Ameaça observada | Tratamento | Limitação residual |
 | :--- | :--- | :--- | :--- |
-| **Interna** | Registros com datas inválidas, horários repetidos, ligações quebradas e campos “A definir”; auditoria de 10% sem registro; uso de IA na medição de `M5.2`. | Estados formais por caso; inconsistências listadas na Tabela 13 de [Análise de Dados](2-analise.md); nenhum defeito excluído. | A correção de `M4.2` e a conferência das evidências dependem da auditoria. |
-| **Externa** | Amostras pequenas e intencionais (2 a 20 casos); um único aparelho por ensaio; só Android 13; catálogo auditado em dia útil e uma data; veículos fora de `M5.2`. | Contagem junto de cada nota; resultados tratados como indicativos. | Não se estimam taxas da população de usuários, nem se generaliza para outras versões, aparelhos ou linhas. |
+| **Externa** | Amostras pequenas e intencionais (2 a 20 casos); um único aparelho por ensaio; só Android 13; catálogo auditado em dia útil e uma data. | Contagem junto de cada nota; resultados tratados como indicativos. | Não se estimam taxas da população de usuários, nem se generaliza para outras versões, aparelhos ou linhas. |
 | **Construto** | `M2.2` só vê armazenamento compartilhado; `M6.2` mede presença no catálogo, não a qualidade da oferta de transporte; `M3` com exposição reduzida. | Limites declarados em cada ficha. | Resíduos em áreas privadas, qualidade da oferta e falhas raras em uso longo não são observáveis. |
 | **Conclusão** | Notas muito sensíveis a um caso (`M1.1` no limite, `M5.2` com `P02` a 29 m, faixas sem Nota 3); predominância da Nota 4. | Limiares fixados antes da coleta, pior nota, sem médias, tabela de sensibilidade. | Os vereditos de `G1` e `G5` permanecem abertos até `M1.2` e `M5.1`. |
 

@@ -4,11 +4,12 @@
 
 A gestão interna do projeto é realizada com a ajuda do Framework de Medição PSM-CID (Practical Software and Systems Measurement - Continuous Iterative Development), que utiliza evidências do [repositório](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW) Git, como Milestones, Issues, Commits, Pull Requests e Projects (quadro Kanban), para auxiliar no monitoramento da equipe com o objetivo de melhorar o desenvolvimento do projeto.
 
-O acompanhamento da equipe utiliza 3 (três) categorias de medição. Elas são:
+O acompanhamento da equipe utiliza 4 (quatro) áreas de medição e controle. Elas são:
 
 - [Calendário e Progresso:](calendario.md) monitora se o escopo definido para o ciclo de desenvolvimento (Milestone) está sendo entregue no prazo estipulado.
-- [Recursos e Custos:](recursos.md) monitora o esforço estimado investido no projeto por cada membro da equipe em horas trabalhadas.
+- [Recursos e Custos:](recursos.md) monitora o esforço investido no projeto por cada membro da equipe em horas trabalhadas e a valoração econômica correspondente.
 - [Desempenho do Processo:](desempenho.md) mede o tempo com que a equipe consegue finalizar uma tarefa, identificando falhas no fluxo de trabalho.
+- [Acompanhamento do Projeto:](acompanhamento.md) consolida a visão integrada das entregas, status das atividades e registro dos riscos e melhorias do ciclo.
 
 ## 2. Fluxo de Trabalho
 
@@ -24,3 +25,4 @@ Para a organização do fluxo de trabalho, utilizamos o GitHub Projects em forma
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Pedro Ramos](https://github.com/PedroRSR) | Criação da página de Visão Geral da Gestão do Projeto | 08/11/2026 | [8dccfce](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/8dccfced583a70105ffb8a9a89e44cb7c1ff720b) |
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Atualização e alinhamento das 4 áreas de medição do PSM-CID | 22/11/2026 | [commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/) |

@@ -33,7 +33,7 @@ Quantifica a soma das horas efetivamente dedicadas pela equipe para a conclusão
 ### 2.3. Taxa de Variação de Esforço (`Ve`)
 Mede o desvio percentual entre o tempo planejado e o tempo executado. É aplicada apenas a tarefas concluídas:
 
-> `Variação do Esforço (%) = (|Esforço Realizado - Esforço Estimado| / Esforço Estimado) * 100`
+> `Variação do Esforço (%) = ((Esforço Realizado - Esforço Estimado) / Esforço Estimado) * 100`
 
 *Nota: Se o esforço estimado for igual a 0, a variação é classificada como **Não Aplicável (N/A)**.*
 
@@ -94,13 +94,13 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Cor
 
 ### 7.1. Apuração de Esforço por Issue
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-11" width="1000" height="630" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-11" width="1000" height="630" frameborder="0"></iframe>
 
 ### 7.2. Consolidação dos Dados da Milestone
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
 - **Esforço Estimado do Escopo Concluído:** 21h
 - **Esforço Realizado Acumulado:** 21,5h
@@ -114,13 +114,13 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone Entreg
 
 ### 8.1. Apuração de Esforço por Issue
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-11" width="1000" height="630" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-11" width="1000" height="630" frameborder="0"></iframe>
 
 ### 8.2. Consolidação dos Dados da Milestone
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-6" width="450" height="300" frameborder="0"></iframe>
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
 - **Esforço Estimado do Escopo Concluído:** Em apuração (Milestone ativa)
 - **Esforço Realizado Acumulado:** Em apuração (Milestone ativa)

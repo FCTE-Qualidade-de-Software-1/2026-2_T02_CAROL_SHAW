@@ -102,10 +102,10 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Cor
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
-- **Esforço Estimado do Escopo Concluído :** {Soma dos He das issues concluídas}h
-- **Esforço Realizado Acumulado :** {Soma dos Hr das issues concluídas}h
-- **Variação Global do Esforço :** {Resultado da fórmula}%
-- **Custo Financeiro Equivalente Acumulado:** R$ Et * 50,00
+- **Esforço Estimado do Escopo Concluído:** 21h
+- **Esforço Realizado Acumulado:** 21,5h
+- **Variação Global do Esforço:** +2,38%
+- **Custo Financeiro Equivalente Acumulado:** R$ 1.075,00
 
 
 ## 8. Entrega 2
@@ -122,15 +122,15 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone Entreg
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=1794398235289&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
-- **Esforço Estimado do Escopo Concluído :** {Soma dos He das issues concluídas}h
-- **Esforço Realizado Acumulado :** {Soma dos Hr das issues concluídas}h
-- **Variação Global do Esforço :** {Resultado da fórmula}%
-- **Custo Financeiro Equivalente Acumulado:** R$ Et * 50,00
+- **Esforço Estimado do Escopo Concluído:** Em apuração (Milestone ativa)
+- **Esforço Realizado Acumulado:** Em apuração (Milestone ativa)
+- **Variação Global do Esforço:** Em apuração
+- **Custo Financeiro Equivalente Acumulado:** Em apuração
 
 
 ## 9. Avaliação dos Critérios de Decisão
 
-Com base na variação apurada de **{Resultado do Ve}%**:
+Com base na variação apurada de **+2,38% (Faixa Verde)** na Correção da Entrega 1:
 
 - **Abaixo ou igual a 10%:** Acurácia adequada nas estimativas da equipe. O planejamento inicial reflete a capacidade real de execução.
 - **Entre 10,1% e 20%:** Faixa de atenção. A equipe acompanha o desvio para entender os motivos da divergência e avaliar ajustes nas próximas milestones.
@@ -144,3 +144,4 @@ Com base na variação apurada de **{Resultado do Ve}%**:
 | [Vitor Bessa](https://github.com/bessazs) | Adição dos gráficos de horas por membros, horas de milestone e tabela de esforço por issue | 11/11/2026|[6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
 | [Vitor Bessa](https://github.com/bessazs) | Adição do conteúdo da Entrega 2 | 15/11/2026|[0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600)|
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Saneamento dos dados consolidados da Correção da Entrega 1 (#37) | 22/11/2026 | — |

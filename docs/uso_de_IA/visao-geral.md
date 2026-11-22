@@ -64,7 +64,7 @@ Nesta seção, o uso da IA é descrito por fase e em conformidade com o padrão 
 
 | ID  | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
-| 01  | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | — | — |
-| 02  | Reorganização de localização da página no portal | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | — | — |
-| 03  | Consolidação do ecossistema de LLMs (ChatGPT, Claude, Gemini) com foco em produtividade | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | — | — |
+| 01  | Criação inicial do documento | [Bessa](https://github.com/bessazs) | 17/10/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 |
+| 02  | Reorganização de localização da página no portal | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 |
+| 03  | Consolidação do ecossistema de LLMs (ChatGPT, Claude, Gemini) com foco em produtividade | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 |
 | 04  | Preenchimento da seção 3 (uso da IA nas Fases 1 a 4) | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 | — | — |

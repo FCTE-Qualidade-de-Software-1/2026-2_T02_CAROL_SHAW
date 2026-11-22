@@ -6,7 +6,51 @@ Reunir os registros da execução dos procedimentos definidos na Fase 3 para as 
 
 ## Organização dos registros
 
-Os dados são organizados por métrica, seguindo os procedimentos e os recursos previstos na [Fase 3](../fase3/introducao.md). Cada registro identifica os casos avaliados e apresenta seus resultados e evidências.
+Os dados de coleta são organizados por métrica, seguindo os procedimentos, parâmetros e recursos operacionais previstos na [Fase 3](../fase3/introducao.md). 
+
+Para assegurar a rastreabilidade e a auditabilidade exigidas pelo processo (atividade C11), todos os registros da avaliação estruturam-se segundo a seguinte padronização de campos:
+
+- **ID:** Identificador unívoco do ensaio ou observação (ex: `M1.1-01`).
+- **Caso:** Identificador do cenário ou caso de teste associado (ex: `T01-C01`, `CHEGADA01`).
+- **Avaliador:** Nome do membro da equipe responsável pela condução e registro do ensaio.
+- **Data/hora:** Timestamp da execução da coleta em campo ou em ambiente controlado.
+- **Ambiente:** Dispositivo físico ou Máquina Virtual (AVD) utilizada, com versão do SO e resolução.
+- **Estado:** Classificação do resultado frente ao critério de aceitação (`Conforme`, `Não Conforme` ou `Excluído`).
+- **Valor medido:** Medida quantitativa ou qualitativa observada (tempo em segundos, distância em metros, booleanos, contagens).
+- **Evidência:** Nome do artefato comprobatório (captura de tela ou gravação de vídeo mantida em repositório).
+- **Observações:** Notas contextuais, desvios operacionais ou justificativas técnicas de exclusão amostral.
+
+---
+
+## Auditoria e Consolidação da Coleta (C11)
+
+A atividade **C11** realizou a auditoria de integridade, consolidação das evidências e conferência amostral dos registros da Fase 4:
+
+### 1. Rastreabilidade de Evidências e Resolução de Pendências
+- **Rastreabilidade:** Todos os 128 registros apontam diretamente para artefatos comprobatórios armazenados no repositório sob o diretório [`dados/fase4/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/tree/main/dados/fase4) (fotos de paradas, capturas de tela, arquivos de *logcat*, relatórios de *diff* e gravações em vídeo das sessões).
+- **Resolução de Pendências:** Nenhum caso permaneceu em estado "Pendente". Todos os ensaios foram finalizados e classificados tecnicamente como Conformes, Defeitos ou Excluídos fundamentados.
+
+### 2. Quadro Consolidado de Amostra por Métrica
+
+| Métrica | Amostra Prevista | Executados | Válidos | Conformes | Defeitos / Exclusões | Status da Coleta |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **M1.1** (Telas/Hardware) | 20 | 20 | 20 | 15 | 5 defeitos visuais | Concluída (100%) |
+| **M1.2** (Versões SO) | 3 | 4 | 1 | 1 | 3 excluídos (filtro x86 na Play Store) | Concluída com restrição amostral |
+| **M2.1** (Instalação) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
+| **M2.2** (Resíduo) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
+| **M3.1** (Crashes) | 20 | 20 | 20 | 20 | 0 defeitos | Concluída (100%) |
+| **M3.2** (Congelamentos) | 20 | 20 | 20 | 20 | 0 defeitos | Concluída (100%) |
+| **M4.1** (Perda de Rede) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
+| **M4.2** (Perda de GPS) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
+| **M5.1** (Erro Chegada) | 10 | 11 | 10 | 7 ($\le 5$ min) | 1 excluído (evento X01 sem foto) | Concluída (100%) |
+| **M5.2** (Posição Paradas) | 5 | 5 | 5 | 5 | 0 defeitos | Concluída (100%) |
+| **M6.1** (Tarefas Essenciais) | 8 | 8 | 8 | 8 | 0 defeitos | Concluída (100%) |
+| **M6.2** (Completude Banco) | 20 | 20 | 20 | 20 | 0 defeitos | Concluída (100%) |
+
+### 3. Parecer da Auditoria Amostral (10%)
+Foi realizada a conferência amostral independente de mais de 10% dos registros de cada métrica, confrontando cada linha da tabela com os arquivos brutos em `dados/fase4/`. Constatou-se conformidade integral entre as evidências físicas registradas e os valores lançados nas tabelas de coleta, atestando a auditabilidade completa do processo sem necessidade de consulta externa ao avaliador.
+
+---
 
 ### M1.1 — Adaptabilidade de hardware
 
@@ -493,3 +537,5 @@ Em que $L_c = 20$ corresponde aos itens da amostra encontrados no app com códig
 | 1.3 | Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação. | [Pedro Ramos](https://github.com/PedroRSR) | 19/11/2026 | A definir | — |
 | 1.4 | Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências. | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |
 | 1.5 | Inclusão das seções M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M5.1 E M6.1 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 | A definir | — |
+| 1.6 | Auditoria C11: conferência da integridade das colunas e formalização do dicionário de registros | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 |
+| 1.7 | Auditoria C11: consolidação das evidências, parecer amostral (10%) e quadro de quantitativos | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 |

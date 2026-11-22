@@ -47,6 +47,22 @@ As **Questões Norteadoras Transversais** atuam como bússolas conceituais que g
    *As informações de rotas, itinerários, horários previstos e geolocalização apresentadas pelo aplicativo correspondem à realidade da operação nas ruas com precisão suficiente para que o cidadão planeje sua viagem com segurança?*  
    $\rightarrow$ **Desdobramento:** Orienta a Decisão **D3**, originando os objetivos [**G5**](#g5) (Correção Temporal e Espacial) e [**G6**](#g6) (Completude da Base e Tarefas Essenciais).
 
+### 1.2. Decisões Apoiadas da Avaliação (D1, D2 e D3)
+
+Conforme estabelecido pela norma ISO/IEC 25040, o processo de avaliação de software deve produzir evidências para orientar decisões concretas das partes interessadas. Nesta avaliação, as metas do projeto apoiam três decisões estratégicas:
+
+1. <a id="d1"></a>**D1 — Viabilidade de Acesso Universal e Suporte a Dispositivos (Portabilidade):**  
+   Decisão sobre a capacidade do aplicativo de funcionar adequadamente na diversidade de aparelhos e versões de Android utilizados pela população do Distrito Federal, assegurando que o app rode em modelos de entrada sem distorções visuais e sem deixar resíduos de armazenamento após a desinstalação.  
+   $\rightarrow$ **Objetivos associados:** [**G1**](#g1) (Adaptabilidade de Hardware e SO) e [**G2**](#g2) (Sucesso de Instalação e Limpeza de Resíduos).
+
+2. <a id="d2"></a>**D2 — Confiabilidade Operacional em Cenários Críticos de Uso (Confiabilidade):**  
+   Decisão sobre a estabilidade do aplicativo durante o uso em trânsito, avaliando se o sistema evita fechamentos inesperados (*crashes*) e travamentos prolongados de tela (*ANRs* $> 5\text{ s}$), mantendo o usuário informado mesmo durante quedas de rede móvel ou indisponibilidade de GPS.  
+   $\rightarrow$ **Objetivos associados:** [**G3**](#g3) (Maturidade contra Falhas) e [**G4**](#g4) (Tolerância a Perdas de Conexão e Localização).
+
+3. <a id="d3"></a>**D3 — Precisão e Utilidade Pública das Informações de Transporte (Adequação Funcional):**  
+   Decisão sobre a exatidão dos dados fornecidos ao passageiro em comparação aos registros oficiais da Semob-DF, determinando se as previsões de chegada e a geolocalização dos veículos no mapa possuem erro aceitável e se as rotas e funções essenciais estão completas.  
+   $\rightarrow$ **Objetivos associados:** [**G5**](#g5) (Correção Temporal e Espacial) e [**G6**](#g6) (Completude do Catálogo e Tarefas Essenciais).
+
 ---
 
 ## 2. Fundamentos do Modelo GQM
@@ -278,3 +294,4 @@ O desdobramento das metas conceituais resultou em 12 questões operacionais acom
 | 05 | Alinhamento das questões do GQM aos objetivos e adição de links internos| [Cristiano Morais](https://github.com/CristianoMoraiss) | 15/11/2026 | [Bessa](https://github.com/bessazs) | 18/11/2026 |
 | 06 | Inclusão de links cruzados e rastreabilidade bidirecional com a Fase 3 (Planejamento, Método, Procedimentos e Recursos) | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
 | 07 | Hipóteses reescritas em termos das métricas e dos limiares, ajuste dos pontos de vista de G2 e da finalidade de G6, diagrama de transição em Mermaid e legendas das tabelas | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 20/11/2026 |
+| 08 | Definição formal das Decisões Apoiadas (D1, D2 e D3) conforme ISO/IEC 25040 (#36) | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | — | — |

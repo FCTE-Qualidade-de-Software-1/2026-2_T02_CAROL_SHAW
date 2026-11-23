@@ -21,10 +21,10 @@ As notas de 1 a 4 são **ordinais**, portanto não há média entre métricas. C
 
 ### 1.2. Panorama
 
-- **11 das 12 métricas** têm dados; **`M5.1` não tem** nenhum registro e **`M1.2` tem amostra parcial** (1 versão do Android).
-- **9 métricas** receberam **Nota 4**, **1** recebeu **Nota 3** (`M1.1`) e nenhuma recebeu nota 1 ou 2.
-- Dos 6 objetivos, **4 ficaram Satisfeitos** (`G2`, `G3`, `G4` e `G6`) e **2 ficaram sem veredito definitivo** (`G1` e `G5`).
-- Das 12 hipóteses, 6 foram confirmadas, 2 refutadas, 3 verificadas em parte e 1 não pôde ser verificada.
+- **As 12 métricas** têm dados; **`M1.2` tem amostra parcial** (1 versão do Android).
+- **9 métricas** receberam **Nota 4**, **2** receberam **Nota 3** (`M1.1` e `M5.1`) e nenhuma recebeu nota 1 ou 2.
+- Dos 6 objetivos, **5 ficaram Satisfeitos** (`G2` a `G6`) e **1 ficou sem veredito definitivo** (`G1`).
+- Das 12 hipóteses, 7 foram confirmadas, 2 refutadas e 3 verificadas em parte.
 - Os resultados são **indicativos**: valem para a amostra, a versão, os aparelhos e o período observados, e não constituem certificação do aplicativo.
 
 ---
@@ -37,7 +37,7 @@ As notas de 1 a 4 são **ordinais**, portanto não há média entre métricas. C
 | **G2** — Instalabilidade | Portabilidade | **M2.1:** 10/10 → **Nota 4**<br>**M2.2:** 10/10 → **Nota 4** | $\min$ | **Satisfeito** |
 | **G3** — Maturidade | Confiabilidade | **M3.1:** 20/20 → **Nota 4**<br>**M3.2:** 20/20 → **Nota 4** | $\min$ | **Satisfeito** *(exposição reduzida)* |
 | **G4** — Tolerância a Falhas | Confiabilidade | **M4.1:** 10/10 → **Nota 4**<br>**M4.2:** 10/10 → **Nota 4** | $\min$ | **Satisfeito** |
-| **G5** — Correção | Adequação Funcional | **M5.1:** sem dados ($n = 0$)<br>**M5.2:** 5/5 → **Nota 4** | $\min$ | **Não avaliado (dados incompletos)** |
+| **G5** — Correção | Adequação Funcional | **M5.1:** mediana 3,34 min → **Nota 3**<br>**M5.2:** 5/5 → **Nota 4** | $\min$ | **Satisfeito** |
 | **G6** — Completude | Adequação Funcional | **M6.1:** 8/8 → **Nota 4**<br>**M6.2:** 20/20 → **Nota 4** | $\min$ | **Satisfeito** |
 
 <p class="legenda">Tabela 2. Vereditos dos objetivos G1 a G6. Fonte: elaboração própria (2026), com base em Análise de Dados.</p>
@@ -60,7 +60,7 @@ Nos 10 ensaios de queda de rede e nos 10 de perda de localização, o app perman
 
 ### G5 — Correção (Adequação Funcional)
 
-As cinco paradas ficaram dentro da tolerância de 30 m (`M5.2` = $1{,}00$, **Nota 4**), mas `P02` ficou a 29 m e a medição foi visual, com auxílio de IA. Já `M5.1` **não tem dados**: a precisão das previsões de chegada não foi medida. O objetivo **não pode ser julgado**.
+Em `M5.1`, a mediana do erro absoluto das 10 previsões válidas foi **3,34 min** (**Nota 3**); a hipótese de mediana até 5 min foi confirmada. O resultado varia bastante entre as linhas: a mediana foi 13,97 min na `0.089` (3 eventos, todos com perda de rastreio) e 0,95 min na `933.4` (7 eventos, sem perda). Em `M5.2`, as cinco paradas ficaram dentro da tolerância de 30 m (5/5, **Nota 4**), embora `P02` tenha ficado a 29 m e sua medição visual tenha sido feita com auxílio de IA. Pela pior nota, **G5 é Satisfeito na amostra**, com ressalva da variação observada em `M5.1` e da limitação da evidência de `M5.2`.
 
 ### G6 — Completude (Adequação Funcional)
 
@@ -80,7 +80,7 @@ As 8 tarefas essenciais foram concluídas e as 20 linhas sorteadas do Relatório
 | **Q3.2** — O sistema previne congelamentos superiores a 5 s? | **Sim, na janela observada.** 0 de 20 sessões com congelamento. | $M_{3.2} = 1{,}00$ · Nota 4 |
 | **Q4.1** — O app evita quebras, avisa e retoma após queda de conexão? | **Sim.** 10 de 10 ensaios com aviso em até 5 s e retomada em até 30 s, sem modo *offline* previsto. | $M_{4.1} = 1{,}00$ · Nota 4 |
 | **Q4.2** — O sistema reage apropriadamente à perda de GPS? | **Sim.** 10 de 10 ensaios: aviso, `TE01` e `TE04` disponíveis e posição retomada. | $M_{4.2} = 1{,}00$ · Nota 4 |
-| **Q5.1** — As previsões de chegada refletem a aproximação física? | **Não respondida.** Nenhum par previsão/chegada foi coletado. | $M_{5.1}$: sem dados |
+| **Q5.1** — As previsões de chegada refletem a aproximação física? | **Em parte, na amostra.** A mediana do erro foi 3,34 min (Nota 3), mas houve erros de até 38,97 min e diferença entre as linhas observadas. | $M_{5.1}$: 10 eventos válidos; mediana 3,34 min |
 | **Q5.2** — A posição das paradas no mapa coincide com a posição real? | **Sim, para as 5 paradas avaliadas** (3 a 29 m, tolerância de 30 m). A posição dos veículos não faz parte da métrica. | $M_{5.2} = 1{,}00$ · Nota 4 |
 | **Q6.1** — O catálogo de tarefas essenciais executa de ponta a ponta? | **Sim.** 8 de 8 tarefas conformes. | $M_{6.1} = 1{,}00$ · Nota 4 |
 | **Q6.2** — A base de linhas do app está sincronizada com a Semob-DF? | **Sim, na amostra.** 20 de 20 linhas sorteadas, com código, sentido e itinerário correspondentes. | $M_{6.2} = 1{,}00$ · Nota 4 |
@@ -95,7 +95,7 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 | Questão norteadora | Característica (prioridade) | Objetivos | Veredito |
 | :---: | :--- | :--- | :--- |
-| **QN3** — Fidelidade da informação e utilidade pública | **Adequação Funcional** (1) · D3 | G5: dados incompletos<br>G6: Satisfeito | **Não avaliada (dados incompletos)** |
+| **QN3** — Fidelidade da informação e utilidade pública | **Adequação Funcional** (1) · D3 | G5: Satisfeito<br>G6: Satisfeito | **Satisfeita na amostra** |
 | **QN2** — Resiliência operacional sob condições reais | **Confiabilidade** (2) · D2 | G3: Satisfeito<br>G4: Satisfeito | **Satisfeita** |
 | **QN1** — Universalidade e acesso equitativo | **Portabilidade** (3) · D1 | G1: dados incompletos<br>G2: Satisfeito | **Não avaliada (dados incompletos)** |
 
@@ -117,7 +117,7 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 > *O aplicativo entrega informações completas e fidedignas para planejar viagens com segurança?*
 
-**Resposta parcial.** Há evidência favorável quanto à **completude** (tarefas essenciais 8/8 e linhas 20/20) e quanto à **posição das paradas** (5/5). Falta a medida da **precisão do tempo de chegada** (`M5.1`), que é a informação de que o passageiro mais depende para decidir entre esperar e buscar alternativa. A posição dos veículos não foi avaliada por restrição de método. Enquanto `M5.1` não for coletada, a característica de maior prioridade do projeto permanece **Não avaliada (dados incompletos)**.
+**Resposta favorável, com ressalvas, na amostra.** Há evidência de completude (tarefas essenciais 8/8 e linhas 20/20), posição das paradas dentro da tolerância (5/5) e precisão do tempo de chegada com mediana de erro de 3,34 min (`M5.1`, Nota 3). Porém, os resultados de `M5.1` variam entre as linhas: na `0.089`, a mediana foi 13,97 min e houve perda de rastreio nos três eventos válidos; na `933.4`, a mediana foi 0,95 min e não houve perda nos sete eventos. A posição dos veículos não foi avaliada por restrição de método, e a conclusão se limita à amostra observada. Pela pior nota dos objetivos, a característica fica **Satisfeita na amostra**.
 
 ---
 
@@ -139,16 +139,16 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 ### D3 — Confiabilidade e utilidade dos dados de mobilidade *(Adequação Funcional)*
 
-- **Parecer:** **parcialmente favorável; parecer final suspenso até a medição da precisão do tempo.**
-- **Evidência favorável:** catálogo de linhas sincronizado com a Semob-DF na amostra (20/20), tarefas essenciais completas (8/8) e paradas bem posicionadas (5/5).
-- **Lacuna:** `M5.1` sem dados. Sem ela, não se pode afirmar que as previsões de chegada servem ao planejamento da viagem. A posição dos veículos exibida no app tem defasagem da ordem de um minuto e ficou fora da métrica.
-- **Decisão apoiada:** manter o processo de sincronização do catálogo e **concluir a coleta de campo de `M5.1`** antes de emitir o parecer de D3. Se `P02` (29 m) fosse reclassificada, `M5.2` cairia para a Nota 2.
+- **Parecer:** **favorável na amostra, com ressalvas sobre a variação dos erros de previsão e a evidência de posição.**
+- **Evidência favorável:** catálogo de linhas sincronizado com a Semob-DF na amostra (20/20), tarefas essenciais completas (8/8), paradas dentro da tolerância (5/5) e mediana de erro de chegada de 3,34 min em `M5.1` (Nota 3).
+- **Pontos de atenção:** em `M5.1`, a mediana foi 13,97 min na linha `0.089` (3 eventos, todos com perda de rastreio) e 0,95 min na linha `933.4` (7 eventos, sem perda). A posição dos veículos exibida no app tem defasagem da ordem de um minuto e ficou fora da métrica. `P02` ficou a 29 m do limite de 30 m e sua medição foi visual.
+- **Decisão apoiada:** manter o processo de sincronização do catálogo, investigar as perdas de rastreio na linha `0.089` e reforçar a evidência da medição de `M5.2`. O resultado de `M5.1` sustenta o objetivo na amostra, mas não permite generalização para outras linhas, horários ou condições.
 
 | Decisão | Parecer | Condição para fechamento |
 | :---: | :--- | :--- |
 | **D1** | Parcial: manter, com melhoria em fonte ampliada | Fechar `M1.2`; descrever e corrigir os defeitos de fonte 200% |
 | **D2** | Favorável na amostra: manter | Corrigir registros de `M4.2`; ampliar exposição em ciclo futuro |
-| **D3** | Parcialmente favorável: parecer final suspenso | Coletar `M5.1`; reforçar a evidência de `M5.2` |
+| **D3** | Favorável na amostra, com ressalvas | Investigar perdas de rastreio em `M5.1`; reforçar a evidência de `M5.2` |
 
 <p class="legenda">Tabela 5. Síntese dos pareceres para D1, D2 e D3. Fonte: elaboração própria (2026).</p>
 
@@ -162,8 +162,8 @@ As recomendações abaixo são para a equipe do aplicativo e se baseiam nos test
 
 | ID | Prioridade | Problema para o passageiro | O que os testes mostraram | O que melhorar | Métrica |
 | :---: | :---: | :--- | :--- | :--- | :---: |
-| **REC-01** | **Alta** | O app pode mostrar um horário errado de chegada do ônibus quando perde o sinal dele. | Na linha `0.089`, o sinal se perdeu em todos os eventos observados (4 de 4). O erro típico foi de 14 min e o maior foi de 39 min. Em dois casos, o ônibus sumiu da lista e entrou outro horário no lugar (31 min e 24 min). Na linha `933.4`, sem perda de sinal, o erro típico foi de menos de 1 min. | Manter o ônibus na lista com um aviso, como "sem sinal há X min". Deixar claro quando o horário é de tabela e não em tempo real. Descobrir por que o sinal se perde nessa linha. | `M5.1` |
-| **REC-02** | **Média** | O horário previsto para ônibus ainda longe é pouco confiável, e o app não avisa isso. | A previsão inicial errou em média 3,3 min. A última previsão antes da chegada errou 1,2 min. | Avisar que a previsão de ônibus distantes é aproximada e vai se ajustando conforme ele chega perto. | `M5.1` |
+| **REC-01** | **Alta** | A previsão pode ficar muito imprecisa quando o veículo perde o rastreio. | Na linha `0.089`, os 3 eventos válidos tiveram perda de rastreio; os erros foram 13,32, 13,97 e 38,97 min. Na linha `933.4`, não houve perda nos 7 eventos válidos (mediana de erro de 0,95 min). O evento excluído `X01` também teve perda de rastreio, mas não teve chegada observada e não entrou no cálculo. | Manter o veículo na lista com um aviso como "sem sinal há X min", identificar quando a previsão deixa de ser em tempo real e investigar as perdas de rastreio da linha `0.089`. | `M5.1` |
+| **REC-02** | **Média** | A mediana do erro esconde previsões com desvios grandes. | A mediana geral foi 3,34 min (Nota 3), mas 3 dos 10 eventos válidos tiveram erro superior a 10 min; o maior foi de 38,97 min. | Sinalizar quando a previsão estiver sujeita a grande incerteza ou desatualizada, sem apresentá-la como horário preciso. | `M5.1` |
 | **REC-03** | **Média** | Com a letra do celular bem grande, duas telas ficam com problema. | Com a letra no tamanho máximo (200%), falharam a tela de resultado da busca e a de detalhes da parada. Foram 2 falhas em 20 testes. Os outros 18 passaram. | Ajustar essas duas telas para a letra grande não quebrar o layout. Testar com letra grande a cada nova versão. A causa exata ainda deve ser conferida nas capturas de tela. | `M1.1` |
 | **REC-04** | **Média** | Uma parada pode estar um pouco fora do lugar real no mapa. | A parada `P02` ficou a 29 m do lugar real, quase no limite aceito (30 m). As outras 4 ficaram a no máximo 5 m. A medida foi feita nas imagens, com ajuda de IA, então pode ter pequena imprecisão. | Conferir a posição de `P02` pelas coordenadas e corrigir o cadastro se o erro se confirmar. Conferir também as outras paradas. | `M5.2` |
 | **REC-05** | **Média** | O passageiro não sabe há quanto tempo a posição do ônibus foi atualizada. | A posição atualiza a cada cerca de 1 min. A informação de "última atualização" só aparece na tela de detalhes da viagem. Esse atraso não foi medido nos testes. | Mostrar a hora da última atualização também no mapa e na lista de horários. Ver se dá para atualizar com mais frequência. | `M5.1` `M5.2` |
@@ -183,7 +183,7 @@ Os resultados seguem as ameaças previstas em [Método de Avaliação](../fase3/
 | :--- | :--- | :--- | :--- |
 | **Externa** | Amostras pequenas e intencionais (2 a 20 casos); um único aparelho por ensaio; só Android 13; catálogo auditado em dia útil e uma data. | Contagem junto de cada nota; resultados tratados como indicativos. | Não se estimam taxas da população de usuários, nem se generaliza para outras versões, aparelhos ou linhas. |
 | **Construto** | `M2.2` só vê armazenamento compartilhado; `M6.2` mede presença no catálogo, não a qualidade da oferta de transporte; `M3` com exposição reduzida. | Limites declarados em cada ficha. | Resíduos em áreas privadas, qualidade da oferta e falhas raras em uso longo não são observáveis. |
-| **Conclusão** | Notas muito sensíveis a um caso (`M1.1` no limite, `M5.2` com `P02` a 29 m, faixas sem Nota 3); predominância da Nota 4. | Limiares fixados antes da coleta, pior nota, sem médias, tabela de sensibilidade. | Os vereditos de `G1` e `G5` permanecem abertos até `M1.2` e `M5.1`. |
+| **Conclusão** | Notas sensíveis a um caso (`M1.1` no limite, `M5.2` com `P02` a 29 m, faixas sem Nota 3); diferença expressiva de erros de `M5.1` entre as duas linhas amostradas. | Limiares fixados antes da coleta, pior nota, sem médias entre notas, tabela de sensibilidade e apresentação dos resultados por linha. | `G1` permanece sem veredito até a resolução de `M1.2`; `G5` é satisfeito na amostra, mas `M5.1` não se generaliza para outras linhas ou condições. |
 
 <p class="legenda">Tabela 7. Ameaças à validade e limitações. Fonte: elaboração própria (2026).</p>
 
@@ -211,3 +211,4 @@ Os resultados seguem as ameaças previstas em [Método de Avaliação](../fase3/
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01 | Emissão dos vereditos dos objetivos, respostas às questões norteadoras, pareceres das decisões D1-D3 e recomendações da Fase 4 (#50) | [João Guilherme Capozzi](https://github.com/jonas3688) | 18/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 02 | Atualização com os dados coletados: vereditos de G1 a G6, respostas às questões, pareceres de D1 a D3, recomendações e ameaças à validade | [Pedro Ramos](https://github.com/PedroRSR) | 21/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
+| 03 | Atualização dos resultados, vereditos e recomendações de G5/D3 com os dados de M5.1 | [Pedro Ramos](https://github.com/PedroRSR) | 23/11/2026 | A definir | — |

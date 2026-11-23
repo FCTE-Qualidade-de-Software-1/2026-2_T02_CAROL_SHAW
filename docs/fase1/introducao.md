@@ -15,8 +15,6 @@ Nos arquivos desta fase, são abordados:
 - Uma **apresentação do DF no Ponto**, incluindo suas principais funções no contexto da mobilidade urbana — [Descrição do Produto](3-descricao.md), com a identificação do alvo da avaliação e as fronteiras de escopo;
 - A **justificativa da avaliação**, detalhando a análise de riscos técnicos e operacionais — [Justificativas](4-justificativa.md);
 - O modelo de qualidade ISO/IEC 25010, detalhando a seleção de características e subcaracterísticas (**Portabilidade, Confiabilidade e Adequação Funcional**) — [Modelo de Qualidade e Escopo](5-modelo.md);
-- A **tabela de contribuição dos membros da equipe** — [Tabela de contribuição](6-tabela_de_contribuicao.md);
-- A declaração do uso de **ferramentas de Inteligência Artificial** — [Uso de Ferramentas de IA](7-uso_de_IA.md).
 
 ## **Histórico de Versão**
 

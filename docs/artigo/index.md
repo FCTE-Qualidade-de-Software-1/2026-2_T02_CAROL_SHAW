@@ -27,10 +27,14 @@ O artigo acadêmico foi redigido no padrão oficial da Sociedade Brasileira de C
 
 - **Seção 1 — Introdução:** Contextualização da mobilidade urbana no Distrito Federal, motivação da escolha do DF no Ponto, problema de pesquisa e objetivos.
 - **Seção 2 — Referencial Teórico:** Normas ISO/IEC 25010 e ISO/IEC 25040, metodologia GQM e evidências da literatura sobre qualidade de aplicativos móveis.
-- **Seção 3 — Metodologia:** Condução do processo de avaliação em cinco atividades interligadas e definição do escopo técnico.
-- **Seção 4 — Fase 1: Requisitos da Avaliação:** Requisitos de qualidade, partes interessadas e justificativas técnicas.
-- **Seção 5 — Fase 2: Especificação da Avaliação:** Desdobramento GQM, formulação matemática das métricas, critérios de julgamento e funções de decisão.
-- **Apêndice A — Tabela de Contribuição da Equipe:** Distribuição de tarefas e papéis dos 6 integrantes.
+- **Seção 3 — Metodologia e Processo de Avaliação:** Condução do processo de avaliação estruturado nas quatro fases da ISO/IEC 25040 e definição do escopo técnico de caixa-preta.
+- **Seção 4 — Fase 1: Requisitos da Avaliação:** Propósito, decisões estratégicas apoiadas (D1–D3), questões norteadoras transversais (QN1–QN3), partes interessadas, alvo da avaliação, justificativas técnicas e alinhamento ao ODS 11 (meta 11.2).
+- **Seção 5 — Fase 2: Especificação da Avaliação:** Desdobramento GQM (G1–G6), questões operacionais, hipóteses preditivas, formulação matemática das 12 métricas padronizadas pela ISO/IEC 25023 e critérios conservadores de julgamento.
+- **Seção 6 — Fase 3: Projeto da Avaliação:** Método particionado em ensaios controlados de laboratório e medições de campo, inventário de recursos (DISP-01, DISP-02 e emuladores), catálogos fixos de tarefas e telas, e procedimentos de auditoria amostral.
+- **Seção 7 — Fase 4: Execução, Análise de Dados e Conclusão:** Resultados quantitativos das 12 métricas, teste das hipóteses, vereditos dos objetivos e características, pareceres para as decisões D1–D3, análise de sensibilidade e recomendações técnicas de melhoria (REC-01 a REC-07).
+- **Seção 8 — Conclusão:** Síntese dos achados, contribuições metodológicas e direções futuras.
+- **Declaração de Uso de Inteligência Artificial:** Transparência sobre o uso assistivo de modelos de linguagem e ferramentas de IA.
+- **Apêndice A — Tabela de Contribuição e Governança da Equipe:** Distribuição equitativa de responsabilidades e esforço dos 6 integrantes ao longo das quatro fases.
 
 ---
 
@@ -39,3 +43,5 @@ O artigo acadêmico foi redigido no padrão oficial da Sociedade Brasileira de C
 | ID  | Descrição | Autor | Data | Revisor | Data |
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01  | Criação da página do Artigo no portal MkDocs | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | — | — |
+| 02  | Atualização da estrutura do artigo para refletir as 4 fases consolidadas | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 23/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 23/11/2026 |
+

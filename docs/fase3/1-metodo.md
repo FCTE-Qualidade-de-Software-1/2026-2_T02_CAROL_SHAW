@@ -71,7 +71,7 @@ Como a avaliação é de caixa preta e usa amostragem intencional, os resultados
 | Sessões curtas em M3.1 e M3.2 (2 min 30 s cada, 50 min no total) | Menor tempo de exposição reduz a chance de observar crashes e congelamentos raros, favorecendo o resultado | Declarar a duração e o tempo total junto das notas; tratar os valores como indicativos para a janela observada |
 | Apenas três versões do Android em M1.2 | A faixa intermediária (Android 10 a 12) não é verificada | Declarar que a amostra cobre os extremos e o aparelho físico; não generalizar |
 | Emuladores em lugar de aparelhos físicos | Comportamento diferente do real em sensores e desempenho | Usar emuladores apenas em M1.1 e M1.2; identificar o ambiente em cada registro |
-| Seleção dos 20 primeiros itens do catálogo oficial (M6.2) | Amostra concentrada em parte do catálogo | Limitar a conclusão à amostra e à data de referência |
+| Seleção de 20 itens aleatórios do catálogo oficial (M6.2) | Amostra concentrada em parte do catálogo | Limitar a conclusão à amostra e à data de referência |
 | Dias e horários de campo limitados | Previsões medidas em condições de tráfego específicas | Registrar dia, horário e antecedência de cada previsão; informar a dispersão dos erros |
 
 <p class="legenda">Tabela 2. Ameaças à validade e tratamento adotado. Fonte: elaboração própria (2026).</p>

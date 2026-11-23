@@ -213,7 +213,7 @@ Definições: **crash** é encerramento inesperado do app. **Congelamento** é a
 
 #### M6.2 — Completude do banco (Lab)
 
-- **Amostra:** **20 linhas** do Relatório de Linhas da Semob-DF, 4 por bacia (01 a 05), sorteadas aleatoriamente. O sorteio usa só linhas com viagens em dia útil. Um código que aparece em mais de uma bacia entra uma vez só; se for sorteado de novo, sorteia-se outro. Método para realizar o sorteio fica registrado e os PDFs de origem ficam arquivados. Os itens são `A01` a `A20`.
+- **Amostra:** **20 linhas** do Relatório de Linhas da Semob-DF, 4 por bacia (01 a 05), sorteadas aleatoriamente com auxilio de IA. O sorteio usa só linhas com viagens em dia útil. Um código que aparece em mais de uma bacia entra uma vez só. Prompt a ser utilizado: "Selecione 4 linhas aleatórias de cada um desses documentos e me retorne somente o código dessas linhas separados por Bacia.". Os documentos são os relatórios presentes em https://www.semob.df.gov.br/dados-do-sistema-de-transporte-publico-do-df. Os itens são `A01` a `A20`.
 - **Passos:** buscar o código no app e conferir se a linha existe e se a denominação (origem/destino) bate com o relatório.
 - **Conforme se:** o código existe no app com a mesma denominação. Se o relatório mostra viagens de ida e de volta, o app deve mostrar os dois sentidos.
 - **Limite:** o resultado vale só para a amostra e a data. Não estima a cobertura de toda a malha.

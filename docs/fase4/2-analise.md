@@ -38,7 +38,7 @@ A Tabela 2 compara o previsto na Fase 3 com o que consta em [Coleta de Dados](1-
 | Métrica | Ambiente registrado | Previstos | Executados | Conformes | Defeitos | Não observáveis | Amostra válida | Situação |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **M1.1** | `DISP-02` · Android 13 | 20 casos | 20 | 15 | 5 | 0 | 20 | Completa |
-| **M1.2** | `DISP-02` · Android 13 | 2 a 3 versões | 1 | 1 | 0 | 0 | 1 | **Parcial** (sem registro de Android 9) |
+| **M1.2** | `DISP-02` · Android 13 e `EMU-01` a `EMU-03` · Android 9, 10 e 17 | 3 versões | 4 | 1 | 0 | 3 | 1 | **Parcial** (só Android 13 validado) |
 | **M2.1** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M2.2** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M3.1** | `DISP-02` · Android 13 | 20 sessões | 20 | 20 | 0 | 0 | 20 | Completa |
@@ -52,7 +52,7 @@ A Tabela 2 compara o previsto na Fase 3 com o que consta em [Coleta de Dados](1-
 
 <p class="legenda">Tabela 2. Amostras previstas, executadas e válidas. Fonte: elaboração própria (2026), com base em Coleta de Dados e Procedimentos de Execução.</p>
 
-Em todos os registros a versão do aplicativo é `5.25.1(1149)`, portanto não houve mistura de versões na mesma amostra. Nenhum caso foi classificado como **Não observável** ou **Pendente**. Em `M1.2`, o caso de Android 9 simplesmente não tem registro (seção 4.1).
+A versão do aplicativo avaliada foi `5.25.1(1149)`. Em `M1.2`, três tentativas em emulador foram classificadas como **Não observáveis**. Elas constam entre as quatro tentativas registradas e ficam fora da amostra válida.
 
 ---
 
@@ -78,25 +78,22 @@ $$
 M_{1.2} = \frac{O_s}{O_t} = \frac{1}{1} = 1{,}00 \quad \text{(resultado parcial)}
 $$
 
-- **Amostra executada:** 1 versão (Android 13, API 33, `DISP-02`), com as tarefas `TE01` a `TE08` concluídas sem erro de compatibilidade (registro `M1.2-01`, de 19/11/2026, 20:31).
-- **Amostra prevista:** a Fase 3 define Android 9, Android 13 e a versão do aparelho físico, que são **2 versões** quando o aparelho está no Android 13 (e 3 se [Recursos](../fase3/3-recursos.md) mantiver um segundo emulador). Os dois aparelhos estão no Android 13 e os emuladores disponíveis recusaram a instalação do app, conforme as pendências da Fase 3. **Não há registro do caso de Android 9** em `1-coleta.md`, nem como **Não observável** nem como **Defeito**, e a redução de amostra prevista em Recursos também não foi formalizada.
-- **Nota:** o valor calculado sobre a amostra efetiva é $1{,}00$ (Nota 4), mas é **provisório e restrito ao Android 13**. Pela regra 4 da Fase 2, o caso obrigatório sem classificação impede o veredito definitivo. Com $O_t \le 3$, só as notas 4 e 1 são atingíveis.
-- **Como a métrica se fecha:**
-    - Se a recusa de instalação no emulador for registrada como **Não observável** (ambiente não preparado) e a redução da amostra for formalizada, $M_{1.2} = 1/1 = 1{,}00$ (Nota 4), válida apenas para Android 13.
-    - Se for registrada como **Defeito** (incompatibilidade comprovada), $M_{1.2} = 1/2 = 0{,}50$ (Nota 1).
-- **Hipótese H1.2** ($M_{1.2} = 1{,}00$ nas versões testadas): **parcialmente verificada.** Vale para Android 13; legado e faixa intermediária (Android 10 a 12) não foram observados.
+- **Amostra prevista:** 3 versões, conforme [Procedimentos de Execução](../fase3/2-procedimentos.md#5-amostras-e-limitacao).
+- **Tentativas registradas:** no Android 13 (API 33, `DISP-02`), as tarefas `TE01` a `TE08` foram concluídas sem erro de compatibilidade em 20/11/2026 às 20:35. Em 21/11, a Play Store bloqueou a instalação nos emuladores de Android 9, 10 e 17 devido ao filtro de arquitetura (emuladores x86/x86_64, app distribuído para ARM). A [Coleta de Dados](1-coleta.md#m12-adaptabilidade-de-sistema-operacional) registra essas três tentativas como **Não observáveis**.
+- **Resultado parcial:** o denominador inclui apenas a versão válida. O valor $1{,}00$ descreve o Android 13 e a métrica fica sem nota definitiva para a cobertura planejada.
+- **Hipótese H1.2** ($M_{1.2} = 1{,}00$ nas versões testadas): **parcialmente verificada.** O resultado sustenta apenas a compatibilidade no Android 13.
 
 #### Veredito de G1
 
 | Métrica | Valor | Nota | Hipótese | Situação |
 | :--- | :---: | :---: | :--- | :--- |
 | **M1.1** | $15/20 = 0{,}75$ | **2** | H1.1 confirmada | Avaliada |
-| **M1.2** | $1/1 = 1{,}00$ (parcial) | *provisória (4)* | H1.2 parcialmente verificada | Amostra incompleta |
+| **M1.2** | $1/1 = 1{,}00$ (4 tentativas) | — | H1.2 parcialmente verificada | Amostra parcial (só Android 13) |
 | **G1** | — | — | — | **Não avaliado (dados incompletos)** |
 
 <p class="legenda">Tabela 3. Síntese de G1. Fonte: elaboração própria (2026).</p>
 
-A Nota 2 de `M1.1` limita o veredito de `G1` a **Satisfeito com Ressalvas** quando houver duas notas definitivas.
+A Nota 2 de `M1.1` registra o problema de acessibilidade nas telas. O veredito formal de `G1` fica **Não avaliado (dados incompletos)** porque só uma das três versões previstas para `M1.2` foi validada.
 
 ---
 
@@ -288,7 +285,7 @@ $$
 | Código | Métrica | Objetivo | Contagem | Valor | Nota | Hipótese | Veredito da hipótese |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- | :--- |
 | **M1.1** | Adaptabilidade de hardware | G1 | 15 / 20 | 0,75 | **2** | $M_{1.1} < 1{,}00$ (falha no mapa) | Confirmada |
-| **M1.2** | Adaptabilidade de SO | G1 | 1 / 1 *(de 2–3)* | 1,00 *(parcial)* | *provisória* | $M_{1.2} = 1{,}00$ | Parcialmente verificada |
+| **M1.2** | Adaptabilidade de SO | G1 | 1 / 1 *(4 tentativas)* | 1,00 *(parcial)* | — | $M_{1.2} = 1{,}00$ | Parcialmente verificada |
 | **M2.1** | Sucesso de instalação | G2 | 10 / 10 | 1,00 | **4** | $M_{2.1} = 1{,}00$ | Confirmada |
 | **M2.2** | Resíduo pós-desinstalação | G2 | 10 / 10 | 1,00 | **4** | $M_{2.2} < 1{,}00$ | Refutada |
 | **M3.1** | Sessões sem *crashes* | G3 | 20 / 20 | 1,00 | **4** | $M_{3.1} \ge 0{,}95$ | Confirmada |
@@ -326,7 +323,7 @@ Com amostras pequenas, um único caso pode mudar uma nota e o veredito do objeti
 | Métrica | Situação observada | O que mudaria a nota | Efeito no objetivo |
 | :--- | :--- | :--- | :--- |
 | **M1.1** | $15/20 = 0{,}75$, no limite da Nota 2 | Mais 1 defeito: $14/20 = 0{,}70$ → Nota 1 | A pior nota seria 1. O veredito formal de G1 depende da cobertura de M1.2. |
-| **M1.2** | $1/1$, com Android 9 sem registro | Android 9 como Defeito: $1/2 = 0{,}50$ → Nota 1 | G1 passaria a *Não Satisfeito* |
+| **M1.2** | $1/1$ no Android 13, com 3 tentativas não observáveis | Em um teste adicional válido, uma versão com defeito reduziria o índice a $1/2 = 0{,}50$, faixa da Nota 1 | O veredito de G1 depende da cobertura planejada de M1.2. |
 | **M2.1 / M2.2** | $10/10$, sem Nota 3 possível | 1 defeito → Nota 2 | G2 passaria a *Satisfeito com Ressalvas* |
 | **M3.1 / M3.2** | $20/20$ em sessões de 2 min 30 s | 2 sessões afetadas → Nota 1 (com 1 afetada, Nota 3) | G3 mudaria conforme a pior nota |
 | **M5.1** | Mediana $3{,}34$ min (Nota 3) | Mediana $> 5$ min → Nota 2 | G5 passaria a *Satisfeito com Ressalvas* (pior nota = 2) |

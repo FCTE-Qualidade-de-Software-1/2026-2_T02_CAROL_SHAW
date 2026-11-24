@@ -33,8 +33,8 @@ O artigo foi redigido em $\LaTeX$ no padrão da Sociedade Brasileira de Computa�
 - **Seção 6 — Fase 3: Projeto da Avaliação:** Método particionado em ensaios controlados de laboratório e medições de campo, inventário de recursos (DISP-01, DISP-02 e emuladores), catálogos fixos de tarefas e telas, e procedimentos de auditoria amostral.
 - **Seção 7 — Fase 4: Execução, Análise de Dados e Conclusão:** Resultados quantitativos das 12 métricas, teste das hipóteses, vereditos dos objetivos e características, pareceres para as decisões D1–D3, análise de sensibilidade e recomendações técnicas de melhoria (REC-01 a REC-07).
 - **Seção 8 — Conclusão:** Síntese dos achados, contribuições metodológicas e direções futuras.
+  - **Ação de Melhoria: Protótipos de Alta Fidelidade para Acessibilidade:** Propostas visuais de correção para os defeitos de leiaute identificados em fontes ampliadas, incluindo os protótipos das telas T01-C03 e T04-C03.
 - **Declaração de Uso de Inteligência Artificial:** Transparência sobre o uso assistivo de modelos de linguagem e ferramentas de IA.
-- **Apêndice A — Tabela de Contribuição e Governança da Equipe:** Distribuição equitativa de responsabilidades e esforço dos 6 integrantes ao longo das quatro fases.
 
 ---
 
@@ -44,4 +44,5 @@ O artigo foi redigido em $\LaTeX$ no padrão da Sociedade Brasileira de Computa�
 | :-: | :--- | :--- | :---: | :--- | :---: |
 | 01  | Criação da página do Artigo no portal MkDocs | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | — | — |
 | 02  | Atualização da estrutura do artigo para refletir as 4 fases consolidadas | [João Guilherme Fonseca](https://github.com/JoaoGuilherme14) | 23/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 23/11/2026 |
+| 03  | Inclusão da ação de melhoria em protótipos de acessibilidade e remoção da tabela de contribuição da estrutura | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 | — | — |
 

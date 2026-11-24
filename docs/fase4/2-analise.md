@@ -37,7 +37,7 @@ A Tabela 2 compara o previsto na Fase 3 com o que consta em [Coleta de Dados](1-
 
 | Métrica | Ambiente registrado | Previstos | Executados | Conformes | Defeitos | Não observáveis | Amostra válida | Situação |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **M1.1** | `DISP-02` · Android 13 | 20 casos | 20 | 18 | 2 | 0 | 20 | Completa |
+| **M1.1** | `DISP-02` · Android 13 | 20 casos | 20 | 15 | 5 | 0 | 20 | Completa |
 | **M1.2** | `DISP-02` · Android 13 | 2 a 3 versões | 1 | 1 | 0 | 0 | 1 | **Parcial** (sem registro de Android 9) |
 | **M2.1** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M2.2** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
@@ -63,14 +63,14 @@ Em todos os registros a versão do aplicativo é `5.25.1(1149)`, portanto não h
 #### M1.1 — Adaptabilidade de Hardware (Telas)
 
 $$
-M_{1.1} = \frac{T_s}{T_t} = \frac{18}{20} = 0{,}90
+M_{1.1} = \frac{T_s}{T_t} = \frac{15}{20} = 0{,}75
 $$
 
-- **Amostra:** 20 casos `T01`–`T05` × `C01`–`C04`, avaliados em 19/11/2026 (10:43 a 10:54) por Vitor Bessa no `DISP-02`, com a configuração aplicada por `adb`.
-- **Defeitos (2):** `T01-C03` (resultado da busca por `L01`) e `T04-C03` (detalhes de `P01`). Ambos ocorreram em retrato, `640 × 1136 px`, `320 dpi`, **fonte 200%**.
-- **Distribuição:** por configuração, `C01` 5/5, `C02` 5/5, **`C03` 3/5** e `C04` 5/5; por tela, `T01` 3/4, `T02` 4/4, `T03` 4/4, `T04` 3/4 e `T05` 4/4. Todos os casos de paisagem e de tela maior passaram.
-- **Nota:** $0{,}90 \ge 0{,}90$ → **Nota 3 (Bom)**, faixa `18–19/20`. O valor está **exatamente no limite** da faixa: um terceiro defeito levaria a $17/20 = 0{,}85$ e à Nota 2.
-- **Hipótese H1.1** ($M_{1.1} < 1{,}00$, com corte ou sobreposição na camada do mapa): **confirmada em parte.** O índice ficou abaixo de 1,00 e os defeitos se concentram na fonte ampliada, mas nenhum caso do mapa (`T03`) falhou. A tabela de coleta não descreve a natureza dos defeitos, que deve ser registrada a partir das capturas `M1.1_T01-C03` e `M1.1_T04-C03`.
+- **Amostra:** 20 casos `T01`–`T05` × `C01`–`C04`, avaliados em 18/11/2026 (10:43 a 10:54) por Vitor Bessa no `DISP-02`, com a configuração aplicada por `adb`.
+- **Defeitos (5):** todas as cinco telas na configuração `C03` (`T01-C03`, `T02-C03`, `T03-C03`, `T04-C03` e `T05-C03`, registradas como `D1` a `D5` na Tabela 1.1 de `1-coleta.md`). Todos ocorreram em retrato, `640 × 1136 px`, `320 dpi`, **fonte 200%**, incluindo redução da área útil do mapa em `T03-C03`.
+- **Distribuição:** por configuração, `C01` 5/5, `C02` 5/5, **`C03` 0/5** e `C04` 5/5; por tela, `T01` a `T05` tiveram 3/4 cada. Todos os casos em escala padrão, paisagem e tela maior passaram.
+- **Nota:** $0{,}75 \ge 0{,}75$ → **Nota 2 (Insuficiente)**, faixa `15–17/20`. O valor está **exatamente no limite inferior** da faixa: um sexto defeito levaria a $14/20 = 0{,}70$ e à Nota 1.
+- **Hipótese H1.1** ($M_{1.1} < 1{,}00$, com corte ou sobreposição na camada do mapa): **confirmada.** O índice ficou abaixo de 1,00, todos os cinco casos com fonte a 200% apresentaram truncamento ou sobreposição — inclusive a tela do mapa (`T03-C03`), onde o cabeçalho ampliado reduziu a área útil e empurrou a lista de paradas para fora da área visível.
 
 #### M1.2 — Adaptabilidade de Sistema Operacional
 
@@ -90,13 +90,13 @@ $$
 
 | Métrica | Valor | Nota | Hipótese | Situação |
 | :--- | :---: | :---: | :--- | :--- |
-| **M1.1** | $18/20 = 0{,}90$ | **3** | H1.1 confirmada em parte | Avaliada |
+| **M1.1** | $15/20 = 0{,}75$ | **2** | H1.1 confirmada | Avaliada |
 | **M1.2** | $1/1 = 1{,}00$ (parcial) | *provisória (4)* | H1.2 parcialmente verificada | Amostra incompleta |
-| **G1** | — | $\min(3,\ \text{—})$ | — | **Não avaliado (dados incompletos)** |
+| **G1** | — | $\min(2,\ \text{—})$ | — | **Não avaliado (dados incompletos)** |
 
 <p class="legenda">Tabela 3. Síntese de G1. Fonte: elaboração própria (2026).</p>
 
-Se `M1.2` for fechada com Nota 4, $G_1 = \min(3, 4) = 3$ e o objetivo será **Satisfeito**, com a ressalva de que o legado não foi verificado. Se for fechada com Nota 1, $G_1$ será **Não Satisfeito**.
+Se `M1.2` for fechada com Nota 4, $G_1 = \min(2, 4) = 2$ e o objetivo será **Satisfeito com Ressalvas**, com a ressalva adicional de que o legado não foi verificado. Se for fechada com Nota 1, $G_1$ será **Não Satisfeito**.
 
 ---
 
@@ -287,7 +287,7 @@ $$
 
 | Código | Métrica | Objetivo | Contagem | Valor | Nota | Hipótese | Veredito da hipótese |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- | :--- |
-| **M1.1** | Adaptabilidade de hardware | G1 | 18 / 20 | 0,90 | **3** | $M_{1.1} < 1{,}00$ (falha no mapa) | Confirmada em parte |
+| **M1.1** | Adaptabilidade de hardware | G1 | 15 / 20 | 0,75 | **2** | $M_{1.1} < 1{,}00$ (falha no mapa) | Confirmada |
 | **M1.2** | Adaptabilidade de SO | G1 | 1 / 1 *(de 2–3)* | 1,00 *(parcial)* | *provisória* | $M_{1.2} = 1{,}00$ | Parcialmente verificada |
 | **M2.1** | Sucesso de instalação | G2 | 10 / 10 | 1,00 | **4** | $M_{2.1} = 1{,}00$ | Confirmada |
 | **M2.2** | Resíduo pós-desinstalação | G2 | 10 / 10 | 1,00 | **4** | $M_{2.2} < 1{,}00$ | Refutada |
@@ -308,7 +308,7 @@ Das 12 hipóteses, **7 foram confirmadas** (H2.1, H3.1, H3.2, H4.2, H5.1, H6.1, 
 
 | Objetivo | Característica | Notas das métricas | Veredito |
 | :---: | :--- | :--- | :--- |
-| **G1** | Portabilidade — Adaptabilidade | M1.1 = 3; M1.2 parcial | **Não avaliado (dados incompletos)** |
+| **G1** | Portabilidade — Adaptabilidade | M1.1 = 2; M1.2 parcial | **Não avaliado (dados incompletos)** |
 | **G2** | Portabilidade — Instalabilidade | M2.1 = 4; M2.2 = 4 | **Satisfeito** |
 | **G3** | Confiabilidade — Maturidade | M3.1 = 4; M3.2 = 4 | **Satisfeito** *(exposição reduzida)* |
 | **G4** | Confiabilidade — Tolerância a falhas | M4.1 = 4; M4.2 = 4 | **Satisfeito** |
@@ -325,7 +325,7 @@ Com amostras pequenas, um único caso pode mudar uma nota e o veredito do objeti
 
 | Métrica | Situação observada | O que mudaria a nota | Efeito no objetivo |
 | :--- | :--- | :--- | :--- |
-| **M1.1** | $18/20 = 0{,}90$, no limite da Nota 3 | Mais 1 defeito: $17/20 = 0{,}85$ → Nota 2 | G1 passaria a *Satisfeito com Ressalvas* |
+| **M1.1** | $15/20 = 0{,}75$, no limite da Nota 2 | Mais 1 defeito: $14/20 = 0{,}70$ → Nota 1 | G1 passaria a *Não Satisfeito* |
 | **M1.2** | $1/1$, com Android 9 sem registro | Android 9 como Defeito: $1/2 = 0{,}50$ → Nota 1 | G1 passaria a *Não Satisfeito* |
 | **M2.1 / M2.2** | $10/10$, sem Nota 3 possível | 1 defeito → Nota 2 | G2 passaria a *Satisfeito com Ressalvas* |
 | **M3.1 / M3.2** | $20/20$ em sessões de 2 min 30 s | 2 sessões afetadas → Nota 1 (com 1 afetada, Nota 3) | G3 mudaria conforme a pior nota |
@@ -358,3 +358,4 @@ A predominância de notas altas reflete amostras pequenas, critérios binários 
 | 01 | Consolidação dos dados, cálculo das 12 métricas, avaliação de hipóteses e matriz comparativa da Fase 4 (#49) | [João Guilherme Capozzi](https://github.com/jonas3688) | 18/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 02 | Atualização com os registros de coleta de M1.1 a M6.2 (exceto M5.1): cálculo, notas, hipóteses, vereditos de G1 a G6, sensibilidade e anomalias | [Pedro Ramos](https://github.com/PedroRSR)| 21/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 03 | Sincronização dos cálculos da métrica M5.1 (mediana 3,34 min, Nota 3), consolidação do veredito de G5 (Satisfeito) e script de cálculo (#49) | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 22/11/2026 |
+| 04 | Revisão de consistência global (#54): sincronização de M1.1 (15/20 = 0,75, Nota 2, H1.1 confirmada) com `1-coleta.md`, `M1.1_coleta.csv` e o artigo | [João Guilherme Capozzi](https://github.com/jonas3688) | 24/11/2026 | — | — |

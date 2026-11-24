@@ -163,7 +163,7 @@ Os limiares da Tabela 5 são decisões do projeto, fixadas antes da coleta. A IS
 
 ### Amostras Pequenas e Resultados Parciais
 
-Em uma proporção com total válido $n$, cada unidade altera o resultado em $1/n$. Quando $n < 20$, algumas faixas da Tabela 5 não têm total possível: é o caso de M1.2 (três versões), M2.1 e M2.2 (dez ciclos), M5.2 para paradas (cinco paradas) e M6.1 (oito tarefas). Nessas métricas, os limiares são aplicados sem alteração, e as notas que cada amostra pode produzir estão na tabela de [Amostras e limitação](../fase3/2-procedimentos.md#5-amostras-e-limitacao) da Fase 3. A contagem (por exemplo, "9 de 10") é sempre informada junto da nota, e os resultados são tratados como indicativos para a amostra observada.
+Em uma proporção com total válido $n$, cada unidade altera o resultado em $1/n$. Quando $n < 20$, algumas faixas da Tabela 5 não têm total possível: é o caso de M1.2 (duas ou três versões), M2.1 e M2.2 (dez ciclos), M5.2 para paradas (cinco paradas) e M6.1 (oito tarefas). Nessas métricas, os limiares são aplicados sem alteração, e as notas que cada amostra pode produzir estão na tabela de [Amostras e limitação](../fase3/2-procedimentos.md#5-amostras-e-limitacao) da Fase 3. A contagem (por exemplo, "9 de 10") é sempre informada junto da nota, e os resultados são tratados como indicativos para a amostra observada.
 
 A M5.2 é apurada somente com paradas, pela restrição registrada na ficha da métrica em [Procedimentos de Execução](../fase3/2-procedimentos.md): a posição dos veículos exibida pelo aplicativo tem defasagem da ordem de um minuto, e compará-la com a referência mediria o deslocamento do veículo, não o erro do aplicativo.
 

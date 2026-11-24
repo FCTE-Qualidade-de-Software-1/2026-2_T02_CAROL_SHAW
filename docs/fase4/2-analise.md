@@ -35,24 +35,24 @@ A Fase 4 **não redefine** fórmulas, escalas, limiares nem amostras. Tudo o que
 
 A Tabela 2 compara o previsto na Fase 3 com o que consta em [Coleta de Dados](1-coleta.md).
 
-| Métrica | Ambiente registrado | Previstos | Executados | Conformes | Defeitos | Não observáveis | Amostra válida | Situação |
+| Métrica | Ambiente registrado | Previstos | Executados | Conformes | Defeitos | Não observáveis / inválidos | Amostra válida | Situação |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **M1.1** | `DISP-02` · Android 13 | 20 casos | 20 | 18 | 2 | 0 | 20 | Completa |
-| **M1.2** | `DISP-02` · Android 13 | 2 a 3 versões | 1 | 1 | 0 | 0 | 1 | **Parcial** (sem registro de Android 9) |
+| **M1.1** | `DISP-02` · Android 13 | 20 casos | 20 | 15 | 5 | 0 | 20 | Completa |
+| **M1.2** | `DISP-02` · Android 13 e `EMU-01` a `EMU-03` · Android 9, 10 e 17 | 2 versões distintas (Android 9 e 13) | 4 | 1 | 0 | 3 não observáveis | 1 | **Parcial** (só Android 13 validado) |
 | **M2.1** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M2.2** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M3.1** | `DISP-02` · Android 13 | 20 sessões | 20 | 20 | 0 | 0 | 20 | Completa |
 | **M3.2** | `DISP-02` · Android 13 | 20 sessões | 20 | 20 | 0 | 0 | 20 | Completa |
 | **M4.1** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M4.2** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
-| **M5.1** | `DISP-02` · Android 13 | 10 eventos | 10 | 10 | 0 | 0 | 10 | Completa |
+| **M5.1** | `DISP-02` · Android 13 | 10 eventos | 11 | — (mediana) | — | 1 inválido (`X01`) | 10 | Completa |
 | **M5.2** (paradas) | `DISP-01` · Android 13 | 5 paradas | 5 | 5 | 0 | 0 | 5 | Completa |
 | **M6.1** | `DISP-02` · Android 13 | 8 tarefas | 8 | 8 | 0 | 0 | 8 | Completa |
 | **M6.2** | `DISP-01` · Android 13 | 20 itens | 20 | 20 | 0 | 0 | 20 | Completa |
 
 <p class="legenda">Tabela 2. Amostras previstas, executadas e válidas. Fonte: elaboração própria (2026), com base em Coleta de Dados e Procedimentos de Execução.</p>
 
-Em todos os registros a versão do aplicativo é `5.25.1(1149)`, portanto não houve mistura de versões na mesma amostra. Nenhum caso foi classificado como **Não observável** ou **Pendente**. Em `M1.2`, o caso de Android 9 simplesmente não tem registro (seção 4.1).
+A versão do aplicativo avaliada foi `5.25.1(1149)`. Em `M1.2`, três tentativas em emulador foram classificadas como **Não observáveis**. Elas constam entre as quatro tentativas registradas e ficam fora da amostra válida.
 
 ---
 
@@ -63,14 +63,14 @@ Em todos os registros a versão do aplicativo é `5.25.1(1149)`, portanto não h
 #### M1.1 — Adaptabilidade de Hardware (Telas)
 
 $$
-M_{1.1} = \frac{T_s}{T_t} = \frac{18}{20} = 0{,}90
+M_{1.1} = \frac{T_s}{T_t} = \frac{15}{20} = 0{,}75
 $$
 
-- **Amostra:** 20 casos `T01`–`T05` × `C01`–`C04`, avaliados em 19/11/2026 (10:43 a 10:54) por Vitor Bessa no `DISP-02`, com a configuração aplicada por `adb`.
-- **Defeitos (2):** `T01-C03` (resultado da busca por `L01`) e `T04-C03` (detalhes de `P01`). Ambos ocorreram em retrato, `640 × 1136 px`, `320 dpi`, **fonte 200%**.
-- **Distribuição:** por configuração, `C01` 5/5, `C02` 5/5, **`C03` 3/5** e `C04` 5/5; por tela, `T01` 3/4, `T02` 4/4, `T03` 4/4, `T04` 3/4 e `T05` 4/4. Todos os casos de paisagem e de tela maior passaram.
-- **Nota:** $0{,}90 \ge 0{,}90$ → **Nota 3 (Bom)**, faixa `18–19/20`. O valor está **exatamente no limite** da faixa: um terceiro defeito levaria a $17/20 = 0{,}85$ e à Nota 2.
-- **Hipótese H1.1** ($M_{1.1} < 1{,}00$, com corte ou sobreposição na camada do mapa): **confirmada em parte.** O índice ficou abaixo de 1,00 e os defeitos se concentram na fonte ampliada, mas nenhum caso do mapa (`T03`) falhou. A tabela de coleta não descreve a natureza dos defeitos, que deve ser registrada a partir das capturas `M1.1_T01-C03` e `M1.1_T04-C03`.
+- **Amostra:** 20 casos `T01`–`T05` × `C01`–`C04`, avaliados em 18/11/2026 (10:43 a 10:54) por Vitor Bessa no `DISP-02`, com a configuração aplicada por `adb`.
+- **Defeitos (5):** de `T01-C03` a `T05-C03` (`DEF-01` a `DEF-05` na [Coleta de Dados](1-coleta.md)). Todos ocorreram em retrato, `640 × 1136 px`, `320 dpi`, **fonte a 200%**.
+- **Distribuição:** por configuração, `C01` 5/5, `C02` 5/5, **`C03` 0/5** e `C04` 5/5. Cada tela teve três casos conformes em quatro.
+- **Nota:** **Nota 2 (Insuficiente)**, faixa de 15 a 17 casos conformes em 20. O valor está no limite inferior da faixa. Mais um defeito levaria a $14/20 = 0{,}70$ e à Nota 1.
+- **Hipótese H1.1** ($M_{1.1} < 1{,}00$, com corte ou sobreposição na camada do mapa): **confirmada.** O índice ficou abaixo de 1,00. Em `T03-C03`, o código e o título da linha foram cortados, e o cabeçalho ampliado reduziu a área útil do mapa.
 
 #### M1.2 — Adaptabilidade de Sistema Operacional
 
@@ -78,25 +78,22 @@ $$
 M_{1.2} = \frac{O_s}{O_t} = \frac{1}{1} = 1{,}00 \quad \text{(resultado parcial)}
 $$
 
-- **Amostra executada:** 1 versão (Android 13, API 33, `DISP-02`), com as tarefas `TE01` a `TE08` concluídas sem erro de compatibilidade (registro `M1.2-01`, de 19/11/2026, 20:31).
-- **Amostra prevista:** a Fase 3 define Android 9, Android 13 e a versão do aparelho físico, que são **2 versões** quando o aparelho está no Android 13 (e 3 se [Recursos](../fase3/3-recursos.md) mantiver um segundo emulador). Os dois aparelhos estão no Android 13 e os emuladores disponíveis recusaram a instalação do app, conforme as pendências da Fase 3. **Não há registro do caso de Android 9** em `1-coleta.md`, nem como **Não observável** nem como **Defeito**, e a redução de amostra prevista em Recursos também não foi formalizada.
-- **Nota:** o valor calculado sobre a amostra efetiva é $1{,}00$ (Nota 4), mas é **provisório e restrito ao Android 13**. Pela regra 4 da Fase 2, o caso obrigatório sem classificação impede o veredito definitivo. Com $O_t \le 3$, só as notas 4 e 1 são atingíveis.
-- **Como a métrica se fecha:**
-    - Se a recusa de instalação no emulador for registrada como **Não observável** (ambiente não preparado) e a redução da amostra for formalizada, $M_{1.2} = 1/1 = 1{,}00$ (Nota 4), válida apenas para Android 13.
-    - Se for registrada como **Defeito** (incompatibilidade comprovada), $M_{1.2} = 1/2 = 0{,}50$ (Nota 1).
-- **Hipótese H1.2** ($M_{1.2} = 1{,}00$ nas versões testadas): **parcialmente verificada.** Vale para Android 13; legado e faixa intermediária (Android 10 a 12) não foram observados.
+- **Amostra prevista:** Android 9 e 13, além da versão do aparelho físico se distinta, conforme [Procedimentos de Execução](../fase3/2-procedimentos.md#5-amostras-e-limitacao). Com Android 13 no `DISP-02`, o roteiro previa duas versões distintas.
+- **Tentativas registradas:** no Android 13 (API 33, `DISP-02`), as tarefas `TE01` a `TE08` foram concluídas sem erro de compatibilidade em 20/11/2026 às 20:35. Em 21/11, a equipe registrou recusas de instalação na Play Store nos emuladores de Android 9, 10 e 17. A [Coleta de Dados](1-coleta.md#m12-adaptabilidade-de-sistema-operacional) registra as três tentativas como **Não observáveis** e descreve a arquitetura dos emuladores como possível causa.
+- **Resultado parcial:** o denominador inclui apenas a versão válida. O valor $1{,}00$ descreve o Android 13 e a métrica fica sem nota definitiva para a cobertura planejada.
+- **Hipótese H1.2** ($M_{1.2} = 1{,}00$ nas versões testadas): **parcialmente verificada.** O resultado sustenta apenas a compatibilidade no Android 13.
 
 #### Veredito de G1
 
 | Métrica | Valor | Nota | Hipótese | Situação |
 | :--- | :---: | :---: | :--- | :--- |
-| **M1.1** | $18/20 = 0{,}90$ | **3** | H1.1 confirmada em parte | Avaliada |
-| **M1.2** | $1/1 = 1{,}00$ (parcial) | *provisória (4)* | H1.2 parcialmente verificada | Amostra incompleta |
-| **G1** | — | $\min(3,\ \text{—})$ | — | **Não avaliado (dados incompletos)** |
+| **M1.1** | $15/20 = 0{,}75$ | **2** | H1.1 confirmada | Avaliada |
+| **M1.2** | $1/1 = 1{,}00$ (4 tentativas) | — | H1.2 parcialmente verificada | Amostra parcial (só Android 13) |
+| **G1** | — | — | — | **Não avaliado (dados incompletos)** |
 
 <p class="legenda">Tabela 3. Síntese de G1. Fonte: elaboração própria (2026).</p>
 
-Se `M1.2` for fechada com Nota 4, $G_1 = \min(3, 4) = 3$ e o objetivo será **Satisfeito**, com a ressalva de que o legado não foi verificado. Se for fechada com Nota 1, $G_1$ será **Não Satisfeito**.
+A Nota 2 de `M1.1` registra o problema de acessibilidade nas telas. O veredito formal de `G1` fica **Não avaliado (dados incompletos)** porque só o Android 13 foi validado e o roteiro também previa o Android 9.
 
 ---
 
@@ -108,7 +105,7 @@ $$
 M_{2.1} = \frac{I_s}{I_t} = \frac{10}{10} = 1{,}00
 $$
 
-- **Amostra:** 10 ciclos de instalação limpa pela Google Play Store no `DISP-02`, em 20/11/2026 (16:41 a 17:25), todos concluídos na primeira tentativa.
+- **Amostra:** 10 ciclos de instalação limpa pela Google Play Store no `DISP-02`, em 19/11/2026 (16:41 a 17:25), todos concluídos na primeira tentativa.
 - **Nota:** $1{,}00$ → **Nota 4 (Excelente)**. Nesta amostra a Nota 3 era inatingível ($9/10 = 0{,}90 < 0{,}95$), de modo que um único defeito já levaria à Nota 2.
 - **Hipótese H2.1** ($M_{2.1} = 1{,}00$): **confirmada.**
 
@@ -180,10 +177,9 @@ $$
 M_{4.2} = \frac{G_s}{G_t} = \frac{10}{10} = 1{,}00
 $$
 
-- **Amostra:** 10 ensaios no `DISP-01`, em 19/11/2026, com o serviço de localização desativado por 30 s. Em todos, o app informou a perda em até 5 s, manteve `TE01` e `TE04` disponíveis e recuperou a posição no mapa em até 30 s.
+- **Amostra:** 10 ensaios no `DISP-01`, em 19/11/2026, das 18h08 às 18h16, com o serviço de localização desativado por 30 s. A [Coleta de Dados](1-coleta.md#m42-perda-de-localizacao) vincula um vídeo a cada ensaio. Em todos, o app informou a perda em até 5 s, manteve `TE01` e `TE04` disponíveis e recuperou a posição no mapa em até 30 s.
 - **Nota:** $1{,}00$ → **Nota 4 (Excelente)**.
 - **Hipótese H4.2** ($M_{4.2} \ge 0{,}85$): **confirmada.**
-- **Atenção ao registro:** os dez ensaios têm o mesmo horário (18:24) e as ligações das evidências apresentam inconsistências (seção 7). Convém conferi-los na auditoria de 10% antes de a nota ser tratada como definitiva.
 
 #### Veredito de G4
 
@@ -205,7 +201,7 @@ $$
 M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_{10}) = 3{,}34\text{ min}
 $$
 
-- **Amostra e medição:** 10 eventos válidos coletados em campo em 21/11/2026 no `DISP-02` (parada `P01`, Ceilândia Norte), cobrindo as linhas `933.4` (7 eventos) e `0.089` (3 eventos). Um 11º evento da linha `0.089` foi descartado antes do cálculo por passagem sem parada/foto (`X01`).
+- **Amostra e medição:** 11 eventos registrados em campo em 21/11/2026 no `DISP-02` (parada `P01`, Ceilândia Norte). Dos dez pares válidos, seis vieram do primeiro bloco e quatro do segundo. Foram sete pares da linha `933.4` e três da linha `0.089`. O evento `X01`, da linha `0.089`, foi excluído porque a chegada ficou sem registro.
 - **Distribuição dos erros absolutos (minutos):** $[0{,}53;\ 0{,}65;\ 0{,}67;\ 0{,}95;\ 2{,}05;\ 4{,}63;\ 5{,}62;\ 13{,}32;\ 13{,}97;\ 38{,}97]$.
   - Erro mínimo: $0{,}53\text{ min}$ (32 s)
   - Erro máximo: $38{,}97\text{ min}$ (atraso severo na linha 0.089)
@@ -287,28 +283,28 @@ $$
 
 | Código | Métrica | Objetivo | Contagem | Valor | Nota | Hipótese | Veredito da hipótese |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- | :--- |
-| **M1.1** | Adaptabilidade de hardware | G1 | 18 / 20 | 0,90 | **3** | $M_{1.1} < 1{,}00$ (falha no mapa) | Confirmada em parte |
-| **M1.2** | Adaptabilidade de SO | G1 | 1 / 1 *(de 2–3)* | 1,00 *(parcial)* | *provisória* | $M_{1.2} = 1{,}00$ | Parcialmente verificada |
+| **M1.1** | Adaptabilidade de hardware | G1 | 15 / 20 | 0,75 | **2** | $M_{1.1} < 1{,}00$ (falha no mapa) | Confirmada |
+| **M1.2** | Adaptabilidade de SO | G1 | 1 / 1 *(4 tentativas)* | 1,00 *(parcial)* | — | $M_{1.2} = 1{,}00$ | Parcialmente verificada |
 | **M2.1** | Sucesso de instalação | G2 | 10 / 10 | 1,00 | **4** | $M_{2.1} = 1{,}00$ | Confirmada |
 | **M2.2** | Resíduo pós-desinstalação | G2 | 10 / 10 | 1,00 | **4** | $M_{2.2} < 1{,}00$ | Refutada |
 | **M3.1** | Sessões sem *crashes* | G3 | 20 / 20 | 1,00 | **4** | $M_{3.1} \ge 0{,}95$ | Confirmada |
 | **M3.2** | Sessões sem congelamentos | G3 | 20 / 20 | 1,00 | **4** | $M_{3.2} \ge 0{,}95$ | Confirmada |
 | **M4.1** | Mitigação de perda de conexão | G4 | 10 / 10 | 1,00 | **4** | $M_{4.1} < 0{,}85$ | Refutada |
 | **M4.2** | Tratamento de perda de GPS | G4 | 10 / 10 | 1,00 | **4** | $M_{4.2} \ge 0{,}85$ | Confirmada |
-| **M5.1** | Precisão de tempo | G5 | 10 / 10 | Mediana 3,34 min | **3** | mediana $\le 5$ min | Confirmada |
+| **M5.1** | Precisão de tempo | G5 | 10 pares válidos | Mediana 3,34 min | **3** | mediana $\le 5$ min | Confirmada |
 | **M5.2** | Correção do mapa (paradas) | G5 | 5 / 5 | 1,00 | **4** | $M_{5.2} \ge 0{,}85$ (paradas) | Confirmada (paradas) |
 | **M6.1** | Cobertura de tarefas essenciais | G6 | 8 / 8 | 1,00 | **4** | $M_{6.1} = 1{,}00$ | Confirmada |
 | **M6.2** | Completude do banco | G6 | 20 / 20 | 1,00 | **4** | $M_{6.2} \ge 0{,}95$ | Confirmada |
 
 <p class="legenda">Tabela 10. Quadro comparativo das 12 métricas, notas e hipóteses. Fonte: elaboração própria (2026).</p>
 
-Das 12 hipóteses, **7 foram confirmadas** (H2.1, H3.1, H3.2, H4.2, H5.1, H6.1, H6.2), **2 refutadas** (H2.2 e H4.1, ambas de expectativa pessimista), e **3 verificadas só em parte** (H1.1, H1.2, H5.2).
+Das 12 hipóteses, **8 foram confirmadas** (H1.1, H2.1, H3.1, H3.2, H4.2, H5.1, H6.1, H6.2), **2 refutadas** (H2.2 e H4.1, ambas de expectativa pessimista) e **2 verificadas em parte** (H1.2 e H5.2).
 
 ### 5.1. Vereditos dos objetivos
 
 | Objetivo | Característica | Notas das métricas | Veredito |
 | :---: | :--- | :--- | :--- |
-| **G1** | Portabilidade — Adaptabilidade | M1.1 = 3; M1.2 parcial | **Não avaliado (dados incompletos)** |
+| **G1** | Portabilidade — Adaptabilidade | M1.1 = 2 e M1.2 parcial | **Não avaliado (dados incompletos)** |
 | **G2** | Portabilidade — Instalabilidade | M2.1 = 4; M2.2 = 4 | **Satisfeito** |
 | **G3** | Confiabilidade — Maturidade | M3.1 = 4; M3.2 = 4 | **Satisfeito** *(exposição reduzida)* |
 | **G4** | Confiabilidade — Tolerância a falhas | M4.1 = 4; M4.2 = 4 | **Satisfeito** |
@@ -325,11 +321,11 @@ Com amostras pequenas, um único caso pode mudar uma nota e o veredito do objeti
 
 | Métrica | Situação observada | O que mudaria a nota | Efeito no objetivo |
 | :--- | :--- | :--- | :--- |
-| **M1.1** | $18/20 = 0{,}90$, no limite da Nota 3 | Mais 1 defeito: $17/20 = 0{,}85$ → Nota 2 | G1 passaria a *Satisfeito com Ressalvas* |
-| **M1.2** | $1/1$, com Android 9 sem registro | Android 9 como Defeito: $1/2 = 0{,}50$ → Nota 1 | G1 passaria a *Não Satisfeito* |
+| **M1.1** | $15/20 = 0{,}75$, no limite da Nota 2 | Mais 1 defeito: $14/20 = 0{,}70$ → Nota 1 | A pior nota seria 1. O veredito formal de G1 depende da cobertura de M1.2. |
+| **M1.2** | $1/1$ no Android 13, com 3 tentativas não observáveis | Em um teste adicional válido, uma versão com defeito reduziria o índice a $1/2 = 0{,}50$, faixa da Nota 1 | O veredito de G1 depende da cobertura planejada de M1.2. |
 | **M2.1 / M2.2** | $10/10$, sem Nota 3 possível | 1 defeito → Nota 2 | G2 passaria a *Satisfeito com Ressalvas* |
-| **M3.1 / M3.2** | $20/20$ em sessões de 2 min 30 s | 2 sessões afetadas → Nota 1 (com 1 afetada, Nota 3) | G3 mudaria conforme a pior nota |
-| **M5.1** | Mediana $3{,}34$ min (Nota 3) | Mediana $> 5$ min → Nota 2 | G5 passaria a *Satisfeito com Ressalvas* (pior nota = 2) |
+| **M3.1 / M3.2** | $20/20$ em sessões de 2 min 30 s | 1 sessão afetada: $19/20 = 0{,}95$ → Nota 3. 2: $18/20 = 0{,}90$ → Nota 2. 3: $17/20 = 0{,}85$ → Nota 1. | Pela pior nota, G3 fica *Satisfeito* com Nota 3, *Satisfeito com Ressalvas* com Nota 2 e *Não Satisfeito* com Nota 1. |
+| **M5.1** | Mediana $3{,}34$ min (Nota 3) | Mediana $> 5$ e $\le 10$ min → Nota 2. Mediana $> 10$ min → Nota 1. | G5 passaria a *Satisfeito com Ressalvas* com Nota 2 ou *Não Satisfeito* com Nota 1. |
 | **M5.2** | $5/5$, com `P02` a 29 m do limite de 30 m | `P02` fora da tolerância: $4/5 = 0{,}80$ → Nota 2 | G5 passaria a *Satisfeito com Ressalvas* (pior nota = 2) |
 | **M6.1** | $8/8$, sem Nota 3 possível | 1 tarefa com defeito → Nota 2 | G6 passaria a *Satisfeito com Ressalvas* |
 

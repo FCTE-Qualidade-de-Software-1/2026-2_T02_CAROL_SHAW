@@ -303,7 +303,7 @@ O fluxo de aplicação estrutura-se em quatro etapas: (1)~preparação do ambien
 
 A infraestrutura instrumental combinou recursos físicos, ambientes virtuais e ferramentas de diagnóstico. Como \textbf{dispositivos físicos}, mobilizou-se o DISP-01 (Samsung Galaxy S20 FE 5G, 6,5", Android 13/One UI 5.1), encarregado das medições de campo em M5.2 e de laboratório em M4.1 e M6.2, e o DISP-02 (Xiaomi Redmi Note 11S, 6,43", Android 13), empregado em campo para M5.1 e em laboratório para M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M4.2 e M6.1. No DISP-02 habilitou-se a permissão avançada de depuração de segurança do MIUI, permitindo a injeção remota de configurações de tela via \textit{adb}.
 
-No âmbito dos \textbf{ambientes virtuais}, prepararam-se emuladores no Android Studio Rabbit 2 cobrindo Android 9 (API 28, x86), Android 10 (API 29, x86) e Android 17 (API 37, x86\_64). Todavia, constatou-se uma incompatibilidade de arquitetura crítica: o instalador do aplicativo \textit{DF no Ponto} contém bibliotecas nativas compiladas exclusivamente para processadores ARM (\textit{armeabi-v7a / arm64-v8a}), recusando a execução nos emuladores x86. Diante da indisponibilidade de aparelho físico secundário com sistema operacional legado durante a janela de coleta, os testes automatizados de M1.2 em Android 9 permaneceram não executados, deixando a amostra de sistemas operacionais pendente de fechamento integral. Por fim, o ferramental de apoio integrou o utilitário \textit{adb} 1.0.41, gravação nativa de tela com toques visíveis, o aplicativo GPSTest 3.10.6 para coordenadas WGS84 com precisão horizontal informada $\le 10$ metros e repositório com rastreabilidade integral de evidências.
+Em M1.2, o aplicativo concluiu as oito tarefas essenciais no aparelho físico com Android 13, a única versão com execução válida. Nos \textbf{emuladores} do Android Studio Rabbit 2 com Android 9 e 10 (x86) e Android 17 (x86\_64), a Play Store bloqueou a instalação por incompatibilidade de arquitetura com o aplicativo, distribuído para ARM. As três tentativas foram classificadas como não observáveis. Por fim, o ferramental de apoio integrou o utilitário \textit{adb} 1.0.41, gravação nativa de tela com toques visíveis, o aplicativo GPSTest 3.10.6 para coordenadas WGS84 com precisão horizontal informada $\le 10$ metros e repositório com rastreabilidade integral de evidências.
 
 \subsection{Procedimentos de Execução, Parâmetros e Catálogos Fixados}
 \label{sec:procedimentos}
@@ -346,7 +346,7 @@ A Tabela~\ref{tab:resultados_consolidados} consolida os resultados quantitativos
 \textbf{Cód.} & \textbf{Métrica} & \textbf{Obj.} & \textbf{Amostra} & \textbf{Valor} & \textbf{Nota} & \textbf{Hipótese Preditiva} & \textbf{Veredito da Hipótese} \\
 \midrule
 \textbf{M1.1} & Adaptab. Hardware & G1 & 15 / 20 & 0,75 & \textbf{2} & $M_{1.1} < 1{,}00$ (corte no mapa) & Confirmada \\
-\textbf{M1.2} & Adaptab. SO & G1 & 1 / 1 & 1,00 & \textit{parcial} & $M_{1.2} = 1{,}00$ nas testadas & Parcialmente verificada \\
+\textbf{M1.2} & Adaptab. SO & G1 & \shortstack{1 / 1\\(4 tentativas)} & 1,00 & \textit{parcial} & $M_{1.2} = 1{,}00$ nas testadas & Parcialmente verificada \\
 \textbf{M2.1} & Sucesso Instalação & G2 & 10 / 10 & 1,00 & \textbf{4} & $M_{2.1} = 1{,}00$ & Confirmada \\
 \textbf{M2.2} & Resíduo Pós-Desinst. & G2 & 10 / 10 & 1,00 & \textbf{4} & $M_{2.2} < 1{,}00$ & Refutada \\
 \textbf{M3.1} & Sessões sem \textit{Crash} & G3 & 20 / 20 & 1,00 & \textbf{4} & $M_{3.1} \ge 0{,}95$ & Confirmada \\
@@ -385,7 +385,7 @@ A síntese de qualidade por característica da ISO/IEC 25010 e o fechamento das 
 
 A característica \textbf{Adequação Funcional (Prioridade 1)}, vinculada à questão QN3, recebeu o veredito consolidado de \textbf{Satisfeita} (G5 Satisfeito, G6 Satisfeito). O aplicativo atende aos requisitos cadastrais da Semob-DF e fornece localização cartográfica coerente, embora se reforce a ressalva crítica quanto a linhas com telemetria inoperante, em que previsões teóricas de tabela chegam a distorcer a realidade em quase 40 minutos. A característica \textbf{Confiabilidade (Prioridade 2)}, norteadora da questão QN2, foi julgada como \textbf{Satisfeita} (G3 Satisfeito, G4 Satisfeito condicionado ao saneamento documental de M4.2), demonstrando estabilidade plena durante a janela experimental e recuperação apropriada perante perda temporária de dados móveis e de localização.
 
-Em contraste, a característica \textbf{Portabilidade (Prioridade 3)}, associada à questão QN1, obteve o veredito de \textbf{Parcialmente Satisfeita} (G2 Satisfeito, G1 com ressalva visual e pendência de homologação em SOs legados). Embora os procedimentos de instalação e remoção sejam irrepreensíveis, diagnosticaram-se defeitos de apresentação gráfica quando fontes ampliadas a 200\% são acionadas em telas compactas, além de persistir a indefinição técnica sobre o comportamento do binário em versões mais antigas do ecossistema Android.
+A \textbf{Portabilidade (Prioridade 3)}, associada à questão QN1, ficou \textbf{Não avaliada (dados incompletos)}. G2 foi satisfeito nos ciclos de instalação e remoção. Em G1, houve falhas nas cinco telas com fonte a 200\% e a compatibilidade de sistema operacional só foi observada no Android 13.
 
 \subsection{Pareceres para as Decisões Apoiadas (D1, D2 e D3)}
 \label{sec:pareceres_decisoes}

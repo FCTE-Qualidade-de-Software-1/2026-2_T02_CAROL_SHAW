@@ -453,6 +453,15 @@ Este trabalho consolidou a avaliação de qualidade de software do aplicativo m�
 
 Os resultados demonstram que o aplicativo exibe excelente instalabilidade (G2), alta estabilidade sem panes (G3), elevada resiliência operacional (G4) e cobertura das 20 linhas auditadas (G6). Em contrapartida, diagnosticaram-se problemas de layout sob fontes ampliadas (M1.1), carência de homologação formal em versões legadas (M1.2) e erros de previsão associados à perda de rastreio na linha 0.089 (M5.1). Tais achados fundamentaram pareceres para as decisões estratégicas D1--D3 e sustentaram sete recomendações prioritárias. Como trabalhos futuros, sugere-se expandir a janela amostral em horários de pico e auditar topograficamente a malha de paradas.
 
+\subsection{Ação de Melhoria: Protótipos de Alta Fidelidade para Acessibilidade}
+\label{sec:acao_melhoria}
+
+A avaliação da métrica M1.1 (Adaptabilidade de Hardware) revelou que dois dos vinte casos de ensaio apresentaram defeitos de leiaute quando a escala de fonte do Android foi configurada em 200\%, correspondente ao modo de acessibilidade utilizado por pessoas com baixa visão. Os casos T01-C03 (tela de resultado de busca) e T04-C03 (tela de detalhes da parada) exibiram sobreposições de texto, truncamento de rótulos de botões e ocultação parcial de elementos de navegação, comprometendo a legibilidade e a usabilidade da interface nessas condições.
+
+Diante da relevância funcional e social desses achados, a equipe optou por desenvolver protótipos de alta fidelidade como ação concreta de sugestão de melhoria, indo além da mera identificação do problema. A escolha por protótipos de alta fidelidade justificou-se pela necessidade de verificar visualmente se textos, controles e hierarquia gráfica permaneceriam legíveis e distinguíveis sob ampliação extrema de fonte, uma vez que esse nível de detalhe não seria capturável em esboços de baixa resolução. No caso T01-C03, o protótipo reorganizou o cartão de resultado de busca de modo que o código da linha permanecesse integralmente legível, o nome da linha pudesse quebrar em múltiplas linhas sem sobrepor outros elementos e o título da seção ficasse visualmente separado da barra de navegação inferior. No caso T04-C03, os botões de sentido --- que na interface original apareciam truncados como ``Le...'' e ``Arr...'', impedindo o usuário de distinguir partida de chegada --- foram redesenhados para exibir os rótulos completos, e o cabeçalho da parada foi reestruturado para acomodar o conteúdo ampliado.
+
+Ressalta-se que os protótipos representam propostas de correção e não comprovam a implementação efetiva das mudanças no aplicativo, uma vez que a equipe de avaliação não possui acesso ao código-fonte do \textit{DF no Ponto}. Ainda assim, a elaboração dessas propostas visuais concretas materializa a recomendação REC-03 e oferece aos mantenedores do sistema uma referência técnica diretamente aplicável para a refatoração dos contêineres de rolagem e leiautes flexíveis nas telas afetadas.
+
 % ---------------------------------------------------------------------
 \section*{Declaração de Uso de Inteligência Artificial}
 \label{sec:ia}
@@ -514,36 +523,5 @@ STEVENS, S. S. On the Theory of Scales of Measurement. \emph{Science}, v.~103, n
 WATKINS, K. E. et al. Where Is My Bus? Impact of mobile real-time information on transit riders. \emph{Transp. Res. Part A}, v.~45, n.~8, p.~839--848, 2011.
 
 \end{thebibliography}
-
-% ---------------------------------------------------------------------
-\vspace{0.4em}
-\appendix
-\section{Tabela de Contribuição e Governança da Equipe}
-\label{ap:contribuicao}
-
-A Tabela~\ref{tab:contribuicao} documenta a distribuição equitativa de responsabilidades e esforço dedicado por cada membro da equipe ao longo de todas as quatro fases do ciclo de avaliação da qualidade de software.
-
-\begin{table}[H]
-\centering
-\caption{Contribuição consolidada dos membros da equipe nas Fases 1 a 4. Fonte: elaboração própria (2026).}
-\label{tab:contribuicao}
-\scriptsize
-\renewcommand{\arraystretch}{0.80}
-\setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.0cm} X c}
-\toprule
-\textbf{Membro da equipe} & \textbf{Responsabilidades e entregáveis principais} & \textbf{Esforço} \\
-\midrule
-Cristiano Borges de Morais & Referencial teórico SQuaRE, modelo ISO 25010 (Fase 1), cronograma operacional (Fase 3) e auditoria dos cálculos analíticos (Fase 4). & 16,6\% \\
-João Guilherme Capozzi Gonçalves & Delimitação de escopo (Fase 1), cálculo formal das 12 métricas, análise de sensibilidade e vereditos dos objetivos G1--G6 (Fase 4). & 16,6\% \\
-João Guilherme Lima Veras Fonseca & Desdobramento GQM, formulação matemática das métricas e questões operacionais (Fase 2), e rastreabilidade transversal (Fase 3). & 16,7\% \\
-Pedro Ramos Sousa Reis & Procedimentos de execução (Fase 3), consolidação das planilhas de coleta, gestão de evidências por exceção e auditoria amostral (Fase 4). & 16,7\% \\
-Rodrigo Braz Ferreira Gontijo & Definição dos objetivos conceituais e hipóteses GQM (Fase 2), alinhamento ao ODS 11 (Fase 1) e especificações de decisão (Fase 4). & 16,7\% \\
-Vitor Pereira Bessa & Preparação de ambientes com adb, execução dos ensaios de laboratório e medições em paradas físicas de campo nas 12 métricas (Fases 3 e 4). & 16,7\% \\
-\midrule
-\textbf{Total Acumulado} & \textbf{Aplicação integral do processo ISO/IEC 25040 em 4 fases} & \textbf{100\%} \\
-\bottomrule
-\end{tabularx}
-\end{table}
 
 \end{document}

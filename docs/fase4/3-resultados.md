@@ -175,7 +175,29 @@ As recomendações abaixo são para a equipe do aplicativo e se baseiam nos test
 
 ---
 
-## 7. Ameaças à validade e limitações
+## 7. Ação de melhoria
+
+Como a avaliação de `M1.1` identificou problemas de reorganização do conteúdo com a fonte do Android em 200%, optou-se por desenvolver **protótipos de alta fidelidade**. A escolha se deve à necessidade de verificar visualmente se textos e controles continuam legíveis e distinguíveis nesse nível de ampliação, um recurso importante de acessibilidade. Os protótipos permitem discutir uma proposta concreta, com textos, controles e hierarquia visual próximos de uma interface final, antes de implementar mudanças no aplicativo. As imagens “Depois” representam propostas de protótipo; não comprovam que as correções foram implementadas ou retestadas no app.
+
+### T01-C03 — Resultado da busca
+
+Na captura original, o código da linha e o nome aparecem prejudicados pelo espaço disponível, e o título “All lines” fica parcialmente encoberto pela navegação inferior. No protótipo, o código `0.089` permanece legível no cartão, o nome da linha pode quebrar em linhas sem se sobrepor aos demais elementos e o título e a navegação ficam visualmente separados.
+
+| Antes — captura original (fonte a 200%) | Depois — protótipo de alta fidelidade |
+| :---: | :---: |
+| ![Antes: T01-C03, resultado da busca com fonte a 200%](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/main/dados/fase4/M1.1/M1.1_T01-C03_DISP-02.png){ width="280" } | ![Depois: protótipo de T01-C03 com o código da linha visível e conteúdo reorganizado](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/main/dados/prototipo/M1.1_T01-C03_DISP-02_Ajustado.png){ width="280" } |
+
+### T04-C03 — Detalhes da parada
+
+Na captura original, os botões de sentido são truncados (“Le...” e “Arr...”), dificultando distinguir partida de chegada; o título da parada e o cartão da linha favorita também ficam cortados. No protótipo, os botões mostram os rótulos completos (“Leaving here” e “Arriving here”) e o cabeçalho é reorganizado para dar mais espaço ao conteúdo da parada. O título ainda aparece abreviado com reticências, ponto que deve ser validado em uma próxima iteração.
+
+| Antes — captura original (fonte a 200%) | Depois — protótipo de alta fidelidade |
+| :---: | :---: |
+| ![Antes: T04-C03, detalhes da parada com fonte a 200%](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/main/dados/fase4/M1.1/M1.1_T04-C03_DISP-02.png){ width="280" } | ![Depois: protótipo de T04-C03 com botões de sentido identificados por inteiro](https://raw.githubusercontent.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/main/dados/prototipo/M1.1_T04-C03_DISP-02_Ajustado.png){ width="280" } |
+
+---
+
+## 8. Ameaças à validade e limitações
 
 Os resultados seguem as ameaças previstas em [Método de Avaliação](../fase3/1-metodo.md#6-limitacoes-do-metodo-e-ameacas-a-validade). A tabela destaca o que se observou na execução.
 
@@ -212,3 +234,4 @@ Os resultados seguem as ameaças previstas em [Método de Avaliação](../fase3/
 | 01 | Emissão dos vereditos dos objetivos, respostas às questões norteadoras, pareceres das decisões D1-D3 e recomendações da Fase 4 (#50) | [João Guilherme Capozzi](https://github.com/jonas3688) | 18/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 02 | Atualização com os dados coletados: vereditos de G1 a G6, respostas às questões, pareceres de D1 a D3, recomendações e ameaças à validade | [Pedro Ramos](https://github.com/PedroRSR) | 21/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 03 | Atualização dos resultados, vereditos e recomendações de G5/D3 com os dados de M5.1 | [Pedro Ramos](https://github.com/PedroRSR) | 23/11/2026 | A definir | — |
+| 04 | Inclusão da ação de melhoria e dos protótipos de alta fidelidade para os defeitos de M1.1 em fonte ampliada | [Pedro Ramos](https://github.com/PedroRSR) | 23/11/2026 | A definir | — |

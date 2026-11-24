@@ -22,9 +22,9 @@ As notas de 1 a 4 são **ordinais**, portanto não há média entre métricas. C
 ### 1.2. Panorama
 
 - **As 12 métricas** têm dados; **`M1.2` tem amostra parcial** (1 versão do Android).
-- **9 métricas** receberam **Nota 4**, **2** receberam **Nota 3** (`M1.1` e `M5.1`) e nenhuma recebeu nota 1 ou 2.
+- **9 métricas** receberam **Nota 4**, **1** recebeu **Nota 3** (`M5.1`), **1** recebeu **Nota 2** (`M1.1`) e **1** teve resultado parcial (`M1.2`).
 - Dos 6 objetivos, **5 ficaram Satisfeitos** (`G2` a `G6`) e **1 ficou sem veredito definitivo** (`G1`).
-- Das 12 hipóteses, 7 foram confirmadas, 2 refutadas e 3 verificadas em parte.
+- Das 12 hipóteses, 8 foram confirmadas, 2 refutadas e 2 verificadas em parte.
 - Os resultados são **indicativos**: valem para a amostra, a versão, os aparelhos e o período observados, e não constituem certificação do aplicativo.
 
 ---
@@ -33,7 +33,7 @@ As notas de 1 a 4 são **ordinais**, portanto não há média entre métricas. C
 
 | Objetivo | Característica | Métricas e notas | Regra | Veredito |
 | :--- | :--- | :--- | :---: | :--- |
-| **G1** — Adaptabilidade | Portabilidade | **M1.1:** 18/20 = 0,90 → **Nota 3**<br>**M1.2:** 1/1 = 1,00, parcial (Android 9 sem registro) | $\min$ | **Não avaliado (dados incompletos)** |
+| **G1** — Adaptabilidade | Portabilidade | **M1.1:** 15/20 = 0,75 → **Nota 2**<br>**M1.2:** 1/1 = 1,00, parcial (Android 9 sem registro) | $\min$ | **Não avaliado (dados incompletos)** |
 | **G2** — Instalabilidade | Portabilidade | **M2.1:** 10/10 → **Nota 4**<br>**M2.2:** 10/10 → **Nota 4** | $\min$ | **Satisfeito** |
 | **G3** — Maturidade | Confiabilidade | **M3.1:** 20/20 → **Nota 4**<br>**M3.2:** 20/20 → **Nota 4** | $\min$ | **Satisfeito** *(exposição reduzida)* |
 | **G4** — Tolerância a Falhas | Confiabilidade | **M4.1:** 10/10 → **Nota 4**<br>**M4.2:** 10/10 → **Nota 4** | $\min$ | **Satisfeito** |
@@ -44,7 +44,7 @@ As notas de 1 a 4 são **ordinais**, portanto não há média entre métricas. C
 
 ### G1 — Adaptabilidade (Portabilidade)
 
-`M1.1` ficou em $18/20 = 0{,}90$, **Nota 3**, exatamente no limite da faixa. Os dois defeitos (`T01-C03`, busca, e `T04-C03`, detalhes de parada) ocorreram com **fonte ampliada a 200%** em tela compacta; todos os casos em paisagem, na tela maior e na camada do mapa (`T03`) foram aprovados. Em `M1.2`, o app concluiu `TE01` a `TE08` no **Android 13**, mas o caso de Android 9 não tem registro, e o resultado de $1/1$ é provisório. O objetivo **não pode ser declarado satisfeito** até que a amostra seja fechada: se o caso for registrado como *Não observável*, $G_1 = \min(3, 4) = 3$ (**Satisfeito**, restrito ao Android 13); se for registrado como *Defeito*, `M1.2` cai para $0{,}50$ e $G_1$ fica **Não Satisfeito**.
+`M1.1` ficou em $15/20 = 0{,}75$, **Nota 2**, no limite inferior da faixa. Os cinco defeitos ocorreram com **fonte a 200%** em tela compacta, incluindo `T03-C03` no mapa. As demais configurações passaram nas cinco telas. Em `M1.2`, o app concluiu `TE01` a `TE08` no **Android 13**, mas o caso de Android 9 não tem registro, e o resultado de $1/1$ é provisório. Com a amostra de `M1.2` incompleta, `G1` fica **Não avaliado (dados incompletos)**.
 
 ### G2 — Instalabilidade (Portabilidade)
 
@@ -72,7 +72,7 @@ As 8 tarefas essenciais foram concluídas e as 20 linhas sorteadas do Relatório
 
 | Questão | Resposta | Evidência |
 | :--- | :--- | :--- |
-| **Q1.1** — A interface se redimensiona sem sobreposições ou cortes em telas compactas, orientações e fontes ampliadas? | **Em grande parte, com exceções.** 18 de 20 casos conformes; as duas falhas ocorrem com fonte a 200% (busca e detalhes de parada). Mapa, paisagem e tela maior sem falhas. | $M_{1.1} = 0{,}90$ · Nota 3 |
+| **Q1.1** — A interface se redimensiona sem sobreposições ou cortes em telas compactas, orientações e fontes ampliadas? | **Em parte.** 15 de 20 casos conformes. As cinco telas apresentaram cortes ou problemas de organização do conteúdo com fonte a 200%, incluindo o mapa. As configurações com fonte a 100% passaram. | $M_{1.1} = 0{,}75$ · Nota 2 |
 | **Q1.2** — O app executa sem erros críticos de compatibilidade em diferentes versões do SO, incluindo legadas? | **Só para o Android 13.** Sem erros nessa versão; legado (Android 9) e faixa Android 10–12 não verificados. | $M_{1.2} = 1/1$ (parcial) |
 | **Q2.1** — A instalação nas lojas oficiais ocorre na primeira tentativa sem erro? | **Sim.** 10 de 10 ciclos pela Play Store. | $M_{2.1} = 1{,}00$ · Nota 4 |
 | **Q2.2** — O app evita arquivos residuais no armazenamento compartilhado após a desinstalação? | **Sim, nos locais inspecionados.** 0 de 10 desinstalações com resíduo atribuível ao app. | $M_{2.2} = 1{,}00$ · Nota 4 |
@@ -105,7 +105,7 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 > *O DF no Ponto atende ao parque heterogêneo de dispositivos dos usuários do DF sem barreiras de hardware ou SO?*
 
-**Resposta parcial.** A instalação é limpa (`M2.1` e `M2.2`, nota 4) e a interface se adapta bem a telas compactas, paisagem e telas maiores, com **duas falhas em fonte ampliada a 200%** (`M1.1` = 0,90). Em compatibilidade de SO só há evidência para o **Android 13**, de modo que a resposta fica aberta para versões legadas. Pela regra do pior veredito, a característica fica **Não avaliada (dados incompletos)** até o fechamento de `M1.2`.
+**Resposta parcial.** A instalação é limpa (`M2.1` e `M2.2`, nota 4) e a interface passou nas configurações com fonte a 100%. Com fonte a 200%, houve **falhas nas cinco telas avaliadas** (`M1.1` = 0,75, Nota 2). Em compatibilidade de SO só há evidência para o **Android 13**, de modo que a resposta fica aberta para versões legadas. Pela regra do pior veredito, a característica fica **Não avaliada (dados incompletos)** até o fechamento de `M1.2`.
 
 ### QN2 — Confiabilidade
 
@@ -126,8 +126,8 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 ### D1 — Acessibilidade tecnológica e homologação de dispositivos *(Portabilidade)*
 
 - **Parecer:** **parcial; manter, com melhoria pontual e homologação de versões legadas em aberto.**
-- **Evidência favorável:** instalação 10/10 sem resíduo observável (G2 *Satisfeito*); telas 18/20 e Android 13 sem erros.
-- **Pontos de atenção:** dois defeitos de layout em fonte 200% (`T01-C03`, `T04-C03`), relevantes para usuários com baixa visão; nenhuma evidência para Android 9 ou para a faixa 10 a 12.
+- **Evidência favorável:** instalação 10/10 sem resíduo observável (G2 *Satisfeito*); 15 de 20 casos de tela conformes e Android 13 sem erros de compatibilidade.
+- **Pontos de atenção:** cinco defeitos de layout em fonte a 200% (`T01-C03` a `T05-C03`), incluindo a tela do mapa, relevantes para usuários com baixa visão; nenhuma evidência para Android 9 ou para a faixa 10 a 12.
 - **Decisão apoiada:** não há base para recomendar refatoração geral de interface nem para homologar versões legadas. Recomenda-se corrigir com prioridade o comportamento em fonte ampliada e **fechar `M1.2`** antes de qualquer parecer sobre dispositivos mais antigos.
 
 ### D2 — Resiliência operacional em ambiente urbano *(Confiabilidade)*
@@ -146,7 +146,7 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 | Decisão | Parecer | Condição para fechamento |
 | :---: | :--- | :--- |
-| **D1** | Parcial: manter, com melhoria em fonte ampliada | Fechar `M1.2`; descrever e corrigir os defeitos de fonte 200% |
+| **D1** | Parcial: manter, com melhoria em fonte ampliada | Fechar `M1.2`; corrigir os cinco defeitos de layout com fonte a 200% |
 | **D2** | Favorável na amostra: manter | Corrigir registros de `M4.2`; ampliar exposição em ciclo futuro |
 | **D3** | Favorável na amostra, com ressalvas | Investigar perdas de rastreio em `M5.1`; reforçar a evidência de `M5.2` |
 
@@ -164,7 +164,7 @@ As recomendações abaixo são para a equipe do aplicativo e se baseiam nos test
 | :---: | :---: | :--- | :--- | :--- | :---: |
 | **REC-01** | **Alta** | A previsão pode ficar muito imprecisa quando o veículo perde o rastreio. | Na linha `0.089`, os 3 eventos válidos tiveram perda de rastreio; os erros foram 13,32, 13,97 e 38,97 min. Na linha `933.4`, não houve perda nos 7 eventos válidos (mediana de erro de 0,95 min). O evento excluído `X01` também teve perda de rastreio, mas não teve chegada observada e não entrou no cálculo. | Manter o veículo na lista com um aviso como "sem sinal há X min", identificar quando a previsão deixa de ser em tempo real e investigar as perdas de rastreio da linha `0.089`. | `M5.1` |
 | **REC-02** | **Média** | A mediana do erro esconde previsões com desvios grandes. | A mediana geral foi 3,34 min (Nota 3), mas 3 dos 10 eventos válidos tiveram erro superior a 10 min; o maior foi de 38,97 min. | Sinalizar quando a previsão estiver sujeita a grande incerteza ou desatualizada, sem apresentá-la como horário preciso. | `M5.1` |
-| **REC-03** | **Média** | Com a letra do celular bem grande, duas telas ficam com problema. | Com a letra no tamanho máximo (200%), falharam a tela de resultado da busca e a de detalhes da parada. Foram 2 falhas em 20 testes. Os outros 18 passaram. | Ajustar essas duas telas para a letra grande não quebrar o layout. Testar com letra grande a cada nova versão. A causa exata ainda deve ser conferida nas capturas de tela. | `M1.1` |
+| **REC-03** | **Média** | Com a letra do celular ampliada, partes das telas ficam cortadas ou sobrepostas. | Com a fonte a 200%, falharam as cinco telas avaliadas: busca, horários, mapa, detalhes da parada e favoritos. Os outros 15 casos passaram. | Ajustar o layout das cinco telas para acomodar texto ampliado e repetir os testes com fonte a 200% a cada nova versão. | `M1.1` |
 | **REC-04** | **Média** | Uma parada pode estar um pouco fora do lugar real no mapa. | A parada `P02` ficou a 29 m do lugar real, quase no limite aceito (30 m). As outras 4 ficaram a no máximo 5 m. A medida foi feita nas imagens, com ajuda de IA, então pode ter pequena imprecisão. | Conferir a posição de `P02` pelas coordenadas e corrigir o cadastro se o erro se confirmar. Conferir também as outras paradas. | `M5.2` |
 | **REC-05** | **Média** | O passageiro não sabe há quanto tempo a posição do ônibus foi atualizada. | A posição atualiza a cada cerca de 1 min. A informação de "última atualização" só aparece na tela de detalhes da viagem. Esse atraso não foi medido nos testes. | Mostrar a hora da última atualização também no mapa e na lista de horários. Ver se dá para atualizar com mais frequência. | `M5.1` `M5.2` |
 | **REC-06** | **Baixa** | Não dá para saber se o app funciona bem em celulares com Android mais antigo. | O app só foi testado no Android 13. Nos emuladores de versões mais antigas, a instalação foi recusada, porque o app é feito só para um tipo de processador (ARM) e os emuladores usavam outro. Isso não prova defeito nas versões antigas. | Informar a versão mínima de Android aceita e continuar testando nas versões antigas (Android 9 a 12). Avaliar criar uma versão para outros processadores, para facilitar os testes. | `M1.2` |
@@ -205,7 +205,7 @@ Os resultados seguem as ameaças previstas em [Método de Avaliação](../fase3/
 | :--- | :--- | :--- | :--- |
 | **Externa** | Amostras pequenas e intencionais (2 a 20 casos); um único aparelho por ensaio; só Android 13; catálogo auditado em dia útil e uma data. | Contagem junto de cada nota; resultados tratados como indicativos. | Não se estimam taxas da população de usuários, nem se generaliza para outras versões, aparelhos ou linhas. |
 | **Construto** | `M2.2` só vê armazenamento compartilhado; `M6.2` mede presença no catálogo, não a qualidade da oferta de transporte; `M3` com exposição reduzida. | Limites declarados em cada ficha. | Resíduos em áreas privadas, qualidade da oferta e falhas raras em uso longo não são observáveis. |
-| **Conclusão** | Notas sensíveis a um caso (`M1.1` no limite, `M5.2` com `P02` a 29 m, faixas sem Nota 3); diferença expressiva de erros de `M5.1` entre as duas linhas amostradas. | Limiares fixados antes da coleta, pior nota, sem médias entre notas, tabela de sensibilidade e apresentação dos resultados por linha. | `G1` permanece sem veredito até a resolução de `M1.2`; `G5` é satisfeito na amostra, mas `M5.1` não se generaliza para outras linhas ou condições. |
+| **Conclusão** | Notas sensíveis a um caso (`M1.1` no limite inferior da Nota 2, `M5.2` com `P02` a 29 m, faixas sem Nota 3); diferença expressiva de erros de `M5.1` entre as duas linhas amostradas. | Limiares fixados antes da coleta, pior nota, sem médias entre notas, tabela de sensibilidade e apresentação dos resultados por linha. | `G1` permanece sem veredito até a resolução de `M1.2`; `G5` é satisfeito na amostra, mas `M5.1` não se generaliza para outras linhas ou condições. |
 
 <p class="legenda">Tabela 7. Ameaças à validade e limitações. Fonte: elaboração própria (2026).</p>
 

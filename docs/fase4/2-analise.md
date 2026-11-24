@@ -35,17 +35,17 @@ A Fase 4 **não redefine** fórmulas, escalas, limiares nem amostras. Tudo o que
 
 A Tabela 2 compara o previsto na Fase 3 com o que consta em [Coleta de Dados](1-coleta.md).
 
-| Métrica | Ambiente registrado | Previstos | Executados | Conformes | Defeitos | Não observáveis | Amostra válida | Situação |
+| Métrica | Ambiente registrado | Previstos | Executados | Conformes | Defeitos | Não observáveis / inválidos | Amostra válida | Situação |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **M1.1** | `DISP-02` · Android 13 | 20 casos | 20 | 15 | 5 | 0 | 20 | Completa |
-| **M1.2** | `DISP-02` · Android 13 e `EMU-01` a `EMU-03` · Android 9, 10 e 17 | 3 versões | 4 | 1 | 0 | 3 | 1 | **Parcial** (só Android 13 validado) |
+| **M1.2** | `DISP-02` · Android 13 e `EMU-01` a `EMU-03` · Android 9, 10 e 17 | 2 versões distintas (Android 9 e 13) | 4 | 1 | 0 | 3 não observáveis | 1 | **Parcial** (só Android 13 validado) |
 | **M2.1** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M2.2** | `DISP-02` · Android 13 | 10 ciclos | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M3.1** | `DISP-02` · Android 13 | 20 sessões | 20 | 20 | 0 | 0 | 20 | Completa |
 | **M3.2** | `DISP-02` · Android 13 | 20 sessões | 20 | 20 | 0 | 0 | 20 | Completa |
 | **M4.1** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
 | **M4.2** | `DISP-01` · Android 13 | 10 ensaios | 10 | 10 | 0 | 0 | 10 | Completa |
-| **M5.1** | `DISP-02` · Android 13 | 10 eventos | 10 | 10 | 0 | 0 | 10 | Completa |
+| **M5.1** | `DISP-02` · Android 13 | 10 eventos | 11 | — (mediana) | — | 1 inválido (`X01`) | 10 | Completa |
 | **M5.2** (paradas) | `DISP-01` · Android 13 | 5 paradas | 5 | 5 | 0 | 0 | 5 | Completa |
 | **M6.1** | `DISP-02` · Android 13 | 8 tarefas | 8 | 8 | 0 | 0 | 8 | Completa |
 | **M6.2** | `DISP-01` · Android 13 | 20 itens | 20 | 20 | 0 | 0 | 20 | Completa |
@@ -78,8 +78,8 @@ $$
 M_{1.2} = \frac{O_s}{O_t} = \frac{1}{1} = 1{,}00 \quad \text{(resultado parcial)}
 $$
 
-- **Amostra prevista:** 3 versões, conforme [Procedimentos de Execução](../fase3/2-procedimentos.md#5-amostras-e-limitacao).
-- **Tentativas registradas:** no Android 13 (API 33, `DISP-02`), as tarefas `TE01` a `TE08` foram concluídas sem erro de compatibilidade em 20/11/2026 às 20:35. Em 21/11, a Play Store bloqueou a instalação nos emuladores de Android 9, 10 e 17 devido ao filtro de arquitetura (emuladores x86/x86_64, app distribuído para ARM). A [Coleta de Dados](1-coleta.md#m12-adaptabilidade-de-sistema-operacional) registra essas três tentativas como **Não observáveis**.
+- **Amostra prevista:** Android 9 e 13, além da versão do aparelho físico se distinta, conforme [Procedimentos de Execução](../fase3/2-procedimentos.md#5-amostras-e-limitacao). Com Android 13 no `DISP-02`, o roteiro previa duas versões distintas.
+- **Tentativas registradas:** no Android 13 (API 33, `DISP-02`), as tarefas `TE01` a `TE08` foram concluídas sem erro de compatibilidade em 20/11/2026 às 20:35. Em 21/11, a equipe registrou recusas de instalação na Play Store nos emuladores de Android 9, 10 e 17. A [Coleta de Dados](1-coleta.md#m12-adaptabilidade-de-sistema-operacional) registra as três tentativas como **Não observáveis** e descreve a arquitetura dos emuladores como possível causa.
 - **Resultado parcial:** o denominador inclui apenas a versão válida. O valor $1{,}00$ descreve o Android 13 e a métrica fica sem nota definitiva para a cobertura planejada.
 - **Hipótese H1.2** ($M_{1.2} = 1{,}00$ nas versões testadas): **parcialmente verificada.** O resultado sustenta apenas a compatibilidade no Android 13.
 
@@ -93,7 +93,7 @@ $$
 
 <p class="legenda">Tabela 3. Síntese de G1. Fonte: elaboração própria (2026).</p>
 
-A Nota 2 de `M1.1` registra o problema de acessibilidade nas telas. O veredito formal de `G1` fica **Não avaliado (dados incompletos)** porque só uma das três versões previstas para `M1.2` foi validada.
+A Nota 2 de `M1.1` registra o problema de acessibilidade nas telas. O veredito formal de `G1` fica **Não avaliado (dados incompletos)** porque só o Android 13 foi validado e o roteiro também previa o Android 9.
 
 ---
 
@@ -105,7 +105,7 @@ $$
 M_{2.1} = \frac{I_s}{I_t} = \frac{10}{10} = 1{,}00
 $$
 
-- **Amostra:** 10 ciclos de instalação limpa pela Google Play Store no `DISP-02`, em 20/11/2026 (16:41 a 17:25), todos concluídos na primeira tentativa.
+- **Amostra:** 10 ciclos de instalação limpa pela Google Play Store no `DISP-02`, em 19/11/2026 (16:41 a 17:25), todos concluídos na primeira tentativa.
 - **Nota:** $1{,}00$ → **Nota 4 (Excelente)**. Nesta amostra a Nota 3 era inatingível ($9/10 = 0{,}90 < 0{,}95$), de modo que um único defeito já levaria à Nota 2.
 - **Hipótese H2.1** ($M_{2.1} = 1{,}00$): **confirmada.**
 
@@ -201,7 +201,7 @@ $$
 M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_{10}) = 3{,}34\text{ min}
 $$
 
-- **Amostra e medição:** 10 eventos válidos coletados em campo em 21/11/2026 no `DISP-02` (parada `P01`, Ceilândia Norte), cobrindo as linhas `933.4` (7 eventos) e `0.089` (3 eventos). Um 11º evento da linha `0.089` foi descartado antes do cálculo por passagem sem parada/foto (`X01`).
+- **Amostra e medição:** 11 eventos registrados em campo em 21/11/2026 no `DISP-02` (parada `P01`, Ceilândia Norte). Dos dez pares válidos, seis vieram do primeiro bloco e quatro do segundo. Foram sete pares da linha `933.4` e três da linha `0.089`. O evento `X01`, da linha `0.089`, foi excluído porque a chegada ficou sem registro.
 - **Distribuição dos erros absolutos (minutos):** $[0{,}53;\ 0{,}65;\ 0{,}67;\ 0{,}95;\ 2{,}05;\ 4{,}63;\ 5{,}62;\ 13{,}32;\ 13{,}97;\ 38{,}97]$.
   - Erro mínimo: $0{,}53\text{ min}$ (32 s)
   - Erro máximo: $38{,}97\text{ min}$ (atraso severo na linha 0.089)
@@ -291,7 +291,7 @@ $$
 | **M3.2** | Sessões sem congelamentos | G3 | 20 / 20 | 1,00 | **4** | $M_{3.2} \ge 0{,}95$ | Confirmada |
 | **M4.1** | Mitigação de perda de conexão | G4 | 10 / 10 | 1,00 | **4** | $M_{4.1} < 0{,}85$ | Refutada |
 | **M4.2** | Tratamento de perda de GPS | G4 | 10 / 10 | 1,00 | **4** | $M_{4.2} \ge 0{,}85$ | Confirmada |
-| **M5.1** | Precisão de tempo | G5 | 10 / 10 | Mediana 3,34 min | **3** | mediana $\le 5$ min | Confirmada |
+| **M5.1** | Precisão de tempo | G5 | 10 pares válidos | Mediana 3,34 min | **3** | mediana $\le 5$ min | Confirmada |
 | **M5.2** | Correção do mapa (paradas) | G5 | 5 / 5 | 1,00 | **4** | $M_{5.2} \ge 0{,}85$ (paradas) | Confirmada (paradas) |
 | **M6.1** | Cobertura de tarefas essenciais | G6 | 8 / 8 | 1,00 | **4** | $M_{6.1} = 1{,}00$ | Confirmada |
 | **M6.2** | Completude do banco | G6 | 20 / 20 | 1,00 | **4** | $M_{6.2} \ge 0{,}95$ | Confirmada |
@@ -324,8 +324,8 @@ Com amostras pequenas, um único caso pode mudar uma nota e o veredito do objeti
 | **M1.1** | $15/20 = 0{,}75$, no limite da Nota 2 | Mais 1 defeito: $14/20 = 0{,}70$ → Nota 1 | A pior nota seria 1. O veredito formal de G1 depende da cobertura de M1.2. |
 | **M1.2** | $1/1$ no Android 13, com 3 tentativas não observáveis | Em um teste adicional válido, uma versão com defeito reduziria o índice a $1/2 = 0{,}50$, faixa da Nota 1 | O veredito de G1 depende da cobertura planejada de M1.2. |
 | **M2.1 / M2.2** | $10/10$, sem Nota 3 possível | 1 defeito → Nota 2 | G2 passaria a *Satisfeito com Ressalvas* |
-| **M3.1 / M3.2** | $20/20$ em sessões de 2 min 30 s | 2 sessões afetadas → Nota 1 (com 1 afetada, Nota 3) | G3 mudaria conforme a pior nota |
-| **M5.1** | Mediana $3{,}34$ min (Nota 3) | Mediana $> 5$ min → Nota 2 | G5 passaria a *Satisfeito com Ressalvas* (pior nota = 2) |
+| **M3.1 / M3.2** | $20/20$ em sessões de 2 min 30 s | 1 sessão afetada: $19/20 = 0{,}95$ → Nota 3. 2: $18/20 = 0{,}90$ → Nota 2. 3: $17/20 = 0{,}85$ → Nota 1. | Pela pior nota, G3 fica *Satisfeito* com Nota 3, *Satisfeito com Ressalvas* com Nota 2 e *Não Satisfeito* com Nota 1. |
+| **M5.1** | Mediana $3{,}34$ min (Nota 3) | Mediana $> 5$ e $\le 10$ min → Nota 2. Mediana $> 10$ min → Nota 1. | G5 passaria a *Satisfeito com Ressalvas* com Nota 2 ou *Não Satisfeito* com Nota 1. |
 | **M5.2** | $5/5$, com `P02` a 29 m do limite de 30 m | `P02` fora da tolerância: $4/5 = 0{,}80$ → Nota 2 | G5 passaria a *Satisfeito com Ressalvas* (pior nota = 2) |
 | **M6.1** | $8/8$, sem Nota 3 possível | 1 tarefa com defeito → Nota 2 | G6 passaria a *Satisfeito com Ressalvas* |
 

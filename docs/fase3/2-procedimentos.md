@@ -226,7 +226,7 @@ A Tabela 6 relaciona cada amostra às faixas de nota da Fase 2, aplicadas sem ar
 | Métrica | Amostra | Notas possíveis (total de casos conformes) |
 |---|---|---|
 | M1.1 | 20 casos | 4: 20; 3: 18–19; 2: 15–17; 1: 0–14 |
-| M1.2 | 3 versões | 4: 3; 1: 0–2 (sem notas 2 e 3) |
+| M1.2 | 2 ou 3 versões distintas | 4: todas conformes; 1: ao menos uma com defeito (sem notas 2 e 3) |
 | M2.1 / M2.2 | 10 ciclos | 4: 10; 2: 9; 1: 0–8 (sem nota 3) |
 | M3.1 / M3.2 | 20 sessões | 4: 20; 3: 19; 2: 18; 1: 0–17 |
 | M4.1 / M4.2 | 10 ensaios | 4: 10; 3: 9; 2: 7–8; 1: 0–6 |
@@ -243,7 +243,7 @@ Em amostras pequenas, um único defeito muda a nota e, pela regra da pior nota, 
 
 - Os resultados são **indicativos** e valem só para a amostra, a versão do app e o período observados. Não se generaliza para o app inteiro.
 - Na Fase 4, apresentar sempre as contagens (por exemplo, "9 de 10") junto da nota.
-- Em M1.2, as 3 versões cobrem os extremos (Android 9 e 13) e o aparelho físico, e não a faixa intermediária; qualquer versão reprovada leva à nota 1.
+- Em M1.2, o plano cobre Android 9 e 13 e inclui a versão do aparelho físico quando ela é distinta. Para uma amostra completa de duas ou três versões, qualquer versão reprovada leva à nota 1.
 
 ## 6. Registro e evidências
 
@@ -276,7 +276,7 @@ Os itens da Tabela 8 precisam estar preenchidos e versionados antes do primeiro 
 | Itens `L01`, `L02`, `P01` e lista `A01`–`A20` (código, sentido, variante, data da consulta) | `L01` e `P01` selecionados em 18/11/2026; registro oficial de ambos, além de `L02` e da lista `A01`–`A20` coletados em 19/11/2026 |
 | Paradas, dias, janelas e responsáveis do campo (M5.1 e M5.2) | Pendente |
 | Identificador do pacote do app, para a inspeção de M2.2 | Resolvido: `br.bus2.dfnoponto` |
-| Versões do Android de M1.2, conforme [Recursos](3-recursos.md) | Encerrada em 21/11/2026: definidos os emuladores `EMU-01` (API 28), `EMU-02` (API 29) e `EMU-03` (API 37), todos com imagem *Google Play*. As três tentativas foram recusadas pela loja por filtro de arquitetura (imagens x86/x86_64, aplicativo apenas ARM) e registradas como **Não observáveis** na [Fase 4](../fase4/1-coleta.md#m12-adaptabilidade-de-sistema-operacional). A amostra planejada de 3 versões permanece inalterada; a divergência entre previsto e executado é reportada na execução, pela regra 4 |
+| Versões do Android de M1.2, conforme [Recursos](3-recursos.md) | Encerrada em 21/11/2026: definidos os emuladores `EMU-01` (API 28), `EMU-02` (API 29) e `EMU-03` (API 37), todos com imagem *Google Play*. A equipe registrou recusas de instalação pela loja nos três emuladores. As tentativas ficaram **Não observáveis** na [Fase 4](../fase4/1-coleta.md#m12-adaptabilidade-de-sistema-operacional). Com Android 13 no aparelho físico, o roteiro previa duas versões distintas (9 e 13). Só o Android 13 teve execução válida |
 | Modo de obter a distância em M5.2: confirmar se o mapa do app exibe a posição do usuário e como converter a medida da captura em metros (barra de escala do mapa, distância conhecida entre dois pontos no mesmo zoom ou coordenadas obtidas pela função de compartilhar) | Pendente, bloqueia a saída de campo |
 
 <p class="legenda">Tabela 8. Pendências a resolver antes da coleta. Fonte: elaboração própria (2026).</p>

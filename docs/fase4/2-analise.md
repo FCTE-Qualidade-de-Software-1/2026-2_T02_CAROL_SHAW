@@ -177,10 +177,9 @@ $$
 M_{4.2} = \frac{G_s}{G_t} = \frac{10}{10} = 1{,}00
 $$
 
-- **Amostra:** 10 ensaios no `DISP-01`, em 19/11/2026, com o serviço de localização desativado por 30 s. Em todos, o app informou a perda em até 5 s, manteve `TE01` e `TE04` disponíveis e recuperou a posição no mapa em até 30 s.
+- **Amostra:** 10 ensaios no `DISP-01`, em 19/11/2026, das 18h08 às 18h16, com o serviço de localização desativado por 30 s. A [Coleta de Dados](1-coleta.md#m42-perda-de-localizacao) vincula um vídeo a cada ensaio. Em todos, o app informou a perda em até 5 s, manteve `TE01` e `TE04` disponíveis e recuperou a posição no mapa em até 30 s.
 - **Nota:** $1{,}00$ → **Nota 4 (Excelente)**.
 - **Hipótese H4.2** ($M_{4.2} \ge 0{,}85$): **confirmada.**
-- **Atenção ao registro:** os dez ensaios têm o mesmo horário (18:24) e as ligações das evidências apresentam inconsistências (seção 7). Convém conferi-los na auditoria de 10% antes de a nota ser tratada como definitiva.
 
 #### Veredito de G4
 

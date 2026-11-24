@@ -56,7 +56,7 @@ Nas 20 sessões, não houve encerramento inesperado nem congelamento superior a 
 
 ### G4 — Tolerância a Falhas (Confiabilidade)
 
-Nos 10 ensaios de queda de rede e nos 10 de perda de localização, o app permaneceu aberto, avisou a indisponibilidade em até 5 s e retomou o serviço em até 30 s. **Satisfeito.** Os registros de `M4.2` têm inconsistências de horário e de ligações de evidência ([Análise de Dados](2-analise.md#7-anomalias-exclusoes-e-limitacoes-dos-registros)), a conferir na auditoria.
+Nos 10 ensaios de queda de rede e nos 10 de perda de localização, o app permaneceu aberto, avisou a indisponibilidade em até 5 s e retomou o serviço em até 30 s. **Satisfeito.** A [Coleta de Dados](1-coleta.md#m42-perda-de-localizacao) registra os dez ensaios de `M4.2` entre 18h08 e 18h16, com um vídeo por ensaio.
 
 ### G5 — Correção (Adequação Funcional)
 
@@ -111,7 +111,7 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 > *O aplicativo se mantém estável, resiliente a quedas de rede e recuperável durante os deslocamentos urbanos?*
 
-**Resposta positiva dentro da amostra.** Nenhum *crash* nem congelamento em 20 sessões, e tratamento adequado de queda de rede e de perda de GPS em 20 ensaios induzidos. Ressalvas: sessões de 2 min 30 s, um único aparelho de laboratório por métrica, Android 13, e inconsistências nos registros de `M4.2`. O resultado indica estabilidade na janela observada, sem generalizar para uso prolongado ou para outros aparelhos.
+**Resposta positiva dentro da amostra.** Nenhum *crash* nem congelamento em 20 sessões, e tratamento adequado de queda de rede e de perda de GPS em 20 ensaios induzidos. As sessões duraram 2 min 30 s e cada métrica foi avaliada em um único aparelho de laboratório com Android 13. O resultado indica estabilidade na janela observada, sem generalizar para uso prolongado ou para outros aparelhos.
 
 ### QN3 — Adequação Funcional
 
@@ -134,7 +134,7 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 
 - **Parecer:** **favorável na amostra; manter, com confirmação em condições mais exigentes.**
 - **Evidência favorável:** 0 *crashes* e 0 congelamentos em 20 sessões; 10/10 em queda de rede; 10/10 em perda de GPS (G3 e G4 *Satisfeitos*).
-- **Pontos de atenção:** exposição reduzida a 50 min; um aparelho por ensaio; testes só em laboratório, sem rede móvel real em deslocamento; registros de `M4.2` a corrigir.
+- **Pontos de atenção:** 50 min de exposição nas sessões de estabilidade, um aparelho por ensaio e testes em laboratório. Falta observar o uso da rede móvel em deslocamento.
 - **Decisão apoiada:** não se identificou necessidade de priorizar arquitetura de tolerância a falhas com base nestes dados. A hipótese pessimista **H4.1** (falta de modo *offline* prejudicando o aviso) **foi refutada** nos 10 ensaios.
 
 ### D3 — Confiabilidade e utilidade dos dados de mobilidade *(Adequação Funcional)*
@@ -147,7 +147,7 @@ Cada característica recebe o **pior veredito** entre seus dois objetivos, e cad
 | Decisão | Parecer | Condição para fechamento |
 | :---: | :--- | :--- |
 | **D1** | Parcial: manter, com melhoria em fonte ampliada | Corrigir os cinco defeitos de layout com fonte a 200% e validar versões legadas em ambiente ARM |
-| **D2** | Favorável na amostra: manter | Corrigir registros de `M4.2`; ampliar exposição em ciclo futuro |
+| **D2** | Favorável na amostra: manter | Ampliar a duração dos testes e avaliar o uso da rede móvel em deslocamento |
 | **D3** | Favorável na amostra, com ressalvas | Investigar perdas de rastreio em `M5.1`; reforçar a evidência de `M5.2` |
 
 <p class="legenda">Tabela 5. Síntese dos pareceres para D1, D2 e D3. Fonte: elaboração própria (2026).</p>

@@ -56,7 +56,7 @@ Toda *Issue* aberta no repositório deve iniciar com a indicação da estimativa
 - **Eventos Desconsiderados:** Alterações automatizadas por *bots*, edições pontuais de título ou ajustes visuais de rótulos (*labels*).
 
 ### 4.3. Contextualização dos Dados e Evolução do Processo
-Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia gerou distorções temporais. Com a reestruturação da governança para a **Milestone de Correção da Entrega 1**, as *Issues* passam a registrar a data real de criação (`Tcriação`), permitindo apurar o *Lead Time* verdadeiro de entrega, enquanto o *Cycle Time* passa a ser medido diretamente através das horas trabalhadas (`Hr`) registradas pela equipe em cada tarefa.
+Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia gerou distorções temporais. Com a reestruturação da governança na **Correção da Entrega 1** (21/21 issues concluídas, `TMC = 1,82h` sobre as 20 issues com `Hr` declarado, dentro da meta de 2h) e na **Entrega 2** (29/30 issues concluídas até 24/11/2026, `TMC = 2,36h` sobre as 24 issues com `Hr` declarado), as *Issues* passaram a registrar a data real de criação (`Tcriação`) e as horas efetivamente trabalhadas (`Hr`). Na Entrega 2, o `TMC` ficou ligeiramente acima da meta de 2h por issue devido à complexidade das coletas de campo (M5.1/M5.2) e da consolidação do artigo LaTeX.
 
 ---
 
@@ -72,6 +72,8 @@ Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia ge
 | #6 | [Análise de requisitos, metodologia e revisão técnica global](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/6) | Concluída | Praticamente 0 (aberta e fechada em 31/10/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
 | #7 | [Refinamentos e correções do artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/issues/7) | Concluída | 4 dias até o fechamento (31/10 a 04/11/2026) | Aproximadamente 20-30 min registrados; não representa o tempo real |
 
+*Na milestone **Entrega 1**, os tempos refletem registros retroativos e não representam a duração real do desenvolvimento.*
+
 ### 5.2. Correção Entrega 1
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-8" width="1000" height="650" frameborder="0"></iframe>
@@ -79,8 +81,6 @@ Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia ge
 ### 5.3. Entrega 2
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-8" width="1000" height="550" frameborder="0"></iframe>
-
-Na milestone **Entrega 1**, os tempos refletem registros retroativos e não representam a duração real do desenvolvimento. 
 
 ## Tabela de Contribuição
 
@@ -91,3 +91,4 @@ Na milestone **Entrega 1**, os tempos refletem registros retroativos e não repr
 | [Vitor Bessa](https://github.com/bessazs) | Atualização da tabela de desempenho por issue pela tabela do Grafana | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
 | [Vitor Bessa](https://github.com/bessazs) | Adição do conteúdo da Entrega 2 | 15/11/2026|[0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600)|
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Revisão textual, consolidação do TMC da Correção E1 e Entrega 2 e reposicionamento da nota da Entrega 1 (#54) | 24/11/2026 | — |

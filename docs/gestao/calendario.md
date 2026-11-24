@@ -2,7 +2,7 @@
 
 ## 1. Introdução
 
-Esta página foi desenvolvida para acompanhar o desenvolvimento das entregas ao longo do semestre adotada pela equipe Carol Shaw. Seu papel central é monitorar se o escopo definido para cada ciclo de desenvolvimento está sendo entregue dentro do prazo estipulado e avaliar a cadência do avanço das atividades ao longo do tempo.
+Esta página foi desenvolvida para acompanhar o desenvolvimento das entregas da equipe Carol Shaw ao longo do semestre. Seu papel central é monitorar se o escopo definido para cada ciclo de desenvolvimento está sendo entregue dentro do prazo estipulado e avaliar a cadência do avanço das atividades ao longo do tempo.
 
 
 
@@ -116,7 +116,7 @@ A milestone **Correção Entrega 1** foi instituída para executar o plano de me
 
 ### 5.2. Dados da Milestone "Correção Entrega 1"
 
-A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo de 5 frentes de trabalho estruturantes:
+A milestone de correção foi aberta no dia 7 de Novembro de 2026 e foi **concluída com 100% do escopo (21/21 issues fechadas)**, organizada em 4 frentes de trabalho estruturantes:
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-10" width="600" height="350" frameborder="0"></iframe>
 
@@ -125,9 +125,9 @@ A milestone de correção foi aberta no dia 7 de Novembro de 2026, com o escopo 
 | Tarefa / Frente de Correção | Escopo Principal | Tempo Aprox. | Status |
 | :--- | :--- | :---: | :---: |
 | **Reestruturação da Gestão e Visão Geral (PSM-CID)** | Redefinição do framework PSM-CID, fluxo de trabalho e regras Kanban | ~12 horas | Concluído |
-| **Revisão e reestruturação do GQM** | Revisar a metodologia utilizada, incluindo a explicação e o embasamento teórico das métricas, escalas, métodos de cálculo e questões adotadas, garantindo sua coerência e fundamentação. | ~10 horas | Em Andamento |
-| **Alinhamento entre as Fases 1 e 2** |  Verificar e aprimorar a coesão entre as duas fases, incluindo questões norteadoras que servirão de guia para a aplicação do GQM, bem como revisar a seleção e a utilização dos Objetivos de Desenvolvimento Sustentável (ODS). | ~2 horas | Em Andamento |
-| **Verificação e validação do artigo** |  Realizar uma revisão geral do artigo, identificando e corrigindo possíveis inconsistências conceituais, metodológicas e textuais, assegurando o alinhamento com os demais artefatos do projeto. | ~4 horas | Em Andamento |
+| **Revisão e reestruturação do GQM** | Revisar a metodologia utilizada, incluindo a explicação e o embasamento teórico das métricas, escalas, métodos de cálculo e questões adotadas, garantindo sua coerência e fundamentação. | ~10 horas | Concluído |
+| **Alinhamento entre as Fases 1 e 2** | Verificar e aprimorar a coesão entre as duas fases, incluindo questões norteadoras que servirão de guia para a aplicação do GQM, bem como revisar a seleção e a utilização dos Objetivos de Desenvolvimento Sustentável (ODS). | ~2 horas | Concluído |
+| **Verificação e validação do artigo** | Realizar uma revisão geral do artigo, identificando e corrigindo possíveis inconsistências conceituais, metodológicas e textuais, assegurando o alinhamento com os demais artefatos do projeto. | ~4 horas | Concluído |
 
 **Cálculo da Taxa de Conclusão da Correção:**
 
@@ -162,31 +162,30 @@ A milestone **Entrega 2** foi instituída para conectar as especificações de q
 
 ### 6.2. Dados da Milestone "Entrega 2"
 
-A milestone foi aberta no dia 15 de Novembro de 2026, com o escopo de 4 frentes de trabalho estruturantes:
+A milestone foi aberta no dia 15 de Novembro de 2026, com o escopo de 4 frentes de trabalho estruturantes. Até 24/11/2026, **29 das 30 issues cadastradas foram concluídas (96,7%)**, restando apenas a issue de fechamento (#54) para revisão final e publicação da release:
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=1794794065410&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-10" width="600" height="350" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-10" width="600" height="350" frameborder="0"></iframe>
 
 #### Detalhamento das Tarefas da Entrega 2
 
 | Tarefa / Frente de Trabalho | Escopo Principal | Tempo Aprox. | Status |
 | :--- | :--- | :---: | :---: |
-| **Projeto e Documentação do Método de Avaliação (Fase 3)** | Definir, fundamentar e documentar o método de avaliação escolhido, elaborando instruções detalhadas e autossuficientes para garantir que qualquer avaliador consiga reproduzir os testes completamente. | ~8 horas | Em andamento |
-| **Especificação de Recursos e Cronograma (Fase 3)** | Levantar e especificar toda a infraestrutura necessária para a execução (ferramentas, ambientes e massas de dados), além de estruturar o cronograma detalhado das ações de avaliação. | ~6 horas | Em andamento |
-| **Coleta de Medidas e Análise Comparativa (Fase 4)** | Executar os procedimentos planejados na Fase 3 para coletar as métricas reais do software e realizar a análise comparativa dos dados obtidos frente aos critérios e requisitos definidos. | ~10 horas | Planejado |
-| **Julgamento dos Resultados e Parecer Técnico (Fase 4)** | Interpretar e consolidar os resultados das comparações em um parecer técnico documentado, emitindo um diagnóstico conclusivo sobre a qualidade do produto avaliado. | ~6 horas | Planejado |
+| **Projeto e Documentação do Método de Avaliação (Fase 3)** | Definir, fundamentar e documentar o método de avaliação escolhido, elaborando instruções detalhadas e autossuficientes para garantir que qualquer avaliador consiga reproduzir os testes completamente. | ~8 horas | Concluído |
+| **Especificação de Recursos e Cronograma (Fase 3)** | Levantar e especificar toda a infraestrutura necessária para a execução (ferramentas, ambientes e massas de dados), além de estruturar o cronograma detalhado das ações de avaliação. | ~6 horas | Concluído |
+| **Coleta de Medidas e Análise Comparativa (Fase 4)** | Executar os procedimentos planejados na Fase 3 para coletar as métricas reais do software e realizar a análise comparativa dos dados obtidos frente aos critérios e requisitos definidos. | ~10 horas | Concluído |
+| **Julgamento dos Resultados, Artigo e Fechamento (Fase 4)** | Interpretar e consolidar os resultados em parecer técnico, atualizar o artigo LaTeX, revisar a consistência global e publicar a release da Entrega 2. | ~6 horas | Em revisão final |
 
 **Cálculo da Taxa de Conclusão da Entrega 2:**
 
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=1794794065410&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-12" width="450" height="200" frameborder="0"></iframe>
 
 *Cálculo feito apenas sobre as issues abertas e fechadas até o momento*
 
 ### 6.3. Gráfico de Burndown da Entrega 2
 
-Como a milestone encontra-se em sua fase inicial de execução, o conjunto de dados coletados ainda é insuficiente para inferir tendências no gráfico de burndown. A análise de desempenho será atualizada conforme o avanço das atividades planejadas.
+O gráfico de *burndown* abaixo acompanha o consumo progressivo das 30 issues da **Entrega 2** (29 concluídas até 24/11/2026 — **96,7%** de conclusão), evidenciando o cumprimento contínuo das entregas de coleta, análise, resultados, protótipos e artigo ao longo do ciclo, restando apenas o encerramento da issue #54 e a publicação da release:
 
-
-<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=1794794065410&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-1" width="450" height="200" frameborder="0"></iframe>
+<iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794005518555&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-1" width="450" height="200" frameborder="0"></iframe>
 
 </details>
 
@@ -198,3 +197,4 @@ Como a milestone encontra-se em sua fase inicial de execução, o conjunto de da
 | [Vitor Bessa](https://github.com/Bessazs) | Adição da tabela de desempenho da milestone e do gráfico de burndown | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
 | [Vitor Bessa](https://github.com/Bessazs) | Adição do conteúdo da Entrega 2 | 15/11/2026 | [0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600) |
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Revisão textual, atualização dos status das milestones e correção dos iframes da Entrega 2 para `to=now` (#54) | 24/11/2026 | — |

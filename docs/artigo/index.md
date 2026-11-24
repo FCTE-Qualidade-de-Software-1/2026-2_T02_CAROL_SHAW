@@ -13,7 +13,7 @@ A modelagem priorizou três características de qualidade do produto:
 
 ## 2. Acesso ao Documento Completo
 
-O artigo acadêmico foi redigido no padrão oficial da Sociedade Brasileira de Computação (SBC) utilizando $\LaTeX$ e referências BibTeX. O documento compilado em versão final está disponível para leitura e download abaixo:
+O artigo foi redigido em $\LaTeX$ no padrão da Sociedade Brasileira de Computação (SBC). O repositório também disponibiliza as referências em formato BibTeX. O PDF está disponível para leitura e download.
 
 <div style="text-align: center; margin: 2rem 0;">
   <a class="md-button md-button--primary" href="main.pdf" target="_blank" download="Artigo_Carol_Shaw_DF_no_Ponto.pdf">
@@ -27,7 +27,7 @@ O artigo acadêmico foi redigido no padrão oficial da Sociedade Brasileira de C
 
 - **Seção 1 — Introdução:** Contextualização da mobilidade urbana no Distrito Federal, motivação da escolha do DF no Ponto, problema de pesquisa e objetivos.
 - **Seção 2 — Referencial Teórico:** Normas ISO/IEC 25010 e ISO/IEC 25040, metodologia GQM e evidências da literatura sobre qualidade de aplicativos móveis.
-- **Seção 3 — Metodologia e Processo de Avaliação:** Condução do processo de avaliação estruturado nas quatro fases da ISO/IEC 25040 e definição do escopo técnico de caixa-preta.
+- **Seção 3 — Metodologia e Processo de Avaliação:** Agrupamento das cinco atividades da ISO/IEC 25040 em quatro fases do projeto e definição do escopo da avaliação de caixa-preta.
 - **Seção 4 — Fase 1: Requisitos da Avaliação:** Propósito, decisões estratégicas apoiadas (D1–D3), questões norteadoras transversais (QN1–QN3), partes interessadas, alvo da avaliação, justificativas técnicas e alinhamento ao ODS 11 (meta 11.2).
 - **Seção 5 — Fase 2: Especificação da Avaliação:** Desdobramento GQM (G1–G6), questões operacionais, hipóteses preditivas, formulação das 12 métricas, entre adaptações da ISO/IEC 25023 e extensões do projeto e critérios conservadores de julgamento.
 - **Seção 6 — Fase 3: Projeto da Avaliação:** Método particionado em ensaios controlados de laboratório e medições de campo, inventário de recursos (DISP-01, DISP-02 e emuladores), catálogos fixos de tarefas e telas, e procedimentos de auditoria amostral.

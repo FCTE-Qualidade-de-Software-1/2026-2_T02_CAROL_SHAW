@@ -57,7 +57,7 @@ O transporte público coletivo é elemento vital para a mobilidade urbana, inclu
 
 Diante dessa problemática, o objetivo deste trabalho é executar uma avaliação abrangente, auditável e reprodutível da qualidade de software do aplicativo \textit{DF no Ponto}, adotando estritamente a perspectiva do usuário final (\textit{black-box testing}). Metodologicamente, a pesquisa segue as etapas de processo da norma ISO/IEC 25040~\cite{iso25040}, aplica o modelo de qualidade de produto da ISO/IEC 25010~\cite{iso25010} e usa métricas adaptadas da ISO/IEC 25023~\cite{iso25023} e extensões do projeto, estruturadas pelo paradigma \textit{Goal-Question-Metric} (GQM)~\cite{basili1988,basili1994}. O projeto agrupa as cinco atividades da ISO/IEC 25040 em quatro fases de avaliação.
 
-O artigo organiza-se como segue: a Seção~\ref{sec:referencial} estabelece o referencial teórico; a Seção~\ref{sec:metodologia} descreve o processo metodológico; a Seção~\ref{sec:fase1} detalha os requisitos da avaliação (Fase~1); a Seção~\ref{sec:fase2} formaliza a especificação GQM e critérios de julgamento (Fase~2); a Seção~\ref{sec:fase3} documenta o projeto do método, recursos e cronograma (Fase~3); a Seção~\ref{sec:fase4} apresenta execução, análise de dados, resultados e pareceres (Fase~4); a Seção~\ref{sec:conclusao} sintetiza as conclusões; e o Apêndice~\ref{ap:contribuicao} consolida a governança e esforço da equipe.
+O artigo organiza-se como segue: a Seção~\ref{sec:referencial} estabelece o referencial teórico; a Seção~\ref{sec:metodologia} descreve o processo metodológico; a Seção~\ref{sec:fase1} detalha os requisitos da avaliação (Fase~1); a Seção~\ref{sec:fase2} formaliza a especificação GQM e critérios de julgamento (Fase~2); a Seção~\ref{sec:fase3} documenta o projeto do método, recursos e cronograma (Fase~3); a Seção~\ref{sec:fase4} apresenta execução, análise de dados, resultados e pareceres (Fase~4); e a Seção~\ref{sec:conclusao} sintetiza as conclusões e apresenta os protótipos de acessibilidade.
 
 % ---------------------------------------------------------------------
 \section{Referencial Teórico}
@@ -305,7 +305,7 @@ O fluxo de aplicação estrutura-se em quatro etapas: (1)~preparação do ambien
 
 A infraestrutura instrumental combinou recursos físicos, ambientes virtuais e ferramentas de diagnóstico. Como \textbf{dispositivos físicos}, mobilizou-se o DISP-01 (Samsung Galaxy S20 FE 5G, 6,5", Android 13/One UI 5.1), encarregado das medições de campo em M5.2 e de laboratório em M4.1, M4.2 e M6.2, e o DISP-02 (Xiaomi Redmi Note 11S, 6,43", Android 13), empregado em campo para M5.1 e em laboratório para M1.1, M1.2, M2.1, M2.2, M3.1, M3.2 e M6.1. No DISP-02 habilitou-se a permissão avançada de depuração de segurança do MIUI, permitindo a injeção remota de configurações de tela via \textit{adb}.
 
-Em M1.2, o aplicativo concluiu as oito tarefas essenciais no aparelho físico com Android 13, a única versão com execução válida. Nos \textbf{emuladores} do Android Studio Rabbit 2 com Android 9 e 10 (x86) e Android 17 (x86\_64), a Play Store bloqueou a instalação por incompatibilidade de arquitetura com o aplicativo, distribuído para ARM. As três tentativas foram classificadas como não observáveis. A equipe usou \textit{adb} 1.0.41 e gravação de tela. Para M5.2, o plano previa GPSTest 3.10.6 como referência de campo, com precisão horizontal informada de até 10 m.
+Em M1.2, o aplicativo concluiu as oito tarefas essenciais no aparelho físico com Android 13, a única versão com execução válida. A equipe registrou recusas de instalação pela Play Store nos \textbf{emuladores} com Android 9 e 10 (x86) e Android 17 (x86\_64). A arquitetura foi apontada como possível causa. A captura publicada mostra uma recusa genérica da loja. As três tentativas foram classificadas como não observáveis. A equipe usou \textit{adb} 1.0.41 e gravação de tela. Para M5.2, o plano previa GPSTest 3.10.6 como referência de campo, com precisão horizontal informada de até 10 m.
 
 \subsection{Procedimentos de Execução, Parâmetros e Catálogos Fixados}
 \label{sec:procedimentos}
@@ -330,7 +330,7 @@ O cronograma operacional ordenou o fluxo das atividades respeitando rigorosas de
 
 Os ensaios usaram a versão de produção 5.25.1(1149). A \href{https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/fase4/1-coleta/}{página de Coleta de Dados} reúne 128 registros de execução e os links para as evidências disponíveis. A página relata que a atividade C11 conferiu mais de 10\% dos registros de cada métrica.
 
-Das 12 métricas, 11 concluíram suas amostras integrais e uma (M1.2) obteve execução parcial em virtude da incompatibilidade dos emuladores x86. Em M5.1, o plano previa cinco pares por bloco. Na parada P01 (Ceilândia Norte), no sábado, 21/11/2026, foram registrados 11 eventos. Houve seis pares válidos no primeiro bloco e quatro no segundo. O evento X01, do primeiro bloco, foi excluído porque a chegada não foi registrada.
+Das 12 métricas, 11 completaram a amostra válida. Em M1.2, o roteiro previa Android 9 e 13 e a versão do aparelho físico, caso distinta. Só o Android 13 foi validado, entre as duas versões distintas previstas para o aparelho usado. Em M5.1, o plano previa cinco pares por bloco. Na parada P01 (Ceilândia Norte), no sábado, 21/11/2026, foram registrados 11 eventos. Houve seis pares válidos no primeiro bloco e quatro no segundo. O evento X01, do primeiro bloco, foi excluído porque a chegada não foi registrada.
 
 \noindent\begin{minipage}{\textwidth}
 \subsection{Resultados Quantitativos e Confronto com as Hipóteses Preditivas}
@@ -453,6 +453,15 @@ Este trabalho consolidou a avaliação de qualidade de software do aplicativo m�
 
 Os resultados demonstram que o aplicativo exibe excelente instalabilidade (G2), alta estabilidade sem panes (G3), elevada resiliência operacional (G4) e cobertura das 20 linhas auditadas (G6). Em contrapartida, diagnosticaram-se problemas de layout sob fontes ampliadas (M1.1), carência de homologação formal em versões legadas (M1.2) e erros de previsão associados à perda de rastreio na linha 0.089 (M5.1). Tais achados fundamentaram pareceres para as decisões estratégicas D1--D3 e sustentaram sete recomendações prioritárias. Como trabalhos futuros, sugere-se expandir a janela amostral em horários de pico e auditar topograficamente a malha de paradas.
 
+\subsection{Ação de Melhoria: Protótipos de Alta Fidelidade para Acessibilidade}
+\label{sec:acao_melhoria}
+
+A avaliação da métrica M1.1 (Adaptabilidade de Hardware) revelou que dois dos vinte casos de ensaio apresentaram defeitos de leiaute quando a escala de fonte do Android foi configurada em 200\%, correspondente ao modo de acessibilidade utilizado por pessoas com baixa visão. Os casos T01-C03 (tela de resultado de busca) e T04-C03 (tela de detalhes da parada) exibiram sobreposições de texto, truncamento de rótulos de botões e ocultação parcial de elementos de navegação, comprometendo a legibilidade e a usabilidade da interface nessas condições.
+
+Diante da relevância funcional e social desses achados, a equipe optou por desenvolver protótipos de alta fidelidade como ação concreta de sugestão de melhoria, indo além da mera identificação do problema. A escolha por protótipos de alta fidelidade justificou-se pela necessidade de verificar visualmente se textos, controles e hierarquia gráfica permaneceriam legíveis e distinguíveis sob ampliação extrema de fonte, uma vez que esse nível de detalhe não seria capturável em esboços de baixa resolução. No caso T01-C03, o protótipo reorganizou o cartão de resultado de busca de modo que o código da linha permanecesse integralmente legível, o nome da linha pudesse quebrar em múltiplas linhas sem sobrepor outros elementos e o título da seção ficasse visualmente separado da barra de navegação inferior. No caso T04-C03, os botões de sentido --- que na interface original apareciam truncados como ``Le...'' e ``Arr...'', impedindo o usuário de distinguir partida de chegada --- foram redesenhados para exibir os rótulos completos, e o cabeçalho da parada foi reestruturado para acomodar o conteúdo ampliado.
+
+Ressalta-se que os protótipos representam propostas de correção e não comprovam a implementação efetiva das mudanças no aplicativo, uma vez que a equipe de avaliação não possui acesso ao código-fonte do \textit{DF no Ponto}. Ainda assim, a elaboração dessas propostas visuais concretas materializa a recomendação REC-03 e oferece aos mantenedores do sistema uma referência técnica diretamente aplicável para a refatoração dos contêineres de rolagem e leiautes flexíveis nas telas afetadas.
+
 % ---------------------------------------------------------------------
 \section*{Declaração de Uso de Inteligência Artificial}
 \label{sec:ia}
@@ -514,36 +523,5 @@ STEVENS, S. S. On the Theory of Scales of Measurement. \emph{Science}, v.~103, n
 WATKINS, K. E. et al. Where Is My Bus? Impact of mobile real-time information on transit riders. \emph{Transp. Res. Part A}, v.~45, n.~8, p.~839--848, 2011.
 
 \end{thebibliography}
-
-% ---------------------------------------------------------------------
-\vspace{0.4em}
-\appendix
-\section{Tabela de Contribuição e Governança da Equipe}
-\label{ap:contribuicao}
-
-A Tabela~\ref{tab:contribuicao} documenta a distribuição equitativa de responsabilidades e esforço dedicado por cada membro da equipe ao longo de todas as quatro fases do ciclo de avaliação da qualidade de software.
-
-\begin{table}[H]
-\centering
-\caption{Contribuição consolidada dos membros da equipe nas Fases 1 a 4. Fonte: elaboração própria (2026).}
-\label{tab:contribuicao}
-\scriptsize
-\renewcommand{\arraystretch}{0.80}
-\setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.0cm} X c}
-\toprule
-\textbf{Membro da equipe} & \textbf{Responsabilidades e entregáveis principais} & \textbf{Esforço} \\
-\midrule
-Cristiano Borges de Morais & Referencial teórico SQuaRE, modelo ISO 25010 (Fase 1), cronograma operacional (Fase 3) e auditoria dos cálculos analíticos (Fase 4). & 16,6\% \\
-João Guilherme Capozzi Gonçalves & Delimitação de escopo (Fase 1), cálculo formal das 12 métricas, análise de sensibilidade e vereditos dos objetivos G1--G6 (Fase 4). & 16,6\% \\
-João Guilherme Lima Veras Fonseca & Desdobramento GQM, formulação matemática das métricas e questões operacionais (Fase 2), e rastreabilidade transversal (Fase 3). & 16,7\% \\
-Pedro Ramos Sousa Reis & Procedimentos de execução (Fase 3), consolidação das planilhas de coleta, gestão de evidências por exceção e auditoria amostral (Fase 4). & 16,7\% \\
-Rodrigo Braz Ferreira Gontijo & Definição dos objetivos conceituais e hipóteses GQM (Fase 2), alinhamento ao ODS 11 (Fase 1) e especificações de decisão (Fase 4). & 16,7\% \\
-Vitor Pereira Bessa & Preparação de ambientes com adb, execução dos ensaios de laboratório e medições em paradas físicas de campo nas 12 métricas (Fases 3 e 4). & 16,7\% \\
-\midrule
-\textbf{Total Acumulado} & \textbf{Aplicação integral do processo ISO/IEC 25040 em 4 fases} & \textbf{100\%} \\
-\bottomrule
-\end{tabularx}
-\end{table}
 
 \end{document}

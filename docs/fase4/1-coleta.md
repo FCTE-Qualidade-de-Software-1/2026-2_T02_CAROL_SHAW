@@ -35,14 +35,14 @@ A atividade **C11** realizou a auditoria de integridade, consolidação das evid
 | Métrica | Amostra Prevista | Executados | Válidos | Conformes | Defeitos / Exclusões | Status da Coleta |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **M1.1** (Telas/Hardware) | 20 | 20 | 20 | 15 | 5 defeitos visuais | Concluída (100%) |
-| **M1.2** (Versões SO) | 3 | 4 | 1 | 1 | 3 excluídos (filtro x86 na Play Store) | Concluída com restrição amostral |
+| **M1.2** (Versões SO) | 2 versões distintas (Android 9 e 13) | 4 | 1 | 1 | 3 não observáveis (instalação recusada pela loja) | Parcial |
 | **M2.1** (Instalação) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
 | **M2.2** (Resíduo) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
 | **M3.1** (Crashes) | 20 | 20 | 20 | 20 | 0 defeitos | Concluída (100%) |
 | **M3.2** (Congelamentos) | 20 | 20 | 20 | 20 | 0 defeitos | Concluída (100%) |
 | **M4.1** (Perda de Rede) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
 | **M4.2** (Perda de GPS) | 10 | 10 | 10 | 10 | 0 defeitos | Concluída (100%) |
-| **M5.1** (Erro Chegada) | 10 | 11 | 10 | 7 ($\le 5$ min) | 1 excluído (evento X01 sem foto) | Concluída (100%) |
+| **M5.1** (Erro Chegada) | 10 | 11 | 10 | — (métrica pela mediana) | 1 excluído (chegada de X01 sem registro) | Concluída (100%) |
 | **M5.2** (Posição Paradas) | 5 | 5 | 5 | 5 | 0 defeitos | Concluída (100%) |
 | **M6.1** (Tarefas Essenciais) | 8 | 8 | 8 | 8 | 0 defeitos | Concluída (100%) |
 | **M6.2** (Completude Banco) | 20 | 20 | 20 | 20 | 0 defeitos | Concluída (100%) |
@@ -83,23 +83,23 @@ Foram avaliados 20 casos tela × configuração no aparelho `DISP-02`, com a con
 |---|---|---|---|---|---|---|---|---|
 | M1.1-01 | T01-C01 | Vitor Bessa | 18/11/2026 - 10:43 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C01_DISP-02.png) | Busca por `L01` |
 | M1.1-02 | T01-C02 | Vitor Bessa | 18/11/2026 - 10:47 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C02_DISP-02.png) | Busca por `L01` |
-| M1.1-03 | T01-C03 | Vitor Bessa | 18/11/2026 - 10:51 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C03_DISP-02.png) | Busca por `L01` — ver **D1** abaixo |
+| M1.1-03 | T01-C03 | Vitor Bessa | 18/11/2026 - 10:51 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C03_DISP-02.png) | Busca por `L01` — ver **DEF-01** abaixo |
 | M1.1-04 | T01-C04 | Vitor Bessa | 18/11/2026 - 10:53 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C04_DISP-02.png) | Busca por `L01` |
 | M1.1-05 | T02-C01 | Vitor Bessa | 18/11/2026 - 10:43 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C01_DISP-02.png) | Horários de `L01` |
 | M1.1-06 | T02-C02 | Vitor Bessa | 18/11/2026 - 10:48 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C02_DISP-02.png) | Horários de `L01` |
-| M1.1-07 | T02-C03 | Vitor Bessa | 18/11/2026 - 10:51 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C03_DISP-02.png) | Horários de `L01` — ver **D2** abaixo |
+| M1.1-07 | T02-C03 | Vitor Bessa | 18/11/2026 - 10:51 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C03_DISP-02.png) | Horários de `L01` — ver **DEF-02** abaixo |
 | M1.1-08 | T02-C04 | Vitor Bessa | 18/11/2026 - 10:53 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C04_DISP-02.png) | Horários de `L01` |
 | M1.1-09 | T03-C01 | Vitor Bessa | 18/11/2026 - 10:45 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C01_DISP-02.png) | Mapa do itinerário de `L01` |
 | M1.1-10 | T03-C02 | Vitor Bessa | 18/11/2026 - 10:48 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C02_DISP-02.png) | Mapa do itinerário de `L01` |
-| M1.1-11 | T03-C03 | Vitor Bessa | 18/11/2026 - 10:52 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C03_DISP-02.png) | Mapa do itinerário de `L01` — ver **D3** abaixo |
+| M1.1-11 | T03-C03 | Vitor Bessa | 18/11/2026 - 10:52 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C03_DISP-02.png) | Mapa do itinerário de `L01` — ver **DEF-03** abaixo |
 | M1.1-12 | T03-C04 | Vitor Bessa | 18/11/2026 - 10:54 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C04_DISP-02.png) | Mapa do itinerário de `L01` |
 | M1.1-13 | T04-C01 | Vitor Bessa | 18/11/2026 - 10:45 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C01_DISP-02.png) | Detalhes de `P01` |
 | M1.1-14 | T04-C02 | Vitor Bessa | 18/11/2026 - 10:50 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C02_DISP-02.png) | Detalhes de `P01` |
-| M1.1-15 | T04-C03 | Vitor Bessa | 18/11/2026 - 10:52 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C03_DISP-02.png) | Detalhes de `P01` — ver **D4** abaixo |
+| M1.1-15 | T04-C03 | Vitor Bessa | 18/11/2026 - 10:52 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C03_DISP-02.png) | Detalhes de `P01` — ver **DEF-04** abaixo |
 | M1.1-16 | T04-C04 | Vitor Bessa | 18/11/2026 - 10:54 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C04_DISP-02.png) | Detalhes de `P01` |
 | M1.1-17 | T05-C01 | Vitor Bessa | 18/11/2026 - 10:46 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C01_DISP-02.png) | Favoritos com `L01` e `P01` |
 | M1.1-18 | T05-C02 | Vitor Bessa | 18/11/2026 - 10:50 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C02_DISP-02.png) | Favoritos com `L01` e `P01` |
-| M1.1-19 | T05-C03 | Vitor Bessa | 18/11/2026 - 10:53 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C03_DISP-02.png) | Favoritos com `L01` e `P01` — ver **D5** abaixo |
+| M1.1-19 | T05-C03 | Vitor Bessa | 18/11/2026 - 10:53 | DISP-02 · Android 13 · app 5.25.1(1149) | Defeito | Não | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C03_DISP-02.png) | Favoritos com `L01` e `P01` — ver **DEF-05** abaixo |
 | M1.1-20 | T05-C04 | Vitor Bessa | 18/11/2026 - 10:54 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C04_DISP-02.png) | Favoritos com `L01` e `P01` |
 
 <p class="legenda">Tabela 1. Registro da coleta da M1.1. Fonte: elaboração própria (2026).</p>
@@ -110,11 +110,11 @@ Os cinco casos não conformes estão descritos a seguir. A configuração de cad
 
 | ID | Caso | Descrição do defeito |
 |---|---|---|
-| **D1** | `T01-C03` | Código da linha cortado no badge laranja, deixando `0.089` ilegível; nome da linha truncado para "Setor P Sul" sem reticências; título "All lines" coberto pela barra inferior; rótulos da barra inferior quebrados em várias linhas e sobrepostos |
-| **D2** | `T02-C03` | Título da tela truncado; descrição do itinerário quebrada no meio das palavras ("Palm/eiras"); cada horário ocupa quase a tela inteira, e apenas um horário fica visível sem rolagem |
-| **D3** | `T03-C03` | Código da linha cortado no badge; título da linha truncado; cabeçalho ampliado reduz a área útil do mapa e empurra a lista de paradas para fora da área visível |
-| **D4** | `T04-C03` | Botões de filtro truncados para "Le..." e "Arr...", impedindo distinguir partida de chegada; título da parada truncado; cartão da linha favorita cortado |
-| **D5** | `T05-C03` | Abas truncadas para "Rou", "Line" e "Poin"; código da linha cortado no badge; nome da linha truncado; rótulos da barra inferior quebrados e sobrepostos |
+| **DEF-01** | `T01-C03` | Código da linha cortado no badge laranja, deixando `0.089` ilegível; nome da linha truncado para "Setor P Sul" sem reticências; título "All lines" coberto pela barra inferior; rótulos da barra inferior quebrados em várias linhas e sobrepostos |
+| **DEF-02** | `T02-C03` | Título da tela truncado; descrição do itinerário quebrada no meio das palavras ("Palm/eiras"); cada horário ocupa quase a tela inteira, e apenas um horário fica visível sem rolagem |
+| **DEF-03** | `T03-C03` | Código da linha cortado no badge; título da linha truncado; cabeçalho ampliado reduz a área útil do mapa e empurra a lista de paradas para fora da área visível |
+| **DEF-04** | `T04-C03` | Botões de filtro truncados para "Le..." e "Arr...", impedindo distinguir partida de chegada; título da parada truncado; cartão da linha favorita cortado |
+| **DEF-05** | `T05-C03` | Abas truncadas para "Rou", "Line" e "Poin"; código da linha cortado no badge; nome da linha truncado; rótulos da barra inferior quebrados e sobrepostos |
 
 <p class="legenda">Tabela 1.1. Defeitos observados na M1.1. Fonte: elaboração própria (2026).</p>
 
@@ -134,7 +134,7 @@ O valor $0{,}75$ incide exatamente sobre o limiar da faixa $\ge 0{,}75$, corresp
 
 A métrica avalia se o aplicativo funciona sem erro de compatibilidade impeditivo em diferentes versões do Android. Em cada versão, o app é instalado pela distribuição oficial e as tarefas essenciais `TE01` a `TE08` são executadas.
 
-Conforme se todas as tarefas terminam sem erro de compatibilidade impeditivo. É **Não observável** a versão sem ambiente preparado ou com distribuição indisponível por motivo externo; instalação recusada por incompatibilidade comprovada é **Defeito**. Pela amostra planejada de 3 versões (Android 9, Android 13 e a versão do aparelho físico), a métrica produz a nota 4 com 3 versões conformes e a nota 1 com 2 ou menos, sem notas 2 e 3.
+Conforme se todas as tarefas terminam sem erro de compatibilidade impeditivo. É **Não observável** a versão sem ambiente preparado ou com distribuição indisponível por motivo externo; instalação recusada por incompatibilidade comprovada é **Defeito**. O plano inclui Android 9, Android 13 e a versão do aparelho físico, quando distinta. Com uma amostra completa de duas ou três versões, todas conformes dão Nota 4 e ao menos uma com defeito dá Nota 1.
 
 | Tarefa | Descrição | Resultado esperado |
 |---|---|---|
@@ -151,14 +151,14 @@ Conforme se todas as tarefas terminam sem erro de compatibilidade impeditivo. É
 
 Em cada versão do Android avaliada, o aplicativo foi instalado pela distribuição oficial e as tarefas `TE01` a `TE08` foram executadas em sequência, com gravação de tela e "Mostrar toques" ativado. Cada versão corresponde a um caso e tem como evidência a gravação da execução.
 
-A amostra planejada era de **3 versões**; foram **executadas 3 tentativas adicionais em emulador** e obtida **1 versão válida**. Os três ambientes virtuais foram criados em 21/11/2026 no Android Studio Rabbit 2, com imagem do tipo *Google Play*, conforme a [Tabela 2 de Recursos](../fase3/3-recursos.md). Em nenhum deles a instalação pôde ser iniciada: a Google Play Store recusou o aplicativo com a mensagem *"This app won't work for your device"*, antes de qualquer download.
+Como o aparelho físico usava Android 13, o roteiro previa **duas versões distintas**, Android 9 e 13. Foram registradas **quatro tentativas**, uma no aparelho físico e três em emulador. Só o Android 13 teve execução válida. Os ambientes virtuais foram criados em 21/11/2026 no Android Studio Rabbit 2, com imagem do tipo *Google Play*, conforme a [Tabela 2 de Recursos](../fase3/3-recursos.md). A equipe relatou que a loja recusou a instalação nos três emuladores. A captura publicada mostra a mensagem *"This app won't work for your device"* sem identificar o emulador.
 
 | ID | Caso | Avaliador | Data/hora | Ambiente | Estado | Valor medido | Evidência | Observações |
 |---|---|---|---|---|---|---|---|---|
-| M1.2-01 | Android 13 (API 33) | Vitor Bessa | 20/11/2026 - 20:35 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [M2_SESSAO01_DISP-02.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2_SESSAO01_DISP-02.mp4) | Execução de `TE01` a `TE08` na versão do aparelho físico |
-| M1.2-02 | Android 9 (API 28) | Vitor Bessa | 21/11/2026 | EMU-01 · *Medium Phone* · ABI x86 | Não observável | Não apurável | [AVDs](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png) · [loja](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png) | Instalação bloqueada pelo filtro de arquitetura da loja; `TE01` a `TE08` não puderam ser iniciadas |
-| M1.2-03 | Android 10 (API 29) | Vitor Bessa | 21/11/2026 | EMU-02 · *Medium Phone (2)* · ABI x86 | Não observável | Não apurável | [AVDs](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png) · [loja](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png) | Mesmo bloqueio de arquitetura |
-| M1.2-04 | Android 17 (API 37) | Vitor Bessa | 21/11/2026 | EMU-03 · *Medium Phone API 37.0* · ABI x86_64 | Não observável | Não apurável | [AVDs](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png) · [loja](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png) | Mesmo bloqueio de arquitetura |
+| M1.2-01 | Android 13 (API 33) | Vitor Bessa | 20/11/2026 - 20:35 | DISP-02 · Android 13 · app 5.25.1(1149) | Conforme | Sim | [M1.2_SESSAO01_DISP-02.mp4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2_SESSAO01_DISP-02.mp4) | Execução de `TE01` a `TE08` na versão do aparelho físico |
+| M1.2-02 | Android 9 (API 28) | Vitor Bessa | 21/11/2026 | EMU-01 · *Medium Phone* · ABI x86 | Não observável | Não apurável | [AVDs](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png) · [loja](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png) | Recusa de instalação relatada pela equipe. As tarefas `TE01` a `TE08` ficaram sem execução |
+| M1.2-03 | Android 10 (API 29) | Vitor Bessa | 21/11/2026 | EMU-02 · *Medium Phone (2)* · ABI x86 | Não observável | Não apurável | [AVDs](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png) · [loja](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png) | Recusa de instalação relatada pela equipe |
+| M1.2-04 | Android 17 (API 37) | Vitor Bessa | 21/11/2026 | EMU-03 · *Medium Phone API 37.0* · ABI x86_64 | Não observável | Não apurável | [AVDs](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png) · [loja](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png) | Recusa de instalação relatada pela equipe |
 
 <p class="legenda">Tabela 2. Registro da coleta da M1.2. Fonte: elaboração própria (2026).</p>
 
@@ -166,9 +166,9 @@ A amostra planejada era de **3 versões**; foram **executadas 3 tentativas adici
 
 O critério desta métrica distingue dois desfechos para uma instalação que não ocorre: a versão sem ambiente preparado ou com distribuição indisponível por motivo externo é **Não observável**, e a instalação recusada por incompatibilidade comprovada é **Defeito**. As três tentativas foram classificadas como **Não observável**, pela razão a seguir.
 
-As três imagens disponíveis são de ABI x86 ou x86_64, enquanto o aplicativo publica binários apenas para ARM. O filtro de compatibilidade da loja atua sobre a arquitetura do processador, não sobre a versão do sistema, e por isso a recusa é **idêntica nas três APIs**, incluindo a API 37. Como o mesmo aplicativo instala e opera normalmente no Android 13 do aparelho físico (caso `M1.2-01`), o bloqueio é demonstravelmente independente da versão do Android, que é precisamente o que a questão **Q1.2** investiga. Registrar essas tentativas como **Defeito** afirmaria que o aplicativo falha no Android 9, 10 e 17, quando a evidência mostra apenas que ele não é distribuído para processadores x86 — uma decisão legítima de distribuição, e não uma falha de adaptabilidade do produto.
+As imagens dos emuladores usam ABI x86 ou x86_64. A equipe levantou a hipótese de que a arquitetura motivou a recusa. A captura da loja não informa a causa, e o registro dos ambientes mostra apenas a configuração dos emuladores. A compatibilidade do aplicativo com Android 9, 10 e 17 ficou sem verificação.
 
-A alternativa técnica seria uma imagem de sistema `arm64-v8a`, cuja emulação sobre hospedeiro x86_64 depende de tradução binária e é lenta a ponto de inviabilizar as oito tarefas dentro do cronograma. O risco foi antecipado na [Fase 3](../fase3/3-recursos.md) antes da coleta e se concretizou na execução.
+A [Fase 3](../fase3/3-recursos.md) previu uma imagem de sistema `arm64-v8a` como alternativa para investigar essa hipótese. Os quatro registros de execução publicados correspondem ao aparelho físico e aos três emuladores x86 ou x86_64.
 
 $$
 M_{1.2} = \frac{O_s}{O_t} = \frac{1}{1} = 1{,}00
@@ -176,7 +176,7 @@ $$
 
 Em que $O_s = 1$ corresponde ao número de versões do Android aprovadas em todas as tarefas `TE01` a `TE08` sem erro de compatibilidade impeditivo, e $O_t = 1$ é o total de versões **efetivamente testadas**, excluídos os casos Não observáveis conforme a regra 3 das Regras Gerais de Cálculo.
 
-O valor 1,00 **não autoriza declarar o objetivo G1 satisfeito**. Pela regra 4 das Regras Gerais de Cálculo, a coleta é parcial — 3 versões previstas, 1 válida — e casos obrigatórios pendentes impedem a declaração de objetivo satisfeito. A métrica cobre uma única versão do Android e, portanto, não exerce a variação que a questão Q1.2 pretende observar. A hipótese **H1.2** e os limiares da [Fase 2](../fase2/metricas-julgamento.md) permanecem como especificados; o que se reporta aqui é a divergência entre o previsto e o executado, não um ajuste do critério.
+A amostra ficou parcial, com apenas o Android 13 validado entre as duas versões distintas previstas para o aparelho usado. Pela [regra de julgamento da Fase 2](../fase2/metricas-julgamento.md#julgamento-dos-objetivos), G1 fica **Não avaliado (dados incompletos)**. A hipótese **H1.2** foi verificada apenas no Android 13.
 
 ### M2.1 — Sucesso de Instalação
 
@@ -393,7 +393,7 @@ $$
 M_{5.1} = \frac{2{,}05 + 4{,}63}{2} = 3{,}34 \text{ min}
 $$
 
-O menor erro foi de 0,53 min e o maior de 38,97 min. O valor **3,34 min** situa-se na faixa $\le 5$ min, correspondente à **nota 3**.
+O menor erro foi de 0,53 min e o maior de 38,97 min. Seis dos dez erros foram de até 5 min. O valor **3,34 min** situa-se na faixa $\le 5$ min, correspondente à **nota 3**.
 
 #### Observações complementares
 

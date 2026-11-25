@@ -118,7 +118,7 @@ Uma mesma pessoa pode exercer mais de um papel, mas o laboratório e o campo oco
 
 | Risco ou dependência | Impacto possível | Alternativa ou mitigação | Situação |
 | :--- | :--- | :--- | :--- |
-| Aplicativo incompatível com os emuladores disponíveis | Redução da amostra de M1.2 | Testar imagem `arm64-v8a` na API 28; se não funcionar, registrar a limitação e ajustar a amostra antes da coleta | Em aberto |
+| Aplicativo incompatível com os emuladores disponíveis | Cobertura parcial de M1.2 | Usar ambiente ARM ou registrar a limitação da amostra | Materializado em 21/11/2026. As tentativas no Android 9, 10 e 17 ficaram [Não observáveis](../fase4/1-coleta.md#m12-adaptabilidade-de-sistema-operacional) por recusa de instalação na loja nos emuladores x86/x86_64. A arquitetura foi a hipótese levantada pela equipe. Com Android 13 no aparelho físico, o plano previa Android 9 e 13. |
 | Os dois aparelhos na mesma versão do Android | M1.2 depende inteiramente dos emuladores | Mesma mitigação acima; declarar a faixa de versões efetivamente verificada | Confirmado |
 | Mapa do aplicativo sem indicação da posição do usuário | Impossibilidade de medir a distância diretamente na captura em M5.2 | Obter as coordenadas das duas posições e aplicar a fórmula de haversine da Fase 2 | Pendente do teste-piloto |
 | Defasagem da posição dos veículos no aplicativo, da ordem de um minuto | Inviabiliza medir o erro posicional de veículos | M5.2 apurada somente com paradas, que são entidades fixas; veículos ficam fora da métrica | Resolvido em 19/11/2026, com a ficha de M5.2 atualizada |

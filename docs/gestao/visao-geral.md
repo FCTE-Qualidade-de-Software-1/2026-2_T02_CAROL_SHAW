@@ -16,13 +16,14 @@ O acompanhamento da equipe utiliza 4 (quatro) áreas de medição e controle. El
 Para a organização do fluxo de trabalho, utilizamos o GitHub Projects em formato Kanban, garantindo a rastreabilidade visual das tarefas. O ciclo de vida de uma atividade segue as seguintes regras:
 
 1. Criação e Estimativa: Nenhuma tarefa é iniciada sem antes ser cadastrada como Issue, recebendo os devidos responsáveis (Assignees) e Labels descritivas.
-2. Desenvolvimento (Kanban): Ao iniciar uma tarefa, o responsável deve obrigatoriamente mover o cartão da coluna `To Do` para `Em Progresso`.
+2. Desenvolvimento (Kanban): Ao iniciar uma tarefa, o responsável deve obrigatoriamente mover o cartão da coluna `To Do` para `In Progress` (exibida como `In progress` no quadro).
 3. Controle de Versão (Git Flow): O desenvolvimento do código ou artefato é feito em uma branch específica para a tarefa (ex: `docs/visão-geral`).
-4. Revisão: A finalização ocorre por meio de um Pull Request para a branch main, que deve ser revisado antes de ser mesclado (merge), movendo o cartão para Done.
+4. Revisão: A finalização ocorre por meio de um Pull Request para a branch `main` (movendo o cartão para `In Review`), que deve ser revisado antes de ser mesclado (*merge*), movendo o cartão para `Done`.
 
 ## Tabela de Contribuição
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Pedro Ramos](https://github.com/PedroRSR) | Criação da página de Visão Geral da Gestão do Projeto | 08/11/2026 | [8dccfce](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/8dccfced583a70105ffb8a9a89e44cb7c1ff720b) |
-| [João Guilherme Capozzi](https://github.com/jonas3688) | Atualização e alinhamento das 4 áreas de medição do PSM-CID | 22/11/2026 | [commit](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/) |
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Atualização e alinhamento das 4 áreas de medição do PSM-CID | 22/11/2026 | [0f776a7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0f776a7) |
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Revisão textual e padronização do fluxo Kanban na aba de gestão (#54) | 24/11/2026 | — |

@@ -79,9 +79,9 @@ def calcular_todas_metricas(registros):
     res = {}
 
     # M1.1: Adaptabilidade de hardware
-    # Na análise formal (2-analise.md), foram considerados 18 conformes e 2 defeitos impeditivos
+    # Contagem dinâmica a partir da Tabela 1 de 1-coleta.md (15 conformes e 5 defeitos em C03)
     total_m11 = len(registros["M1.1"]) or 20
-    conf_m11 = 18  # Conforme síntese e Tabela 2 e Tabela 10 de 2-analise.md
+    conf_m11 = sum(1 for r in registros["M1.1"] if r["estado"] == "Conforme") if registros["M1.1"] else 15
     val_m11 = conf_m11 / total_m11
     nota_m11 = 4 if val_m11 == 1.0 else (3 if val_m11 >= 0.90 else (2 if val_m11 >= 0.75 else 1))
     res["M1.1"] = {
@@ -92,7 +92,7 @@ def calcular_todas_metricas(registros):
         "valor_str": f"{val_m11:.2f}".replace(".", ","),
         "nota": nota_m11,
         "hipotese": "M1.1 < 1,00",
-        "veredito_hipotese": "Confirmada em parte"
+        "veredito_hipotese": "Confirmada"
     }
 
     # M1.2: Adaptabilidade de SO

@@ -77,7 +77,6 @@ A documentação completa está organizada no portal MkDocs na pasta [`docs/`](d
   - [Descrição do Produto](docs/fase1/3-descricao.md)
   - [Justificativas e Riscos](docs/fase1/4-justificativa.md)
   - [Modelo de Qualidade e Escopo](docs/fase1/5-modelo.md)
-  - [Tabela de Contribuição](docs/fase1/6-tabela_de_contribuicao.md)
 - **Fase 2 — Especificação da Avaliação (GQM):**
   - [Planejamento e Objetivos](docs/fase2/planejamento-objetivos.md)
   - [Métricas e Critérios de Julgamento](docs/fase2/metricas-julgamento.md)
@@ -98,7 +97,7 @@ A documentação completa está organizada no portal MkDocs na pasta [`docs/`](d
   - [Desempenho do Processo](docs/gestao/desempenho.md)
   - [Acompanhamento do Projeto](docs/gestao/acompanhamento.md)
 - **Artigo Científico:**
-  - Código-fonte em LaTeX e referências em [`artigo/`](artigo/)
+  - [Página do Artigo no Portal](docs/artigo/index.md) e código-fonte em LaTeX em [`artigo/`](artigo/)
 
 ## Estrutura do Repositório
 
@@ -108,6 +107,7 @@ A documentação completa está organizada no portal MkDocs na pasta [`docs/`](d
 │   ├── ISSUE_TEMPLATE/       # Templates padronizados (tarefa.md, bug.md)
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── artigo/                   # Artigo científico em LaTeX (SBC), figuras e referências BibTeX
+├── dados/                    # Evidências brutas, CSVs da Fase 4 e protótipos de melhoria
 ├── docs/                     # Fonte da documentação em Markdown (MkDocs)
 │   ├── fase1/                # Fase 1: Requisitos da Avaliação (ISO/IEC 25040)
 │   ├── fase2/                # Fase 2: Especificação e Desdobramento GQM

@@ -102,10 +102,12 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone de Cor
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Corre%C3%A7%C3%A3o%20Entrega%201&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
-- **Esforço Estimado do Escopo Concluído:** 21h
-- **Esforço Realizado Acumulado:** 21,5h
-- **Variação Global do Esforço:** +2,38%
-- **Custo Financeiro Equivalente Acumulado:** R$ 1.075,00
+- **Esforço Estimado do Escopo Concluído (20 issues com `He` e `Hr` declarados, de 21 fechadas):** 41,00h *(total estimado das 21 issues: 43,00h)*
+- **Esforço Realizado Acumulado:** 36,50h
+- **Variação Global do Esforço:** -10,98%
+- **Custo Financeiro Equivalente Acumulado:** R$ 1.825,00
+
+*Nota metodológica: na Milestone de Correção da Entrega 1 (21/21 issues concluídas), a issue #20 não teve o campo `Horas Reais` preenchido no encerramento; o cálculo de variação (`Ve`) considera exclusivamente as 20 issues com ambos os campos (`He` e `Hr`) registrados.*
 
 
 ## 8. Entrega 2
@@ -122,15 +124,17 @@ Seguindo o fluxo de trabalho reestruturado, o acompanhamento da Milestone Entreg
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-5" width="450" height="300" frameborder="0"></iframe>
 
-- **Esforço Estimado do Escopo Concluído:** Em apuração (Milestone ativa)
-- **Esforço Realizado Acumulado:** Em apuração (Milestone ativa)
-- **Variação Global do Esforço:** Em apuração
-- **Custo Financeiro Equivalente Acumulado:** Em apuração
+- **Esforço Estimado do Escopo Concluído (24 issues com `He` e `Hr` declarados, de 29 fechadas):** 79,00h *(total estimado das 29 issues fechadas: 91,00h)*
+- **Esforço Realizado Acumulado:** 56,60h
+- **Variação Global do Esforço:** -28,35%
+- **Custo Financeiro Equivalente Acumulado:** R$ 2.830,00
+
+*Nota metodológica (posição de 24/11/2026): das 30 issues da Milestone Entrega 2, 29 estão concluídas e 1 segue aberta (#54 — Revisão Final e Release). Cinco issues encerradas (#45, #47, #51, #72 e #81) não tiveram `Horas Reais` declaradas e foram excluídas do cálculo de `Ve` para evitar distorção, sendo o painel do Grafana acima atualizado em tempo real.*
 
 
 ## 9. Avaliação dos Critérios de Decisão
 
-Com base na variação apurada de **+2,38% (Faixa Verde)** na Correção da Entrega 1:
+Com base nas variações consolidadas até 24/11/2026 — **-10,98% (Faixa Amarela)** na Correção da Entrega 1 e **-28,35% (Faixa Vermelha por superestimativa conservadora)** na Entrega 2, ambas indicando entregas concluídas abaixo do teto de horas originalmente estimado — aplicam-se os seguintes limiares:
 
 - **Abaixo ou igual a 10%:** Acurácia adequada nas estimativas da equipe. O planejamento inicial reflete a capacidade real de execução.
 - **Entre 10,1% e 20%:** Faixa de atenção. A equipe acompanha o desvio para entender os motivos da divergência e avaliar ajustes nas próximas milestones.
@@ -144,4 +148,5 @@ Com base na variação apurada de **+2,38% (Faixa Verde)** na Correção da Entr
 | [Vitor Bessa](https://github.com/bessazs) | Adição dos gráficos de horas por membros, horas de milestone e tabela de esforço por issue | 11/11/2026|[6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
 | [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
 | [Vitor Bessa](https://github.com/bessazs) | Adição do conteúdo da Entrega 2 | 15/11/2026|[0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600)|
-| [João Guilherme Capozzi](https://github.com/jonas3688) | Saneamento dos dados consolidados da Correção da Entrega 1 (#37) | 22/11/2026 | — |
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Saneamento dos dados consolidados da Correção da Entrega 1 (#37) | 22/11/2026 | [657e203](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/657e203) |
+| [João Guilherme Capozzi](https://github.com/jonas3688) | Apuração final de esforço e custos das milestones Correção E1 e Entrega 2 (#54) | 24/11/2026 | — |

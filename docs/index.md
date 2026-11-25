@@ -8,9 +8,9 @@
 
 <p align="center">
   <img alt="Versão" src="https://img.shields.io/badge/versão-v1.0--E1-pink"/>
-  <img alt="Atualização" src="https://img.shields.io/badge/atualizado-16%2F11%2F2026-pink"/>
+  <img alt="Atualização" src="https://img.shields.io/badge/atualizado-24%2F11%2F2026-pink"/>
   <img alt="Fase" src="https://img.shields.io/badge/fase-Fases%201%2C%202%2C%203%20e%204-pink"/>
-  <img alt="Status" src="https://img.shields.io/badge/status-Fase%204%20em%20finaliza%C3%A7%C3%A3o-pink"/>
+  <img alt="Status" src="https://img.shields.io/badge/status-Fases%201%20a%204%20conclu%C3%ADdas-pink"/>
 </p>
 
 ---
@@ -77,7 +77,7 @@ Diante desse cenário, a equipe **Carol Shaw** estruturou uma avaliação rigoro
 | **Fase 1** | Estabelecimento dos requisitos da avaliação (propósito, stakeholders, escopo, modelo de qualidade) | Concluída |
 | **Fase 2** | Especificação da avaliação (objetivos GQM, questões, hipóteses, métricas e critérios de julgamento) | Concluída |
 | **Fase 3** | Planejamento da avaliação (método, recursos, ambiente e cronograma) | Concluída |
-| **Fase 4** | Execução e julgamento (coleta de dados, análise, conclusões e ações de melhoria) | Em finalização |
+| **Fase 4** | Execução e julgamento (coleta de dados, análise, conclusões e ações de melhoria) | Concluída |
 
 ---
 
@@ -87,9 +87,9 @@ A documentação está organizada em seções que espelham as fases do processo 
 
 ### [Fase 1 — Requisitos da Avaliação](fase1/introducao.md)
 
-Apresenta o propósito da avaliação, os requisitantes e partes interessadas, a descrição do produto avaliado, a justificativa para o recorte do escopo, o modelo de qualidade adotado (ISO/IEC 25010) e a tabela de contribuição da equipe. É a base que justifica todas as decisões metodológicas subsequentes.
+Apresenta o propósito da avaliação, os requisitantes e partes interessadas, a descrição do produto avaliado, a justificativa para o recorte do escopo e o modelo de qualidade adotado (ISO/IEC 25010). É a base que justifica todas as decisões metodológicas subsequentes.
 
-### [Fase 2 — Especificação da Avaliação](fase2/planejamento-objetivos.md)
+### [Fase 2 — Especificação da Avaliação](fase2/introducao.md)
 
 Detalha o desdobramento GQM (Goal–Question–Metric) a partir das três características priorizadas na Fase 1, formalizando seis objetivos de medição, doze questões operacionais com hipóteses preditivas e doze métricas quantitativas com seus respectivos critérios de julgamento. Inclui também a representação gráfica da hierarquia GQM completa.
 
@@ -151,3 +151,4 @@ O escopo cobre o **aplicativo móvel (Android)**. A versão web, os tablets, o *
 | 04 | Integração dos documentos da Fase 3: atualização da tabela de fases, status da Fase 3 e seção Como navegar neste site | [João Fonseca](https://github.com/joaoguilherme14) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 15/11/2026 |
 | 05 | Remoção de emojis e ícones, conforme os critérios da disciplina, e atualização da data | [Bessa](https://github.com/bessazs) | 16/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 |
 | 06 | Adiciona seção sobre a fase 4 em como navegar neste site | [Pedro Ramos](https://github.com/PedroRSR) | 22/11/2026 | — | — |
+| 07 | Revisão de consistência global (#54): atualização da data, status da Fase 4, link da Fase 2 e remoção de referência à tabela de contribuição removida | [João Capozzi](https://github.com/jonas3688) | 24/11/2026 | — | — |

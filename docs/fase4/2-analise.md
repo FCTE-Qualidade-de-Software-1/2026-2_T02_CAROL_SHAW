@@ -304,7 +304,7 @@ Das 12 hipóteses, **8 foram confirmadas** (H1.1, H2.1, H3.1, H3.2, H4.2, H5.1, 
 
 | Objetivo | Característica | Notas das métricas | Veredito |
 | :---: | :--- | :--- | :--- |
-| **G1** | Portabilidade — Adaptabilidade | M1.1 = 2 e M1.2 parcial | **Não avaliado (dados incompletos)** |
+| **G1** | Portabilidade — Adaptabilidade | M1.1 = 2; M1.2 parcial | **Não avaliado (dados incompletos)** |
 | **G2** | Portabilidade — Instalabilidade | M2.1 = 4; M2.2 = 4 | **Satisfeito** |
 | **G3** | Confiabilidade — Maturidade | M3.1 = 4; M3.2 = 4 | **Satisfeito** *(exposição reduzida)* |
 | **G4** | Confiabilidade — Tolerância a falhas | M4.1 = 4; M4.2 = 4 | **Satisfeito** |
@@ -354,3 +354,4 @@ A predominância de notas altas reflete amostras pequenas, critérios binários 
 | 01 | Consolidação dos dados, cálculo das 12 métricas, avaliação de hipóteses e matriz comparativa da Fase 4 (#49) | [João Guilherme Capozzi](https://github.com/jonas3688) | 18/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 02 | Atualização com os registros de coleta de M1.1 a M6.2 (exceto M5.1): cálculo, notas, hipóteses, vereditos de G1 a G6, sensibilidade e anomalias | [Pedro Ramos](https://github.com/PedroRSR)| 21/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 21/11/2026 |
 | 03 | Sincronização dos cálculos da métrica M5.1 (mediana 3,34 min, Nota 3), consolidação do veredito de G5 (Satisfeito) e script de cálculo (#49) | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Cristiano Morais](https://github.com/CristianoMoraiss) | 22/11/2026 |
+| 04 | Revisão de consistência global (#54): sincronização de M1.1 (15/20 = 0,75, Nota 2, H1.1 confirmada) com `1-coleta.md`, `M1.1_coleta.csv` e o artigo | [João Guilherme Capozzi](https://github.com/jonas3688) | 24/11/2026 | — | — |

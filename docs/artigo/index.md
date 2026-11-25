@@ -32,8 +32,7 @@ O artigo foi redigido em $\LaTeX$ no padrão da Sociedade Brasileira de Computa�
 - **Seção 5 — Fase 2: Especificação da Avaliação:** Desdobramento GQM (G1–G6), questões operacionais, hipóteses preditivas, formulação das 12 métricas, entre adaptações da ISO/IEC 25023 e extensões do projeto e critérios conservadores de julgamento.
 - **Seção 6 — Fase 3: Projeto da Avaliação:** Método particionado em ensaios controlados de laboratório e medições de campo, inventário de recursos (DISP-01, DISP-02 e emuladores), catálogos fixos de tarefas e telas, e procedimentos de auditoria amostral.
 - **Seção 7 — Fase 4: Execução, Análise de Dados e Conclusão:** Resultados quantitativos das 12 métricas, teste das hipóteses, vereditos dos objetivos e características, pareceres para as decisões D1–D3, análise de sensibilidade e recomendações técnicas de melhoria (REC-01 a REC-07).
-- **Seção 8 — Conclusão:** Síntese dos achados, contribuições metodológicas e direções futuras.
-  - **Ação de Melhoria: Protótipos de Alta Fidelidade para Acessibilidade:** Propostas visuais de correção para os defeitos de leiaute identificados em fontes ampliadas, incluindo os protótipos das telas T01-C03 e T04-C03.
+- **Seção 8 — Conclusão:** Síntese dos achados, contribuições metodológicas, direções futuras e protótipos de acessibilidade para as telas afetadas pela ampliação da fonte.
 - **Declaração de Uso de Inteligência Artificial:** Transparência sobre o uso assistivo de modelos de linguagem e ferramentas de IA.
 
 ---

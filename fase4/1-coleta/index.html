@@ -1,0 +1,4412 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/fase4/1-coleta/">
+      
+      
+        <link rel="prev" href="../introducao/">
+      
+      
+        <link rel="next" href="../2-analise/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Coleta de Dados - Carol Shaw - Qualidade de Software (2026.2)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fase-4-coleta-de-dados" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-header__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carol Shaw - Qualidade de Software (2026.2)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Coleta de Dados
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../artigo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Artigo Científico
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase2/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase3/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gestao/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Gestão do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../uso_de_IA/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Uso de Ferramentas de IA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-nav__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carol Shaw - Qualidade de Software (2026.2)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../artigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artigo Científico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/1-proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/2-requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/3-descricao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/4-justificativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/5-modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/planejamento-objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento e Objetivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/metricas-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desdobramento GQM e Critérios de Julgamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/rastreabilidade-diagrama-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Gráfica da Hierarquia GQM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/1-metodo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Método de Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/2-procedimentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Procedimentos de Execução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/3-recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/4-cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma de Execução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coleta de Dados
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coleta de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizacao-dos-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organização dos registros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoria-e-consolidacao-da-coleta-c11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoria e Consolidação da Coleta (C11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditoria e Consolidação da Coleta (C11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rastreabilidade-de-evidencias-e-resolucao-de-pendencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Rastreabilidade de Evidências e Resolução de Pendências
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quadro-consolidado-de-amostra-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Quadro Consolidado de Amostra por Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-parecer-da-auditoria-amostral-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Parecer da Auditoria Amostral (10%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m11-adaptabilidade-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M1.1 — Adaptabilidade de hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m12-adaptabilidade-de-sistema-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M1.2 — Adaptabilidade de Sistema Operacional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m21-sucesso-de-instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M2.1 — Sucesso de Instalação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m22-residuo-pos-desinstalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M2.2 — Resíduo pós-desinstalação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m31-e-m32-sessoes-sem-crashes-e-sem-congelamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M3.1 e M3.2 — Sessões sem crashes e sem congelamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m41-perda-de-conexao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M4.1 — Perda de Conexão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m42-perda-de-localizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M4.2 — Perda de Localização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m51-precisao-do-tempo-de-chegada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M5.1 — Precisão do tempo de chegada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m52-posicoes-no-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M5.2 — Posições no mapa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m61-cobertura-de-tarefas-essenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M6.1 — Cobertura de Tarefas Essenciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m62-completude-do-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M6.2 — Completude do Banco
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-analise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados e Conclusões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/calendario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendário e Progresso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos e Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desempenho do Processo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/acompanhamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acompanhamento do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Ferramentas de IA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Uso de Ferramentas de IA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso_de_IA/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizacao-dos-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organização dos registros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoria-e-consolidacao-da-coleta-c11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoria e Consolidação da Coleta (C11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditoria e Consolidação da Coleta (C11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rastreabilidade-de-evidencias-e-resolucao-de-pendencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Rastreabilidade de Evidências e Resolução de Pendências
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quadro-consolidado-de-amostra-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Quadro Consolidado de Amostra por Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-parecer-da-auditoria-amostral-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Parecer da Auditoria Amostral (10%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m11-adaptabilidade-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M1.1 — Adaptabilidade de hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m12-adaptabilidade-de-sistema-operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M1.2 — Adaptabilidade de Sistema Operacional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m21-sucesso-de-instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M2.1 — Sucesso de Instalação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m22-residuo-pos-desinstalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M2.2 — Resíduo pós-desinstalação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m31-e-m32-sessoes-sem-crashes-e-sem-congelamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M3.1 e M3.2 — Sessões sem crashes e sem congelamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m41-perda-de-conexao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M4.1 — Perda de Conexão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m42-perda-de-localizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M4.2 — Perda de Localização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m51-precisao-do-tempo-de-chegada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M5.1 — Precisão do tempo de chegada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m52-posicoes-no-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M5.2 — Posições no mapa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m61-cobertura-de-tarefas-essenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M6.1 — Cobertura de Tarefas Essenciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m62-completude-do-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M6.2 — Completude do Banco
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fase-4-coleta-de-dados">Fase 4 — Coleta de Dados</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Reunir os registros da execução dos procedimentos definidos na Fase 3 para as 12 métricas da avaliação (<strong>M1.1 a M6.2</strong>). A coleta documenta as observações, os resultados, os ambientes e as evidências de cada caso, fornecendo os dados necessários para calcular as métricas, julgar os objetivos G1 a G6 e responder às questões norteadoras da avaliação. A coleta deve seguir as amostras e os critérios estabelecidos nas fases anteriores, sem alterar fórmulas ou limiares.</p>
+<h2 id="organizacao-dos-registros">Organização dos registros</h2>
+<p>Os dados de coleta são organizados por métrica, seguindo os procedimentos, parâmetros e recursos operacionais previstos na <a href="../../fase3/introducao/">Fase 3</a>. </p>
+<p>Para assegurar a rastreabilidade e a auditabilidade exigidas pelo processo (atividade C11), todos os registros da avaliação estruturam-se segundo a seguinte padronização de campos:</p>
+<ul>
+<li><strong>ID:</strong> Identificador unívoco do ensaio ou observação (ex: <code>M1.1-01</code>).</li>
+<li><strong>Caso:</strong> Identificador do cenário ou caso de teste associado (ex: <code>T01-C01</code>, <code>CHEGADA01</code>).</li>
+<li><strong>Avaliador:</strong> Nome do membro da equipe responsável pela condução e registro do ensaio.</li>
+<li><strong>Data/hora:</strong> Timestamp da execução da coleta em campo ou em ambiente controlado.</li>
+<li><strong>Ambiente:</strong> Dispositivo físico ou Máquina Virtual (AVD) utilizada, com versão do SO e resolução.</li>
+<li><strong>Estado:</strong> Classificação do resultado frente ao critério de aceitação (<code>Conforme</code>, <code>Não Conforme</code> ou <code>Excluído</code>).</li>
+<li><strong>Valor medido:</strong> Medida quantitativa ou qualitativa observada (tempo em segundos, distância em metros, booleanos, contagens).</li>
+<li><strong>Evidência:</strong> Nome do artefato comprobatório (captura de tela ou gravação de vídeo mantida em repositório).</li>
+<li><strong>Observações:</strong> Notas contextuais, desvios operacionais ou justificativas técnicas de exclusão amostral.</li>
+</ul>
+<hr />
+<h2 id="auditoria-e-consolidacao-da-coleta-c11">Auditoria e Consolidação da Coleta (C11)</h2>
+<p>A atividade <strong>C11</strong> realizou a auditoria de integridade, consolidação das evidências e conferência amostral dos registros da Fase 4:</p>
+<h3 id="1-rastreabilidade-de-evidencias-e-resolucao-de-pendencias">1. Rastreabilidade de Evidências e Resolução de Pendências</h3>
+<ul>
+<li><strong>Rastreabilidade:</strong> Todos os 128 registros apontam diretamente para artefatos comprobatórios armazenados no repositório sob o diretório <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/tree/main/dados/fase4"><code>dados/fase4/</code></a> (fotos de paradas, capturas de tela, arquivos de <em>logcat</em>, relatórios de <em>diff</em> e gravações em vídeo das sessões).</li>
+<li><strong>Resolução de Pendências:</strong> Nenhum caso permaneceu em estado "Pendente". Todos os ensaios foram finalizados e classificados tecnicamente como Conformes, Defeitos ou Excluídos fundamentados.</li>
+</ul>
+<h3 id="2-quadro-consolidado-de-amostra-por-metrica">2. Quadro Consolidado de Amostra por Métrica</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Amostra Prevista</th>
+<th style="text-align: center;">Executados</th>
+<th style="text-align: center;">Válidos</th>
+<th style="text-align: center;">Conformes</th>
+<th style="text-align: center;">Defeitos / Exclusões</th>
+<th style="text-align: left;">Status da Coleta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1</strong> (Telas/Hardware)</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">5 defeitos visuais</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M1.2</strong> (Versões SO)</td>
+<td style="text-align: center;">2 versões distintas (Android 9 e 13)</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3 não observáveis (instalação recusada pela loja)</td>
+<td style="text-align: left;">Parcial</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.1</strong> (Instalação)</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.2</strong> (Resíduo)</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.1</strong> (Crashes)</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.2</strong> (Congelamentos)</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.1</strong> (Perda de Rede)</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.2</strong> (Perda de GPS)</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.1</strong> (Erro Chegada)</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">— (métrica pela mediana)</td>
+<td style="text-align: center;">1 excluído (chegada de X01 sem registro)</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2</strong> (Posição Paradas)</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.1</strong> (Tarefas Essenciais)</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.2</strong> (Completude Banco)</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0 defeitos</td>
+<td style="text-align: left;">Concluída (100%)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-parecer-da-auditoria-amostral-10">3. Parecer da Auditoria Amostral (10%)</h3>
+<p>Foi realizada a conferência amostral independente de mais de 10% dos registros de cada métrica, confrontando cada linha da tabela com os arquivos brutos em <code>dados/fase4/</code>. Constatou-se conformidade integral entre as evidências físicas registradas e os valores lançados nas tabelas de coleta, atestando a auditabilidade completa do processo sem necessidade de consulta externa ao avaliador.</p>
+<hr />
+<h3 id="m11-adaptabilidade-de-hardware">M1.1 — Adaptabilidade de hardware</h3>
+<h4 id="questao-e-criterio-de-avaliacao">Questão e critério de avaliação</h4>
+<p>A métrica avalia se as telas essenciais do aplicativo se adaptam a diferentes resoluções, densidades, orientações e escalas de fonte. Cada caso combina uma tela (<code>T01</code> a <code>T05</code>) com uma configuração (<code>C01</code> a <code>C04</code>), totalizando 5 × 4 = 20 casos.</p>
+<p>Conforme se as informações e os controles necessários estão visíveis e utilizáveis, sem corte ou sobreposição que impeçam a tarefa. Pela amostra de 20 casos, a métrica produz a nota 4 com 20 casos conformes, a nota 3 com 18 ou 19, a nota 2 com 15 a 17 e a nota 1 com 14 ou menos.</p>
+<table>
+<thead>
+<tr>
+<th>Tela</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T01</code></td>
+<td>Resultado da busca por <code>L01</code></td>
+</tr>
+<tr>
+<td><code>T02</code></td>
+<td>Horários de <code>L01</code></td>
+</tr>
+<tr>
+<td><code>T03</code></td>
+<td>Mapa do itinerário de <code>L01</code></td>
+</tr>
+<tr>
+<td><code>T04</code></td>
+<td>Detalhes de <code>P01</code></td>
+</tr>
+<tr>
+<td><code>T05</code></td>
+<td>Favoritos com <code>L01</code> e <code>P01</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Config.</th>
+<th>Resolução e densidade</th>
+<th>Orientação</th>
+<th>Fonte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C01</code></td>
+<td>640 × 1136 px, 320 dpi</td>
+<td>Retrato</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><code>C02</code></td>
+<td>640 × 1136 px, 320 dpi</td>
+<td>Paisagem</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><code>C03</code></td>
+<td>640 × 1136 px, 320 dpi</td>
+<td>Retrato</td>
+<td>200%</td>
+</tr>
+<tr>
+<td><code>C04</code></td>
+<td>1080 × 2400 px, 420 dpi</td>
+<td>Retrato</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="procedimento-de-coleta">Procedimento de coleta</h4>
+<p>Foram avaliados 20 casos tela × configuração no aparelho <code>DISP-02</code>, com a configuração de cada caso aplicada por <code>adb</code> (resolução, densidade, escala de fonte e orientação). Em cada caso, a tela foi aberta, rolada e os controles principais foram acionados; em <code>T03</code>, o mapa foi movido e ampliado. Cada caso tem como evidência uma captura de tela. Ao final da bateria, o aparelho foi restaurado às configurações originais.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1.1-01</td>
+<td>T01-C01</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:43</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C01_DISP-02.png">captura</a></td>
+<td>Busca por <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-02</td>
+<td>T01-C02</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:47</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C02_DISP-02.png">captura</a></td>
+<td>Busca por <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-03</td>
+<td>T01-C03</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:51</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Defeito</td>
+<td>Não</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C03_DISP-02.png">captura</a></td>
+<td>Busca por <code>L01</code> — ver <strong>DEF-01</strong> abaixo</td>
+</tr>
+<tr>
+<td>M1.1-04</td>
+<td>T01-C04</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:53</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T01-C04_DISP-02.png">captura</a></td>
+<td>Busca por <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-05</td>
+<td>T02-C01</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:43</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C01_DISP-02.png">captura</a></td>
+<td>Horários de <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-06</td>
+<td>T02-C02</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:48</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C02_DISP-02.png">captura</a></td>
+<td>Horários de <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-07</td>
+<td>T02-C03</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:51</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Defeito</td>
+<td>Não</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C03_DISP-02.png">captura</a></td>
+<td>Horários de <code>L01</code> — ver <strong>DEF-02</strong> abaixo</td>
+</tr>
+<tr>
+<td>M1.1-08</td>
+<td>T02-C04</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:53</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T02-C04_DISP-02.png">captura</a></td>
+<td>Horários de <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-09</td>
+<td>T03-C01</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:45</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C01_DISP-02.png">captura</a></td>
+<td>Mapa do itinerário de <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-10</td>
+<td>T03-C02</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:48</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C02_DISP-02.png">captura</a></td>
+<td>Mapa do itinerário de <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-11</td>
+<td>T03-C03</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:52</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Defeito</td>
+<td>Não</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C03_DISP-02.png">captura</a></td>
+<td>Mapa do itinerário de <code>L01</code> — ver <strong>DEF-03</strong> abaixo</td>
+</tr>
+<tr>
+<td>M1.1-12</td>
+<td>T03-C04</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:54</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T03-C04_DISP-02.png">captura</a></td>
+<td>Mapa do itinerário de <code>L01</code></td>
+</tr>
+<tr>
+<td>M1.1-13</td>
+<td>T04-C01</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:45</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C01_DISP-02.png">captura</a></td>
+<td>Detalhes de <code>P01</code></td>
+</tr>
+<tr>
+<td>M1.1-14</td>
+<td>T04-C02</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:50</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C02_DISP-02.png">captura</a></td>
+<td>Detalhes de <code>P01</code></td>
+</tr>
+<tr>
+<td>M1.1-15</td>
+<td>T04-C03</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:52</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Defeito</td>
+<td>Não</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C03_DISP-02.png">captura</a></td>
+<td>Detalhes de <code>P01</code> — ver <strong>DEF-04</strong> abaixo</td>
+</tr>
+<tr>
+<td>M1.1-16</td>
+<td>T04-C04</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:54</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T04-C04_DISP-02.png">captura</a></td>
+<td>Detalhes de <code>P01</code></td>
+</tr>
+<tr>
+<td>M1.1-17</td>
+<td>T05-C01</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:46</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C01_DISP-02.png">captura</a></td>
+<td>Favoritos com <code>L01</code> e <code>P01</code></td>
+</tr>
+<tr>
+<td>M1.1-18</td>
+<td>T05-C02</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:50</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C02_DISP-02.png">captura</a></td>
+<td>Favoritos com <code>L01</code> e <code>P01</code></td>
+</tr>
+<tr>
+<td>M1.1-19</td>
+<td>T05-C03</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:53</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Defeito</td>
+<td>Não</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C03_DISP-02.png">captura</a></td>
+<td>Favoritos com <code>L01</code> e <code>P01</code> — ver <strong>DEF-05</strong> abaixo</td>
+</tr>
+<tr>
+<td>M1.1-20</td>
+<td>T05-C04</td>
+<td>Vitor Bessa</td>
+<td>18/11/2026 - 10:54</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_T05-C04_DISP-02.png">captura</a></td>
+<td>Favoritos com <code>L01</code> e <code>P01</code></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 1. Registro da coleta da M1.1. Fonte: elaboração própria (2026).</p>
+
+<h4 id="defeitos-observados">Defeitos observados</h4>
+<p>Os cinco casos não conformes estão descritos a seguir. A configuração de cada caso consta na tabela de configurações acima; os registros completos, com data, hora e ambiente de cada observação, estão em <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.1/M1.1_coleta.csv"><code>M1.1_coleta.csv</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Descrição do defeito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DEF-01</strong></td>
+<td><code>T01-C03</code></td>
+<td>Código da linha cortado no badge laranja, deixando <code>0.089</code> ilegível; nome da linha truncado para "Setor P Sul" sem reticências; título "All lines" coberto pela barra inferior; rótulos da barra inferior quebrados em várias linhas e sobrepostos</td>
+</tr>
+<tr>
+<td><strong>DEF-02</strong></td>
+<td><code>T02-C03</code></td>
+<td>Título da tela truncado; descrição do itinerário quebrada no meio das palavras ("Palm/eiras"); cada horário ocupa quase a tela inteira, e apenas um horário fica visível sem rolagem</td>
+</tr>
+<tr>
+<td><strong>DEF-03</strong></td>
+<td><code>T03-C03</code></td>
+<td>Código da linha cortado no badge; título da linha truncado; cabeçalho ampliado reduz a área útil do mapa e empurra a lista de paradas para fora da área visível</td>
+</tr>
+<tr>
+<td><strong>DEF-04</strong></td>
+<td><code>T04-C03</code></td>
+<td>Botões de filtro truncados para "Le..." e "Arr...", impedindo distinguir partida de chegada; título da parada truncado; cartão da linha favorita cortado</td>
+</tr>
+<tr>
+<td><strong>DEF-05</strong></td>
+<td><code>T05-C03</code></td>
+<td>Abas truncadas para "Rou", "Line" e "Poin"; código da linha cortado no badge; nome da linha truncado; rótulos da barra inferior quebrados e sobrepostos</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 1.1. Defeitos observados na M1.1. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{1.1} = \frac{T_s}{T_t} = \frac{15}{20} = 0{,}75
+\]</div>
+<p>Em que <span class="arithmatex">\(T_s = 15\)</span> corresponde ao número de casos tela × configuração aprovados, sem corte, sobreposição ou distorção que impeça a tarefa, e <span class="arithmatex">\(T_t = 20\)</span> é o total de casos avaliados.</p>
+<p>Os cinco casos não conformes são exatamente os cinco da configuração <code>C03</code>, a única com escala de fonte em 200%. As demais configurações — incluindo a orientação paisagem e a resolução reduzida de 640 × 1136 px — foram aprovadas em todas as cinco telas. O defeito é, portanto, de <strong>reflow de texto sob fonte ampliada</strong>, e não de resolução ou de orientação, o que tem implicação direta de acessibilidade: o recurso de ampliação de fonte do Android é justamente o que usuários com baixa visão acionam.</p>
+<p>O valor <span class="arithmatex">\(0{,}75\)</span> incide exatamente sobre o limiar da faixa <span class="arithmatex">\(\ge 0{,}75\)</span>, correspondente à <strong>nota 2</strong>, aplicado antes de qualquer arredondamento conforme a regra 6 das Regras Gerais de Cálculo.</p>
+<h3 id="m12-adaptabilidade-de-sistema-operacional">M1.2 — Adaptabilidade de Sistema Operacional</h3>
+<h4 id="questao-e-criterio-de-avaliacao_1">Questão e critério de avaliação</h4>
+<p>A métrica avalia se o aplicativo funciona sem erro de compatibilidade impeditivo em diferentes versões do Android. Em cada versão, o app é instalado pela distribuição oficial e as tarefas essenciais <code>TE01</code> a <code>TE08</code> são executadas.</p>
+<p>Conforme se todas as tarefas terminam sem erro de compatibilidade impeditivo. É <strong>Não observável</strong> a versão sem ambiente preparado ou com distribuição indisponível por motivo externo; instalação recusada por incompatibilidade comprovada é <strong>Defeito</strong>. O plano inclui Android 9, Android 13 e a versão do aparelho físico, quando distinta. Com uma amostra completa de duas ou três versões, todas conformes dão Nota 4 e ao menos uma com defeito dá Nota 1.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TE01</code></td>
+<td>Buscar <code>L01</code> pelo código</td>
+<td>Linha encontrada, com identificação e sentido corretos</td>
+</tr>
+<tr>
+<td><code>TE02</code></td>
+<td>Consultar horários de <code>L01</code> no dia de referência</td>
+<td>Grade da linha, sentido e dia corretos</td>
+</tr>
+<tr>
+<td><code>TE03</code></td>
+<td>Abrir o itinerário de <code>L01</code></td>
+<td>Traçado e paradas do sentido selecionado</td>
+</tr>
+<tr>
+<td><code>TE04</code></td>
+<td>Consultar <code>P01</code></td>
+<td>Identificação da parada e linhas que a atendem</td>
+</tr>
+<tr>
+<td><code>TE05</code></td>
+<td>Acompanhar um veículo de <code>L02</code> em operação</td>
+<td>Veículo identificável e posição no mapa</td>
+</tr>
+<tr>
+<td><code>TE06</code></td>
+<td>Salvar <code>L01</code> nos favoritos e reabrir a lista</td>
+<td><code>L01</code> presente na lista</td>
+</tr>
+<tr>
+<td><code>TE07</code></td>
+<td>Salvar <code>P01</code> nos favoritos e reabrir a lista</td>
+<td><code>P01</code> presente na lista</td>
+</tr>
+<tr>
+<td><code>TE08</code></td>
+<td>Remover <code>L01</code> dos favoritos e reabrir a lista</td>
+<td><code>L01</code> ausente, outros favoritos mantidos</td>
+</tr>
+</tbody>
+</table>
+<h4 id="procedimento-de-coleta_1">Procedimento de coleta</h4>
+<p>Em cada versão do Android avaliada, o aplicativo foi instalado pela distribuição oficial e as tarefas <code>TE01</code> a <code>TE08</code> foram executadas em sequência, com gravação de tela e "Mostrar toques" ativado. Cada versão corresponde a um caso e tem como evidência a gravação da execução.</p>
+<p>Como o aparelho físico usava Android 13, o roteiro previa <strong>duas versões distintas</strong>, Android 9 e 13. Foram registradas <strong>quatro tentativas</strong>, uma no aparelho físico e três em emulador. Só o Android 13 teve execução válida. Os ambientes virtuais foram criados em 21/11/2026 no Android Studio Rabbit 2, com imagem do tipo <em>Google Play</em>, conforme a <a href="../../fase3/3-recursos/">Tabela 2 de Recursos</a>. A equipe relatou que a loja recusou a instalação nos três emuladores. A captura publicada mostra a mensagem <em>"This app won't work for your device"</em> sem identificar o emulador.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1.2-01</td>
+<td>Android 13 (API 33)</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 20:35</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2_SESSAO01_DISP-02.mp4">M1.2_SESSAO01_DISP-02.mp4</a></td>
+<td>Execução de <code>TE01</code> a <code>TE08</code> na versão do aparelho físico</td>
+</tr>
+<tr>
+<td>M1.2-02</td>
+<td>Android 9 (API 28)</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026</td>
+<td>EMU-01 · <em>Medium Phone</em> · ABI x86</td>
+<td>Não observável</td>
+<td>Não apurável</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png">AVDs</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png">loja</a></td>
+<td>Recusa de instalação relatada pela equipe. As tarefas <code>TE01</code> a <code>TE08</code> ficaram sem execução</td>
+</tr>
+<tr>
+<td>M1.2-03</td>
+<td>Android 10 (API 29)</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026</td>
+<td>EMU-02 · <em>Medium Phone (2)</em> · ABI x86</td>
+<td>Não observável</td>
+<td>Não apurável</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png">AVDs</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png">loja</a></td>
+<td>Recusa de instalação relatada pela equipe</td>
+</tr>
+<tr>
+<td>M1.2-04</td>
+<td>Android 17 (API 37)</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026</td>
+<td>EMU-03 · <em>Medium Phone API 37.0</em> · ABI x86_64</td>
+<td>Não observável</td>
+<td>Não apurável</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_device-manager.png">AVDs</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M1.2/M1.2-EMU_playstore.png">loja</a></td>
+<td>Recusa de instalação relatada pela equipe</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 2. Registro da coleta da M1.2. Fonte: elaboração própria (2026).</p>
+
+<h4 id="classificacao-das-tentativas-em-emulador">Classificação das tentativas em emulador</h4>
+<p>O critério desta métrica distingue dois desfechos para uma instalação que não ocorre: a versão sem ambiente preparado ou com distribuição indisponível por motivo externo é <strong>Não observável</strong>, e a instalação recusada por incompatibilidade comprovada é <strong>Defeito</strong>. As três tentativas foram classificadas como <strong>Não observável</strong>, pela razão a seguir.</p>
+<p>As imagens dos emuladores usam ABI x86 ou x86_64. A equipe levantou a hipótese de que a arquitetura motivou a recusa. A captura da loja não informa a causa, e o registro dos ambientes mostra apenas a configuração dos emuladores. A compatibilidade do aplicativo com Android 9, 10 e 17 ficou sem verificação.</p>
+<p>A <a href="../../fase3/3-recursos/">Fase 3</a> previu uma imagem de sistema <code>arm64-v8a</code> como alternativa para investigar essa hipótese. Os quatro registros de execução publicados correspondem ao aparelho físico e aos três emuladores x86 ou x86_64.</p>
+<div class="arithmatex">\[
+M_{1.2} = \frac{O_s}{O_t} = \frac{1}{1} = 1{,}00
+\]</div>
+<p>Em que <span class="arithmatex">\(O_s = 1\)</span> corresponde ao número de versões do Android aprovadas em todas as tarefas <code>TE01</code> a <code>TE08</code> sem erro de compatibilidade impeditivo, e <span class="arithmatex">\(O_t = 1\)</span> é o total de versões <strong>efetivamente testadas</strong>, excluídos os casos Não observáveis conforme a regra 3 das Regras Gerais de Cálculo.</p>
+<p>A amostra ficou parcial, com apenas o Android 13 validado entre as duas versões distintas previstas para o aparelho usado. Pela <a href="../../fase2/metricas-julgamento/#julgamento-dos-objetivos">regra de julgamento da Fase 2</a>, G1 fica <strong>Não avaliado (dados incompletos)</strong>. A hipótese <strong>H1.2</strong> foi verificada apenas no Android 13.</p>
+<h3 id="m21-sucesso-de-instalacao">M2.1 — Sucesso de Instalação</h3>
+<h4 id="questao-e-criterio-de-avaliacao_2">Questão e critério de avaliação</h4>
+<p>A métrica avalia se o aplicativo é instalado com sucesso a partir da loja oficial, na primeira tentativa, em ciclos de instalação limpa realizados em aparelho físico.</p>
+<p>Conforme se a instalação conclui na primeira tentativa, sem erro. Abrir o app não é exigido, e tentativas posteriores não mudam um Defeito. Pela amostra de 10 ciclos, a métrica produz a nota 4 com 10 ciclos conformes, a nota 2 com 9 e a nota 1 com 8 ou menos, sem nota 3.</p>
+<h4 id="procedimento-de-coleta_2">Procedimento de coleta</h4>
+<p>Foram realizados 10 ciclos de instalação limpa no aparelho <code>DISP-02</code>. Em cada ciclo, com o app ausente, ele foi instalado pela Google Play Store e a primeira tentativa foi observada. A evidência de cada ciclo é a captura da página da loja ao final da instalação ("Instalado" ou mensagem de erro).</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M2.1-01</td>
+<td>CICLO01</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:41</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO01_DISP-02.png">M2.1_CICLO01_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-02</td>
+<td>CICLO02</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:47</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO02_DISP-02.png">M2.1_CICLO02_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-03</td>
+<td>CICLO03</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:54</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO03_DISP-02.png">M2.1_CICLO03_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-04</td>
+<td>CICLO04</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:59</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO04_DISP-02.png">M2.1_CICLO04_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-05</td>
+<td>CICLO05</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:03</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO05_DISP-02.png">M2.1_CICLO05_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-06</td>
+<td>CICLO06</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:07</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO06_DISP-02.png">M2.1_CICLO06_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-07</td>
+<td>CICLO07</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:12</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO07_DISP-02.png">M2.1_CICLO07_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-08</td>
+<td>CICLO08</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:16</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO08_DISP-02.png">M2.1_CICLO08_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-09</td>
+<td>CICLO09</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:20</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO09_DISP-02.png">M2.1_CICLO09_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+<tr>
+<td>M2.1-10</td>
+<td>CICLO10</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:25</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.1/M2.1_CICLO10_DISP-02.png">M2.1_CICLO10_DISP-02.png</a></td>
+<td>Instalação limpa pela Play Store; primeira tentativa</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 3. Registro da coleta da M2.1. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{2.1} = \frac{I_s}{I_t} = \frac{10}{10} = 1{,}00
+\]</div>
+<p>Em que <span class="arithmatex">\(I_s = 10\)</span> corresponde ao número de ciclos de instalação limpa concluídos na primeira tentativa sem erro, e <span class="arithmatex">\(I_t = 10\)</span> é o total de ciclos executados.</p>
+<h3 id="m22-residuo-pos-desinstalacao">M2.2 — Resíduo pós-desinstalação</h3>
+<h4 id="questao-e-criterio-de-avaliacao_3">Questão e critério de avaliação</h4>
+<p>A métrica avalia se a desinstalação do aplicativo remove os arquivos e pastas atribuíveis a ele nos locais acessíveis do armazenamento. Os locais inspecionados são <code>Android/data/&lt;pacote&gt;</code>, <code>Android/obb/&lt;pacote&gt;</code>, <code>Android/media</code>, <code>Download</code>, <code>Documents</code> e pastas com o nome do app.</p>
+<p>Há <strong>Defeito</strong> se restar arquivo ou pasta que se possa atribuir ao app, por nome, conteúdo ou vínculo com o pacote; arquivos criados pelo avaliador não contam. O ciclo é <strong>Não observável</strong> se um local obrigatório estiver inacessível. O resultado vale só para os locais observáveis, pois o armazenamento privado do app não é inspecionado. Pela amostra de 10 ciclos, a métrica produz a nota 4 com 10 ciclos conformes, a nota 2 com 9 e a nota 1 com 8 ou menos, sem nota 3.</p>
+<h4 id="procedimento-de-coleta_3">Procedimento de coleta</h4>
+<p>Foram realizados 10 ciclos de instalação, uso e remoção no aparelho <code>DISP-02</code>, os mesmos da M2.1. Em cada ciclo, os locais inspecionados foram listados por <code>adb</code> antes da instalação. Depois, o app foi instalado e usado (busca, horários, mapa e favoritos) e desinstalado pelo método padrão do sistema, repetindo-se a listagem. As duas listagens foram comparadas com <code>diff</code>. A evidência de cada ciclo são as listagens <code>antes</code> e <code>depois</code> e o resultado do <code>diff</code>.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M2.2-01</td>
+<td>CICLO01</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:45</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO01_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-02</td>
+<td>CICLO02</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:52</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO02_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-03</td>
+<td>CICLO03</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:57</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO03_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-04</td>
+<td>CICLO04</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:01</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO04_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-05</td>
+<td>CICLO05</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:05</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO05_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-06</td>
+<td>CICLO06</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:10</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO06_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-07</td>
+<td>CICLO07</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:14</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO07_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO07_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO07_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-08</td>
+<td>CICLO08</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:18</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO08_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO08_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO08_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-09</td>
+<td>CICLO09</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:24</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO09_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO09_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO09_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+<tr>
+<td>M2.2-10</td>
+<td>CICLO10</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 17:28</td>
+<td>DISP-02 · Android 13</td>
+<td>Conforme</td>
+<td>0 menções</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO10_DISP-02_antes.txt">antes</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO10_DISP-02_depois.txt">depois</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M2.2/M2.2_CICLO10_DISP-02_diff.txt">diff</a></td>
+<td>Nenhum residual atribuível ao app</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 4. Registro da coleta da M2.2. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{2.2} = 1 - \frac{D_r}{D_t} = 1 - \frac{0}{10} = 1{,}00
+\]</div>
+<p>Em que <span class="arithmatex">\(D_r = 0\)</span> corresponde ao número de desinstalações com pelo menos um arquivo ou pasta residual atribuível ao app, e <span class="arithmatex">\(D_t = 10\)</span> é o total de desinstalações com inspeção válida.</p>
+<h3 id="m31-e-m32-sessoes-sem-crashes-e-sem-congelamentos">M3.1 e M3.2 — Sessões sem crashes e sem congelamentos</h3>
+<h4 id="questao-e-criterio-de-avaliacao_4">Questão e critério de avaliação</h4>
+<p>As duas métricas usam as mesmas 20 sessões, e cada sessão afetada conta uma vez por métrica. A <strong>M3.1</strong> avalia se a sessão ocorre sem <em>crash</em>, isto é, sem encerramento inesperado do app. A <strong>M3.2</strong> avalia se a sessão ocorre sem congelamento, isto é, sem ausência de resposta da interface a uma ação por mais de 5 s, medida em gravação com marcação de tempo. Carregamento com interface responsiva não conta como congelamento.</p>
+<p>Pela amostra de 20 sessões, cada métrica produz a nota 4 com 20 sessões conformes, a nota 3 com 19, a nota 2 com 18 e a nota 1 com 17 ou menos. Se houver <em>crash</em>, a sessão conta como afetada e uma nova sessão, com novo ID, continua a bateria.</p>
+<h4 id="procedimento-de-coleta_4">Procedimento de coleta</h4>
+<p>Foram realizadas 20 sessões de 2 min 30 s (50 min no total) no aparelho <code>DISP-02</code>, sem indução de queda de rede nem de localização. Cada sessão dedicou 30 s a cada atividade, nesta ordem: busca de linha, horários, itinerário no mapa, parada e veículo, favoritos. A tela foi gravada com "Mostrar toques" ativado e o log foi registrado com <code>adb logcat</code>, filtrando <code>FATAL EXCEPTION</code> e <code>AndroidRuntime</code>. A duração da sessão foi reduzida de 5 min para 2 min 30 s para caber na janela de coleta, o que diminui o tempo de exposição e pode favorecer o resultado; os valores são indicativos para a janela observada.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado M3.1 (crash)</th>
+<th>Estado M3.2 (congelamento)</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M3-01</td>
+<td>SESSAO01</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 15:21</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>15:18:52–15:21:22</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO01_DISP-02_logcat.txt">M3_SESSAO01_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-02</td>
+<td>SESSAO02</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 15:25</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>15:23:06–15:25:36</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO02_DISP-02_logcat.txt">M3_SESSAO02_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-03</td>
+<td>SESSAO03</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 15:31</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>15:28:26–15:30:57</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO03_DISP-02_logcat.txt">M3_SESSAO03_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-04</td>
+<td>SESSAO04</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 15:36</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>15:32:38–15:35:09</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO04_DISP-02_logcat.txt">M3_SESSAO04_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-05</td>
+<td>SESSAO05</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 15:59</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>15:56:42–15:59:12</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO05_DISP-02_logcat.txt">M3_SESSAO05_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-06</td>
+<td>SESSAO06</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 16:09</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>16:06:42–16:09:12</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO06_DISP-02_logcat.txt">M3_SESSAO06_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-07</td>
+<td>SESSAO07</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 16:20</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>16:17:12–16:19:42</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO07_DISP-02_logcat.txt">M3_SESSAO07_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-08</td>
+<td>SESSAO08</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 16:29</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>16:26:55–16:29:25</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO08_DISP-02_logcat.txt">M3_SESSAO08_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-09</td>
+<td>SESSAO09</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 16:42</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>16:39:38–16:42:08</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO09_DISP-02_logcat.txt">M3_SESSAO09_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-10</td>
+<td>SESSAO10</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 16:45</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>16:42:22–16:44:52</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO10_DISP-02_logcat.txt">M3_SESSAO10_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-11</td>
+<td>SESSAO11</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 16:53</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>16:50:21–16:52:51</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO11_DISP-02_logcat.txt">M3_SESSAO11_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-12</td>
+<td>SESSAO12</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:08</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:06:11–17:08:41</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO12_DISP-02_logcat.txt">M3_SESSAO12_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-13</td>
+<td>SESSAO13</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:13</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:11:09–17:13:40</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO13_DISP-02_logcat.txt">M3_SESSAO13_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-14</td>
+<td>SESSAO14</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:20</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:17:45–17:20:15</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO14_DISP-02_logcat.txt">M3_SESSAO14_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-15</td>
+<td>SESSAO15</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:23</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:20:48–17:23:18</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO15_DISP-02_logcat.txt">M3_SESSAO15_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-16</td>
+<td>SESSAO16</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:27</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:24:38–17:27:08</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO16_DISP-02_logcat.txt">M3_SESSAO16_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-17</td>
+<td>SESSAO17</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:37</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:34:34–17:37:05</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO17_DISP-02_logcat.txt">M3_SESSAO17_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-18</td>
+<td>SESSAO18</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:41</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:39:01–17:41:31</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO18_DISP-02_logcat.txt">M3_SESSAO18_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-19</td>
+<td>SESSAO19</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 17:58</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:55:31–17:58:01</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO19_DISP-02_logcat.txt">M3_SESSAO19_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+<tr>
+<td>M3-20</td>
+<td>SESSAO20</td>
+<td>Vitor Bessa</td>
+<td>20/11/2026 - 18:00</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Conforme</td>
+<td>17:58:15–18:00:45</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M3/M3_SESSAO20_DISP-02_logcat.txt">M3_SESSAO20_DISP-02_logcat.txt</a></td>
+<td>Sessão de 2 min 30 s; 5 atividades de 30 s</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 5. Registro da coleta da M3.1 e da M3.2. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{3.1} = 1 - \frac{S_c}{S_t} = 1 - \frac{0}{20} = 1{,}00
+\qquad
+M_{3.2} = 1 - \frac{S_a}{S_t} = 1 - \frac{0}{20} = 1{,}00
+\]</div>
+<p>Em que <span class="arithmatex">\(S_c = 0\)</span> corresponde às sessões com pelo menos um encerramento inesperado, <span class="arithmatex">\(S_a = 0\)</span> às sessões com pelo menos um congelamento da interface superior a 5 s, e <span class="arithmatex">\(S_t = 20\)</span> é o total de sessões avaliadas.</p>
+<h3 id="m41-perda-de-conexao">M4.1 — Perda de Conexão</h3>
+<h4 id="questao-e-criterio-de-avaliacao_5">Questão e critério de avaliação</h4>
+<p>A questão avaliada é <strong>Q4.1</strong>: o aplicativo mantém-se utilizável durante a indisponibilidade temporária da rede e retoma normalmente as consultas após a reconexão? A hipótese <strong>H4.1</strong> prevê <strong>M4.1 &lt; 0,85</strong>, isto é, menos de 8 ensaios conformes em uma amostra de 10.</p>
+<p>Conforme se o app continua aberto e responsivo, informa a indisponibilidade em até 5 s e retoma a consulta em até 30 s depois da reativação dos dados móveis e do Wi-Fi.</p>
+<h4 id="procedimento-de-coleta_5">Procedimento de coleta</h4>
+<p>Foram realizados 10 ensaios de interrupção de rede no aparelho <code>DISP-01</code>, com desconexão dos dados móveis e do Wi-Fi e consulta ao aplicativo. A reconexão foi seguida de nova consulta para verificar a retomada do serviço.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M4.1-01</td>
+<td>ENS01</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 20:41</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E01_DISP-01.mp4">M4.1_E01_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-02</td>
+<td>ENS02</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 20:41</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E02_DISP-01.mp4">M4.1_E02_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-03</td>
+<td>ENS03</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 20:42</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E03_DISP-01.mp4">M4.1_E03_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-04</td>
+<td>ENS04</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 20:45</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E04_DISP-01.mp4">M4.1_E04_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-05</td>
+<td>ENS05</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 20:46</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E05_DISP-01.mp4">M4.1_E05_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-06</td>
+<td>ENS06</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 21:11</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E06_DISP-01.mp4">M4.1_E06_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-07</td>
+<td>ENS07</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 21:11</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E07_DISP-01.mp4">M4.1_E07_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-08</td>
+<td>ENS08</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 21:12</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E08_DISP-01.mp4">M4.1_E08_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-09</td>
+<td>ENS09</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 21:13</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E09_DISP-01.mp4">M4.1_E09_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+<tr>
+<td>M4.1-10</td>
+<td>ENS10</td>
+<td>Pedro Ramos</td>
+<td>18/11/2026 - 21:15</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim; aviso e retomada dentro dos limites</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.1/M4.1_E10_DISP-01.mp4">M4.1_E10_DISP-01.mp4</a></td>
+<td>Dados móveis e Wi-Fi desativados; consulta retomada após reconexão</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 6. Registro da coleta da M4.1. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{4.1} = \frac{E_c}{E_t} = \frac{10}{10} = 1{,}00 \ (100\%)
+\]</div>
+<p>Em que <span class="arithmatex">\(E_c = 10\)</span> corresponde aos ensaios que atenderam aos critérios de aviso e retomada, e <span class="arithmatex">\(E_t = 10\)</span> é o total de ensaios válidos.</p>
+<h3 id="m42-perda-de-localizacao">M4.2 — Perda de Localização</h3>
+<h4 id="questao-e-criterio-de-avaliacao_6">Questão e critério de avaliação</h4>
+<p>A questão avaliada é <strong>Q4.2</strong>: o sistema reage apropriadamente à ausência ou desativação do sinal de GPS? A hipótese <strong>H4.2</strong> prevê <strong>M4.2 ≥ 0,85</strong>, isto é, pelo menos 9 ensaios conformes em uma amostra de 10.</p>
+<p>Conforme se o app continua aberto e responsivo, informa a indisponibilidade da localização em até 5 s, mantém disponíveis as funções independentes da posição — <code>TE01</code> (buscar <code>L01</code> pelo código) e <code>TE04</code> (consultar <code>P01</code>) — e retoma a posição no mapa em até 30 s após a reativação do serviço de localização.</p>
+<h4 id="procedimento-de-coleta_6">Procedimento de coleta</h4>
+<p>Foram realizados 10 ensaios de desativação do serviço de localização no aparelho <code>DISP-01</code>, mantendo o aparelho com o app aberto. Em cada ensaio, a localização foi desativada. Após a reativação da localização, foi observado o retorno da posição no mapa.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M4.2-01</td>
+<td>ENS01</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:08</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E01_DISP-01.mp4">M4.2_E01_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-02</td>
+<td>ENS02</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:10</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E02_DISP-01.mp4">M4.2_E02_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-03</td>
+<td>ENS03</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:11</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E03_DISP-01.mp4">M4.2_E03_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-04</td>
+<td>ENS04</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:12</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E04_DISP-01.mp4">M4.2_E04_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-05</td>
+<td>ENS05</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:13</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E05_DISP-01.mp4">M4.2_E05_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-06</td>
+<td>ENS06</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:14</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E06_DISP-01.mp4">M4.2_E06_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-07</td>
+<td>ENS07</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:15</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E07_DISP-01.mp4">M4.2_E07_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-08</td>
+<td>ENS08</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:15</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E08_DISP-01.mp4">M4.2_E08_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-09</td>
+<td>ENS09</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:16</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E09_DISP-01.mp4">M4.2_E09_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+<tr>
+<td>M4.2-10</td>
+<td>ENS10</td>
+<td>Pedro Ramos</td>
+<td>19/11/2026 - 18:16</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Aviso ≤ 5 s; TE01 e TE04 disponíveis; posição retomada ≤ 30 s</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M4.2/M4.2_E10_DISP-01.mp4">M4.2_E10_DISP-01.mp4</a></td>
+<td>Localização desativada e reativada; posição voltou ao mapa</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 7. Registro da coleta da M4.2. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{4.2} = \frac{G_c}{G_t} = \frac{10}{10} = 1{,}00 \ (100\%)
+\]</div>
+<p>Em que <span class="arithmatex">\(G_c = 10\)</span> corresponde aos ensaios que atenderam aos critérios de aviso, continuidade das funções independentes da posição e retomada da localização, e <span class="arithmatex">\(G_t = 10\)</span> é o total de ensaios válidos.</p>
+<h3 id="m51-precisao-do-tempo-de-chegada">M5.1 — Precisão do tempo de chegada</h3>
+<h4 id="questao-e-criterio-de-avaliacao_7">Questão e critério de avaliação</h4>
+<p>A questão avaliada é <strong>Q5.1</strong>: o tempo de chegada previsto pelo aplicativo corresponde à chegada real do veículo à parada? A métrica é o <strong>erro absoluto mediano</strong>, em minutos, entre a previsão exibida e a chegada observada; menor é melhor. Os limiares fixados na Fase 2 são: nota 4 com erro mediano <span class="arithmatex">\(\le 2\)</span> min, nota 3 com <span class="arithmatex">\(\le 5\)</span> min, nota 2 com <span class="arithmatex">\(\le 10\)</span> min e nota 1 acima de 10 min.</p>
+<p>A regra de captura foi fixada antes da coleta: vale a <strong>primeira previsão</strong> em que o veículo é identificado na janela de observação. Quando o app exibe tempo restante, ele é somado ao instante da captura para obter o instante previsto. Previsão ausente, identificação insuficiente e chegada não observada são registradas à parte e não entram como erro zero. Nenhuma previsão foi selecionada retrospectivamente por produzir erro menor.</p>
+<h4 id="procedimento-de-coleta_7">Procedimento de coleta</h4>
+<p>Foram observados 10 eventos de chegada válidos, em dois blocos, na parada <code>P01</code> (N1 P Norte, Ceilândia), com as linhas <code>L01</code> (0.089) e <code>L02</code> (933.4), no aparelho <code>DISP-02</code> (Xiaomi Redmi Note 11S), em 21/11/2026. O bloco 1 ocorreu entre 11:41 e 13:31 e o bloco 2 entre 16:03 e 17:42. Em cada janela foram usados os primeiros eventos elegíveis, sem escolha pelo erro. O pareamento foi feito por linha, sentido, parada e prefixo do veículo; como o mesmo prefixo reaparece em viagens posteriores do ciclo, cada evento corresponde a uma viagem contínua, e não ao prefixo isolado. A chegada foi registrada quando a frente do veículo alcançou o ponto de referência da parada. Os horários usam o fuso <code>America/Sao_Paulo</code>. Um evento adicional foi observado e <strong>excluído</strong> por chegada não registrada, conforme a regra 3 das Regras Gerais de Cálculo. Em atenção à LGPD, as fotos de chegada receberam tarja de mosaico sobre placas de veículos e sobre terceiros que apareceram incidentalmente no enquadramento; o letreiro da linha e o prefixo do veículo, que sustentam o pareamento, foram preservados em todas as imagens.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M5.1-01</td>
+<td>E01</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 11:41:35</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 11:45:35 · chegada 11:46:14 · <strong>erro 0,65 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E01_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E01_REAL.jpg">chegada</a></td>
+<td>Bloco 1; linha <code>933.4</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 445282</td>
+</tr>
+<tr>
+<td>M5.1-02</td>
+<td>E02</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 11:41:35</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 12:22:35 · chegada 12:21:55 · <strong>erro 0,67 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E02_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E02_REAL.jpg">chegada</a></td>
+<td>Bloco 1; linha <code>933.4</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 444774</td>
+</tr>
+<tr>
+<td>M5.1-03</td>
+<td>E03</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 11:41:48</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 12:08:48 · chegada 12:22:07 · <strong>erro 13,32 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E03_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E03_REAL.jpg">chegada</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E03_PERDA.jpg">perda</a></td>
+<td>Bloco 1; linha <code>0.089</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 446475; <strong>perda de rastreio antes da chegada</strong></td>
+</tr>
+<tr>
+<td>M5.1-04</td>
+<td>E04</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 11:41:48</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 12:22:48 · chegada 13:01:46 · <strong>erro 38,97 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E04_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E04_REAL.jpg">chegada</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E04_PERDA.jpg">perda</a></td>
+<td>Bloco 1; linha <code>0.089</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 446289; <strong>perda de rastreio antes da chegada</strong></td>
+</tr>
+<tr>
+<td>M5.1-05</td>
+<td>E05</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 13:00:38</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 13:05:38 · chegada 13:06:35 · <strong>erro 0,95 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E05_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E05_REAL.jpg">chegada</a></td>
+<td>Bloco 1; linha <code>933.4</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 445282</td>
+</tr>
+<tr>
+<td>M5.1-06</td>
+<td>E06</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 13:20:33</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 13:28:33 · chegada 13:30:36 · <strong>erro 2,05 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E06_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E06_REAL.jpg">chegada</a></td>
+<td>Bloco 1; linha <code>933.4</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 445321</td>
+</tr>
+<tr>
+<td>M5.1-07</td>
+<td>E07</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 16:03:15</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 16:05:15 · chegada 16:05:47 · <strong>erro 0,53 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E07_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E07_REAL.jpg">chegada</a></td>
+<td>Bloco 2; linha <code>933.4</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 445461</td>
+</tr>
+<tr>
+<td>M5.1-08</td>
+<td>E08</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 16:11:32</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 16:24:32 · chegada 16:29:10 · <strong>erro 4,63 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E08_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E08_REAL.jpg">chegada</a></td>
+<td>Bloco 2; linha <code>933.4</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 444774</td>
+</tr>
+<tr>
+<td>M5.1-09</td>
+<td>E09</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 17:17:55</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 17:33:55 · chegada 17:39:32 · <strong>erro 5,62 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E09_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E09_REAL.jpg">chegada</a></td>
+<td>Bloco 2; linha <code>933.4</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 445461</td>
+</tr>
+<tr>
+<td>M5.1-10</td>
+<td>E10</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 17:17:55</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Válido</td>
+<td>previsto 17:27:55 · chegada 17:41:53 · <strong>erro 13,97 min</strong></td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E10_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E10_REAL.jpg">chegada</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-E10_PERDA.jpg">perda</a></td>
+<td>Bloco 2; linha <code>0.089</code>, sentido Sol Nascente Trecho 1, parada <code>P01</code>; prefixo 448966; <strong>perda de rastreio antes da chegada</strong></td>
+</tr>
+<tr>
+<td>M5.1-X1</td>
+<td>X01</td>
+<td>Vitor Bessa</td>
+<td>21/11/2026 13:20:33</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Inválido</td>
+<td>previsto 13:29:33 · chegada não observada · erro não apurável</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-X01_APP.jpg">app</a> · <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1-X01_PERDA.jpg">perda</a></td>
+<td>Bloco 1; linha <code>0.089</code>, prefixo 449974, exibido 9 min; perda de rastreio às 13:25:21; o veículo passou sem registro fotográfico. <strong>Excluído do cálculo</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 8. Registro da coleta da M5.1. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{5.1} = \operatorname{mediana}\left(e_1,\ldots,e_n\right), \quad e_i = \frac{\lvert t_i^{obs} - t_i^{prev}\rvert}{60}
+\]</div>
+<p>Com <span class="arithmatex">\(n = 10\)</span> pares válidos, os erros ordenados são 0,53; 0,65; 0,67; 0,95; 2,05; 4,63; 5,62; 13,32; 13,97 e 38,97 minutos. Por se tratar de <span class="arithmatex">\(n\)</span> par, a mediana é a média dos dois valores centrais:</p>
+<div class="arithmatex">\[
+M_{5.1} = \frac{2{,}05 + 4{,}63}{2} = 3{,}34 \text{ min}
+\]</div>
+<p>O menor erro foi de 0,53 min e o maior de 38,97 min. Seis dos dez erros foram de até 5 min. O valor <strong>3,34 min</strong> situa-se na faixa <span class="arithmatex">\(\le 5\)</span> min, correspondente à <strong>nota 3</strong>.</p>
+<h4 id="observacoes-complementares">Observações complementares</h4>
+<p>A mediana global esconde uma separação acentuada entre as duas linhas observadas, registrada aqui porque afeta a interpretação do resultado:</p>
+<table>
+<thead>
+<tr>
+<th>Linha</th>
+<th>Pares válidos</th>
+<th>Erro mediano</th>
+<th>Erro máximo</th>
+<th>Perdas de rastreio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>L02</code> — 933.4</td>
+<td>7</td>
+<td>0,95 min</td>
+<td>5,62 min</td>
+<td>0 de 7</td>
+</tr>
+<tr>
+<td><code>L01</code> — 0.089</td>
+<td>3</td>
+<td>13,97 min</td>
+<td>38,97 min</td>
+<td>3 de 3</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 8.1. Erro da M5.1 por linha observada. Fonte: elaboração própria (2026).</p>
+
+<p>Os três maiores erros e o único evento inválido ocorreram todos na linha <code>L01</code>, e em todos eles o veículo <strong>deixou de constar na lista de previsões antes de chegar à parada</strong>, embora tenha chegado em seguida. Em dois casos a entrada remanescente induzia a conclusão oposta: às 13:25:21 a previsão em tempo real foi substituída por um horário de tabela de 31 min, e às 17:33:05 a lista passou a indicar 24 min para o veículo seguinte, oito minutos antes de o veículo esperado chegar. Na linha <code>L02</code> não houve nenhuma perda de rastreio em sete observações.</p>
+<p>Como análise secundária, e sem efeito sobre o valor apurado, o mesmo conjunto avaliado pela <strong>última</strong> previsão exibida antes da chegada resultaria em erro mediano de 1,23 min. A diferença entre 3,34 e 1,23 min indica que a previsão converge à medida que o veículo se aproxima, enquanto as previsões iniciais são substancialmente menos confiáveis. Esse recorte não substitui o resultado da métrica, cuja regra de captura foi fixada antes da coleta.</p>
+<p>Os registros completos estão em <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.1/M5.1_coleta.csv"><code>M5.1_coleta.csv</code></a>, e as capturas originais, sem renomeação, em <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/tree/main/dados/fase4/M5.1/bruto"><code>dados/fase4/M5.1/bruto/</code></a>.</p>
+<h3 id="m52-posicoes-no-mapa">M5.2 — Posições no mapa</h3>
+<h4 id="questao-e-criterio-de-avaliacao_8">Questão e critério de avaliação</h4>
+<p>A questão avaliada é <strong>Q5.2</strong>: a posição das paradas no mapa coincide com a posição espacial real? A hipótese <strong>H5.2</strong> prevê <strong>M5.2 ≥ 0,85</strong>.</p>
+<p>Considera-se conforme cada parada cuja distância entre a posição exibida no aplicativo e a referência independentemente obtida em campo seja menor ou igual à tolerância espacial fixada de <span class="arithmatex">\(\varepsilon = 30\)</span> m. Pela amostra de cinco paradas, a métrica só produz a nota 4 com cinco casos conformes e a nota 2 com quatro; com três ou menos casos conformes, a nota é 1.</p>
+<h4 id="procedimento-de-coleta_8">Procedimento de coleta</h4>
+<p>Foram obtidas cinco capturas do mapa no aparelho <code>DISP-01</code>, identificadas como <code>P01</code> a <code>P05</code>, em 20/11/2026. Os arquivos mostram o marcador do aplicativo, o indicador da posição do usuário e a região de precisão exibida pelo mapa. A avaliação ficou limitada a paradas; veículos não foram incluídos, conforme a restrição registrada na Fase 3.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M5.2-01</td>
+<td>P01</td>
+<td>Pedro Ramos</td>
+<td>20/11/2026 - 10:42</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>4 metros</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P01.jpg">M5.2-P01.jpg</a></td>
+<td>Medição direta na captura por cálculo visual dos pixels com auxilio de IA</td>
+</tr>
+<tr>
+<td>M5.2-02</td>
+<td>P02</td>
+<td>Pedro Ramos</td>
+<td>20/11/2026 - 10:48</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>29 metros</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P02.jpg">M5.2-P02.jpg</a></td>
+<td>Medição direta na captura por cálculo visual dos pixels com auxilio de IA</td>
+</tr>
+<tr>
+<td>M5.2-03</td>
+<td>P03</td>
+<td>Pedro Ramos</td>
+<td>20/11/2026 - 10:51</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>4,5 metros</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P03.jpg">M5.2-P03.jpg</a></td>
+<td>Medição direta na captura por cálculo visual dos pixels com auxilio de IA</td>
+</tr>
+<tr>
+<td>M5.2-04</td>
+<td>P04</td>
+<td>Pedro Ramos</td>
+<td>20/11/2026 - 10:52</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>3 metros</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P04.jpg">M5.2-P04.jpg</a></td>
+<td>Medição direta na captura por cálculo visual dos pixels com auxilio de IA</td>
+</tr>
+<tr>
+<td>M5.2-05</td>
+<td>P05</td>
+<td>Pedro Ramos</td>
+<td>20/11/2026 - 10:53</td>
+<td>DISP-01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>5 metros</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M5.2/M5.2-P05.jpg">M5.2-P05.jpg</a></td>
+<td>Medição direta na captura por cálculo visual dos pixels com auxilio de IA</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 9. Registro da coleta da M5.2. Fonte: elaboração própria (2026).</p>
+
+<p>As distâncias <span class="arithmatex">\(d_i\)</span> foram obtidas por medição direta das capturas. Esse método não exige calcular coordenadas WGS84 nem aplicar a fórmula de haversine: a distância visual foi convertida em metros pela escala do nível de zoom utilizado. Os cinco valores medidos são menores ou iguais à tolerância <span class="arithmatex">\(\varepsilon = 30\)</span> m, portanto os cinco casos são conformes.</p>
+<div class="arithmatex">\[
+M_{5.2} = \frac{P_s}{P_t} = \frac{5}{5} = 1{,}00 \ (100\%)
+\]</div>
+<p>Em que <span class="arithmatex">\(P_s = 5\)</span> corresponde às paradas cuja distância <span class="arithmatex">\(d_i\)</span> ficou dentro da tolerância e <span class="arithmatex">\(P_t = 5\)</span> é o total de paradas válidas.</p>
+<h3 id="m61-cobertura-de-tarefas-essenciais">M6.1 — Cobertura de Tarefas Essenciais</h3>
+<h4 id="questao-e-criterio-de-avaliacao_9">Questão e critério de avaliação</h4>
+<p>A métrica avalia se o aplicativo permite concluir as tarefas essenciais do catálogo (<code>TE01</code> a <code>TE08</code>), com rede e localização ativas. Conforme se a tarefa atinge o resultado esperado. Em <code>TE05</code>, se não for possível confirmar a operação de <code>L02</code>, o caso é <strong>Não observável</strong>.</p>
+<p>Pela amostra de 8 tarefas, a métrica produz a nota 4 com 8 tarefas conformes, a nota 2 com 7 e a nota 1 com 6 ou menos, sem nota 3.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TE01</code></td>
+<td>Buscar <code>L01</code> pelo código</td>
+<td>Linha encontrada, com identificação e sentido corretos</td>
+</tr>
+<tr>
+<td><code>TE02</code></td>
+<td>Consultar horários de <code>L01</code> no dia de referência</td>
+<td>Grade da linha, sentido e dia corretos</td>
+</tr>
+<tr>
+<td><code>TE03</code></td>
+<td>Abrir o itinerário de <code>L01</code></td>
+<td>Traçado e paradas do sentido selecionado</td>
+</tr>
+<tr>
+<td><code>TE04</code></td>
+<td>Consultar <code>P01</code></td>
+<td>Identificação da parada e linhas que a atendem</td>
+</tr>
+<tr>
+<td><code>TE05</code></td>
+<td>Acompanhar um veículo de <code>L02</code> em operação</td>
+<td>Veículo identificável e posição no mapa</td>
+</tr>
+<tr>
+<td><code>TE06</code></td>
+<td>Salvar <code>L01</code> nos favoritos e reabrir a lista</td>
+<td><code>L01</code> presente na lista</td>
+</tr>
+<tr>
+<td><code>TE07</code></td>
+<td>Salvar <code>P01</code> nos favoritos e reabrir a lista</td>
+<td><code>P01</code> presente na lista</td>
+</tr>
+<tr>
+<td><code>TE08</code></td>
+<td>Remover <code>L01</code> dos favoritos e reabrir a lista</td>
+<td><code>L01</code> ausente, outros favoritos mantidos</td>
+</tr>
+</tbody>
+</table>
+<h4 id="procedimento-de-coleta_9">Procedimento de coleta</h4>
+<p>As 8 tarefas <code>TE01</code> a <code>TE08</code> foram executadas uma vez cada, no aparelho <code>DISP-02</code>, com rede e localização ativas. Cada tarefa foi preparada de forma independente, e o resultado foi comparado com o resultado esperado do catálogo. A evidência de cada tarefa é a captura de tela do resultado.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M6.1-01</td>
+<td>TE01</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 15:57</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE01_DISP-02.png">M6.1_TE01_DISP-02.png</a></td>
+<td>Buscar <code>L01</code> pelo código</td>
+</tr>
+<tr>
+<td>M6.1-02</td>
+<td>TE02</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 15:58</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE02_DISP-02.png">M6.1_TE02_DISP-02.png</a></td>
+<td>Consultar horários de <code>L01</code> no dia de referência</td>
+</tr>
+<tr>
+<td>M6.1-03</td>
+<td>TE03</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 15:59</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE03_DISP-02.png">M6.1_TE03_DISP-02.png</a></td>
+<td>Abrir o itinerário de <code>L01</code></td>
+</tr>
+<tr>
+<td>M6.1-04</td>
+<td>TE04</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:02</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE04_DISP-02.png">M6.1_TE04_DISP-02.png</a></td>
+<td>Consultar <code>P01</code></td>
+</tr>
+<tr>
+<td>M6.1-05</td>
+<td>TE05</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:02</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE05_DISP-02.png">M6.1_TE05_DISP-02.png</a></td>
+<td>Acompanhar um veículo de <code>L02</code> em operação</td>
+</tr>
+<tr>
+<td>M6.1-06</td>
+<td>TE06</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:04</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE06_DISP-02.png">M6.1_TE06_DISP-02.png</a></td>
+<td>Salvar <code>L01</code> nos favoritos e reabrir a lista</td>
+</tr>
+<tr>
+<td>M6.1-07</td>
+<td>TE07</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:05</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE07_DISP-02.png">M6.1_TE07_DISP-02.png</a></td>
+<td>Salvar <code>P01</code> nos favoritos e reabrir a lista</td>
+</tr>
+<tr>
+<td>M6.1-08</td>
+<td>TE08</td>
+<td>Vitor Bessa</td>
+<td>19/11/2026 - 16:05</td>
+<td>DISP-02 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.1/M6.1_TE08_DISP-02.png">M6.1_TE08_DISP-02.png</a></td>
+<td>Remover <code>L01</code> dos favoritos e reabrir a lista</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 10. Registro da coleta da M6.1. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{6.1} = 1 - \frac{F_f}{F_t} = 1 - \frac{0}{8} = 1{,}00
+\]</div>
+<p>Em que <span class="arithmatex">\(F_f = 0\)</span> corresponde ao número de tarefas do catálogo essencial que falharam na execução, e <span class="arithmatex">\(F_t = 8\)</span> é o total de tarefas avaliadas.</p>
+<h3 id="m62-completude-do-banco">M6.2 — Completude do Banco</h3>
+<h4 id="questao-e-criterio-de-avaliacao_10">Questão e critério de avaliação</h4>
+<p>A questão avaliada é <strong>Q6.2</strong>: a base de linhas e itinerários do aplicativo está plenamente sincronizada com a Semob-DF? A hipótese <strong>H6.2</strong> prevê <strong>M6.2 ≥ 0,95</strong>, isto é, no máximo um item ausente ou divergente em uma amostra de 20. A classificação considera correspondente apenas o item encontrado no app com código, sentido e itinerário compatíveis com a fonte oficial.</p>
+<h4 id="procedimento-de-coleta_10">Procedimento de coleta</h4>
+<p>Foram auditados 20 itens do Relatório de Linhas da Semob-DF, conforme a amostra e os procedimentos definidos na <a href="../../fase3/2-procedimentos/#m62-completude-do-banco-lab">Fase 3</a>. Para cada item, o código foi pesquisado no aplicativo e comparado com a referência oficial. O resultado de cada verificação, o ambiente e a evidência estão registrados na tabela.</p>
+<p>Auditoria dos 20 itens sorteados do Relatório de Linhas da Semob-DF (referência 17/11/2026) contra o catálogo do aplicativo DF no Ponto. Estados possíveis: Conforme, Defeito, Não observável e Pendente.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso</th>
+<th>Linha sorteada (bacia · código)</th>
+<th>Avaliador</th>
+<th>Data/hora</th>
+<th>Ambiente</th>
+<th>Estado</th>
+<th>Valor medido</th>
+<th>Evidência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M6.2-01</td>
+<td>A01</td>
+<td>01 · 0.110</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:55</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A01_DISP01.jpg">M6.2_A01_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-02</td>
+<td>A02</td>
+<td>01 · 0.504</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:55</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A02_DISP01.jpg">M6.2_A02_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-03</td>
+<td>A03</td>
+<td>01 · 062.1</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:55</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A03_DISP01.jpg">M6.2_A03_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-04</td>
+<td>A04</td>
+<td>01 · 620.1</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:56</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A04_DISP01.jpg">M6.2_A04_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-05</td>
+<td>A05</td>
+<td>02 · 0.102</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:56</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A05_DISP01.jpg">M6.2_A05_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-06</td>
+<td>A06</td>
+<td>02 · 0.761</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:56</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A06_DISP01.jpg">M6.2_A06_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-07</td>
+<td>A07</td>
+<td>02 · 180.2</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:57</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A07_DISP01.jpg">M6.2_A07_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-08</td>
+<td>A08</td>
+<td>02 · 2201</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:57</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A08_DISP01.jpg">M6.2_A08_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-09</td>
+<td>A09</td>
+<td>03 · 0.082</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:58</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A09_DISP01.jpg">M6.2_A09_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-10</td>
+<td>A10</td>
+<td>03 · 0.809</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:58</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A10_DISP01.jpg">M6.2_A10_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-11</td>
+<td>A11</td>
+<td>03 · 119.0</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:58</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A11_DISP01.jpg">M6.2_A11_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-12</td>
+<td>A12</td>
+<td>03 · 870.1</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:58</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A12_DISP01.jpg">M6.2_A12_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-13</td>
+<td>A13</td>
+<td>04 · 0.008</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:58</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A13_DISP01.jpg">M6.2_A13_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-14</td>
+<td>A14</td>
+<td>04 · 0.336</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:59</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A14_DISP01.jpg">M6.2_A14_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-15</td>
+<td>A15</td>
+<td>04 · 154.2</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:59</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A15_DISP01.jpg">M6.2_A15_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-16</td>
+<td>A16</td>
+<td>04 · 933.1</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:59</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A16_DISP01.jpg">M6.2_A16_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-17</td>
+<td>A17</td>
+<td>05 · 0.005</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 19:59</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A17_DISP01.jpg">M6.2_A17_DISP01.jpg</a></td>
+<td>Circular</td>
+</tr>
+<tr>
+<td>M6.2-18</td>
+<td>A18</td>
+<td>05 · 0.400</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 20:00</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A18_DISP01.jpg">M6.2_A18_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-19</td>
+<td>A19</td>
+<td>05 · 0.808</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 20:00</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A19_DISP01.jpg">M6.2_A19_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+<tr>
+<td>M6.2-20</td>
+<td>A20</td>
+<td>05 · 158.6</td>
+<td>Pedro Ramos</td>
+<td>17/11/2026 - 20:00</td>
+<td>DISP01 · Android 13 · app 5.25.1(1149)</td>
+<td>Conforme</td>
+<td>Sim</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/blob/main/dados/fase4/M6.2/M6.2_A20_DISP01.jpg">M6.2_A20_DISP01.jpg</a></td>
+<td>Duplo Sentido</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 11. Registro da coleta da M6.2. Fonte: elaboração própria (2026).</p>
+
+<div class="arithmatex">\[
+M_{6.2} = \frac{L_c}{L_t} = \frac{20}{20} = 1{,}00 \ (100\%)
+\]</div>
+<p>Em que <span class="arithmatex">\(L_c = 20\)</span> corresponde aos itens da amostra encontrados no app com código, sentido e itinerário correspondentes, e <span class="arithmatex">\(L_t = 20\)</span> é o total de itens auditados.</p>
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Revisor</th>
+<th style="text-align: center;">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: left;">Inclusão da tabela de coleta, das evidências e do cálculo da métrica M6.2.</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">17/11/2026</td>
+<td style="text-align: left;">A definir</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: left;">Inclusão da seção de coleta da métrica M4.1, com registros dos ensaios, evidências e cálculo.</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">19/11/2026</td>
+<td style="text-align: left;">A definir</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.2</td>
+<td style="text-align: left;">Atualização dos registros de coleta das métricas M2.1, M2.2 e M6.1.</td>
+<td style="text-align: left;"><a href="https://github.com/bessazs">Bessa</a></td>
+<td style="text-align: center;">19/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">20/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.3</td>
+<td style="text-align: left;">Inclusão da seção de coleta da métrica M4.2, com registros dos ensaios, evidências e critérios de avaliação.</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">19/11/2026</td>
+<td style="text-align: left;">A definir</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.4</td>
+<td style="text-align: left;">Inclusão da seção de coleta da métrica M5.2, com os casos avaliados e suas evidências.</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">20/11/2026</td>
+<td style="text-align: left;">A definir</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.5</td>
+<td style="text-align: left;">Inclusão das seções M1.1, M1.2, M2.1, M2.2, M3.1, M3.2, M5.1 E M6.1</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">20/11/2026</td>
+<td style="text-align: left;">A definir</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.6</td>
+<td style="text-align: left;">Auditoria C11: conferência da integridade das colunas e formalização do dicionário de registros</td>
+<td style="text-align: left;"><a href="https://github.com/jonas3688">João Guilherme Capozzi</a></td>
+<td style="text-align: center;">22/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">22/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.7</td>
+<td style="text-align: left;">Auditoria C11: consolidação das evidências, parecer amostral (10%) e quadro de quantitativos</td>
+<td style="text-align: left;"><a href="https://github.com/jonas3688">João Guilherme Capozzi</a></td>
+<td style="text-align: center;">22/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">22/11/2026</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../introducao/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introdução">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Introdução
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../2-analise/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Análise de Dados">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Análise de Dados
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Carol Shaw - Qualidade de Software (2026.2) | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank">Repositório</a> | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v2.0-E2" target="_blank">Release E2</a> | v2.0 - E2 | Atualizado em 24/11/2026
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank" rel="noopener" title="Repositório da equipe Carol Shaw" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

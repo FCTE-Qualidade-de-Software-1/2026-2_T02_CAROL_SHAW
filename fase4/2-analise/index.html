@@ -1,0 +1,3035 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fcte-qualidade-de-software-1.github.io/2026-2_T02_CAROL_SHAW/fase4/2-analise/">
+      
+      
+        <link rel="prev" href="../1-coleta/">
+      
+      
+        <link rel="next" href="../3-resultados/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Análise de Dados - Carol Shaw - Qualidade de Software (2026.2)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fase-4-analise-de-dados" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-header__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carol Shaw - Qualidade de Software (2026.2)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Análise de Dados
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Modo Escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../artigo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Artigo Científico
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase1/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase2/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase3/introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introducao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gestao/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Gestão do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../uso_de_IA/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Uso de Ferramentas de IA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Carol Shaw - Qualidade de Software (2026.2)" class="md-nav__button md-logo" aria-label="Carol Shaw - Qualidade de Software (2026.2)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carol Shaw - Qualidade de Software (2026.2)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub - Carol Shaw
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../artigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Artigo Científico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/1-proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/2-requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/3-descricao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/4-justificativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase1/5-modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/planejamento-objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento e Objetivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/metricas-julgamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desdobramento GQM e Critérios de Julgamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase2/rastreabilidade-diagrama-gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Gráfica da Hierarquia GQM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/1-metodo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Método de Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/2-procedimentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Procedimentos de Execução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/3-recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase3/4-cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma de Execução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-coleta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coleta de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Dados
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regras-aplicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Regras aplicadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-situacao-da-amostra-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Situação da amostra por métrica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-calculo-e-analise-por-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cálculo e análise por objetivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Cálculo e análise por objetivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-g1-portabilidade-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. G1 — Portabilidade (Adaptabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-g2-portabilidade-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. G2 — Portabilidade (Instalabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-g3-confiabilidade-maturidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. G3 — Confiabilidade (Maturidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-g4-confiabilidade-tolerancia-a-falhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. G4 — Confiabilidade (Tolerância a Falhas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-g5-adequacao-funcional-correcao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. G5 — Adequação Funcional (Correção)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-g6-adequacao-funcional-completude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6. G6 — Adequação Funcional (Completude)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-quadro-global-das-12-metricas-e-das-hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Quadro global das 12 métricas e das hipóteses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Quadro global das 12 métricas e das hipóteses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-vereditos-dos-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Vereditos dos objetivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pontos-de-sensibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Pontos de sensibilidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados e Conclusões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/calendario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendário e Progresso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos e Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desempenho do Processo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao/acompanhamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acompanhamento do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Ferramentas de IA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Uso de Ferramentas de IA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso_de_IA/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regras-aplicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Regras aplicadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-situacao-da-amostra-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Situação da amostra por métrica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-calculo-e-analise-por-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cálculo e análise por objetivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Cálculo e análise por objetivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-g1-portabilidade-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. G1 — Portabilidade (Adaptabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-g2-portabilidade-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. G2 — Portabilidade (Instalabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-g3-confiabilidade-maturidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. G3 — Confiabilidade (Maturidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-g4-confiabilidade-tolerancia-a-falhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. G4 — Confiabilidade (Tolerância a Falhas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-g5-adequacao-funcional-correcao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. G5 — Adequação Funcional (Correção)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-g6-adequacao-funcional-completude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6. G6 — Adequação Funcional (Completude)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-quadro-global-das-12-metricas-e-das-hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Quadro global das 12 métricas e das hipóteses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Quadro global das 12 métricas e das hipóteses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-vereditos-dos-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Vereditos dos objetivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pontos-de-sensibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Pontos de sensibilidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fase-4-analise-de-dados">Fase 4 — Análise de Dados</h1>
+<h2 id="1-introducao">1. Introdução</h2>
+<p>Este documento registra o <strong>cálculo das métricas</strong>, a <strong>atribuição das notas</strong> de 1 a 4, o <strong>confronto com as hipóteses</strong> e o <strong>veredito de cada objetivo de medição</strong> (<code>G1</code> a <code>G6</code>) da avaliação do aplicativo móvel <strong>DF no Ponto</strong> (Android, versão de referência <code>5.25.1(1149)</code>). No processo da <strong>ISO/IEC 25040:2011</strong>, ele faz parte da atividade <em>executar a avaliação</em> e liga os registros de <a href="../1-coleta/">Coleta de Dados</a> à síntese de <a href="../3-resultados/">Resultados e Conclusões</a>.</p>
+<p>A Fase 4 <strong>não redefine</strong> fórmulas, escalas, limiares nem amostras. Tudo o que é aplicado aqui vem das regras fixadas antes da coleta em <a href="../../fase2/metricas-julgamento/">Métricas e Critérios de Julgamento</a> (Fase 2) e em <a href="../../fase3/2-procedimentos/">Procedimentos de Execução</a> (Fase 3). A análise parte dos <strong>estados e valores registrados</strong> em <code>1-coleta.md</code> (versão 1.5, de 20/11/2026); o conteúdo das capturas de tela e das gravações não foi reexaminado aqui, e sua conferência cabe à auditoria de 10% prevista na regra 7 dos procedimentos.</p>
+<hr />
+<h2 id="2-regras-aplicadas">2. Regras aplicadas</h2>
+<ol>
+<li><strong>Contagem.</strong> Numerador e denominador são inteiros na mesma unidade. Casos em estado <strong>Defeito</strong> ficam no denominador e nunca são excluídos para melhorar o resultado; só o estado <strong>Não observável</strong>, com justificativa, sai do denominador.</li>
+<li><strong>Ausência de dados.</strong> Denominador zero ou amostra temporal vazia resulta em <strong>Não avaliado (sem dados)</strong>, sem nota (regra 3 de <a href="../../fase2/metricas-julgamento/#regras-gerais-de-calculo">Regras Gerais de Cálculo</a>).</li>
+<li><strong>Coleta parcial.</strong> Informam-se as quantidades previstas, executadas e válidas. Casos obrigatórios pendentes impedem declarar o objetivo satisfeito (regra 4).</li>
+<li><strong>Notas ordinais.</strong> Atribui-se a maior nota cuja condição seja satisfeita pelo valor <strong>sem arredondamento</strong>, e não se calcula média entre notas. Os limiares estão na Tabela 1.</li>
+<li><strong>Veredito do objetivo.</strong> O objetivo recebe a <strong>pior nota</strong> entre suas duas métricas filhas: só notas 3 e 4 resultam em <strong>Satisfeito</strong>; pelo menos uma nota 2, em <strong>Satisfeito com Ressalvas</strong>; pelo menos uma nota 1, em <strong>Não Satisfeito</strong>. Se uma métrica filha não estiver avaliada, o objetivo fica <strong>Não avaliado (dados incompletos)</strong>, mantendo visíveis as notas já obtidas.</li>
+<li><strong>Amostras pequenas.</strong> Com <span class="arithmatex">\(n &lt; 20\)</span>, cada caso muda o índice em <span class="arithmatex">\(1/n\)</span> e algumas notas não são atingíveis (Fase 3, <a href="../../fase3/2-procedimentos/#5-amostras-e-limitacao">Amostras e limitação</a>). A contagem acompanha sempre a nota, e os resultados são <strong>indicativos</strong> para a amostra, a versão e o período observados.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Nota 4 (Excelente)</th>
+<th style="text-align: center;">Nota 3 (Bom)</th>
+<th style="text-align: center;">Nota 2 (Insuficiente)</th>
+<th style="text-align: center;">Nota 1 (Crítico)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1 / M1.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(= 1{,}00\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}90\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}75\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 0{,}75\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.1 / M2.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(= 1{,}00\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}95\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}85\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 0{,}85\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.1 / M3.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}99\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}95\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}90\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 0{,}90\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.1 / M4.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(= 1{,}00\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}85\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}70\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 0{,}70\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.1</strong> (mediana do erro)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 2\)</span> min</td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 5\)</span> min</td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 10\)</span> min</td>
+<td style="text-align: center;"><span class="arithmatex">\(&gt; 10\)</span> min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}95\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}85\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}70\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 0{,}70\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.1 / M6.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(= 1{,}00\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}95\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ge 0{,}80\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 0{,}80\)</span></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 1. Limiares de pontuação fixados na Fase 2. Fonte: Métricas e Critérios de Julgamento (2026).</p>
+
+<hr />
+<h2 id="3-situacao-da-amostra-por-metrica">3. Situação da amostra por métrica</h2>
+<p>A Tabela 2 compara o previsto na Fase 3 com o que consta em <a href="../1-coleta/">Coleta de Dados</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Ambiente registrado</th>
+<th style="text-align: center;">Previstos</th>
+<th style="text-align: center;">Executados</th>
+<th style="text-align: center;">Conformes</th>
+<th style="text-align: center;">Defeitos</th>
+<th style="text-align: center;">Não observáveis / inválidos</th>
+<th style="text-align: center;">Amostra válida</th>
+<th style="text-align: left;">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13</td>
+<td style="text-align: center;">20 casos</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M1.2</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13 e <code>EMU-01</code> a <code>EMU-03</code> · Android 9, 10 e 17</td>
+<td style="text-align: center;">2 versões distintas (Android 9 e 13)</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3 não observáveis</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"><strong>Parcial</strong> (só Android 13 validado)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.1</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13</td>
+<td style="text-align: center;">10 ciclos</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.2</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13</td>
+<td style="text-align: center;">10 ciclos</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.1</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13</td>
+<td style="text-align: center;">20 sessões</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.2</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13</td>
+<td style="text-align: center;">20 sessões</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.1</strong></td>
+<td style="text-align: left;"><code>DISP-01</code> · Android 13</td>
+<td style="text-align: center;">10 ensaios</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.2</strong></td>
+<td style="text-align: left;"><code>DISP-01</code> · Android 13</td>
+<td style="text-align: center;">10 ensaios</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.1</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13</td>
+<td style="text-align: center;">10 eventos</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">— (mediana)</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">1 inválido (<code>X01</code>)</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2</strong> (paradas)</td>
+<td style="text-align: left;"><code>DISP-01</code> · Android 13</td>
+<td style="text-align: center;">5 paradas</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.1</strong></td>
+<td style="text-align: left;"><code>DISP-02</code> · Android 13</td>
+<td style="text-align: center;">8 tarefas</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.2</strong></td>
+<td style="text-align: left;"><code>DISP-01</code> · Android 13</td>
+<td style="text-align: center;">20 itens</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Completa</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 2. Amostras previstas, executadas e válidas. Fonte: elaboração própria (2026), com base em Coleta de Dados e Procedimentos de Execução.</p>
+
+<p>A versão do aplicativo avaliada foi <code>5.25.1(1149)</code>. Em <code>M1.2</code>, três tentativas em emulador foram classificadas como <strong>Não observáveis</strong>. Elas constam entre as quatro tentativas registradas e ficam fora da amostra válida.</p>
+<hr />
+<h2 id="4-calculo-e-analise-por-objetivo">4. Cálculo e análise por objetivo</h2>
+<h3 id="41-g1-portabilidade-adaptabilidade">4.1. G1 — Portabilidade (Adaptabilidade)</h3>
+<h4 id="m11-adaptabilidade-de-hardware-telas">M1.1 — Adaptabilidade de Hardware (Telas)</h4>
+<div class="arithmatex">\[
+M_{1.1} = \frac{T_s}{T_t} = \frac{15}{20} = 0{,}75
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> 20 casos <code>T01</code>–<code>T05</code> × <code>C01</code>–<code>C04</code>, avaliados em 18/11/2026 (10:43 a 10:54) por Vitor Bessa no <code>DISP-02</code>, com a configuração aplicada por <code>adb</code>.</li>
+<li><strong>Defeitos (5):</strong> de <code>T01-C03</code> a <code>T05-C03</code> (<code>DEF-01</code> a <code>DEF-05</code> na <a href="../1-coleta/">Coleta de Dados</a>). Todos ocorreram em retrato, <code>640 × 1136 px</code>, <code>320 dpi</code>, <strong>fonte a 200%</strong>.</li>
+<li><strong>Distribuição:</strong> por configuração, <code>C01</code> 5/5, <code>C02</code> 5/5, <strong><code>C03</code> 0/5</strong> e <code>C04</code> 5/5. Cada tela teve três casos conformes em quatro.</li>
+<li><strong>Nota:</strong> <strong>Nota 2 (Insuficiente)</strong>, faixa de 15 a 17 casos conformes em 20. O valor está no limite inferior da faixa. Mais um defeito levaria a <span class="arithmatex">\(14/20 = 0{,}70\)</span> e à Nota 1.</li>
+<li><strong>Hipótese H1.1</strong> (<span class="arithmatex">\(M_{1.1} &lt; 1{,}00\)</span>, com corte ou sobreposição na camada do mapa): <strong>confirmada.</strong> O índice ficou abaixo de 1,00. Em <code>T03-C03</code>, o código e o título da linha foram cortados, e o cabeçalho ampliado reduziu a área útil do mapa.</li>
+</ul>
+<h4 id="m12-adaptabilidade-de-sistema-operacional">M1.2 — Adaptabilidade de Sistema Operacional</h4>
+<div class="arithmatex">\[
+M_{1.2} = \frac{O_s}{O_t} = \frac{1}{1} = 1{,}00 \quad \text{(resultado parcial)}
+\]</div>
+<ul>
+<li><strong>Amostra prevista:</strong> Android 9 e 13, além da versão do aparelho físico se distinta, conforme <a href="../../fase3/2-procedimentos/#5-amostras-e-limitacao">Procedimentos de Execução</a>. Com Android 13 no <code>DISP-02</code>, o roteiro previa duas versões distintas.</li>
+<li><strong>Tentativas registradas:</strong> no Android 13 (API 33, <code>DISP-02</code>), as tarefas <code>TE01</code> a <code>TE08</code> foram concluídas sem erro de compatibilidade em 20/11/2026 às 20:35. Em 21/11, a equipe registrou recusas de instalação na Play Store nos emuladores de Android 9, 10 e 17. A <a href="../1-coleta/#m12-adaptabilidade-de-sistema-operacional">Coleta de Dados</a> registra as três tentativas como <strong>Não observáveis</strong> e descreve a arquitetura dos emuladores como possível causa.</li>
+<li><strong>Resultado parcial:</strong> o denominador inclui apenas a versão válida. O valor <span class="arithmatex">\(1{,}00\)</span> descreve o Android 13 e a métrica fica sem nota definitiva para a cobertura planejada.</li>
+<li><strong>Hipótese H1.2</strong> (<span class="arithmatex">\(M_{1.2} = 1{,}00\)</span> nas versões testadas): <strong>parcialmente verificada.</strong> O resultado sustenta apenas a compatibilidade no Android 13.</li>
+</ul>
+<h4 id="veredito-de-g1">Veredito de G1</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Hipótese</th>
+<th style="text-align: left;">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(15/20 = 0{,}75\)</span></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">H1.1 confirmada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M1.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(1/1 = 1{,}00\)</span> (4 tentativas)</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">H1.2 parcialmente verificada</td>
+<td style="text-align: left;">Amostra parcial (só Android 13)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G1</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><strong>Não avaliado (dados incompletos)</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 3. Síntese de G1. Fonte: elaboração própria (2026).</p>
+
+<p>A Nota 2 de <code>M1.1</code> registra o problema de acessibilidade nas telas. O veredito formal de <code>G1</code> fica <strong>Não avaliado (dados incompletos)</strong> porque só o Android 13 foi validado e o roteiro também previa o Android 9.</p>
+<hr />
+<h3 id="42-g2-portabilidade-instalabilidade">4.2. G2 — Portabilidade (Instalabilidade)</h3>
+<h4 id="m21-sucesso-de-instalacao">M2.1 — Sucesso de Instalação</h4>
+<div class="arithmatex">\[
+M_{2.1} = \frac{I_s}{I_t} = \frac{10}{10} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> 10 ciclos de instalação limpa pela Google Play Store no <code>DISP-02</code>, em 19/11/2026 (16:41 a 17:25), todos concluídos na primeira tentativa.</li>
+<li><strong>Nota:</strong> <span class="arithmatex">\(1{,}00\)</span> → <strong>Nota 4 (Excelente)</strong>. Nesta amostra a Nota 3 era inatingível (<span class="arithmatex">\(9/10 = 0{,}90 &lt; 0{,}95\)</span>), de modo que um único defeito já levaria à Nota 2.</li>
+<li><strong>Hipótese H2.1</strong> (<span class="arithmatex">\(M_{2.1} = 1{,}00\)</span>): <strong>confirmada.</strong></li>
+</ul>
+<h4 id="m22-residuo-pos-desinstalacao">M2.2 — Resíduo Pós-Desinstalação</h4>
+<div class="arithmatex">\[
+M_{2.2} = 1 - \frac{D_r}{D_t} = 1 - \frac{0}{10} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> 10 ciclos de instalação, uso e desinstalação, com listagem por <code>adb</code> antes e depois e comparação por <code>diff</code> em <code>Android/data</code>, <code>Android/obb</code>, <code>Android/media</code>, <code>Download</code>, <code>Documents</code> e pastas com o nome do app. Em nenhum ciclo restou arquivo ou pasta atribuível ao aplicativo (<code>D_r = 0</code>).</li>
+<li><strong>Nota:</strong> <span class="arithmatex">\(1{,}00\)</span> → <strong>Nota 4 (Excelente)</strong>. Também aqui a Nota 3 era inatingível.</li>
+<li><strong>Limite:</strong> o resultado vale só para os locais observáveis. O armazenamento privado do app não é inspecionado na abordagem de caixa preta.</li>
+<li><strong>Hipótese H2.2</strong> (<span class="arithmatex">\(M_{2.2} &lt; 1{,}00\)</span>): <strong>refutada.</strong> Não houve resíduo nos locais inspecionados.</li>
+</ul>
+<h4 id="veredito-de-g2">Veredito de G2</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Hipótese</th>
+<th style="text-align: left;">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M2.1</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(10/10 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H2.1 confirmada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(10/10 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H2.2 refutada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G2</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\min(4, 4) = 4\)</span></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 4. Síntese de G2. Fonte: elaboração própria (2026).</p>
+
+<hr />
+<h3 id="43-g3-confiabilidade-maturidade">4.3. G3 — Confiabilidade (Maturidade)</h3>
+<h4 id="m31-e-m32-sessoes-sem-crashes-e-sem-congelamentos">M3.1 e M3.2 — Sessões sem <em>crashes</em> e sem congelamentos</h4>
+<div class="arithmatex">\[
+M_{3.1} = 1 - \frac{S_c}{S_t} = 1 - \frac{0}{20} = 1{,}00
+\qquad
+M_{3.2} = 1 - \frac{S_a}{S_t} = 1 - \frac{0}{20} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> 20 sessões no <code>DISP-02</code>, em 20/11/2026 (de 15:18 a 18:00), sem indução de falhas. Cada sessão dedica 30 s a cinco atividades: busca, horários, itinerário no mapa, parada e veículo, e favoritos. Nenhuma sessão teve encerramento inesperado (<span class="arithmatex">\(S_c = 0\)</span>) nem congelamento superior a 5 s (<span class="arithmatex">\(S_a = 0\)</span>).</li>
+<li><strong>Notas:</strong> ambas <span class="arithmatex">\(1{,}00 \ge 0{,}99\)</span> → <strong>Nota 4 (Excelente)</strong>, tanto em <code>M3.1</code> quanto em <code>M3.2</code>.</li>
+<li><strong>Declaração obrigatória de limite:</strong> as sessões duraram <strong>2 min 30 s</strong> (50 min no total), e não os 5 min (100 min) do plano original. A Fase 3 já registrou a redução, que diminui a exposição e <strong>tende a favorecer o resultado</strong>. A nota vale só para a janela observada, em um único aparelho e uma única versão do Android.</li>
+<li><strong>Hipóteses H3.1 e H3.2</strong> (<span class="arithmatex">\(\ge 0{,}95\)</span>): <strong>confirmadas.</strong></li>
+</ul>
+<h4 id="veredito-de-g3">Veredito de G3</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Hipótese</th>
+<th style="text-align: left;">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M3.1</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(20/20 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H3.1 confirmada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(20/20 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H3.2 confirmada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G3</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\min(4, 4) = 4\)</span></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><strong>Satisfeito</strong> <em>(com a ressalva de exposição reduzida)</em></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 5. Síntese de G3. Fonte: elaboração própria (2026).</p>
+
+<hr />
+<h3 id="44-g4-confiabilidade-tolerancia-a-falhas">4.4. G4 — Confiabilidade (Tolerância a Falhas)</h3>
+<h4 id="m41-mitigacao-de-perda-de-conexao">M4.1 — Mitigação de Perda de Conexão</h4>
+<div class="arithmatex">\[
+M_{4.1} = \frac{R_s}{R_t} = \frac{10}{10} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> 10 ensaios no <code>DISP-01</code>, em 18/11/2026 (20:41 a 21:15), com <strong>dados móveis e Wi-Fi desativados</strong> e consulta dependente de dados. Em todos, o app ficou aberto e responsivo, informou a indisponibilidade em até 5 s e retomou a consulta em até 30 s após a reconexão.</li>
+<li><strong>Nota:</strong> <span class="arithmatex">\(1{,}00\)</span> → <strong>Nota 4 (Excelente)</strong>.</li>
+<li><strong>Hipótese H4.1</strong> (<span class="arithmatex">\(M_{4.1} &lt; 0{,}85\)</span>, por falta de modo <em>offline</em>): <strong>refutada.</strong> A expectativa pessimista da Fase 2 não se confirmou nos 10 ensaios.</li>
+</ul>
+<h4 id="m42-tratamento-de-perda-de-gps">M4.2 — Tratamento de Perda de GPS</h4>
+<div class="arithmatex">\[
+M_{4.2} = \frac{G_s}{G_t} = \frac{10}{10} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> 10 ensaios no <code>DISP-01</code>, em 19/11/2026, das 18h08 às 18h16, com o serviço de localização desativado por 30 s. A <a href="../1-coleta/#m42-perda-de-localizacao">Coleta de Dados</a> vincula um vídeo a cada ensaio. Em todos, o app informou a perda em até 5 s, manteve <code>TE01</code> e <code>TE04</code> disponíveis e recuperou a posição no mapa em até 30 s.</li>
+<li><strong>Nota:</strong> <span class="arithmatex">\(1{,}00\)</span> → <strong>Nota 4 (Excelente)</strong>.</li>
+<li><strong>Hipótese H4.2</strong> (<span class="arithmatex">\(M_{4.2} \ge 0{,}85\)</span>): <strong>confirmada.</strong></li>
+</ul>
+<h4 id="veredito-de-g4">Veredito de G4</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Hipótese</th>
+<th style="text-align: left;">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M4.1</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(10/10 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H4.1 refutada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M4.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(10/10 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H4.2 confirmada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G4</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\min(4, 4) = 4\)</span></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 6. Síntese de G4. Fonte: elaboração própria (2026).</p>
+
+<hr />
+<h3 id="45-g5-adequacao-funcional-correcao">4.5. G5 — Adequação Funcional (Correção)</h3>
+<h4 id="m51-precisao-de-tempo">M5.1 — Precisão de Tempo</h4>
+<div class="arithmatex">\[
+M_{5.1} = \operatorname{mediana}(e_1, \ldots, e_{10}) = 3{,}34\text{ min}
+\]</div>
+<ul>
+<li><strong>Amostra e medição:</strong> 11 eventos registrados em campo em 21/11/2026 no <code>DISP-02</code> (parada <code>P01</code>, Ceilândia Norte). Dos dez pares válidos, seis vieram do primeiro bloco e quatro do segundo. Foram sete pares da linha <code>933.4</code> e três da linha <code>0.089</code>. O evento <code>X01</code>, da linha <code>0.089</code>, foi excluído porque a chegada ficou sem registro.</li>
+<li><strong>Distribuição dos erros absolutos (minutos):</strong> <span class="arithmatex">\([0{,}53;\ 0{,}65;\ 0{,}67;\ 0{,}95;\ 2{,}05;\ 4{,}63;\ 5{,}62;\ 13{,}32;\ 13{,}97;\ 38{,}97]\)</span>.</li>
+<li>Erro mínimo: <span class="arithmatex">\(0{,}53\text{ min}\)</span> (32 s)</li>
+<li>Erro máximo: <span class="arithmatex">\(38{,}97\text{ min}\)</span> (atraso severo na linha 0.089)</li>
+<li>Mediana: <span class="arithmatex">\(\frac{2{,}05 + 4{,}63}{2} = 3{,}34\text{ min}\)</span> (3 min 20 s)</li>
+<li><strong>Nota:</strong> <span class="arithmatex">\(3{,}34\text{ min} \le 5\text{ min}\)</span> (e <span class="arithmatex">\(&gt; 2\text{ min}\)</span>) <span class="arithmatex">\(\rightarrow\)</span> <strong>Nota 3 (Bom)</strong>, conforme escala da Fase 2 (<span class="arithmatex">\([0, 2] \rightarrow 4\)</span>, <span class="arithmatex">\((2, 5] \rightarrow 3\)</span>, <span class="arithmatex">\((5, 10] \rightarrow 2\)</span>, <span class="arithmatex">\(&gt; 10 \rightarrow 1\)</span>).</li>
+<li><strong>Hipótese H5.1</strong> (mediana <span class="arithmatex">\(\le 5\)</span> min): <strong>confirmada.</strong></li>
+</ul>
+<h4 id="m52-correcao-de-dados-do-mapa-paradas">M5.2 — Correção de Dados do Mapa (paradas)</h4>
+<div class="arithmatex">\[
+M_{5.2} = \frac{P_s}{P_t} = \frac{5}{5} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Escopo:</strong> a métrica é apurada <strong>só com paradas</strong>, por restrição da Fase 3: a posição dos veículos tem defasagem da ordem de um minuto e mediria o deslocamento do ônibus, não o erro do app. Tolerância <span class="arithmatex">\(\varepsilon = 30\)</span> m.</li>
+<li><strong>Amostra:</strong> 5 paradas (<code>P01</code> a <code>P05</code>) em 20/11/2026 no <code>DISP-01</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Caso</th>
+<th style="text-align: center;">Distância <span class="arithmatex">\(d_i\)</span></th>
+<th style="text-align: center;">Limite <span class="arithmatex">\(\varepsilon\)</span></th>
+<th style="text-align: center;">Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P01</td>
+<td style="text-align: center;">4 m</td>
+<td style="text-align: center;">30 m</td>
+<td style="text-align: center;">Conforme</td>
+</tr>
+<tr>
+<td style="text-align: center;">P02</td>
+<td style="text-align: center;"><strong>29 m</strong></td>
+<td style="text-align: center;">30 m</td>
+<td style="text-align: center;">Conforme</td>
+</tr>
+<tr>
+<td style="text-align: center;">P03</td>
+<td style="text-align: center;">4,5 m</td>
+<td style="text-align: center;">30 m</td>
+<td style="text-align: center;">Conforme</td>
+</tr>
+<tr>
+<td style="text-align: center;">P04</td>
+<td style="text-align: center;">3 m</td>
+<td style="text-align: center;">30 m</td>
+<td style="text-align: center;">Conforme</td>
+</tr>
+<tr>
+<td style="text-align: center;">P05</td>
+<td style="text-align: center;">5 m</td>
+<td style="text-align: center;">30 m</td>
+<td style="text-align: center;">Conforme</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 7. Distâncias medidas em M5.2. Fonte: Coleta de Dados (2026).</p>
+
+<ul>
+<li><strong>Nota:</strong> <span class="arithmatex">\(1{,}00 \ge 0{,}95\)</span> → <strong>Nota 4 (Excelente)</strong>. Para <span class="arithmatex">\(n = 5\)</span>, só são atingíveis as notas 4 (<code>5/5</code>), 2 (<code>4/5</code>) e 1 (<code>0–3/5</code>).</li>
+<li><strong>Sensibilidade:</strong> <code>P02</code> está a 1 m do limite. As distâncias vieram de <strong>medição direta nas capturas, convertida pela escala do mapa e feita com auxílio de IA</strong>, e a referência de campo (GPSTest) tem erro de até 10 m. Se <code>P02</code> fosse reclassificada, <span class="arithmatex">\(M_{5.2} = 4/5 = 0{,}80\)</span> e a nota cairia para 2. A nota 4 é, portanto, sensível a um único caso.</li>
+<li><strong>Hipótese H5.2</strong> (<span class="arithmatex">\(M_{5.2} \ge 0{,}85\)</span> para paradas e valor menor para veículos): <strong>confirmada para paradas.</strong> A parte sobre veículos <strong>não foi testada</strong>, por decisão da Fase 3.</li>
+</ul>
+<h4 id="veredito-de-g5">Veredito de G5</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Hipótese</th>
+<th style="text-align: left;">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M5.1</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{Mediana } 3{,}34\text{ min}\)</span></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">H5.1 confirmada (<span class="arithmatex">\(\le 5\text{ min}\)</span>)</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(5/5 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H5.2 confirmada (paradas)</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G5</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\min(3,\ 4) = 3\)</span></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 8. Síntese de G5. Fonte: elaboração própria (2026).</p>
+
+<hr />
+<h3 id="46-g6-adequacao-funcional-completude">4.6. G6 — Adequação Funcional (Completude)</h3>
+<h4 id="m61-cobertura-de-tarefas-essenciais">M6.1 — Cobertura de Tarefas Essenciais</h4>
+<div class="arithmatex">\[
+M_{6.1} = 1 - \frac{F_f}{F_t} = 1 - \frac{0}{8} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> as 8 tarefas <code>TE01</code> a <code>TE08</code>, executadas uma vez cada no <code>DISP-02</code> em 19/11/2026 (15:57 a 16:05), com rede e localização ativas. Todas atingiram o resultado esperado, inclusive <code>TE05</code> (acompanhar veículo de <code>L02</code> em operação), que não precisou ser tratada como não observável.</li>
+<li><strong>Nota:</strong> <span class="arithmatex">\(1{,}00\)</span> → <strong>Nota 4 (Excelente)</strong>. Nesta amostra a Nota 3 era inatingível (<span class="arithmatex">\(7/8 = 0{,}875\)</span>), e uma única falha levaria à Nota 2.</li>
+<li><strong>Hipótese H6.1</strong> (<span class="arithmatex">\(M_{6.1} = 1{,}00\)</span>): <strong>confirmada.</strong></li>
+</ul>
+<h4 id="m62-completude-do-banco">M6.2 — Completude do Banco</h4>
+<div class="arithmatex">\[
+M_{6.2} = \frac{L_c}{L_t} = \frac{20}{20} = 1{,}00
+\]</div>
+<ul>
+<li><strong>Amostra:</strong> 20 linhas do Relatório de Linhas da Semob-DF (referência 17/11/2026), 4 por bacia (01 a 05), das quais 10 circulares e 10 de duplo sentido, auditadas no <code>DISP-01</code>. Todas foram encontradas no app com código, sentido e itinerário correspondentes, sem defeitos, exclusões ou pendências.</li>
+<li><strong>Nota:</strong> <span class="arithmatex">\(1{,}00\)</span> → <strong>Nota 4 (Excelente)</strong>.</li>
+<li><strong>Limite:</strong> o índice vale para a amostra estratificada de linhas com viagens em dia útil na data de referência. Não estima a cobertura de toda a malha, nem de linhas exclusivas de fim de semana.</li>
+<li><strong>Hipótese H6.2</strong> (<span class="arithmatex">\(M_{6.2} \ge 0{,}95\)</span>): <strong>confirmada.</strong></li>
+</ul>
+<h4 id="veredito-de-g6">Veredito de G6</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Hipótese</th>
+<th style="text-align: left;">Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M6.1</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(8/8 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H6.1 confirmada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(20/20 = 1{,}00\)</span></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">H6.2 confirmada</td>
+<td style="text-align: left;">Avaliada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G6</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\min(4, 4) = 4\)</span></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 9. Síntese de G6. Fonte: elaboração própria (2026).</p>
+
+<hr />
+<h2 id="5-quadro-global-das-12-metricas-e-das-hipoteses">5. Quadro global das 12 métricas e das hipóteses</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: center;">Objetivo</th>
+<th style="text-align: center;">Contagem</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: center;">Nota</th>
+<th style="text-align: left;">Hipótese</th>
+<th style="text-align: left;">Veredito da hipótese</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>M1.1</strong></td>
+<td style="text-align: left;">Adaptabilidade de hardware</td>
+<td style="text-align: center;">G1</td>
+<td style="text-align: center;">15 / 20</td>
+<td style="text-align: center;">0,75</td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{1.1} &lt; 1{,}00\)</span> (falha no mapa)</td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M1.2</strong></td>
+<td style="text-align: left;">Adaptabilidade de SO</td>
+<td style="text-align: center;">G1</td>
+<td style="text-align: center;">1 / 1 <em>(4 tentativas)</em></td>
+<td style="text-align: center;">1,00 <em>(parcial)</em></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{1.2} = 1{,}00\)</span></td>
+<td style="text-align: left;">Parcialmente verificada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M2.1</strong></td>
+<td style="text-align: left;">Sucesso de instalação</td>
+<td style="text-align: center;">G2</td>
+<td style="text-align: center;">10 / 10</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{2.1} = 1{,}00\)</span></td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M2.2</strong></td>
+<td style="text-align: left;">Resíduo pós-desinstalação</td>
+<td style="text-align: center;">G2</td>
+<td style="text-align: center;">10 / 10</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{2.2} &lt; 1{,}00\)</span></td>
+<td style="text-align: left;">Refutada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M3.1</strong></td>
+<td style="text-align: left;">Sessões sem <em>crashes</em></td>
+<td style="text-align: center;">G3</td>
+<td style="text-align: center;">20 / 20</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{3.1} \ge 0{,}95\)</span></td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M3.2</strong></td>
+<td style="text-align: left;">Sessões sem congelamentos</td>
+<td style="text-align: center;">G3</td>
+<td style="text-align: center;">20 / 20</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{3.2} \ge 0{,}95\)</span></td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M4.1</strong></td>
+<td style="text-align: left;">Mitigação de perda de conexão</td>
+<td style="text-align: center;">G4</td>
+<td style="text-align: center;">10 / 10</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{4.1} &lt; 0{,}85\)</span></td>
+<td style="text-align: left;">Refutada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M4.2</strong></td>
+<td style="text-align: left;">Tratamento de perda de GPS</td>
+<td style="text-align: center;">G4</td>
+<td style="text-align: center;">10 / 10</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{4.2} \ge 0{,}85\)</span></td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M5.1</strong></td>
+<td style="text-align: left;">Precisão de tempo</td>
+<td style="text-align: center;">G5</td>
+<td style="text-align: center;">10 pares válidos</td>
+<td style="text-align: center;">Mediana 3,34 min</td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">mediana <span class="arithmatex">\(\le 5\)</span> min</td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M5.2</strong></td>
+<td style="text-align: left;">Correção do mapa (paradas)</td>
+<td style="text-align: center;">G5</td>
+<td style="text-align: center;">5 / 5</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{5.2} \ge 0{,}85\)</span> (paradas)</td>
+<td style="text-align: left;">Confirmada (paradas)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M6.1</strong></td>
+<td style="text-align: left;">Cobertura de tarefas essenciais</td>
+<td style="text-align: center;">G6</td>
+<td style="text-align: center;">8 / 8</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{6.1} = 1{,}00\)</span></td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>M6.2</strong></td>
+<td style="text-align: left;">Completude do banco</td>
+<td style="text-align: center;">G6</td>
+<td style="text-align: center;">20 / 20</td>
+<td style="text-align: center;">1,00</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(M_{6.2} \ge 0{,}95\)</span></td>
+<td style="text-align: left;">Confirmada</td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 10. Quadro comparativo das 12 métricas, notas e hipóteses. Fonte: elaboração própria (2026).</p>
+
+<p>Das 12 hipóteses, <strong>8 foram confirmadas</strong> (H1.1, H2.1, H3.1, H3.2, H4.2, H5.1, H6.1, H6.2), <strong>2 refutadas</strong> (H2.2 e H4.1, ambas de expectativa pessimista) e <strong>2 verificadas em parte</strong> (H1.2 e H5.2).</p>
+<h3 id="51-vereditos-dos-objetivos">5.1. Vereditos dos objetivos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Objetivo</th>
+<th style="text-align: left;">Característica</th>
+<th style="text-align: left;">Notas das métricas</th>
+<th style="text-align: left;">Veredito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>G1</strong></td>
+<td style="text-align: left;">Portabilidade — Adaptabilidade</td>
+<td style="text-align: left;">M1.1 = 2; M1.2 parcial</td>
+<td style="text-align: left;"><strong>Não avaliado (dados incompletos)</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>G2</strong></td>
+<td style="text-align: left;">Portabilidade — Instalabilidade</td>
+<td style="text-align: left;">M2.1 = 4; M2.2 = 4</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>G3</strong></td>
+<td style="text-align: left;">Confiabilidade — Maturidade</td>
+<td style="text-align: left;">M3.1 = 4; M3.2 = 4</td>
+<td style="text-align: left;"><strong>Satisfeito</strong> <em>(exposição reduzida)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>G4</strong></td>
+<td style="text-align: left;">Confiabilidade — Tolerância a falhas</td>
+<td style="text-align: left;">M4.1 = 4; M4.2 = 4</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>G5</strong></td>
+<td style="text-align: left;">Adequação Funcional — Correção</td>
+<td style="text-align: left;">M5.1 = 3; M5.2 = 4</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>G6</strong></td>
+<td style="text-align: left;">Adequação Funcional — Completude</td>
+<td style="text-align: left;">M6.1 = 4; M6.2 = 4</td>
+<td style="text-align: left;"><strong>Satisfeito</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 11. Vereditos dos objetivos G1 a G6 pelo critério da pior nota. Fonte: elaboração própria (2026).</p>
+
+<hr />
+<h2 id="6-pontos-de-sensibilidade">6. Pontos de sensibilidade</h2>
+<p>Com amostras pequenas, um único caso pode mudar uma nota e o veredito do objetivo. Os pontos abaixo mostram onde o resultado depende de poucos casos.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Situação observada</th>
+<th style="text-align: left;">O que mudaria a nota</th>
+<th style="text-align: left;">Efeito no objetivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M1.1</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(15/20 = 0{,}75\)</span>, no limite da Nota 2</td>
+<td style="text-align: left;">Mais 1 defeito: <span class="arithmatex">\(14/20 = 0{,}70\)</span> → Nota 1</td>
+<td style="text-align: left;">A pior nota seria 1. O veredito formal de G1 depende da cobertura de M1.2.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M1.2</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(1/1\)</span> no Android 13, com 3 tentativas não observáveis</td>
+<td style="text-align: left;">Em um teste adicional válido, uma versão com defeito reduziria o índice a <span class="arithmatex">\(1/2 = 0{,}50\)</span>, faixa da Nota 1</td>
+<td style="text-align: left;">O veredito de G1 depende da cobertura planejada de M1.2.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M2.1 / M2.2</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(10/10\)</span>, sem Nota 3 possível</td>
+<td style="text-align: left;">1 defeito → Nota 2</td>
+<td style="text-align: left;">G2 passaria a <em>Satisfeito com Ressalvas</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M3.1 / M3.2</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(20/20\)</span> em sessões de 2 min 30 s</td>
+<td style="text-align: left;">1 sessão afetada: <span class="arithmatex">\(19/20 = 0{,}95\)</span> → Nota 3. 2: <span class="arithmatex">\(18/20 = 0{,}90\)</span> → Nota 2. 3: <span class="arithmatex">\(17/20 = 0{,}85\)</span> → Nota 1.</td>
+<td style="text-align: left;">Pela pior nota, G3 fica <em>Satisfeito</em> com Nota 3, <em>Satisfeito com Ressalvas</em> com Nota 2 e <em>Não Satisfeito</em> com Nota 1.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.1</strong></td>
+<td style="text-align: left;">Mediana <span class="arithmatex">\(3{,}34\)</span> min (Nota 3)</td>
+<td style="text-align: left;">Mediana <span class="arithmatex">\(&gt; 5\)</span> e <span class="arithmatex">\(\le 10\)</span> min → Nota 2. Mediana <span class="arithmatex">\(&gt; 10\)</span> min → Nota 1.</td>
+<td style="text-align: left;">G5 passaria a <em>Satisfeito com Ressalvas</em> com Nota 2 ou <em>Não Satisfeito</em> com Nota 1.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M5.2</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(5/5\)</span>, com <code>P02</code> a 29 m do limite de 30 m</td>
+<td style="text-align: left;"><code>P02</code> fora da tolerância: <span class="arithmatex">\(4/5 = 0{,}80\)</span> → Nota 2</td>
+<td style="text-align: left;">G5 passaria a <em>Satisfeito com Ressalvas</em> (pior nota = 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M6.1</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(8/8\)</span>, sem Nota 3 possível</td>
+<td style="text-align: left;">1 tarefa com defeito → Nota 2</td>
+<td style="text-align: left;">G6 passaria a <em>Satisfeito com Ressalvas</em></td>
+</tr>
+</tbody>
+</table>
+<p class="legenda">Tabela 12. Sensibilidade das notas ao tamanho da amostra. Fonte: elaboração própria (2026).</p>
+
+<p>A predominância de notas altas reflete amostras pequenas, critérios binários por caso e um único aparelho por ensaio. Não indica ausência de defeitos fora do que foi observado.</p>
+<hr />
+<h2 id="referencias">Referências</h2>
+<p>[1] ISO. <em>ISO/IEC 25040:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process</em>. Geneva: ISO, 2011.</p>
+<p>[2] ISO. <em>ISO/IEC 25010:2011 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models</em>. Geneva: ISO, 2011.</p>
+<p>[3] ISO. <em>ISO/IEC 25023:2016 — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality</em>. Geneva: ISO, 2016.</p>
+<p>[4] EQUIPE CAROL SHAW. <a href="../../fase2/metricas-julgamento/">Métricas e Critérios de Julgamento — Fase 2</a>; <a href="../../fase2/planejamento-objetivos/">Abordagem GQM e Metas de Avaliação — Fase 2</a>; <a href="../../fase3/2-procedimentos/">Procedimentos de Execução — Fase 3</a>; <a href="../../fase3/3-recursos/">Recursos — Fase 3</a>; <a href="../1-coleta/">Coleta de Dados — Fase 4</a>.</p>
+<hr />
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Revisor</th>
+<th style="text-align: center;">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">01</td>
+<td style="text-align: left;">Consolidação dos dados, cálculo das 12 métricas, avaliação de hipóteses e matriz comparativa da Fase 4 (#49)</td>
+<td style="text-align: left;"><a href="https://github.com/jonas3688">João Guilherme Capozzi</a></td>
+<td style="text-align: center;">18/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/CristianoMoraiss">Cristiano Morais</a></td>
+<td style="text-align: center;">21/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">02</td>
+<td style="text-align: left;">Atualização com os registros de coleta de M1.1 a M6.2 (exceto M5.1): cálculo, notas, hipóteses, vereditos de G1 a G6, sensibilidade e anomalias</td>
+<td style="text-align: left;"><a href="https://github.com/PedroRSR">Pedro Ramos</a></td>
+<td style="text-align: center;">21/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/CristianoMoraiss">Cristiano Morais</a></td>
+<td style="text-align: center;">21/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">03</td>
+<td style="text-align: left;">Sincronização dos cálculos da métrica M5.1 (mediana 3,34 min, Nota 3), consolidação do veredito de G5 (Satisfeito) e script de cálculo (#49)</td>
+<td style="text-align: left;"><a href="https://github.com/jonas3688">João Guilherme Capozzi</a></td>
+<td style="text-align: center;">22/11/2026</td>
+<td style="text-align: left;"><a href="https://github.com/CristianoMoraiss">Cristiano Morais</a></td>
+<td style="text-align: center;">22/11/2026</td>
+</tr>
+<tr>
+<td style="text-align: center;">04</td>
+<td style="text-align: left;">Revisão de consistência global (#54): sincronização de M1.1 (15/20 = 0,75, Nota 2, H1.1 confirmada) com <code>1-coleta.md</code>, <code>M1.1_coleta.csv</code> e o artigo</td>
+<td style="text-align: left;"><a href="https://github.com/jonas3688">João Guilherme Capozzi</a></td>
+<td style="text-align: center;">24/11/2026</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../1-coleta/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Coleta de Dados">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Coleta de Dados
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../3-resultados/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Resultados e Conclusões">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Resultados e Conclusões
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Carol Shaw - Qualidade de Software (2026.2) | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank">Repositório</a> | <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/releases/tag/v2.0-E2" target="_blank">Release E2</a> | v2.0 - E2 | Atualizado em 24/11/2026
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW" target="_blank" rel="noopener" title="Repositório da equipe Carol Shaw" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

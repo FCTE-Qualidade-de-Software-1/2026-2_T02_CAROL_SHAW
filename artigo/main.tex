@@ -57,7 +57,7 @@ O transporte público coletivo é elemento vital para a mobilidade urbana, inclu
 
 Diante dessa problemática, o objetivo deste trabalho é executar uma avaliação abrangente, auditável e reprodutível da qualidade de software do aplicativo \textit{DF no Ponto}, adotando estritamente a perspectiva do usuário final (\textit{black-box testing}). Metodologicamente, a pesquisa segue as etapas de processo da norma ISO/IEC 25040~\cite{iso25040}, aplica o modelo de qualidade de produto da ISO/IEC 25010~\cite{iso25010} e usa métricas adaptadas da ISO/IEC 25023~\cite{iso25023} e extensões do projeto, estruturadas pelo paradigma \textit{Goal-Question-Metric} (GQM)~\cite{basili1988,basili1994}. O projeto agrupa as cinco atividades da ISO/IEC 25040 em quatro fases de avaliação.
 
-O artigo organiza-se como segue: a Seção~\ref{sec:referencial} estabelece o referencial teórico; a Seção~\ref{sec:metodologia} descreve o processo metodológico; a Seção~\ref{sec:fase1} detalha os requisitos da avaliação (Fase~1); a Seção~\ref{sec:fase2} formaliza a especificação GQM e critérios de julgamento (Fase~2); a Seção~\ref{sec:fase3} documenta o projeto do método, recursos e cronograma (Fase~3); a Seção~\ref{sec:fase4} apresenta execução, análise de dados, resultados e pareceres (Fase~4); a Seção~\ref{sec:conclusao} sintetiza as conclusões; e o Apêndice~\ref{ap:contribuicao} consolida a governança e esforço da equipe.
+O artigo organiza-se como segue: a Seção~\ref{sec:referencial} estabelece o referencial teórico; a Seção~\ref{sec:metodologia} descreve o processo metodológico; a Seção~\ref{sec:fase1} detalha os requisitos da avaliação (Fase~1); a Seção~\ref{sec:fase2} formaliza a especificação GQM e critérios de julgamento (Fase~2); a Seção~\ref{sec:fase3} documenta o projeto do método, recursos e cronograma (Fase~3); a Seção~\ref{sec:fase4} apresenta execução, análise de dados, resultados e pareceres (Fase~4); e a Seção~\ref{sec:conclusao} sintetiza as conclusões e apresenta os protótipos de acessibilidade.
 
 % ---------------------------------------------------------------------
 \section{Referencial Teórico}
@@ -523,5 +523,32 @@ STEVENS, S. S. On the Theory of Scales of Measurement. \emph{Science}, v.~103, n
 WATKINS, K. E. et al. Where Is My Bus? Impact of mobile real-time information on transit riders. \emph{Transp. Res. Part A}, v.~45, n.~8, p.~839--848, 2011.
 
 \end{thebibliography}
+
+\appendix
+\section{Contribuição da Equipe}
+\label{ap:contribuicao}
+
+Os percentuais abaixo são \textbf{estimativas}, obtidas pela combinação ponderada de três indicadores extraídos do repositório do projeto até 24/11/2026: (i) horas reais declaradas nas \textit{issues} (peso de 50\%); (ii) número de \textit{commits} (peso de 25\%); e (iii) linhas adicionadas e removidas em arquivos de texto autorais (peso de 25\%). Os pesos foram definidos pela equipe e priorizam o esforço declarado, por ser o indicador menos sensível ao estilo de trabalho de cada integrante.
+
+\begin{table}[H]
+\centering
+\caption{Contribuição estimada de cada integrante (participação em cada indicador e percentual final).}
+\label{tab:contribuicao}
+\small
+\begin{tabularx}{\linewidth}{Xrrrrr}
+\toprule
+\textbf{Integrante} & \textbf{Horas} & \textbf{Horas (\%)} & \textbf{Commits (\%)} & \textbf{Linhas (\%)} & \textbf{Final (\%)} \\
+\midrule
+Cristiano Borges de Morais & 22,8 & 16,8 & 6,6 & 14,3 & \textbf{13,6} \\
+João Guilherme Capozzi Gonçalves & 21,0 & 15,5 & 33,5 & 25,8 & \textbf{22,6} \\
+João Guilherme Lima Veras Fonseca & 16,5 & 12,1 & 9,3 & 19,2 & \textbf{13,2} \\
+Pedro Ramos Sousa Reis & 32,3 & 23,8 & 30,2 & 15,2 & \textbf{23,2} \\
+Rodrigo Braz Ferreira Gontijo & 14,0 & 10,3 & 12,1 & 4,0 & \textbf{9,2} \\
+Vitor Pereira Bessa & 29,3 & 21,6 & 8,2 & 21,5 & \textbf{18,2} \\
+\midrule
+\textbf{Total} & 135,9 & 100,0 & 100,0 & 100,0 & \textbf{100,0} \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \end{document}

@@ -140,13 +140,31 @@ Com base nas variações consolidadas até 24/11/2026 — **-10,98% (Faixa Amare
 - **Entre 10,1% e 20%:** Faixa de atenção. A equipe acompanha o desvio para entender os motivos da divergência e avaliar ajustes nas próximas milestones.
 - **Acima de 20%:** Alerta para revisão imediata das estimativas e readequação do planejamento do projeto.
 
-## Tabela de Contribuição
+## 10. Contribuição Individual da Equipe
 
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :---: | :---: |
-| [Cristiano Morais](https://github.com/CristianoMoraiss) | Adição da página de recursos e custos | 10/11/2026 | [fb837e6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/fb837e6) |
-| [Vitor Bessa](https://github.com/bessazs) | Adição dos gráficos de horas por membros, horas de milestone e tabela de esforço por issue | 11/11/2026|[6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
-| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
-| [Vitor Bessa](https://github.com/bessazs) | Adição do conteúdo da Entrega 2 | 15/11/2026|[0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600)|
-| [João Guilherme Capozzi](https://github.com/jonas3688) | Saneamento dos dados consolidados da Correção da Entrega 1 (#37) | 22/11/2026 | [657e203](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/657e203) |
-| [João Guilherme Capozzi](https://github.com/jonas3688) | Apuração final de esforço e custos das milestones Correção E1 e Entrega 2 (#54) | 24/11/2026 | — |
+Os percentuais abaixo são **estimativas**, obtidas pela combinação ponderada de três indicadores extraídos do repositório até 24/11/2026:
+
+- **Horas reais** declaradas nas issues (peso de 50%);
+- **Commits** (peso de 25%); e
+- **Linhas** adicionadas e removidas em arquivos de texto autorais (peso de 25%).
+
+| Integrante | Horas | Horas (%) | Commits (%) | Linhas (%) | **Final (%)** |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Cristiano Borges de Morais | 22,8 | 16,8 | 6,6 | 14,3 | **13,6** |
+| João Guilherme Capozzi Gonçalves | 21,0 | 15,5 | 33,5 | 25,8 | **22,6** |
+| João Guilherme Lima Veras Fonseca | 16,5 | 12,1 | 9,3 | 19,2 | **13,2** |
+| Pedro Ramos Sousa Reis | 32,3 | 23,8 | 30,2 | 15,2 | **23,2** |
+| Rodrigo Braz Ferreira Gontijo | 14,0 | 10,3 | 12,1 | 4,0 | **9,2** |
+| Vitor Pereira Bessa | 29,3 | 21,6 | 8,2 | 21,5 | **18,2** |
+| **Total** | **135,9** | **100,0** | **100,0** | **100,0** | **100,0** |
+
+## Histórico de Versões
+
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| 01 | Criação da página de recursos e custos | [Cristiano Morais](https://github.com/CristianoMoraiss) | 10/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 02 | Inclusão dos gráficos de horas por membro e por milestone e da tabela de esforço por issue | [Vitor Bessa](https://github.com/bessazs) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 |
+| 03 | Adição do conteúdo da Entrega 2 | [Vitor Bessa](https://github.com/bessazs) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 04 | Saneamento dos dados consolidados da Correção da Entrega 1 (#37) | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 05 | Apuração final de esforço e custos das milestones Correção E1 e Entrega 2 (#54) | [João Guilherme Capozzi](https://github.com/jonas3688) | 24/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 06 | Substituição da tabela de contribuição por histórico de versões e adição de contribuição individual da equipe | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |

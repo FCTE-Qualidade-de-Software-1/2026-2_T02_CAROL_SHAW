@@ -47,9 +47,10 @@ O acompanhamento detalhado dos dados e evidências que suportam este dashboard g
 - [Recursos e Custos](recursos.md): Detalha a medição de esforço individual e coletivo a partir de horas estimadas e métricas reais de contribuição (commits, adições e deleções).
 - [Desempenho do Processo](desempenho.md): Analisa a fluidez operacional, identificando gargalos, *Lead Time* e *Cycle Time*.
 
-## Tabela de Contribuição
+## Histórico de Versões
 
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :--- | :--- |
-| [João Capozzi](https://github.com/jonas3688) | Criação da página de Acompanhamento do Projeto | 09/11/2026 | [c8bfc1b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/c8bfc1b) |
-| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| 01 | Criação da página de Acompanhamento do Projeto | [João Guilherme Capozzi](https://github.com/jonas3688) | 09/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 02 | Revisão e correção do documento | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |
+| 03 | Substituição da tabela de contribuição por histórico de versões | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |

@@ -20,10 +20,11 @@ Para a organização do fluxo de trabalho, utilizamos o GitHub Projects em forma
 3. Controle de Versão (Git Flow): O desenvolvimento do código ou artefato é feito em uma branch específica para a tarefa (ex: `docs/visão-geral`).
 4. Revisão: A finalização ocorre por meio de um Pull Request para a branch `main` (movendo o cartão para `In Review`), que deve ser revisado antes de ser mesclado (*merge*), movendo o cartão para `Done`.
 
-## Tabela de Contribuição
+## Histórico de Versões
 
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :--- | :--- |
-| [Pedro Ramos](https://github.com/PedroRSR) | Criação da página de Visão Geral da Gestão do Projeto | 08/11/2026 | [8dccfce](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/8dccfced583a70105ffb8a9a89e44cb7c1ff720b) |
-| [João Guilherme Capozzi](https://github.com/jonas3688) | Atualização e alinhamento das 4 áreas de medição do PSM-CID | 22/11/2026 | [0f776a7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0f776a7) |
-| [João Guilherme Capozzi](https://github.com/jonas3688) | Revisão textual e padronização do fluxo Kanban na aba de gestão (#54) | 24/11/2026 | — |
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| 01 | Criação da página de Visão Geral da Gestão do Projeto | [Pedro Ramos](https://github.com/PedroRSR) | 08/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |
+| 02 | Atualização e alinhamento das 4 áreas de medição do PSM-CID | [João Guilherme Capozzi](https://github.com/jonas3688) | 22/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 03 | Revisão textual e padronização do fluxo Kanban na aba de gestão (#54) | [João Guilherme Capozzi](https://github.com/jonas3688) | 24/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 04 | Substituição da tabela de contribuição por histórico de versões | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |

@@ -82,13 +82,14 @@ Na **Entrega 1**, o cadastro e fechamento retroativo de *Issues* no mesmo dia ge
 
 <iframe src="https://grafana.cryptoskate.org/d-solo/advlzzz/psm?orgId=1&from=1794054790773&to=now&timezone=browser&var-sprint=Entrega%202&theme=light&panelId=panel-8" width="1000" height="550" frameborder="0"></iframe>
 
-## Tabela de Contribuição
+## Histórico de Versões
 
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :---: | :---: |
-| [Cristiano Morais](https://github.com/CristianoMoraiss) | Criação da estrutura inicial da página | 10/11/2026 | [89ba979](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
-| [Pedro Ramos Sousa Reis](https://github.com/PedroRSR) | Criação das tabelas de registro das Issues | 10/11/2026 | [89ba979](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/89ba979) |
-| [Vitor Bessa](https://github.com/bessazs) | Atualização da tabela de desempenho por issue pela tabela do Grafana | 11/11/2026 | [6c911c4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/6c911c4) |
-| [Pedro Ramos](https://github.com/PedroRSR) | Revisão e correção do documento | 11/11/2026 | [a3d7186](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/a3d7186) |
-| [Vitor Bessa](https://github.com/bessazs) | Adição do conteúdo da Entrega 2 | 15/11/2026|[0c28954](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_CAROL_SHAW/commit/0c28954019a52d45761410b5f931f0cd4cd5a600)|
-| [João Guilherme Capozzi](https://github.com/jonas3688) | Revisão textual, consolidação do TMC da Correção E1 e Entrega 2 e reposicionamento da nota da Entrega 1 (#54) | 24/11/2026 | — |
+| ID | Descrição | Autor | Data | Revisor | Data |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| 01 | Criação da estrutura inicial da página | [Cristiano Morais](https://github.com/CristianoMoraiss) | 10/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 02 | Criação das tabelas de registro das Issues | [Pedro Ramos Sousa Reis](https://github.com/PedroRSR) | 10/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |
+| 03 | Atualização da tabela de desempenho por issue pela tabela do Grafana | [Vitor Bessa](https://github.com/bessazs) | 11/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 04 | Revisão e correção do documento | [Pedro Ramos](https://github.com/PedroRSR) | 11/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |
+| 05 | Adição do conteúdo da Entrega 2 | [Vitor Bessa](https://github.com/bessazs) | 15/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 06 | Revisão textual, consolidação do TMC da Correção E1 e Entrega 2 e reposicionamento da nota da Entrega 1 (#54) | [João Guilherme Capozzi](https://github.com/jonas3688) | 24/11/2026 | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 |
+| 07 | Substituição da tabela de contribuição por histórico de versões | [Pedro Ramos](https://github.com/PedroRSR) | 24/11/2026 | [Vitor Bessa](https://github.com/bessazs) | 24/11/2026 |
